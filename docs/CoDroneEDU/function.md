@@ -1,0 +1,7 @@
+## pair()
+
+pair : ~~
+
+## flip()
+
+flip : ~~
