@@ -88,6 +88,7 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
+      //have to change
       algolia: {
         // The application ID provided by Algolia
         appId: '7DEFM5AG78',
