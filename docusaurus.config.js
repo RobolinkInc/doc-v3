@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Robolink Documentation',
+  tagline: 'easy to understand',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -24,12 +24,17 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internalization, you can use this field to set useful
+   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'ko'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      },
+    },
   },
 
   presets: [
@@ -71,18 +76,30 @@ const config = {
         },
         items: [
           {
+            type: 'localeDropdown',
+            position: 'right',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
+      },
+      //have to change
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '7DEFM5AG78',
+  
+        // Public API key: it is safe to commit it
+        apiKey: 'dc814199892400355391546ac3b28090',
+  
+        indexName: 'test-web',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
       },
       footer: {
         style: 'dark',
@@ -103,14 +120,6 @@ const config = {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
             ],
           },
           {
@@ -122,7 +131,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/RobolinkInc/doc-v3',
               },
             ],
           },
