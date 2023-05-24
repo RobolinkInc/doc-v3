@@ -1,6 +1,6 @@
-# Website
+# doc-v3
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This is a repo for the documentation page for the 2023 redesign
 
 ### Installation
 
