@@ -59,6 +59,11 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-999X9XX9XX',
+          anonymizeIP: true,
+        },
+        
       }),
     ],
   ],
@@ -87,19 +92,6 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
         ],
-      },
-      //have to change
-      algolia: {
-        // The application ID provided by Algolia
-        appId: '7DEFM5AG78',
-  
-        // Public API key: it is safe to commit it
-        apiKey: 'dc814199892400355391546ac3b28090',
-  
-        indexName: 'test-web',
-  
-        // Optional: see doc section below
-        contextualSearch: true,
       },
       footer: {
         style: 'dark',
@@ -143,6 +135,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    plugins: [require.resolve('./node_modules/docusaurus-lunr-search/')],
 };
 
 module.exports = config;
