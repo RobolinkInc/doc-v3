@@ -3,6 +3,8 @@ slug: Introduction
 title: Hello, Robolink documentation!
 authors: subin
 tags: [hello, docusaurus, Robolink, CoDroneEDU]
+customHeadElements:
+  - <link rel="manifest" href="manifest.json" />
 ---
 
 ## Hello everyone! 

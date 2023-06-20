@@ -1,3 +1,8 @@
+---
+customHeadElements:
+  - <link rel="manifest" href="manifest.json" />
+---
+
 # Tutorial Intro
 
 Let's start Docusaurus.
