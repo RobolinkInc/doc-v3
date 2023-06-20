@@ -4,6 +4,8 @@ title: What is CoDroneEDU?
 tags:
   - Robolink
   - CoDroneEDU
+customHeadElements:
+  - <link rel="manifest" href="manifest.json" />
 ---
 
 
