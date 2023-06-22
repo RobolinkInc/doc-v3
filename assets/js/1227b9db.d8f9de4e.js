@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc_v_3=self.webpackChunkdoc_v_3||[]).push([[706],{7094:o=>{o.exports=JSON.parse('{"label":"Robolink","permalink":"/docs/tags/robolink","allTagsPath":"/docs/tags","count":1,"items":[{"id":"CoDroneEDU/codron-explain","title":"What is CoDroneEDU?","description":"","permalink":"/docs/CoDroneEDU/codron-explain"}]}')}}]);
