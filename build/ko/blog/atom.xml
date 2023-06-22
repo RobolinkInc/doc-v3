@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-docusaurus-test-site.com/ko/blog</id>
+    <title>Robolink Documentation Blog</title>
+    <updated>2023-05-24T07:50:40.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-docusaurus-test-site.com/ko/blog"/>
+    <subtitle>Robolink Documentation Blog</subtitle>
+    <icon>https://your-docusaurus-test-site.com/ko/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Hello, Robolink documentation!]]></title>
+        <id>https://your-docusaurus-test-site.com/ko/blog/Introduction</id>
+        <link href="https://your-docusaurus-test-site.com/ko/blog/Introduction"/>
+        <updated>2023-05-24T07:50:40.000Z</updated>
+        <summary type="html"><![CDATA[Hello everyone!]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hello-everyone">Hello everyone!<a href="#hello-everyone" class="hash-link" aria-label="Hello everyone!에 대한 직접 링크" title="Hello everyone!에 대한 직접 링크">​</a></h2><p>Hello everyone.
+My name is Subin Kim.</p><p>This webpage provides Robolink product's documentation.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="this-is-robolink-doc_v3">This is Robolink doc_v3.<a href="#this-is-robolink-doc_v3" class="hash-link" aria-label="This is Robolink doc_v3.에 대한 직접 링크" title="This is Robolink doc_v3.에 대한 직접 링크">​</a></h2>]]></content>
+        <author>
+            <name>Subin Kim</name>
+            <uri>https://github.com/green-study</uri>
+        </author>
+        <category label="hello" term="hello"/>
+        <category label="docusaurus" term="docusaurus"/>
+        <category label="Robolink" term="Robolink"/>
+        <category label="CoDroneEDU" term="CoDroneEDU"/>
+    </entry>
+</feed>
