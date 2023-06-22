@@ -9,7 +9,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://localhost:3000/manifest.json"
+      "url": "https://localhost:3000/doc-v3/manifest.json"
     }
   ],
   "icons": [
