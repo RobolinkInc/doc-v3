@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Robolink Documentation',
-  tagline: 'easy to understand',
+  tagline: 'Robolink docs',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -18,8 +18,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'RobolinkInc', // Usually your GitHub org/user name.
+  projectName: 'doc-v3', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -71,58 +71,30 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Robolink Logo',
+          src: 'img/R-docs-logo.png',
         },
         items: [
           {
+            type: 'localeDropdown',
             position: 'right',
-            label: 'CoDrone EDU',
-            to: '/docs/CoDroneEDU/',
-          }, 
+          },
           {
+            type: 'search',
             position: 'right',
-            label: 'Zumi',
-            to: '/docs/Zumi/',
-          },  
+          },
+          {
+            label: 'Go to Lessons',
+            href: 'https://learn.robolink.com/',
+            position: 'right',
+          }, 
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Help',
-            items: [
-              {
-                label: 'Robolink Help',
-                href: 'https://robolink.helpdocs.io/',
-              },
-            ],
-          },
-          {
-            title: 'Learning',
-            items: [
-              {
-                label: 'Robolink Basecamp',
-                href: 'https://learn.robolink.com/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/RobolinkInc/doc-v3',
-              },
-            ],
-          },
-        ],
+        copyright: `<div id="footerBox"> <img id="imgFooter" src="/img/R-footer-logo.png" /></div><div id="box" ><div><a href="https://robolink.helpdocs.io/"> Robolink Help</a> | <a href="#"> Terms of use</a> | <a href="#"> Privacy</a></div></div>`,
       },
       prism: {
         theme: lightCodeTheme,

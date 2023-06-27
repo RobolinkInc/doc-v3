@@ -6,6 +6,40 @@
 
 /* You can override the default Infima variables here. */
 
+.navbar {
+  background-color: #061030;
+}
+
+.navbar__link:nth-child(3)  {
+  background-color: #E61848;
+  border-radius: 50px;
+  padding: 4px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar__link--active {
+  color: white;
+}
+
+.navbar__link {
+  color: white;
+}
+
+.toggle-theme {
+  color: #ffffff !important;
+}
+
+.footer {
+  background: linear-gradient(to bottom, #05001C, #141F57);
+}
+
+.footerBox {
+  margin-bottom: 1px;
+  color: white;
+  position: absolute;
+}
+
 :root {
   --ifm-color-primary: #783696;
   --ifm-color-primary-dark: #6c3187;
