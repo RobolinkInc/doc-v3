@@ -6,36 +6,50 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
+const features = [
+  {
+    title: 'CoDrone EDU',
+    image: '/doc-v3/img/docusaurus.png',
+    link: '/doc-v3/docs/CoDroneEDU',
+  },
+  {
+    title: 'CoDrone Mini',
+    image: '/doc-v3/img/docusaurus.png',
+    link: '/doc-v3/docs/CoDroneMini',
+  },
+  {
+    title: 'CoDrone Pro/Lite',
+    image: '/doc-v3/img/docusaurus.png',
+    link: '/doc-v3/docs/CoDronePro_Lite',
+  },
+  {
+    title: 'Zumi',
+    image: '/doc-v3/img/docusaurus.png',
+    link: '/doc-v3/docs/Zumi',
+  },
+]
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+    <Layout>
+      <div className="hero">
+        <div className="container">
+          <div className="features">
+            {features.map((feature, index) => (
+              <a key={index} href={feature.link} className="feature">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="feature-image"
+                />
+                <div className="feature-title">{feature.title}</div>
+                <div className="feature-description">{feature.description}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

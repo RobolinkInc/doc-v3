@@ -30,15 +30,49 @@
   color: #ffffff !important;
 }
 
+footer {
+  position: relative;
+  height: 85px;
+}
+
+#footerBox {
+  position: fixed;
+  bottom: 27px;
+  left: 74px;
+  color: #38A0F4;
+  ;
+}
+
+#footerBox img{
+  position: fixed;
+  bottom: 23px;
+  left: 20px;
+}
+
+#box {
+  position: fixed;
+  bottom: 27px;
+  right: 20px;
+  color: white !important;
+}
+
+
 .footer {
   background: linear-gradient(to bottom, #05001C, #141F57);
 }
 
-.footerBox {
-  margin-bottom: 1px;
-  color: white;
-  position: absolute;
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.feature {
+  text-align: center;
+  width: 270px;
+  margin-right: 20px;
+}
+
 
 :root {
   --ifm-color-primary: #783696;
