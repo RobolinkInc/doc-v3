@@ -9,23 +9,23 @@ import styles from './index.module.css';
 const features = [
   {
     title: 'CoDrone EDU',
-    image: '/doc-v3/img/docusaurus.png',
-    link: '/doc-v3/docs/CoDroneEDU',
+    image: '/img/docusaurus.png',
+    link: '/docs/CoDroneEDU',
   },
   {
     title: 'CoDrone Mini',
-    image: '/doc-v3/img/docusaurus.png',
-    link: '/doc-v3/docs/CoDroneMini',
+    image: '/img/docusaurus.png',
+    link: '/docs/CoDroneMini',
   },
   {
     title: 'CoDrone Pro/Lite',
-    image: '/doc-v3/img/docusaurus.png',
-    link: '/doc-v3/docs/CoDronePro_Lite',
+    image: '/img/docusaurus.png',
+    link: '/docs/CoDronePro_Lite',
   },
   {
     title: 'Zumi',
-    image: '/doc-v3/img/docusaurus.png',
-    link: '/doc-v3/docs/Zumi',
+    image: '/img/docusaurus.png',
+    link: '/docs/Zumi',
   },
 ]
 
@@ -44,7 +44,6 @@ export default function Home() {
                   className="feature-image"
                 />
                 <div className="feature-title">{feature.title}</div>
-                <div className="feature-description">{feature.description}</div>
               </a>
             ))}
           </div>
