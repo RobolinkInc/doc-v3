@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://staging-docs.robolink.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -94,7 +94,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `<div id="footerBox"> <img id="imgFooter" src="/doc-v3/img/R-footer-logo.png" />5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</div><div id="box" ><div><a href="https://robolink.helpdocs.io/"> Robolink Help&nbsp;</a> | <a href="#"> &nbsp;Terms of use&nbsp;</a> | <a href="#"> &nbsp;Privacy</a></div></div>`,
+        copyright: `<div id="footerBox"> <img id="imgFooter" src="/img/R-footer-logo.png" />5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</div><div id="box" ><div><a href="https://robolink.helpdocs.io/"> Robolink Help&nbsp;</a> | <a href="#"> &nbsp;Terms of use&nbsp;</a> | <a href="#"> &nbsp;Privacy</a></div></div>`,
       },
       prism: {
         theme: lightCodeTheme,
