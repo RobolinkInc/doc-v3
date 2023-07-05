@@ -8,6 +8,7 @@
 
 .navbar {
   background-color: #061030;
+  height: 80px;
 }
 
 .navbar__link:nth-child(3)  {
