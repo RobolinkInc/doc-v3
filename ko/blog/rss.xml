@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Robolink Documentation Blog</title>
+        <link>https://staging-docs.robolink.com/ko/blog</link>
+        <description>Robolink Documentation Blog</description>
+        <lastBuildDate>Wed, 24 May 2023 07:50:40 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>ko</language>
+        <item>
+            <title><![CDATA[Hello, Robolink documentation!]]></title>
+            <link>https://staging-docs.robolink.com/ko/blog/Introduction</link>
+            <guid>https://staging-docs.robolink.com/ko/blog/Introduction</guid>
+            <pubDate>Wed, 24 May 2023 07:50:40 GMT</pubDate>
+            <description><![CDATA[Hello everyone!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hello-everyone">Hello everyone!<a href="#hello-everyone" class="hash-link" aria-label="Hello everyone!에 대한 직접 링크" title="Hello everyone!에 대한 직접 링크">​</a></h2><p>Hello everyone.
+My name is Subin Kim.</p><p>This webpage provides Robolink product's documentation.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="this-is-robolink-doc_v3">This is Robolink doc_v3.<a href="#this-is-robolink-doc_v3" class="hash-link" aria-label="This is Robolink doc_v3.에 대한 직접 링크" title="This is Robolink doc_v3.에 대한 직접 링크">​</a></h2>]]></content:encoded>
+            <category>hello</category>
+            <category>docusaurus</category>
+            <category>Robolink</category>
+            <category>CoDroneEDU</category>
+        </item>
+    </channel>
+</rss>

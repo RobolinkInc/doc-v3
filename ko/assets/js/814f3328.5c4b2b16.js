@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc_v_3=self.webpackChunkdoc_v_3||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Hello, Robolink documentation!","permalink":"/ko/blog/Introduction"}]}')}}]);
