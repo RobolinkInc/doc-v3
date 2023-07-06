@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
+import {useColorMode} from '@docusaurus/theme-common';
 
 const features = [
   {
@@ -28,7 +29,6 @@ const features = [
     link: '/docs/Zumi',
   },
 ]
-
 
 export default function Home() {
 
