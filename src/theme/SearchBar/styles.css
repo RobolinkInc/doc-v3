@@ -16,6 +16,8 @@
 
 @media (max-width: 360px) {
   .search-bar {
+    display: flex;
+    align-items: center;
     width: 0 !important;
     background: none !important;
     padding: 0 !important;
@@ -29,5 +31,6 @@
   .search-icon {
     display: inline;
     vertical-align: sub;
+    margin-left: auto;
   }
 }
