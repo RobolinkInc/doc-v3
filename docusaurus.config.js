@@ -72,7 +72,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
@@ -99,11 +99,18 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `<div id="footerBox"> <img id="imgFooter" src="/img/R-footer-logo.png" />5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</div><div id="box" ><div><a href="https://robolink.helpdocs.io/"> Robolink Help&nbsp;</a> | <a href="#"> &nbsp;Terms of use&nbsp;</a> | <a href="#"> &nbsp;Privacy</a></div></div>`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        copyright: 
+        `<div id="footerBox">
+          <img id="imgFooter" src="/img/R-footer-logo.png" />
+          <span>5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</span>
+        </div>
+        <div id="box">
+          <div>
+            <a href="https://robolink.helpdocs.io/"> Robolink Help&nbsp;</a> |
+            <a href="#"> &nbsp;Terms of use&nbsp;</a> |
+            <a href="#"> &nbsp;Privacy</a>
+          </div>
+        </div>`,
       },
     }),
     plugins: [
