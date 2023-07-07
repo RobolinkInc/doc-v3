@@ -34,22 +34,24 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="hero">
-        <div className="container">
-          <h3 className="hero__title">Robolink Library Documentation</h3>
-          <h6 className="hero__subtitle">Learn about how to use the library functions and blocks for the coding platforms of our robots and drones</h6>
-          <h1 className="select__title">Select a kit</h1>
-          <div className="features">
-            {features.map((feature, index) => (
-              <a key={index} href={feature.link} className="feature">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="feature-image"
-                />
-                <div className="feature-title">{feature.title}</div>
-              </a>
-            ))}
+      <div className="hero_wrap">
+        <div className="hero">
+          <div className="container">
+            <h3 className="hero__title">Robolink Library Documentation</h3>
+            <h6 className="hero__subtitle">Learn about how to use the library functions and blocks for the coding platforms of our robots and drones</h6>
+            <h1 className="select__title">Select a kit</h1>
+            <div className="features">
+              {features.map((feature, index) => (
+                <a key={index} href={feature.link} className="feature">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="feature-image"
+                  />
+                  <div className="feature-title">{feature.title}</div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
