@@ -10,3 +10,16 @@ customHeadElements:
 
 
 # What is CoDroneEDU?
+
+## pair()
+
+pair : ~~
+
+## flip()
+
+flip : ~~
+
+
+## test()
+
+test## : ~~
