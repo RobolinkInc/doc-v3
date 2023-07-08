@@ -131,17 +131,17 @@ footer {
   height: 240px;
 }
 
-.hero_wrap {
-  position: relative;
+div.main-wrapper {
+  background-image: url("/img/main_background.png");
+  background-size: cover;
   overflow: hidden;
-}
-
-.hero {
-  background-image: url('/img/main_background.png');
-  background-size: cover; 
   position: relative;
   z-index: 0;
 }
+
+.hero {
+  background-color: transparent !important;
+} 
 
 [data-theme='dark'] .hero::before {
   content: "";
