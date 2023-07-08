@@ -94,7 +94,7 @@ const config = {
             label: 'Go to Lessons',
             href: 'https://learn.robolink.com/',
             position: 'right',
-          }, 
+          },
         ],
       },
       footer: {
