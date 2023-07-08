@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc_v_3=self.webpackChunkdoc_v_3||[]).push([[8039],{8161:o=>{o.exports=JSON.parse('{"label":"CoDroneEDU","permalink":"/docs/tags/co-drone-edu","allTagsPath":"/docs/tags","count":1,"items":[{"id":"CoDroneEDU/codron-explain","title":"What is CoDroneEDU?","description":"pair()","permalink":"/docs/CoDroneEDU/codron-explain"}]}')}}]);
