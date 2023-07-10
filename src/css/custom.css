@@ -11,11 +11,18 @@
   height: 80px;
 }
 
-.clean-btn.toggleButton_gllP {
+.navbar-sidebar__brand button:nth-child(1) {
   color: white;
   background-color:#18C1E6;
   margin-right: 12px;
 }
+
+.navbar__items.navbar__items--right button {
+  color: white;
+  background-color:#18C1E6;
+  margin-right: 12px;
+}
+
 
 .navbar__logo {
   line-height: 0px; 
@@ -215,7 +222,7 @@ nav.thin-scrollbar {
   background-color: #E1E0E0;
 }
 
-.docMainContainer_gTbr {
+.main-wrapper main {
   background-color: #ffffff;
 }
 
@@ -227,7 +234,7 @@ nav.thin-scrollbar {
   background-color: #353535;
 }
 
-[data-theme='dark'] .docMainContainer_gTbr {
+[data-theme='dark'] .main-wrapper main {
   background-color: #191919;
 }
 
