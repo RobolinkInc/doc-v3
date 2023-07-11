@@ -10,23 +10,23 @@ import {useColorMode} from '@docusaurus/theme-common';
 const features = [
   {
     title: 'CoDrone EDU',
-    image: '/img/docusaurus.png',
+    image: '/img/main/CDE.png',
     link: '/docs/CoDroneEDU',
   },
   {
     title: 'CoDrone Mini',
-    image: '/img/docusaurus.png',
+    image: '/img/main/CDM.png',
     link: '/docs/CoDroneMini',
   },
   {
     title: 'CoDrone Pro/Lite',
-    image: '/img/docusaurus.png',
-    link: '/docs/CoDronePro_Lite',
+    image: '/img/main/Zumi.png',
+    link: '/docs/Zumi',
   },
   {
     title: 'Zumi',
-    image: '/img/docusaurus.png',
-    link: '/docs/Zumi',
+    image: '/img/main/CDP.png',
+    link: '/docs/CoDronePro_Lite',
   },
 ]
 
@@ -45,10 +45,8 @@ export default function Home() {
                 <a key={index} href={feature.link} className="feature">
                   <img
                     src={feature.image}
-                    alt={feature.title}
                     className="feature-image"
                   />
-                  <div className="feature-title">{feature.title}</div>
                 </a>
               ))}
             </div>

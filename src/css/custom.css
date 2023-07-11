@@ -88,6 +88,8 @@ footer {
 }
 
 #footerBox img {
+  width: 35px;
+  height: 35px;
   position: absolute;
   bottom: -3px;
   left: -50px;
@@ -115,15 +117,12 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around; 
   align-items: flex-start;
-  margin: 0 auto;
-  margin-top: 5%;
-  padding-bottom: 90px;
+  margin-top: 50px;
 }
 
 .feature {
-  flex: 0 0 270px;
-  height: 270px;
-  background-color: #f0f0f0;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,14 +131,8 @@ footer {
   margin-bottom: 20px;
 }
 
-
-.feature-image {
-  width: 240px;
-  height: 240px;
-}
-
 div.main-wrapper {
-  background-image: url("/img/main_background.png");
+  background-image: url("/img/main/main_background.png");
   background-size: cover;
   position: relative;
   z-index: 0;
