@@ -235,6 +235,26 @@ nav.thin-scrollbar {
   background-color: #1E1E1E;
 }
 
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1:first-child {
+  display: none;
+}
+
+.menu__list-item-collapsible{
+  display: none;
+}
+
+.breadcrumbs{
+  display: none;
+}
+
+.theme-doc-footer {
+  display: none;
+}
+
+.pagination-nav {
+  display: none;
+}
+
 :root {
   --ifm-color-primary: #191919;
   --ifm-color-primary-dark: #191919;
