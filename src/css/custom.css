@@ -255,6 +255,10 @@ nav.thin-scrollbar {
   display: none;
 }
 
+.theme-doc-markdown header h1 {
+  text-align: center;
+}
+
 :root {
   --ifm-color-primary: #191919;
   --ifm-color-primary-dark: #191919;
