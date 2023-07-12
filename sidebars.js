@@ -20,24 +20,33 @@ const sidebars = {
       type: 'doc',
       id: 'CoDroneEDU/CoDroneEDU',
     },
-    'CoDroneEDU/function',
+    {
+      type: 'doc',
+      id: 'CoDroneEDU/function',
+    },
+    {
+      type: 'doc',
+      id: 'CoDroneEDU/Blockly/Blockly',
+    },
     {
       type: 'category',
       label: 'Blockly',
       collapsible: false,
       items: [
-        'CoDroneEDU/Blockly/Blockly',
         'CoDroneEDU/Blockly/page1',
         'CoDroneEDU/Blockly/page2',
         'CoDroneEDU/Blockly/page3',
       ],
     },
     {
+      type: 'doc',
+      id: 'CoDroneEDU/Python/Python',
+    },
+    {
       type: 'category',
       label: 'Python',
       collapsible: false,
       items: [
-        'CoDroneEDU/Python/Python',
         'CoDroneEDU/Python/page1',
         'CoDroneEDU/Python/page2',
         'CoDroneEDU/Python/page3',
@@ -45,11 +54,14 @@ const sidebars = {
       ],
     },
     {
+      type: 'doc',
+      id: 'CoDroneEDU/Documents/Documents',
+    },
+    {
       type: 'category',
       label: 'Documents',
       collapsible: false,
       items: [
-        'CoDroneEDU/Documents/Documents',
         'CoDroneEDU/Documents/page1',
         'CoDroneEDU/Documents/page2',
         'CoDroneEDU/Documents/page3',
