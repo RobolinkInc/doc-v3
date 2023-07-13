@@ -34,6 +34,10 @@ const config = {
       en: {
         htmlLang: 'en-GB',
       },
+      ko: {
+        htmlLang: 'ko-KR',
+        label: '한국어', 
+      },
     },
   },
 
@@ -77,6 +81,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
+        style: 'dark',
         logo: {
           alt: 'Robolink Logo',
           src: 'img/R-docs-logo.png',
@@ -98,7 +103,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         copyright: 
         `<div id="footerBox">
           <img id="imgFooter" src="/img/R-footer-logo.png" />
