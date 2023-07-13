@@ -103,6 +103,7 @@ const config = {
         ],
       },
       footer: {
+        style: 'dark',
         copyright: 
         `<div id="footerBox">
           <img id="imgFooter" src="/img/R-footer-logo.png" />
