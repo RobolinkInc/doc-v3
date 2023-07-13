@@ -62,12 +62,9 @@
   color: white;
 }
 
-
 .navbar__items .dropdown__link--active, .navbar__items .dropdown__link--active:hover, .navbar__items .dropdown__link:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
-
-
 
 
 .navbar__logo {
