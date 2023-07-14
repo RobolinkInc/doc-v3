@@ -22,10 +22,6 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'CoDroneEDU/function',
-    },
-    {
-      type: 'doc',
       id: 'CoDroneEDU/Blockly/Blockly',
     },
     {
