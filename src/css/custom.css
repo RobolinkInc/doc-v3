@@ -279,7 +279,7 @@ nav.thin-scrollbar {
 }
 
 li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1 a {
-  margin-top: 30px;
+  margin-top: 35px;
   font-weight: bold;
 }
 
@@ -352,7 +352,11 @@ nav.thin-scrollbar a {
 
 .theme-doc-markdown header h1 {
   text-align: center;
+  font-size: 40px;
+  font-weight: 550;
+  margin-top: 15px;
 }
+
 
 :root {
   --ifm-color-primary: #191919;
