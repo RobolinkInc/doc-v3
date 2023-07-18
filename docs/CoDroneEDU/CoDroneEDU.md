@@ -5,43 +5,27 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div style={{ textAlign: 'center', marginTop: '50px'  }}>
-  <img src="/img/CDE/drone_remote-3.png" style={{ width: '50%' }} />
+<div className='level1_main_image'>
+
+  ![CoDrone EDU](/img/CDE/drone_remote-3.png)
+
 </div>
 
-<div className="docs-content-default" style={{ textAlign: 'center', fontSize: '22px', marginLeft: '10%', marginRight: '10%' }}>
-  Welcome to CoDrone EDU’s journey. The CoDrone EDU is a programmable drone, meant for learning in the classroom. Code it in Python or start from the basics with block-based coding.  
-</div>
+#### Welcome to CoDrone EDU’s journey. The CoDrone EDU is a programmable drone, meant for learning in the classroom. Code it in Python or start from the basics with block-based coding.  
 
 <br />
-<br />
 
-<div className="docs-content-default" style={{ textAlign: 'center', fontSize: '22px' }}>
-  Please click the tab below to go to the page.  
-</div>
+#### Please click the tab below to go to the page.   
 
-<br />
-<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around',
-  alignItems: 'flex-start',  marginLeft: '10%', marginRight: '10%', marginTop: '10px' }}>
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',
-  justifyContent: 'center', marginBottom: '10px' }}>
-    <a to="/docs/CoDroneEDU/Blockly/">
-      <img src="/img/CDE/Blockly.png" style={{ width: '190px' }} alt="Blockly" />
-    </a>
-    <div style={{ textAlign: 'center', fontSize: '20px', color: '#666666' }}>Blockly</div>
-  </div>
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',
-  justifyContent: 'center', marginBottom: '10px' }}>
-    <a to="/docs/CoDroneEDU/Python/">
-      <img src="/img/CDE/Python.png" style={{ width: '190px' }} alt="Python" />
-    </a>
-    <div style={{ textAlign: 'center', fontSize: '20px' , color: '#666666' }}>Python</div>
-  </div>
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',
-  justifyContent: 'center', marginBottom: '10px' }}>
-    <a to="/docs/CoDroneEDU/Documents/">
-      <img src="/img/CDE/Document.png" style={{ width: '190px' }} alt="Documents" />
-    </a>
-    <div style={{ textAlign: 'center', fontSize: '20px' , color: '#666666' }}>Documents</div>
-  </div>
+<div className='level_image_column'>
+
+  [![blockly](/img/CDE/Blockly.png)](/docs/CoDroneEDU/Blockly/)
+  [Blockly](/docs/CoDroneEDU/Blockly/)
+
+  [![python](/img/CDE/Python.png)](/docs/CoDroneEDU/Python/)
+  [Python](/docs/CoDroneEDU/Python/)
+
+  [![documents](/img/CDE/Document.png)](/docs/CoDroneEDU/Documents/)
+  [Documents](/docs/CoDroneEDU/Documents/)
+
 </div>
