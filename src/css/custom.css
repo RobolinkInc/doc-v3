@@ -264,7 +264,9 @@ nav.thin-scrollbar {
 
 .col.col--3  {
   background-color: #FCFCFC;
+  height: inherit;
 }
+
 
 [data-theme='dark'] nav.thin-scrollbar {
   background-color: #353535;
@@ -285,7 +287,7 @@ li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1 a {
 
 nav.thin-scrollbar a {
   color: black;
-  font-size: 85%;
+  font-size: 13px;
 }
 
 .nav.menu {
@@ -357,6 +359,72 @@ nav.thin-scrollbar a {
   margin-top: 15px;
 }
 
+.theme-doc-markdown header {
+  margin-bottom: 40px;
+}
+
+.theme-doc-markdown h4 {
+  text-align: center;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.hash-link{
+  display: none;
+}
+
+.level1_main_image{
+  text-align: center;
+}
+
+.level1_main_image img {
+  width: 50%;
+}
+
+.level2_main_image {
+  text-align: center;
+}
+
+.level2_main_image img {
+  margin-top: 40px;
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.level_image_column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.level_image_column p {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.level_image_column p img {
+  width: 210px;
+  margin-top: 20px;
+}
+
+.level_image_column p a {
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  line-height: 1.2;
+}
 
 :root {
   --ifm-color-primary: #191919;
