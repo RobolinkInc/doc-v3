@@ -9,24 +9,36 @@ import {useColorMode} from '@docusaurus/theme-common';
 
 const features = [
   {
-    title: 'CoDrone EDU',
-    image: '/img/main/CDE.png',
+    title: 'CDE',
+    image: '/img/main/CDE_img.png',
+    temp_image: 'img/main/CDE.png',
     link: '/docs/CoDroneEDU',
+    Head_text: 'CoDrone EDU',
+    Body_text: 'Python & Blockly. A color-sensing, obstacle detecting, programmable drone'
   },
   {
-    title: 'CoDrone Mini',
-    image: '/img/main/CDM.png',
+    title: 'CDM',
+    image: '/img/main/CDM_img.png',
+    temp_image: '/img/main/CDM.png',
     link: '/docs/CoDroneMini',
+    Head_text: 'CoDrone Mini',
+    Body_text: 'Learn Python and Blockly that can make a mini drone fly'
   },
   {
-    title: 'CoDrone Pro/Lite',
-    image: '/img/main/Zumi.png',
+    title: 'ZUMI',
+    image: '/img/main/Zumi_img.png',
+    temp_image: '/img/main/Zumi.png',
     link: '/docs/Zumi',
+    Head_text: 'Zumi',
+    Body_text: 'Learn AI with a self-driving car'
   },
   {
-    title: 'Zumi',
-    image: '/img/main/CDP.png',
+    title: 'CDP',
+    image: '/img/main/CDP_img.png',
+    temp_image: '/img/main/CDP.png',
     link: '/docs/CoDronePro_Lite',
+    Head_text: 'CoDrone Pro/Lite',
+    Body_text: 'Learn to build a remote and write programs to make your code fly'
   },
 ]
 
@@ -43,10 +55,20 @@ export default function Home() {
             <div className="features">
               {features.map((feature, index) => (
                 <a key={index} href={feature.link} className="feature">
-                  <img
-                    src={feature.image}
-                    className="feature-image"
-                  />
+                  <div className='feature'>
+                    <div className='feature_img'>
+                      <img
+                        src={feature.image}
+                        className={feature.title+'_feature_img'}
+                      />
+                    </div>
+                    <div className='description'>
+                      <div className={feature.title+'_description'}>
+                        <h2>{feature.Head_text}</h2>
+                        <h4>{feature.Body_text}</h4>
+                      </div>
+                    </div>
+                  </div>
                 </a>
               ))}
             </div>

@@ -105,15 +105,17 @@ const config = {
       footer: {
         style: 'dark',
         copyright: 
-        `<div id="footerBox">
-          <img id="imgFooter" src="/img/R-footer-logo.png" />
-          <span>5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</span>
-        </div>
-        <div id="box">
-          <div>
-            <a href="https://robolink.helpdocs.io/"> Robolink Help&nbsp;</a> |
-            <a href="#"> &nbsp;Terms of use&nbsp;</a> |
-            <a href="#"> &nbsp;Privacy</a>
+        `<div class=footer-wrap>
+          <div class="footerBox" id="footerBox">
+            <img id="imgFooter" src="/img/R-footer-logo.svg" />
+            <span>5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</span>
+          </div>
+          <div class="box" id="box">
+            <div>
+              <a href="https://robolink.helpdocs.io/"> Robolink Help&nbsp;</a> |
+              <a href="#"> &nbsp;Terms of use&nbsp;</a> |
+              <a href="#"> &nbsp;Privacy</a>
+            </div>
           </div>
         </div>`,
       },
