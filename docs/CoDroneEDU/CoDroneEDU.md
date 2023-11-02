@@ -19,13 +19,14 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![blockly](/img/CDE/Blockly.png)](/docs/CoDroneEDU/Blockly/)
+  [![blockly](/img/CDE/Blockly-logo.png)](/docs/CoDroneEDU/Blockly/)
   [Blockly](/docs/CoDroneEDU/Blockly/)
 
-  [![python](/img/CDE/Python.png)](/docs/CoDroneEDU/Python/)
+  [![python](/img/CDE/Python-logo.png)](/docs/CoDroneEDU/Python/)
   [Python](/docs/CoDroneEDU/Python/)
 
-  [![documents](/img/CDE/Document.png)](/docs/CoDroneEDU/Documents/)
+  [![documents](/img/CDE/document-main-icon.png)](/docs/CoDroneEDU/Documents/)
   [Documents](/docs/CoDroneEDU/Documents/)
+
 
 </div>
