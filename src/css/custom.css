@@ -78,7 +78,7 @@
 .navbar__search-input {
   padding: 8px 12px;
   width: 265.5px;
-  min-width: 200px;
+  min-width: 265.5px;
   height: 40px;
   border-radius: 50px;
   background-color: #3F4351;
@@ -116,6 +116,40 @@
 .toggle-theme {
   color: #ffffff !important;
 }
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 72px;
+  }
+  
+  .navbar__logo img {
+    height: 80%;
+  }
+
+  .navbar__link:nth-child(3) {
+    display: none;
+  }
+
+  .navbar__search-input {
+    padding: 8px 12px;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    border-radius: 20px;
+    background-color: #3F4351;
+    color: #ffffff;
+    font-size: 16px;
+  }
+
+
+  .navbar__search-input:focus {
+    width: 200px; /* 변경하고 싶은 크기 */
+  }
+
+
+}
+
 
 .footer {
   display: flex;
@@ -346,6 +380,7 @@ div.main-wrapper {
   font-size: 17px;
   color: black;
   text-align: center;
+  margin: 0px 20px 0px 20px;
 }
 
 .hero .select__title {
@@ -373,6 +408,28 @@ nav.thin-scrollbar {
   height: inherit;
 }
 
+.table-of-contents__link:hover {
+  color: #E61848;
+}
+
+.table-of-contents__link--active {
+  color: #E61848;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.table-of-contents__link--active::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E61848;
+  margin-right: 5px;
+}
 
 [data-theme='dark'] nav.thin-scrollbar {
   background-color: #353535;

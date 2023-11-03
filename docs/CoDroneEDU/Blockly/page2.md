@@ -13,7 +13,7 @@ customHeadElements:
 
 #### Block
 
-<img src="/img/CDE/take_off.png" width="16%"/>  
+<img src="/img/CDE/take_off.png" width="180px"/>  
 
 #### Code
 
@@ -25,7 +25,7 @@ This function makes the drone take off and begin hovering. The drone will always
 
 #### Example
 
-<img src="/img/CDE/take_off_ex.png" width="35%"/>  
+<img src="/img/CDE/take_off_ex.png" width="320px"/>  
 
 <hr/>
 
@@ -33,7 +33,7 @@ This function makes the drone take off and begin hovering. The drone will always
 
 #### Block
 
-<img src="/img/CDE/land.png" width="16%"/>  
+<img src="/img/CDE/land.png" width="180px"/>  
 
 ### emergency_stop()
 

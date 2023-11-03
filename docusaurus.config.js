@@ -79,6 +79,13 @@ const config = {
         defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: false,
+        /*
+        respectPrefersColorScheme: true,
+        switchConfig: {
+          IconDarkMode: 'IconDarkMode',
+          IconLightMode: 'IconLightMode',
+        },
+        */
       },
       navbar: {
         style: 'dark',
@@ -175,6 +182,9 @@ const config = {
           ],
         },
       ],
+    ],
+    scripts: [
+      '/custom.js', 
     ],
 };
 
