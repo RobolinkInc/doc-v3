@@ -17,7 +17,7 @@ customHeadElements:
 
 #### Code
 
-<span class="light_gray">drone.</span><span class="dark_gray">takeoff()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">takeoff()</span>
 
 #### Discription
 

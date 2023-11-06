@@ -36,7 +36,7 @@ const config = {
       },
       ko: {
         htmlLang: 'ko-KR',
-        label: '한국어', 
+        label: '한국어 Korean', 
       },
     },
   },
@@ -78,14 +78,7 @@ const config = {
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
-        respectPrefersColorScheme: false,
-        /*
         respectPrefersColorScheme: true,
-        switchConfig: {
-          IconDarkMode: 'IconDarkMode',
-          IconLightMode: 'IconLightMode',
-        },
-        */
       },
       navbar: {
         style: 'dark',
