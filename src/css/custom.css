@@ -15,7 +15,12 @@
   color: white;
   background-color:#18C1E6;
   margin-right: 12px;
+  border: 2px solid;
 } 
+
+[data-theme='dark'] .navbar__items.navbar__items--right button {
+  background-color:#061030;
+}
 
 .navbar__items .dropdown {
   width: fit-content;
@@ -243,8 +248,8 @@
 .feature {
   position: relative;
   overflow: hidden;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -300,7 +305,7 @@ a.feature {
 
 .description h2 {
   font-size: 28px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .description h4 {
@@ -309,7 +314,7 @@ a.feature {
   padding-right: 6%;
   text-align: center;
   font-weight: 100;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.6px;
 }
 
 div.main-wrapper {
@@ -322,38 +327,6 @@ div.main-wrapper {
 .hero {
   background-color: transparent !important;
 } 
-
-
-[data-theme='dark'] .hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #060220A6;
-  z-index: -1;
-} 
-
-[data-theme='dark'] .hero .hero__title {
-  font-size: 30px;
-  color: white;
-  margin-top: 50px;
-  text-align: center;
-}
-
-[data-theme='dark'] .hero .hero__subtitle {
-  font-size: 17px;
-  color: white;
-  text-align: center;
-}
-
-[data-theme='dark'] .hero .select__title {
-  font-size: 50px;
-  color: white;
-  margin-top: 120px;
-  text-align: center;
-}
 
 
 .hero::before {
@@ -384,8 +357,24 @@ div.main-wrapper {
 .hero .select__title {
   font-size: 50px;
   color: black;
-  margin-top: 120px;
+  margin-top: 80px;
   text-align: center;
+}
+
+[data-theme='dark'] .hero::before {
+  background-color: #060220A6;
+} 
+
+[data-theme='dark'] .hero .hero__title {
+  color: white;
+}
+
+[data-theme='dark'] .hero .hero__subtitle {
+  color: white;
+}
+
+[data-theme='dark'] .hero .select__title {
+  color: white;
 }
 
 .navbar-sidebar__brand {
@@ -401,9 +390,23 @@ nav.thin-scrollbar {
   background-color: #ffffff;
 }
 
-.col.col--3  {
+ul.table-of-contents > li > a {
+  font-weight: 600;
+}
+
+.col.col--3 {
   background-color: #FCFCFC;
   height: inherit;
+  border-left: 1px solid #E8E8E8;
+}
+
+[data-theme='dark'] .col.col--3 {
+  background-color: #1E1E1E;
+  border-left: 1px solid #434344;
+}
+
+.table-of-contents__left-border{
+  border-left: none;
 }
 
 .table-of-contents__link:hover {
@@ -449,9 +452,6 @@ nav.thin-scrollbar {
   background-color: #191919;
 }
 
-[data-theme='dark'] .col.col--3  {
-  background-color: #1E1E1E;
-}
 
 li.theme-doc-sidebar-item-link.theme-doc-sidebar-item-link-level-1 a {
   margin-top: 35px;
@@ -556,7 +556,12 @@ nav.thin-scrollbar a {
 }
 
 .level1_main_image img {
-  width: 50%;
+  width: 300px;
+}
+
+.level1_body p {
+  text-align: center;
+  font-size: 18px;
 }
 
 .level2_main_image {
@@ -564,9 +569,8 @@ nav.thin-scrollbar a {
 }
 
 .level2_main_image img {
-  margin-top: 40px;
-  width: 250px;
-  margin-bottom: 30px;
+  width: 220px;
+  margin-bottom: 20px;
 }
 
 .level_image_column {
@@ -583,14 +587,13 @@ nav.thin-scrollbar a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .level_image_column p img {
   object-fit: contain;
   width: 210px;
   height: 175px;
-  margin: 20px 10px 0px 10px;
+  margin: 0px 10px 0px 10px;
   padding: 35px 10px 35px 10px;
   background-color: #F0EEEE;
   border:1px solid;
@@ -600,9 +603,14 @@ nav.thin-scrollbar a {
 
 .level_image_column p a {
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   color: #666666;
   line-height: 1.2;
+  text-decoration: none;
+}
+
+.column_2_images {
+  margin: 0% 16.5% 0% 16.5%;
 }
 
 .level3_body p{
@@ -628,6 +636,66 @@ nav.thin-scrollbar a {
   font-weight: 600;
   text-align:left;
   margin: 30px 0 15px 0;
+}
+
+.language-python {
+  --prism-background-color: #F6F8FA;
+}
+
+.language-python .token {
+  color: #000000;
+}
+
+.language-python .token.comment {
+  color: #999988 !important;
+}
+
+.language-python .token.keyword {
+  color: #00009F !important;
+}
+
+.language-python .token.punctuation {
+  color: #000000 !important;
+}
+
+.language-python .token.operator {
+  color: #000000 !important;
+}
+
+.language-python .clean-btn {
+  background-color: rgba(172, 173, 175, 60) !important;
+}
+
+.language-python .clean-btn span {
+  color: #FFFFFF;;
+}
+
+[data-theme='dark'] .language-python .clean-btn {
+  background-color: #353535 !important;
+}
+
+[data-theme='dark'] .language-python {
+  --prism-background-color: #666666;
+}
+
+[data-theme='dark'] .language-python .token {
+  color: #FFFFFF;
+}
+
+[data-theme='dark'] .language-python .token.comment {
+  color: #999988 !important;
+}
+
+[data-theme='dark'] .language-python .token.keyword {
+  color: #00009F !important;
+}
+
+[data-theme='dark'] .language-python .token.punctuation {
+  color: #FFFFFF !important;
+}
+
+[data-theme='dark'] .language-python .token.operator {
+  color: #FFFFFF !important;
 }
 
 .light_gray{
