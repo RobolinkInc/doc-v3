@@ -1,6 +1,5 @@
 .search-icon {
   background-image: var(--ifm-navbar-search-input-icon);
-  float: right;
   height: auto;
   width: 24px;
   cursor: pointer;
@@ -11,9 +10,6 @@
   display: none;
 }
 
-.search-icon-hidden {
-  visibility: hidden;
-}
 
 @media (max-width: 768px) {
   .search-bar {
