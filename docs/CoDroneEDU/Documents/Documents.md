@@ -3,6 +3,7 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
+<div className='column_3_images'>
 
 <div className='level_image_column'>
 
@@ -17,6 +18,10 @@ customHeadElements:
 
 </div>
 
+</div>
+
+<div className='column_2_images'>
+
 <div className='level_image_column'>
 
   [![Complete User and<br />Safety Guide](/img/CDE/safety-guide-icon.png)](/docs/CoDroneEDU/Documents/page4/)
@@ -24,5 +29,7 @@ customHeadElements:
 
   [![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/page5/)
   [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/page5/)
+
+</div>
 
 </div>

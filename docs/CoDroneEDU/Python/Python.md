@@ -10,6 +10,8 @@ customHeadElements:
 
 </div>
 
+<div className='column_2_images'>
+
 <div className='level_image_column'>
 
   [![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/page1/)
@@ -20,6 +22,10 @@ customHeadElements:
 
 </div>
 
+</div>
+
+<div className='column_2_images'>
+
 <div className='level_image_column'>
 
   [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/page4/)
@@ -27,5 +33,7 @@ customHeadElements:
 
   [![Update](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/page3/)
   [Update](/docs/CoDroneEDU/Python/page3/)
+
+</div>
 
 </div>
