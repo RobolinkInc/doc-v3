@@ -72,6 +72,8 @@ print(battery)
 drone.close()
 ```
 
+<hr/>
+
 ### get_bottom_range()
 
 #### Syntax
