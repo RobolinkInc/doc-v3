@@ -828,3 +828,10 @@ h4 {
 h6 {
   font-family: 'Cabin-Regular', sans-serif; 
 }
+
+.row > [class='col docItemCol_node_modules-@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module']:not(:only-child) {
+  max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  min-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  overflow: scroll;
+}
