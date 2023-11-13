@@ -80,10 +80,20 @@ const Search = props => {
 
   return (
     <div className="navbar__search" key="search-box">
+      <span
+        aria-label="expand searchbar"
+        role="button"
+        className={classnames("search-icon", {
+          "search-icon-hidden": props.isSearchBarExpanded
+        })}
+        onClick={toggleSearchIconClick}
+        onKeyDown={toggleSearchIconClick}
+        tabIndex={0}
+      />
       <input
         id="search_input_react"
         type="search"
-        placeholder={indexReady ? '     Search' : '     Loading...'}
+        placeholder={indexReady ? 'Search' : 'Loading...'}
         aria-label="Search"
         className={classnames(
           "navbar__search-input",
@@ -96,16 +106,6 @@ const Search = props => {
         onBlur={toggleSearchIconClick}
         ref={searchBarRef}
         disabled={!indexReady}
-      />
-      <span
-        aria-label="expand searchbar"
-        role="button"
-        className={classnames("search-icon", {
-          "search-icon-hidden": props.isSearchBarExpanded
-        })}
-        onClick={toggleSearchIconClick}
-        onKeyDown={toggleSearchIconClick}
-        tabIndex={0}
       />
     </div>
   );
