@@ -55,3 +55,22 @@ const initScrollSpy = () => {
 }
 
 initScrollSpy()
+
+//mobile nav bar search icon
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const searchBar = document.getElementById("search_input_react");
+//     const nav = document.querySelector(".navbar");
+
+//     // Add event listener for focus on the search input
+//     searchBar.addEventListener("focus", function () {
+//         // Add the class to show only the search box
+//         nav.classList.add("searchBox_ZlJk");
+//     });
+
+//     // Add event listener for blur on the search input
+//     searchBar.addEventListener("blur", function () {
+//         // Remove the class to revert to the original state
+//         nav.classList.remove("searchBox_ZlJk");
+//     });
+// });
