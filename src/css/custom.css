@@ -165,14 +165,19 @@
     min-width: 40px;
     border-radius: 20px;
     background-color: #3F4351;
-    color: #ffffff;
+    color: #3F4351;
     font-size: 16px;
+    padding-left: 20px;
   }
-
 
   .navbar__search-input:focus {
-    width: 200px; /* 변경하고 싶은 크기 */
+    width: 265.5px;
+    min-width: 265.5px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    padding: 0px 8px 0px 36px;
   }
+
 }
 
 .navbar-sidebar__item.menu button {
@@ -795,7 +800,7 @@ nav.thin-scrollbar a {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
@@ -815,6 +820,7 @@ nav.thin-scrollbar a {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
 }
+
 
 :root {
   --ifm-color-primary: #191919;
@@ -881,5 +887,4 @@ h6 {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   min-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-  overflow: scroll;
 }
