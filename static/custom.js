@@ -56,21 +56,26 @@ const initScrollSpy = () => {
 
 initScrollSpy()
 
-//mobile nav bar search icon
+function handleSearchFocus() {
+    var navbar_it = document.querySelector('.navbar__items');
+    navbar_it.style.display = 'none';
+}
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const searchBar = document.getElementById("search_input_react");
-//     const nav = document.querySelector(".navbar");
+function handleSearchFocusOut() {
+    var navbar_it = document.querySelector('.navbar__items');
+    navbar_it.style.display = '';
+}
 
-//     // Add event listener for focus on the search input
-//     searchBar.addEventListener("focus", function () {
-//         // Add the class to show only the search box
-//         nav.classList.add("searchBox_ZlJk");
-//     });
+const waitForSearchbar = setInterval(() => {
+    var navbarSearch = document.querySelector('.navbar__search-input');
 
-//     // Add event listener for blur on the search input
-//     searchBar.addEventListener("blur", function () {
-//         // Remove the class to revert to the original state
-//         nav.classList.remove("searchBox_ZlJk");
-//     });
-// });
+    if (navbarSearch) {
+        if(window.matchMedia('(max-width: 768px)').matches) {
+            navbarSearch.addEventListener('focus', handleSearchFocus);
+
+            navbarSearch.addEventListener('focusout', handleSearchFocusOut);
+
+            clearInterval(waitForSearchbar); 
+        }
+    }
+}, 100);
