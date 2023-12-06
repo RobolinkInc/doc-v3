@@ -171,8 +171,8 @@
   }
 
   .navbar__search-input:focus {
-    width: 265.5px;
-    min-width: 265.5px;
+    width: 280px;
+    min-width: 280px;
     border-radius: 50px;
     color: #FFFFFF;
     padding: 0px 8px 0px 36px;
@@ -185,7 +185,7 @@
 }
 
 .navbar-sidebar__item.menu  {
-  background-color: #FCFCFC;
+  background-color: #FFFFFF;
 }
 
 .navbar-sidebar__item.menu a{
@@ -240,7 +240,20 @@
 }
 
 .navbar-sidebar__item.menu:first-child > ul > li:nth-child(1) > ul {
+  background-color: #3F4351;
+  color: #FFFFFF;
+  margin-bottom: -25px;
+}
 
+.navbar-sidebar__item.menu:first-child > ul > li:nth-child(1) > ul > li > a{
+  color: #FFFFFF;
+}
+
+.navbar-sidebar__item.menu:first-child > ul > li:nth-child(1) > ul > li > .menu__link--active:not(.menu__link--sublist)::before{
+  background-color: #3F4351;
+}
+.navbar-sidebar__item.menu:first-child > ul > li:nth-child(1) > ul > li > .menu__link--active{
+  color: #FFFFFF !important;
 }
 
 .footer {
