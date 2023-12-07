@@ -98,6 +98,7 @@
 
 .navbar__logo {
   line-height: 0px; 
+  margin-left: 20px;
 }
 
 .navbar__toggle {
@@ -145,12 +146,17 @@
   color: #ffffff !important;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 996px) {
 
   .navbar {
     height: 72px;
   }
-  
+
+  .navbar__logo {
+    margin-left: 0px;
+  }
+
   .navbar__logo img {
     height: 80%;
   }
@@ -308,7 +314,7 @@
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .footer {
     flex-direction: column;
     height: auto; 
@@ -464,7 +470,7 @@ div.main-wrapper {
 }
 
 [data-theme='dark'] .hero::before {
-  background-color: #060220A6;
+  background-color: rgba(6, 2, 32, 0.50);
 } 
 
 [data-theme='dark'] .hero .hero__title {

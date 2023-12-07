@@ -15,7 +15,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 996px) {
   .search-bar {
     display: flex;
     align-items: center;
