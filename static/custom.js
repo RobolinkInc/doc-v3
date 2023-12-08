@@ -66,11 +66,12 @@ function handleSearchFocusOut() {
     navbar_it.style.display = '';
 }
 
+
 const waitForSearchbar = setInterval(() => {
     var navbarSearch = document.querySelector('.navbar__search-input');
 
     if (navbarSearch) {
-        if(window.matchMedia('(max-width: 768px)').matches) {
+        if(window.matchMedia('(max-width: 600px)').matches) {
             navbarSearch.addEventListener('focus', handleSearchFocus);
 
             navbarSearch.addEventListener('focusout', handleSearchFocusOut);
