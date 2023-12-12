@@ -11,6 +11,10 @@
   height: 80px;
 }
 
+.navbar__items.navbar__items--right {
+  margin-right: 15px;
+}
+
 .navbar__items.navbar__items--right button svg {
   display: none;
 }
