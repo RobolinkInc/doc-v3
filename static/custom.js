@@ -80,3 +80,23 @@ const waitForSearchbar = setInterval(() => {
         }
     }
 }, 100);
+
+
+const waitForPopup = setInterval(() => {
+    var popupBtn = document.getElementById('popupBtn');
+    var modal = document.getElementById('modalWrap');
+
+    if (popupBtn && modal) {
+        popupBtn.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        clearInterval(waitForPopup); 
+    }
+}, 100);
