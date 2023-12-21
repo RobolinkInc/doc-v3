@@ -22,7 +22,7 @@ Timing, Variables, Functions, Lists
 
 ### Device requirements
 
-<img src="/img/CDE/device-requirements.png" width="70%"/>  
+<img src="/img/CDE/device-requirements.png" width="680px"/>  
 <br/>
 <br/>
 

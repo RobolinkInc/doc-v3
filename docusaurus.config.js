@@ -96,9 +96,34 @@ const config = {
             position: 'right',
           },
           {
-            label: 'Go to Lessons',
-            href: 'https://learn.robolink.com/',
+            type: 'html',
             position: 'right',
+            value: `<button typ="button" id="popupBtn">Go to Lessons</button>
+                    <div id="modalWrap">
+                      <div id="modalContent">
+                        <div id="modalBody">
+                          <div>
+                          <span id="popup_text">
+                          You are leaving Robolink’s 
+                          Document page. Please be 
+                          aware that any website 
+                          outside of our Document 
+                          page will be subject to 
+                          privacy policies different 
+                          from this website.
+                          </span> 
+                          </div>
+                          </br>
+                          <div class="popup_div">
+                          <a id="popup_stay" href =".">Stay on this site</a>
+                          </div>
+                          </br>
+                          <div class="popup_div">
+                          <button type="button" id="popup_go" onclick="location.href='https://learn.robolink.com/' ">Continue to external site</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>`,
           },
         ],
       },

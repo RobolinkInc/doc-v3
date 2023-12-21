@@ -6,7 +6,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  ![Python_logo](/img/CDE/Python-logo.png)
+  <img src="/img/CDE/Python-logo.png" width="220px"/>
 
 </div>
 

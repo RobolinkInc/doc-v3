@@ -9,7 +9,7 @@ customHeadElements:
 
 <div className='level1_main_image'>
 
-  ![CoDrone EDU](/img/CDE/drone_remote-3.png)
+  <img src="/img/CDE/drone_remote-3.png" width="300px"/>
 
 </div>
 
