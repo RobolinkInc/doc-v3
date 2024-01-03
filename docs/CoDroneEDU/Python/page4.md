@@ -61,15 +61,16 @@ This function returns the current battery level percentage of the drone.
 The current battery percentage of the drone's battery.
 
 #### Example Code
-```python 
+
+```python
 #Python code
 from codrone_edu.drone import *
 
-drone = Drone()
-drone.pair()
-battery = drone.get_battery()
-print(battery)
-drone.close()
+drone = Drone()    
+drone.pair()    
+battery = drone.get_battery()    
+print(battery)    
+drone.close()    
 ```
 
 <hr/>

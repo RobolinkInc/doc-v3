@@ -77,7 +77,7 @@
 
 
 .navbar__items .dropdown__menu {
-  height: 120px;
+  height: 155px;
   border-radius: 10px;
   background-color: #3F4351;
   color: white; 
@@ -85,7 +85,7 @@
 }
 
 .navbar__items .dropdown__menu li {
-  margin-top: 13px;
+  margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
   text-align: left;
@@ -115,8 +115,8 @@
 }
 
 .navbar__search-input {
-  width: 265.5px;
-  min-width: 265.5px;
+  width: 240px;
+  min-width: 240px;
   height: 40px;
   border-radius: 50px;
   background-color: #3F4351;
@@ -128,7 +128,7 @@
 #popupBtn  {
   background-color: #E61848;
   border-radius: 50px;
-  width: 160px;
+  width: 140px;
   height: 40px;
   text-align: center;
   display: flex;
@@ -818,8 +818,8 @@ nav.thin-scrollbar a {
   margin: 30px 0 15px 0;
 }
 
-.language-python {
-  --prism-background-color: #F6F8FA;
+.language-python div > pre {
+  background-color: #F6F8FA !important;
 }
 
 .language-python .token {
@@ -854,8 +854,8 @@ nav.thin-scrollbar a {
   background-color: #353535 !important;
 }
 
-[data-theme='dark'] .language-python {
-  --prism-background-color: #666666;
+[data-theme='dark'] .language-python div > pre {
+  background-color: #666666 !important;
 }
 
 [data-theme='dark'] .language-python .token {

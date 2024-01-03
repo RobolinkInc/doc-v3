@@ -85,10 +85,12 @@ const waitForSearchbar = setInterval(() => {
 const waitForPopup = setInterval(() => {
     var popupBtn = document.getElementById('popupBtn');
     var modal = document.getElementById('modalWrap');
+    console.log('find');
 
     if (popupBtn && modal) {
         popupBtn.onclick = function() {
             modal.style.display = 'block';
+            console.log('clicked!')
         }
 
         window.onclick = function(event) {
@@ -100,3 +102,5 @@ const waitForPopup = setInterval(() => {
         clearInterval(waitForPopup); 
     }
 }, 100);
+
+
