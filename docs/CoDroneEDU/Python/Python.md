@@ -28,11 +28,12 @@ customHeadElements:
 
 <div className='level_image_column'>
 
+  [![Update](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/page3/)
+  [Update](/docs/CoDroneEDU/Python/page3/)
+
   [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/page4/)
   [Function<br />Documentation](/docs/CoDroneEDU/Python/page4/)
 
-  [![Update](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/page3/)
-  [Update](/docs/CoDroneEDU/Python/page3/)
 
 </div>
 

@@ -1,9 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Robolink Documentation',
@@ -29,7 +26,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ko'],
+    locales: ['en', 'ko', 'ja'],
     localeConfigs: {
       en: {
         htmlLang: 'en-GB',
@@ -38,6 +35,16 @@ const config = {
         htmlLang: 'ko-KR',
         label: '한국어 Korean', 
       },
+      ja: {
+        htmlLang: 'ja-JP',
+        label: '日本語 Japanese',
+      }
+    },
+  },
+
+  customFields: {
+    prism: {
+      additionalLanguages: ['python'],
     },
   },
 
@@ -48,15 +55,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -75,6 +78,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      prism: {
+        additionalLanguages: ['python'],
+      },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
@@ -98,31 +104,31 @@ const config = {
           {
             type: 'html',
             position: 'right',
-            value: `<button typ="button" id="popupBtn">Go to Lessons</button>
+            value: `<a role="button" id="popupBtn">Go to Lessons</a>
                     <div id="modalWrap">
-                      <div id="modalContent">
-                        <div id="modalBody">
-                          <div>
-                          <span id="popup_text">
-                          You are leaving Robolink’s 
-                          Document page. Please be 
-                          aware that any website 
-                          outside of our Document 
-                          page will be subject to 
-                          privacy policies different 
-                          from this website.
-                          </span> 
-                          </div>
-                          </br>
-                          <div class="popup_div">
-                          <a id="popup_stay" href =".">Stay on this site</a>
-                          </div>
-                          </br>
-                          <div class="popup_div">
-                          <button type="button" id="popup_go" onclick="location.href='https://learn.robolink.com/' ">Continue to external site</button>
-                          </div>
+                        <div id="modalContent">
+                            <div id="modalBody">
+                                <div>
+                                    <span id="popup_text">
+                                        You are leaving Robolink’s 
+                                        Document page. Please be 
+                                        aware that any website 
+                                        outside of our Document 
+                                        page will be subject to 
+                                        privacy policies different 
+                                        from this website.
+                                    </span>
+                                </div>
+                                <br>
+                                <div class="popup_div">
+                                    <a id="popup_stay" href=".">Stay on this site</a>
+                                </div>
+                                <br>
+                                <div class="popup_div">
+                                    <button type="button" id="popup_go" onclick="location.href='https://learn.robolink.com/'">Continue to external site</button>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>`,
           },
         ],
