@@ -573,6 +573,7 @@ nav.thin-scrollbar {
 
 ul.table-of-contents > li > a {
   font-weight: 600;
+  margin-bottom: -3px;
 }
 
 .col.col--3 {
@@ -794,28 +795,31 @@ nav.thin-scrollbar a {
 }
 
 .level3_body p{
-  font-size: 18px;
+  font-size: 17px;
   padding-right: 30px;
 }
 
 .level3_body h2{
-  font-size: 34px;
+  font-size: 40px;
   font-weight: 600;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .level3_body h3{
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 600;
   margin-top: 30px;
-  margin-bottom: 45px;
 }
 
 .level3_body h4{
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   text-align:left;
-  margin: 30px 0 15px 0;
+  margin: 40px 0 5px 0;
+}
+
+.level3_body hr{
+  margin: 40px 0 40px 0;
 }
 
 .language-python div > pre {
@@ -827,19 +831,27 @@ nav.thin-scrollbar a {
 }
 
 .language-python .token.comment {
-  color: #999988 !important;
+  color: #A5A5A0 !important;
 }
 
 .language-python .token.keyword {
-  color: #00009F !important;
+  color: #372EA5 !important;
 }
 
 .language-python .token.punctuation {
   color: #000000 !important;
 }
 
+.language-python .token.string {
+  color: #F2184D !important;
+}
+
 .language-python .token.operator {
   color: #000000 !important;
+}
+
+.language-python .token.number {
+  color: #1FA79F !important;
 }
 
 .language-python .clean-btn {
@@ -848,6 +860,29 @@ nav.thin-scrollbar a {
 
 .language-python .clean-btn span {
   color: #FFFFFF;;
+}
+
+code {
+  border: none;
+  background-color: #E1E0E0;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.language-python code {
+  background-color: #F6F8FA;
+}
+
+[data-theme='dark'] code {
+  background-color: #666666;
+}
+
+[data-theme='dark'] .language-python code {
+  background-color: #303030;
+}
+
+[data-theme='dark'] .language-python .token.string {
+  color: #FE84A1 !important;
 }
 
 [data-theme='dark'] .language-python .clean-btn {
@@ -863,11 +898,15 @@ nav.thin-scrollbar a {
 }
 
 [data-theme='dark'] .language-python .token.comment {
-  color: #999988 !important;
+  color: #DEDEDD !important;
 }
 
 [data-theme='dark'] .language-python .token.keyword {
-  color: #00009F !important;
+  color: #3D8AFF !important;
+}
+
+[data-theme='dark'] .language-python .token.number {
+  color: #A7FFFA !important;
 }
 
 [data-theme='dark'] .language-python .token.punctuation {
@@ -913,6 +952,7 @@ nav.thin-scrollbar a {
 
 .row > .col:first-child{
   overflow-y: auto;
+  padding-right: 30px;
 }
 
 ::-webkit-scrollbar {
