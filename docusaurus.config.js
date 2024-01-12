@@ -139,7 +139,7 @@ const config = {
         `<div class=footer-wrap>
           <div class="footerBox" id="footerBox">
             <img id="imgFooter" src="/img/R-footer-logo.svg" />
-            <span>5075 Shoreham Pl. Ste 11, San Diego, CA 92122 | +1(858) 876-5123</span>
+            <span>5075 Shoreham Pl. Ste 110, San Diego, CA 92122 | +1 (858) 876-5123</span>
           </div>
           <div class="box" id="box">
             <div>
@@ -152,7 +152,9 @@ const config = {
       },
     }),
     plugins: [
-      './node_modules/docusaurus-lunr-search',
+      [require.resolve('docusaurus-lunr-search'),{
+        languages:['en', 'ko', 'ja'],
+      }],
       [
         '@docusaurus/plugin-pwa',
         {
