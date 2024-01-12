@@ -799,6 +799,10 @@ nav.thin-scrollbar a {
   padding-right: 30px;
 }
 
+.level3_body span{
+  font-size: 17px;
+}
+
 .level3_body h2{
   font-size: 40px;
   font-weight: 600;
