@@ -799,6 +799,14 @@ nav.thin-scrollbar a {
   padding-right: 30px;
 }
 
+.level3_body a{
+  color: #2251b8;
+}
+
+[data-theme='dark'] .level3_body a{
+  color: #74b2ec;
+}
+
 .level3_body span{
   font-size: 17px;
 }
@@ -922,11 +930,23 @@ code {
 }
 
 .light_gray{
-  color: #CACACA;
+  color: #000000;
 }
 
 .dark_gray{
-  color: #636363;
+  color: #372EA5;
+}
+
+[data-theme='dark'] .light_gray{
+  color: #FFFFFF;
+}
+
+[data-theme='dark'] .dark_gray{
+  color: #99F5F5;
+}
+
+.katex-html {
+  display: none;
 }
 
 [data-theme='dark'] .level_image_column p img {
@@ -957,6 +977,16 @@ code {
 .row > .col:first-child{
   overflow-y: auto;
   padding-right: 30px;
+}
+
+.thin-scrollbar {
+  scrollbar-width: auto;
+}
+
+@media (pointer: fine) {
+  .thin-scrollbar {
+    scrollbar-width: auto;
+  }
 }
 
 ::-webkit-scrollbar {
