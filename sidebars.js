@@ -31,6 +31,7 @@ const sidebars = {
         'CoDroneEDU/Blockly/page1',
         'CoDroneEDU/Blockly/page2',
         'CoDroneEDU/Blockly/page3',
+        'CoDroneEDU/Blockly/page4',
       ],
     },
     {
