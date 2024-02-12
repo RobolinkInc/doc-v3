@@ -92,12 +92,10 @@ const waitForSearchbar = setInterval(() => {
 const waitForPopup = setInterval(() => {
     var popupBtn = document.getElementById('popupBtn');
     var modal = document.getElementById('modalWrap');
-    console.log('find');
 
     if (popupBtn && modal) {
         popupBtn.onclick = function() {
             modal.style.display = 'block';
-            console.log('clicked!')
         }
 
         window.onclick = function(event) {
@@ -111,3 +109,44 @@ const waitForPopup = setInterval(() => {
 }, 100);
 
 
+const checkForFunctionToggle = setInterval(() => {
+    var functionButton = document.getElementById('functionButton');
+    var juniorFunction = document.getElementById('junior_function');
+    var seniorFunction = document.getElementById('senior_function');
+
+    if (functionButton && juniorFunction && seniorFunction) {
+        functionButton.addEventListener("click", function() {
+            if (juniorFunction.style.display !== "none") {
+                juniorFunction.style.display = "none";
+                seniorFunction.style.display = "block";
+            } else {
+                juniorFunction.style.display = "block";
+                seniorFunction.style.display = "none";
+            }
+        });
+
+        clearInterval(checkForFunctionToggle);
+    }
+
+}, 100);
+
+const checkForChangelogToggle = setInterval(() => {
+    var changelogButton = document.getElementById('changelogButton');
+    var pythonFunction = document.getElementById('python_changelog');
+    var webpyFunction = document.getElementById('webpy_changelog');
+
+    if (changelogButton && pythonFunction && webpyFunction) {
+        changelogButton.addEventListener("click", function() {
+            if (pythonFunction.style.display !== "none") {
+                pythonFunction.style.display = "none";
+                webpyFunction.style.display = "block";
+            } else {
+                pythonFunction.style.display = "block";
+                webpyFunction.style.display = "none";
+            }
+        });
+
+        clearInterval(checkForChangelogToggle);
+    }
+
+}, 100);
