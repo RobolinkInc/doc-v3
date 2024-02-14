@@ -1,13 +1,12 @@
 ---
-title: "Python/Webpy Changelog"
+title: "Python Changelog"
 hide_title: true
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<button id="changelogButton">Python-Webpy</button>
 
-<div id="python_changelog" className='level3_body'>
+<div className='level3_body'>
 
 ## CoDrone EDU Library Changelog
 
@@ -206,18 +205,6 @@ customHeadElements:
 - Added Drone.open()
 - Added Drone.takeoff()
 - Added Drone.land()
-
-<hr/>
-
-</div>
-
-<div id="webpy_changelog" className='level3_body' style={{display : 'none'}}>
-
-## CoDrone EDU Library Changelog
-
-### Version 1.0.0
-#### 2024
-- updating...
 
 <hr/>
 
