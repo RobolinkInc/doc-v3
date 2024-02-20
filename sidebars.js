@@ -49,7 +49,7 @@ const sidebars = {
         'CoDroneEDU/Python/page3',
         'CoDroneEDU/Python/page4',
         'CoDroneEDU/Python/page5',
-        'CoDroneEDU/Python/page6',
+        //'CoDroneEDU/Python/page6',
       ],
     },
     {
@@ -64,7 +64,7 @@ const sidebars = {
         'CoDroneEDU/Documents/page1',
         'CoDroneEDU/Documents/page2',
         'CoDroneEDU/Documents/page3',
-        'CoDroneEDU/Documents/page4',
+        //'CoDroneEDU/Documents/page4',
         'CoDroneEDU/Documents/page5',
       ],
     },

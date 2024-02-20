@@ -58,7 +58,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/RobolinkInc/doc-v3/tree/main/docs/',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
@@ -158,6 +158,7 @@ const config = {
     plugins: [
       [require.resolve('docusaurus-lunr-search'),{
         languages:['en', 'ko', 'ja'],
+        indexBaseUrl: true,
       }],
       [
         '@docusaurus/plugin-pwa',
