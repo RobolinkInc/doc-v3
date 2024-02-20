@@ -9,6 +9,14 @@ customHeadElements:
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.1.4
+#### February 14th, 2024
+- Updated drone visuals to match CoDrone EDU (JROTC ed.) when connected     
+- Temporarily disabled "Screen" category for JROTC ed.    
+- Improvements to firmware notifications in the connection box
+
+<hr/>
+
 ### Version 2.1.3
 #### January 23, 2024
 - Changed parameters on "flip" functions to match Python function parameters        
