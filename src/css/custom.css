@@ -442,6 +442,10 @@
   box-shadow: 1px 1px 5px 1px gray;
 }
 
+.CDE_feature_img {
+  width: 90%;
+}
+
 .ZUMI_feature_img {
   width: 90%;
 }

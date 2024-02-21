@@ -10,7 +10,7 @@ import {useColorMode} from '@docusaurus/theme-common';
 const features = [
   {
     title: 'CDE',
-    image: '/img/main/CDE_img.png',
+    image: '/img/main/CDEJ_fusion_img.jpg',
     temp_image: 'img/main/CDE.png',
     link: '/docs/CoDroneEDU',
     Head_text: 'CoDrone EDU',
