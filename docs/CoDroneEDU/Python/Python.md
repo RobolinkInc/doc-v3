@@ -24,7 +24,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_2_images'>
+<div className='column_3_images'>
 
 <div className='level_image_column'>
 
@@ -34,6 +34,8 @@ customHeadElements:
   [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/page4/)
   [Function<br />Documentation](/docs/CoDroneEDU/Python/page4/)
 
+  [![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/page5/)
+  [Python Changelog](/docs/CoDroneEDU/Python/page5/)
 
 </div>
 

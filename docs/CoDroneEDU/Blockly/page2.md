@@ -7,6 +7,8 @@ customHeadElements:
 
 <div className='level3_body'>
 
+## Offline App Documentation
+
 ### Requirements  
 - Windows, MacOS, or Chromebook computer with accessible USB port for serial communication    
 - Chrome browser and a Google account   

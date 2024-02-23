@@ -715,11 +715,11 @@ nav.thin-scrollbar a {
   text-align: center;
   font-size: 40px;
   font-weight: 550;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .theme-doc-markdown header {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .theme-doc-markdown h4 {
@@ -755,7 +755,7 @@ nav.thin-scrollbar a {
 }
 
 .level2_main_image img {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .level_image_column {
@@ -836,6 +836,10 @@ nav.thin-scrollbar a {
 
 .level3_body hr{
   margin: 40px 0 40px 0;
+}
+
+.language-python {
+  margin-right: 30px;
 }
 
 .language-python div > pre {
