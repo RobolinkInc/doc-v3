@@ -6,7 +6,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDE/Blockly-logo.png" width="220px"/>
+  <img src="/img/CDE/Blockly-logo.png" width="200px"/>
 
 </div>
 
@@ -20,8 +20,22 @@ customHeadElements:
   [![Offline App Documentation](/img/CDE/app-docu-icon.png)](/docs/CoDroneEDU/Blockly/page2/)
   [Offline<br />App Documentation](/docs/CoDroneEDU/Blockly/page2/)
 
-  [![Block Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/page3/)
-  [Block<br />Documentation](/docs/CoDroneEDU/Blockly/page3/)
+  [![Junior Block Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/page3/)
+  [Junior Block<br />Documentation](/docs/CoDroneEDU/Blockly/page3/)
+
+</div>
+
+</div>
+
+<div className='column_2_images'>
+
+<div className='level_image_column'>
+
+  [![Senior Block Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/page4/)
+  [Senior Block<br />Documentation](/docs/CoDroneEDU/Blockly/page4/) 
+
+  [![Blockly Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/page5/)
+  [Blockly Changelog](/docs/CoDroneEDU/Blockly/page5/)
 
 </div>
 
