@@ -9,6 +9,16 @@ customHeadElements:
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.1.5
+#### February 26th, 2024
+- Disabled battery requests during takeoff
+- Implemented an error-logging system so users can report an error from the menu
+- Implemented analytics
+- Updated firmware notifications to match latest firmware releases
+- Updated Korean-language translations
+
+<hr/>
+
 ### Version 2.1.4
 #### February 14th, 2024
 - Updated drone visuals to match CoDrone EDU (JROTC ed.) when connected     
