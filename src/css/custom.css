@@ -6,6 +6,12 @@
 
 /* You can override the default Infima variables here. */
 
+@media print {
+  .row>.col:first-child {
+    overflow: visible !important;
+  }
+}
+
 .navbar {
   background-color: #061030;
   height: 80px;
