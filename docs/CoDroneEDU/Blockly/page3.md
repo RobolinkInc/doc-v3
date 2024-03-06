@@ -97,11 +97,11 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/junior/go_for_seconds_at_power.png" width="420px"/>  
+<img src="/img/CDE/blockly_docu/junior/go_for_seconds_at_power.png" width="480px"/>  
 
 #### Parameters
 
-<img src="/img/CDE/blockly_docu/junior/go_at_power_params.png" width="420px"/> 
+<img src="/img/CDE/blockly_docu/junior/go_at_power_params.png" width="480px"/> 
 
 **direction:** forward, backward, up, down, left, right     
 **duration:** positive integer in seconds       
@@ -179,10 +179,10 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/flip_params.png" width="200px"/>  
 
-**direction:** backward, forward, right, left
+**direction:** back, front, right, left
 
 #### Description
-This functions makes the drone flip backward, forward, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
+This functions makes the drone flip back, front, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
 
 #### Returns
 None
