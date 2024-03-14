@@ -7,6 +7,12 @@ customHeadElements:
 
 <div className='level3_body' >
 
+<div className='print_div'>
+
+<button id="print_page" onClick={() => window.print()}>Print</button>
+
+</div>
+
 ## Flight Commands
 
 ### take off
