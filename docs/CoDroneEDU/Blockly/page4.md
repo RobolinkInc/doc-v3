@@ -1164,6 +1164,12 @@ None
 
 ### controller_draw_line()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Block
 
 <img src="/img/CDE/blockly_docu/senior/controller_draw_line.png" width="450px"/>
@@ -1191,11 +1197,6 @@ None
 ```
 Draws a line between points (x1, y1) and (x2, y2)
 
-:::warning
-
-This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
 
 #### Returns
 None
@@ -1207,6 +1208,12 @@ None
 <hr/>
 
 ### controller_draw_string()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Block
 
@@ -1227,11 +1234,6 @@ None
 #### Description
 Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
-:::warning
-
-This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
 
 #### Returns
 None
@@ -1243,6 +1245,12 @@ None
 <hr/>
 
 ### controller_draw_rectangle()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Block
 
@@ -1273,11 +1281,6 @@ None
 
 Draws a rectangle onto the controller screen starting from point (x,y) and extends to given height and width
 
-:::warning
-
-This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
 
 #### Returns
 None
@@ -1289,6 +1292,12 @@ None
 <hr/>
 
 ### controller_draw_square()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Block
 
@@ -1316,11 +1325,6 @@ width
 ```
 Draws a square on the controller screen starting from point (x,y) and will extend to the given width
 
-:::warning
-
-This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
 
 #### Returns
 None
@@ -1332,6 +1336,12 @@ None
 <hr/>
 
 ### controller_draw_point()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Block
 
@@ -1351,11 +1361,6 @@ None
 #### Description
 Draws a point on the CoDrone EDU LED screen at point (x, y).
 
-:::warning
-
-This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
 
 #### Returns
 None
@@ -1367,6 +1372,12 @@ None
 <hr/>
 
 ### controller_clear_screen()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Block
 
@@ -1382,11 +1393,6 @@ None
 #### Description
 Clears the CoDrone EDU controller screen.
 
-:::warning
-
-This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
 
 #### Returns
 None
