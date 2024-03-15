@@ -1137,3 +1137,12 @@ h6 {
   height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
   min-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
 }
+
+hr {
+  display: block;
+  height: 1px;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-top: solid 1px #aaa;
+}
