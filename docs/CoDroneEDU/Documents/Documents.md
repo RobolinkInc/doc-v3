@@ -3,6 +3,11 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
+<div className='docs_title'>
+  <h1>Documents</h1>
+</div>
+
+
 <br/>
 
 <div className='column_2_images'>

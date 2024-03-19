@@ -4,6 +4,10 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
+<div className='docs_title'>
+  <h1>Blockly</h1>
+</div>
+
 <div className='level2_main_image'>
 
   <img src="/img/CDE/Blockly-logo.png" width="200px"/>

@@ -5,6 +5,10 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
+<div className='docs_title'>
+  <h1>CoDrone EDU</h1>
+</div>
+
 <div className='level1_body'>
 
 <div className='level1_main_image'>

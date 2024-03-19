@@ -1,6 +1,5 @@
 ---
 title: "Offline App Documentation"
-hide_title: true
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---

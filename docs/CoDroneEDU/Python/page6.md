@@ -1,6 +1,5 @@
 ---
 title: "Webpy Changelog"
-hide_title: true
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
