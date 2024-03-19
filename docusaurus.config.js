@@ -163,7 +163,6 @@ const config = {
     plugins: [
       [require.resolve('docusaurus-lunr-search'),{
         languages:['en', 'ko', 'ja'],
-        indexBaseUrl: true,
       }],
       [
         '@docusaurus/plugin-pwa',
