@@ -1,0 +1,14 @@
+{
+    "main.title": {
+        "message": "Robolink ライブラリのドキュメントです",
+        "description": "Robolink Library Documentation"
+    },
+    "main.sub.title":{
+        "message": "ロボットとドローンのコーディングプラットフォームのためのライブラリ機能とブロックの使用方法についてご確認ください",
+        "description": "Learn about how to use the library functions and blocks for the coding platforms of our robots and drones"
+    },
+    "main.select.title":{
+        "message": "キットを選択します",
+        "description": "Select a kit"
+    }
+}

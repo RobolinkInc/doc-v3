@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 import {useColorMode} from '@docusaurus/theme-common';
+import Translate, {translate} from '@docusaurus/Translate';
 
 const features = [
   {
@@ -49,9 +50,11 @@ export default function Home() {
       <div className="hero_wrap">
         <div className="hero">
           <div className="container">
-            <h3 className="hero__title">Robolink Library Documentation</h3>
-            <h6 className="hero__subtitle">Learn about how to use the library functions and blocks for the coding platforms of our robots and drones</h6>
-            <h1 className="select__title">Select a kit</h1>
+            <h3 className="hero__title">
+              <Translate id="main.title">Robolink Library Documentation</Translate>
+              </h3>
+            <h6 className="hero__subtitle"><Translate id="main.sub.title">Learn about how to use the library functions and blocks for the coding platforms of our robots and drones</Translate></h6>
+            <h1 className="select__title"><Translate id="main.select.title">Select a kit</Translate></h1>
             <div className="features">
               {features.map((feature, index) => (
                 <a key={index} href={feature.link} className="feature">
