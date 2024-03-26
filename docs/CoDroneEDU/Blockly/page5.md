@@ -4,7 +4,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
 
 ## CoDrone EDU Library Changelog
 
@@ -56,5 +55,3 @@ customHeadElements:
 - Small changes in the Python generated code output to reflect the latest library
 
 <hr/>
-
-</div>

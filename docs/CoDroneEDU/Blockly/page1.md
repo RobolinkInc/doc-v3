@@ -4,7 +4,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
 
 ## What is Blockly?
 
@@ -31,4 +30,3 @@ Try to use the cable that comes with CoDrone EDU whenever possible! This Micro U
 
 
 
-</div>

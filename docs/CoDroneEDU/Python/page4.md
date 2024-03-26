@@ -4,8 +4,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
-
 <div className='print_div'>
 
 <button id="print_page" onClick={() => window.print()}>Print</button>
@@ -3923,5 +3921,3 @@ drone.close()
 ```
 
 <hr/>
-
-</div>

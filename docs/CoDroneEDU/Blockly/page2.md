@@ -4,8 +4,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
-
 ## Offline App Documentation
 
 ### Requirements  
@@ -56,5 +54,3 @@ customHeadElements:
    <img src="/img/CDE/blockly_app/blockly_app_6_2.png" width="800px"/>
 
 7. [Pair to Blockly](https://learn.robolink.com/course/blockly-with-codrone-edu/) again with your controller the same way you would with Blockly in the browser and run the same tests as before.
-
-</div>

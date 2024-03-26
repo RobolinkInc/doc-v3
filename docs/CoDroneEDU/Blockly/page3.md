@@ -4,7 +4,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body' >
 
 <div className='print_div'>
 
@@ -368,5 +367,3 @@ None
 <img src="/img/CDE/blockly_docu/junior/play_note_controller_example.png" width="450px"/>  
 
 <hr/>
-
-</div>
