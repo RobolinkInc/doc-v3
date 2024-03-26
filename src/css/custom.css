@@ -802,7 +802,8 @@ nav.thin-scrollbar a {
 
 .level1_body p {
   text-align: center;
-  font-size: 18px;
+  font-size: 18px !important;
+  padding-right: 0px !important;
 }
 
 .level2_main_image {
@@ -827,6 +828,7 @@ nav.thin-scrollbar a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-right: 0px !important;
 }
 
 .level_image_column p img {
@@ -853,43 +855,43 @@ nav.thin-scrollbar a {
   margin: 0% 16.5% 0% 16.5%;
 }
 
-.level3_body p{
+.theme-doc-markdown p{
   font-size: 17px;
   padding-right: 30px;
 }
 
-.level3_body a{
+.theme-doc-markdown a{
   color: #2251b8;
 }
 
-[data-theme='dark'] .level3_body a{
+[data-theme='dark'] .theme-doc-markdown a{
   color: #74b2ec;
 }
 
-.level3_body span{
+.theme-doc-markdown span{
   font-size: 17px;
 }
 
-.level3_body h2{
+.theme-doc-markdown h2{
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 40px;
 }
 
-.level3_body h3{
+.theme-doc-markdown h3{
   font-size: 34px;
   font-weight: 600;
   margin-top: 30px;
 }
 
-.level3_body h4{
+.theme-doc-markdown h4{
   font-size: 21px;
   font-weight: 600;
   text-align:left;
   margin: 40px 0 5px 0;
 }
 
-.level3_body hr{
+.theme-doc-markdown hr{
   margin: 40px 0 40px 0;
 }
 

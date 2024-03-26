@@ -4,8 +4,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
-
 ## Setup and Installation
 
 ### How to install Python
@@ -71,7 +69,5 @@ from codrone_edu.drone import *
 <div className="youtube_video">
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Iobi5pVSzyc?si=oyGfJOsTtdFPlnXk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-</div>
 
 </div>

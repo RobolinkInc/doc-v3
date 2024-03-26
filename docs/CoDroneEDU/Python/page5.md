@@ -5,8 +5,6 @@ customHeadElements:
 ---
 
 
-<div className='level3_body'>
-
 ## CoDrone EDU Library Changelog
 
 ### Version 1.9
@@ -206,5 +204,3 @@ customHeadElements:
 - Added Drone.land()
 
 <hr/>
-
-</div>

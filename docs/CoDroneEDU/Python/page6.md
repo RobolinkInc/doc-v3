@@ -5,8 +5,6 @@ customHeadElements:
 ---
 
 
-<div className='level3_body'>
-
 ## CoDrone EDU Library Changelog
 
 ### Version 1.0.0
@@ -14,5 +12,3 @@ customHeadElements:
 - updating...
 
 <hr/>
-
-</div>
