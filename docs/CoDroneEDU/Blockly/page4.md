@@ -204,7 +204,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/turn_degree.png" width="210px"/>  
+<img src="/img/CDE/blockly_docu/senior/turn_direction_degree.PNG" width="210px"/>  
 
 #### Code
 
@@ -223,7 +223,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/turn_degree_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/turn_direction_degree_example.PNG" width="240px"/>  
 
 <hr/>
 
