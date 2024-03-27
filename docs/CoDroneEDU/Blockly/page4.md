@@ -17,7 +17,7 @@ customHeadElements:
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/take_off.png" width="120px"/>  
+<img src="/img/CDE/blockly_docu/senior/take_off.png" width="90px"/>  
 
 #### Code
 
@@ -35,7 +35,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180x"/>  
 
 <hr/>
 
@@ -43,7 +43,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/land.png" width="120px"/>  
+<img src="/img/CDE/blockly_docu/senior/land.png" width="70px"/>  
 
 #### Code
 
@@ -60,7 +60,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180px"/>  
 
 <hr/>
 
@@ -110,7 +110,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180px"/>  
 
 <hr/>
 
