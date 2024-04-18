@@ -86,6 +86,8 @@
 }
 
 .navbar__items .dropdown {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 40px;
   border-radius: 50px;
@@ -502,7 +504,8 @@
 }
 
 a.feature {
-  text-decoration-line: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 .CDE_description {
@@ -832,7 +835,8 @@ nav.thin-scrollbar a {
 }
 
 .level_image_column p img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 210px;
   height: 175px;
   margin: 0px 10px 0px 10px;
