@@ -59,7 +59,7 @@ export default function Home() {
             <h1 className="select__title"><Translate id="main.select.title">Select a kit</Translate></h1>
             <div className="features">
               {features.map((feature, index) => (
-                <a key={index} href={currentLocale === 'en' ? `${feature.link}` : `/${currentLocale}${feature.link}`} className="feature">
+                <a key={index} href={currentLocale === 'en' ? `${feature.link}` : `/${currentLocale}${feature.link}`}>
                   <div className='feature'>
                     <div className='feature_img'>
                       <img
