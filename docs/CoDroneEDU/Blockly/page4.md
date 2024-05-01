@@ -1,5 +1,6 @@
 ---
 title: "Senior Block Documentation"
+slug: Senior-Block-Documentation
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
@@ -252,7 +253,7 @@ Place the drone on the floor a few feet away from a wall. When you run the code,
 
 <img src="/img/CDE/blockly_docu/senior/avoid_wall_example.png" width="280px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Flight Variables
 
@@ -484,7 +485,7 @@ None
 
 <img src="/img/CDE/blockly_docu/senior/reset_trim_example.png" width="280px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Status Checkers
 
@@ -509,7 +510,7 @@ Returns a True value while your code is running. Use this block instead of "whil
 
 <img src="/img/CDE/blockly_docu/senior/code_is_running_example.png" width="500px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Lights
 
@@ -623,7 +624,7 @@ None
 
 <img src="/img/CDE/blockly_docu/senior/controller_led_off_example.png" width="480px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Sensors
 
@@ -1041,7 +1042,7 @@ To use this example file turn the drone manually with your hand and watch the Z 
 
 <img src="/img/CDE/blockly_docu/senior/reset_sensor_ex.png" width="280px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 
 ## Sound
@@ -1154,7 +1155,7 @@ None
 
 <img src="/img/CDE/blockly_docu/senior//hertz_example.PNG" width="500px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 
 ## Screen
