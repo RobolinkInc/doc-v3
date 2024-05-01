@@ -1,5 +1,6 @@
 ---
 title: "Function Documentation"
+slug: Function-Documentation
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
@@ -43,7 +44,7 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 
 ## Flight Commands (Start / Stop)
@@ -282,7 +283,7 @@ drone.stop_motors()
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Flight Commands (Movement)
 
@@ -1253,7 +1254,7 @@ time.sleep(1)
 drone.land()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 ## LED
 
@@ -1373,7 +1374,7 @@ drone.set_drone_LED(0, 0, 255, 100)
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Status Checkers
 
@@ -1587,7 +1588,7 @@ drone.stop_controller_buzzer() # stops the buzzer
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Sensors
 
@@ -2783,7 +2784,7 @@ for i in range(10):
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Controller
 
@@ -3355,7 +3356,7 @@ while True:
     print(drone.get_right_joystick_y())
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Screen
 

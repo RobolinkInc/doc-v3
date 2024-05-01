@@ -1,5 +1,6 @@
 ---
 title: "Junior Block Documentation"
+slug: Junior-Block-Documentation
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
@@ -169,7 +170,7 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/turn_direction_seconds_power_example.png" width="450px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Flight Sequences
 
@@ -196,7 +197,7 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 
 <img src="/img/CDE/blockly_docu/junior/flip_example.png" width="500px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Status Checkers
 
@@ -220,7 +221,7 @@ This example cycles the colors from red, green, blue forever. Pressing the "Stop
 
 <img src="/img/CDE/blockly_docu/junior/code_is_running_example.png" width="500px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Lights
 
@@ -314,7 +315,7 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/controller_led_off_example.png" width="480px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Sound
 

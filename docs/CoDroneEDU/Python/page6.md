@@ -1,5 +1,6 @@
 ---
 title: "Webpy Changelog"
+slug: Webpy-Changelog
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
