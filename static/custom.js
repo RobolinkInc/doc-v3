@@ -108,3 +108,25 @@ const waitForPopup = setInterval(() => {
     }
 }, 100);
 
+
+const waitForBreadcrumbs = setInterval(() => {
+    const menuLinks = document.querySelectorAll(".theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1:first-child a");
+  
+    menuLinks.forEach(function(link) {
+      const text = link.textContent;
+  
+      if (text === "CoDrone EDU") {
+        link.style.background = "linear-gradient(to right, #B33785, #D94054)";
+        link.classList.add("breadcrumbs_CDE");
+      } else if (text === "CoDrone Mini") {
+        link.style.background = "#F2CC03";
+        link.classList.add("breadcrumbs_CDM");
+      } else if (text === "CoDrone Pro/Lite") {
+        link.style.background = "#B8202D";
+        link.classList.add("breadcrumbs_CDP");
+      } else if (text === "Zumi") {
+        link.style.background = "#0DD9C5";
+        link.classList.add("breadcrumbs_ZUMI");
+      }
+    });
+  }, 100);
