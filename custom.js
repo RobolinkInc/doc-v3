@@ -140,7 +140,6 @@ const waitForBreadcrumbs1 = setInterval(() => {
 
 const startBreadcrumbs = () => {
     const startBreadcrumbsInterval = setInterval(() => {
-        console.log("working2"); 
         const breadcrumbs = document.querySelector('.breadcrumbs');
         const breadcrumbItems = document.querySelectorAll('.breadcrumbs__item');
         if (breadcrumbs && breadcrumbItems.length <= 2) {
@@ -153,14 +152,12 @@ const startBreadcrumbs = () => {
         setTimeout(() => {
             if(!breadcrumbs){
             clearInterval(startBreadcrumbsInterval);
-            console.log("no breadcrumbs"); 
             }
         }, 3000);
     }, 100); 
 }
   
 const waitForBreadcrumbs2 =  setInterval(() => {
-  console.log("working1"); 
   const sidebar = document.querySelector(".theme-doc-sidebar-menu");
   if (sidebar) {
     clearInterval(waitForBreadcrumbs2); 
@@ -171,7 +168,6 @@ const waitForBreadcrumbs2 =  setInterval(() => {
   setTimeout(() => {
     if (!sidebar) {
         clearInterval(waitForBreadcrumbs2); 
-        console.log("no sidebar"); 
     }
   }, 3000);
 }, 100);
