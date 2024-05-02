@@ -109,9 +109,9 @@ const waitForPopup = setInterval(() => {
 }, 100);
 
 
-const waitForBreadcrumbs = setInterval(() => {
+const waitForBreadcrumbs1 = setInterval(() => {
     const menuLinks = document.querySelectorAll(".theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1:first-child a");
-  
+
     menuLinks.forEach(function(link) {
       const text = link.textContent;
   
@@ -129,4 +129,87 @@ const waitForBreadcrumbs = setInterval(() => {
         link.classList.add("breadcrumbs_ZUMI");
       }
     });
+    setTimeout(() => {
+        if(!menuLinks){
+          clearInterval(waitForBreadcrumbs1);
+        }
+    }, 3000);
   }, 100);
+
+
+// let breadcrumbsInterval;
+
+// const checkBreadcrumbs = () => {
+//     console.log("working3"); 
+//   const breadcrumbs = document.querySelector('.breadcrumbs');
+//   const breadcrumbItems = document.querySelectorAll('.breadcrumbs__item');
+//   if (breadcrumbs && breadcrumbItems.length <= 2) {
+//     breadcrumbs.style.display = 'none';
+//   } else if (breadcrumbs) {
+//     breadcrumbs.style.display = 'block';
+//   }
+// };
+  
+// const startBreadcrumbsInterval = () => {
+//     console.log("working2"); 
+//   breadcrumbsInterval = setInterval(checkBreadcrumbs, 100); 
+//   setTimeout(() => {
+//     clearInterval(breadcrumbsInterval); 
+//   }, 5000);
+// };
+  
+// const waitForBreadcrumbs2 =  setInterval(() => {
+//     console.log("working1"); 
+//   const sidebar = document.querySelector(".theme-doc-sidebar-menu");
+//   if (sidebar) {
+//     clearInterval(waitForBreadcrumbs2); 
+//     sidebar.addEventListener('click', () => {
+//       if(breadcrumbsInterval){
+//         clearInterval(breadcrumbsInterval); 
+//       }
+//       startBreadcrumbsInterval(); 
+//     });
+//   }
+//   setTimeout(() => {
+//     clearInterval(waitForBreadcrumbs2); 
+//   }, 5000);
+// }, 100);
+  
+
+const startBreadcrumbs = () => {
+    const startBreadcrumbsInterval = setInterval(() => {
+        console.log("working2"); 
+        const breadcrumbs = document.querySelector('.breadcrumbs');
+        const breadcrumbItems = document.querySelectorAll('.breadcrumbs__item');
+        if (breadcrumbs && breadcrumbItems.length <= 2) {
+            breadcrumbs.style.display = 'none';
+            clearInterval(startBreadcrumbsInterval); 
+        } else if (breadcrumbs) {
+            breadcrumbs.style.display = 'block';
+            clearInterval(startBreadcrumbsInterval); 
+        }
+        setTimeout(() => {
+            if(!breadcrumbs){
+            clearInterval(startBreadcrumbsInterval);
+            console.log("no breadcrumbs"); 
+            }
+        }, 3000);
+    }, 100); 
+}
+  
+const waitForBreadcrumbs2 =  setInterval(() => {
+  console.log("working1"); 
+  const sidebar = document.querySelector(".theme-doc-sidebar-menu");
+  if (sidebar) {
+    clearInterval(waitForBreadcrumbs2); 
+    sidebar.addEventListener('click', () => {
+      startBreadcrumbs();
+    });
+  }
+  setTimeout(() => {
+    if (!sidebar) {
+        clearInterval(waitForBreadcrumbs2); 
+        console.log("no sidebar"); 
+    }
+  }, 3000);
+}, 100);
