@@ -134,46 +134,8 @@ const waitForBreadcrumbs1 = setInterval(() => {
           clearInterval(waitForBreadcrumbs1);
         }
     }, 3000);
-  }, 100);
+}, 100);
 
-
-// let breadcrumbsInterval;
-
-// const checkBreadcrumbs = () => {
-//     console.log("working3"); 
-//   const breadcrumbs = document.querySelector('.breadcrumbs');
-//   const breadcrumbItems = document.querySelectorAll('.breadcrumbs__item');
-//   if (breadcrumbs && breadcrumbItems.length <= 2) {
-//     breadcrumbs.style.display = 'none';
-//   } else if (breadcrumbs) {
-//     breadcrumbs.style.display = 'block';
-//   }
-// };
-  
-// const startBreadcrumbsInterval = () => {
-//     console.log("working2"); 
-//   breadcrumbsInterval = setInterval(checkBreadcrumbs, 100); 
-//   setTimeout(() => {
-//     clearInterval(breadcrumbsInterval); 
-//   }, 5000);
-// };
-  
-// const waitForBreadcrumbs2 =  setInterval(() => {
-//     console.log("working1"); 
-//   const sidebar = document.querySelector(".theme-doc-sidebar-menu");
-//   if (sidebar) {
-//     clearInterval(waitForBreadcrumbs2); 
-//     sidebar.addEventListener('click', () => {
-//       if(breadcrumbsInterval){
-//         clearInterval(breadcrumbsInterval); 
-//       }
-//       startBreadcrumbsInterval(); 
-//     });
-//   }
-//   setTimeout(() => {
-//     clearInterval(waitForBreadcrumbs2); 
-//   }, 5000);
-// }, 100);
   
 
 const startBreadcrumbs = () => {
