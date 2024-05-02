@@ -27,7 +27,7 @@
   width: 90px;
   font-family: 'Cabin-Regular', sans-serif; 
   position: absolute;
-  top: 10px;
+  top: 25px;
   right: 10px;
 }
 
@@ -810,11 +810,17 @@ nav.thin-scrollbar a {
   background: url('/img/breadcrumbs/ZUMI_breadcrumbs.png') no-repeat center center; 
 }
 
-.menu__list-item-collapsible{
+.breadcrumbs {
+  display: none;
+  margin-left: -8px;
+}
+
+.breadcrumbs > .breadcrumbs__item:first-child {
   display: none;
 }
 
-.breadcrumbs{
+
+.menu__list-item-collapsible{
   display: none;
 }
 
