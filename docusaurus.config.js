@@ -92,6 +92,7 @@ const config = {
       },
       navbar: {
         style: 'dark',
+        hideOnScroll: false,
         logo: {
           alt: 'Robolink Logo',
           src: 'img/R-docs-logo.png',
