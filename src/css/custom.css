@@ -37,10 +37,11 @@
 
 .navbar {
   background-color: #061030;
-  height: 80px;
+  height: 60px;
 }
 
 .navbar__items.navbar__items--right {
+  margin-top: -2.5px;
   margin-right: 18px;
 }
 
@@ -139,6 +140,10 @@
 .navbar__logo {
   line-height: 0px; 
   margin-left: 20px;
+}
+
+.navbar__logo img{
+  height: 80%;
 }
 
 .navbar__toggle {
@@ -262,7 +267,7 @@
 @media (max-width: 996px) {
 
   .navbar {
-    height: 72px;
+    height: 60px;
   }
 
   .navbar__logo {
@@ -396,7 +401,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 60px;
   background: linear-gradient(to bottom, #05001C, #141F57);
   padding: 0 20px;
 }
@@ -448,13 +453,13 @@
 
   .footer {
     flex-direction: column;
-    height: auto; 
+    height:90px; 
   }
 
   .footer-wrap {
     flex-direction: column;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
   }
   
   #footerBox{
@@ -471,7 +476,6 @@
 
   #box{
     order: 1;
-    margin-bottom: 20px;
   }
   
 }
@@ -644,14 +648,14 @@ nav.thin-scrollbar {
   background-color: #ffffff;
 }
 
-.main-wrapper .container {
-  margin-bottom: 70px !important;
+.padding-bottom--lg {
+  padding-bottom: 1rem !important;
 }
 
 @media (max-width: 800px) {
 
   .main-wrapper .container {
-    margin-bottom: 140px !important;
+    margin-bottom: 100px !important;
   }
 }
 
@@ -662,7 +666,7 @@ ul.table-of-contents > li > a {
 
 .col.col--3 {
   background-image: linear-gradient(to right, #FCFCFC 0%, #FCFCFC 70%, #FFFFFF 70%, #ffffff 100%);
-  height: inherit;
+  height: calc(100% - 60px);
   border-left: 1px solid #E8E8E8;
 }
 
@@ -1231,10 +1235,14 @@ h6 {
   font-family: 'Cabin-Regular', sans-serif; 
 }
 
+.row {
+  height: 100%;
+}
+
 .row > .col:first-child:not(:only-child) {
   max-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-  height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
-  min-height: calc(100vh - (var(--ifm-navbar-height) + 2rem));
+  height: calc(100% - 60px);
+  min-height: calc(100% - 60px);
 }
 
 hr {
