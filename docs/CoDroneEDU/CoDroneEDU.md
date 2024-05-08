@@ -38,4 +38,6 @@ Please click the tab below to go to the page.
 
 </div>
 
+<div id='blank'></div>
+
 </div>
