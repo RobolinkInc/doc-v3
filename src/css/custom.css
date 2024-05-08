@@ -10,6 +10,10 @@
   .row>.col:first-child {
     overflow: visible !important;
   }
+
+  .row {
+    height: auto;
+  }
 }
 
 .print_div {
