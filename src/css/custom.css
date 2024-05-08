@@ -35,6 +35,10 @@
   background-color: #3058df;
 }
 
+#blank {
+  height: 60px;
+}
+
 .navbar {
   background-color: #061030;
   height: 60px;
@@ -283,7 +287,16 @@
   }
 
   .row>.col:first-child {
+    overflow-y: visible;
     padding-right: 15px !important;
+  }
+
+  .main-wrapper .container {
+    margin-bottom: 60px;
+  }
+
+  .main-wrapper > div > button {
+    display: none;
   }
 
   #popupBtn  {
