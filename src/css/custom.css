@@ -282,23 +282,8 @@
     display: none;
   }
 
-  .navbar__search-input {
-    height: 40px;
-    width: 40px;
-    min-width: 40px;
-    border-radius: 20px;
-    background-color: #3F4351;
-    color: #3F4351;
-    font-size: 16px;
-    padding-left: 20px;
-  }
-
-  .navbar__search-input:focus {
-    width: 280px;
-    min-width: 280px;
-    border-radius: 50px;
-    color: #FFFFFF;
-    padding: 0px 8px 0px 36px;
+  .row>.col:first-child {
+    padding-right: 15px !important;
   }
 
   #popupBtn  {
@@ -314,6 +299,18 @@
   .print_div {
     display: none;
   }
+
+}
+
+@media (max-width: 545px) {
+
+  .navbar__search-input {
+    width: 105px;
+    min-width: 105px;
+    height: 30px;
+    font-size: 14px;
+  }
+
 
 }
 
