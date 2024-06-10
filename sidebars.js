@@ -78,8 +78,25 @@ const sidebars = {
   ],
 
   Zumi: [
-    'Zumi/Zumi',
-    'Zumi/TestZumi',
+    {
+      type: 'doc',
+      id: 'Zumi/Zumi',
+    },
+    {
+      type: 'doc',
+      id: 'Zumi/Blockly/Blockly',
+    },
+    {
+      type: 'category',
+      label: 'Blockly',
+      collapsible: false,
+      items: [
+        'Zumi/Blockly/page1',
+        'Zumi/Blockly/page2',
+        'Zumi/Blockly/page3',
+        'Zumi/Blockly/page4',
+      ],
+    },
   ],
 
 
