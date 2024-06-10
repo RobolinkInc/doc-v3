@@ -12,26 +12,31 @@ customHeadElements:
 
 </div>
 
-## Flight Commands
+## Driving
 
-### take off
+### forward
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/junior/takeoff.png" width="120px"/>  
+<img src="/img/Zumi/blockly_docu/junior/forward.png" width="240px"/>  
 
 #### Parameters
-None
+
+**seconds**: A float value for the duration of the movement. <br /> 
+**speed**: An integer (0 - 100) for the speed of the movement.
 
 #### Description
-This functions makes the drone take off. CoDrone EDU takes off at an average height of 1 meter off the ground. A takeoff block must be used before any other flight command or flight movement.
+Moves Zumi forward for the given duration and speed
+
 
 #### Returns
 None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/takeoff_hover_land_example.png" width="240px"/>  
+<img src="/img/Zumi/blockly_docu/junior/forward_example.png" width="240px"/>  
 
 <hr/>
+
+### reverse
 
