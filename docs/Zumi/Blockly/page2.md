@@ -384,3 +384,221 @@ None
 #### Example
 
 <img src="/img/Zumi/blockly_docu/junior/shapes/jturn_example.png" width="260px" height="150px"/>
+
+<hr/>
+
+## Screen
+
+### draw text
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/drawtext.png" width="240px"/>
+
+#### Description
+
+Draws a string of letters and characters and centers them on Zumi's screen. The screen can draw a maximum of three lines of text, each around 14 characters long.
+
+#### Parameters
+
+**string**: string of characters to display <br /> 
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/drawtext_example.png" width="240px"/>
+
+<hr/>
+
+### sad
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/sad.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's sad eyes on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/sad_closed_sleepy_happy_example.png" width="240px"/>
+
+<hr/>
+
+### closed
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/closed.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's closed eyes on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/sad_closed_sleepy_happy_example.png" width="240px"/>
+
+<hr/>
+
+### sleepy
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/sleepy.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's sleepy eyes on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/sad_closed_sleepy_happy_example.png" width="240px"/>
+
+<hr/>
+
+### happy
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's happy eye animation on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/sad_closed_sleepy_happy_example.png" width="240px"/>
+
+<hr/>
+
+### glimmer
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's glimmer eye animation on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer_blinking_angry_open_example.png" width="240px"/>
+
+<hr/>
+
+### blinking
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/blinking.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's blinking eye animation on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer_blinking_angry_open_example.png" width="240px"/>
+
+<hr/>
+
+### angry
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/angry.png" width="240px"/>
+
+#### Description
+
+Displays Zumi's angry eyes on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer_blinking_angry_open_example.png" width="240px"/>
+
+<hr/>
+
+### open
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/screen/open.png" width="240px" height="100px"/>
+
+#### Description
+
+Displays Zumi's open eyes on the screen.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer_blinking_angry_open_example.png" width="240px"/>
