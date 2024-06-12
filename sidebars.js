@@ -26,6 +26,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Blockly',
+      link: {type: 'doc', id: 'CoDroneEDU/Blockly/Blockly'},
       collapsible: false,
       items: [
         'CoDroneEDU/Blockly/page1',
@@ -42,6 +43,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Python',
+      link: {type: 'doc', id: 'CoDroneEDU/Python/Python'},
       collapsible: false,
       items: [
         'CoDroneEDU/Python/page1',
@@ -59,6 +61,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Documents',
+      link: {type: 'doc', id: 'CoDroneEDU/Documents/Documents'},
       collapsible: false,
       items: [
         'CoDroneEDU/Documents/page1',
@@ -89,6 +92,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Blockly',
+      link: {type: 'doc', id: 'Zumi/Blockly/Blockly'},
       collapsible: false,
       items: [
         'Zumi/Blockly/page1',
