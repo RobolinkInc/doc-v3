@@ -417,7 +417,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/sad.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/sad.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -441,7 +441,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/closed.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/closed.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -465,7 +465,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/sleepy.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/sleepy.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -489,7 +489,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -513,7 +513,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -537,7 +537,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/blinking.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/blinking.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -561,7 +561,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/angry.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/angry.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -585,7 +585,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/open.png" width="240px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/open.png" width="180px" height="100px"/>
 
 #### Description
 
@@ -602,3 +602,224 @@ None
 #### Example
 
 <img src="/img/Zumi/blockly_docu/junior/screen/glimmer_blinking_angry_open_example.png" width="240px"/>
+
+<hr/>
+
+## Sounds
+
+### play note
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote.png" width="280px" height="100px"/>
+
+#### Description
+
+Plays a single note for a specified  duration in milliseconds.
+
+#### Parameters
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote_params.png" width="260px" height="300px"/>
+
+**note**: The note that is played. Ranging from C2 to B6 <br/>
+**duration**: An integer in milliseconds <br/>
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote_example.png" width="260px" height="260px"/>
+
+<hr/>
+
+### angry
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/angry.png" width="180px" height="100px"/>
+
+#### Description
+
+Plays Zumi's angry sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/angry_example.png" width="220px" height="160px"/>
+
+<hr/>
+
+### happy
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/happy.png" width="180px" height="90px"/>
+
+#### Description
+
+Plays Zumi's happy sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/happy_example.png" width="210px" height="150px"/>
+
+<hr/>
+
+### blink
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/blink.png" width="180px" height="100px"/>
+
+#### Description
+
+Plays Zumi's blinking sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/blink_example.png" width="240px"/>
+
+<hr/>
+
+### celebrate
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/celebrate.png" width="180px" height="100px"/>
+
+#### Description
+
+Plays Zumi's celebration sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/celebrate_example.png" width="240px" height="170px"/>
+
+<hr/>
+
+### wakeup
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/wakeup.png" width="180px" height="100px"/>
+
+#### Description
+
+Plays Zumi's wake up sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/wakeup_example.png" width="240px"/>
+
+<hr/>
+
+### disoriented
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/disoriented.png" width="200px" height="100px"/>
+
+#### Description
+
+Plays Zumi's disoriented sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/disoriented_example.png" width="240px" height="160px"/>
+
+<hr/>
+
+### oops front
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsfront.png" width="180px" height="100px"/>
+
+#### Description
+
+Plays Zumi's front sensor detect sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsfront_example.png" width="300px" height="180px"/>
+
+<hr/>
+
+### oops back
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback.png" width="180px" height="100px"/>
+
+#### Description
+
+Plays Zumi's back sensor detecct sound effect.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="300px" height="160px"/>
