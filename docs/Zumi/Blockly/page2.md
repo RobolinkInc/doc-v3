@@ -823,3 +823,176 @@ None
 #### Example
 
 <img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="300px" height="160px"/>
+
+<hr/>
+
+## Sensors
+
+### get ir reading
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading.png" width="270px" height="105px"/>
+
+#### Description
+
+Gets the current IR reading from Zumi's sensors. The closer the value is to 0, the more IR light is being detected. Used commonly when detecting objects since an object or obstacle nearby will reflect IR light back to the receiver.
+
+#### Parameters
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_params.png" width="260px" height="260px"/>
+
+
+#### Returns
+
+**IR sensor value**: An integer from 0-255
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_example.png" width="300px" height="250px"/>
+
+<hr/>
+
+### get z angle
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getZangle.png" width="180px" height="100px"/>
+
+#### Description
+
+Gets the current Z angle from Zumi's gyroscope.
+
+#### Parameters
+
+None
+
+#### Returns
+
+**angle**: An integer ranging from 0 to 360.
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getZangle_example.png" width="240px" height="260px"/>
+
+<hr/>
+
+### get x angle
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getXangle.png" width="180px" height="100px"/>
+
+#### Description
+
+Gets the current X angle from Zumi's gyroscope.
+
+#### Parameters
+
+None
+
+#### Returns
+
+**angle**: An integer ranging from 0 to 360.
+
+#### Example
+
+With this example, tilt Zumi left and right with your hands to see the X angle change!
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_x_angle_example.png" width="240px" height="220px"/>
+
+<hr/>
+
+### get y angle
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/getYangle.png" width="180px" height="100px"/>
+
+#### Description
+
+Gets the current Y angle from Zumi's gyroscope.
+
+#### Parameters
+
+None
+
+#### Returns
+
+**angle**: An integer ranging from 0 to 360.
+
+#### Example
+
+With this example, rock Zumi forward and backward with your hands to see the Y angle change!
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_y_angle_example.png" width="240px" height="220px"/>
+
+<hr/>
+
+### reset gyro
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/resetgyro.png" width="180px" height="100px"/>
+
+#### Description
+
+Resets Zumi's gyroscope x, y, and z angles to 0. Use this function to reset Zumi's heading.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/resetgyro_example.png" width="300px" height="320px"/>
+
+<hr/>
+
+### get battery voltage
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage.png" width="220px" height="110px"/>
+
+#### Description
+
+Gets the current voltage from Zumi's battery. It typically varies from 3.45V-4.14V when not connected over USB. If connected over USB, this function may return 1.7V or below.
+
+#### Parameters
+
+None
+
+#### Returns
+
+**voltage**: A float value in units of Volts
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage_example.png" width="260px" height="120px"/>
+
+<hr/>
+
+### get battery percentage
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage.png" width="240px" height="110px"/>
+
+#### Description
+
+Gets the current battery percentage from Zumi's battery when not connected over USB power. The percentage will vary while driving since it is dependent on battery voltage.
+
+#### Parameters
+
+None
+
+#### Returns
+
+**percent**: An integer value from 0 to 100
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="280px" height="120px"/>
