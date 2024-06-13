@@ -18,7 +18,7 @@ customHeadElements:
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="240px" height="90px"/>  
+<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="280px" height="90px"/>  
 
 #### Parameters
 
@@ -41,7 +41,7 @@ None
 ### reverse
 
 #### Block
-<img src="/img/Zumi/blockly_docu/junior/driving/reverse.png" width="240px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/reverse.png" width="280px" height="90px"/>
 
 #### Parameters
 
@@ -996,3 +996,513 @@ None
 #### Example
 
 <img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="280px" height="120px"/>
+
+<hr/>
+
+## Camera
+
+### import camera
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/import_camera.png" width="220px" height="90px"/>
+
+#### Description
+
+Imports the camera library. This block must be included at the top of any code that uses camera functions.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/show_image_example.png" width="280px" height="300px"/>
+
+<hr/>
+
+### start camera
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/start_camera.png" width="220px" height="90px"/>
+
+#### Description
+
+Turns on Zumi's camera. A red LED will turn on next to the camera to indicate the camera is on. The camera needs to turn on before taking any pictures and will stay on until it is manually turned off with the close_camera() block.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/show_image_example.png" width="280px" height="300px"/>
+
+<hr/>
+
+### close camera
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/close_camera.png" width="220px" height="90px"/>
+
+#### Description
+
+Turns off Zumi's camera. It is recommended to always turn off the camera when not in use to conserve battery. The camera cannot be started again unless the camera is already off.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/show_image_example.png" width="280px" height="300px"/>
+
+<hr/>
+
+### take picture
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/take_picture.png" width="240px" height="90px"/>
+
+#### Description
+
+Captures a color image with Zumi's camera and stores the array as a frame object. Use the image object with show_image() to display in Blockly. This block cannot be used without importing and starting the camera.
+
+#### Parameters
+
+None
+
+#### Returns
+
+**image**: A frame object composed of a 160x128 array of pixels.
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/show_image_example.png" width="280px" height="300px"/>
+
+<hr/>
+
+### show image
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/show_image.png" width="240px"/>
+
+#### Description
+
+Show an image that was taken with Zumi's camera in Blockly.
+
+#### Parameters
+
+**image**: A frame object composed of an array of pixels.
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/show_image_example.png" width="280px" height="300px"/>
+
+<hr/>
+
+### get qr code
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code.png" width="270px" height="100px"/>
+
+#### Description
+
+Searches an image for a QR code message. If a QR code was found, the encoded message is saved to a string.
+
+#### Parameters
+
+**image**: A frame object composed of an array of pixels.
+
+#### Returns
+
+**string**: A string containing the message of the QR code. Returns ```None``` if no QR code was detected.
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code_example.png" width="280px" height="350px"/>
+
+<hr/>
+
+### find stop sign
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign.png" width="240px" height="95px"/>
+
+#### Description
+
+Searches an image for a stop sign. Returns True if a stop sign was found.
+
+#### Parameters
+
+**image**: A frame object composed of an array of pixels.
+
+#### Returns
+
+**boolean**: Returns True if a stop sign was detected. Otherwise, returns False.
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign_example.png" width="280px" height="350px"/>
+
+<hr/>
+
+### find face
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/camera/find_face.png" width="230px" height="95px"/>
+
+#### Description
+
+Searches an image for a face. Returns True if a face was detected
+
+#### Parameters
+
+**image**: A frame object composed of an array of pixels.
+
+#### Returns
+
+**boolean**: Returns True if a face was detected. Otherwise, returns False.
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/camera/find_face_example.png" width="280px" height="350px"/>
+
+<hr/>
+
+## AI
+
+### prediction from frame
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame.png" width="240px" height="105px"/>
+
+#### Description
+
+Predicts a label from an image based on a previously trained color model. A KNN color model needs to be trained and loaded into the program to use predict_from_frame(). 
+
+#### Parameters
+
+**image**: A frame object composed of an array of pixels.
+
+#### Returns
+
+**string**: A string containing the predicted label.
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame_example.png" width="300px" height="330px"/>
+
+<hr/>
+
+## Lights
+
+### lights on
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/lights_on.png" width="200px" height="100px"/>
+
+#### Description
+
+Turns on both Zumi's headlights and brake lights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/lights_example.png" width="240px"/>
+
+<hr/>
+
+### lights off
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/lights_off.png" width="200px" height="100px"/>
+
+#### Description
+
+Turns off both Zumi's headlights and brake lights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/lights_example.png" width="240px"/>
+
+<hr/>
+
+### headlights on
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/headlights_on.png" width="240px"/>
+
+#### Description
+
+Turns on Zumi's headlights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/headlights_example.png" width="240px"/>
+
+<hr/>
+
+### headlights off
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/headlights_off.png" width="240px" height="120px"/>
+
+#### Description
+
+Turns off Zumi's headlights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/headlights_example.png" width="240px"/>
+
+<hr/>
+
+### brake lights on
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/brake_lights_on.png" width="240px"/>
+
+#### Description
+
+Turns on Zumi's brake lights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/brake_lights_example.png" width="240px"/>
+
+<hr/>
+
+### brake lights off
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/brake_lights_off.png" width="240px"/>
+
+#### Description
+
+Turns off Zumi's brake lights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/brake_lights_example.png" width="240px"/>
+
+<hr/>
+
+### hazard lights on
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/hazard_lights_on.png" width="240px"/>
+
+#### Description
+
+Turns on Zumi's flashing hazard lights. They will flash indefinitely until turned off.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/hazard_lights_example.png" width="240px"/>
+
+<hr/>
+
+### hazard lights off
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/hazard_lights_off.png" width="240px"/>
+
+#### Description
+
+Turns off Zumi's flashing hazard lights.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/hazard_lights_example.png" width="240px"/>
+
+<hr/>
+
+### left signal on
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/left_signal_on.png" width="210px" height="110px"/>
+
+#### Description
+
+Turns on Zumi's left turn signal. This function flashes Zumi's back left red LED until turned off.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/left_signal_example.png" width="240px"/>
+
+<hr/>
+
+### left signal off
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/left_signal_off.png" width="210px" height="110px"/>
+
+#### Description
+
+Turns off Zumi's flashing left turn signal.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/left_signal_example.png" width="240px"/>
+
+<hr/>
+
+### right signal on
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/right_signal_on.png" width="240px"/>
+
+#### Description
+
+Turns on Zumi's right turn signal. This function flashes Zumi's back right red LED until turned off.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/right_signal_example.png" width="240px"/>
+
+<hr/>
+
+### right signal off
+
+#### Block
+
+<img src="/img/Zumi/blockly_docu/junior/lights/right_signal_off.png" width="240px"/>
+
+#### Description
+
+Turns off Zumi's flashing right turn signal.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+<img src="/img/Zumi/blockly_docu/junior/lights/right_signal_example.png" width="240px"/>
