@@ -40,7 +40,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step.png" width="340px" height="100px"/>
 
 #### Description
 
@@ -57,7 +57,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step_example.png" width="340px" height="220px"/>
 
 <hr/>
 
@@ -65,7 +65,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate.png" width="360px" height="90px"/>
 
 #### Description
 
@@ -73,7 +73,7 @@ Drives Zumi to an (x,y) position from the origin. The origin (0,0) is defined at
 
 #### Parameters
 
-<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate_params.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate_params.png" width="360px" height="120px"/>
 
 **x**: A float value for the x coordinate <br /> 
 **y**: A float value for the y coordinate <br /> 
@@ -85,7 +85,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate_example.png" width="270px" height="225px"/>
 
 <hr/>
 
@@ -93,7 +93,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reset_coordinate_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reset_coordinate.png" width="240px" height="85px"/>
 
 #### Description
 
@@ -109,7 +109,7 @@ None
 
 #### Example
 In this example, Zumi moves 5 inches in the x-direction. After resetting the coordinates Zumi will move another 5 inches in the x-direction since the origin has been reset.
-<img src="/img/Zumi/blockly_docu/senior/driving/reset_coordinate_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reset_coordinate_example.png" width="360px" height="210px"/>
 
 <hr/>
 
@@ -117,7 +117,7 @@ In this example, Zumi moves 5 inches in the x-direction. After resetting the coo
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro.png" width="680px" height="100px"/>
 
 #### Description
 
@@ -137,7 +137,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro_example.png" width="680px" height="100px"/>
 
 <hr/>
 
@@ -145,7 +145,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align.png" width="500px" height="100px"/>
 
 #### Description
 
@@ -163,7 +163,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align_example.png" width="500px" height="100px"/>
 
 <hr/>
 
@@ -171,7 +171,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="680px" height="100px"/>
 
 #### Description
 
@@ -190,7 +190,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="680px" height="100px"/>
 
 <hr/>
 
@@ -198,7 +198,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="680px" height="100px"/>
 
 
 #### Description
@@ -218,7 +218,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="680px" height="100px"/>
 
 <hr/>
 
@@ -226,7 +226,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="400px" height="100px"/>
 
 #### Description
 
@@ -248,7 +248,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="400px" height="100px"/>
 
 <hr/>
 
@@ -256,7 +256,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="660px" height="100px"/>
 
 #### Description
 
@@ -272,7 +272,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="660px" height="100px"/>
 
 <hr/>
 
@@ -330,7 +330,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="680px" height="100px"/>
 
 #### Description
 
@@ -349,4 +349,4 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="680px" height="100px"/>
