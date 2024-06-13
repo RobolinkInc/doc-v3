@@ -5,7 +5,6 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-
 <div className='print_div'>
 
 <button id="print_page" onClick={() => window.print()}>Print</button>
@@ -18,7 +17,7 @@ customHeadElements:
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="280px" height="90px"/>  
+<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="320px" height="90px"/>  
 
 #### Parameters
 
@@ -34,14 +33,14 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/forward_example.png" width="240px" height="300px"/>  
+<img src="/img/Zumi/blockly_docu/junior/driving/forward_example.png" width="320px" height="300px"/>  
 
 <hr/>
 
 ### reverse
 
 #### Block
-<img src="/img/Zumi/blockly_docu/junior/driving/reverse.png" width="280px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/reverse.png" width="320px" height="90px"/>
 
 #### Parameters
 
@@ -57,7 +56,7 @@ Moves Zumi backwards for the given duration and speed
 None
 
 #### Example
-<img src="/img/Zumi/blockly_docu/junior/driving/reverse_example.png" width="240px" height="300px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/reverse_example.png" width="320px" height="300px"/>
 
 <hr/>
 
@@ -81,7 +80,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/turn_left_example.png" width="340px" height="260px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/turn_left_example.png" width="371px" height="240px"/>
 
 <hr/>
 
@@ -105,7 +104,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/turn_right_example.png"  width="340px" height="260px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/turn_right_example.png"  width="371px" height="240px"/>
 
 <hr/>
 
@@ -113,7 +112,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/stop.png" width="170px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/stop.png" width="150px" height="90px"/>
 
 #### Description
 
@@ -129,7 +128,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/stop_example.png"  width="340px" height="260px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/stop_example.png"  width="370px" height="230px"/>
 
 <hr/>
 
@@ -185,7 +184,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/parallel_park.png" width="240px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/parallel_park.png" width="230px" height="100px"/>
 
 #### Description
 
@@ -201,7 +200,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/parallel_park_example.png" width="260px" height="160px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/parallel_park_example.png" width="350px" height="140px"/>
 
 <hr/>
 
@@ -254,7 +253,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/triangle_example.png" width="280px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/triangle_example.png" width="360px" height="150px"/>
 
 <hr/>
 
@@ -281,7 +280,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/square_example.png" width="280px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/square_example.png" width="380px" height="150px"/>
 
 <hr/>
 
@@ -308,7 +307,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/rectangle_example.png" width="280px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/rectangle_example.png" width="360px" height="150px"/>
 
 <hr/>
 
@@ -441,7 +440,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/closed.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/closed.png" width="200px" height="100px"/>
 
 #### Description
 
@@ -465,7 +464,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/sleepy.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/sleepy.png" width="200px" height="100px"/>
 
 #### Description
 
@@ -489,7 +488,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="200px" height="100px"/>
 
 #### Description
 
@@ -513,7 +512,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="200px" height="100px"/>
 
 #### Description
 
@@ -537,7 +536,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/blinking.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/blinking.png" width="200px" height="100px"/>
 
 #### Description
 
@@ -561,7 +560,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/angry.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/angry.png" width="200px" height="110px"/>
 
 #### Description
 
@@ -585,7 +584,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/open.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/open.png" width="200px" height="95px"/>
 
 #### Description
 
@@ -611,7 +610,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/playnote.png" width="280px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote.png" width="300px" height="100px"/>
 
 #### Description
 
@@ -638,7 +637,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/angry.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/angry.png" width="160px" height="100px"/>
 
 #### Description
 
@@ -798,7 +797,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/oopsfront_example.png" width="300px" height="180px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsfront_example.png" width="380px" height="180px"/>
 
 <hr/>
 
@@ -822,7 +821,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="300px" height="160px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="380px" height="160px"/>
 
 <hr/>
 
@@ -832,7 +831,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading.png" width="270px" height="105px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading.png" width="320px" height="105px"/>
 
 #### Description
 
@@ -849,7 +848,7 @@ Gets the current IR reading from Zumi's sensors. The closer the value is to 0, t
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_example.png" width="300px" height="250px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_example.png" width="380px" height="280px"/>
 
 <hr/>
 
@@ -947,7 +946,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/resetgyro_example.png" width="300px" height="320px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/resetgyro_example.png" width="300px" height="340px"/>
 
 <hr/>
 
@@ -955,7 +954,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage.png" width="220px" height="110px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage.png" width="270px" height="110px"/>
 
 #### Description
 
@@ -979,7 +978,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage.png" width="240px" height="110px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage.png" width="290px" height="110px"/>
 
 #### Description
 
@@ -995,7 +994,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="280px" height="120px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="330px" height="120px"/>
 
 <hr/>
 
@@ -1125,7 +1124,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code.png" width="270px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code.png" width="290px" height="100px"/>
 
 #### Description
 
@@ -1141,7 +1140,7 @@ Searches an image for a QR code message. If a QR code was found, the encoded mes
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code_example.png" width="280px" height="350px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code_example.png" width="300px" height="350px"/>
 
 <hr/>
 
@@ -1165,7 +1164,7 @@ Searches an image for a stop sign. Returns True if a stop sign was found.
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign_example.png" width="280px" height="350px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign_example.png" width="300px" height="350px"/>
 
 <hr/>
 
@@ -1189,7 +1188,7 @@ Searches an image for a face. Returns True if a face was detected
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/camera/find_face_example.png" width="280px" height="350px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/find_face_example.png" width="300px" height="350px"/>
 
 <hr/>
 
@@ -1199,7 +1198,7 @@ Searches an image for a face. Returns True if a face was detected
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame.png" width="240px" height="105px"/>
+<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame.png" width="290px" height="105px"/>
 
 #### Description
 
@@ -1215,7 +1214,7 @@ Predicts a label from an image based on a previously trained color model. A KNN 
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame_example.png" width="300px" height="330px"/>
+<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame_example.png" width="300px" height="360px"/>
 
 <hr/>
 
