@@ -97,6 +97,22 @@ const sidebars = {
         'Zumi/Blockly/page4',
       ],
     },
+    {
+      type: 'doc',
+      id: 'Zumi/Python/Python',
+    },
+    {
+      type: 'category',
+      label: 'Python',
+      link: {type: 'doc', id: 'Zumi/Python/Python'},
+      collapsible: false,
+      items: [
+        'Zumi/Python/page1',
+        'Zumi/Python/page2',
+        'Zumi/Python/page3',
+        'Zumi/Python/page4',
+      ],
+    }
   ],
 
 
