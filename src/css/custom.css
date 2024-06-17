@@ -31,7 +31,7 @@
   width: 90px;
   font-family: 'Cabin-Regular', sans-serif; 
   position: absolute;
-  top: 10px;
+  top: 35px;
   right: 10px;
 }
 
@@ -41,6 +41,10 @@
 
 #blank {
   height: 60px;
+}
+
+.change_version {
+  margin-bottom: -20px;
 }
 
 .navbar {
