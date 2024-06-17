@@ -11,6 +11,9 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 1.9 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
+</div>
 
 ## Connection
 
