@@ -490,31 +490,6 @@ None
 
 <hr className="section_hr"/>
 
-## Status Checkers
-
-### code_is_running()
-
-#### Block
-
-<img src="/img/CDE/blockly_docu/senior/code_is_running.png" width="160px"/>  
-
-
-#### Parameters
-None
-
-#### Description
-Returns a True value while your code is running. Use this block instead of "while True" when you want to run a "forever" loop. Use the "Stop" button in Blockly to stop the program.    
-**Note:** There is no Python equivalent code_is_running() function. Use a while True loop in Python.
-
-#### Returns
-**Boolean:** returns true if program is running, false if user presses "Stop"
-
-#### Example
-
-<img src="/img/CDE/blockly_docu/senior/code_is_running_example.png" width="500px"/>  
-
-<hr className="section_hr"/>
-
 ## Lights
 
 ### set_drone_LED()
