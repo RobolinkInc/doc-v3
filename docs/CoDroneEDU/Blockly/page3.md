@@ -203,29 +203,6 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 
 <hr className="section_hr"/>
 
-## Status Checkers
-
-### code is running
-
-#### Block
-
-<img src="/img/CDE/blockly_docu/junior/code_is_running.png" width="150px"/>  
-
-#### Parameters
-None
-
-#### Description
-Returns a True value while your code is running. Use this block instead of "while True" when you want to run a "forever" loop. Use the "Stop" button in Blockly to stop the program.
-
-#### Returns
-**boolean:** returns true if program is running, false if user presses "Stop"
-
-#### Example
-This example cycles the colors from red, green, blue forever. Pressing the "Stop" will interrupt the while loop and stop the program.
-
-<img src="/img/CDE/blockly_docu/junior/code_is_running_example.png" width="500px"/>  
-
-<hr className="section_hr"/>
 
 ## Lights
 
