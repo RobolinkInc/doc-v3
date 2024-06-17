@@ -226,7 +226,7 @@ None
 
 <img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro.png" width="240px" height="90px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Shapes
 
@@ -384,7 +384,7 @@ None
 
 <img src="/img/Zumi/blockly_docu/junior/shapes/jturn_example.png" width="260px" height="150px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Screen
 
@@ -602,7 +602,7 @@ None
 
 <img src="/img/Zumi/blockly_docu/junior/screen/glimmer_blinking_angry_open_example.png" width="240px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Sounds
 
@@ -823,7 +823,7 @@ None
 
 <img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="380px" height="160px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Sensors
 
@@ -996,7 +996,7 @@ None
 
 <img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="330px" height="120px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Camera
 
@@ -1190,7 +1190,7 @@ Searches an image for a face. Returns True if a face was detected
 
 <img src="/img/Zumi/blockly_docu/junior/camera/find_face_example.png" width="300px" height="350px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## AI
 
@@ -1216,7 +1216,7 @@ Predicts a label from an image based on a previously trained color model. A KNN 
 
 <img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame_example.png" width="300px" height="360px"/>
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Lights
 
