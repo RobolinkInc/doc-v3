@@ -11,6 +11,6 @@ Every CoDrone EDU kit comes with a user manual that comes in handy if you need a
 
 [CoDroneEDU_Manual_v3.0.pdf](/files/co-drone-edu-manual-v-3-0.pdf)
 
-<iframe src="/files/co-drone-edu-manual-v-3-0.pdf" width="97%" height="800px">
+<iframe src="/files/co-drone-edu-manual-v-3-0.pdf#view=FitH" width="97%" height="800px">
     This browser does not support PDF previews. Click [here](/files/co-drone-edu-manual-v-3-0.pdf) to download the PDF file.
 </iframe>
