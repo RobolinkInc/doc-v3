@@ -2438,3 +2438,1901 @@ zumi.turn(90)
 zumi.turn(-90)
 
 ```
+
+<hr className="section_hr"/>
+
+## LEDs and Buzzer
+
+### all_lights_off()
+
+#### Description
+Turns all LEDs off
+
+#### Syntax
+```all_lights_off()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+zumi = Zumi()
+zumi.all_lights_on()
+time.sleep(2)
+zumi.all_lights_off()
+```
+<hr/>
+
+### all_lights_on()
+
+#### Description
+Turns all LEDs on
+the 2 front white leds and the rear 2 leds.
+
+#### Syntax
+```all_lights_on()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+zumi = Zumi()
+zumi.all_lights_on()
+```
+<hr/>
+
+### brake_lights_off()
+
+#### Description
+Turns off front LEDs only
+
+#### Syntax
+```brake_lights_off()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+zumi = Zumi()
+
+zumi.brake_lights_on()
+time.sleep(2)
+zumi.brake_lights_off()
+```
+<hr/>
+
+### brake_lights_on()
+
+#### Description
+Turns on back LEDs only
+
+#### Syntax
+```brake_lights_on()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+zumi = Zumi()
+zumi.brake_lights_on()
+```
+<hr/>
+
+### hazard_lights_off()
+
+#### Description
+Turns off flashing front and back LEDs
+
+#### Syntax
+```hazard_lights_off()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+
+zumi = Zumi()
+zumi.hazard_lights_on()
+time.sleep(2)
+zumi.hazard_lights_off()
+```
+<hr/>
+
+### hazard_lights_on()
+
+#### Description
+Flashes both front and back LEDs
+
+#### Syntax
+```hazard_lights_on()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+zumi = Zumi()
+zumi.hazard_lights_on()
+```
+<hr/>
+
+### headlights_off()
+
+#### Description
+Turns off front LEDs only
+
+#### Syntax
+```headlights_off()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+zumi = Zumi()
+
+zumi.headlights_on()
+time.sleep(2)
+zumi.headlights_off()
+```
+<hr/>
+
+### headlights_on()
+
+#### Description
+Turns on front LEDs only
+
+#### Syntax
+```headlights_on()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+zumi = Zumi()
+zumi.headlights_on()
+time.sleep(2)
+zumi.all_lights_off()
+```
+<hr/>
+
+### play_note()
+
+#### Description
+Play a note, from C2 - B6.
+
+#### Syntax
+```play_note(note_type)```<br />
+```play_note(note_type, note_duration=500)```<br />
+
+##### Parameters
+**note_type:** Integer from 0 to 60 or enum from Note class. Setting the note to 0 will result in no sound.<br />
+**note_duration:** Default to 500 milliseconds but can be an integer from 0 to 2500 milliseconds. Must be in 100 millisecond increments ex. 100, 200, 500, 2000. If 0 note will play forever.<br />
+
+***class* Note:**<br />
+    C2 = 1<br />
+    CS2 = 2<br />
+    D2 = 3<br />
+    DS2 = 4<br />
+    E2 = 5<br />
+    F2 = 6<br />
+    FS2 = 7<br />
+    G2 = 8<br />
+    GS2 = 9<br />
+    A2 = 10<br />
+    AS2 = 11<br />
+    B2 = 12<br />
+    C3 = 13<br />
+    CS3 = 14<br />
+    D3 = 15<br />
+    DS3 = 16<br />
+    E3 = 17<br />
+    F3 = 18<br />
+    FS3 = 19<br />
+    G3 = 20<br />
+    GS3 = 21<br />
+    A3 = 22<br />
+    AS3 = 23<br />
+    B3 = 24<br />
+    C4 = 25<br />
+    CS4 = 26<br />
+    D4 = 27<br />
+    DS4 = 28<br />
+    E4 = 29<br />
+    F4 = 30<br />
+    FS4 = 31<br />
+    G4 = 32<br />
+    GS4 = 33<br />
+    A4 = 34<br />
+    AS4 = 35<br />
+    B4 = 36<br />
+    C5 = 37<br />
+    CS5 = 38<br />
+    D5 = 39<br />
+    DS5 = 40<br />
+    E5 = 41<br />
+    F5 = 42<br />
+    FS5 = 43<br />
+    G5 = 44<br />
+    GS5 = 45<br />
+    A5 = 46<br />
+    AS5 = 47<br />
+    B5 = 48<br />
+    C6 = 49<br />
+    CS6 = 50<br />
+    D6 = 51<br />
+    DS6 = 52<br />
+    E6 = 53<br />
+    F6 = 54<br />
+    FS6 = 55<br />
+    G6 = 56<br />
+    GS6 = 57<br />
+    A6 = 58<br />
+    AS6 = 59<br />
+    B6 = 60<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+from zumi.protocol import Note
+import time
+zumi = Zumi()
+zumi.play_note(30, 500)
+time.sleep(1)
+zumi.play_note(Note.C4)
+time.sleep(1)
+# will stop the buzzer
+zumi.play_note(0, 0)
+```
+<hr/>
+
+### signal_left_off()
+
+#### Description
+Turns off flashing both left front and left back LEDs
+
+#### Syntax
+```signal_left_off()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+
+zumi = Zumi()
+zumi.signal_left_on()
+time.sleep(2)
+zumi.signal_left_off()
+```
+<hr/>
+
+### signal_left_on()
+
+#### Description
+Flashes both left front and left back LEDs
+
+#### Syntax
+```signal_left_on()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+zumi = Zumi()
+zumi.signal_left_on()
+```
+<hr/>
+
+### signal_right_off()
+
+#### Description
+Turns off flashing both right front and right back LEDs
+
+#### Syntax
+```signal_right_off()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+import time
+zumi = Zumi()
+zumi.signal_right_on()
+time.sleep(2)
+zumi.signal_right_off()
+```
+<hr/>
+
+### signal_right_on()
+
+#### Description
+Flashes both right front and right back LEDs
+
+#### Syntax
+```signal_right_on()```<br />
+
+##### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi 
+zumi = Zumi()
+zumi.signal_right_on()
+```
+<hr className="section_hr"/>
+
+## Camera
+
+### capture()
+
+#### Description
+Takes a picture using the PiCamera and saves it in an array.
+
+#### Syntax
+```capture()```
+
+#### Parameters
+None
+
+#### Returns
+**Numpy array representing captured image** &nbsp;&nbsp;_(type: ndarray)_
+
+#### Example Code
+#### Python
+```python
+#Python code
+
+from zumi.util.camera import Camera
+import time
+
+camera=Camera()
+camera.start_camera()
+
+frame = camera.capture()
+camera.show_image(frame)
+time.sleep(5)   
+camera.close()
+```
+
+<hr/>
+
+### close()
+
+#### Description
+Releases camera's resources 
+
+#### Syntax
+```close()```
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.camera import Camera
+
+
+camera=Camera()
+camera.start_camera()
+camera.save_photo()
+camera.close()
+```
+<hr/>
+
+### is_closed()
+
+#### Description
+Checks if the camera stream is open
+
+#### Syntax
+```is_closed()```
+
+#### Parameters
+None
+
+#### Returns
+**Boolean** &nbsp;&nbsp;_(type: boolean)_
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.camera import Camera
+
+camera=Camera()
+camera.start_camera()
+camera.close()
+print("Camera is closed?")
+print(camera.is_closed())
+if not camera.is_closed():
+    camera.close()
+```
+<hr/>
+
+### save_photo()
+
+#### Description
+Captures an image and saves it in the working directory.
+
+#### Syntax
+```save_photo()```<br />
+```save_photo(file_name)```
+
+#### Parameters
+**file_name** &nbsp;&nbsp;_(type: string, default: current_time)_ : The name of the image file that will be saved
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.camera import Camera
+
+
+camera=Camera()
+camera.start_camera()
+camera.save_photo() 
+#"<current_time>.jpg" file will be saved in the current working directory
+camera.save_photo("Cheese") 
+#"Cheese.jpg" file will be saved in the current working directory
+camera.close() 
+```
+<hr/>
+
+### show_image()
+
+#### Description
+Displays an image taken from Zumi's camera.
+
+#### Syntax
+```show_image(frame)```<br />
+
+#### Parameters
+**frame:** An image array 
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+
+from zumi.util.camera import Camera
+import time
+
+camera=Camera()
+camera.start_camera()
+
+frame = camera.capture()
+camera.show_image(frame)
+camera.close()
+```
+<hr/>
+
+### start_camera()
+
+#### Description
+Turns on the camera
+
+#### Syntax
+```start_camera()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.camera import Camera
+import cv2
+import IPython.display
+import PIL.Image
+from io import BytesIO
+import time
+
+# you can change the resolution of the camera
+# using the image_w = image width 
+# and the   image_h = image heigth 
+#camera = Camera(image_w=1280,image_h=960)
+#camera = Camera(image_w=1024,image_h=768)
+#camera = Camera(image_w=128,image_h=64)
+camera = Camera(image_w=60,image_h=32)
+
+camera.start_camera()
+
+time_start = time.time()
+try: 
+    for i in range(30):
+        frame = camera.capture()
+
+        img = PIL.Image.fromarray(frame, "RGB")
+        buffer = BytesIO()
+        img.save(buffer,format="JPEG") 
+        
+        IPython.display.display(IPython.display.Image(data=buffer.getvalue()))
+
+        IPython.display.clear_output(wait=True) 
+        
+finally:
+    print(30/(time.time()-time_start))
+```
+<hr/>
+
+### predict()
+
+#### Description
+Predicts a color captured from the Zumi camera.
+
+#### Syntax
+```predict(pred_features)```<br />
+
+#### Parameters
+**pred_features**: The image to draw the prediction from
+
+#### Returns
+**predicts**: The prediction made by the knn color classifier
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.screen import Screen
+from zumi.util.color_classifier import ColorClassifier
+import time
+camera = Camera()
+screen = Screen()
+zumi = Zumi()
+
+knn = ColorClassifier()
+train = knn.load_model("project_name")
+knn.fit("hsv")
+
+camera.start_camera()
+while True:
+    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
+    if user_input == "q":
+        break
+    image = camera.capture()
+    predict = knn.predict(image) # Based on the image taken, the knn color classifier will predict a color
+    screen.draw_text_center(predict) # This prediction gets written to the Zumi screen
+camera.close()
+```
+<hr/>
+
+### fit()
+
+#### Description
+Fits values for prediction. By default, HSV is fitted.
+
+#### Syntax
+```fit(values)```<br />
+
+#### Parameters
+**values**: values to be fitted for prediction. By default hsv is fitted.
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.screen import Screen
+from zumi.util.color_classifier import ColorClassifier
+import time
+camera = Camera()
+screen = Screen()
+zumi = Zumi()
+
+knn = ColorClassifier()
+train = knn.load_model("project_name")
+knn.fit("hsv") # Fitting to HSV
+
+camera.start_camera()
+while True:
+    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
+    if user_input == "q":
+        break
+    image = camera.capture()
+    predict = knn.predict(image)
+    screen.draw_text_center(predict)
+camera.close()
+```
+<hr/>
+
+### load_model()
+
+#### Description
+Loads the model based on your project name.
+
+#### Syntax
+```load_model(name)```<br />
+
+#### Parameters
+**name**: The project name. This will depend on what you chose to name your project
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.screen import Screen
+from zumi.util.color_classifier import ColorClassifier
+import time
+camera = Camera()
+screen = Screen()
+zumi = Zumi()
+
+knn = ColorClassifier()
+train = knn.load_model("project_name") # Loads the model based on your project name. Make sure to use the project name you chose!
+knn.fit("hsv")
+
+camera.start_camera()
+while True:
+    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
+    if user_input == "q":
+        break
+    image = camera.capture()
+    predict = knn.predict(image)
+    screen.draw_text_center(predict)
+camera.close()
+```
+<hr className="section_hr"/>
+
+## Screen
+
+### angry()
+
+#### Description
+Draws Zumi's angry eyes on the screen.
+
+#### Syntax
+```angry()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.angry()
+```
+<hr/>
+
+### blink()
+
+#### Description
+Draws Zumi's blinking animation on the screen.
+
+#### Syntax
+```blink()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.blink()
+```
+<hr/>
+
+### clear_display()
+
+#### Description
+Clears everything on the OLED by drawing a black rectangle.
+
+#### Syntax
+```clear_display()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.print("Hello")
+screen.clear_display()
+
+```
+<hr/>
+
+### clear_drawing()
+
+#### Description
+Clears the drawing canvas object without clearing the OLED screen. Use this before using any new draw functions.
+
+#### Syntax
+```clear_drawing()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_circle(30,30,10)
+time.sleep(1)
+
+screen.clear_drawing()
+screen.print("Hello")
+
+```
+<hr/>
+
+### clock()
+
+#### Description
+Clears the screen and draws a clock with the given hour and minute set by the user.
+
+#### Syntax
+```clock(hour, minute)```<br />
+```clock(hour, minute, string='', font_size=18)```<br />
+
+#### Parameters
+**hour:** Integer for the hour<br />
+**minute:** Integer for the minute<br />
+**string:** an 8 character String to be displayed under the clock (optional). Defaults to an empty string.<br />
+**font_size:** the font-size of the time
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.clock(3,15,"Monday")
+```
+<hr/>
+
+### close_eyes()
+
+#### Description
+Draws Zumi's closed eyes on the screen.
+
+#### Syntax
+```close_eyes()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.close_eyes()
+```
+<hr/>
+
+### draw_arc()
+
+#### Description
+Draws an arc within the boundaries of points x1,y1, and x2,y2 at the specified starting and ending angles.
+
+#### Syntax
+```draw_arc(x1, y1, x2, y2, start_ang, end_ang)```<br />
+```draw_arc(x1, y1, x2, y2, start_ang, end_ang,fill_in=True)```<br />
+
+#### Parameters
+**x1:** x coordinate of top-left corner for the rectangle enclosing the arc<br />
+**y1:** y coordinate of top-left corner for the rectangle enclosing the arc<br />
+**x2:** x coordinate of bottom-right corner for the rectangle enclosing the arc<br />
+**y2:** y coordinate of bottom-right corner for the rectangle enclosing the arc<br />
+**start_ang:** starting arc angle<br />
+**end_ang:** ending arc angle<br />
+**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+
+screen=Screen()
+screen.draw_arc(0,0,50,50,-180,0)
+```
+<hr/>
+
+### draw_chord()
+
+#### Description
+Draws a chord within the boundaries of points x1,y1, and x2,y2 at the specified starting and ending angles.
+
+#### Syntax
+```draw_chord(x1, y1, x2, y2, start_ang, end_ang)```<br />
+```draw_chord(x1, y1, x2, y2, start_ang, end_ang,fill_in=True)```<br />
+
+#### Parameters
+**x1:** x coordinate of top-left corner for the rectangle enclosing the chord<br />
+**y1:** y coordinate of top-left corner for the rectangle enclosing the chord<br />
+**x2:** x coordinate of bottom-right corner for the rectangle enclosing the chord<br />
+**y2:** y coordinate of bottom-right corner for the rectangle enclosing the chord<br />
+**start_ang:** starting angle<br />
+**end_ang:** ending angle<br />
+**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+
+screen=Screen()
+screen.draw_chord(0,0,20,20,-180,0)
+screen.draw_chord(30,30,50,50,-180,0)
+
+#do a 360 from -180 degrees to 180 degrees
+screen.draw_chord(60,30,100,50,-180,180)
+```
+<hr/>
+
+### draw_circle()
+
+#### Description
+Draws a circle that fits inside a square with its top-left corner at x,y and a width/height of the circle's diameter.
+
+#### Syntax
+```draw_circle(x, y, diameter)```<br />
+```draw_circle(x, y, diameter, fill_in=True)```<br />
+
+#### Parameters
+**x:** x coordinate of the top-left corner of the enclosing square<br />
+**y:** y coordinate of the top-left corner of the enclosing square<br />
+**diameter:** diameter of the circle (also the width and height of enclosing square)<br />
+**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_circle(10,0,20,fill_in=False)
+```
+<hr/>
+
+### draw_ellipse()
+
+#### Description
+Draws an ellipse that fits in a rectangle with its top-left corner at x,y and a set width and height.
+
+#### Syntax
+```draw_ellipse(self, x, y, width, height)```<br />
+```draw_ellipse(self, x, y, width, height, fill_in=True)```<br />
+
+#### Parameters
+**x:** x coordinate of the top-left corner of the enclosing rectangle<br />
+**y:** y coordinate of the top-left corner of the enclosing rectangle<br />
+**width:** width of enclosing rectangle<br />
+**height:** height of enclosing rectangle<br />
+**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_ellipse(0,0,100,30,fill_in=True)
+```
+<hr/>
+
+### draw_image()
+
+#### Description
+Draws the image on the screen.
+
+#### Syntax
+```draw_image(img)```<br />
+
+#### Parameters
+**img:** An image
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+path = "/usr/local/lib/python3.5/dist-packages/zumi/util/images/happy1.ppm"
+screen.draw_image(screen.path_to_image(path))
+
+```
+<hr/>
+
+### draw_line()
+
+#### Description
+Draws a line between points (x1,y1) and (x2,y2).
+
+#### Syntax
+```draw_line(x1, y1, x2, y2)```<br />
+```draw_line(x1, y1, x2, y2, thickness=1,fill_in=True)```<br />
+
+#### Parameters
+**x1:** x coordinate of the starting point<br />
+**y1:** y coordinate of the starting point<br />
+**x2:** x coordinate of the ending point<br />
+**y2:** y coordinate of the ending point<br />
+**thickness:** pixel width of the line<br />
+**fill_in:** Boolean that selects if the line will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_line(0,0,40,40,fill_in=True)
+screen.draw_line(40,0,0,40,thickness=10,fill_in=True)
+```
+<hr/>
+
+### draw_point()
+
+#### Description
+Draws a single pixel at the set x and y coordinate.
+
+#### Syntax
+```draw_point(x, y)```<br />
+```draw_point(x, y,fill_in=True)```<br />
+
+#### Parameters
+**x:** the x coordinate<br />
+**y:** the y coordinate<br />
+**fill_in:** Boolean that selects if the point will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_point(100,30)
+```
+<hr/>
+
+### draw_polygon()
+
+#### Description
+Draws lines between points in a given list ```[(x1,y1),...,(xn,yn)]``` to form a shape.
+
+#### Syntax
+``` draw_polygon(points_list)```<br />
+``` draw_polygon(points_list,fill_in = True):```<br />
+
+#### Parameters
+**points_list:** A list ```[x1,y1,x2,y2,....xn,yn]``` with at least 3 points <br />
+**fill_in:** Boolean that selects if the polygon will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+points = [(30,50),(90,10),(20,10),(5,20)]
+screen.draw_polygon(points)
+```
+<hr/>
+
+### draw_rect()
+
+#### Description
+Draws a rectangle on the screen.
+
+#### Syntax
+```draw_rect(x, y, width, height)```<br />
+```draw_rect(x, y, width, height, thickness=1, fill_in=False)```<br />
+
+#### Parameters
+**x:** the top left corner x coordinate<br />
+**y:** the top left corner y coordinate<br />
+**width:** width of rectangle<br />
+**height:** height of rectangle<br />
+**thickness:** thickness of rectangle border, default to 1<br />
+**fill_in:** Boolean that selects if the shape will be filled in. Default to False.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_rect(0,0,128,64,thickness=1,fill_in=True)
+```
+<hr/>
+
+### draw_square()
+
+#### Description
+Draws a square on the screen.
+
+#### Syntax
+```draw_square(x, y, width)```<br />
+```draw_square(x, y, width, thickness=1, fill_in=False)```<br />
+
+#### Parameters
+**x:** the top left corner x coordinate<br />
+**y:** the top left corner y coordinate<br />
+**width:** width of each side<br />
+**thickness:** thickness of rectangle border, default to 1<br />
+**fill_in:** Boolean that selects if the shape will be filled in. Default to False.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+screen.draw_square(0,0,30,thickness=1,fill_in=True)
+```
+<hr/>
+
+### draw_text_center()
+
+#### Description
+Draws text to the center of the screen
+
+#### Syntax
+```draw_text_center(string, font_size=16)```<br />
+```draw_text_center(string)```<br />
+```draw_text_center(string, font_size)```<br />
+
+#### Parameters
+**string** &nbsp;&nbsp;_(type: string)_: The string that zumi will show on the screen
+**font_size** &nbsp;&nbsp;_(type: integer, default: 16)_: The font size of the string
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+
+screen=Screen()
+
+screen.draw_text_center('hello',font_size=10)
+time.sleep(0.5)
+screen.draw_text_center('hello',font_size=20)
+time.sleep(0.5)
+screen.draw_text_center('hello',font_size=30)
+time.sleep(0.5)
+screen.draw_text_center('hello',font_size=40)
+time.sleep(0.5)
+screen.draw_text_center('hello',font_size=50)
+time.sleep(0.5)
+```
+<hr/>
+
+### draw_text()
+
+#### Description
+Draws text to the upper lefthand corner of the screen
+
+#### Syntax
+```draw_text(string)```<br />
+```draw_text(string, x, y, font_size)```  (display, clear)..
+
+#### Parameters
+**string** &nbsp;&nbsp;_(type: string)_: The string that zumi will show on the screen<br />
+**x** &nbsp;&nbsp; _(type: integer, default: 1)_: The x coordinate start value of the string<br />
+**y** &nbsp;&nbsp; _(type: integer, default: 1)_: The y coordinate start value of the string<br />
+**font_size** &nbsp;&nbsp;_(type: integer, default: 16)_: The font size of the string
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+for i in range(10):
+    screen.draw_text(str(i)+'!')
+    time.sleep(0.1)
+screen.clear_display()
+```
+<hr/>
+
+### draw_triangle()
+
+#### Description
+Draws a triangle with 3 points (x1,y1), (x2,y2), (x3,y3): ```x1, y1, x2, y2, x3, y3```.
+
+#### Syntax
+``` draw_triangle(x1,y1,x2,y2,x3,y3)```<br />
+``` draw_triangle(x1,y1,x2,y2,x3,y3,fill_in=True):```<br />
+
+#### Parameters
+**x1:** the x coordinate of point 1<br />
+**y1:** the y coordinate of point 1<br />
+**x2:** the x coordinate of point 2<br />
+**y2:** the y coordinate of point 2<br />
+**x3:** the x coordinate of point 3<br />
+**y3:** the y coordinate of point 3<br />
+**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+
+screen=Screen()
+screen.draw_triangle(0,10,20,50,50,0)
+```
+<hr/>
+
+### glimmer()
+
+#### Description
+Draws an animation of Zumi's eyes glimmering on the screen.
+
+#### Syntax
+```glimmer()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.glimmer()
+```
+<hr/>
+
+### happy()
+
+#### Description
+Draws an animation of Zumi's happy eyes.
+
+#### Syntax
+```happy()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.happy()
+```
+<hr/>
+
+### hello()
+
+#### Description
+Draws Zumi's default eyes on the screen.
+
+#### Syntax
+```hello```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.hello()
+```
+<hr/>
+
+### look_around_open()
+
+#### Description
+Draws Zumi's eyes looking around left and right on the screen.
+
+#### Syntax
+```look_around_open()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.look_around_open()
+```
+<hr/>
+
+### look_around()
+
+#### Description
+Makes zumi look around
+
+#### Syntax
+```look_around()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.look_around()
+```
+<hr/>
+
+### print()
+
+#### Description
+Prints any number of Strings on the screen. 
+
+#### Syntax
+```print(*messages)```<br />
+```print(*messages,x=0, y=0, fill_in=True,font_size=12)```<br />
+
+#### Parameters
+messages: Any number of Strings that will print to the screen<br />
+**x:** x coordinate of the String. Default to 0.<br />
+**y:** y coordinate of the String. Default to 0.<br />
+**fill_in:** Boolean that selects if text will be white(True) or black (False). Default to True.<br />
+**font_size:** Pixel size of the font. Default to 12.<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen
+import time
+
+screen=Screen()
+
+screen.print("12345678")
+screen.print("hello", y=15)
+screen.print("\n\n","Zumi")
+
+time.sleep(1)
+screen.clear_drawing()
+screen.print("ZUMI",font_size=20)
+
+```
+<hr/>
+
+### sad()
+
+#### Description
+Draws Zumi's sad eyes on the screen.
+
+#### Syntax
+```sad()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.sad()
+```
+<hr/>
+
+### show_screen()
+
+#### Description
+Displays an image on Zumi's screen taken from Zumi's camera.
+
+#### Syntax
+```show_image(frame)```<br />
+
+#### Parameters
+**frame:** An image array 
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+from zumi.util.screen import Screen
+from zumi.util.camera import Camera
+
+camera.start_camera() # Turn on the camera
+image = camera.capture() # Take a picture
+camera.close() # Make sure to close the camera stream
+screen.show_image(image) # Display image on OLED
+```
+
+<hr/>
+
+### sleeping()
+
+#### Description
+Draws an animation of Zumi sleeping on the screen.
+
+#### Syntax
+```sleeping()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.sleeping()
+```
+<hr/>
+
+### sleepy_eyes()
+
+#### Description
+Draws Zumi's sleepy eyes on the screen.
+
+#### Syntax
+```sleepy_eyes()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.sleepy_eyes()
+```
+<hr/>
+
+### sleepy_left()
+
+#### Description
+Draws a sleepy left eye on the screen.
+
+#### Syntax
+```sleepy_left()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.sleepy_left()
+```
+<hr/>
+
+### sleepy_right()
+
+#### Description
+Draws a sleepy right eye on the screen.
+
+#### Syntax
+```sleepy_right()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.util.screen import Screen 
+screen = Screen()
+
+screen.sleepy_right()
+```
+<hr className="section_hr"/>
+
+## Personality
+
+### angry()
+
+#### Description
+Draws Zumi's angry eyes on the screen.
+
+#### Syntax
+```angry()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.angry()
+```
+<hr/>
+
+### awake()
+
+#### Description
+Draws Zumi opening her eyes with the wake up sound effect.
+
+#### Syntax
+```awake()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.awake()
+```
+<hr/>
+
+### celebrate()
+
+#### Description
+Makes Zumi celebrate.
+
+#### Syntax
+```celebrate()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.celebrate()
+```
+<hr/>
+
+### disoriented_left()
+
+#### Description
+Draws Zumi's eyes looking to the left with the disoriented sound effect.
+
+#### Syntax
+```disoriented_left()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.disoriented_left()
+```
+<hr/>
+
+### disoriented_right()
+
+#### Description
+Draws Zumi's eyes looking to the right with the disoriented sound effect.
+
+#### Syntax
+```disoriented_right()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.disoriented_right()
+```
+
+<hr/>
+
+### happy()
+
+#### Description
+Makes Zumi wiggle and make a happy sound.
+
+#### Syntax
+```happy()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.happy()
+```
+<hr/>
+
+### look_around_open()
+
+#### Description
+Makes Zumi look around with wide open eyes.
+
+#### Syntax
+```look_around_open()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.look_around_open()
+```
+<hr/>
+
+### look_around()
+
+#### Description
+Makes Zumi look around.
+
+#### Syntax
+```look_around()```<br />
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.screen import Screen
+from zumi.personality import Personality
+
+zumi = Zumi()
+screen = Screen()
+personality = Personality(zumi, screen)
+
+personality.look_around()
+```
