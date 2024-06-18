@@ -3251,6 +3251,99 @@ camera.close()
 ```
 <hr className="section_hr"/>
 
+## Vision
+
+### convert_to_gray()
+
+#### Description
+Converts captured image into a grayscaled image.
+
+#### Syntax
+```convert_to_gray(img)```
+
+#### Parameters
+**img:** an image array
+
+#### Returns
+**image array:** a modified image array of *img* for grayscaling
+
+#### Example Code
+##### Python
+```python
+from zumi.util.vision import Vision
+from zumi.util.camera import Camera
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+img = camera.capture()
+camera.close()
+gray = vision.convert_to_gray(img) # Convert it to gray
+camera.show_image(gray)
+
+```
+<hr/>
+
+### convert_to_hsv()
+
+#### Description
+Converts captured image to a HSV-colorspaced image.
+
+#### Syntax
+```convert_to_hsv(img)```
+
+#### Parameters
+**img:** An image array
+
+#### Returns
+**image array**: A modified image array of *img* in the HSV colorspace
+
+
+#### Example Code
+##### Python
+```python
+from zumi.util.vision import Vision
+from zumi.util.camera import Camera
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+img = camera.capture()
+camera.close()
+hsv = vision.convert_to_hsv(img) # Convert it to HSV, hue saturation and value
+camera.show_image(hsv)
+
+```
+<hr/>
+
+### find_face()
+
+#### Description
+Searches captured image for facial features to find face's pixel location in the image.
+
+#### Syntax
+```find_face(frame, scale_factor=1.05, min_neighbors=8, min_size=(40,40))```
+
+#### Parameters
+**frame:** an image array 
+**scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)
+**min_neighbors:** minimum number of neighbors (features that have similarities) 
+**min_size:** minimum size of face to be detected
+**max_size:** maximum size of face to be detected
+
+#### Returns
+**List:** [x,y,w,h] of the face's x and y coordinates along with the area's width and height 
+
+#### Example Code
+##### Python
+```python
+
+```
+
+<hr className="section_hr"/>
+
 ## Screen
 
 ### angry()
