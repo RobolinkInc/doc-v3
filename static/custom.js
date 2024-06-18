@@ -37,8 +37,16 @@ const initScrollSpy = () => {
                         spyTableItems.forEach(links => {
                             links.classList.remove('table-of-contents__link--active')
                         })
-                        document.querySelector('.table-of-contents a[href*=' + id + ']').classList.add('table-of-contents__link--active')
-                    }
+                        //document.querySelector('.table-of-contents a[href*=' + id + ']').classList.add('table-of-contents__link--active')
+                        const elements = document.querySelectorAll('.table-of-contents a[href*=' + id + ']');
+                        elements.forEach(element => {
+                            const href = element.getAttribute('href');
+                            const anchor = href.split('#')[1]; 
+                            if (anchor && anchor === id) {
+                                element.classList.add('table-of-contents__link--active');
+                            }
+                        });
+                    }   
                 })
 
             }
@@ -55,6 +63,21 @@ const initScrollSpy = () => {
 }
 
 initScrollSpy()
+
+window.addEventListener("message", (event) => {
+    if(event.origin !== "https://codrone.robolink.com"){
+        return;
+    }
+    if(event.data == "href") {
+        event.source.postMessage(window.location.href, event.origin);
+    }
+    if(event.data == "back") {
+        window.history.back();
+    }
+    if(event.data == "forward"){
+        window.history.forward();
+    }
+});
 
 // function handleSearchFocus() {
 //     var navbar_it = document.querySelector('.navbar__items');

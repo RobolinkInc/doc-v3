@@ -14,6 +14,10 @@
   .row {
     height: auto;
   }
+
+  [data-theme='dark'] h2, h3, h4, p {
+    color: black;
+  }
 }
 
 .print_div {
@@ -31,16 +35,21 @@
   width: 90px;
   font-family: 'Cabin-Regular', sans-serif; 
   position: absolute;
-  top: 10px;
+  top: 35px;
   right: 10px;
 }
 
-[data-theme='dark'] #print_page {
-  background-color: #3058df;
+#print_page:hover {
+  transition: all 150ms linear;
+          opacity: 0.85;
 }
 
 #blank {
   height: 60px;
+}
+
+.change_version {
+  margin-bottom: -20px;
 }
 
 .navbar {
@@ -656,6 +665,7 @@ div.main-wrapper {
 
 nav.thin-scrollbar {
   background-color: #E1E0E0;
+  margin-bottom: 60px;
 }
 
 .main-wrapper main {
