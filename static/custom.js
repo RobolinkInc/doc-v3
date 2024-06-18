@@ -56,6 +56,21 @@ const initScrollSpy = () => {
 
 initScrollSpy()
 
+window.addEventListener("message", (event) => {
+    if(event.origin !== "https://codrone.robolink.com"){
+        return;
+    }
+    if(event.data == "href") {
+        event.source.postMessage(window.location.href, event.origin);
+    }
+    if(event.data == "back") {
+        window.history.back();
+    }
+    if(event.data == "forward"){
+        window.history.forward();
+    }
+});
+
 // function handleSearchFocus() {
 //     var navbar_it = document.querySelector('.navbar__items');
 //     var search_bar = document.querySelector('.navbar__search-input');
