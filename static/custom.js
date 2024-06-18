@@ -37,7 +37,7 @@ const initScrollSpy = () => {
                         spyTableItems.forEach(links => {
                             links.classList.remove('table-of-contents__link--active')
                         })
-                        document.querySelector('.table-of-contents a[href*=' + id + ']').classList.add('table-of-contents__link--active')
+                        document.querySelector(`.table-of-contents a[href="#${id}"]`).classList.add('table-of-contents__link--active');
                     }
                 })
 
