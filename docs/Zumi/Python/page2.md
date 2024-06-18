@@ -1516,6 +1516,35 @@ zumi.left_u_turn(step=3)
 ```
 <hr/>
 
+### line_follower()
+
+#### Description
+On the road, Zumi uses the camera to detect lanes and stay inside of them.
+
+#### Syntax
+```zumi.line_follower(duration=3, left_thresh=100,right_thresh=100)```
+
+#### Parameters
+**duration:** Number of seconds Zumi will drive on the line<br />
+**left_thresh:** threshold of the bottom left IR sensor. By default, threshold is 100<br />
+**right_thresh:** threshold of the bottom right IR sensor. By default, threshold is 100<br />
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+
+zumi = Zumi()
+
+zumi.line_follower(3)
+zumi.line_follower(3, left_thresh=100,right_thresh=100)
+```
+<hr/>
+
 ### line_follow_gyro_assist()
 
 #### Description
@@ -2885,6 +2914,38 @@ time.sleep(5)
 camera.close()
 ```
 
+<hr/>
+
+### clear_output()
+
+#### Description
+Clear the output for the next image to show.
+
+#### Syntax
+```clear_output()```
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+from zumi.util.camera import Camera
+
+
+camera = Camera()
+camera.start_camera()
+try:
+    for x in range(30):
+        frame = camera.capture()
+        camera.show_image(frame)
+        camera.clear_output() # Clear the output for the next image to show
+finally:
+    camera.close()
+```
 <hr/>
 
 ### close()
