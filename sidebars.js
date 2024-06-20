@@ -76,8 +76,44 @@ const sidebars = {
 
 
   CoDroneMini: [
-    'CoDroneMini/CoDroneMini',
-    'CoDroneMini/TestMini',
+    {
+      type: 'doc',
+      id: 'CoDroneMini/CoDroneMini',
+    },
+    {
+      type: 'doc',
+      id: 'CoDroneMini/Blockly/Blockly',
+    },
+    {
+      type: 'category',
+      label: 'Blockly',
+      link: {type: 'doc', id: 'CoDroneMini/Blockly/Blockly'},
+      collapsible: false,
+      items: [
+        'CoDroneMini/Blockly/page1',
+        'CoDroneMini/Blockly/page2',
+        'CoDroneMini/Blockly/page3',
+        'CoDroneMini/Blockly/page4',
+        'CoDroneMini/Blockly/page5',
+      ],
+    },
+    {
+      type: 'doc',
+      id: 'CoDroneMini/Python/Python',
+    },
+    {
+      type: 'category',
+      label: 'Python',
+      link: {type: 'doc', id: 'CoDroneMini/Python/Python'},
+      collapsible: false,
+      items: [
+        'CoDroneMini/Python/page1',
+        'CoDroneMini/Python/page2',
+        'CoDroneMini/Python/page3',
+        'CoDroneMini/Python/page4',
+        'CoDroneMini/Python/page5',
+      ],
+    },
   ],
 
   Zumi: [
