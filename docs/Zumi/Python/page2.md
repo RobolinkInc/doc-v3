@@ -220,7 +220,6 @@ print("done")
 
 #### Description
 Calls both ```reset_PID()``` and ```reset_gyro()```.
-Use for driving straight or turning accurately.
 
 #### Syntax
 ```reset_drive()```<br />
@@ -2470,7 +2469,7 @@ zumi.turn(-90)
 
 <hr className="section_hr"/>
 
-## LEDs and Buzzer
+## LEDs-and-Buzzer
 
 ### all_lights_off()
 
@@ -3120,6 +3119,54 @@ try:
 finally:
     print(30/(time.time()-time_start))
 ```
+<hr className="section_hr"/>
+
+## Colors
+
+### fit()
+
+#### Description
+Fits values for prediction. By default, HSV is fitted.
+
+#### Syntax
+```fit(values)```<br />
+
+#### Parameters
+**values**: values to be fitted for prediction. By default hsv is fitted.
+
+#### Returns
+None
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.screen import Screen
+from zumi.util.color_classifier import ColorClassifier
+import time
+camera = Camera()
+screen = Screen()
+zumi = Zumi()
+
+user_name = 'username' # Type your actual username here
+project_name = 'project_name' # Type your actual project name here
+
+knn = ColorClassifier(user_name=user_name) # Must include "user_name="
+train = knn.load_model(project_name)
+knn.fit("hsv") # Fitting to HSV
+
+camera.start_camera()
+while True:
+    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
+    if user_input == "q":
+        break
+    image = camera.capture()
+    predict = knn.predict(image)
+    screen.draw_text_center(predict)
+camera.close()
+```
 <hr/>
 
 ### predict()
@@ -3149,9 +3196,12 @@ camera = Camera()
 screen = Screen()
 zumi = Zumi()
 
-knn = ColorClassifier()
-train = knn.load_model("project_name")
-knn.fit("hsv")
+user_name = 'username' # Type your actual username here
+project_name = 'project_name' # Type your actual project name here
+
+knn = ColorClassifier(user_name=user_name) # Must include "user_name="
+train = knn.load_model(project_name)
+knn.fit("hsv") # Fitting to HSV
 
 camera.start_camera()
 while True:
@@ -3161,49 +3211,6 @@ while True:
     image = camera.capture()
     predict = knn.predict(image) # Based on the image taken, the knn color classifier will predict a color
     screen.draw_text_center(predict) # This prediction gets written to the Zumi screen
-camera.close()
-```
-<hr/>
-
-### fit()
-
-#### Description
-Fits values for prediction. By default, HSV is fitted.
-
-#### Syntax
-```fit(values)```<br />
-
-#### Parameters
-**values**: values to be fitted for prediction. By default hsv is fitted.
-
-#### Returns
-None
-
-#### Example Code
-##### Python
-```python
-#Python code
-from zumi.zumi import Zumi
-from zumi.util.camera import Camera
-from zumi.util.screen import Screen
-from zumi.util.color_classifier import ColorClassifier
-import time
-camera = Camera()
-screen = Screen()
-zumi = Zumi()
-
-knn = ColorClassifier()
-train = knn.load_model("project_name")
-knn.fit("hsv") # Fitting to HSV
-
-camera.start_camera()
-while True:
-    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
-    if user_input == "q":
-        break
-    image = camera.capture()
-    predict = knn.predict(image)
-    screen.draw_text_center(predict)
 camera.close()
 ```
 <hr/>
@@ -3234,9 +3241,11 @@ import time
 camera = Camera()
 screen = Screen()
 zumi = Zumi()
+user_name = 'username' # Type your actual username here
+project_name = 'project_name' # Type your actual project name here
 
-knn = ColorClassifier()
-train = knn.load_model("project_name") # Loads the model based on your project name. Make sure to use the project name you chose!
+knn = ColorClassifier(user_name=user_name) # Must include "user_name="
+train = knn.load_model(project_name) # Loads the model based on your project name.
 knn.fit("hsv")
 
 camera.start_camera()
@@ -3279,7 +3288,7 @@ vision = Vision()
 camera.start_camera()
 img = camera.capture()
 camera.close()
-gray = vision.convert_to_gray(img) # Convert it to gray
+gray = vision.convert_to_gray(img) # Convert it to grayscaled version of img
 camera.show_image(gray)
 
 ```
@@ -3288,7 +3297,7 @@ camera.show_image(gray)
 ### convert_to_hsv()
 
 #### Description
-Converts captured image to a HSV-colorspaced image.
+Converts captured image to an HSV image.
 
 #### Syntax
 ```convert_to_hsv(img)```
@@ -3318,6 +3327,34 @@ camera.show_image(hsv)
 ```
 <hr/>
 
+### get_QR_message()
+
+#### Description
+Returns the message from decoded QR code.
+
+#### Syntax
+```get_QR_message(Qr_object)```
+
+#### Parameters
+**Qr_object:** decoded QR data that find_QR_code() returns
+
+
+#### Returns
+**string:** decoded message from QR code
+
+#### Example Code
+##### Python
+```python
+camera = Camera()
+camera.start_camera()
+frame = camera.capture()
+camera.close()
+qr_code = vision.find_QR_code(frame)
+message = vision.get_QR_message(qr_code) # returns None if QR code was not detected
+print(message)
+```
+<hr/>
+
 ### find_face()
 
 #### Description
@@ -3327,21 +3364,111 @@ Searches captured image for facial features to find face's pixel location in the
 ```find_face(frame, scale_factor=1.05, min_neighbors=8, min_size=(40,40))```
 
 #### Parameters
-**frame:** an image array 
-**scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)
-**min_neighbors:** minimum number of neighbors (features that have similarities) 
-**min_size:** minimum size of face to be detected
-**max_size:** maximum size of face to be detected
+**frame:** an image array<br/> 
+**scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)<br/>
+**min_neighbors:** minimum number of neighbors (features that have similarities)<br/>
+**min_size:** minimum size of face to be detected<br/>
+**max_size:** maximum size of face to be detected<br/>
 
 #### Returns
-**List:** [x,y,w,h] of the face's x and y coordinates along with the area's width and height 
+**List:** [x,y,w,h] of the face's x and y coordinates along with the area's width and height. Returns [-1,-1,-1,-1] if not detected
 
 #### Example Code
 ##### Python
 ```python
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
 
+camera    = Camera()
+vision    = Vision()
+
+camera.start_camera()
+image = camera.capture()
+camera.close()
+
+face_location = vision.find_face(image, scale_factor = 1.05, min_neighbors=8, min_size= (40,40))
+# returns location of face frame within image. [-1,-1,-1,-1] if not found
+
+print("[x,y,w,h] =",face_location)
+camera.show_image(image) # displays image with outlined face (if it exists) in Jupyter Notebook
 ```
+<hr/>
 
+### find_QR_code()
+
+#### Description
+Processes the image that is given as a parameter and draws a rectangle around the QR code with the decoded message on it.
+
+#### Syntax
+```find_QR_code(frame)```
+
+#### Parameters
+**frame:** an image array
+
+#### Returns
+***class* Decoded** decoded QR data. Returns None if QR code is not detected
+
+#### Example Code
+##### Python
+```python
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+try: 
+    for i in range(50):
+        frame = camera.capture()
+        vision.find_QR_code(frame)
+        camera.show_image(frame)
+        camera.clear_output()
+finally:
+    print("Done!")
+    camera.close()
+```
+<hr/>
+
+### find_smile()
+
+#### Description
+Searches captured image for smiling facial features to find smile's pixel location in the image.
+
+#### Syntax
+```find_smile(frame, scale_factor=1.05, min_neighbors=8, min_size=(40,40))```
+
+#### Parameters
+**frame:** an image array<br/>
+**scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)<br/>
+**min_neighbors:** minimum number of neighbors (features that have similarities)<br/>
+**min_size:** minimum size of face to be detected<br/>
+**max_size:** maximum size of face to be detected<br/>
+
+#### Returns
+**List:** [x,y,w,h] of the smiles's x and y coordinates along with the area's width and height. Returns [-1,-1,-1,-1] if not detected
+
+#### Example Code
+##### Python
+```python
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
+
+camera    = Camera()
+vision    = Vision()
+
+camera.start_camera()
+image = camera.capture()
+camera.close()
+
+
+smile_location = vision.find_smile(image, scale_factor = 1.05, min_neighbors=8, min_size= (40,40))
+# returns location of smile frame within image. [-1,-1,-1,-1] if not found
+
+print("[x,y,w,h] =",smile_location)
+camera.show_image(image) # displays image with outlined smile (if it exists) in Jupyter Notebook
+```
 <hr className="section_hr"/>
 
 ## Screen
