@@ -253,7 +253,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/triangle_example.png" width="360px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/triangle_example.png" width="380px" height="145px"/>
 
 <hr/>
 
@@ -280,7 +280,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/square_example.png" width="380px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/square_example.png" width="380px" height="130px"/>
 
 <hr/>
 
@@ -307,7 +307,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/rectangle_example.png" width="360px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/rectangle_example.png" width="380px" height="140px"/>
 
 <hr/>
 
@@ -334,7 +334,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/circle_example.png" width="280px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/circle_example.png" width="380px" height="140px"/>
 
 <hr/>
 
@@ -358,7 +358,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/figure8_example.png" width="260px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/figure8_example.png" width="340px" height="130px"/>
 
 <hr/>
 
@@ -382,7 +382,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/shapes/jturn_example.png" width="260px" height="150px"/>
+<img src="/img/Zumi/blockly_docu/junior/shapes/jturn_example.png" width="340px" height="130px"/>
 
 <hr className="section_hr"/>
 
@@ -856,7 +856,7 @@ Gets the current IR reading from Zumi's sensors. The closer the value is to 0, t
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getZangle.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getZangle.png" width="180px" height="90px"/>
 
 #### Description
 
@@ -872,7 +872,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getZangle_example.png" width="240px" height="260px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getZangle_example.png" width="280px" height="260px"/>
 
 <hr/>
 
@@ -897,7 +897,7 @@ None
 #### Example
 
 With this example, tilt Zumi left and right with your hands to see the X angle change!
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_x_angle_example.png" width="240px" height="220px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_x_angle_example.png" width="260px" height="200px"/>
 
 <hr/>
 
@@ -905,7 +905,7 @@ With this example, tilt Zumi left and right with your hands to see the X angle c
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getYangle.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getYangle.png" width="180px" height="90px"/>
 
 #### Description
 
@@ -922,7 +922,7 @@ None
 #### Example
 
 With this example, rock Zumi forward and backward with your hands to see the Y angle change!
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_y_angle_example.png" width="240px" height="220px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_y_angle_example.png" width="260px" height="200px"/>
 
 <hr/>
 
@@ -954,7 +954,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage.png" width="270px" height="110px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage.png" width="270px" height="95px"/>
 
 #### Description
 
@@ -970,7 +970,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage_example.png" width="260px" height="120px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_voltage_example.png" width="280px" height="90px"/>
 
 <hr/>
 
@@ -978,7 +978,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage.png" width="290px" height="110px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage.png" width="260px" height="90px"/>
 
 #### Description
 
@@ -994,7 +994,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="330px" height="120px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/get_battery_percentage_example.png" width="300px" height="90px"/>
 
 <hr className="section_hr"/>
 
