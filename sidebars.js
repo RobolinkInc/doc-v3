@@ -157,8 +157,61 @@ const sidebars = {
 
 
   CoDronePro_Lite: [
-    'CoDronePro_Lite/CoDronePro_Lite',
-    'CoDronePro_Lite/TestPro_Lite',
+    {
+      type: 'doc',
+      id: 'CoDronePro_Lite/CoDronePro_Lite',
+    },
+    {
+      type: 'doc',
+      id: 'CoDronePro_Lite/Blockly/Blockly',
+    },
+    {
+      type: 'category',
+      label: 'Blockly',
+      link: {type: 'doc', id: 'CoDronePro_Lite/Blockly/Blockly'},
+      collapsible: false,
+      items: [
+        'CoDronePro_Lite/Blockly/page1',
+        'CoDronePro_Lite/Blockly/page2',
+        'CoDronePro_Lite/Blockly/page3',
+        'CoDronePro_Lite/Blockly/page4',
+        'CoDronePro_Lite/Blockly/page5',
+      ],
+    },
+    {
+      type: 'doc',
+      id: 'CoDronePro_Lite/Python/Python',
+    },
+    {
+      type: 'category',
+      label: 'Python',
+      link: {type: 'doc', id: 'CoDronePro_Lite/Python/Python'},
+      collapsible: false,
+      items: [
+        'CoDronePro_Lite/Python/page1',
+        'CoDronePro_Lite/Python/page2',
+        'CoDronePro_Lite/Python/page3',
+        'CoDronePro_Lite/Python/page4',
+        'CoDronePro_Lite/Python/page5',
+      ],
+    },
+    {
+      type: 'doc',
+      id: 'CoDronePro_Lite/Arduino/Arduino',
+    },
+    {
+      type: 'category',
+      label: 'Arduino',
+      link: {type: 'doc', id: 'CoDronePro_Lite/Arduino/Arduino'},
+      collapsible: false,
+      items: [
+        'CoDronePro_Lite/Arduino/page1',
+        'CoDronePro_Lite/Arduino/page2',
+        'CoDronePro_Lite/Arduino/page3',
+        'CoDronePro_Lite/Arduino/page4',
+        'CoDronePro_Lite/Arduino/page5',
+      ],
+    },
   ],
 
 
