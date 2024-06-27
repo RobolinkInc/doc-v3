@@ -86,7 +86,7 @@ None
 
 <hr/>
 
-### go [direction] for [seconds] seconds
+### go [direction] for [duration] seconds
 
 #### Block
 
@@ -113,7 +113,7 @@ None
 
 <hr/>
 
-### go [direction] for [seconds] seconds at [power] % power
+### go [direction] for [duration] seconds at [power] % power
 
 #### Block
 
@@ -141,7 +141,7 @@ None
 
 <hr/>
 
-### turn [direction] for [seconds] seconds at [power] power
+### turn [direction] for [duration] seconds at [power] power
 
 #### Block
 
@@ -169,7 +169,7 @@ None
 
 <hr/>
 
-### hover for [seconds] seconds
+### hover for [duration] seconds
 
 #### Block
 
