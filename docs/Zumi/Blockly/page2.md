@@ -17,46 +17,46 @@ customHeadElements:
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="320px" height="90px"/>  
+<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="380px" height="90px"/>  
+
+#### Description
+
+Moves Zumi forward for the given duration and speed
 
 #### Parameters
 
-**seconds**: A float value for the duration of the movement. <br /> 
-**speed**: An integer (0 - 100) for the speed of the movement.
-
-#### Description
-Moves Zumi forward for the given duration and speed
-
+***float* seconds**: A value, in seconds, for the duration of the movement. <br /> 
+***integer* speed**: A value (0 - 100) for the speed of the movement.
 
 #### Returns
 None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/forward_example.png" width="320px" height="300px"/>  
+<img src="/img/Zumi/blockly_docu/junior/driving/forward_example.png" width="360px" height="300px"/>  
 
 <hr/>
 
 ### reverse
 
 #### Block
-<img src="/img/Zumi/blockly_docu/junior/driving/reverse.png" width="320px" height="90px"/>
-
-#### Parameters
-
-**seconds**: A float value for the duration of the movement. <br /> 
-**speed**: An integer (0 - 100) for the speed of the movement.
+<img src="/img/Zumi/blockly_docu/junior/driving/reverse.png" width="375px" height="90px"/>
 
 #### Description
 
 Moves Zumi backwards for the given duration and speed
+
+#### Parameters
+
+***float* seconds**: A value, in seconds, for the duration of the movement. <br /> 
+***integer* speed**: A value (0 - 100) for the speed of the movement.
 
 #### Returns
 
 None
 
 #### Example
-<img src="/img/Zumi/blockly_docu/junior/driving/reverse_example.png" width="320px" height="300px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/reverse_example.png" width="360px" height="300px"/>
 
 <hr/>
 
@@ -72,7 +72,7 @@ Turns Zumi to the left a number of specified degrees.
 
 #### Parameters
 
-**degrees**: An integer in degrees <br/>
+***integer* degrees**: The angle of the left turn in degrees <br/>
 
 #### Returns
 
@@ -96,7 +96,7 @@ Turns Zumi to the right a number of specified degrees.
 
 #### Parameters
 
-**degrees**: An integer in degrees. <br /> 
+***integer* degrees**: The angle of the right turn in degrees <br/>
 
 #### Returns
 
@@ -112,7 +112,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/stop.png" width="150px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/stop.png" width="130px" height="90px"/>
 
 #### Description
 
@@ -128,7 +128,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/stop_example.png"  width="370px" height="230px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/stop_example.png"  width="460px" height="230px"/>
 
 <hr/>
 
@@ -136,7 +136,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/left_u_turn.png" width="240px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/left_u_turn.png" width="270px" height="90px"/>
 
 #### Description
 
@@ -144,7 +144,7 @@ Makes Zumi perform a left "U-turn". As the speed increases, the turn radius gets
 
 #### Parameters
 
-**speed**: An integer (0 - 100)
+***integer* speed**: The speed of the U-turn (0 - 100)
 
 #### Returns
 
@@ -152,7 +152,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/left_u_turn_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/left_u_turn_example.png" width="270px"/>
 
 <hr/>
 
@@ -160,7 +160,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/right-u-turn.png" width="240px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/right-u-turn.png" width="270px" height="90px"/>
 
 #### Description
 
@@ -168,7 +168,7 @@ Makes Zumi perform a right "U-turn". As the speed increases, the turn radius get
 
 #### Parameters
 
-**speed**: An integer (0 - 100)
+***integer* speed**: The speed of the U-turn (0 - 100)
 
 #### Returns
 
@@ -176,7 +176,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/right_u_turn_example.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/right_u_turn_example.png" width="270px"/>
 
 <hr/>
 
@@ -200,7 +200,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/parallel_park_example.png" width="350px" height="140px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/parallel_park_example.png" width="380px" height="140px"/>
 
 <hr/>
 
@@ -208,7 +208,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro.png" width="240px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro.png" width="210px" height="90px"/>
 
 #### Description
 
@@ -224,7 +224,8 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro.png" width="240px" height="90px"/>
+In this example/scenario, the Zumi wasn't driving straight when the first forward block ran, drifting off to the side. After the calibrate gyro block and the second forward block ran, Zumi was able to drive straight as it should.
+<img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro_example.png" width="210px" height="90px"/>
 
 <hr className="section_hr"/>
 
@@ -400,7 +401,7 @@ Draws a string of letters and characters and centers them on Zumi's screen. The 
 
 #### Parameters
 
-**string**: string of characters to display <br /> 
+***string* text**: Inputted text to display <br /> 
 
 #### Returns
 
@@ -488,7 +489,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="200px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/happy.png" width="220px" height="100px"/>
 
 #### Description
 
@@ -512,7 +513,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="200px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/screen/glimmer.png" width="240px" height="100px"/>
 
 #### Description
 
@@ -610,7 +611,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/playnote.png" width="300px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote.png" width="360px" height="100px"/>
 
 #### Description
 
@@ -618,10 +619,10 @@ Plays a single note for a specified  duration in milliseconds.
 
 #### Parameters
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/playnote_params.png" width="260px" height="300px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote_params.png" width="300px" height="300px"/>
 
 **note**: The note that is played. Ranging from C2 to B6 <br/>
-**duration**: An integer in milliseconds <br/>
+***integer* duration**: The duration of note played in milliseconds <br/>
 
 #### Returns
 
@@ -629,7 +630,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/playnote_example.png" width="260px" height="260px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/playnote_example.png" width="320px" height="260px"/>
 
 <hr/>
 
@@ -797,7 +798,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/oopsfront_example.png" width="380px" height="180px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsfront_example.png" width="440px" height="180px"/>
 
 <hr/>
 
@@ -805,11 +806,11 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback.png" width="180px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback.png" width="180px" height="90px"/>
 
 #### Description
 
-Plays Zumi's back sensor detecct sound effect.
+Plays Zumi's back sensor detect sound effect.
 
 #### Parameters
 
@@ -821,17 +822,17 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="380px" height="160px"/>
+<img src="/img/Zumi/blockly_docu/junior/sounds/oopsback_example.png" width="440px" height="160px"/>
 
 <hr className="section_hr"/>
 
 ## Sensors
 
-### get ir reading
+### get IR reading
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading.png" width="320px" height="105px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading.png" width="320px" height="90px"/>
 
 #### Description
 
@@ -839,16 +840,16 @@ Gets the current IR reading from Zumi's sensors. The closer the value is to 0, t
 
 #### Parameters
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_params.png" width="260px" height="260px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_params.png" width="310px" height="260px"/>
 
 
 #### Returns
 
-**IR sensor value**: An integer from 0-255
+***integer* IR sensor value**: The amount of IR light being detected by the IR sensor (0 - 255)
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_example.png" width="380px" height="280px"/>
+<img src="/img/Zumi/blockly_docu/junior/sensors/getIRreading_example.png" width="460px" height="280px"/>
 
 <hr/>
 
@@ -868,7 +869,7 @@ None
 
 #### Returns
 
-**angle**: An integer ranging from 0 to 360.
+***integer* angle**: The z-angle of the gyroscope reading (0 - 360)
 
 #### Example
 
@@ -892,7 +893,7 @@ None
 
 #### Returns
 
-**angle**: An integer ranging from 0 to 360.
+***integer* angle**: The x-angle of the gyroscope reading (0 - 360)
 
 #### Example
 
@@ -917,7 +918,7 @@ None
 
 #### Returns
 
-**angle**: An integer ranging from 0 to 360.
+***integer* angle**: The y-angle of the gyroscope reading (0 - 360)
 
 #### Example
 
@@ -966,7 +967,7 @@ None
 
 #### Returns
 
-**voltage**: A float value in units of Volts
+***float* voltage**: The battery's voltage in units of Volts
 
 #### Example
 
@@ -990,7 +991,7 @@ None
 
 #### Returns
 
-**percent**: An integer value from 0 to 100
+***integer* percent**: The battery's percentage (0 - 100)
 
 #### Example
 
@@ -1088,7 +1089,7 @@ None
 
 #### Returns
 
-**image**: A frame object composed of a 160x128 array of pixels.
+***ndarray* image**: An image composed of a NumPy  160x128 array of pixels.
 
 #### Example
 
@@ -1108,7 +1109,7 @@ Show an image that was taken with Zumi's camera in Blockly.
 
 #### Parameters
 
-**image**: A frame object composed of an array of pixels.
+***ndarray* image**: An image composed of a NumPy array of pixels.
 
 #### Returns
 
@@ -1120,11 +1121,11 @@ None
 
 <hr/>
 
-### get qr code
+### get QR code message
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code.png" width="290px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code.png" width="340px" height="100px"/>
 
 #### Description
 
@@ -1132,15 +1133,15 @@ Searches an image for a QR code message. If a QR code was found, the encoded mes
 
 #### Parameters
 
-**image**: A frame object composed of an array of pixels.
+***ndarray* image**: An image composed of a NumPy array of pixels.
 
 #### Returns
 
-**string**: A string containing the message of the QR code. Returns ```None``` if no QR code was detected.
+***string* message**: The decoded message of the QR code. Returns ```None``` if no QR code was detected.
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code_example.png" width="300px" height="350px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/get_qr_code_example.png" width="360px" height="350px"/>
 
 <hr/>
 
@@ -1148,7 +1149,7 @@ Searches an image for a QR code message. If a QR code was found, the encoded mes
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign.png" width="240px" height="95px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign.png" width="300px" height="95px"/>
 
 #### Description
 
@@ -1156,15 +1157,15 @@ Searches an image for a stop sign. Returns True if a stop sign was found.
 
 #### Parameters
 
-**image**: A frame object composed of an array of pixels.
+***ndarray* image**: An image composed of a NumPy array of pixels.
 
 #### Returns
 
-**boolean**: Returns True if a stop sign was detected. Otherwise, returns False.
+***boolean* detection**: Returns True if a stop sign was detected. Otherwise, returns False.
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign_example.png" width="300px" height="350px"/>
+<img src="/img/Zumi/blockly_docu/junior/camera/find_stop_sign_example.png" width="360px" height="350px"/>
 
 <hr/>
 
@@ -1180,11 +1181,11 @@ Searches an image for a face. Returns True if a face was detected
 
 #### Parameters
 
-**image**: A frame object composed of an array of pixels.
+***ndarray* image**: An image composed of a NumPy  array of pixels.
 
 #### Returns
 
-**boolean**: Returns True if a face was detected. Otherwise, returns False.
+***boolean* detection**: Returns True if a face was detected. Otherwise, returns False.
 
 #### Example
 
@@ -1198,7 +1199,7 @@ Searches an image for a face. Returns True if a face was detected
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame.png" width="290px" height="105px"/>
+<img src="/img/Zumi/blockly_docu/junior/ai/predict_from_frame.png" width="350px" height="105px"/>
 
 #### Description
 
@@ -1206,11 +1207,11 @@ Predicts a label from an image based on a previously trained color model. A KNN 
 
 #### Parameters
 
-**image**: A frame object composed of an array of pixels.
+***ndarray* image**: An image composed of a NumPy array of pixels.
 
 #### Returns
 
-**string**: A string containing the predicted label.
+***string* label**: The predicted label based on the image.
 
 #### Example
 
