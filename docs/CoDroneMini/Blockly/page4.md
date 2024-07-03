@@ -176,7 +176,7 @@ None
 #### Description
 
 This function sets the roll direction variable but will not send a move command. Negative values will move the drone to the left and positive values will move the drone to the right.
-<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_roll.png"/>
+<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_roll.png" width="286px" height="240px"/>
 
 #### Parameters
 
@@ -201,7 +201,7 @@ None
 #### Description
 
 This function sets the pitch direction variable but will not send a move command. Negative values will move the drone backward and positive values will move the drone forward.
-<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_pitch.png"/>
+<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_pitch.png" width="286px" height="240px"/>
 
 #### Parameters
 
@@ -226,7 +226,7 @@ None
 #### Description
 
 This function sets the yaw direction variable but will not send a move command. Negative values will turn the drone to the right and positive values will turn the drone to the left.
-<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_yaw.png"/>
+<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_yaw.png" width="286px" height="240px"/>
 
 #### Parameters
 
@@ -251,7 +251,7 @@ None
 #### Description
 
 This function sets the throttle direction variable but will not send a move command. Negative values will move the drone downward and positive values will move the drone upward.
-<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_throttle.png"/>
+<img src="/img/CDM/blockly_docu/senior/flight_variables/cdm_throttle.png" width="286px" height="240px"/>
 
 #### Parameters
 
