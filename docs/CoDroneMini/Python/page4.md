@@ -25,8 +25,8 @@ This function connects your controller with the program. You can set debug equal
 ```pair(debug=False, port_name)```
 
 #### Parameters
-**port_name:** A string containing the port name or number.<br/>
-**debug:** Boolean that is default to False.
+***string* port_name:** the port name or number.<br/>
+***boolean* debug:** Defaults to False. True to see helpful print statements for debugging
 
 #### Returns
 None
@@ -266,8 +266,8 @@ You can set the **roll** and **pitch** trim of the drone in case your drone is d
 ```set_trim(roll, pitch)```
 
 #### Parameters
-**roll:** the power of the roll, which is an int from -100 to 100<br />
-**pitch:** the power of the pitch, which is an int from -100 to 100<br />
+***integer* roll:** the power of the roll, which is from -100 to 100<br />
+***integer* pitch:** the power of the pitch, which is from -100 to 100<br />
 
 #### Returns
 None
@@ -407,8 +407,8 @@ It simply flies in the given direction for a given duration and power.
 
 #### Parameters
 ***enum* Direction:** an enum in Python. It’s the direction of the flight, which can be one of the following: FORWARD, BACKWARD, LEFT, RIGHT, UP, and DOWN.<br />
-**duration:** the duration of the flight motion in seconds. If undefined, defaults to run indefinitely.<br />
-**power:** the power at which the drone flies forward. Takes a value from 0 to 100. Defaults to 50 if not defined.
+***integer* duration:** the duration of the flight motion in seconds. If undefined, defaults to run indefinitely.<br />
+***integer* power:** the power at which the drone flies forward. Takes a value from 0 to 100. Defaults to 50 if not defined.
 
 #### Returns
 None
@@ -443,7 +443,7 @@ If given no parameters, it will hover indefinitely until given a another command
 ```hover(duration)```
 
 #### Parameters
-**duration:** the duration of the hovering in seconds.<br />
+***integer* duration:** the duration of the hovering in seconds.<br />
 
 #### Returns
 None
@@ -477,8 +477,8 @@ A function that represents yaw, but with more natural language. It turns CoDrone
 
 #### Parameters
 ***enum* Direction:** an enum in Python. It’s the direction of the turn, which can either ```LEFT``` or ```RIGHT```.<br />
-**duration:** the duration of the turn in seconds. If 0, it will turn default to turn indefinitely.<br />
-**power:** the power at which the drone turns right. Takes a value from 0 to 100. Defaults to 50 if not defined.
+***integer* duration:** the duration of the turn in seconds. If 0, it will turn default to turn indefinitely.<br />
+***integer* power:** the power at which the drone turns right. Takes a value from 0 to 100. Defaults to 50 if not defined.
 
 #### Returns
 None
@@ -515,7 +515,7 @@ This is a getter function that gets the value of the **pitch** variable.
 None
 
 #### Returns
-**power:** The power of the pitch variable (int)
+***integer* power:** The power of the pitch variable
 
 #### Example Code
 ##### Python
@@ -544,7 +544,7 @@ This is a getter function that gets the value of the **roll** variable.
 None
 
 #### Returns
-**power:** The power of the roll variable (int)
+***integer* power:** The power of the roll variable
 
 #### Example Code
 ##### Python
@@ -574,7 +574,7 @@ This is a getter function that gets the value of the **throttle** variable.
 None
 
 #### Returns
-**power:** The power of the throttle variable (int)
+***integer* power:** The power of the throttle variable
 
 #### Example Code
 ##### Python
@@ -603,7 +603,7 @@ This is a getter function that gets the value of the **yaw** variable.
 None
 
 #### Returns
-**power:** The power of the yaw variable (int)
+***integer* power:** The power of the yaw variable
 
 #### Example Code
 ##### Python
@@ -632,11 +632,11 @@ You can use this function to create more complex flight movements. With no param
 ```move(duration, roll, pitch, yaw, throttle)```
 
 #### Parameters
-**duration:** the duration of the flight motion in seconds.<br />
-**roll:** the power of the roll, which is an int from -100 to 100<br />
-**pitch:** the power of the pitch, which is an int from -100 to 100<br />
-**yaw:** the power of the yaw, which is an int from -100 to 100<br />
-**throttle:** the power of the throttle, which is an int from -100 to 100
+***integer* duration:** the duration of the flight motion in seconds.<br />
+***integer* roll:** the power of the roll, which is from -100 to 100<br />
+***integer* pitch:** the power of the pitch, which is from -100 to 100<br />
+***integer* yaw:** the power of the yaw, which is from -100 to 100<br />
+***integer* throttle:** the power of the throttle, which is from -100 to 100
 
 #### Returns
 None
@@ -671,7 +671,7 @@ This is a setter function that allows you to set the **pitch** variable. Once yo
 ```set_pitch(power)```
 
 #### Parameters
-**power:** An int from -100 to 100 that sets the pitch variable.  The number represents the direction and power of the output for that flight motion variable. Negative pitch is backwards, positive pitch is forwards.
+***integer* power:** Sets the pitch variable, between -100 and 100. The number represents the direction and power of the output for that flight motion variable. Negative pitch is backwards, positive pitch is forwards.
 
 #### Returns
 None
@@ -703,7 +703,7 @@ This is a setter function that allows you to set the **roll** variable. Once you
 ```set_roll(power)```
 
 #### Parameters
-**power:** An int from -100 to 100 that sets the roll variable.  The number represents the direction and power of the output for that flight motion variable. Negative roll is left, positive roll is right.
+***integer* power:** Sets the roll variable, between -100 and 100. The number represents the direction and power of the output for that flight motion variable. Negative roll is left, positive roll is right.
 
 #### Returns
 None
@@ -735,7 +735,7 @@ This is a setter function that allows you to set the **throttle** variable. Once
 ```set_throttle(power)```
 
 #### Parameters
-**power:** An int from -100 to 100 that sets the throttle variable.  The number represents the direction and power of the output for that flight motion variable. Negative throttle descends, positive throttle ascends.
+***integer* power:** Sets the throttle variable, between -100 and 100.. The number represents the direction and power of the output for that flight motion variable. Negative throttle descends, positive throttle ascends.
 
 #### Returns
 None
@@ -767,7 +767,7 @@ This is a setter function that allows you to set the **yaw** variable. Once you 
 ```set_yaw(power)```
 
 #### Parameters
-**power:** An int from -100 to 100 that sets the yaw variable.  The number represents the direction and power of the output for that flight motion variable. Negative yaw turns left, positive yaw turns right.
+***integer* power:** Sets the pitch variable, between -100 and 100. The number represents the direction and power of the output for that flight motion variable. Negative yaw turns left, positive yaw turns right.
 
 #### Returns
 None
@@ -802,10 +802,10 @@ This function sets the LED color of the CoDrone Mini's LED using RGB values and 
 ```LED_color(red, green, blue, brightness)```<br />
 
 #### Parameters
-**red:** int value from 0 to 255<br/>
-**green:** int value from 0 to 255<br/>
-**blue:** int value from 0 to 255<br/>
-**brightness:** int value from 0 to 100, which represents the brightness of the light<br />
+***integer* red:** the pixel value for the color red from 0 to 255<br/>
+***integer* green:** the pixel value for the color green from 0 to 255<br/>
+***integer* blue:** the pixel value for the color blue from 0 to 255<br/>
+***integer* brightness:** the brightness of the LEDs from 0 to 100<br />
 
 #### Returns
 None
@@ -839,11 +839,11 @@ This function sets the color of CoDrone mini LED light and makes it flash in a p
 ```LED_pattern(red, green, blue, mode, speed)```<br/>
 
 #### Parameters
-**red:** int value from 0 to 255<br/>
-**green:** int value from 0 to 255<br/>
-**blue:** int value from 0 to 255<br/>
+***integer* red:** the pixel value for the color red from 0 to 255<br/>
+***integer* green:** the pixel value for the color green from 0 to 255<br/>
+***integer* blue:** the pixel value for the color blue from 0 to 255<br/>
 **enum Mode:** an enum, which can be selected from the following predefined list: BLINK, DOUBLE_BLINK, PULSE, FADE_IN, FADE_OUT<br/>
-**speed:** int value from 1-10, which represents the speed of the pattern. 1 is slowest, 10 is fastest. Default value is 5.<br/>
+***integer* speed:** the speed of the lighting pattern from 1 to 10. 1 is slowest, 10 is fastest. Default value is 5.<br/>
 
 #### Returns
 None
@@ -874,9 +874,9 @@ This function takes two parameters. The first is the note or frequency desired. 
 ```play_note(frequency, duration)```
 
 #### Parameters
-***enum* Note:** An enum type from the Note class from Note.C3 to Note.B7<br/>
-**frequency:** An integer representing the note's frequency in Hertz<br/>
-**duration:** A float type that represents the duration of the note in seconds<br/>
+***enum* Note:** the note of the buzzer based off of the given Note value from Note.C3 to Note.B7<br/>
+***integer* frequency:** the note of the buzzer based off of the given frequency in Hertz<br/>
+***float* duration:** The duration of the note in seconds<br/>
 
 #### Returns
 None
@@ -973,7 +973,7 @@ It uses air pressure from the barometer sensor to estimate the altitude. This fu
 None
 
 #### Returns
-**altitude:** The current height calculated by the difference between the current and the floor altitude (cm).
+***float* altitude:** The current height calculated by the difference between the current and the floor altitude (cm).
 
 #### Example Code
 ##### Python
@@ -1002,7 +1002,7 @@ This function gets the **roll, pitch, and yaw angles** from the gyrometer sensor
 None
 
 #### Returns
-***class* Angle:** an object of Angle class with ROLL, PITCH, and YAW properties.
+***List Object* angles:** A list object with ROLL, PITCH, and YAW properties.
 
 #### Example Code
 ##### Python
@@ -1033,7 +1033,7 @@ This function gets the battery percentage of the drone, returning a value from 0
 None
 
 #### Returns
-**percentage:** the battery's percentage as an integer from 0 - 100
+***integer* percentage:** the battery's percentage from 0 - 100
 
 #### Example Code
 ##### Python
@@ -1063,7 +1063,7 @@ The sensor reads the drone’s temperature, not the air around it.
 None
 
 #### Returns
-**temperature:** the temperature in Celsius as an integer.
+***integer* temperature:** the temperature in Celsius as an integer.
 
 #### Example Code
 ##### Python
@@ -1096,7 +1096,7 @@ It checks sea level from the barometer sensor first and then the altitude from t
 None
 
 #### Returns
-**height:** the current height calculated by the difference between the current and the floor altitude(cm).
+***float* height:** the current height calculated by the difference between the current and the floor altitude(cm).
 
 #### Example Code
 ##### Python
@@ -1128,7 +1128,7 @@ This is a getter function that returns the data from the barometer. The function
 None
 
 #### Returns
-**pressure:** float that represents air pressure in Pascals.
+***float* pressure:** The air pressure of the drone in Pascals.
 
 #### Example Code
 ##### Python
@@ -1158,7 +1158,7 @@ This function gets the current trim values of the drone.
 None
 
 #### Returns
-***class* Trim:** an object of Trim class with ROLL, PITCH, YAW, and THROTTLE properties
+***List Object* trim values:** A list object with ROLL, PITCH, YAW, and THROTTLE properties
 
 #### Example Code
 ##### Python

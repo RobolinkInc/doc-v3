@@ -97,11 +97,11 @@ Moves the drone for a certain amount of time (in seconds) in a given direction d
 
 #### Parameters
 
-**duration**: positive integer in seconds<br/>
-**roll**: roll power percentage as an integer between -100 and +100<br/> 
-**pitch**: pitch power percentage as an integer between -100 and +100<br/> 
-**yaw**: yaw power percentage as an integer between -100 and +100<br/> 
-**throttle**: throttle power percentage as an integer between -100 and +100<br/> 
+***integer* duration:** the duration of the movement, in seconds<br/>
+***integer* roll:** roll power percentage between -100 and +100<br/> 
+***integer* pitch:** pitch power percentage between -100 and +100<br/> 
+***integer* yaw:** yaw power percentage between -100 and +100<br/> 
+***integer* throttle:** throttle power percentage between -100 and +100<br/> 
 
 #### Returns
 
@@ -127,9 +127,9 @@ Turns CoDrone Mini left or right for a duration in seconds and at a power percen
 
 <img src="/img/CDM/blockly_docu/senior/flight_commands/turn_params.png"/>
 
-**direction**: left, right <br /> 
-**duration**: positive integer in seconds <br />
-**power**: integer from 0 to 100 <br />
+**direction:** left, right <br /> 
+***integer* duration:** the duration of turn in seconds <br />
+***integer* power:** the power of the turn from 0 to 100 <br />
 
 #### Returns
 
@@ -153,7 +153,7 @@ This function makes the drone hover for a duration in seconds.
 
 #### Parameters
 
-**duration**: positive integer in seconds
+***integer* duration**: the duration of the hovering in seconds
 
 #### Returns
 
@@ -180,7 +180,7 @@ This function sets the roll direction variable but will not send a move command.
 
 #### Parameters
 
-**power:** integer between -100 and 100 <br/>
+***integer* power:** the power of the roll movement between -100 and 100 <br/>
 
 #### Returns
 
@@ -205,7 +205,7 @@ This function sets the pitch direction variable but will not send a move command
 
 #### Parameters
 
-**power:** integer between -100 and 100 <br/>
+***integer* power:** the power of the pitch movement between -100 and 100 <br/>
 
 #### Returns
 
@@ -230,7 +230,7 @@ This function sets the yaw direction variable but will not send a move command. 
 
 #### Parameters
 
-**power:** integer between -100 and 100 <br /> 
+***integer* power:** the power of the yaw movement between -100 and 100 <br /> 
 
 #### Returns
 
@@ -255,7 +255,7 @@ This function sets the throttle direction variable but will not send a move comm
 
 #### Parameters
 
-**power:** integer between -100 and 100 <br /> 
+***integer* power:** the power of the throttle movement between -100 and 100 <br /> 
 
 #### Returns
 
@@ -279,7 +279,7 @@ Moves CoDrone Mini for a duration in seconds in the direction set by the flight 
 
 #### Parameters
 
-**duration:** positive integer in seconds <br /> 
+***integer* duration:** the duration of movement in seconds <br /> 
 
 #### Returns
 
@@ -327,8 +327,8 @@ Sets the trim values to adjust for any drifting while CoDrone Mini is flying. Se
 
 #### Parameters
 
-**roll:** integer between -100 and 100 <br /> 
-**pitch:** integer between -100 and 100 <br /> 
+***integer* roll:** the power of the roll movement between -100 and 100 <br /> 
+***integer* pitch:** the power of the pitch movement between -100 and 100 <br /> 
 
 #### Returns
 
@@ -356,8 +356,8 @@ None
 
 #### Returns
 
-**roll:** integer between -100 and 100 <br /> 
-**pitch:** integer between -100 and 100 <br />
+***integer* roll:** the power of the roll movement between -100 and 100 <br /> 
+***integer* pitch:** the power of the pitch movement between -100 and 100 <br />
 
 #### Example
 
@@ -405,7 +405,7 @@ None
 
 #### Returns
 
-**roll:** integer between -100 and 100 <br /> 
+***integer* roll:** the power of the roll movement between -100 and 100 <br /> 
 
 #### Example
 
@@ -429,7 +429,7 @@ None
 
 #### Returns
 
-**pitch:** integer between -100 and 100 <br /> 
+***integer* pitch:** the power of the pitch movement between -100 and 100 <br /> 
 
 #### Example
 
@@ -453,7 +453,7 @@ None
 
 #### Returns
 
-**yaw:** integer between -100 and 100 <br />
+***integer* yaw:** the power of the yaw movement between -100 and 100 <br />
 
 #### Example
 
@@ -477,7 +477,7 @@ None
 
 #### Returns
 
-**throttle:** integer between -100 and 100 <br />
+***integer* throttle:** the power of the throttle movement between -100 and 100 <br />
 
 #### Example
 
@@ -503,7 +503,7 @@ None
 
 #### Returns
 
-**Boolean:** returns true if program is running, false if user presses "Stop"
+***boolean* running:** Returns True if program is running, False if user presses "Stop"
 
 #### Example
 
@@ -531,7 +531,7 @@ This function returns the **roll, pitch, and yaw angles** from the gyroscope. Th
 
 #### Returns
 
-**angle:** integer in degrees from the starting position
+***integer* angle:** angle, in degrees, from the starting position
 
 #### Example
 For this example, manually turn your drone by hand to see the yaw angle change.
@@ -555,7 +555,7 @@ None
 
 #### Returns
 
-**percentage:** positive integer from 0 to 100
+***integer* percentage:** the battery percentage from 0 to 100
 
 #### Example
 
@@ -579,7 +579,7 @@ This block returns the current temperature of the drone in either Celsius or Fah
 
 #### Returns
 
-**temperature:** float value in either Celsius or Fahrenheit
+***float* temperature:** Temperature of the drone, either Celsius or Fahrenheit
 
 #### Example
 
@@ -603,7 +603,7 @@ None
 
 #### Returns
 
-**height:** float value in centimeters
+***float* height:** the height of the drone in centimeters
 
 #### Example
 
@@ -628,7 +628,7 @@ None
 
 #### Returns
 
-**pressure:** float value in Pascals
+***float* pressure:** the pressure measured from barometer in Pascals
 
 #### Example
 
@@ -675,10 +675,10 @@ Sets the color of CoDrone Mini's LED. Colors are set by using its RGB (red, gree
 
 #### Parameters
 
-**red:** positive integer between 0 and 255 <br /> 
-**green:** positive integer between 0 and 255 <br /> 
-**blue:** positive integer between 0 and 255 <br /> 
-**brightness:** positive nteger between 0 and 255 <br /> 
+***integer* red:** the pixel value for the color red between 0 and 255 <br /> 
+***integer* green:** the pixel value for the color green between 0 and 255 <br /> 
+***integer* blue:** the pixel value for the color blue between 0 and 255 <br /> 
+***integer* brightness:** the brightness of the LEDs between 0 and 255 <br /> 
 
 #### Returns
 
@@ -702,11 +702,11 @@ Sets the color of CoDrone Mini's LED blinking pattern. "Blink" flashes the LED o
 
 #### Parameters
 
-**red:** positive integer between 0 and 255 <br /> 
-**green:** positive integer between 0 and 255 <br /> 
-**blue:** positive integer between 0 and 255 <br /> 
+***integer* red:** the pixel value for the color red between 0 and 255 <br /> 
+***integer* green:** the pixel value for the color green between 0 and 255 <br /> 
+***integer* blue:** the pixel value for the color blue between 0 and 255 <br /> 
 **pattern:** blink or double blink <br />
-**speed:** select a positive integer from 1 to 10 <br /> 
+***integer* speed:** the speed of the lighting pattern from 1 to 10 <br /> 
 
 #### Returns
 
@@ -783,7 +783,7 @@ Plays a note for a specified amount of time using the controller buzzer.
 <img src="/img/CDM/blockly_docu/senior/sound/play_note_params.png"/>
 
 **note:** note from C3 to B7<br />
-**duration:** positive integer in seconds
+***integer* duration:** the duration of the buzzer note, in seconds
 
 #### Returns
 
@@ -807,8 +807,8 @@ Plays a note at a particular frequency for a specified amount of time using the 
 
 #### Parameters
 
-**frequency:** An integer representing the note's frequency in Hertz
-**duration:** positive integer in seconds
+***integer* frequency:** The note's frequency in Hertz
+***integer* duration:** the duration of the note played in seconds
 
 #### Returns
 

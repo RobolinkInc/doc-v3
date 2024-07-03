@@ -100,8 +100,8 @@ Moves the drone in a direction for a given duration.
 
 <img src="/img/CDM/blockly_docu/junior/flight_commands/go_params.png"/>
 
-**direction**: forward, backward, up, down, left, right <br /> 
-**duration**: positive integer in seconds
+**direction:** forward, backward, up, down, left, right <br /> 
+***integer* duration:** the duration of movement in seconds
 
 #### Returns
 
@@ -127,9 +127,9 @@ Moves the drone in a direction for a given duration and power percentage.
 
 <img src="/img/CDM/blockly_docu/junior/flight_commands/go_power_params.png"/>
 
-**direction**: forward, backward, up, down, left, right <br /> 
-**power**: Integer between 0 and 100 <br /> 
-**duration**: positive integer in seconds
+**direction:** forward, backward, up, down, left, right <br />
+***integer* power:** the power/speed of the drone between 0 and 100 <br /> 
+***integer* duration:** the duration of the move in seconds
 
 #### Returns
 
@@ -155,9 +155,9 @@ Turns the CoDrone Mini in a given direction for the given duration at the given 
 
 <img src="/img/CDM/blockly_docu/junior/flight_commands/turn_params.png"/>
 
-**direction**: left, right <br /> 
-**power**: positive integer between 0 and 100 <br /> 
-**duration**: positive integer in seconds
+**direction:** the direction of the movement (left, right) <br /> 
+***integer* power:** the power/speed of the drone between 0 and 100 <br /> 
+***integer* duration:** the duration of the turn in seconds
 
 #### Returns
 
@@ -181,7 +181,7 @@ This function makes the drone hover for a given amount of time.
 
 #### Parameters
 
-**duration**: positive integer in seconds
+***integer* duration:** the duration of the hover in seconds
 
 #### Returns
 
@@ -309,7 +309,7 @@ None
 
 #### Returns
 
-**Boolean**: returns true if program is running, false if user presses "Stop"
+***boolean* running:** returns True if program is running, False if user presses "Stop"
 
 #### Example
 
@@ -333,8 +333,8 @@ Sets the color of CoDrone Mini's LED.
 
 <img src="/img/CDM/blockly_docu/junior/lights/LEDcolor_params.png"/>
 
-**color**: select a color from the color palette <br />
-**brightness**: positive integer between 0 and 255 <br /> 
+**color:** select a color from the color palette <br />
+***integer* brightness:** brightness of the LED between 0 and 255 <br /> 
 
 #### Returns
 
@@ -360,9 +360,9 @@ Sets the color of CoDrone Mini's LED blinking pattern. "Blink" flashes the LED o
 
 <img src="/img/CDM/blockly_docu/junior/lights/LEDcolor_pattern_params.png" width="650px" height="360px"/>
 
-**color**: select a color from the color palette <br />
-**pattern**: blink or double blink <br />
-**speed**: Select a positive integer from 1 to 10 <br /> 
+**color:** select a color from the color palette <br />
+**pattern:** blink or double blink <br />
+***integer* speed:** the speed of the lighting pattern from 1 to 10 <br /> 
 
 #### Returns
 
@@ -438,8 +438,8 @@ Plays a note for a specified amount of time using the buzzer on the CoDrone Mini
 
 <img src="/img/CDM/blockly_docu/junior/sound/playnote_params.png"/>
 
-**note**: a note from C3 to B7 <br />
-**duration**: positive integer in seconds
+**note:** a note from C3 to B7 <br />
+***integer* duration:** the duration of the note played, in seconds
 
 #### Returns
 
