@@ -18,21 +18,21 @@ customHeadElements:
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/forward_step.png" width="340px" height="100px"/>  
+<img src="/img/Zumi/blockly_docu/senior/driving/forward_step.png" width="400px" height="100px"/>  
 
 #### Description
 Takes one drive "step" forward in the direction of the angle heading. This block must be used in a loop to observe any movement. Use the stop block at the end of the for loop to stop Zumi.
 
 #### Parameters
-**speed**: An integer from 0 to 127<br/> 
-**angle**: An integer in degrees (0 degrees is defined when the Zumi object is created)
+***integer* speed**: The speed of the forward step (0 - 127)<br/>
+***integer* angle**: The angle of forward step in degrees (0 degrees is defined when the Zumi object is created)
 
 #### Returns
 None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/forward_step_example.png" width="350px" height="210px"/>  
+<img src="/img/Zumi/blockly_docu/senior/driving/forward_step_example.png" width="380px" height="210px"/>  
 
 <hr/>
 
@@ -40,7 +40,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step.png" width="340px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step.png" width="400px" height="100px"/>
 
 #### Description
 
@@ -48,8 +48,8 @@ Takes one drive "step" backward in the direction of the angle heading. This bloc
 
 #### Parameters
 
-**speed**: An integer from 0 to 127<br/> 
-**angle**: An integer in degrees (0 degrees is defined when the Zumi object is created)
+***integer* speed**: The speed of the reverse step (0 - 127)<br/>
+***integer* angle**: The angle of reverse step in degrees (0 degrees is defined when the Zumi object is created)
 
 #### Returns
 
@@ -57,7 +57,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step_example.png" width="340px" height="220px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_step_example.png" width="380px" height="220px"/>
 
 <hr/>
 
@@ -65,7 +65,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate.png" width="360px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate.png" width="445px" height="90px"/>
 
 #### Description
 
@@ -73,10 +73,10 @@ Drives Zumi to an (x,y) position from the origin. The origin (0,0) is defined at
 
 #### Parameters
 
-<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate_params.png" width="360px" height="120px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/move_to_coordinate_params.png" width="400px" height="120px"/>
 
-**x**: A float value for the x coordinate <br /> 
-**y**: A float value for the y coordinate <br /> 
+***float* x**: The x-coordinate value <br /> 
+***float* y**: The y-coordinate value <br /> 
 **unit**: Units of the coordinates, centimeters or inches
 
 #### Returns
@@ -109,7 +109,7 @@ None
 
 #### Example
 In this example, Zumi moves 5 inches in the x-direction. After resetting the coordinates Zumi will move another 5 inches in the x-direction since the origin has been reset.
-<img src="/img/Zumi/blockly_docu/senior/driving/reset_coordinate_example.png" width="360px" height="210px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reset_coordinate_example.png" width="440px" height="210px"/>
 
 <hr/>
 
@@ -117,7 +117,7 @@ In this example, Zumi moves 5 inches in the x-direction. After resetting the coo
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro.png" width="800px" height="90px"/>
 
 #### Description
 
@@ -125,11 +125,11 @@ Uses the bottom IR sensors so that Zumi can execute a line following program for
 
 #### Parameters
 
-**speed**: Positive integer value for speed between 0 and 80 <br /> 
-**duration**: Float value timeout in seconds <br /> 
-**angle_adj**: Integer number of degrees Zumi will turn if one IR sensor detects white.<br/>
-**left_IR**: Integer threshold of the bottom left IR sensor. <br /> 
-**right_IR**: Integer threshold of the bottom right IR sensor. <br /> 
+***integer* speed**: Positive value for speed between 0 and 80 <br /> 
+***float* duration**: The duration of the timeout in seconds <br /> 
+***integer* angle_adj**: The angle value, in degrees, that Zumi will turn if one IR sensor detects white.<br/>
+***integer* left_IR**: The threshold value of the bottom left IR sensor. <br /> 
+***integer* right_IR**: The threshold value of the bottom right IR sensor. <br /> 
 
 #### Returns
 
@@ -137,7 +137,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro_example.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/line_follow_gyro_example.png" width="800px" height="90px"/>
 
 <hr/>
 
@@ -145,7 +145,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align.png" width="500px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align.png" width="580px" height="100px"/>
 
 #### Description
 
@@ -153,9 +153,9 @@ Uses the bottom IR sensors so that Zumi can align to the funnel piece on the com
 
 #### Parameters
 
-**speed**: Positive integer value for speed between 0 and 80 <br /> 
-**duration**: Float timeout value in seconds<br /> 
-**angle_adj**: Integer number of degrees Zumi will turn if one IR sensor detects white.
+***integer* speed**: Positive value for speed between 0 and 80 <br /> 
+***float* duration**: The duration of the timeout in seconds<br /> 
+***float* angle_adj**: The angle value, in degrees, that Zumi will turn if one IR sensor detects white.
 
 #### Returns
 
@@ -163,7 +163,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align_example.png" width="500px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/funnel_align_example.png" width="580px" height="100px"/>
 
 <hr/>
 
@@ -171,7 +171,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="810px" height="100px"/>
 
 #### Description
 
@@ -179,10 +179,10 @@ Drives Zumi forward until an object is detected or the timeout runs out, whiceve
 
 #### Parameters
 
-**speed**: Positive integer value for speed between 0 and 80 <br /> 
-**duration**: Float value timeout in seconds <br /> 
-**angle**: Integer heading in degrees (Default to None which is Zumi's current heading)
-**IR_thresh**: Integer threshold of front IR sensors. <br /> 
+***integer* speed**: Positive value for speed (0 - 80) <br /> 
+***float* duration**: duration of timeout in seconds <br />
+***integer* angle**: The angle, in degrees, at which it will turn after timeout or detection (default to None which is Zumi's current heading) <br/>
+***integer* IR_thresh**: The threshold value of front IR sensors. <br /> 
 
 #### Returns
 
@@ -190,7 +190,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/forward_avoid_collision.png" width="810px" height="100px"/>
 
 <hr/>
 
@@ -198,19 +198,19 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="810px" height="100px"/>
 
 
 #### Description
 
-Drives Zumi in reverse until an object is detected or the timeout runs out, whicever comes first. An object is considered detected if either of the backIR sensor values goes below the threshold.
+Drives Zumi in reverse until an object is detected or the timeout runs out, whicever comes first. An object is considered detected if either of the back IR sensor values goes below the threshold.
 
 #### Parameters
 
-**speed**: Positive integer value for speed between 0 and 80 <br /> 
-**duration**: Float value timeout in seconds  <br /> 
-**angle**: Integer heading in degrees (Default to None which is Zumi's current heading)
-**IR_thresh**: Integer threshold of front IR sensors. <br /> 
+***integer* speed**: Positive value for speed (0 - 80) <br /> 
+***float* duration**: duration of timeout in seconds <br />
+***integer* angle**: The angle, in degrees, at which it will turn after timeout or detection (default to None which is Zumi's current heading) <br/>
+***integer* IR_thresh**: The threshold value of back IR sensors. <br /> 
 
 #### Returns
 
@@ -218,7 +218,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reverse_avoid_collision.png" width="810px" height="100px"/>
 
 <hr/>
 
@@ -226,7 +226,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="400px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="515px" height="100px"/>
 
 #### Description
 
@@ -238,9 +238,9 @@ Derivative: compensates for sudden changes in the error
 
 #### Parameters
 
-**P**: float value for proportional control <br/>
-**I**: float value for integral control <br/>
-**D**: float value for derivative control <br/>
+***float* P**: Value for proportional control <br/>
+***float* I**: Value for integral control <br/>
+***float* D**: Value for derivative control <br/>
 
 #### Returns
 
@@ -248,7 +248,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="400px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_PID.png" width="515px" height="100px"/>
 
 <hr/>
 
@@ -256,7 +256,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="660px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="805px" height="100px"/>
 
 #### Description
 
@@ -264,7 +264,7 @@ Manually sets the line of best fit parameters that are used with ```move_to_coor
 
 #### Parameters
 
-**speed**: Integer speed from 0 to 100 used for calibrating distance traveled
+***integer* speed**: The speed from (0 - 100) used for calibrating distance traveled
 
 #### Returns
 
@@ -272,7 +272,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="660px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/set_speed_prediction.png" width="805px" height="100px"/>
 
 <hr/>
 
@@ -280,7 +280,7 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reset_PID_error.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reset_PID_error.png" width="200px"/>
 
 #### Description
 
@@ -296,7 +296,7 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/reset_PID_error.png" width="240px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/reset_PID_error.png" width="200px"/>
 
 <hr/>
 
@@ -330,18 +330,18 @@ None
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="775px" height="100px"/>
 
 #### Description
 
-This function was designed for the [Zumitown Mat](https://www.robolink.com/products/zumitown-mat). Zumi will drive over the specified number of alternating black and white horizontal lines at least 2 centimeters wide. Zumi will stop when the number of markers have been crossed or if the timeout ends, whichever is first. (Avoid making the speed very high, zumi will most likely overshoot since it has a lot of speed)
+This function was designed for the [Zumitown Mat](https://www.robolink.com/products/zumitown-mat). Zumi will drive over the specified number of alternating black and white horizontal lines at least 2 centimeters wide. Zumi will stop when the number of markers have been crossed or if the timeout ends, whichever is first. (Avoid making the speed very high, Zumi will most likely overshoot since it has a lot of speed)
 
 #### Parameters
 
-**markers**: An integer number of road markers to drive over<br />
-**speed**: Positive integer value between 0 and 80<br />
-**IR_threshold**: An integer IR threshold value 0-255 for the bottom left IR sensors to detect black or white.<br />
-**time_out**: A float value for the timeout in seconds<br />
+***integer* markers**: An number of road markers to drive over<br />
+***integer* speed**: Positive speed value (0 - 80)<br />
+***integer* IR_threshold**: An IR threshold value 0-255 for the bottom left IR sensors to detect black or white.<br />
+***float* time_out**: The timeout value in seconds<br />
 
 #### Returns
 
@@ -349,4 +349,4 @@ None
 
 #### Example
 
-<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="680px" height="100px"/>
+<img src="/img/Zumi/blockly_docu/senior/driving/drive_over_markers.png" width="775px" height="100px"/>

@@ -53,7 +53,7 @@ sure Zumi is not moving and is resting on a flat surface.
 ```calibrate_MPU(count=100)```<br />
 
 #### Parameters
-**count:** the number of samples you want Zumi to take. Increase to improve accuracy. 
+***integer* count:** the number of samples you want Zumi to take. Increase to improve accuracy. 
 
 #### Returns
 None
@@ -90,9 +90,8 @@ Uses the acceleration values to find Zumi's orientation with respect to the stro
 None
 
 #### Returns
-Integer denoting orientation state.<br />
 
-*Orientation state* <br />
+***integer* Orientation state:** <br />
 -1 = unknown<br />
  0 = probably falling or moving between states<br />
  1 = camera straight up<br />
@@ -135,7 +134,7 @@ Calls ```update_angles()``` and returns only the x-angle.
 None
 
 #### Returns
-**float:** current x-angle
+***float* x-angle:** The current x-angle of the Zumi
 
 #### Example Code
 ##### Python
@@ -166,7 +165,7 @@ Calls ```update_angles()``` and returns only the y-angle.
 None
 
 #### Returns
-**float:** current y-angle
+***float* y-angle:** The current y-angle of the Zumi
 
 #### Example Code
 ##### Python
@@ -197,7 +196,7 @@ Calls ```update_angles()``` and returns only the z-angle.
 None
 
 #### Returns
-float: current z-angle
+***float* z-angle:** The current z-angle of the Zumi
 
 #### Example Code
 ##### Python
@@ -220,7 +219,6 @@ print("done")
 
 #### Description
 Calls both ```reset_PID()``` and ```reset_gyro()```.
-Use for driving straight or turning accurately.
 
 #### Syntax
 ```reset_drive()```<br />
@@ -347,7 +345,7 @@ The last one is the tilt state.<br />
 None
 
 #### Returns
-List [Gyro x,Gyro y,Gyro z,Acc x,Acc y,Comp x,Comp y,Rot_x,Rot_y,Rot_z,tilt_state]
+***list* angles:** The updated list of angles in the following format, ```[Gyro x,Gyro y,Gyro z,Acc x,Acc y,Comp x,Comp y,Rot_x,Rot_y,Rot_z,tilt_state]```
 
 #### Example Code
 ##### Python
@@ -379,10 +377,10 @@ Returns True if the back left IR sensor detects a value below a threshold. The v
 ```back_left_detect(threshold=100)```
 
 #### Parameters
-**threshold:** Integer between 0-255
+***integer* threshold:** Threshold value (0 - 255) of the back left IR sensor
 
 #### Returns
-Boolean that returns True if sensor is triggered. <br />
+***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
 ##### Python
@@ -411,10 +409,10 @@ Returns True if the back right IR sensor detects a value below a threshold. The 
 ```back_right_detect(threshold=100)```
 
 #### Parameters
-**threshold:** Integer between 0-255
+***integer* threshold:** Threshold value (0 - 255) of the back right IR sensor
 
 #### Returns
-Boolean that returns True if sensor is triggered. <br />
+***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
 ##### Python
@@ -443,10 +441,10 @@ Returns True if the bottom left IR sensor detects a value below a threshold. The
 ```bottom_left_detect(threshold=100)```
 
 #### Parameters
-**threshold:** Integer between 0-255
+***integer* threshold:** Threshold value (0 - 255) of the bottom left IR sensor
 
 #### Returns
-Boolean that returns True if sensor is triggered. <br />
+***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
 ##### Python
@@ -475,10 +473,10 @@ Returns True if the bottom right IR sensor detects a value below a threshold. Th
 ```bottom_right_detect(threshold=100)```
 
 #### Parameters
-**threshold:** Integer between 0-255
+***integer* threshold:** Threshold value (0 - 255) of the bottom right IR sensor
 
 #### Returns
-Boolean that returns True if sensor is triggered. <br />
+***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
 ##### Python
@@ -536,7 +534,7 @@ sure Zumi is not moving and is resting on a flat surface.
 ```calibrate_MPU(count=100)```<br />
 
 #### Parameters
-**count:** the number of samples you want Zumi to take. Increase to improve accuracy. 
+***integer* count:** the number of samples you want Zumi to take. Increase to improve accuracy. 
 
 #### Returns
 None
@@ -571,10 +569,10 @@ Returns True if the front left IR sensor detects a value below a threshold. The 
 ```front_left_detect(threshold=100)```
 
 #### Parameters
-**threshold:** Integer between 0-255
+***integer* threshold:** Threshold value (0 - 255) of the front left IR sensor
 
 #### Returns
-Boolean that returns True if sensor is triggered. <br />
+***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
 ##### Python
@@ -603,10 +601,10 @@ Returns True if the front right IR sensor detects a value below a threshold. The
 ```front_left_detect(threshold=100)```
 
 #### Parameters
-**threshold:** Integer between 0-255
+***integer* threshold:** Threshold value (0 - 255) of the front right IR sensor
 
 #### Returns
-Boolean that returns True if sensor is triggered. <br />
+***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
 ##### Python
@@ -637,15 +635,15 @@ Returns the readings from all 6 IR sensors.
 None
 
 #### Returns
-List with 6 values between 0 and 255. <br />
+***list* IR sensor readings:** list of all 6 IR sensor values (0 - 255)<br />
 
-*IR sensor indices:* <br />
- 0 Front right sensor <br />
- 1 Bottom right sensor <br />
- 2 Back right sensor <br />
- 3 Bottom left sensor <br />
- 4 Back left sensor <br />
- 5 Front left sensor <br />
+*IR sensor indices:*<br/>
+ index 0 - Front right sensor <br />
+ index 1 - Bottom right sensor <br />
+ index 2 - Back right sensor <br />
+ index 3 - Bottom left sensor <br />
+ index 4 - Back left sensor <br />
+ index 5 - Front left sensor <br />
 
 #### Example Code
 ##### Python
@@ -684,7 +682,7 @@ is in the on position and the RED led is not visible.
 None
 
 #### Returns
-Voltage reading
+***float* voltage:** The battery's voltage in units of Volts. 
 
 #### Example Code
 ##### Python
@@ -712,7 +710,7 @@ Get the reading from the IR sensors and the index specified.
 ```get_IR_data(ir_sensor_index)```<br />
 
 #### Parameters
-ir_sensor_index: Integer from 0 to 5.
+***integer* ir_sensor_index:** The specified index (0 - 5) from the IR sensors reading list.
 
 *IR sensor indices:*
 *  0  IR.FRONT_RIGHT = Front right sensor
@@ -723,7 +721,7 @@ ir_sensor_index: Integer from 0 to 5.
 *  5  IR.FRONT_LEFT = Front left sensor
 
 #### Returns
-Value between 0 and 255.
+***integer* IR sensor reading:** IR sensor value for the given sensor (0 - 255).
 
 #### Example Code
 ##### Python
@@ -748,7 +746,7 @@ for i in range(0,100):
 
 #### Description
 Uses the acceleration values to find Zumi's orientation with respect to the strongest force being applied to Zumi (gravity).
-This function returns the orientation as a String.
+This function returns the orientation as a string.
 
 #### Syntax
 ```get_orientation_message()```<br />
@@ -757,9 +755,9 @@ This function returns the orientation as a String.
 None
 
 #### Returns
-String: a description of the orientation state<br />
+***string* orientation state**: a description of the orientation state<br />
 
-*Orientation state*<br />
+*Descriptions of rientation state:*<br />
 "unknown"<br />
 "face up"<br />
 "face down"<br />
@@ -801,9 +799,7 @@ Uses the acceleration values to find Zumi's orientation with respect to the stro
 None
 
 #### Returns
-Integer denoting orientation state.<br />
-
-*Orientation state* <br />
+***integer* Orientation state:** <br />
 -1 = unknown<br />
  0 = probably falling or moving between states<br />
  1 = camera straight up<br />
@@ -846,7 +842,7 @@ Calls ```update_angles()``` and returns only the x-angle.
 None
 
 #### Returns
-**float:** current x-angle
+***float* x-angle:** The current x-angle of Zumi
 
 #### Example Code
 ##### Python
@@ -876,7 +872,7 @@ Calls ```update_angles()``` and returns only the y-angle.
 None
 
 #### Returns
-**float:** current y-angle
+***float* x-angle:** The current y-angle of Zumi
 
 #### Example Code
 ##### Python
@@ -907,7 +903,7 @@ Calls ```update_angles()``` and returns only the z-angle.
 None
 
 #### Returns
-**float:** current z-angle
+***float* x-angle:** The current z-angle of Zumi
 
 #### Example Code
 ##### Python
@@ -1057,7 +1053,7 @@ The last one is the tilt state.<br />
 None
 
 #### Returns
-List [Gyro x,Gyro y,Gyro z,Acc x,Acc y,Comp x,Comp y,Rot_x,Rot_y,Rot_z,tilt_state]
+***list* angles:** The updated list of angles in the following format, ```[Gyro x,Gyro y,Gyro z,Acc x,Acc y,Comp x,Comp y,Rot_x,Rot_y,Rot_z,tilt_state]```
 
 #### Example Code
 ##### Python
@@ -1089,8 +1085,8 @@ Drives Zumi in a counterclockwise circle.
 ```circle_left(speed=30, step=2)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)
+***integer* speed:** The driving speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)
 
 #### Returns
 None
@@ -1117,8 +1113,8 @@ Drives Zumi in a clockwise circle.
 ```circle_right(speed=30, step=2)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)
+***integer* speed:** The driving speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)
 
 #### Returns
 None
@@ -1145,10 +1141,10 @@ Drives Zumi in a circle (counterclockwise by default).
 ```circle(speed=30, step=2, direction=1, delay=0.02)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
-**direction:** -1 for clockwise and +1 for counterclockwise<br />
-**delay:** The time delay between each angle step
+***integer* speed:** The driving speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)
+***integer* direction:** -1 for clockwise and +1 for counterclockwise<br />
+***float* delay:** The time delay between each angle step
 
 #### Returns
 None
@@ -1175,8 +1171,8 @@ Sets the speed of each individual motor. The changes take place immediately. Thi
 ```control_motors(right,left)```<br />
 
 #### Parameters
-**right:** Integer between -126 and 127. Positive values for forward, negative values for reverse.<br />
-**left:** Integer between -126 and 127. Positive values for forward, negative values for reverse.<br />
+***integer* right:** The speed value of the right motor (-126-127). Positive values for forward, negative values for reverse.<br />
+***integer* left:** The speed value of the left motor (-126-127). Positive values for forward, negative values for reverse.<br />
 
 #### Returns
 None
@@ -1205,10 +1201,10 @@ Zumi will drive over the specified number of alternating black and white horizon
 ```zumi.drive_over_markers(road_markers=3,speed=10,ir_threshold=120,time_out=3)```<br />
 
 #### Parameters
-**road_markers:** The number of road markers to drive over<br />
-**speed:** Positive integer value for speed between 0 and 80<br />
-**ir_threshold:** The IR threshold value for the bottom left IR sensors to detect black or white.<br />
-**time_out:** Number of seconds before the timeout ends and Zumi stops driving.<br />
+***integer* road_markers:** The number of road markers to drive over<br />
+***integer* speed:** The speed value (0 - 80)<br />
+***integer* ir_threshold:** The IR threshold value for the bottom left IR sensors to detect black or white.<br />
+***integer* time_out:** Number of seconds before the timeout ends and Zumi stops driving.<br />
 
 #### Returns
 None
@@ -1239,9 +1235,9 @@ Drives Zumi in a figure 8.
 ```figure_8(speed=30, step=3, delay=0.02)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
-**delay:** The time delay between each angle step<br />
+***integer* speed:** The driving speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***float* delay:** The time delay between each angle step<br />
 
 #### Returns
 None
@@ -1269,11 +1265,11 @@ If either of the front IR sensor values go below the threshold, Zumi will stop e
 ```forward_avoid_collision(speed=40, duration=1.0, desired_angle=None, left_th=150, right_th=150)```<br />
 
 #### Parameters
-**speed:** Positive integer value for speed between 0 and 80<br />
-**duration:** Number of seconds Zumi will drive and check for collision<br />
-**desired_angle:** Heading or desired angle (Default to None which is Zumi's current heading)<br />
-**left_th:** threshold of the front left IR sensor<br />
-**right_th:** threshold of the front right IR sensor<br />
+***integer* speed:** The driving speed value (0 - 80)<br />
+***float* duration:** Number of seconds Zumi will drive and check for collision<br />
+***integer* desired_angle:** Heading or desired angle, in degrees (Default to None which is Zumi's current heading)<br />
+***integer* left_th:** threshold of the front left IR sensor (0 - 255)<br />
+***integer* right_th:** threshold of the front right IR sensor (0 - 255)<br />
 
 #### Returns
 None
@@ -1301,9 +1297,9 @@ Takes one drive "step" to correct for the set heading. This function only works 
 ```forward_step(speed, desired_angle, max_speed=127)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0 and 127; must be below the max_speed<br />
-**desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
-**max_speed:** Caps the max speed. Default to 127.<br />
+***integer* speed:** The drive speed value (0 - 127); must be below the max_speed<br />
+***integer* desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
+***integer* max_speed:** Caps the max speed. Default to 127.<br />
 
 #### Returns
 None
@@ -1333,9 +1329,9 @@ Drives Zumi forward at a default speed of 40 for 1 second in the direction Zumi 
 ```forward(speed=40, duration=1.0, desired_angle=None)```<br />
 
 #### Parameters
-**speed:** Positive integer value for speed between 0 and 80<br />
-**duration:** Number of seconds Zumi will drive forward<br />
-**desired_angle:** Heading or desired angle to drive in (When None is selected Zumi drives wherever she is facing)
+***integer* speed:** The driving speed value (0 - 80)<br />
+***float* duration:** Number of seconds Zumi will drive forward<br />
+***integer* desired_angle:** Heading or desired angle, in degrees, to drive in (When None is selected Zumi drives wherever she is facing)
 
 #### Returns
 None
@@ -1368,12 +1364,12 @@ Zumi will try to align to the funnel piece on the competition field (Click [here
 ```funnel_align(speed=20, duration=1, angle=None, angle_adj=2, l_th=100, r_th=100)```<br />
 
 #### Parameters
-**speed:** Positive integer value for speed between 0 and 80<br />
-**duration:** Number of seconds Zumi will try to align to the funnel piece<br />
-**angle:** Heading or desired angle (Default to None which is Zumi's current heading)<br />
-**angle_adj:** The number of degrees Zumi will turn if one IR sensor detects white<br />
-**l_th:** threshold of the bottom left IR sensor<br />
-**r_th:** threshold of the bottom right IR sensor<br />
+***integer* speed:** The driving speed value (0 - 80)<br />
+***float* duration:** Number of seconds Zumi will try to align to the funnel piece<br />
+***integer* angle:** Heading or desired angle, in degrees, (Default to None which is Zumi's current heading)<br />
+***integer* angle_adj:** The angle, in degrees, Zumi will turn if one IR sensor detects white<br />
+***integer* l_th:** threshold of the bottom left IR sensor (0 - 255)<br />
+***integer* r_th:** threshold of the bottom right IR sensor (0 - 255)<br />
 
 #### Returns
 None
@@ -1401,9 +1397,9 @@ Takes one drive "step" in reverse to correct for the set heading. This function 
 ```go_reverse(speed, desired_angle, max_speed=127)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0 and 127; must be below the max_speed<br />
-**desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
-**max_speed:** Caps the max speed. Default to 127.
+***integer* speed:** Drive speed (0 - 127); must be below the max_speed<br />
+***integer* desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
+***integer* max_speed:** Caps the max speed. Default to 127.
 
 #### Returns
 None
@@ -1433,9 +1429,9 @@ Takes one drive "step" to correct for the set heading. This function only works 
 ```go_straight(speed, desired_angle, max_speed=127)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0 and 127; must be below the max_speed<br />
-**desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
-**max_speed:** Caps the max speed. Default to 127.
+***integer* speed:** Drive speed (0 - 127); must be below the max_speed<br />
+***integer* desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
+***integer* max_speed:** Caps the max speed. Default to 127.
 
 #### Returns
 None
@@ -1465,9 +1461,9 @@ Drives Zumi in a j-turn.
 ```j_turn(speed=80, step=4, delay=0.005)```<br />
 
 #### Parameters
-**speed:** Positive value for forward speed between 0 and 80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
-**delay:** The time delay between each angle step
+***integer* speed:** The forward speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***float* delay:** The time delay between each angle step
 
 #### Returns
 None
@@ -1495,9 +1491,9 @@ Drives Zumi in a left u-turn.
 ```left_u_turn(speed=30, step=4, delay=0.02)```<br />
 
 #### Parameters
-**speed:** Positive value for forward speed between 0 and 80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
-**delay:** The time delay between each angle step<br />
+***integer* speed:** The forward speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***float* delay:** The time delay between each angle step
 
 #### Returns
 None
@@ -1525,9 +1521,9 @@ On the road, Zumi uses the camera to detect lanes and stay inside of them.
 ```zumi.line_follower(duration=3, left_thresh=100,right_thresh=100)```
 
 #### Parameters
-**duration:** Number of seconds Zumi will drive on the line<br />
-**left_thresh:** threshold of the bottom left IR sensor. By default, threshold is 100<br />
-**right_thresh:** threshold of the bottom right IR sensor. By default, threshold is 100<br />
+***integer* duration:** Number of seconds Zumi will drive on the line<br />
+***integer* left_thresh:** threshold of the bottom left IR sensor. By default, threshold is 100<br />
+***integer* right_thresh:** threshold of the bottom right IR sensor. By default, threshold is 100<br />
 
 #### Returns
 None
@@ -1557,12 +1553,12 @@ If both sensors detect white, Zumi will stop even if the duration has not been m
 ```line_follow_gyro_assist(speed=20, duration=1, angle=None, angle_adj=2, l_th=100, r_th=100)```<br />
 
 #### Parameters
-**speed:** Positive integer value for speed between 0 and 80<br />
-**duration:** Number of seconds Zumi will drive on the line<br />
-**angle:** Heading or desired angle (default is None which is Zumi's current heading)<br />
-**angle_adj:** The number of degrees Zumi will turn if one IR sensor detects white. <br />
-**l_th:** threshold of the bottom left IR sensor.<br />
-**r_th:** threshold of the bottom right IR sensor.<br />
+***integer* speed:** The drive speed value (0 - 80)<br />
+***integer* duration:** Number of seconds Zumi will drive on the line<br />
+***integer* angle:** Heading or desired angle, in degrees (default is None which is Zumi's current heading)<br />
+***integer* angle_adj:** The number of degrees Zumi will turn if one IR sensor detects white. <br />
+***integer* l_th:** threshold of the bottom left IR sensor.<br />
+***integer* r_th:** threshold of the bottom right IR sensor.<br />
 
 #### Returns
 None
@@ -1599,11 +1595,11 @@ If the angle is not input Zumi will drive to whatever angle it is currently faci
 ```move_centimeters(distance, angle=None, k_p=None, k_i=None, k_d=None)```<br />
 
 #### Parameters
-**distance:** the distance in centimeters you want to travel<br />
-**angle:** heading (0 degrees is defined when the Zumi object is created.) Default to None<br />
-**k_p:** P-gain. Default to None.<br />
-**k_i:** I-gain. Default to None.<br />
-**k_d:** D-gain. Default to None.<br />
+***float* distance:** the distance in centimeters you want to travel<br />
+***integer* angle:** heading, in degrees (0 degrees is defined when the Zumi object is created.) Default to None<br />
+***float* k_p:** P-gain. Default to None.<br />
+***float* k_i:** I-gain. Default to None.<br />
+***float* k_d:** D-gain. Default to None.<br />
 
 #### Returns
 None
@@ -1641,11 +1637,11 @@ If the angle is not input Zumi will drive to whatever angle it is currently faci
 ```move_inches(distance, angle=None, k_p=None, k_i=None, k_d=None)```<br />
 
 #### Parameters
-**distance:** the distance in inches you want to travel<br />
-**angle:** heading (0 degrees is defined when the Zumi object is created.) Default to None<br />
-**k_p:** P-gain. Default to None.<br />
-**k_i:** I-gain. Default to None.<br />
-**k_d:** D-gain. Default to None.<br />
+***float* distance:** the distance in inches you want to travel<br />
+***integer* angle:** heading, in degrees (0 degrees is defined when the Zumi object is created.) Default to None<br />
+***float* k_p:** P-gain. Default to None.<br />
+***float* k_i:** I-gain. Default to None.<br />
+***float* k_d:** D-gain. Default to None.<br />
 
 #### Returns
 None
@@ -1679,12 +1675,12 @@ It uses the equation y = mx + b, where:
 ```move_to_coordinate(desired_x, desired_y, k_p=None, k_i=None, k_d=None, units="in"):```<br />
 
 #### Parameters
-**desired_x:** The x-coordinate of the destination<br />
-**desired_y:** The y-coordinate of the destination<br />
-**k_p:** P-gain. Default to None.<br />
-**k_i:** I-gain. Default to None.<br />
-**k_d:** D-gain. Default to None.<br />
-**units:** Defaults to "in" or inches. Set it to "cm" for centimeters.<br />
+***float* desired_x:** The x-coordinate of the destination<br />
+***float* desired_y:** The y-coordinate of the destination<br />
+***float* k_p:** P-gain. Default to None.<br />
+***float* k_i:** I-gain. Default to None.<br />
+***float* k_d:** D-gain. Default to None.<br />
+***string* units:** Defaults to "in" or inches. Set it to "cm" for centimeters.<br />
 
 #### Returns
 None
@@ -1745,9 +1741,9 @@ Drives Zumi in a parallel park maneuver.
 ```parallel_park(speed=15, step=1, delay=0.01)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0 and 80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
-**delay:** The time delay between each angle step<br />
+***integer* speed:** Drive speed (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***float* delay:** The time delay between each angle step<br />
 
 #### Returns
 None
@@ -1775,9 +1771,9 @@ Drives Zumi in a counterclockwise rectangle.
 ```rectangle_left(speed=40, seconds=1.0, ratio=2)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds for shorter side<br />
-**ratio:** Ratio of longer side to shorter side (Multiply ```ratio``` by ```seconds``` to get the duration of the longer side) <br />
+***integer* speed:** Drive speed between (0 - 80)<br />
+***float* seconds:** Duration in seconds for shorter side<br />
+***float* ratio:** Ratio of longer side to shorter side (Multiply ```ratio``` by ```seconds``` to get the duration of the longer side) <br />
 
 #### Returns
 None
@@ -1803,9 +1799,9 @@ Drives Zumi in a clockwise rectangle.
 ```rectangle_right(speed=40, seconds=1.0, ratio=2)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds for shorter side<br />
-**ratio:** Ratio of longer side to shorter side (Multiply ```ratio``` by ```seconds``` to get the duration of the longer side) <br />
+***integer* speed:** Drive speed between (0 - 80)<br />
+***float* seconds:** Duration in seconds for shorter side<br />
+***float* ratio:** Ratio of longer side to shorter side (Multiply ```ratio``` by ```seconds``` to get the duration of the longer side) <br />
 
 #### Returns
 None
@@ -1831,10 +1827,10 @@ Drives Zumi in a rectangle.
 ```rectangle(speed=40, seconds=1.0, direction=1, ratio=2)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds for shorter side<br />
-**direction:** 1 for counterclockwise and -1 for clockwise<br />
-**ratio:** Ratio of longer side to shorter side (Multiply ```ratio``` by ```seconds``` to get the duration of the longer side) <br />
+***integer* speed:** Drive speed between (0 - 80)<br />
+***float* seconds:** Duration in seconds for shorter side<br />
+***integer* direction:** direction of turn (1 for counterclockwise and -1 for clockwise)<br />
+***float* ratio:** Ratio of longer side to shorter side (Multiply ```ratio``` by ```seconds``` to get the duration of the longer side) <br />
 
 #### Returns
 None
@@ -1891,11 +1887,11 @@ If either of the back IR sensor values go below the threshold, Zumi will stop ev
 ```reverse_avoid_collision(speed=40, duration=1.0, desired_angle=None, left_th=150, right_th=150)```<br />
 
 #### Parameters
-**speed:** Positive integer value for speed between 0 and 80<br />
-**duration:** Number of seconds Zumi will drive and check for collision<br />
-**desired_angle:** Heading or desired angle (Default to None which is Zumi's current heading)<br />
-**left_th:** threshold of the back left IR sensor<br />
-**right_th:** threshold of the back right IR sensor<br />
+***integer* speed:** Driving speed (0 - 80)<br />
+***float* duration:** Number of seconds Zumi will drive and check for collision<br />
+***integer* desired_angle:** Heading or desired angle, in degrees (Default to None which is Zumi's current heading)<br />
+***integer* left_th:** threshold of the back left IR sensor<br />
+***integer* right_th:** threshold of the back right IR sensor<br />
 
 #### Returns
 None
@@ -1923,9 +1919,9 @@ Takes one drive "step" in reverse to correct for the set heading. This function 
 ```reverse_step(speed, desired_angle, max_speed=127)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0 and 127; must be below the max_speed<br />
-**desired_angle:** heading (0 degrees is defined when the Zumi object is created.)<br />
-**max_speed:** Caps the max speed. Default to 127.<br />
+***integer* speed:** Drive speed between (0 - 127); must be below the max_speed<br />
+***integer* desired_angle:** heading, in degrees (0 degrees is defined when the Zumi object is created.)<br />
+***integer* max_speed:** Caps the max speed. Default to 127.<br />
 
 #### Returns
 None
@@ -1955,9 +1951,9 @@ Drives Zumi in reverse at a default speed of 40 for 1 second in the direction Zu
 ```reverse(speed=40, duration=1.0, desired_angle=None)```<br />
 
 #### Parameters
-**speed:** Positive integer value for speed between 0 and 80<br />
-**duration:** Number of seconds Zumi will drive reverse<br />
-**desired_angle:** Heading or desired angle to drive in (When None is selected Zumi drives wherever she is facing)
+***integer* speed:** Driving speed between (0 - 80)<br />
+***float* duration:** Number of seconds Zumi will drive reverse<br />
+***integer* desired_angle:** Heading or desired angle to drive in, in degrees (When None is selected Zumi drives wherever she is facing)
 
 #### Returns
 None
@@ -1990,9 +1986,9 @@ Drives Zumi in a right u-turn.
 ```right_u_turn(speed=30, step=4, delay=0.02)```<br />
 
 #### Parameters
-**speed:** Positive value for forward speed between 0 and 80<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
-**delay:** The time delay between each angle step.<br />
+***integer* speed:** Driving speed value (0 - 80)<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***float* delay:** The time delay between each angle step.<br />
 
 #### Returns
 None
@@ -2021,8 +2017,8 @@ Causes Zumi to gradually accelerate forward to max speed during a given duration
 ```smooth_forward(duration, rate=1)```<br />
 
 #### Parameters
-**duration:** Total duration of drive command including acceleration and deceleration<br />
-**rate:** rate at which speed changes. Default to 1<br />
+***float* duration:** Total duration of drive command including acceleration and deceleration<br />
+***float* rate:** rate at which speed changes. Default to 1<br />
 
 #### Returns
 None
@@ -2052,8 +2048,8 @@ Causes Zumi to gradually accelerate in reverse to max speed during a given durat
 ```smooth_reverse(duration, rate=1)```<br />
 
 #### Parameters
-**duration:** Total duration of drive command including acceleration and deceleration<br />
-**rate:** rate at which speed changes. Default to 1<br />
+***float* duration:** Total duration of drive command including acceleration and deceleration<br />
+***float* rate:** Rate at which speed changes. Default to 1<br />
 
 #### Returns
 None
@@ -2083,9 +2079,9 @@ Turns left gradually to reach the desired angle while also going forward. Defaul
 ```smooth_turn_left(desired_angle=90,speed=20,step=2)```<br />
 
 #### Parameters
-**desired_angle:** Degrees you want to turn from your starting position <br />
-**speed:** Positive integer value for speed between 0 and 80. Default to 20.<br />
-**step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***integer* desired_angle:** Degrees you want to turn from your starting position <br />
+***integer* speed:** Driving speed (0 - 80). Default to 20.<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
 
 #### Returns
 None
@@ -2115,9 +2111,9 @@ Turns right gradually to reach the desired angle while also going forward. Defau
 ```smooth_turn_right(desired_angle=90,speed=20,step=2)```<br />
 
 #### Parameters
-desired_angle: Degrees you want to turn from your starting position <br />
-speed: Positive integer value for speed between 0 and 80. Default to 20.<br />
-step: The angle step size (decrease for wider turns, increase for tighter turns)<br />
+***integer* desired_angle:** Degrees you want to turn from your starting position <br />
+***integer* speed:** Driving speed between 0 and 80. Default to 20.<br />
+***integer* step:** The angle step size (decrease for wider turns, increase for tighter turns)<br />
 
 #### Returns
 None
@@ -2152,11 +2148,11 @@ This function is necessary for move_to_coordinate(), move_inches(), and move_cen
 ```speed_calibration(speed=40, ir_threshold=100, time_out=3, cm_per_brick=2, show_graphs=False)```<br />
 
 #### Parameters
-**speed:** Integer value that goes from (0 - 80). The lower the more accurate the speed prediction.<br />
-**ir_threshold:** Integer value for the bottom left IR threshold (0-255).<br />
-**time_out:** The number of seconds before the timeout.<br />
-**cm_per_brick:** The width of each road marker in centimeters.<br />
-**show_graphs:** Boolean default to False. If set to True, a graph will be displayed with the best fit line prediction. *Note: You may need to run this function twice to see the graph.<br />
+***integer* speed:** Driving speed value (0 - 80). The lower the more accurate the speed prediction.<br />
+***integer* ir_threshold:** Integer value for the bottom left IR threshold (0-255).<br />
+***float* time_out:** The number of seconds before the timeout.<br />
+***float* cm_per_brick:** The width of each road marker in centimeters.<br />
+***boolean* show_graphs:** Defaults to False. If set to True, a graph will be displayed with the best fit line prediction. *Note: You may need to run this function twice to see the graph.<br />
 
 #### Returns
 None
@@ -2187,8 +2183,8 @@ Drives Zumi in a counterclockwise square.
 ```square_left(speed=40, seconds=1.0)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds Zumi drives for each side
+***integer* speed:** Drive speed value (0 - 80)<br />
+***float* seconds:** Duration in seconds Zumi drives for each side
 
 #### Returns
 None
@@ -2214,8 +2210,8 @@ Drives Zumi in a clockwise square.
 ```square_right(speed=40, seconds=1.0)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds Zumi drives for each side
+***integer* speed:** Drive speed value (0 - 80)<br />
+***float* seconds:** Duration in seconds Zumi drives for each side
 
 #### Returns
 None
@@ -2241,9 +2237,9 @@ Drives Zumi in a square. Default to counterclockwise.
 ```square(speed=40, seconds=1, direction=1)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds Zumi drives for each side<br />
-**direction:** -1 for clockwise and +1 for counterclockwise<br />
+***integer* speed:** Drive speed between 0-80<br />
+***float* seconds:** Duration in seconds Zumi drives for each side<br />
+***integer* direction:** Direction of turn (-1 for clockwise and +1 for counterclockwise)<br />
 
 #### Returns
 None
@@ -2300,8 +2296,8 @@ Drives Zumi in a counterclockwise triangle.
 ```triangle_left(speed=40, seconds=1.5)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds Zumi drives for each side<br />
+***integer* speed:** Drive speed value (0 - 80)<br />
+***float* seconds:** Duration in seconds Zumi drives for each side<br />
 
 #### Returns
 None
@@ -2327,8 +2323,8 @@ Drives Zumi in a clockwise triangle.
 ```triangle_right(speed=40, seconds=1.5)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds Zumi drives for each side<br />
+***integer* speed:** Drive speed value (0 - 80)<br />
+***float* seconds:** Duration in seconds Zumi drives for each side<br />
 
 #### Returns
 None
@@ -2354,9 +2350,9 @@ Drives Zumi in a triangle. Default is counterclockwise.
 ```triangle(speed=40, seconds=1.5, direction=1)```<br />
 
 #### Parameters
-**speed:** Drive speed between 0-80<br />
-**seconds:** Duration in seconds Zumi drives for each side<br />
-**direction:** -1 for clockwise and +1 for counterclockwise
+***integer* speed:** Drive speed value (0 - 80)<br />
+***float* seconds:** Duration in seconds Zumi drives for each side<br />
+***integer* direction:** Direction of turn (-1 for clockwise and +1 for counterclockwise)
 
 #### Returns
 None
@@ -2382,8 +2378,8 @@ Causes Zumi to turn left the specified number of degrees. Default to 90 degrees.
 ```turn_left(desired_angle=90, duration=1.0)```<br />
 
 #### Parameters
-**desired_angle:** Degrees you want to turn to the left from your starting position. Default to 90. Only positive values.<br />
-**duration:** The amount of time in seconds Zumi will try and complete the turn. Increase for turns greater than 90 degrees.<br />
+***integer* desired_angle:** Degrees you want to turn to the left from your starting position. Default to 90. Only positive values.<br />
+***float* duration:** The amount of time in seconds Zumi will try and complete the turn. Increase for turns greater than 90 degrees.<br />
 
 
 #### Returns
@@ -2414,8 +2410,8 @@ Causes Zumi to turn right the specified number of degrees. Default to 90 degrees
 ```turn_right(desired_angle=90,duration=1.0)```<br />
 
 #### Parameters
-**desired_angle:** Degrees you want to turn to the right from your starting position. Default to 90. Only positive values.<br />
-**duration:** The amount of time in seconds Zumi will try and complete the turn. Increase for turns greater than 90 degrees.<br />
+***integer* desired_angle:** Degrees you want to turn to the right from your starting position. Default to 90. Only positive values.<br />
+***float* duration:** The amount of time in seconds Zumi will try and complete the turn. Increase for turns greater than 90 degrees.<br />
 
 #### Returns
 None
@@ -2445,10 +2441,10 @@ Zumi will turn to a desired angle.
 ```turn(desired_angle, duration=1.5, max_speed=25, accuracy=1):```<br />
 
 #### Parameters
-**desired_angle:** Angle to turn. Positive degrees to the left. Negative degrees to the right.<br />
-**duration:** Number of seconds Zumi will perform the command.<br />
-**speed:** The max motor speed for turning. A positive integer value between 0 and 80.<br />
-**accuracy:** The tolerance of +- degrees.Ex: an accuracy = 1 will be +1 or -1 degree off from desired_angle.<br />
+***integer* desired_angle:** Angle to turn. Positive degrees to the left. Negative degrees to the right.<br />
+***float* duration:** Number of seconds Zumi will perform the command.<br />
+***integer* speed:** The max motor speed for turning (0 - 80).<br />
+***integer* accuracy:** The tolerance of +- degrees (e.g. accuracy = 1 means +1 or -1 degree off from desired_angle).<br />
 
 #### Returns
 None
@@ -2470,7 +2466,7 @@ zumi.turn(-90)
 
 <hr className="section_hr"/>
 
-## LEDs and Buzzer
+## LEDs-and-Buzzer
 
 ### all_lights_off()
 
@@ -2693,8 +2689,8 @@ Play a note, from C2 - B6.
 ```play_note(note_type, note_duration=500)```<br />
 
 ##### Parameters
-**note_type:** Integer from 0 to 60 or enum from Note class. Setting the note to 0 will result in no sound.<br />
-**note_duration:** Default to 500 milliseconds but can be an integer from 0 to 2500 milliseconds. Must be in 100 millisecond increments ex. 100, 200, 500, 2000. If 0 note will play forever.<br />
+***integer/enum* note_type:** Integer from 0 to 60 or enum from Note class. Setting the note to 0 will result in no sound.<br />
+***integer* note_duration:** Default to 500 milliseconds but can be an integer from 0 to 2500 milliseconds. Must be in 100 millisecond increments ex. 100, 200, 500, 2000. If 0 note will play forever.<br />
 
 ***class* Note:**<br />
     C2 = 1<br />
@@ -2895,7 +2891,7 @@ Takes a picture using the PiCamera and saves it in an array.
 None
 
 #### Returns
-**Numpy array representing captured image** &nbsp;&nbsp;_(type: ndarray)_
+***ndarray* image array:** a NumPy array representing the captured image
 
 #### Example Code
 #### Python
@@ -2988,7 +2984,7 @@ Checks if the camera stream is open
 None
 
 #### Returns
-**Boolean** &nbsp;&nbsp;_(type: boolean)_
+***Boolean***: Returns True if camera stream is open. Otherwise returns False
 
 #### Example Code
 ##### Python
@@ -3016,7 +3012,7 @@ Captures an image and saves it in the working directory.
 ```save_photo(file_name)```
 
 #### Parameters
-**file_name** &nbsp;&nbsp;_(type: string, default: current_time)_ : The name of the image file that will be saved
+***string* file_name:** The name of the image file that will be saved. Default name (no input) is the current time.
 
 #### Returns
 None
@@ -3047,7 +3043,7 @@ Displays an image taken from Zumi's camera.
 ```show_image(frame)```<br />
 
 #### Parameters
-**frame:** An image array 
+***ndarray* frame:** An image array that will be displayed
 
 #### Returns
 None
@@ -3120,50 +3116,9 @@ try:
 finally:
     print(30/(time.time()-time_start))
 ```
-<hr/>
+<hr className="section_hr"/>
 
-### predict()
-
-#### Description
-Predicts a color captured from the Zumi camera.
-
-#### Syntax
-```predict(pred_features)```<br />
-
-#### Parameters
-**pred_features**: The image to draw the prediction from
-
-#### Returns
-**predicts**: The prediction made by the knn color classifier
-
-#### Example Code
-##### Python
-```python
-#Python code
-from zumi.zumi import Zumi
-from zumi.util.camera import Camera
-from zumi.util.screen import Screen
-from zumi.util.color_classifier import ColorClassifier
-import time
-camera = Camera()
-screen = Screen()
-zumi = Zumi()
-
-knn = ColorClassifier()
-train = knn.load_model("project_name")
-knn.fit("hsv")
-
-camera.start_camera()
-while True:
-    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
-    if user_input == "q":
-        break
-    image = camera.capture()
-    predict = knn.predict(image) # Based on the image taken, the knn color classifier will predict a color
-    screen.draw_text_center(predict) # This prediction gets written to the Zumi screen
-camera.close()
-```
-<hr/>
+## Colors
 
 ### fit()
 
@@ -3174,7 +3129,7 @@ Fits values for prediction. By default, HSV is fitted.
 ```fit(values)```<br />
 
 #### Parameters
-**values**: values to be fitted for prediction. By default hsv is fitted.
+***string* values**: values to be fitted for prediction. By default hsv is fitted.
 
 #### Returns
 None
@@ -3192,8 +3147,11 @@ camera = Camera()
 screen = Screen()
 zumi = Zumi()
 
-knn = ColorClassifier()
-train = knn.load_model("project_name")
+user_name = 'username' # Type your actual username here
+project_name = 'project_name' # Type your actual project name here
+
+knn = ColorClassifier(user_name=user_name) # Must include "user_name="
+train = knn.load_model(project_name)
 knn.fit("hsv") # Fitting to HSV
 
 camera.start_camera()
@@ -3208,6 +3166,52 @@ camera.close()
 ```
 <hr/>
 
+### predict()
+
+#### Description
+Predicts a color captured from the Zumi camera.
+
+#### Syntax
+```predict(pred_features)```<br />
+
+#### Parameters
+***ndarray* p*red_features**: The image to draw the prediction from
+
+#### Returns
+***string* prediction**: The prediction made by the knn color classifier
+
+#### Example Code
+##### Python
+```python
+#Python code
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.screen import Screen
+from zumi.util.color_classifier import ColorClassifier
+import time
+camera = Camera()
+screen = Screen()
+zumi = Zumi()
+
+user_name = 'username' # Type your actual username here
+project_name = 'project_name' # Type your actual project name here
+
+knn = ColorClassifier(user_name=user_name) # Must include "user_name="
+train = knn.load_model(project_name)
+knn.fit("hsv") # Fitting to HSV
+
+camera.start_camera()
+while True:
+    user_input = input("Press 'enter' to predict or 'q to quit:  ") 
+    if user_input == "q":
+        break
+    image = camera.capture()
+    predict = knn.predict(image) # Based on the image taken, the knn color classifier will predict a color
+    screen.draw_text_center(predict) # This prediction gets written to the Zumi screen
+camera.close()
+```
+<hr/>
+
 ### load_model()
 
 #### Description
@@ -3217,7 +3221,7 @@ Loads the model based on your project name.
 ```load_model(name)```<br />
 
 #### Parameters
-**name**: The project name. This will depend on what you chose to name your project
+***string* name**: The project name. This will depend on what you chose to name your project
 
 #### Returns
 None
@@ -3234,9 +3238,11 @@ import time
 camera = Camera()
 screen = Screen()
 zumi = Zumi()
+user_name = 'username' # Type your actual username here
+project_name = 'project_name' # Type your actual project name here
 
-knn = ColorClassifier()
-train = knn.load_model("project_name") # Loads the model based on your project name. Make sure to use the project name you chose!
+knn = ColorClassifier(user_name=user_name) # Must include "user_name="
+train = knn.load_model(project_name) # Loads the model based on your project name.
 knn.fit("hsv")
 
 camera.start_camera()
@@ -3248,6 +3254,217 @@ while True:
     predict = knn.predict(image)
     screen.draw_text_center(predict)
 camera.close()
+```
+<hr className="section_hr"/>
+
+## Vision
+
+### convert_to_gray()
+
+#### Description
+Converts captured image into a grayscaled image.
+
+#### Syntax
+```convert_to_gray(img)```
+
+#### Parameters
+***ndarray* img:** an image array to be converted
+
+#### Returns
+***ndarray* image array:** a modified image array of *img* for grayscaling
+
+#### Example Code
+##### Python
+```python
+from zumi.util.vision import Vision
+from zumi.util.camera import Camera
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+img = camera.capture()
+camera.close()
+gray = vision.convert_to_gray(img) # Convert it to grayscaled version of img
+camera.show_image(gray)
+
+```
+<hr/>
+
+### convert_to_hsv()
+
+#### Description
+Converts captured image to an HSV image.
+
+#### Syntax
+```convert_to_hsv(img)```
+
+#### Parameters
+***ndarray* img:** An image array to be converted
+
+#### Returns
+***ndarray* image array**: A modified image array of *img* in the HSV colorspace
+
+
+#### Example Code
+##### Python
+```python
+from zumi.util.vision import Vision
+from zumi.util.camera import Camera
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+img = camera.capture()
+camera.close()
+hsv = vision.convert_to_hsv(img) # Convert it to HSV, hue saturation and value
+camera.show_image(hsv)
+
+```
+<hr/>
+
+### get_QR_message()
+
+#### Description
+Returns the message from decoded QR code.
+
+#### Syntax
+```get_QR_message(Qr_object)```
+
+#### Parameters
+***Decoded* Qr_object:** decoded QR data (an object of class Decoded) that find_QR_code()
+
+
+#### Returns
+***string* message:** decoded message from QR code
+
+#### Example Code
+##### Python
+```python
+camera = Camera()
+camera.start_camera()
+frame = camera.capture()
+camera.close()
+qr_code = vision.find_QR_code(frame)
+message = vision.get_QR_message(qr_code) # returns None if QR code was not detected
+print(message)
+```
+<hr/>
+
+### find_face()
+
+#### Description
+Searches captured image for facial features to find face's pixel location in the image.
+
+#### Syntax
+```find_face(frame, scale_factor=1.05, min_neighbors=8, min_size=(40,40))```
+
+#### Parameters
+***ndarray* frame:** an image array<br/> 
+***float* scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)<br/>
+***integer* min_neighbors:** minimum number of neighbors (features that have similarities)<br/>
+***integer* min_size:** minimum size of face to be detected<br/>
+***integer* max_size:** maximum size of face to be detected<br/>
+
+#### Returns
+***list* area:** [x,y,w,h] of the face's x and y coordinates along with the area's width and height. Returns ```None``` if not detected
+
+#### Example Code
+##### Python
+```python
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
+
+camera    = Camera()
+vision    = Vision()
+
+camera.start_camera()
+image = camera.capture()
+camera.close()
+
+face_location = vision.find_face(image, scale_factor = 1.05, min_neighbors=8, min_size= (40,40))
+# returns location of face frame within image. None if not found
+
+print("[x,y,w,h] =",face_location)
+camera.show_image(image) # displays image with outlined face (if it exists) in Jupyter Notebook
+```
+<hr/>
+
+### find_QR_code()
+
+#### Description
+Processes the image that is given as a parameter and draws a rectangle around the QR code with the decoded message on it.
+
+#### Syntax
+```find_QR_code(frame)```
+
+#### Parameters
+***ndarray frame:** a NumPy array representing a captured image (image array)
+
+#### Returns
+***Decoded* decoded_Qr:** decoded QR data (an object of Decoded class). Returns ```None``` if QR code is not detected
+
+#### Example Code
+##### Python
+```python
+from zumi.zumi import Zumi
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+try: 
+    for i in range(50):
+        frame = camera.capture()
+        vision.find_QR_code(frame)
+        camera.show_image(frame)
+        camera.clear_output()
+finally:
+    print("Done!")
+    camera.close()
+```
+<hr/>
+
+### find_smile()
+
+#### Description
+Searches captured image for smiling facial features to find smile's pixel location in the image.
+
+#### Syntax
+```find_smile(frame, scale_factor=1.05, min_neighbors=8, min_size=(40,40))```
+
+#### Parameters
+***ndarray* frame:** a NumPy array representing a captured image (image array)<br/>
+***float* scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)<br/>
+***integer* min_neighbors:** minimum number of neighbors (features that have similarities)<br/>
+***integer* min_size:** minimum size of face to be detected<br/>
+***integer* max_size:** maximum size of face to be detected<br/>
+
+#### Returns
+***list* area:** [x,y,w,h] of the smiles's x and y coordinates along with the area's width and height. Returns None if not detected
+
+#### Example Code
+##### Python
+```python
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
+
+camera    = Camera()
+vision    = Vision()
+
+camera.start_camera()
+image = camera.capture()
+camera.close()
+
+
+smile_location = vision.find_smile(image, scale_factor = 1.05, min_neighbors=8, min_size= (40,40))
+# returns location of smile frame within image. None if not found
+
+print("[x,y,w,h] =",smile_location)
+camera.show_image(image) # displays image with outlined smile (if it exists) in Jupyter Notebook
 ```
 <hr className="section_hr"/>
 
@@ -3372,10 +3589,10 @@ Clears the screen and draws a clock with the given hour and minute set by the us
 ```clock(hour, minute, string='', font_size=18)```<br />
 
 #### Parameters
-**hour:** Integer for the hour<br />
-**minute:** Integer for the minute<br />
-**string:** an 8 character String to be displayed under the clock (optional). Defaults to an empty string.<br />
-**font_size:** the font-size of the time
+***integer* hour:** hour set by user<br />
+***integer* minute:** minute set by user<br />
+***string* message:** an 8 character message to be displayed under the clock (optional). Defaults to an empty string.<br />
+***integer* font_size:** the font-size of the time
 
 #### Returns
 None
@@ -3428,13 +3645,13 @@ Draws an arc within the boundaries of points x1,y1, and x2,y2 at the specified s
 ```draw_arc(x1, y1, x2, y2, start_ang, end_ang,fill_in=True)```<br />
 
 #### Parameters
-**x1:** x coordinate of top-left corner for the rectangle enclosing the arc<br />
-**y1:** y coordinate of top-left corner for the rectangle enclosing the arc<br />
-**x2:** x coordinate of bottom-right corner for the rectangle enclosing the arc<br />
-**y2:** y coordinate of bottom-right corner for the rectangle enclosing the arc<br />
-**start_ang:** starting arc angle<br />
-**end_ang:** ending arc angle<br />
-**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+***integer* x1:** x coordinate of top-left corner for the rectangle enclosing the arc<br />
+***integer* y1:** y coordinate of top-left corner for the rectangle enclosing the arc<br />
+***integer* x2:** x coordinate of bottom-right corner for the rectangle enclosing the arc<br />
+***integer* y2:** y coordinate of bottom-right corner for the rectangle enclosing the arc<br />
+***integer* start_ang:** starting arc angle, in degrees<br />
+***integer* end_ang:** ending arc angle, in degrees<br />
+***boolean* fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3460,13 +3677,13 @@ Draws a chord within the boundaries of points x1,y1, and x2,y2 at the specified 
 ```draw_chord(x1, y1, x2, y2, start_ang, end_ang,fill_in=True)```<br />
 
 #### Parameters
-**x1:** x coordinate of top-left corner for the rectangle enclosing the chord<br />
-**y1:** y coordinate of top-left corner for the rectangle enclosing the chord<br />
-**x2:** x coordinate of bottom-right corner for the rectangle enclosing the chord<br />
-**y2:** y coordinate of bottom-right corner for the rectangle enclosing the chord<br />
-**start_ang:** starting angle<br />
-**end_ang:** ending angle<br />
-**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+***integer* x1:** x coordinate of top-left corner for the rectangle enclosing the chord<br />
+***integer* y1:** y coordinate of top-left corner for the rectangle enclosing the chord<br />
+***integer* x2:** x coordinate of bottom-right corner for the rectangle enclosing the chord<br />
+***integer* y2:** y coordinate of bottom-right corner for the rectangle enclosing the chord<br />
+***integer* start_ang:** starting angle<br />
+***integer* end_ang:** ending angle<br />
+***boolean* fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3496,10 +3713,10 @@ Draws a circle that fits inside a square with its top-left corner at x,y and a w
 ```draw_circle(x, y, diameter, fill_in=True)```<br />
 
 #### Parameters
-**x:** x coordinate of the top-left corner of the enclosing square<br />
-**y:** y coordinate of the top-left corner of the enclosing square<br />
-**diameter:** diameter of the circle (also the width and height of enclosing square)<br />
-**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+***integer* x:** x-coordinate of the top-left corner of the enclosing square<br />
+***integer* y:** y-coordinate of the top-left corner of the enclosing square<br />
+***integer* diameter:** diameter of the circle (also the width and height of enclosing square)<br />
+***boolean* fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3526,11 +3743,11 @@ Draws an ellipse that fits in a rectangle with its top-left corner at x,y and a 
 ```draw_ellipse(self, x, y, width, height, fill_in=True)```<br />
 
 #### Parameters
-**x:** x coordinate of the top-left corner of the enclosing rectangle<br />
-**y:** y coordinate of the top-left corner of the enclosing rectangle<br />
-**width:** width of enclosing rectangle<br />
-**height:** height of enclosing rectangle<br />
-**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+***integer* x:** x coordinate of the top-left corner of the enclosing rectangle<br />
+***integer* y:** y coordinate of the top-left corner of the enclosing rectangle<br />
+***integer* width:** width of enclosing rectangle<br />
+***integer* height:** height of enclosing rectangle<br />
+***boolean* fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3556,7 +3773,7 @@ Draws the image on the screen.
 ```draw_image(img)```<br />
 
 #### Parameters
-**img:** An image
+***Image* img:** An image object that's produced using ```screen.path_to_image(path)```, "path" being the file location of your image.
 
 #### Returns
 None
@@ -3585,12 +3802,12 @@ Draws a line between points (x1,y1) and (x2,y2).
 ```draw_line(x1, y1, x2, y2, thickness=1,fill_in=True)```<br />
 
 #### Parameters
-**x1:** x coordinate of the starting point<br />
-**y1:** y coordinate of the starting point<br />
-**x2:** x coordinate of the ending point<br />
-**y2:** y coordinate of the ending point<br />
-**thickness:** pixel width of the line<br />
-**fill_in:** Boolean that selects if the line will be filled in (white). Default to True.<br />
+***integer* x1:** x coordinate of the starting point<br />
+***integer* y1:** y coordinate of the starting point<br />
+***integer* x2:** x coordinate of the ending point<br />
+***integer* y2:** y coordinate of the ending point<br />
+***integer* thickness:** pixel width of the line<br />
+***boolean* fill_in:** Boolean that selects if the line will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3618,9 +3835,9 @@ Draws a single pixel at the set x and y coordinate.
 ```draw_point(x, y,fill_in=True)```<br />
 
 #### Parameters
-**x:** the x coordinate<br />
-**y:** the y coordinate<br />
-**fill_in:** Boolean that selects if the point will be filled in (white). Default to True.<br />
+***integer* x:** the x coordinate<br />
+***integer* y:** the y coordinate<br />
+***boolean* fill_in:** Boolean that selects if the point will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3647,8 +3864,8 @@ Draws lines between points in a given list ```[(x1,y1),...,(xn,yn)]``` to form a
 ``` draw_polygon(points_list,fill_in = True):```<br />
 
 #### Parameters
-**points_list:** A list ```[x1,y1,x2,y2,....xn,yn]``` with at least 3 points <br />
-**fill_in:** Boolean that selects if the polygon will be filled in (white). Default to True.<br />
+***list* points_list:** A list ```[x1,y1,x2,y2,....xn,yn]``` with at least 3 points <br />
+***boolean* fill_in:** Boolean that selects if the polygon will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3676,12 +3893,12 @@ Draws a rectangle on the screen.
 ```draw_rect(x, y, width, height, thickness=1, fill_in=False)```<br />
 
 #### Parameters
-**x:** the top left corner x coordinate<br />
-**y:** the top left corner y coordinate<br />
-**width:** width of rectangle<br />
-**height:** height of rectangle<br />
-**thickness:** thickness of rectangle border, default to 1<br />
-**fill_in:** Boolean that selects if the shape will be filled in. Default to False.<br />
+***integer* x:** the top left corner x coordinate<br />
+***integer* y:** the top left corner y coordinate<br />
+***integer* width:** width of rectangle<br />
+***integer* height:** height of rectangle<br />
+***integer* thickness:** thickness of rectangle border, default to 1<br />
+***boolean* fill_in:** Boolean that selects if the shape will be filled in. Default to False.<br />
 
 #### Returns
 None
@@ -3708,11 +3925,11 @@ Draws a square on the screen.
 ```draw_square(x, y, width, thickness=1, fill_in=False)```<br />
 
 #### Parameters
-**x:** the top left corner x coordinate<br />
-**y:** the top left corner y coordinate<br />
-**width:** width of each side<br />
-**thickness:** thickness of rectangle border, default to 1<br />
-**fill_in:** Boolean that selects if the shape will be filled in. Default to False.<br />
+***integer* x:** the top left corner x coordinate<br />
+***integer* y:** the top left corner y coordinate<br />
+***integer* width:** width of each side<br />
+***integer* thickness:** thickness of rectangle border, default to 1<br />
+***integer* fill_in:** Boolean that selects if the shape will be filled in. Default to False.<br />
 
 #### Returns
 None
@@ -3740,8 +3957,8 @@ Draws text to the center of the screen
 ```draw_text_center(string, font_size)```<br />
 
 #### Parameters
-**string** &nbsp;&nbsp;_(type: string)_: The string that zumi will show on the screen
-**font_size** &nbsp;&nbsp;_(type: integer, default: 16)_: The font size of the string
+***string* string**: The text that Zumi will show on the screen
+***integer* font_size**: The font size of the text, defaults to 16 pixels.
 
 #### Returns
 None
@@ -3779,10 +3996,10 @@ Draws text to the upper lefthand corner of the screen
 ```draw_text(string, x, y, font_size)```  (display, clear)..
 
 #### Parameters
-**string** &nbsp;&nbsp;_(type: string)_: The string that zumi will show on the screen<br />
-**x** &nbsp;&nbsp; _(type: integer, default: 1)_: The x coordinate start value of the string<br />
-**y** &nbsp;&nbsp; _(type: integer, default: 1)_: The y coordinate start value of the string<br />
-**font_size** &nbsp;&nbsp;_(type: integer, default: 16)_: The font size of the string
+***string* string**: The text that Zumi will show on the screen<br />
+***integer* x**: The x coordinate start value of the string, defaults to 1<br />
+***integer* y**: The y coordinate start value of the string, defaults to 1<br />
+***integer* font_size**: The font size of the string, defaults to 16 pixels
 
 #### Returns
 None
@@ -3812,13 +4029,13 @@ Draws a triangle with 3 points (x1,y1), (x2,y2), (x3,y3): ```x1, y1, x2, y2, x3,
 ``` draw_triangle(x1,y1,x2,y2,x3,y3,fill_in=True):```<br />
 
 #### Parameters
-**x1:** the x coordinate of point 1<br />
-**y1:** the y coordinate of point 1<br />
-**x2:** the x coordinate of point 2<br />
-**y2:** the y coordinate of point 2<br />
-**x3:** the x coordinate of point 3<br />
-**y3:** the y coordinate of point 3<br />
-**fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
+***integer* x1:** the x coordinate of point 1<br />
+***integer* y1:** the y coordinate of point 1<br />
+***integer* x2:** the x coordinate of point 2<br />
+***integer* y2:** the y coordinate of point 2<br />
+***integer* x3:** the x coordinate of point 3<br />
+***integer* y3:** the y coordinate of point 3<br />
+***boolean* fill_in:** Boolean that selects if the triangle will be filled in (white). Default to True.<br />
 
 #### Returns
 None
@@ -3967,18 +4184,18 @@ personality.look_around()
 ### print()
 
 #### Description
-Prints any number of Strings on the screen. 
+Prints any number of strings on the screen. 
 
 #### Syntax
 ```print(*messages)```<br />
 ```print(*messages,x=0, y=0, fill_in=True,font_size=12)```<br />
 
 #### Parameters
-messages: Any number of Strings that will print to the screen<br />
-**x:** x coordinate of the String. Default to 0.<br />
-**y:** y coordinate of the String. Default to 0.<br />
-**fill_in:** Boolean that selects if text will be white(True) or black (False). Default to True.<br />
-**font_size:** Pixel size of the font. Default to 12.<br />
+***string* messages:** Any number of strings that will print to the screen<br />
+***integer* x:** x coordinate of the string. Default to 0.<br />
+***integer* y:** y coordinate of the string. Default to 0.<br />
+***boolean* fill_in:** Boolean that selects if text will be white(True) or black (False). Default to True.<br />
+***integer* font_size:** Pixel size of the font. Default to 12.<br />
 
 #### Returns
 None
@@ -4037,7 +4254,7 @@ Displays an image on Zumi's screen taken from Zumi's camera.
 ```show_image(frame)```<br />
 
 #### Parameters
-**frame:** An image array 
+***ndarray* frame:** A NumPy array representing a captured image
 
 #### Returns
 None
