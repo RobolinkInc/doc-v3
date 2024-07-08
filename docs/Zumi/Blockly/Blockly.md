@@ -18,8 +18,8 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![What is Blockly?](/img/Zumi/what-is-icon.png)](/docs/Zumi/Blockly/What-is-Blockly)
-  [What is Blockly?](/docs/Zumi/Blockly/What-is-Blockly)  
+  <!--[![What is Blockly?](/img/Zumi/what-is-icon.png)](/docs/Zumi/Blockly/What-is-Blockly)
+  [What is Blockly?](/docs/Zumi/Blockly/What-is-Blockly)-->
 
 
   [![Junior Block Documentation](/img/Zumi/doc-app.png)](/docs/Zumi/Blockly/Junior-Block-Documentation)
@@ -36,8 +36,8 @@ customHeadElements:
   [![Senior Block Documentation](/img/Zumi/doc-app.png)](/docs/Zumi/Blockly/Senior-Block-Documentation)
   [Senior Block<br />Documentation](/docs/Zumi/Blockly/Senior-Block-Documentation) 
 
-  [![Blockly Changelog](/img/Zumi/doc-app.png)](/docs/Zumi/Blockly/Blockly-Changelog)
-  [Blockly Changelog](/docs/Zumi/Blockly/Blockly-Changelog)
+  <!--[![Blockly Changelog](/img/Zumi/doc-app.png)](/docs/Zumi/Blockly/Blockly-Changelog)
+  [Blockly Changelog](/docs/Zumi/Blockly/Blockly-Changelog)-->
 
 </div>
 

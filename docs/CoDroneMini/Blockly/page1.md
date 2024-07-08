@@ -1,6 +1,6 @@
 ---
-title: "What is Blockly?"
-slug: What-is-Blockly
+title: "How to use Blockly"
+slug: How-to-use-Blockly
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
