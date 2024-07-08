@@ -1,15 +1,19 @@
 ---
 title: "Junior Block Documentation"
+slug: Junior-Block-Documentation
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body' >
 
 <div className='print_div'>
 
 <button id="print_page" onClick={() => window.print()}>Print</button>
 
+</div>
+
+<div className='change_version'>
+version 2.1.8 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 </div>
 
 ## Flight Commands
@@ -84,7 +88,7 @@ None
 <img src="/img/CDE/blockly_docu/junior/hover.png" width="220px"/>  
 
 #### Parameters
-**duration:** positive integer in seconds
+***integer* duration:** the duration of hover, in seconds
 
 #### Description
 This function makes the drone hover in place for a given duration in seconds.
@@ -109,8 +113,8 @@ None
 <img src="/img/CDE/blockly_docu/junior/go_at_power_params.png" width="480px"/> 
 
 **direction:** forward, backward, up, down, left, right     
-**duration:** positive integer in seconds       
-**power:** positive integer between 0 and 100
+***integer* duration:** the duration of movement, in seconds       
+***integer* power:** the power/speed of drone between 0 and 100
 
 #### Description
 This function flies the drone in a direction for a given duration and a power percentage.
@@ -135,7 +139,7 @@ None
 <img src="/img/CDE/blockly_docu/junior/turn_to_params.png" width="240px"/>  
 
 **direction:** left, right      
-**degrees:** integer from -180 to +180
+***integer* degrees:** the angle of the turn between -180 and +180
 
 #### Description
 Turns CoDrone EDU to the left or to the right a given number of degrees.
@@ -157,8 +161,8 @@ None
 
 #### Parameters
 **direction:** left, right      
-**duration:** positive integer in seconds       
-**power:** integer between 0 and 100
+***integer* duration:** the duration of the movement, in seconds       
+***integer* power:** the power/speed of the drone between 0 and 100
 
 #### Description
 Turns CoDrone EDU to the left or to the right for a duration in seconds at a percentange of power.
@@ -170,7 +174,7 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/turn_direction_seconds_power_example.png" width="450px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Flight Sequences
 
@@ -197,31 +201,8 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 
 <img src="/img/CDE/blockly_docu/junior/flip_example.png" width="500px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
-## Status Checkers
-
-### code is running
-
-#### Block
-
-<img src="/img/CDE/blockly_docu/junior/code_is_running.png" width="150px"/>  
-
-#### Parameters
-None
-
-#### Description
-Returns a True value while your code is running. Use this block instead of "while True" when you want to run a "forever" loop. Use the "Stop" button in Blockly to stop the program.
-
-#### Returns
-**boolean:** returns true if program is running, false if user presses "Stop"
-
-#### Example
-This example cycles the colors from red, green, blue forever. Pressing the "Stop" will interrupt the while loop and stop the program.
-
-<img src="/img/CDE/blockly_docu/junior/code_is_running_example.png" width="500px"/>  
-
-<hr/>
 
 ## Lights
 
@@ -236,7 +217,7 @@ This example cycles the colors from red, green, blue forever. Pressing the "Stop
 <img src="/img/CDE/blockly_docu/junior/set_drone_led_params.png" width="450px"/>  
 
 **color:** select a color from the color palette        
-**brightness:** positive integer between 0 and 255
+***integer* brightness:** the brightness of the LED between 0 and 255
 
 #### Description
 Sets the color and brightness of the CoDrone EDU drone LED.
@@ -282,7 +263,7 @@ None
 <img src="/img/CDE/blockly_docu/junior/set_controller_LED_params.png" width="475px"/>  
 
 **color:** select a color from the color palette        
-**brightness:** positive integer between 0 and 255
+***integer* brightness:** positive integer between 0 and 255
 
 #### Description
 Sets the color and brightness of the CoDrone EDU controller LED.
@@ -315,7 +296,7 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/controller_led_off_example.png" width="480px"/>  
 
-<hr/>
+<hr className="section_hr"/>
 
 ## Sound
 
@@ -330,7 +311,7 @@ None
 <img src="/img/CDE/blockly_docu/junior/play_note_drone_params.png" width="430px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin       
-**duration:** positive integer in seconds
+***integer* duration:** the duration of the note played, in seconds
 
 #### Description
 Plays a note for a duration in seconds using the CoDrone EDU drone buzzer.
@@ -355,7 +336,7 @@ None
 <img src="/img/CDE/blockly_docu/junior/play_note_controller_params.png" width="450px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin       
-**duration:** positive integer in seconds
+***integer* duration:** the duration of the note played, in seconds
 
 #### Description
 Plays a note for a duration in seconds using the CoDrone EDU controller buzzer.
@@ -368,5 +349,3 @@ None
 <img src="/img/CDE/blockly_docu/junior/play_note_controller_example.png" width="450px"/>  
 
 <hr/>
-
-</div>

@@ -17,12 +17,12 @@ customHeadElements:
 
 </div>
 
-CoDrone EDU의 여정에 오신 것을 환영합니다. CoDrone EDU는 교실에서 학습하기 위한 프로그래밍 가능한 드론입니다.   
-파이썬으로 코딩하거나 블록 기반 코딩으로 기본부터 시작합니다.   
+Welcome to CoDrone EDU’s journey. The CoDrone EDU is a programmable drone, meant for learning in the classroom.  
+Code it in Python or start from the basics with block-based coding.  
 
 <br />
 
-페이지로 이동하려면 아래 탭을 클릭하십시오.      
+Please click the tab below to go to the page.   
 
 <div className='level_image_column'>
 
@@ -37,5 +37,7 @@ CoDrone EDU의 여정에 오신 것을 환영합니다. CoDrone EDU는 교실에
 
 
 </div>
+
+<div id='blank'></div>
 
 </div>

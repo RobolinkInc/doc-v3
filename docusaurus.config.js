@@ -28,7 +28,9 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ko', 'ja'],
+    locales: ['en', 'ko'
+    //'ja'
+    ],
     localeConfigs: {
       en: {
         htmlLang: 'en-GB',
@@ -36,11 +38,11 @@ const config = {
       ko: {
         htmlLang: 'ko-KR',
         label: '한글 Korean', 
-      },
-      ja: {
-        htmlLang: 'ja-JP',
-        label: '日本語 Japanese',
       }
+      // ja: {
+      //   htmlLang: 'ja-JP',
+      //   label: '日本語 Japanese',
+      // }
     },
   },
 
@@ -163,7 +165,9 @@ const config = {
     }),
     plugins: [
       [require.resolve('docusaurus-lunr-search'),{
-        languages:['en', 'ko', 'ja'],
+        languages:['en', 'ko'
+        //,'ja'
+        ],
       }],
       [
         '@docusaurus/plugin-pwa',
