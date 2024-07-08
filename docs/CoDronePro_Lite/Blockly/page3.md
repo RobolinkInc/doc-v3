@@ -12,6 +12,11 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 0.0.0 ([Changelog](/docs/CoDronePro_Lite/Blockly/Blockly-Changelog))
+</div>
+
+
 ## Flight Commands
 
 ### take off
