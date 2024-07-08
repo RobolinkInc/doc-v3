@@ -126,7 +126,7 @@
 
 
 .navbar__items .dropdown__menu {
-  height: 155px;
+  height: 113px;
   border-radius: 10px;
   background-color: #3F4351;
   color: white; 
@@ -1019,102 +1019,113 @@ nav.thin-scrollbar a {
   margin: 40px 0 40px 0;
 }
 
-.language-python {
+.language-python,
+.language-c {
   margin-right: 30px;
 }
 
-.language-python div > pre {
+.language-python span,
+.language-c span{
+  font-size: 16px;
+}
+
+code div > pre {
   background-color: #F6F8FA !important;
 }
 
-.language-python .token {
+code .token {
   color: #000000;
 }
 
-.language-python .token.comment {
+code .token.comment {
   color: #A5A5A0 !important;
 }
 
-.language-python .token.keyword {
+code .token.keyword {
   color: #372EA5 !important;
 }
 
-.language-python .token.punctuation {
+code .token.punctuation {
   color: #000000 !important;
 }
 
-.language-python .token.string {
+code .token.string {
   color: #F2184D !important;
 }
 
-.language-python .token.operator {
+code .token.operator {
   color: #000000 !important;
 }
 
-.language-python .token.number {
+code .token.number {
   color: #1FA79F !important;
 }
 
-.language-python .clean-btn {
+.language-python .clean-btn,
+.language-c .clean-btn {
   background-color: rgba(172, 173, 175, 60) !important;
 }
 
-.language-python .clean-btn span {
+.language-python .clean-btn span,
+.language-c .clean-btn span {
   color: #FFFFFF;;
 }
 
 code {
   border: none;
-  background-color: #E1E0E0;
+  background-color: #e1e0e0;
   border-radius: 3px;
   padding: 2px;
 }
 
-.language-python code {
+pre code {
   background-color: #F6F8FA;
+  white-space: pre-wrap; 
+  word-break: break-all;
 }
 
 [data-theme='dark'] code {
   background-color: #666666;
 }
 
-[data-theme='dark'] .language-python code {
+[data-theme='dark'] pre code {
   background-color: #303030;
 }
 
-[data-theme='dark'] .language-python .token.string {
+
+[data-theme='dark'] code .token.string {
   color: #FE84A1 !important;
 }
 
-[data-theme='dark'] .language-python .clean-btn {
+[data-theme='dark'] code .clean-btn {
   background-color: #353535 !important;
 }
 
-[data-theme='dark'] .language-python div > pre {
+[data-theme='dark'] code div > pre {
   background-color: #666666 !important;
 }
 
-[data-theme='dark'] .language-python .token {
+[data-theme='dark'] code .token {
   color: #FFFFFF;
 }
 
-[data-theme='dark'] .language-python .token.comment {
+[data-theme='dark'] code .token.comment {
   color: #DEDEDD !important;
 }
 
-[data-theme='dark'] .language-python .token.keyword {
+[data-theme='dark'] code .token.keyword {
   color: #3D8AFF !important;
 }
 
-[data-theme='dark'] .language-python .token.number {
+[data-theme='dark'] code .token.number {
   color: #A7FFFA !important;
 }
 
-[data-theme='dark'] .language-python .token.punctuation {
+[data-theme='dark'] code .token.punctuation {
   color: #FFFFFF !important;
 }
 
-[data-theme='dark'] .language-python .token.operator {
+[data-theme='dark'] code .token.operator {
   color: #FFFFFF !important;
 }
 

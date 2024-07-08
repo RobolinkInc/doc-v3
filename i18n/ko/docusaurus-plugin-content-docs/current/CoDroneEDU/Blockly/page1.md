@@ -1,20 +1,20 @@
 ---
-title: "BLockly란?"
+title: "Blockly란 무엇인가요?"
+slug: What-is-Blockly
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
 
-## Blockly란?
+## Blockly란 무엇인가요?
 
-드래그 앤 드롭 블록으로 코딩의 기초를 시각적 프로그래밍 언어로 학습합니다. 이곳은 초보 프로그래머와 드론 조종사에게 훌륭한 출발점입니다.    
+Learn the foundations of coding with drag-and-drop blocks in our visual programming language. This is an excellent starting place for beginner programmers and drone pilots.
 
-Blockly는 파이썬을 기반으로 로보링크에서 나온 블록 코딩 프로그램입니다. 블록의 종류는 난이도에 따라 초급 블록과 고급 블록으로 나뉩니다.    
+Blockly is a block coding program from Robolink based on python. The types of blocks are divided into junior blocks and senior blocks according to the difficulty level.  
 
-초급 블록에는 (CoDrone EDU 블록) 비행 명령, 비행 시퀀스, 상태 확인, LED, 소리, (프로그래밍 블록) 이벤트, 입출력, 논리, 반복, 수학, 시간, 변수, 리스트 등이 있습니다.    
+Junior blocks have these things: (CoDrone EDU blocks) Flight Commands, Flight Sequences, Status Checkers, Lights, Sounds, (Programming blocks) Events, Input/Output, Logic, Loops, Math, Timing, Variables, Lists. 
 
-시니어 블록에는 (CoDrone EDU 블록) 비행 명령, 비행 변수, 상태 확인, 센서, LED, 소리, 화면, 색상, (프로그래밍 블록) 이벤트, 입출력, 논리, 반복, 수학, 시간, 변수, 함수, 리스트 등이 있습니다.    
+Senior blocks have these things: (CoDrone EDU blocks) Flight Commands, Flight Variables, Status Checkers, Sensors, Lights, Sounds, Screen, Colors, (Programming blocks) Events, Input/Output, Logic, Loops, Math, Timing, Variables, Functions, Lists.
 
 ### Device requirements
 
@@ -31,4 +31,3 @@ Try to use the cable that comes with CoDrone EDU whenever possible! This Micro U
 
 
 
-</div>

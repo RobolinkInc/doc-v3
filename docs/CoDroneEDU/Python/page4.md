@@ -150,7 +150,7 @@ drone.close()
 
 
 #### Parameters
-***integer* roll:** the power of the roll (-100 - 100)
+***integer* roll:** the power of the roll (-100 - 100)  
 ***integer* pitch:** the power of the pitch (-100 - 100)
 
 #### Description

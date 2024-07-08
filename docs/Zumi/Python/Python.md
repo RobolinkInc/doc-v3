@@ -15,19 +15,15 @@ customHeadElements:
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
 
-  <!--[![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/What-is-Python)
-  [What is Python?](/docs/CoDroneEDU/Python/What-is-Python)--> 
+  [![What is Python?](/img/Zumi/what-is-icon.png)](/docs/Zumi/Python/What-is-Python)
+  [What is Python?](/docs/Zumi/Python/What-is-Python)  
 
-  <!--[![Setup and Installation](/img/CDE/set-up.png)](/docs/CoDroneEDU/Python/Setup-and-Installation)
-  [Setup and Installation](/docs/CoDroneEDU/Python/Setup-and-Installation)-->
-
-  <!--[![Update Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
-  [Update Library](/docs/CoDroneEDU/Python/Updating-Library)-->
-
+  [![Function Documentation](/img/Zumi/doc-app.png)](/docs/Zumi/Python/Function-Documentation)
+  [Function<br />Documentation](/docs/Zumi/Python/Function-Documentation)
 
 </div>
 
@@ -37,11 +33,11 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Function Documentation](/img/CDE/doc-app.png)](/docs/Zumi/Python/Function-Documentation)
-  [Function<br />Documentation](/docs/Zumi/Python/Function-Documentation)
+  [![Python Changelog](/img/Zumi/doc-app.png)](/docs/Zumi/Python/Python-Changelog)
+  [Python Changelog](/docs/Zumi/Python/Python-Changelog)
 
-  <!--[![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Python-Changelog)
-  [Python Changelog](/docs/CoDroneEDU/Python/Python-Changelog)-->
+  [![page4](/img/Zumi/doc-app.png)](/docs/Zumi/Python/page4)
+  [page4](/docs/Zumi/Python/page4)
 
 </div>
 

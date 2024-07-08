@@ -79,38 +79,6 @@ window.addEventListener("message", (event) => {
     }
 });
 
-// function handleSearchFocus() {
-//     var navbar_it = document.querySelector('.navbar__items');
-//     var search_bar = document.querySelector('.navbar__search-input');
-//     var navbar = document.querySelector('.navbar');
-//     const total_width = navbar.offsetWidth;
-//     var num = (total_width - 312)/2;
-//     navbar_it.style.display = 'none';
-//     search_bar.style.marginRight = num+'px';
-// }
-
-// function handleSearchFocusOut() {
-//     var navbar_it = document.querySelector('.navbar__items');
-//     var search_bar = document.querySelector('.navbar__search-input');
-//     navbar_it.style.display = '';
-//     search_bar.style.marginRight = '';
-// }
-
-
-// const waitForSearchbar = setInterval(() => {
-//     var navbarSearch = document.querySelector('.navbar__search-input');
-
-//     if (navbarSearch) {
-//         if(window.matchMedia('(max-width: 600px)').matches) {
-//             navbarSearch.addEventListener('focus', handleSearchFocus);            
-
-//             navbarSearch.addEventListener('focusout', handleSearchFocusOut);
-
-//             clearInterval(waitForSearchbar); 
-//         }
-//     }
-// }, 100);
-
 
 const waitForPopup = setInterval(() => {
     var popupBtn = document.getElementById('popupBtn');

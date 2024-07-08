@@ -11,6 +11,10 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 0.0.0 ([Changelog](/docs/CoDronePro_Lite/Arduino/Arduino-Changelog))
+</div>
+
 ## Connection
 
 ### disconnect()
@@ -28,7 +32,6 @@ None
 None
 
 #### Example Code
-###### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>		//header
@@ -62,14 +65,13 @@ This function pairs the BLE board to the CoDrone.  After establishing a connecti
 ```pair(bluetoothAddress)```
 
 #### Parameters
-** Nearest:** If you specify ```Nearest``` in Arduino, it will pair with the first drone it finds (which may not always be the nearest CoDrone, in some cases, just the first CoDrone it finds). This function can be used to "unlock" the drone from only pairing with the CoDrone it's been "locked in" with. Once you've paired with a nearest CoDrrone, you can run ```pair()``` again with no parameters, and it will only pair with the "locked in" CoDrone.<br />
+**Nearest:** If you specify ```Nearest``` in Arduino, it will pair with the first drone it finds (which may not always be the nearest CoDrone, in some cases, just the first CoDrone it finds). This function can be used to "unlock" the drone from only pairing with the CoDrone it's been "locked in" with. Once you've paired with a nearest CoDrrone, you can run ```pair()``` again with no parameters, and it will only pair with the "locked in" CoDrone.<br />
 **address:** This is the address of the CoDrone. In Arduino, this is a 6-index array of bytes representing the Bluetooth address.
 
 #### Returns
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>		//header
@@ -119,7 +121,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -155,9 +156,7 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
-//Arduino code
 //Arduino code
 #include<CoDrone.h>     //header
 
@@ -195,7 +194,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -235,7 +233,6 @@ This function make drone fly specific shape and hover after finish. The options 
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -274,7 +271,6 @@ It’s effective between 20 and 2000 millimeters. It uses the IR sensor to conti
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -313,7 +309,6 @@ A simpler Junior level function that represents positive flight with a direction
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -350,7 +345,6 @@ This function makes the drone hover for a given amount of time. If you enter a 0
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>
@@ -386,7 +380,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 ```
 <hr/>
@@ -407,7 +400,6 @@ A Senior level function that yaws by a given degree in a given direction. This f
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -446,7 +438,6 @@ A function that represents yaw, but with more natural language. It simply turns 
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -485,7 +476,6 @@ None
 **power:** The power of the pitch variable (int)
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -519,7 +509,6 @@ None
 **power:** The power of the roll variable (int)
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -553,7 +542,6 @@ None
 **power:** The power of the throttle variable (int)
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -587,7 +575,6 @@ None
 **power:** The power of the yaw variable (int)
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -629,7 +616,6 @@ You can use this function to create more complex flight movements.  With no para
 None
 
 #### Example Code
-##### Arduino
 ```c
 #include<CoDrone.h>     //header
 
@@ -675,7 +661,6 @@ This is a setter function that allows you to set the pitch variable.
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -712,7 +697,6 @@ This is a setter function that allows you to set the roll variable.
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -749,7 +733,6 @@ This is a setter function that allows you to set the throttle variable.
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -786,7 +769,6 @@ This is a setter function that allows you to set the yaw variable.
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -830,7 +812,6 @@ This function sets the LED color of the arms using RGB values and their brightne
 None
 
 #### Example Code
-##### Arduino
 ```c
 /Arduino code
 #include<CoDrone.h>     //header
@@ -919,7 +900,6 @@ This function sets the default LED color of the eyes as well as the mode, so it 
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -962,7 +942,6 @@ This function sets the default color of the arm LED lights to flash in a particu
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -997,7 +976,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1039,7 +1017,6 @@ This function sets the color of the arm LED lights to flash in a particular pre-
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1074,7 +1051,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1114,7 +1090,6 @@ This function sets the LED color of the arms using RGB values and their brightne
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1152,7 +1127,6 @@ This function sets the default LED color of the eyes using RGB values and their 
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1195,7 +1169,6 @@ This function sets the default color of the eyes LED lights to flash in a partic
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1230,7 +1203,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1273,7 +1245,6 @@ This function sets the color of the eye LED lights to flash in a particular pre-
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1308,7 +1279,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1343,7 +1313,6 @@ None
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1380,7 +1349,6 @@ None
 **Boolean:** Returns True/False whether the drone is flying
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1415,7 +1383,6 @@ None
 **Boolean:** Returns True/False whether the drone is ready to fly.
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1450,7 +1417,6 @@ None
 **Boolean:** Returns True/False whether the drone is upside-down
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 #include<CoDrone.h>     //header
@@ -1485,7 +1451,6 @@ Add callback function when CoDrone battery percentage is lower than 50%
 None
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Not supported
@@ -1509,7 +1474,6 @@ None
 ***struct* acceldata:** Returns a struct with acceleration data.
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1559,7 +1523,6 @@ None
 ***struct* gyrodata:** Returns a struct with angular speed data.
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1609,7 +1572,6 @@ None
 **percentage:** The battery’s percentage as an integer from 0 - 100.
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1654,7 +1616,6 @@ None
 **voltage:** The voltage of the battery as an a float
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1699,7 +1660,6 @@ None
 **temperature:** The temperature in Celsius as an integer.
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1744,7 +1704,6 @@ None
 ***struct* angledata:** Returns a struct with angle data.
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1794,7 +1753,6 @@ None
 **height:** The current height above the object directly below the drone’s IR height sensor as an int (mm).
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1840,7 +1798,6 @@ None
 ***struct* optdata:** Returns a struct with optical flow sensor data
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1888,7 +1845,6 @@ None
 **pressure:** The barometer’s air pressure in millibars at (0.13 resolution).
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1933,7 +1889,6 @@ None
 ***enum* state:** Returns an enum value (fMode_Ready, fMode_TakeOff, fMode_Flight, fMode_Flip, fMode_Stop, fMode_Landing, fMode_Reverse, fMode_Accident, fMode_Error).
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor
@@ -1976,7 +1931,6 @@ None
 ***struct* trimdata:** Returns a struct with trim data
 
 #### Example Code
-##### Arduino
 ```c
 //Arduino code
 //Code for print request data to serial monitor

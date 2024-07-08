@@ -1,11 +1,10 @@
 ---
 title: "Python Changelog"
+slug: Python-Changelog
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-
-<div className='level3_body'>
 
 ## CoDrone EDU Library Changelog
 
@@ -206,5 +205,3 @@ customHeadElements:
 - Added Drone.land()
 
 <hr/>
-
-</div>

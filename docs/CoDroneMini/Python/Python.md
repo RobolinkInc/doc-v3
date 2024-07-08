@@ -11,7 +11,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDE/Python-logo.png" width="220px"/>
+  <img src="/img/CDM/Python-logo.png" width="220px"/>
 
 </div>
 
@@ -19,14 +19,14 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  <!--[![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/What-is-Python)
-  [What is Python?](/docs/CoDroneEDU/Python/What-is-Python)--> 
+  [![What is Python?](/img/CDM/what-is-icon.png)](/docs/CoDroneMini/Python/What-is-Python)
+  [What is Python?](/docs/CoDroneMini/Python/What-is-Python)  
 
-  [![Setup and Installation](/img/CDE/set-up.png)](/docs/CoDroneMini/Python/Setup-and-Installation)
+  [![Setup and Installation](/img/CDM/set-up.png)](/docs/CoDroneMini/Python/Setup-and-Installation)
   [Setup and Installation](/docs/CoDroneMini/Python/Setup-and-Installation)
 
-  <!--[![Update Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
-  [Update Library](/docs/CoDroneEDU/Python/Updating-Library)-->
+  [![Update Library](/img/CDM/python-update-icon.png)](/docs/CoDroneMini/Python/Update-Library)
+  [Update Library](/docs/CoDroneMini/Python/Update-Library)
 
 
 </div>
@@ -37,10 +37,10 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneMini/Python/Function-Documentation)
+  [![Function Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Python/Function-Documentation)
   [Function<br />Documentation](/docs/CoDroneMini/Python/Function-Documentation)
 
-  [![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneMini/Python/Python-Changelog)
+  [![Python Changelog](/img/CDM/doc-app.png)](/docs/CoDroneMini/Python/Python-Changelog)
   [Python Changelog](/docs/CoDroneMini/Python/Python-Changelog)
 
 </div>

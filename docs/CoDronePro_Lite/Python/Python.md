@@ -11,7 +11,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDE/Python-logo.png" width="220px"/>
+  <img src="/img/CDPL/Python-logo.png" width="220px"/>
 
 </div>
 
@@ -19,14 +19,14 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  <!--[![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/What-is-Python)
-  [What is Python?](/docs/CoDroneEDU/Python/What-is-Python)-->  
+  [![What is Python?](/img/CDPL/what-is-icon.png)](/docs/CoDronePro_Lite/Python/What-is-Python)
+  [What is Python?](/docs/CoDronePro_Lite/Python/What-is-Python)  
 
-  <!--[![Setup and Installation](/img/CDE/set-up.png)](/docs/CoDroneEDU/Python/Setup-and-Installation)
-  [Setup and Installation](/docs/CoDroneEDU/Python/Setup-and-Installation)-->
+  [![Setup and Installation](/img/CDPL/set-up.png)](/docs/CoDronePro_Lite/Python/Setup-and-Installation)
+  [Setup and Installation](/docs/CoDronePro_Lite/Python/Setup-and-Installation)
 
-  <!--[![Update Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
-  [Update Library](/docs/CoDroneEDU/Python/Updating-Library)-->
+  [![Update Library](/img/CDPL/python-update-icon.png)](/docs/CoDronePro_Lite/Python/Update-Library)
+  [Update Library](/docs/CoDronePro_Lite/Python/Update-Library)
 
 
 </div>
@@ -37,11 +37,11 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDronePro_Lite/Python/Function-Documentation)
+  [![Function Documentation](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Python/Function-Documentation)
   [Function<br />Documentation](/docs/CoDronePro_Lite/Python/Function-Documentation)
 
-  <!--[![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Python-Changelog)
-  [Python Changelog](/docs/CoDroneEDU/Python/Python-Changelog)-->
+  [![Python Changelog](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Python/Python-Changelog)
+  [Python Changelog](/docs/CoDronePro_Lite/Python/Python-Changelog)
 
 </div>
 
