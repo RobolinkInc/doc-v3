@@ -14,11 +14,11 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Digital User Manual](/img/CDE/pdf-doc-icon.png)](/docs/CoDroneEDU/Documents/page1/)
-  [Digital User Manual](/docs/CoDroneEDU/Documents/page1/)
+  [![Digital User Manual](/img/CDE/pdf-doc-icon.png)](/docs/CoDroneEDU/Documents/Digital-User-Manual)
+  [Digital User Manual](/docs/CoDroneEDU/Documents/Digital-User-Manual)
 
-  [![Firmware](/img/CDE/firmware-icon.png)](/docs/CoDroneEDU/Documents/page2/)
-  [Firmware](/docs/CoDroneEDU/Documents/page2/)
+  [![Firmware](/img/CDE/firmware-icon.png)](/docs/CoDroneEDU/Documents/Firmware)
+  [Firmware](/docs/CoDroneEDU/Documents/Firmware)
 
 </div>
 
@@ -28,15 +28,17 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Documents/page3/)
-  [Technical Specifications<br />Summary](/docs/CoDroneEDU/Documents/page3/)
+  [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Documents/Technical-Specifications-Summary)
+  [Technical Specifications<br />Summary](/docs/CoDroneEDU/Documents/Technical-Specifications-Summary)
 
-  <!-- [![Complete User and<br />Safety Guide](/img/CDE/safety-guide-icon.png)](/docs/CoDroneEDU/Documents/page4/)
-  [Complete User and<br />Safety Guide](/docs/CoDroneEDU/Documents/page4/) -->
+  <!-- [![Complete User and<br />Safety Guide](/img/CDE/safety-guide-icon.png)](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide)
+  [Complete User and<br />Safety Guide](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide) -->
 
-  [![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/page5/)
-  [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/page5/)
+  [![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
+  [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
 
 </div>
+
+<div id='blank'></div>
 
 </div>

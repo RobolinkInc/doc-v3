@@ -1,15 +1,56 @@
 ---
 title: "Blockly Changelog"
+slug: Blockly-Changelog
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-<div className='level3_body'>
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.1.8
+#### June 12, 2024
+
+- Changed "color classifiers" to "color data sets"
+- Resolved bug where not all labels were loaded from a colorset
+- Disabled "code_is_running" block
+- Resolved bug where right-click delete did not delete the generated code in the Python tab
+- Implemented an alert when the user forgets to load a colorset
+- Updated Japanese translations
+- Enhanced "when start" feature that only allows one block at a time in the workspace
+- Reset the "Run code" button interface when "land" is pressed
+
+<hr/>
+
+### Version 2.1.7
+#### May 21, 2024
+
+- Fixed bug causing crashes when color sensor returns "unknown"
+- Enhanced takeoff command by adding checks for the drone flight state after takeoff
+- Resolved bug where some blocks don't disable when using the "when start" block
+- Implemented feature that only allows one "when start" block at a time
+- Disabled the asynchronous "when keyboard press" block to improve stability
+- Added multi-language support for the "How to Connect" popup
+- Corrected drone model display issue in the connection window without needing a refresh
+
+<hr/>
+
+### Version 2.1.6
+#### April 18, 2024
+
+- Fixed bug with generated Python code for avoid_wall()
+- New pop-up window When drone or controller disconnects from Blockly
+- Updated wording from "Pair with Blockly" to "Connect to Blockly"
+- Updated messaging for adding or loading a colorset with clearer instructions
+- Added a notice for JROTC edition users to first calibrate their color sensor before adding a color set
+- Back-end changes to ensure Blockly is checking for the latest versions
+- "Open" menu option only allows .XML as options
+- Back-end changes to improve timing logs
+
+<hr/>
+
 ### Version 2.1.5
-#### February 26th, 2024
+#### February 26, 2024
 - Disabled battery requests during takeoff
 - Implemented an error-logging system so users can report an error from the menu
 - Implemented analytics
@@ -19,7 +60,7 @@ customHeadElements:
 <hr/>
 
 ### Version 2.1.4
-#### February 14th, 2024
+#### February 14, 2024
 - Updated drone visuals to match CoDrone EDU (JROTC ed.) when connected     
 - Temporarily disabled "Screen" category for JROTC ed.    
 - Improvements to firmware notifications in the connection box
@@ -56,5 +97,3 @@ customHeadElements:
 - Small changes in the Python generated code output to reflect the latest library
 
 <hr/>
-
-</div>

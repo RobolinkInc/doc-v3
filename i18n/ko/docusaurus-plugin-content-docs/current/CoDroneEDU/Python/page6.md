@@ -1,11 +1,10 @@
 ---
 title: "Webpy Changelog"
+slug: Webpy-Changelog
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-
-<div className='level3_body'>
 
 ## CoDrone EDU Library Changelog
 
@@ -14,5 +13,3 @@ customHeadElements:
 - updating...
 
 <hr/>
-
-</div>
