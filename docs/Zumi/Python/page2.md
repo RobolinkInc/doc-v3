@@ -11,6 +11,10 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 0.0.0 ([Changelog](/docs/Zumi/Python/Python-Changelog))
+</div>
+
 ## MPU
 
 ### calibrate_gyro()

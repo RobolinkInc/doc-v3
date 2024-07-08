@@ -11,6 +11,10 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 0.0.0 ([Changelog](/docs/CoDronePro_Lite/Python/Python-Changelog))
+</div>
+
 ## Connection
 
 ### disconnect()
