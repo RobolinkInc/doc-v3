@@ -48,6 +48,12 @@
   height: 60px;
 }
 
+
+.document-div p {
+  font-weight: 200;
+  font-size: 15px !important;
+}
+
 .change_version {
   margin-bottom: -20px;
 }
@@ -601,8 +607,13 @@ a.feature {
 div.main-wrapper {
   background-image: url("/img/main/main_background.png");
   background-size: cover;
+  background-color: #FFFFFF;
   position: relative;
   z-index: 0;
+}
+
+[data-theme='dark'] div.main-wrapper {
+  background-color: #191919;
 }
 
 .hero {

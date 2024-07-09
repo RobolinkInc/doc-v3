@@ -156,8 +156,8 @@ const config = {
           <div class="box" id="box">
             <div>
               <a href="https://robolink.helpdocs.io/" target="_blank" rel="noopener noreferrer"> Robolink Help&nbsp;</a> |
-              <a href="#"> &nbsp;Terms of use&nbsp;</a> |
-              <a href="#"> &nbsp;Privacy</a>
+              <a href="/docs/terms-of-use"> &nbsp;Terms of use&nbsp;</a> |
+              <a href="/docs/privacy-policy"> &nbsp;Privacy</a>
             </div>
           </div>
         </div>`,
