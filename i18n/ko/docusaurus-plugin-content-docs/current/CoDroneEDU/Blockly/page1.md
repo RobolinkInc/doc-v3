@@ -1,12 +1,12 @@
 ---
-title: "Blockly란 무엇인가요?"
+title: "What is Blockly?"
 slug: What-is-Blockly
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
 
-## Blockly란 무엇인가요?
+## What is Blockly?
 
 Learn the foundations of coding with drag-and-drop blocks in our visual programming language. This is an excellent starting place for beginner programmers and drone pilots.
 
