@@ -7,7 +7,7 @@ customHeadElements:
 
 <div className="document-div">
 
-<h2>Education and Children’s Privacy Notice</h2>
+<h2>교육 및 어린이 개인 정보 정책</h2>
 
 <h5>Last Updated: Jun 18, 2024</h5>
 

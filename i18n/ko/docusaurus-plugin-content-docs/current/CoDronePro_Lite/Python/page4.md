@@ -11,6 +11,10 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 0.0.0 ([Changelog](/docs/CoDronePro_Lite/Python/Python-Changelog))
+</div>
+
 ## Connection
 
 ### disconnect()
@@ -28,7 +32,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -60,7 +63,6 @@ This function pairs the BLE board to the CoDrone. After establishing a connectio
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -101,7 +103,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -114,7 +115,8 @@ drone.hover(3)
 drone.land()
 drone.close()
 ```
-<br/>
+
+<hr/>
 
 ### land()
 
@@ -131,7 +133,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -144,7 +145,8 @@ drone.hover(3)
 drone.land() # lands the CoDrone
 drone.close()
 ```
-<br/>
+
+<hr/>
 
 ### emergency_stop()
 
@@ -162,7 +164,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -193,7 +194,6 @@ This function make drone fly specific shape and hover after finish. The options 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -227,7 +227,6 @@ It’s effective between 20 and 2000 millimeters. It uses the IR sensor to conti
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -262,7 +261,6 @@ A simpler Junior level function that represents positive flight with a direction
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -296,7 +294,6 @@ If you enter a 0 or None, it will hover indefinitely until given a another comma
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -326,7 +323,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -359,7 +355,6 @@ This function takes an input degree in an input direction, and turns until it re
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -394,7 +389,6 @@ A function that represents yaw, but with more natural language. It simply turns 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -429,7 +423,6 @@ None
 **power:** returns the power of the pitch variable (int)
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -438,7 +431,7 @@ drone = CoDrone.CoDrone()
 drone.pair()
 
 # Print current pitch with getter function
-print(“Current pitch : ”, drone.get_pitch())
+print("Current pitch : ", drone.get_pitch())
 drone.close()
 ```
 <hr/>
@@ -458,7 +451,6 @@ None
 **power:** The power of the roll variable (int)
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -467,7 +459,7 @@ drone = CoDrone.CoDrone()
 drone.pair()
 
 # Print current roll with getter function
-print(“Current Roll : ”, drone.get_roll())
+print("Current Roll : ", drone.get_roll())
 drone.close()
 ```
 <hr/>
@@ -487,7 +479,6 @@ None
 **power:** The power of the throttle variable (int)
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -496,7 +487,7 @@ drone = CoDrone.CoDrone()
 drone.pair()
 
 # Print current throttle with getter function
-print(“Current throttle : ”, drone.get_throttle())
+print("Current throttle : ", drone.get_throttle())
 drone.close()
 ```
 <hr/>
@@ -516,7 +507,6 @@ None
 **power:** The power of the yaw variable (int)
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -525,7 +515,7 @@ drone = CoDrone.CoDrone()
 drone.pair()
 
 # Print current yaw with getter function
-print(“Current yaw : ”, drone.get_yaw())
+print("Current yaw : ", drone.get_yaw())
 drone.close()
 ```
 <hr/>
@@ -552,7 +542,6 @@ You can use this function to create more complex flight movements. With no param
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -587,7 +576,6 @@ This is a setter function that allows you to set the pitch variable.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -620,7 +608,6 @@ This is a setter function that allows you to set the roll variable.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -653,7 +640,6 @@ This is a setter function that allows you to set the throttle variable.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -686,7 +672,6 @@ This is a setter function that allows you to set the yaw variable.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -727,7 +712,6 @@ This function sets the LED color of the arms using RGB values and their brightne
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -812,7 +796,6 @@ This function sets the default LED color of the eyes as well as the mode, so it 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -850,7 +833,6 @@ This function sets the default color of the arm LED lights to flash in a particu
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -881,7 +863,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -918,7 +899,6 @@ This function sets the color of the arm LED lights to flash in a particular pre-
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -948,7 +928,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -982,7 +961,6 @@ This function sets the LED color of the arms using RGB values and their brightne
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1015,7 +993,6 @@ This function sets the default LED color of the eyes using RGB values and their 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1053,7 +1030,6 @@ This function sets the default color of the eyes LED lights to flash in a partic
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1083,7 +1059,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1103,10 +1078,10 @@ drone.close()
 This function sets the color of the eye LED lights to flash in a particular pre-set pattern at a given speed.
 
 #### Syntax
-```eye_pattern(color, mode)```
-```eye_pattern(color, mode, speed)```
-```eye_pattern(red, green, blue, mode)```
-```eye_pattern(red, green, blue, mode, speed)```
+```eye_pattern(color, mode)```  
+```eye_pattern(color, mode, speed)```  
+```eye_pattern(red, green, blue, mode)```  
+```eye_pattern(red, green, blue, mode, speed)```  
 
 #### Parameters
 ***enum* Color:** an enum, which can be set using predefined colors out of the list under <a href="#led-color-options">"LED Color Options"</a><br/>
@@ -1120,7 +1095,6 @@ This function sets the color of the eye LED lights to flash in a particular pre-
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1150,7 +1124,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1179,7 +1152,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1209,7 +1181,6 @@ None
 **Boolean:** Returns True/False whether the drone is flying
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1240,7 +1211,6 @@ None
 **Boolean:** Returns True/False whether the drone is ready to fly.
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1271,7 +1241,6 @@ None
 **Boolean:** Returns True/False whether the drone is upside-down
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1302,7 +1271,6 @@ Add callback function when CoDrone battery percentage is lower than 50%
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1338,7 +1306,6 @@ None
 ***class* AccelData:** Returns an acceleration class with x-, y-, and z-acceleration levels 
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1368,7 +1335,6 @@ None
 ***class* GyroAngleData:** Returns a class with angular speed data
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1398,7 +1364,6 @@ None
 **percentage:** The battery’s percentage as an integer from 0 - 100.
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1431,7 +1396,6 @@ None
 **voltage:** The voltage of the battery as an a float
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1461,7 +1425,6 @@ None
 **temperature:** The temperature in Celsius as an integer.
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1502,7 +1465,6 @@ print(GyroAngles.ROLL, GyroAngles.PITCH, GyroAngles.YAW)
 drone.close()
 ```
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1532,7 +1494,6 @@ None
 **height:** The current height above the object directly below the drone’s IR height sensor as an int (mm).
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1573,7 +1534,6 @@ None
 ***class* OptFlowData:** it returns a class in Python indicating optical flow position
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1603,7 +1563,6 @@ None
 **pressure:** The barometer’s air pressure in millibars at (0.13 resolution).
 
 #### Example Code
-##### Python
 ```python
 Python code
 import CoDrone
@@ -1633,7 +1592,6 @@ None
 ***string* state**: Returns a string indicating a state (READY, TAKE_OFF, FLIGHT, FLIP, STOP, LANDING, REVERSE, ACCIDENT, ERROR)
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1667,7 +1625,6 @@ None
 ***class* TrimData:** returns a class indicating trim levels
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone
@@ -1697,7 +1654,6 @@ This function is used for drawing sensor data.  The function should be used in p
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 import CoDrone

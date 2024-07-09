@@ -11,6 +11,10 @@ customHeadElements:
 
 </div>
 
+<div className='change_version'>
+version 0.0.0 ([Changelog](/docs/Zumi/Python/Python-Changelog))
+</div>
+
 ## MPU
 
 ### calibrate_gyro()
@@ -31,7 +35,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -59,7 +62,6 @@ sure Zumi is not moving and is resting on a flat surface.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -103,7 +105,6 @@ None
  7 = accelerating faster than 1g<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -137,7 +138,6 @@ None
 ***float* x-angle:** The current x-angle of the Zumi
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -168,7 +168,6 @@ None
 ***float* y-angle:** The current y-angle of the Zumi
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -199,7 +198,6 @@ None
 ***float* z-angle:** The current z-angle of the Zumi
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -230,7 +228,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -269,7 +266,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -304,7 +300,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -348,7 +343,6 @@ None
 ***list* angles:** The updated list of angles in the following format, ```[Gyro x,Gyro y,Gyro z,Acc x,Acc y,Comp x,Comp y,Rot_x,Rot_y,Rot_z,tilt_state]```
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -383,7 +377,6 @@ Returns True if the back left IR sensor detects a value below a threshold. The v
 ***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -415,7 +408,6 @@ Returns True if the back right IR sensor detects a value below a threshold. The 
 ***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -447,7 +439,6 @@ Returns True if the bottom left IR sensor detects a value below a threshold. The
 ***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -479,7 +470,6 @@ Returns True if the bottom right IR sensor detects a value below a threshold. Th
 ***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -512,7 +502,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -540,7 +529,6 @@ sure Zumi is not moving and is resting on a flat surface.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -575,7 +563,6 @@ Returns True if the front left IR sensor detects a value below a threshold. The 
 ***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -607,7 +594,6 @@ Returns True if the front right IR sensor detects a value below a threshold. The
 ***boolean* detected:** Returns True if sensor is triggered.<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -646,7 +632,6 @@ None
  index 5 - Front left sensor <br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -685,7 +670,6 @@ None
 ***float* voltage:** The battery's voltage in units of Volts. 
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -724,7 +708,6 @@ Get the reading from the IR sensors and the index specified.
 ***integer* IR sensor reading:** IR sensor value for the given sensor (0 - 255).
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -768,7 +751,6 @@ None
 "accelerating"<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -811,7 +793,6 @@ None
  7 = accelerating faster than 1g<br />
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -845,7 +826,6 @@ None
 ***float* x-angle:** The current x-angle of Zumi
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -875,7 +855,6 @@ None
 ***float* x-angle:** The current y-angle of Zumi
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -906,7 +885,6 @@ None
 ***float* x-angle:** The current z-angle of Zumi
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -938,7 +916,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -977,7 +954,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1012,7 +988,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1056,7 +1031,6 @@ None
 ***list* angles:** The updated list of angles in the following format, ```[Gyro x,Gyro y,Gyro z,Acc x,Acc y,Comp x,Comp y,Rot_x,Rot_y,Rot_z,tilt_state]```
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1092,7 +1066,6 @@ Drives Zumi in a counterclockwise circle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1120,7 +1093,6 @@ Drives Zumi in a clockwise circle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1150,7 +1122,6 @@ Drives Zumi in a circle (counterclockwise by default).
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1178,7 +1149,6 @@ Sets the speed of each individual motor. The changes take place immediately. Thi
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1210,7 +1180,6 @@ Zumi will drive over the specified number of alternating black and white horizon
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1243,7 +1212,6 @@ Drives Zumi in a figure 8.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1275,7 +1243,6 @@ If either of the front IR sensor values go below the threshold, Zumi will stop e
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1305,7 +1272,6 @@ Takes one drive "step" to correct for the set heading. This function only works 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1337,7 +1303,6 @@ Drives Zumi forward at a default speed of 40 for 1 second in the direction Zumi 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1375,7 +1340,6 @@ Zumi will try to align to the funnel piece on the competition field (Click [here
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1405,7 +1369,6 @@ Takes one drive "step" in reverse to correct for the set heading. This function 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1437,7 +1400,6 @@ Takes one drive "step" to correct for the set heading. This function only works 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1469,7 +1431,6 @@ Drives Zumi in a j-turn.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1499,7 +1460,6 @@ Drives Zumi in a left u-turn.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1529,7 +1489,6 @@ On the road, Zumi uses the camera to detect lanes and stay inside of them.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1564,7 +1523,6 @@ If both sensors detect white, Zumi will stop even if the duration has not been m
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1605,7 +1563,6 @@ If the angle is not input Zumi will drive to whatever angle it is currently faci
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1647,7 +1604,6 @@ If the angle is not input Zumi will drive to whatever angle it is currently faci
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1685,8 +1641,7 @@ It uses the equation y = mx + b, where:
 #### Returns
 None
 
-#### Example Code
-##### Python Sample 1
+#### Example Code Sample 1
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1699,8 +1654,7 @@ zumi.move_to_coordinate(6,6)
 zumi.move_to_coordinate(0,6)
 zumi.move_to_coordinate(0,0)
 ```
-
-##### Python Sample 2
+ Sample 2
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1713,8 +1667,7 @@ time.sleep(1)
 # zumi wont drive the second time since its already at (10, 0)
 zumi.move_to_coordinate(10,0)
 ```
-
-##### Python Sample 3
+ Sample 3
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1749,7 +1702,6 @@ Drives Zumi in a parallel park maneuver.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1779,7 +1731,6 @@ Drives Zumi in a counterclockwise rectangle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1807,7 +1758,6 @@ Drives Zumi in a clockwise rectangle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1836,7 +1786,6 @@ Drives Zumi in a rectangle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1861,7 +1810,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1897,7 +1845,6 @@ If either of the back IR sensor values go below the threshold, Zumi will stop ev
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1927,7 +1874,6 @@ Takes one drive "step" in reverse to correct for the set heading. This function 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1959,7 +1905,6 @@ Drives Zumi in reverse at a default speed of 40 for 1 second in the direction Zu
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -1994,7 +1939,6 @@ Drives Zumi in a right u-turn.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2024,7 +1968,6 @@ Causes Zumi to gradually accelerate forward to max speed during a given duration
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2055,7 +1998,6 @@ Causes Zumi to gradually accelerate in reverse to max speed during a given durat
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2087,7 +2029,6 @@ Turns left gradually to reach the desired angle while also going forward. Defaul
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2119,7 +2060,6 @@ Turns right gradually to reach the desired angle while also going forward. Defau
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2158,7 +2098,6 @@ This function is necessary for move_to_coordinate(), move_inches(), and move_cen
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2190,7 +2129,6 @@ Drives Zumi in a counterclockwise square.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2217,7 +2155,6 @@ Drives Zumi in a clockwise square.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2245,7 +2182,6 @@ Drives Zumi in a square. Default to counterclockwise.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2272,7 +2208,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2303,7 +2238,6 @@ Drives Zumi in a counterclockwise triangle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2330,7 +2264,6 @@ Drives Zumi in a clockwise triangle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2358,7 +2291,6 @@ Drives Zumi in a triangle. Default is counterclockwise.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2386,7 +2318,6 @@ Causes Zumi to turn left the specified number of degrees. Default to 90 degrees.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2417,7 +2348,6 @@ Causes Zumi to turn right the specified number of degrees. Default to 90 degrees
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2450,7 +2380,6 @@ Zumi will turn to a desired angle.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -2483,7 +2412,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2511,7 +2439,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2535,7 +2462,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2563,7 +2489,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2587,7 +2512,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2615,7 +2539,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2639,7 +2562,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2667,7 +2589,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2758,7 +2679,6 @@ Play a note, from C2 - B6.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2789,7 +2709,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2817,7 +2736,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2841,7 +2759,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2868,7 +2785,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi 
@@ -2927,7 +2843,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 from zumi.util.camera import Camera
 
@@ -2959,7 +2874,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.camera import Camera
@@ -2987,7 +2901,6 @@ None
 ***Boolean***: Returns True if camera stream is open. Otherwise returns False
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.camera import Camera
@@ -3018,7 +2931,6 @@ Captures an image and saves it in the working directory.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.camera import Camera
@@ -3049,7 +2961,6 @@ Displays an image taken from Zumi's camera.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 
@@ -3080,7 +2991,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.camera import Camera
@@ -3135,7 +3045,6 @@ Fits values for prediction. By default, HSV is fitted.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -3181,7 +3090,6 @@ Predicts a color captured from the Zumi camera.
 ***string* prediction**: The prediction made by the knn color classifier
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -3227,7 +3135,6 @@ Loads the model based on your project name.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -3274,7 +3181,6 @@ Converts captured image into a grayscaled image.
 ***ndarray* image array:** a modified image array of *img* for grayscaling
 
 #### Example Code
-##### Python
 ```python
 from zumi.util.vision import Vision
 from zumi.util.camera import Camera
@@ -3307,7 +3213,6 @@ Converts captured image to an HSV image.
 
 
 #### Example Code
-##### Python
 ```python
 from zumi.util.vision import Vision
 from zumi.util.camera import Camera
@@ -3340,7 +3245,6 @@ Returns the message from decoded QR code.
 ***string* message:** decoded message from QR code
 
 #### Example Code
-##### Python
 ```python
 camera = Camera()
 camera.start_camera()
@@ -3371,7 +3275,6 @@ Searches captured image for facial features to find face's pixel location in the
 ***list* area:** [x,y,w,h] of the face's x and y coordinates along with the area's width and height. Returns ```None``` if not detected
 
 #### Example Code
-##### Python
 ```python
 from zumi.util.camera import Camera
 from zumi.util.vision import Vision
@@ -3406,7 +3309,6 @@ Processes the image that is given as a parameter and draws a rectangle around th
 ***Decoded* decoded_Qr:** decoded QR data (an object of Decoded class). Returns ```None``` if QR code is not detected
 
 #### Example Code
-##### Python
 ```python
 from zumi.zumi import Zumi
 from zumi.util.camera import Camera
@@ -3447,7 +3349,6 @@ Searches captured image for smiling facial features to find smile's pixel locati
 ***list* area:** [x,y,w,h] of the smiles's x and y coordinates along with the area's width and height. Returns None if not detected
 
 #### Example Code
-##### Python
 ```python
 from zumi.util.camera import Camera
 from zumi.util.vision import Vision
@@ -3485,7 +3386,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -3510,7 +3410,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -3535,7 +3434,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3563,7 +3461,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3598,7 +3495,6 @@ Clears the screen and draws a clock with the given hour and minute set by the us
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3625,7 +3521,6 @@ None
 
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -3657,7 +3552,6 @@ Draws an arc within the boundaries of points x1,y1, and x2,y2 at the specified s
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3689,7 +3583,6 @@ Draws a chord within the boundaries of points x1,y1, and x2,y2 at the specified 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3722,7 +3615,6 @@ Draws a circle that fits inside a square with its top-left corner at x,y and a w
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3753,7 +3645,6 @@ Draws an ellipse that fits in a rectangle with its top-left corner at x,y and a 
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3779,7 +3670,6 @@ Draws the image on the screen.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3813,7 +3703,6 @@ Draws a line between points (x1,y1) and (x2,y2).
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3843,7 +3732,6 @@ Draws a single pixel at the set x and y coordinate.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3871,7 +3759,6 @@ Draws lines between points in a given list ```[(x1,y1),...,(xn,yn)]``` to form a
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3904,7 +3791,6 @@ Draws a rectangle on the screen.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3935,7 +3821,6 @@ Draws a square on the screen.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -3964,7 +3849,6 @@ Draws text to the center of the screen
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -4005,7 +3889,6 @@ Draws text to the upper lefthand corner of the screen
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -4041,7 +3924,6 @@ Draws a triangle with 3 points (x1,y1), (x2,y2), (x3,y3): ```x1, y1, x2, y2, x3,
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -4066,7 +3948,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4091,7 +3972,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4116,7 +3996,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4141,7 +4020,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4166,7 +4044,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4201,7 +4078,6 @@ Prints any number of strings on the screen.
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen
@@ -4235,7 +4111,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4260,7 +4135,6 @@ Displays an image on Zumi's screen taken from Zumi's camera.
 None
 
 #### Example Code
-##### Python
 ```python
 from zumi.util.screen import Screen
 from zumi.util.camera import Camera
@@ -4288,7 +4162,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4313,7 +4186,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4338,7 +4210,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4363,7 +4234,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.util.screen import Screen 
@@ -4390,7 +4260,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4420,7 +4289,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4450,7 +4318,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4480,7 +4347,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4510,7 +4376,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4541,7 +4406,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4571,7 +4435,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
@@ -4601,7 +4464,6 @@ None
 None
 
 #### Example Code
-##### Python
 ```python
 #Python code
 from zumi.zumi import Zumi
