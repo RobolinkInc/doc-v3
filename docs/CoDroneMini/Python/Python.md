@@ -19,15 +19,15 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![What is Python?](/img/CDM/what-is-icon.png)](/docs/CoDroneMini/Python/What-is-Python)
-  [What is Python?](/docs/CoDroneMini/Python/What-is-Python)  
+  <!-- [![What is Python?](/img/CDM/what-is-icon.png)](/docs/CoDroneMini/Python/What-is-Python)
+  [What is Python?](/docs/CoDroneMini/Python/What-is-Python)  --> 
 
   [![Setup and Installation](/img/CDM/set-up.png)](/docs/CoDroneMini/Python/Setup-and-Installation)
   [Setup and Installation](/docs/CoDroneMini/Python/Setup-and-Installation)
 
-  [![Update Library](/img/CDM/python-update-icon.png)](/docs/CoDroneMini/Python/Update-Library)
+  <!-- [![Update Library](/img/CDM/python-update-icon.png)](/docs/CoDroneMini/Python/Update-Library)
   [Update Library](/docs/CoDroneMini/Python/Update-Library)
-
+ -->
 
 </div>
 

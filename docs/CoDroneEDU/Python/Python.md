@@ -25,8 +25,8 @@ customHeadElements:
   [![Setup and Installation](/img/CDE/set-up.png)](/docs/CoDroneEDU/Python/Setup-and-Installation)
   [Setup and Installation](/docs/CoDroneEDU/Python/Setup-and-Installation)
 
-  [![Update Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
-  [Update Library](/docs/CoDroneEDU/Python/Updating-Library)
+  [![Updating Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
+  [Updating Library](/docs/CoDroneEDU/Python/Updating-Library)
 
 
 </div>

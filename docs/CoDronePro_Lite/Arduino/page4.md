@@ -813,7 +813,7 @@ None
 
 #### Example Code
 ```c
-/Arduino code
+//Arduino code
 #include<CoDrone.h>     //header
 
 void setup(){

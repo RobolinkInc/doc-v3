@@ -18,8 +18,8 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![What is Blockly?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)
-  [What is Blockly?](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)  
+  [![How to use Blockly](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)
+  [How to use Blockly](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)  
 
   <!--[![Offline App Documentation](/img/CDE/app-docu-icon.png)](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)
   [Offline<br />App Documentation](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)-->

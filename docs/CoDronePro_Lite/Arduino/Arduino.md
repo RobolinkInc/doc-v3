@@ -18,14 +18,14 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![What is Arduino?](/img/CDPL/what-is-icon.png)](/docs/CoDronePro_Lite/Arduino/What-is-Arduino)
-  [What is Arduino?](/docs/CoDronePro_Lite/Arduino/What-is-Arduino)  
+  <!-- [![What is Arduino?](/img/CDPL/what-is-icon.png)](/docs/CoDronePro_Lite/Arduino/What-is-Arduino)
+  [What is Arduino?](/docs/CoDronePro_Lite/Arduino/What-is-Arduino)   -->
 
-  [![Setup and Installation](/img/CDPL/set-up.png)](/docs/CoDronePro_Lite/Arduino/Setup-and-Installation)
-  [Setup and Installation](/docs/CoDronePro_Lite/Arduino/Setup-and-Installation)
+  <!-- [![Setup and Installation](/img/CDPL/set-up.png)](/docs/CoDronePro_Lite/Arduino/Setup-and-Installation)
+  [Setup and Installation](/docs/CoDronePro_Lite/Arduino/Setup-and-Installation) -->
 
-  [![Update Library](/img/CDPL/python-update-icon.png)](/docs/CoDronePro_Lite/Arduino/Update-Library)
-  [Update Library](/docs/CoDronePro_Lite/Arduino/Update-Library)
+  <!-- [![Update Library](/img/CDPL/python-update-icon.png)](/docs/CoDronePro_Lite/Arduino/Update-Library)
+  [Update Library](/docs/CoDronePro_Lite/Arduino/Update-Library) -->
 
 
 </div>
@@ -39,8 +39,8 @@ customHeadElements:
   [![Function Documentation](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Arduino/Function-Documentation)
   [Function<br />Documentation](/docs/CoDronePro_Lite/Arduino/Function-Documentation)
 
-  [![Arduino Changelog](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Arduino/Arduino-Changelog)
-  [Arduino Changelog](/docs/CoDronePro_Lite/Arduino/Arduino-Changelog)
+  <!-- [![Arduino Changelog](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Arduino/Arduino-Changelog)
+  [Arduino Changelog](/docs/CoDronePro_Lite/Arduino/Arduino-Changelog) -->
 
 </div>
 

@@ -3987,7 +3987,7 @@ screen.happy()
 Draws Zumi's default eyes on the screen.
 
 #### Syntax
-```hello```<br />
+```hello()```<br />
 
 #### Parameters
 None

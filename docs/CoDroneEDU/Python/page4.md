@@ -19,15 +19,15 @@ version 1.9 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
 
 ### pair()
 
+#### Description
+This function connects your controller with the program. You can also set the specific USB port name.
+
 #### Syntax
 ``pair()``    
 ``pair(portname)``
 
 #### Parameters
 ***string* portname:** A string containing the port name or number.
-
-#### Description
-This function connects your controller with the program. You can also set the specific USB port name.
 
 #### Returns
 None
@@ -54,15 +54,15 @@ drone.close()
 
 ### take_off()
 
+#### Description
+This function makes the drone takeoff and hover. The drone will always hover for 1 second in order to stabilize before it executes the next command.
+
 #### Syntax
 ``takeoff()``    
 
 
 #### Parameters
 None
-
-#### Description
-This function makes the drone takeoff and hover. The drone will always hover for 1 second in order to stabilize before it executes the next command.
 
 #### Returns
 None
@@ -85,6 +85,9 @@ drone.close()
 
 ### land()
 
+#### Description
+This function makes the drone stop all commands, hover, and make a soft landing where it is. The function will also reset the flight motion variables to 0. **NOTE:** If you want to take off and immediately land, it is recommended to run a ``hover()`` or ``time.sleep()`` in between the ``takeoff()`` and ``land()``, because the CoDrone EDU may miss the land command otherwise.
+
 #### Syntax
 ``land()``    
 
@@ -92,8 +95,6 @@ drone.close()
 #### Parameters
 None
 
-#### Description
-This function makes the drone stop all commands, hover, and make a soft landing where it is. The function will also reset the flight motion variables to 0. **NOTE:** If you want to take off and immediately land, it is recommended to run a ``hover()`` or ``time.sleep()`` in between the ``takeoff()`` and ``land()``, because the CoDrone EDU may miss the land command otherwise.
 
 #### Returns
 None
@@ -115,15 +116,15 @@ drone.close()
 
 ### emergency_stop()
 
+#### Description
+This function immediately stops all commands and motors, so the drone will stop flying immediately. The function will also reset the flight motion variables to 0. **NOTE:** If you want to take off and emergency stop, it is recommended to run a ``hover()`` or ``time.sleep()`` in between the ``takeoff()`` and ``emergency_stop()``, because the CoDrone EDU might miss the emergency_stop() command.
+
 #### Syntax
 ``emergency_stop()``    
 
 
 #### Parameters
 None
-
-#### Description
-This function immediately stops all commands and motors, so the drone will stop flying immediately. The function will also reset the flight motion variables to 0. **NOTE:** If you want to take off and emergency stop, it is recommended to run a ``hover()`` or ``time.sleep()`` in between the ``takeoff()`` and ``emergency_stop()``, because the CoDrone EDU might miss the emergency_stop() command.
 
 #### Returns
 None
@@ -145,16 +146,15 @@ drone.close()
 
 ### set_trim()
 
+#### Description
+You can set the **roll** and **pitch** trim of the drone in case your drone is drifting. For example, if the drone is drifting to its right, you may want to set the roll to a small negative value. This trim will remain saved, even after powering off until you've changed the trim either programmatically, or done a reset with the remote. **NOTE:** If you're setting the trim right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff commmand might be skipped.
+
 #### Syntax
 ``set_trim(roll, pitch)``    
-
 
 #### Parameters
 ***integer* roll:** the power of the roll (-100 - 100)  
 ***integer* pitch:** the power of the pitch (-100 - 100)
-
-#### Description
-You can set the **roll** and **pitch** trim of the drone in case your drone is drifting. For example, if the drone is drifting to its right, you may want to set the roll to a small negative value. This trim will remain saved, even after powering off until you've changed the trim either programmatically, or done a reset with the remote. **NOTE:** If you're setting the trim right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff commmand might be skipped.
 
 #### Returns
 None
@@ -181,15 +181,14 @@ drone.close()
 
 ### reset_trim()
 
+#### Description
+You can reset the roll and pitch trim of the drone in case your drone is drifting. This function will reset the roll and pitch trim values back to zero.
+
 #### Syntax
 ``reset_trim()``    
 
-
 #### Parameters
 None
-
-#### Description
-You can reset the roll and pitch trim of the drone in case your drone is drifting. This function will reset the roll and pitch trim values back to zero.
 
 #### Returns
 None
@@ -215,15 +214,15 @@ drone.close()
 
 ### reset_sensor()
 
+#### Description
+This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the take off might be skipped.
+
 #### Syntax
 ``reset_sensor()``    
 
 
 #### Parameters
 None
-
-#### Description
-This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the take off might be skipped.
 
 #### Returns
 None
@@ -262,6 +261,9 @@ drone.close()
 
 ### avoid_wall()
 
+#### Description
+A looped method that makes the drone fly forward until it reaches a desired distance based on the front range sensor. The range of front sensor is from 0cm-100cm
+
 #### Syntax
 ``avoid_wall()``    
 ``avoid_wall(timeout)``    
@@ -271,9 +273,6 @@ drone.close()
 #### Parameters
 ***integer* timeout:** timeout is an optional parameter that is the duration in seconds that the function will run. the default value is 2    
 ***integer* distance:** distance is an optional parameter that is the distance in centimeters the drone will stop at in front of an object. the default value is 70
-
-#### Description
-A looped method that makes the drone fly forward until it reaches a desired distance based on the front range sensor. The range of front sensor is from 0cm-100cm
 
 #### Returns
 None
@@ -296,17 +295,16 @@ drone.close()
 
 ### circle()
 
+#### Description
+Flies the drone in the shape of a circle.
+
 #### Syntax
 ``circle()``    
 ``circle(speed, direction)``
 
-
 #### Parameters
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 75.    
 ***integer* direction:** optional parameter that determines the direction of the circle. 1 is right, -1 is left. default value is 1.
-
-#### Description
-Flies the drone in the shape of a circle.
 
 #### Returns
 None
@@ -329,6 +327,9 @@ drone.close()
 
 ### detect_wall()
 
+#### Description
+Returns True when a distance below the threshold is reached. The sensor range is up to 1.5 meters (150cm)
+
 #### Syntax
 ``detect_wall()``    
 ``detect_wall(distance)``  
@@ -336,9 +337,6 @@ drone.close()
 
 #### Parameters
 ***integer* distance:** An optional parameter that is the threshold in centimeters that will return True. The default value is 50
-
-#### Description
-Returns True when a distance below the threshold is reached. The sensor range is up to 1.5 meters (150cm)
 
 #### Returns
 None
@@ -365,6 +363,9 @@ drone.close()
 
 ### flip()
 
+#### Description
+This functions makes the drone flip backward, forward, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
+
 #### Syntax
 ``flip()``     
 ``flip(direction)``  
@@ -372,9 +373,6 @@ drone.close()
 
 #### Parameters
 ***string* direction:** optional parameter that is the direction the drone will flip. default is "back"
-
-#### Description
-This functions makes the drone flip backward, forward, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
 
 #### Returns
 None
@@ -410,15 +408,14 @@ drone.close()
 
 ### hover()
 
+#### Description
+This function makes the drone hover for a given amount of time. If given no parameters, it will hover indefinitely until given a another command.
+
 #### Syntax
 ``hover(duration)``    
 
-
 #### Parameters
 ***integer* duration:** Duration of the hovering in seconds
-
-#### Description
-This function makes the drone hover for a given amount of time. If given no parameters, it will hover indefinitely until given a another command.
 
 #### Returns
 None
@@ -440,6 +437,9 @@ drone.close()
 
 ### keep_distance()
 
+#### Description
+A looped method that makes the drone fly forward until it reaches a desired distance. Once the desired distance in reached the drone will maintain that distance. The sensor range is up to 150 cm.
+
 #### Syntax
 ``keep_distance()``   
 ``keep_distance(timeout)``  
@@ -450,9 +450,6 @@ drone.close()
 #### Parameters
 ***integer* timeout:** the duration in seconds that the function will execute. The default value is 2 seconds.<br/>
 ***integer* distance:** the distance in centimeters the drone will stop and maintain distance in front of an object. The default value is 50 centimeters.
-
-#### Description
-A looped method that makes the drone fly forward until it reaches a desired distance. Once the desired distance in reached the drone will maintain that distance. The sensor range is up to 150 cm.
 
 #### Returns
 None
@@ -475,15 +472,15 @@ drone.close()
 
 ### move()
 
+#### Description
+The move command will move the drone based on the set flight variables (set_pitch, set_roll, etc). If given a parameter the move command will execute the movement for the given amount of seconds. If given no parameter then the drone will execute the move command indefinitley. You must ``takeoff()`` first to use a ``move()`` function.
+
 #### Syntax
 ``move(duration)``    
 
 
 #### Parameters
 ***integer* duration:** Duration of the movement in seconds
-
-#### Description
-The move command will move the drone based on the set flight variables (set_pitch, set_roll, etc). If given a parameter the move command will execute the movement for the given amount of seconds. If given no parameter then the drone will execute the move command indefinitley. You must ``takeoff()`` first to use a ``move()`` function.
 
 #### Returns
 None
@@ -507,15 +504,14 @@ drone.close()
 
 ### print_move_values()
 
+#### Description
+Prints the current values of roll, pitch, yaw, and throttle flight variables.
+
 #### Syntax
 ``print_move_values()``    
 
-
 #### Parameters
 None
-
-#### Description
-Prints the current values of roll, pitch, yaw, and throttle flight variables.
 
 #### Returns
 None
@@ -539,6 +535,9 @@ drone.close()
 
 ### reset_move()
 
+#### Description
+The reset_move command will reset the values of roll, pitch, yaw, and throttle to 0.
+
 #### Syntax
 ``reset_move()``  
 ``reset_move(attempts)``    
@@ -546,9 +545,6 @@ drone.close()
 
 #### Parameters
 ***integer* attempts:** Optional parameter that sends the reset_move command multiple times.
-
-#### Description
-The reset_move command will reset the values of roll, pitch, yaw, and throttle to 0.
 
 #### Returns
 None
@@ -572,18 +568,17 @@ drone.close()
 
 ### sendControl()
 
+#### Description
+Send roll, pitch, yaw, and throttle values to the drone.
+
 #### Syntax
 ``sendControl(roll, pitch, yaw, throttle)``    
-
 
 #### Parameters
 ***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right <br/>
 ***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards <br/>
 ***integer* yaw:** Sets the yaw variable (-100 to 100). negative is left, positive is right <br/>
 ***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up 
-
-#### Description
-Send roll, pitch, yaw, and throttle values to the drone.
 
 #### Returns
 None
@@ -606,6 +601,9 @@ drone.close()
 
 ### sendControlWhile()
 
+#### Description
+Send roll, pitch, yaw, and throttle values to the drone continously for the given duration in milliseconds
+
 #### Syntax
 ``sendControlWhile(roll, pitch, yaw, throttle, duration)``    
 
@@ -616,9 +614,6 @@ drone.close()
 ***integer* yaw:** Sets the yaw variable (-100 to 100). negative is left, positive is right  <br/>
 ***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up <br/>
 ***integer* duration:** A duration in milliseconds  
-
-#### Description
-Send roll, pitch, yaw, and throttle values to the drone continously for the given duration in milliseconds
 
 #### Returns
 None
@@ -640,15 +635,15 @@ drone.close()
 
 ### set_pitch()
 
+#### Description
+This is a setter function that allows you to set the pitch variable. Once you set pitch, you have to use move() to actually execute the movement. The pitch variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to pitch again.
+
 #### Syntax
 ``set_pitch(power)``    
 
 
 #### Parameters
 ***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative pitch is backwards, positive pitch is forwards.
-
-#### Description
-This is a setter function that allows you to set the pitch variable. Once you set pitch, you have to use move() to actually execute the movement. The pitch variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to pitch again.
 
 #### Returns
 None
@@ -672,15 +667,15 @@ drone.close()
 
 ### set_roll()
 
+#### Description
+This is a setter function that allows you to set the roll variable. Once you set roll, you have to use ``move()`` to actually execute the movement. The roll variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to roll again.
+
 #### Syntax
 ``set_roll(power)``    
 
 
 #### Parameters
 ***integer* power:** Sets the roll variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative roll is left, positive roll is right.
-
-#### Description
-This is a setter function that allows you to set the roll variable. Once you set roll, you have to use ``move()`` to actually execute the movement. The roll variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to roll again.
 
 #### Returns
 None
@@ -704,15 +699,14 @@ drone.close()
 
 ### set_throttle()
 
+#### Description
+This is a setter function that allows you to set the throttle variable. Once you set throttle, you have to use move() to actually execute the movement. The throttle variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to throttle again.
+
 #### Syntax
 ``set_throttle(power)``    
 
-
 #### Parameters
 ***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative throttle is down, positive throttle is up.
-
-#### Description
-This is a setter function that allows you to set the throttle variable. Once you set throttle, you have to use move() to actually execute the movement. The throttle variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to throttle again.
 
 #### Returns
 None
@@ -736,15 +730,14 @@ drone.close()
 
 ### set_yaw()
 
+#### Description
+This is a setter function that allows you to set the yaw variable. Once you set yaw, you have to use ``move()``to actually execute the movement. The yaw variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to yaw again.
+
 #### Syntax
 ``set_yaw(power)``    
 
-
 #### Parameters
 ***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is left, positive yaw is right.
-
-#### Description
-This is a setter function that allows you to set the yaw variable. Once you set yaw, you have to use ``move()``to actually execute the movement. The yaw variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to yaw again.
 
 #### Returns
 None
@@ -768,18 +761,17 @@ drone.close()
 
 ### spiral()
 
+#### Description
+Flies the drone in the shape of a downward spiral.
+
 #### Syntax
 ``spiral()``  
 ``spiral(speed, seconds, direction)``    
-
 
 #### Parameters
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 50.     
 ***integer* seconds:** optional parameter that is the duration in seconds the drone flies in a downward spiral. default value is 5.   
 ***integer* direction:** optional parameter that determines the direction of the spiral. 1 is right, -1 is left. default value is 1.    
-
-#### Description
-Flies the drone in the shape of a downward spiral.
 
 #### Returns
 None
@@ -802,6 +794,9 @@ drone.close()
 
 ### square()
 
+#### Description
+Flies the drone in the shape of a square.
+
 #### Syntax
 ``square()``  
 ``square(speed, seconds, direction)``
@@ -810,9 +805,6 @@ drone.close()
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 50.     
 ***integer* seconds:** optional parameter that is the duration in seconds the drone flies for each side of the square. default value is 5.   
 ***integer* direction:** optional parameter that determines the direction of the square. 1 is right, -1 is left. default value is 1.    
-
-#### Description
-Flies the drone in the shape of a square.
 
 #### Returns
 None
@@ -835,6 +827,9 @@ drone.close()
 
 ### sway()
 
+#### Description
+Flies the drone in a swaying motion.
+
 #### Syntax
 ``sway()``    
 ``sway(speed, seconds, direction)``
@@ -844,9 +839,6 @@ drone.close()
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 30.   
 ***integer* seconds:** optional parameter that is the duration in seconds the drone will fly in each "sway" motion. default value is 2.    
 ***integer* direction:** optional parameter that determines the direction of the sway. 1 is right, -1 is left. default value is 1.    
-
-#### Description
-Flies the drone in a swaying motion.
 
 #### Returns
 None
@@ -869,6 +861,9 @@ drone.close()
 
 ### triangle()
 
+#### Description
+Flies the drone in the shape of a triangle.
+
 #### Syntax
 ``triangle()``     
 ``triangle(speed, seconds, direction)``
@@ -878,9 +873,6 @@ drone.close()
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 60.   
 ***integer* seconds:** optional parameter that is the duration in seconds the drone flies for each side of the triangle. default value is 1.    
 ***integer* direction:** optional parameter that determines the direction of the triangle. 1 is right, -1 is left. default value is 1.    
-
-#### Description
-Flies the drone in the shape of a triangle.
 
 #### Returns
 None
@@ -903,6 +895,9 @@ drone.close()
 
 ### turn_degree()
 
+#### Description
+Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to right and negative degrees turn to the left.
+
 #### Syntax
 ``turn_degree(degree, timeout, p_value)``    
 
@@ -911,9 +906,6 @@ drone.close()
 ***integer* degree:** angle of turn in degrees (-180 - 180)<br/>
 ***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3.<br/>
 ***integer* p_value:** optional parameter that is the gain of the proportional controller, if this increased CDE will turn quicker, the smaller the slower. default value is 10.     
-
-#### Description
-Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to right and negative degrees turn to the left.
 
 #### Returns
 None
@@ -935,6 +927,9 @@ drone.close()
 
 ### turn_left()
 
+#### Description
+Turns the drone left using the built in gyroscope. The default degree is 90.
+
 #### Syntax
 ``turn_left()``        
 ``turn_left(degree)``    
@@ -945,9 +940,6 @@ drone.close()
 #### Parameters
 ***integer* degree:** optional parameter that turns the drone in the given degree. default value is 90.   
 ***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3.
-
-#### Description
-Turns the drone left using the built in gyroscope. The default degree is 90.
 
 #### Returns
 None
@@ -971,6 +963,9 @@ drone.close()
 
 ### turn_right()
 
+#### Description
+Turns the drone right using the built in gyroscope. The default degree is 90.
+
 #### Syntax
 ``turn_right()``     
 ``turn_right(degree)``      
@@ -981,9 +976,6 @@ drone.close()
 #### Parameters
 ***integer* degree:** optional parameter that turns the drone in the given degree. default value is 90.   
 ***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3. 
-
-#### Description
-Turns the drone right using the built in gyroscope. The default degree is 90.
 
 #### Returns
 None
@@ -1007,19 +999,18 @@ drone.close()
 
 ### go()
 
+#### Description
+Sends roll, pitch, yaw, throttle values continuously to the drone for duration (seconds)
+
 #### Syntax
 ``go(roll, pitch, yaw, throttle, duration)``    
-
 
 #### Parameters
 ***integer* roll:** roll power (-100 - 100) <br/> 
 ***integer* pitch:** pitch power (-100 - 100) <br/>
 ***integer* yaw:** yaw power (-100 - 100) <br/>   
 ***integer* throttle:** throttle power (-100 - 100) <br/>
-***integer* duration:** Duration of the movement in seconds   
-
-#### Description
-Sends roll, pitch, yaw, throttle values continuously to the drone for duration (seconds)
+***integer* duration:** Duration of the movement in seconds
 
 #### Returns
 None
@@ -1041,6 +1032,9 @@ drone.close()
 
 ### move_forward()
 
+#### Description
+Moves the drone forward for the given distance and unit for that distance.
+
 #### Syntax
 ``move_forward(distance)``    
 ``move_forward(distance, unit, speed)``   
@@ -1050,9 +1044,6 @@ drone.close()
 ***integer* distance:** the numerical value of the value to move    
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).     
 ***integer* speed:** default 1 meter per second. Max is 2 meters/second     
-
-#### Description
-Moves the drone forward for the given distance and unit for that distance.
 
 #### Returns
 None
@@ -1076,6 +1067,9 @@ drone.close()
 
 ### move_backward()
 
+#### Description
+Moves the drone backward for the given distance and unit for that distance.
+
 #### Syntax
 ``move_backward(distance)``      
 ``move_backward(distance, unit, speed)``   
@@ -1085,9 +1079,6 @@ drone.close()
 ***integer* distance:** the numerical value of the value to move    
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
 ***integer* speed:** default 1 meter per second. Max is 2 meters/second   
-
-#### Description
-Moves the drone backward for the given distance and unit for that distance.
 
 #### Returns
 None
@@ -1111,6 +1102,9 @@ drone.close()
 
 ### move_left()
 
+#### Description
+Moves the drone left for the given distance and unit for that distance.
+
 #### Syntax
 ``move_left(distance)``    
 ``move_left(distance, unit, speed)``  
@@ -1120,9 +1114,6 @@ drone.close()
 ***integer* distance:** the numerical value of the value to move    
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
 ***integer* speed:** default 1 meter per second. Max is 2 meters/second
-
-#### Description
-Moves the drone left for the given distance and unit for that distance.
 
 #### Returns
 None
@@ -1146,6 +1137,9 @@ drone.close()
 
 ### move_right()
 
+#### Description
+Moves the drone right for the given distance and unit for that distance.
+
 #### Syntax
 ``move_right(distance)``     
 ``move_right(distance, unit, speed)`` 
@@ -1155,9 +1149,6 @@ drone.close()
 ***integer* distance:** the numerical value of the value to move    
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
 ***integer* speed:** default 1 meter per second. Max is 2 meters/second 
-
-#### Description
-Moves the drone right for the given distance and unit for that distance.
 
 #### Returns
 None
@@ -1181,6 +1172,15 @@ drone.close()
 
 ### send_absolute_position()
 
+#### Description
+Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
+The 'x' position of the drone is forwards and reverse.    
+The 'y' position of the drone is left and right.    
+The 'z' position of the drone is up and down.   
+<img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
+<br/>
+<img src="/img/CDE/python_docu/xyz.jpg"  width="70%"/>
+
 #### Syntax
 ``send_absolute_position(positionX, positionY, positionZ, velocity, heading, rotationalVelocity)``    
 
@@ -1192,15 +1192,6 @@ drone.close()
 ***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 10). The movement speed of the drone.   
 ***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
 ***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
-
-#### Description
-Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
-The 'x' position of the drone is forwards and reverse.    
-The 'y' position of the drone is left and right.    
-The 'z' position of the drone is up and down.   
-<img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
-<br/>
-<img src="/img/CDE/python_docu/xyz.jpg"  width="70%"/>
 
 #### Returns
 None
@@ -1233,15 +1224,15 @@ drone.land()
 
 ### controller_LED_off()
 
+#### Description
+Turns off the controller LEDs.
+
 #### Syntax
 ``controller_LED_off()``    
 
 
 #### Parameters
 None 
-
-#### Description
-Turns off the controller LEDs.
 
 #### Returns
 None
@@ -1261,15 +1252,15 @@ drone.close()
 
 ### drone_LED_off()
 
+#### Description
+Turns off the drone LED.
+
 #### Syntax
 ``drone_LED_off()``    
 
 
 #### Parameters
 None 
-
-#### Description
-Turns off the drone LED.
 
 #### Returns
 None
@@ -1289,18 +1280,17 @@ drone.close()
 
 ### set_controller_LED()
 
+#### Description
+This function sets the LED color and brightness of the CoDrone EDU controller's LEDs. This is done by setting RGB values (0 - 255) and brightness level (0 - 100).
+
 #### Syntax
 ``set_controller_LED(red, green, blue, brightness)``    
-
 
 #### Parameters
 ***integer* red:** pixel value for the color red (0 - 255)<br/>
 ***integer* green:** pixel value for the color green (0 - 255)<br/>
 ***integer* blue:** pixel value for the color blue (0 - 255)<br/>
 ***integer* brightness:** brightness of the controller LED (0 - 100)
-
-#### Description
-This function sets the LED color and brightness of the CoDrone EDU controller's LEDs. This is done by setting RGB values (0 - 255) and brightness level (0 - 100).
 
 #### Returns
 None
@@ -1320,6 +1310,9 @@ drone.close()
 
 ### set_drone_LED()
 
+#### Description
+This function sets the LED color and brightness of the CoDrone EDU's LED. This is done by setting RGB values (0 - 255) and brightness level (0 - 100).
+
 #### Syntax
 ``set_drone_LED(red, green, blue, brightness)``    
 
@@ -1329,9 +1322,6 @@ drone.close()
 ***integer* green:** pixel value for the color green (0 - 255)<br/>
 ***integer* blue:** pixel value for the color blue (0 - 255)<br/>
 ***integer* brightness:** brightness of the drone LED (0 - 100)
-
-#### Description
-This function sets the LED color and brightness of the CoDrone EDU's LED. This is done by setting RGB values (0 - 255) and brightness level (0 - 100).
 
 #### Returns
 None
@@ -1353,6 +1343,9 @@ drone.close()
 
 ### controller_buzzer()
 
+#### Description
+Plays a note using the controller's buzzer.
+
 #### Syntax
 ``controller_buzzer(note, duration)``    
 
@@ -1360,9 +1353,6 @@ drone.close()
 #### Parameters
 ***integer/Note* note:** frequency of the note, in Hertz or a Note object
 ***integer* duration:** Duration of the note in milliseconds
-
-#### Description
-Plays a note using the controller's buzzer.
 
 #### Returns
 None
@@ -1383,6 +1373,9 @@ drone.close()
 
 ### drone_buzzer()
 
+#### Description
+Plays a note using the drone's buzzer.
+
 #### Syntax
 ``drone_buzzer(note, duration)``    
 
@@ -1390,9 +1383,6 @@ drone.close()
 #### Parameters
 ***integer/Note* note:** frequency of the note, in Hertz or a Note object
 ***integer* duration:** Duration of the note in milliseconds
-
-#### Description
-Plays a note using the drone's buzzer.
 
 #### Returns
 None
@@ -1413,15 +1403,15 @@ drone.close()
 
 ### start_drone_buzzer()
 
+#### Description
+This function allows the drone buzzer to be played in the background while other commands are given to the drone.
+
 #### Syntax
 ``start_drone_buzzer(note)``    
 
 
 #### Parameters
 ***integer/Note* note:** the frequency of the note, in Hertz or a Note object
-
-#### Description
-This function allows the drone buzzer to be played in the background while other commands are given to the drone.
 
 #### Returns
 None
@@ -1451,15 +1441,14 @@ drone.close()
 
 ### stop_drone_buzzer()
 
+#### Description
+Stops the drone buzzer if started in the background.
+
 #### Syntax
 ``stop_drone_buzzer()``    
 
-
 #### Parameters
 None
-
-#### Description
-Stops the drone buzzer if started in the background.
 
 #### Returns
 None
@@ -1489,15 +1478,15 @@ drone.close()
 
 ### start_controller_buzzer()
 
+#### Description
+This function allows the controller buzzer to be played in the background while other commands are given to the drone.
+
 #### Syntax
 ``start_controller_buzzer(note)``    
 
 
 #### Parameters
 ***integer/Note* note:** the frequency of the note, in Hertz or a Note object
-
-#### Description
-This function allows the controller buzzer to be played in the background while other commands are given to the drone.
 
 #### Returns
 None
@@ -1527,15 +1516,15 @@ drone.close()
 
 ### stop_controller_buzzer()
 
+#### Description
+Stops the controller buzzer if started in the background.
+
 #### Syntax
 ``stop_controller_buzzer()``    
 
 
 #### Parameters
 None
-
-#### Description
-Stops the controller buzzer if started in the background.
 
 #### Returns
 None
@@ -1567,15 +1556,15 @@ drone.close()
 
 ### get_battery()
 
+#### Description
+This function returns the current battery level percentage of the drone.
+
 #### Syntax
 ``get_battery()``    
 
 
 #### Parameters
 None
-
-#### Description
-This function returns the current battery level percentage of the drone.
 
 #### Returns
 ***integer* battery percentage:** The current battery percentage of the drone's battery.
@@ -1596,6 +1585,10 @@ drone.close()
 
 ### get_bottom_range()
 
+#### Description
+This is a getter function which returns the current bottom range of the drone. The default unit of measurement is centimeters.
+This function uses the bottom range sensor to measure distance from the drone to the surface below the drone.
+
 #### Syntax
 ``get_bottom_range()``      
 ``get_bottom_range(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```   
@@ -1603,32 +1596,39 @@ drone.close()
 #### Parameters
 ***string* unit:** The unit of measurement that is chosen for the height distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
 
-#### Description
-This is a getter function which returns the current bottom range of the drone. The default unit of measurement is centimeters.
-This function uses the bottom range sensor to measure distance from the drone to the surface below the drone.
-
 #### Returns
-***integer* bottom range:** The current bottom range calculated by the bottom range sensor (cm default).
+***integer* bottom range:** The current bottom range calculated by the bottom range sensor (cm default). -100 or 0 when the sensor returns an error.
+999.9 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
 ```python
 #Python code
+import time
 from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
 
+max_bottom_range = 100
 drone.takeoff()
-drone.hover(3)
-bottom_range = drone.get_bottom_range()
-print(bottom_range)
+drone.set_throttle(20)
+current_bottom_range = drone.get_bottom_range("cm")
+while current_bottom_range <= max_bottom_range:
+  drone.move()
+  current_bottom_range = drone.get_bottom_range("cm")
+  print(current_bottom_range)
 drone.land()
+
 drone.close()
 ```
 
 <hr/>
 
 ### get_temperature()
+
+#### Description
+This is a getter function gets the drone's **temperature** from the barometer.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
 
 #### Syntax
 ``get_temperature()``   
@@ -1638,12 +1638,8 @@ drone.close()
 #### Parameters
 ***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celcius), "F" (Fahrenheit), and "K" (Kelvin).
 
-#### Description
-***integer* temperature:** This is a getter function gets the drone's **temperature** from the barometer.
-The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
-
 #### Returns
-The temperature of the drone in the given unit as a float. Default unit is Celcius.
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
 
 #### Example Code
 ```python
@@ -1661,15 +1657,14 @@ drone.close()
 
 ### get_flight_state()
 
+#### Description
+``get_flight_state()`` is a getter function that gets the current flight state of the drone.
+
 #### Syntax
 ``get_flight_state()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_flight_state()`` is a getter function that gets the current flight state of the drone.
 
 #### Returns
 ***string* state:** The current flight state of the drone.
@@ -1689,6 +1684,10 @@ drone.close()
 
 ### get_flow_x()
 
+#### Description
+This getter function gets the relative position value calculated by the optical flow sensor from the x direction (forward and reverse).
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
 #### Syntax
 ``get_flow_x()``    
 ``get_flow_x(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
@@ -1696,12 +1695,8 @@ drone.close()
 #### Parameters
 ***string* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
 
-#### Description
-This getter function gets the relative position value calculated by the optical flow sensor from the x direction (forward and reverse).
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
-
 #### Returns
-***integer* relative x-position:**The relative position value calculated by the optical flow sensor from the x direction. (cm default).
+***integer* relative x-position:** The relative position value calculated by the optical flow sensor from the x direction. (cm default).
 
 #### Example Code
 ```python
@@ -1722,16 +1717,16 @@ drone.close()
 
 ### get_flow_y()
 
+#### Description
+This getter function gets the relative position value calculated by the optical flow sensor from the y direction (left and right).
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
 #### Syntax
 ``get_flow_y()``    
 ``get_flow_y(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
 
 #### Parameters
 ***integer* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
-
-#### Description
-This getter function gets the relative position value calculated by the optical flow sensor from the y direction (left and right).
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Returns
 ***integer* relative y-position**The relative position value calculated by the optical flow sensor from the y direction. (cm default). 
@@ -1755,6 +1750,10 @@ drone.close()
 
 ### get_front_range()
 
+#### Description
+This is a getter function which returns the current **Range** from the front range sensor. The default unit of measurement is centimeters.
+This function uses the front range sensor to measure distance from the drone to the surface in front of the drone.
+
 #### Syntax
 ``get_front_range()``     
 ``get_front_range(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
@@ -1763,12 +1762,8 @@ drone.close()
 #### Parameters
 ***string* unit:** A string for the unit of measurement that is chosen for the range distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
 
-#### Description
-This is a getter function which returns the current **Range** from the front range sensor. The default unit of measurement is centimeters.
-This function uses the front range sensor to measure distance from the drone to the surface in front of the drone.
-
 #### Returns
-***integer* front range:**The current range calculated by the front range sensor (cm by default).
+***integer* front range:** The current range calculated by the front range sensor (cm by default).
 -10 or 0 when the sensor returns an error value.
 999 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
@@ -1792,6 +1787,10 @@ drone.close()
 
 ### get_pos_x()
 
+#### Description
+Getter function that gets the x position of the drone. (x is forwards and backwards)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
 #### Syntax
 ``get_pos_x()``   
 ``get_pos_x(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
@@ -1799,10 +1798,6 @@ drone.close()
 
 #### Parameters
 ***string* unit:** The unit of measurement that is chosen for the position distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
-
-#### Description
-Getter function that gets the x position of the drone. (x is forwards and backwards)
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Returns
 ***integer* x-position:** The current x position of the drone.
@@ -1824,17 +1819,16 @@ drone.close()
 
 ### get_pos_y()
 
+#### Description
+Getter function that gets the y position of the drone. (y is left and right)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
 #### Syntax
 ``get_pos_y()``   
 ``get_pos_y(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
 
-
 #### Parameters
 ***string* unit:** The unit of measurement that is chosen for the position distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
-
-#### Description
-Getter function that gets the y position of the drone. (y is left and right)
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Returns
 ***integer* y-position:** The current y position of the drone.
@@ -1856,20 +1850,19 @@ drone.close()
 
 ### get_pos_z()
 
-#### Syntax
-``get_pos_z()``   
-``get_pos_z(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```    
-
-
-#### Parameters
-***string* unit:** The unit of measurement that is chosen for the position distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
-
 #### Description
 Getter function that gets the z position of the drone. (z is up and down)
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
+#### Syntax
+``get_pos_z()``   
+``get_pos_z(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```    
+
+#### Parameters
+***string* unit:** The unit of measurement that is chosen for the position distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
+
 #### Returns
-***integer* z-position:**The current z position of the drone.
+***integer* z-position:** The current z position of the drone.
 
 #### Example Code
 ```python
@@ -1888,14 +1881,6 @@ drone.close()
 
 ### get_position_data()
 
-#### Syntax
-``get_position_data()``   
-``get_position_data(delay)``
-
-
-#### Parameters
-***float* delay:** the delay in seconds before the position data is returned. default value is 0.01. 
-
 #### Description
 get_position_data is a getter function that retuns a list of position data for the drone.
 The 'x' position of the drone is forwards and reverse.
@@ -1903,6 +1888,14 @@ The 'y' position of the drone is left and right.
 The 'z' position of the drone is up and down.
 <img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
 <img src="/img/CDE/python_docu/xyz.jpg" width="70%"/>
+
+#### Syntax
+``get_position_data()``   
+``get_position_data(delay)``
+
+
+#### Parameters
+***float* delay:** the delay in seconds before the position data is returned. default value is 0.01. 
 
 #### Returns
 ***list* position data:** A list of position data for the drone. The list contains the current time of the running program [0], x position data [1], y position data [2], z position data [3].
@@ -1925,15 +1918,15 @@ drone.close()
 
 ### get_pressure()
 
+#### Description
+This is a getter function that returns the data from the barometer. The function returns a value in the unit Pascals. **Note:** 1atm = 101325 Pa
+
 #### Syntax
 ``get_pressure()``    
 
 
 #### Parameters
 None
-
-#### Description
-This is a getter function that returns the data from the barometer. The function returns a value in the unit Pascals. **Note:** 1atm = 101325 Pa
 
 #### Returns
 ***float* pressure:** air pressure measured by barometer in Pascals.
@@ -1956,14 +1949,14 @@ drone.close()
 
 ### get_trim()
 
+#### Description
+This function gets the current trim values of the drone.
+
 #### Syntax
 ``get_trim()``    
 
 #### Parameters
 None
-
-#### Description
-This function gets the current trim values of the drone.
 
 #### Returns
 ***list* trim data:** A list of trim data &mdash; [0] for roll trim and [1] for pitch trim
@@ -1988,16 +1981,16 @@ drone.close()
 
 ### get_x_accel()
 
+#### Description
+Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
 #### Syntax
 ``get_x_accel()``    
 
 
 #### Parameters
 None
-
-#### Description
-Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Returns
 ***integer* x-acceleration:** The current x acceleration of the drone.
@@ -2019,15 +2012,15 @@ drone.close()
 
 ### get_x_angle()
 
+#### Description
+This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+
 #### Syntax
 ``get_x_angle()``    
 
 
 #### Parameters
 None
-
-#### Description
-This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
 
 #### Returns
 ***integer* roll angle:** The current angle in regards to the X direction in degrees.
@@ -2049,16 +2042,16 @@ drone.close()
 
 ### get_y_accel()
 
+#### Description
+Getter function that gets the y acceleration of the drone. (y is left and right)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
 #### Syntax
 ``get_y_accel()``    
 
 
 #### Parameters
 None
-
-#### Description
-Getter function that gets the y acceleration of the drone. (y is left and right)
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Returns
 ***integer* y-acceleration:** The current y acceleration of the drone.
@@ -2080,15 +2073,15 @@ drone.close()
 
 ### get_y_angle()
 
+#### Description
+This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+
 #### Syntax
 ``get_y_angle()``    
 
 
 #### Parameters
 None
-
-#### Description
-This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
 
 #### Returns
 ***integer* pitch angle:** The current angle in regards to the Y direction, in degrees.
@@ -2110,16 +2103,16 @@ drone.close()
 
 ### get_z_accel()
 
+#### Description
+Getter function that gets the z acceleration of the drone. (z is up and down)
+<img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
+
 #### Syntax
 ``get_z_accel()``    
 
 
 #### Parameters
 None 
-
-#### Description
-Getter function that gets the z acceleration of the drone. (z is up and down)
-<img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Returns
 ***integer* z-acceleration:** The current z acceleration of the drone.
@@ -2141,15 +2134,14 @@ drone.close()
 
 ### get_z_angle()
 
+#### Description
+This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+
 #### Syntax
 ``get_z_angle()``    
 
-
 #### Parameters
 None
-
-#### Description
-This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
 
 #### Returns
 ***integer* yaw angle:** The current angle in regards to the Z direction.
@@ -2171,6 +2163,10 @@ drone.close()
 
 ### get_height()
 
+#### Description
+This is a getter function which returns the current **height** of the drone. The default unit of measurement is centimeters.
+This function uses the bottom range sensor to measure distance from the drone to the surface below the drone.
+
 #### Syntax
 ``get_height()``    
 ``get_height(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
@@ -2179,28 +2175,30 @@ drone.close()
 #### Parameters
 ***string* unit:** The unit of measurement that is chosen for the height distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
 
-#### Description
-This is a getter function which returns the current **height** of the drone. The default unit of measurement is centimeters.
-This function uses the bottom range sensor to measure distance from the drone to the surface below the drone.
-
 #### Returns
 ***integer* height:** The current range calculated by the bottom range sensor (cm default).
--10 or 0 when the sensor returns an error.
-999 when the detected object is out of range (1.5 meters) or the sensor timed out.
+-100 or 0 when the sensor returns an error.
+999.9 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
 ```python
 #Python code
+import time
 from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
 
+max_height = 100
 drone.takeoff()
-drone.hover(3)
-height = drone.get_height()
-print(height)
+drone.set_throttle(20)
+current_height = drone.get_height("cm")
+while current_height <= max_height:
+  drone.move()
+  current_height = drone.get_height("cm")
+  print(current_height)
 drone.land()
+
 drone.close()
 ```
 
@@ -2208,15 +2206,15 @@ drone.close()
 
 ### get_back_color()
 
+#### Description
+``get_back_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the back color sensor.
+
 #### Syntax
 ``get_back_color()``    
 
 
 #### Parameters
 None
-
-#### Description
-``get_back_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the back color sensor.
 
 #### Returns
 **back color data:** Returns the back color sensor data.
@@ -2237,15 +2235,14 @@ drone.close()
 
 ### get_color_data()
 
+#### Description
+Getter function that gets a list of color data from the drone.
+
 #### Syntax
 ``get_color_data()``    
 
-
 #### Parameters
 None
-
-#### Description
-Getter function that gets a list of color data from the drone.
 
 #### Returns
 ***list* color data:** Returns a list of color data.
@@ -2265,15 +2262,14 @@ drone.close()
 
 ### get_front_color()
 
+#### Description
+``get_front_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the front color sensor.
+
 #### Syntax
 ``get_front_color()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_front_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the front color sensor.
 
 #### Returns
 **front color data:** Returns the back color sensor data.
@@ -2294,6 +2290,9 @@ drone.close()
 
 ### load_classifier()
 
+#### Description
+``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
+
 #### Syntax
 ``load_classifier()``   
 ``load_classifier(dataset, show_graph)``   
@@ -2302,9 +2301,6 @@ drone.close()
 #### Parameters
 ***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.
 ***boolean* show_graph:** An optional boolean parameter that will show a graph of the color set data. The default value is False.
-
-#### Description
-``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
 
 #### Returns
 None
@@ -2329,15 +2325,14 @@ drone.close()
 
 ### predict_colors()
 
+#### Description
+Predicts what color the color sensors are currently seeing.
+
 #### Syntax
 ``predict_colors(color_data)``    
 
-
 #### Parameters
 ***list* color_data:** loaded from ```drone.get_color_data()```
-
-#### Description
-Predicts what color the color sensors are currently seeing.
 
 #### Returns
 ***list* predictions:** A prediction of which color the front and back color sensors are currently seeing, as a list.
@@ -2360,15 +2355,15 @@ drone.close()
 
 ### get_colors()
 
+#### Description
+``get_colors()`` is a getter function that returns one of the 8 pre-calibrated colors (provided in the color cards).
+
 #### Syntax
 ``get_colors()``    
 
 
 #### Parameters
 None
-
-#### Description
-``get_colors()`` is a getter function that returns one of the 8 pre-calibrated colors (provided in the color cards).
 
 #### Returns
 ***list* predictions:** Returns a list containing the front and back color sensor predictions as strings (Red, Green, Yellow, Blue, Cyan, Magenta, Black, White, Unknown)
@@ -2389,6 +2384,9 @@ drone.close
 
 ### new_color_data()
 
+#### Description
+``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
+
 #### Syntax
 ``new_color_data(label, data, dataset)``    
 
@@ -2397,9 +2395,6 @@ drone.close
 ***string* label:** label name that will be used for the filename.    
 ***list* data:** HSV data samples    
 ***string* dataset:** Folder name where the text file will be stored.   
-
-#### Description
-``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
 
 #### Returns
 None
@@ -2435,6 +2430,9 @@ print("Done calibrating.")
 
 ### append_color_data() 
 
+#### Description
+``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
+
 #### Syntax
 ``append_color_data(label, data, dataset)``    
 
@@ -2442,9 +2440,6 @@ print("Done calibrating.")
 ***string* label:** label name that will be used for the filename.    
 ***list* data:** HSV data samples    
 ***string* dataset:** Folder name where the text file will be stored.    
-
-#### Description
-``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
 
 #### Returns
 None
@@ -2480,17 +2475,16 @@ print("Done calibrating.")
 
 ### height_from_pressure()
 
+#### Description
+This function gets the drone's current height in centimeters based on the initial pressure sensor reading. You must call **set_initial_pressure()** to establish a reference point.
+
 #### Syntax
 ``height_from_pressure()``    
 ``height_from_pressure(b, m)``   
 
-
 #### Parameters
 ***float* b:** slope intercept in pascals (default is set to 0)     
 ***float* m:** slope in centimeters/pascals (default is set to 9.34)
-
-#### Description
-This function gets the drone's current height in centimeters based on the initial pressure sensor reading. You must call **set_initial_pressure()** to establish a reference point.
 
 #### Returns
 ***float* height:** Estimated height in centimeters relative to starting position.
@@ -2514,15 +2508,14 @@ for i in range(300):
 
 ### set_initial_pressure()
 
+#### Description
+This function saves an initial pressure reading to the drone. This function is used in combination with other functions such as ``height_from_pressure()``
+
 #### Syntax
 ``set_initial_pressure()``    
 
-
 #### Parameters
 None
-
-#### Description
-This function saves an initial pressure reading to the drone. This function is used in combination with other functions such as ``height_from_pressure()``
 
 #### Returns
 None
@@ -2548,15 +2541,15 @@ for i in range(300):
 
 ### get_angular_speed_x()
 
+#### Description
+This function returns the current angular speed in degrees per second around the x-axis ("roll" axis).
+
 #### Syntax
 ``get_angular_speed_x()``    
 
 
 #### Parameters
 None
-
-#### Description
-This function returns the current angular speed in degrees per second around the x-axis ("roll" axis).
 
 #### Returns
 ***integer* angular speed:** positive or negative angle speed in degrees per second
@@ -2581,15 +2574,15 @@ drone.close()
 
 ### get_angular_speed_y()
 
+#### Description
+This function returns the current angular speed in degrees per second around the y-axis ("pitch" axis).
+
 #### Syntax
 ``get_angular_speed_y()``    
 
 
 #### Parameters
 None
-
-#### Description
-This function returns the current angular speed in degrees per second around the y-axis ("pitch" axis).
 
 #### Returns
 ***integer* angular speed:** positive or negative angle speed in degrees per second
@@ -2614,15 +2607,14 @@ drone.close()
 
 ### get_angular_speed_z()
 
+#### Description
+This function returns the current angular speed in degrees per second around the z-axis ("yaw" axis).
+
 #### Syntax
 ``get_angular_speed_z()``    
 
-
 #### Parameters
 None
-
-#### Description
-This function returns the current angular speed in degrees per second around the z-axis ("yaw" axis).
 
 #### Returns
 ***integer* angular speed:** positive or negative angle speed in degrees per second
@@ -2647,6 +2639,9 @@ drone.close()
 
 ### get_sensor_data()
 
+#### Description
+This functions returns a list of 31 values including time stamps and sensor values. It requests 5 distinct lists of data and compiles them into one list. This function returns data more quickly than individual sensor requests. 
+
 #### Syntax
 ``get_sensor_data()``    
 ``get_sensor_data(delay)``   
@@ -2654,9 +2649,6 @@ drone.close()
 
 #### Parameters
 ***integer* delay:** The delay in seconds for each sensor request (out of 5). The total delay will be 5x this delay value. The default value is 0.1 seconds.
-
-#### Description
-This functions returns a list of 31 values including time stamps and sensor values. It requests 5 distinct lists of data and compiles them into one list. This function returns data more quickly than individual sensor requests. 
 
 #### Returns
 ***list* sensor data:** A list of length 31 consisted of sensor data.
@@ -2713,14 +2705,6 @@ drone.close()
 
 ### get_error_data()
 
-#### Syntax
-``get_error_data()``     
-``get_error_data(delay)``    
-
-
-#### Parameters
-***float* delay:** The delay in seconds that the command will wait for a response. The default value is 0.1.
-
 #### Description
 This command requests if the drone is in an error state. One or more of the following error states can be printed to console.   
 * **Motion_Calibrating:** Drone is calibrating.    
@@ -2732,7 +2716,15 @@ This command requests if the drone is in an error state. One or more of the foll
 * **RangeGround_NoAnswer:** Bottom Range sensor is unresponsive.     
 * **RangeGround_WrongValue:** Bottom range sensor has given an incorrect value.    
 * **Flow_NoAnswer:** Optical flow sensor is unresponsive.    
-* **Flow_CannotRecognizeGroundImage:** Optical flow sensor is giving erroneous data due to the image.   
+* **Flow_CannotRecognizeGroundImage:** Optical flow sensor is giving erroneous data due to the image.  
+
+#### Syntax
+``get_error_data()``     
+``get_error_data(delay)``    
+
+
+#### Parameters
+***float* delay:** The delay in seconds that the command will wait for a response. The default value is 0.1. 
 
 #### Returns
 ***string* error state:** text consisting of one or more error messages
@@ -2763,15 +2755,14 @@ drone.close()
 
 ### down_arrow_pressed()
 
+#### Description
+A function that determines if the controller's down arrow button has been pressed.
+
 #### Syntax
 ``down_arrow_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's down arrow button has been pressed.
 
 #### Returns
 ***boolean* pressed down:** True if the down arrow button is pressed or held. Otherwise the function will return false.
@@ -2795,15 +2786,14 @@ while True:
 
 ### get_button_data()
 
+#### Description
+``get_button_data()`` is a function that will return a list of information about the most recent button pressed.
+
 #### Syntax
 ``get_button_data()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_button_data()`` is a function that will return a list of information about the most recent button pressed.
 
 #### Returns
 ***list* button data:** A list of data that includes the time of the current program, the number associated with the most recent button pressed, and finally the state of the most recent button pressed. (Down, Pressed, Up)
@@ -2826,15 +2816,15 @@ while True:
 
 ### h_pressed()
 
+#### Description
+A function that determines if the controller's H button has been pressed.
+
 #### Syntax
 ``h_pressed()``    
 
 
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's H button has been pressed.
 
 #### Returns
 ***boolean* pressed H:** True if the H button is pressed or held. Otherwise the function will return false.
@@ -2858,15 +2848,15 @@ while True:
 
 ### l1_pressed()
 
+#### Description
+A function that determines if the controller's L1 button has been pressed.
+
 #### Syntax
 ``l1_pressed()``    
 
 
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's L1 button has been pressed.
 
 #### Returns
 ***boolean* pressed L1:** True if the L1 button is pressed or held. Otherwise the function will return false.
@@ -2890,15 +2880,15 @@ while True:
 
 ### l2_pressed()
 
+#### Description
+A function that determines if the controller's L2 button has been pressed.
+
 #### Syntax
 ``l2_pressed()``    
 
 
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's L2 button has been pressed.
 
 #### Returns
 ***boolean* pressed L2:** True if the L2 button is pressed or held. Otherwise the function will return false.
@@ -2922,15 +2912,14 @@ while True:
 
 ### left_arrow_pressed()
 
+#### Description
+A function that determines if the controller's left arrow button has been pressed.
+
 #### Syntax
 ``left_arrow_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's left arrow button has been pressed.
 
 #### Returns
 ***boolean* pressed left:** True if the left arrow button is pressed or held. Otherwise the function will return false.
@@ -2954,15 +2943,14 @@ while True:
 
 ### p_pressed()
 
+#### Description
+A function that determines if the controller's P button has been pressed.
+
 #### Syntax
 ``p_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's P button has been pressed.
 
 #### Returns
 ***boolean* pressed P:** True if the P button is pressed or held. Otherwise the function will return false.
@@ -2986,15 +2974,14 @@ while True:
 
 ### power_pressed()
 
+#### Description
+A function that determines if the controller's power button has been pressed. Since pressing the power button also switches the drone to flight mode, this function only detects alternate button presses. In other words, the function can only detect a power button press when in LINK state.
+
 #### Syntax
 ``power_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's power button has been pressed. Since pressing the power button also switches the drone to flight mode, this function only detects alternate button presses. In other words, the function can only detect a power button press when in LINK state.
 
 #### Returns
 ***boolean* pressed power:** True if the power button is pressed or held. Otherwise the function will return false.
@@ -3018,15 +3005,14 @@ while True:
 
 ### r1_pressed()
 
+#### Description
+A function that determines if the controller's R1 button has been pressed.
+
 #### Syntax
 ``r1_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's R1 button has been pressed.
 
 #### Returns
 ***boolean* pressed R1:** True if the R1 button is pressed or held. Otherwise the function will return false.
@@ -3050,15 +3036,14 @@ while True:
 
 ### r2_pressed()
 
+#### Description
+A function that determines if the controller's R2 button has been pressed.
+
 #### Syntax
 ``r2_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's R2 button has been pressed.
 
 #### Returns
 ***boolean* pressed R2:** True if the R2 button is pressed or held. Otherwise the function will return false.
@@ -3082,15 +3067,14 @@ while True:
 
 ### right_arrow_pressed()
 
+#### Description
+A function that determines if the controller's right arrow button has been pressed.
+
 #### Syntax
 ``right_arrow_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's right arrow button has been pressed.
 
 #### Returns
 ***boolean* pressed right:** True if the right arrow button is pressed or held. Otherwise the function will return false.
@@ -3114,15 +3098,14 @@ while True:
 
 ### s_pressed()
 
+#### Description
+A function that determines if the controller's S button has been pressed.
+
 #### Syntax
 ``s_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's S button has been pressed.
 
 #### Returns
 ***boolean* pressed S:** True if the S button is pressed or held. Otherwise the function will return false.
@@ -3146,15 +3129,14 @@ while True:
 
 ### up_arrow_pressed()
 
+#### Description
+A function that determines if the controller's up arrow button has been pressed.
+
 #### Syntax
 ``up_arrow_pressed()``    
 
-
 #### Parameters
 None
-
-#### Description
-A function that determines if the controller's up arrow button has been pressed.
 
 #### Returns
 ***boolean* pressed up:** True if the up arrow button is pressed or held. Otherwise the function will return false.
@@ -3178,15 +3160,14 @@ while True:
 
 ### get_joystick_data()
 
+#### Description
+``get_joystick_data()`` is a getter function that gets a list of data about the state of both joysticks on the controller.
+
 #### Syntax
 ``get_joystick_data()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_joystick_data()`` is a getter function that gets a list of data about the state of both joysticks on the controller.
 
 #### Returns
 ***list* joystick data:** A list of data that includes the time of the current program, and information about the left and right joysticks.
@@ -3209,15 +3190,14 @@ while True:
 
 ### get_left_joystick_x()
 
+#### Description
+``get_left_joystick_x()`` is a getter function that gets the position of the left joystick's x position.
+
 #### Syntax
 ``get_left_joystick_x()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_left_joystick_x()`` is a getter function that gets the position of the left joystick's x position.
 
 #### Returns
 ***integer* left joystick x-value:** A value between -100 and 100 depending on the x position of the left joystick.
@@ -3240,15 +3220,14 @@ while True:
 
 ### get_left_joystick_y()
 
+#### Description
+``get_left_joystick_y()`` is a getter function that gets the position of the left joystick's y position.
+
 #### Syntax
 ``get_left_joystick_y()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_left_joystick_y()`` is a getter function that gets the position of the left joystick's y position.
 
 #### Returns
 ***integer* left joystick y-value:** A value between -100 and 100 depending on the y position of the left joystick.
@@ -3271,15 +3250,14 @@ while True:
 
 ### get_right_joystick_x()
 
+#### Description
+``get_right_joystick_x()`` is a getter function that gets the position of the right joystick's x position.
+
 #### Syntax
 ``get_right_joystick_x()``    
 
-
 #### Parameters
 None
-
-#### Description
-``get_right_joystick_x()`` is a getter function that gets the position of the right joystick's x position.
 
 #### Returns
 ***integer* right joystick x-value:** A value between -100 and 100 depending on the x position of the right joystick.
@@ -3302,15 +3280,14 @@ while True:
 
 ### get_right_joystick_y()
 
+#### Description
+``get_right_joystick_y()`` is a getter function that gets the position of the right joystick's y position.
+
 #### Syntax
 ``get_right_joystick_y()``    
 
-
 #### Parameters
 None 
-
-#### Description
-``get_right_joystick_y()`` is a getter function that gets the position of the right joystick's y position.
 
 #### Returns
 ***integer* right joystick y-value:** A value between -100 and 100 depending on the y position of the right joystick.
@@ -3335,16 +3312,15 @@ while True:
 
 ### controller_clear_screen()
 
+#### Description
+Clears all drawings from the controller screen
+
 #### Syntax
 ``controller_clear_screen()``   
 ``controller_clear_screen(pixel)``
 
-
 #### Parameters
 ***string* pixel:** optional parameter that assigns all pixels to either white or black. white is the default value.
-
-#### Description
-clears all drawings from the controller screen
 
 #### Returns
 None
@@ -3364,15 +3340,14 @@ drone.close()
 
 ### controller_create_canvas()
 
+#### Description
+Creates a new image object for drawing
+
 #### Syntax
 ``controller_create_canvas()``    
 
-
 #### Parameters
 None
-
-#### Description
-Creates a new image object for drawing
 
 #### Returns
 ***Image* image:** Returns a new image object that is 127 x 63 pixels
@@ -3392,9 +3367,11 @@ drone.close()
 
 ### controller_draw_arc()
 
+#### Description
+Draws an arc (a portion of a circle outline) between the start and end angles, inside the given bounding box.
+
 #### Syntax
 ``controller_draw_arc(arc_list, start_angle, end_angle, image, pixel_width)``    
-
 
 #### Parameters
 ***list* arc_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.   
@@ -3402,9 +3379,6 @@ drone.close()
 ***integer* end_angle:** Ending angle, in degrees.    
 ***Image* image:** image object created from ``create_image_canvas()``.    
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
-
-#### Description
-Draws an arc (a portion of a circle outline) between the start and end angles, inside the given bounding box.
 
 #### Returns
 None
@@ -3432,15 +3406,14 @@ drone.close()
 
 ### controller_draw_canvas()
 
+#### Description
+Draws custom image canvas onto the controller screen
+
 #### Syntax
 ``controller_draw_canvas(image)``    
 
-
 #### Parameters
 ***Image* image:** image object to be drawn onto the controller screen
-
-#### Description
-Draws custom image canvas onto the controller screen
 
 #### Returns
 None
@@ -3473,9 +3446,11 @@ drone.close()
 
 ### controller_draw_chord()
 
-#### Syntax
-``controller_draw_chord(arc_list, start_angle, end_angle, image, pixel_width)``    
+#### Description
+Same as controller_draw_arc(), but connects the end points with a straight line.
 
+#### Syntax
+``controller_draw_chord(arc_list, start_angle, end_angle, image, pixel_width)``
 
 #### Parameters
 ***list* chord_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.   
@@ -3483,9 +3458,6 @@ drone.close()
 ***integer* end_angle:** Ending angle, in degrees.    
 ***Image* image:** image object created from ``create_image_canvas()``.   
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.    
-
-#### Description
-Same as controller_draw_arc(), but connects the end points with a straight line.
 
 #### Returns
 None
@@ -3513,18 +3485,17 @@ drone.close()
 
 ### controller_draw_ellipse()
 
+#### Description
+Draws an ellipse inside the given bounding box.
+
 #### Syntax
 ``controller_draw_ellipse(ellipse_list, image, fill_in, pixel_width)``    
-
 
 #### Parameters
 ***list* ellipse_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)] where x1 >= x0 and y1 >= y0.    
 ***Image* image:** image object created from ``create_image_canvas()``.   
 ***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.    
-
-#### Description
-Draws an ellipse inside the given bounding box.
 
 #### Returns
 None
@@ -3552,15 +3523,15 @@ drone.close()
 
 ### controller_draw_image()
 
+#### Description
+Draws image when given a pixel_list of image data
+
 #### Syntax
 ``controller_draw_image(pixel_list)``    
 
 
 #### Parameters
 ***list* pixel_list:** the list of image data. can be obtained using ``get_image_data()`` function.
-
-#### Description
-draws image when given a pixel_list of image data
 
 #### Returns
 None
@@ -3586,6 +3557,15 @@ drone.close()
 
 ### controller_draw_line()
 
+#### Description
+Draws a line between points (x1, y1) and (x2, y2)
+```python
+(x1,y1) \
+         \
+          \
+           \ (x2,y2)
+```
+
 #### Syntax
 ``controller_draw_line(x1, y1, x2, y2, pixel, line_type)``    
 
@@ -3597,15 +3577,6 @@ drone.close()
 ***integer* y2:** point 2 y coordinate    
 ***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
 ***string* line_type:** optional parameter that is the type of line drawn. default is Solid    
-
-#### Description
-draws a line between points (x1, y1) and (x2, y2)
-```python
-(x1,y1) \
-         \
-          \
-           \ (x2,y2)
-```
 
 #### Returns
 None
@@ -3629,17 +3600,16 @@ drone.close()
 
 ### controller_draw_point()
 
+#### Description
+Draws a single pixel at the point (x,y)
+
 #### Syntax
 ``controller_draw_point(x, y, pixel)``    
-
 
 #### Parameters
 ***integer* x:** x coordinate <br/>
 ***integer* y:** y coordinate <br/>
 ***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black
-
-#### Description
-draws a single pixel at the point (x,y)
 
 #### Returns
 None
@@ -3663,15 +3633,15 @@ drone.close()
 
 ### controller_draw_polygon()
 
+#### Description
+The polygon outline consists of straight lines between the given coordinates, plus a straight line between the last and the first coordinate.
+
 #### Syntax
 ``controller_draw_polygon(point_list)``    
 
 
 #### Parameters
 ***list* point_list:** the list of coordinates
-
-#### Description
-The polygon outline consists of straight lines between the given coordinates, plus a straight line between the last and the first coordinate.
 
 #### Returns
 None
@@ -3697,6 +3667,15 @@ drone.close()
 
 ### controller_draw_rectangle()
 
+#### Description
+Draws a rectangle onto the controller screen starting from point (x,y) and extends to given height and width
+```python
+width
+(x,y)|---------------|
+     |               | height
+     |_______________|
+```
+
 #### Syntax
 ``controller_draw_rectangle(x, y, width, height, pixel, fill, line_type)``    
 
@@ -3709,15 +3688,6 @@ drone.close()
 ***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
 ***boolean* fill:** optional parameter to fill in the rectangle or not. default value is False    
 ***string* line_type:** optional parameter that is the type of line drawn. default is Solid
-
-#### Description
-draws a rectangle onto the controller screen starting from point (x,y) and extends to given height and width
-```python
-width
-(x,y)|---------------|
-     |               | height
-     |_______________|
-```
 
 #### Returns
 None
@@ -3741,9 +3711,17 @@ drone.close()
 
 ### controller_draw_square()
 
+#### Description
+Draws a square on the controller screen starting from point (x,y) and will extend to the given width
+```python
+width
+(x,y)|------|
+     |      | width
+     |______|
+```
+
 #### Syntax
 ``controller_draw_square(x, y, width, pixel, fill, line_type)``    
-
 
 #### Parameters
 ***integer* x:** top left corner x coordinate   
@@ -3752,15 +3730,6 @@ drone.close()
 ***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
 ***boolean* fill:** optional parameter to fill in the square or not. default value is False   
 ***string* line_type:** optional parameter that is the type of line drawn. default is Solid
-
-#### Description
-draws a square on the controller screen starting from point (x,y) and will extend to the given width
-```python
-width
-(x,y)|------|
-     |      | width
-     |______|
-```
 
 #### Returns
 None
@@ -3784,9 +3753,11 @@ drone.close()
 
 ### controller_draw_string_align()
 
+#### Description
+Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
+
 #### Syntax
 ``controller_draw_string_align(x_start, x_end, y, string, alignment, string_font, pixel_color)``    
-
 
 #### Parameters
 ***integer* x_start:** starting x position    
@@ -3796,9 +3767,6 @@ drone.close()
 ***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align Left, Right, or Center. default value is Center    
 ***integer* string_font:** optional parameter that is the font of the string to be written. default value is LiberationMono5x8    
 ***integer* pixel_color:** optional parameter that is the pixel color of the written string. default value is Black
-
-#### Description
-Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
 #### Returns
 None
@@ -3822,9 +3790,11 @@ drone.close()
 
 ### controller_draw_string()
 
+#### Description
+Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
+
 #### Syntax
 ``controller_draw_string(x, y, string, string_font, pixel_color)``    
-
 
 #### Parameters
 ***integer* x:** starting x position    
@@ -3832,9 +3802,6 @@ drone.close()
 ***string* string:** the string to write   
 ***integer* string_font:** optional parameter that is the font of the string to be written. default value is LiberationMono5x8    
 ***string* pixel_color:** optional parameter that is the pixel color of the written string. default value is Black   
-
-#### Description
-Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
 #### Returns
 None
@@ -3857,15 +3824,14 @@ drone.close()
 
 ### controller_preview_canvas()
 
+#### Description
+Creates a pop up window to preview your current image object on your computer screen.
+
 #### Syntax
 ``controller_preview_canvas(image)``    
 
-
 #### Parameters
 ***Image* image:** image object to be previewed
-
-#### Description
-creates a pop up window to preview your current image object on your computer screen.
 
 #### Returns
 None

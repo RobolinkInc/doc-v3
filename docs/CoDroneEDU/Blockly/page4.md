@@ -17,7 +17,7 @@ version 2.1.8 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 ## Flight Commands
 
-### take_off()
+### takeoff()
 
 #### Block
 
@@ -27,12 +27,12 @@ version 2.1.8 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 <span className="light_gray">drone.</span><span className="dark_gray">takeoff()</span>
 
-#### Parameters
-None
-
 #### Description
 
 This functions makes the drone take off. CoDrone EDU takes off at an average height of 1 meter off the ground. A takeoff block must be used before any other flight command or flight movement.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -53,11 +53,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">land()</span>
 
-#### Parameters
-None
-
 #### Description
 This function makes the drone land by throttling down safely.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -78,11 +78,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">emergency_stop()</span>
 
-#### Parameters
-None
-
 #### Description
 Stops all commands to motors. The drone will stop flying immediately.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -103,11 +103,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">hover()</span>
 
-#### Parameters
-***integer* duration:** the duration of the hover in seconds
-
 #### Description
 This function makes the drone hover in place for a duration in seconds.
+
+#### Parameters
+***integer* duration:** the duration of the hover in seconds
 
 #### Returns
 None
@@ -128,15 +128,15 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">move()</span>
 
+#### Description
+Moves the drone for a certain amount of time (in seconds) in a given direction determined by the flight parameters.
+
 #### Parameters
 ***integer* roll:** roll power percentage as an integer between -100 and +100   
 ***integer* pitch:** pitch power percentage as an integer between -100 and +100   
 ***integer* yaw:** yaw power percentage as an integer between -100 and +100   
 ***integer* throttle:** throttle power percentage as an integer between -100 and +100   
 ***integer* duration:** duration of the hover, in seconds
-
-#### Description
-Moves the drone for a certain amount of time (in seconds) in a given direction determined by the flight parameters.
 
 #### Returns
 None
@@ -158,14 +158,14 @@ In this example, roll and pitch are both set to positive 30% while yaw and throt
 
 <span className="light_gray">drone.</span><span className="dark_gray">flip()</span>
 
+#### Description
+This functions makes the drone flip back, front, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/flip_params.png" width="180px"/>  
 
 **direction:** back, front, right, left
-
-#### Description
-This functions makes the drone flip back, front, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
 
 #### Returns
 None
@@ -187,11 +187,11 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 
 <span className="light_gray">drone.</span><span className="dark_gray">turn_degree()</span>
 
-#### Parameters
-***integer* degrees:** angle of the turn between -180 and +180
-
 #### Description
 Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to right and negative degrees turn to the left. When the drone pairs after powering on, the current heading will be set as 0 degrees.
+
+#### Parameters
+***integer* degrees:** angle of the turn between -180 and +180
 
 <img src="/img/CDE/blockly_docu/senior/CDE_heading.jpg" width="300px"/>  
 
@@ -216,11 +216,11 @@ None
 <br/>
 <span className="light_gray">drone.</span><span className="dark_gray">turn_right()</span>
 
-#### Parameters
-***integer* degrees:** angle of the turn between 0 and 180
-
 #### Description
 Turns right or left relative to the drone's current heading.
+
+#### Parameters
+***integer* degrees:** angle of the turn between 0 and 180
 
 #### Returns
 None
@@ -241,12 +241,12 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">avoid_wall()</span>
 
+#### Description
+CoDrone EDU will fly forward and stop when an obstacle is detected a given distance away (in centimeters). The block will run until the timeout (in seconds) is finished or the obstacle is found, whichever comes first. The default timeout is 10 seconds for an obstacle detected 20cm away.
+
 #### Parameters
 ***integer* timeout:** the timeout duration in seconds   
 ***integer* distance:** the distance, in centimeters, at which the CoDrone EDU will stop to avoid obstacle
-
-#### Description
-CoDrone EDU will fly forward and stop when an obstacle is detected a given distance away (in centimeters). The block will run until the timeout (in seconds) is finished or the obstacle is found, whichever comes first. The default timeout is 10 seconds for an obstacle detected 20cm away.
 
 #### Returns
 None
@@ -270,11 +270,11 @@ Place the drone on the floor a few feet away from a wall. When you run the code,
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_roll()</span>
 
-#### Parameters
-***integer* power:** the power/speed of the drone between -100 and 100
-
 #### Description
 This function sets the roll direction variable but will not send a move command. Negative values will move the drone to the left and positive values will move the drone to the right.
+
+#### Parameters
+***integer* power:** the power/speed of the drone between -100 and 100
 
 #### Returns
 None
@@ -295,11 +295,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_pitch()</span>
 
-#### Parameters
-***integer* power:** the power/speed of the drone between -100 and 100
-
 #### Description
 This function sets the pitch direction variable but will not send a move command. Negative values will move the drone backward and positive values will move the drone forward.
+
+#### Parameters
+***integer* power:** the power/speed of the drone between -100 and 100
 
 #### Returns
 None
@@ -320,11 +320,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_yaw()</span>
 
-#### Parameters
-***integer* power:** the power/speed of the drone between -100 and 100
-
 #### Description
 This function sets the yaw direction variable but will not send a move command. Negative values will turn the drone to the right and positive values will turn the drone to the left.
+
+#### Parameters
+***integer* power:** the power/speed of the drone between -100 and 100
 
 #### Returns
 None
@@ -345,11 +345,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_throttle()</span>
 
-#### Parameters
-***integer* power:** the power/speed of the drone between -100 and 100
-
 #### Description
 This function sets the throttle direction variable but will not send a move command. Negative values will move the drone downward and positive values will move the drone upward.
+
+#### Parameters
+***integer* power:** the power/speed of the drone between -100 and 100
 
 #### Returns
 None
@@ -370,11 +370,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">move()</span>
 
-#### Parameters
-None
-
 #### Description
 Moves CoDrone EDU in the direction set by the flight variables with the smallest duration possible (about 0.01 seconds). Since it has no specified duration, it is often used inside of a loop to check sensors simultaneously.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -395,11 +395,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">move()</span>
 
-#### Parameters
-***integer* duration:** the duration of the movement in seconds
-
 #### Description
 Moves CoDrone EDU for a duration in seconds in the direction set by the flight variables.
+
+#### Parameters
+***integer* duration:** the duration of the movement in seconds
 
 #### Returns
 None
@@ -420,15 +420,15 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_trim()</span>
 
+#### Description
+Sets the trim values to adjust for any drifting while CoDrone EDU is flying. Set the trim values in the opposite direction of drift. For example, if the drone is drifting to the right, set roll to a negative value.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/set_trim_params.png" width="280px"/>  
 
 ***integer* roll:** the trim value to adjust for roll drifting, between -100 and 100    
 ***integer* pitch:** the trim value to adjust for pitch drifting, between -100 and 100
-
-#### Description
-Sets the trim values to adjust for any drifting while CoDrone EDU is flying. Set the trim values in the opposite direction of drift. For example, if the drone is drifting to the right, set roll to a negative value.
 
 #### Returns
 None
@@ -449,11 +449,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_trim()</span>
 
-#### Parameters
-None
-
 #### Description
 Returns the current trim values. Combine with a print statement to see the results printed to the console.
+
+#### Parameters
+None
 
 #### Returns
 ***integer* roll:** the trim value for the roll movement, between -100 and 100    
@@ -475,11 +475,11 @@ Returns the current trim values. Combine with a print statement to see the resul
 
 <span className="light_gray">drone.</span><span className="dark_gray">reset_trim()</span>
 
-#### Parameters
-None
-
 #### Description
 Resets the trim values to (0,0).
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -502,6 +502,9 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_drone_LED()</span>
 
+#### Description
+Sets the color of CoDrone EDU's LED. Colors are set by using its RGB (red, green, blue) equivalent values.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/set_drone_led_params.png" width="500px"/> 
@@ -510,9 +513,6 @@ None
 ***integer* green:** pixel value for the color green between 0 and 255   
 ***integer* blue:** pixel value for the color blue between 0 and 255    
 ***integer* brightness:** brightness of the drone LED between 0 and 255    
-
-#### Description
-Sets the color of CoDrone EDU's LED. Colors are set by using its RGB (red, green, blue) equivalent values.
 
 #### Returns
 None
@@ -533,11 +533,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">drone_LED_off()</span>
 
-#### Parameters
-None
-
 #### Description
 Turns off CoDrone EDU's LED.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -558,6 +558,9 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">set_controller_LED()</span>
 
+#### Description
+Sets the color of CoDrone EDU's controller LED. Colors are set by using its RGB (red, green, blue) equivalent values.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/set_controller_led_params.png" width="500px"/> 
@@ -566,9 +569,6 @@ None
 ***integer* green:** pixel value for the color green between 0 and 255   
 ***integer* blue:** pixel value for the color blue between 0 and 255    
 ***integer* brightness:** brightness of the controller LED between 0 and 255      
-
-#### Description
-Sets the color of CoDrone EDU's controller LED. Colors are set by using its RGB (red, green, blue) equivalent values.
 
 #### Returns
 None
@@ -589,11 +589,11 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_LED_off()</span>
 
-#### Parameters
-None
-
 #### Description
 Turns off the CoDrone EDU's controller LED.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -616,6 +616,9 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_range()</span>
 
+#### Description
+Returns the calculated distance from either the front or bottom infrared (IR) range sensor to the surface. The sensor range is up to 1.5m.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_range_params1.png" width="250px"/>
@@ -626,9 +629,6 @@ None
 
 **type:** front, bottom   
 **unit:** cm, mm, in, m
-
-#### Description
-Returns the calculated distance from either the front or bottom infrared (IR) range sensor to the surface. The sensor range is up to 1.5m.
 
 #### Returns
 ***float* distance:** float value in the units selected
@@ -649,14 +649,14 @@ Returns the calculated distance from either the front or bottom infrared (IR) ra
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_angle()</span>
 
+#### Description
+This function returns the current gyroscope angle measurement for either the x (roll),y (pitch),or z (yaw) axis.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_angle_params.png" width="200px"/>  
 
 **axis:** x, y, z
-
-#### Description
-This function returns the current gyroscope angle measurement for either the x (roll),y (pitch),or z (yaw) axis.
 
 <img src="/img/CDE/blockly_docu/senior/xyz.jpg" width="350px"/>  
 
@@ -679,14 +679,14 @@ This function returns the current gyroscope angle measurement for either the x (
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_angular_speed()</span>
 
+#### Description
+This function returns the current angular velocity in degrees per second for either the x (roll),y (pitch), or z (yaw) axis.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_angular_speed_params.png" width="280px"/>  
 
 **type:** x, y, z
-
-#### Description
-This function returns the current angular velocity in degrees per second for either the x (roll),y (pitch), or z (yaw) axis.
 
 <img src="/img/CDE/blockly_docu/senior/xyz.jpg" width="350px"/> 
 
@@ -709,17 +709,17 @@ This function returns the current angular velocity in degrees per second for eit
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_accel()</span>
 
-#### Parameters
-
-<img src="/img/CDE/blockly_docu/senior/get_accel_params.png" width="210px"/> 
-
-**type:** x, y, z
-
 #### Description
 This function returns the current acceleration on either the x, y, or z axis in units of $m/s^2*10$.    
 **Note:** *1g* = $9.8m/s^2$
 
 <img src="/img/CDE/blockly_docu/senior/xyz.jpg" width="350px"/> 
+
+#### Parameters
+
+<img src="/img/CDE/blockly_docu/senior/get_accel_params.png" width="210px"/> 
+
+**type:** x, y, z
 
 #### Returns
 ***integer* acceleration:** positive or negative acceleration of the drone, in $m/s^2*10$
@@ -740,6 +740,9 @@ This function returns the current acceleration on either the x, y, or z axis in 
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_pos()</span>
 
+#### Description
+Returns the current estimated position of the CoDrone EDU using the optical flow sensor.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_pos_params1.png" width="230px"/>  
@@ -750,9 +753,6 @@ This function returns the current acceleration on either the x, y, or z axis in 
 
 **axis:** x, y, z   
 **unit:** mm, cm, in, m
-
-#### Description
-Returns the current estimated position of the CoDrone EDU using the optical flow sensor.
 
 <img src="/img/CDE/blockly_docu/senior/topdown_xy.png" width="350px"/> 
 
@@ -779,11 +779,11 @@ Returns the current estimated position of the CoDrone EDU using the optical flow
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_battery()</span>
 
-#### Parameters
-None
-
 #### Description
 This function returns the current battery percentage of the drone battery.
+
+#### Parameters
+None
 
 #### Returns
 ***integer* battery percentage:** the battery percentage from 0 to 100
@@ -804,21 +804,21 @@ This function returns the current battery percentage of the drone battery.
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_height()</span>
 
+#### Description
+Returns the calculated distance from the bottom infrared (IR) range sensor to the surface. The sensor range is up to 1.5m. This is another name for the get_range("bottom") function.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_height_params.png" width="200px"/>  
 
 **units:** cm, in, mm, m
 
-#### Description
-Returns the calculated distance from the bottom infrared (IR) range sensor to the surface. The sensor range is up to 1.5m. This is another name for the get_range("bottom") function.
-
 #### Returns
 ***flaot* height:** float height value in the units selected
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/get_height_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/get_height_example.png" width="450px"/>  
 
 <hr/>
 
@@ -832,15 +832,15 @@ Returns the calculated distance from the bottom infrared (IR) range sensor to th
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_pressure()</span>
 
+#### Description
+This function returns barometer data in either pascals or millibars.    
+**Note:** 1 mbar = 100 Pa
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_pressure_params.png" width="220px"/>  
 
 **unit:** pascal or millibar
-
-#### Description
-This function returns barometer data in either pascals or millibars.    
-**Note:** 1 mbar = 100 Pa
 
 #### Returns
 ***float* pressure:** float value in either Pa or mbar
@@ -861,14 +861,14 @@ This function returns barometer data in either pascals or millibars.
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_temperature()</span>
 
+#### Description
+This block returns the current temperature of the drone in either Celsius or Fahrenheit.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_temperature_params.png" width="300px"/>  
 
 **unit:** Fahrenheit, Celsius, Kelvin
-
-#### Description
-This block returns the current temperature of the drone in either Celsius or Fahrenheit.
 
 #### Returns
 ***float* temperature:** float value in degrees
@@ -889,14 +889,14 @@ This block returns the current temperature of the drone in either Celsius or Fah
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_elevation()</span>
 
+#### Description
+Returns the estimated elevation data from the CoDrone EDU's barometer.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_elevation_parameters.png" width="250px"/>  
 
 **unit:** m (meter), km (kilometer), ft (feet), mi (miles).
-
-#### Description
-Returns the estimated elevation data from the CoDrone EDU's barometer.
 
 #### Returns
 ***float* elevation:** float elevation value in units selected
@@ -917,14 +917,14 @@ Returns the estimated elevation data from the CoDrone EDU's barometer.
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_color()</span>
 
+#### Description
+This functions reads the color data from either of the two bottom color sensors and returns one of the 8 pre-calibrated colors (provided in the color cards). The drone must be flat on a surface (not flying) for the color sensor to activate.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_color_params.png" width="230px"/>
 
 **type:** front, back
-
-#### Description
-This functions reads the color data from either of the two bottom color sensors and returns one of the 8 pre-calibrated colors (provided in the color cards). The drone must be flat on a surface (not flying) for the color sensor to activate.
 
 #### Returns
 **color:** detected color as a string (Red, Green, Yellow, Blue, Cyan, Magenta, Black, White, Unknown)
@@ -945,6 +945,9 @@ This functions reads the color data from either of the two bottom color sensors 
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_hsvl()</span>
 
+#### Description
+Returns the HSVL (hue, saturation, value, lightness) data from either of the CoDrone EDU's bottom color sensors. The drone must be flat on a surface (not flying) for the color sensor to activate.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_hsvl_params1.png" width="250px"/>  
@@ -955,9 +958,6 @@ This functions reads the color data from either of the two bottom color sensors 
 
 **type:** front, back   
 **unit:** hue, saturation, value, lightness
-
-#### Description
-Returns the HSVL (hue, saturation, value, lightness) data from either of the CoDrone EDU's bottom color sensors. The drone must be flat on a surface (not flying) for the color sensor to activate.
 
 #### Returns
 hsvl value from sensor
@@ -978,14 +978,14 @@ hsvl value from sensor
 
 <span className="light_gray">drone.</span><span className="dark_gray">get_state_data()</span>
 
+#### Description
+Returns the current state of the CoDrone EDU.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/get_state_data_params.png" width="280px"/>  
 
 **unit:** modeFlight, modeMovement
-
-#### Description
-Returns the current state of the CoDrone EDU.
 
 #### Returns
 **state:** name of flight/movement state
@@ -1006,11 +1006,11 @@ Returns the current state of the CoDrone EDU.
 
 <span className="light_gray">drone.</span><span className="dark_gray">reset_sensor()</span>
 
-#### Parameters
-None
-
 #### Description
 Resets the Gyroscope angles to 0. Make sure the drone is on a flat surface when running this block.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -1035,15 +1035,15 @@ To use this example file turn the drone manually with your hand and watch the Z 
 
 <span className="light_gray">drone.</span><span className="dark_gray">buzzer()</span>
 
+#### Description
+Plays a note for a duration in milliseconds using the CoDrone EDU drone buzzer.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/drone_buzzer_params.PNG" width="500px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin   
 ***integer* duration:** the duration of note played in milliseconds
-
-#### Description
-Plays a note for a duration in milliseconds using the CoDrone EDU drone buzzer.
 
 #### Returns
 None
@@ -1064,15 +1064,15 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_buzzer()</span>
 
+#### Description
+Plays a note for a duration in milliseconds using the CoDrone EDU controller buzzer.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/controller_buzzer_params.PNG" width="500px"/> 
 
 **note:** note range from C3 to B7, Mute, Fin   
 ***integer* duration:** the duration of note played in milliseconds
-
-#### Description
-Plays a note for a duration in milliseconds using the CoDrone EDU controller buzzer.
 
 #### Returns
 None
@@ -1093,12 +1093,12 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">drone_buzzer_hertz()</span>
 
+#### Description
+Plays a sound frequency for a duration in milliseconds using the CoDrone EDU drone buzzer.
+
 #### Parameters
 ***integer* hertz:** the frequency of the buzzer, in Hertz    
 ***integer* duration:** the duration of the buzzer played, in milliseconds
-
-#### Description
-Plays a sound frequency for a duration in milliseconds using the CoDrone EDU drone buzzer.
 
 #### Returns
 None
@@ -1119,12 +1119,12 @@ None
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_buzzer_hertz()</span>
 
+#### Description
+Plays a sound frequency for a duration in milliseconds using the CoDrone EDU controller buzzer.
+
 #### Parameters
 ***integer* hertz:** the frequency of the buzzer, in Hertz    
 ***integer* duration:** the duration of the buzzer played, in milliseconds
-
-#### Description
-Plays a sound frequency for a duration in milliseconds using the CoDrone EDU controller buzzer.
 
 #### Returns
 None
@@ -1134,7 +1134,6 @@ None
 <img src="/img/CDE/blockly_docu/senior//hertz_example.PNG" width="500px"/>  
 
 <hr className="section_hr"/>
-
 
 ## Screen
 
@@ -1154,15 +1153,6 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_draw_line()</span>
 
-#### Parameters
-
-<img src="/img/CDE/blockly_docu/senior/controller_draw_line_params.png" width="450px"/>
-
-***integer* x1:** point 1 x coordinate    
-***integer* y1:** point 1 y coordinate    
-***integer* x2:** point 2 x coordinate    
-***integer* y2:** point 2 y coordinate    
-
 #### Description
 
 ```python
@@ -1173,6 +1163,14 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 ```
 Draws a line between points (x1, y1) and (x2, y2)
 
+#### Parameters
+
+<img src="/img/CDE/blockly_docu/senior/controller_draw_line_params.png" width="450px"/>
+
+***integer* x1:** point 1 x coordinate    
+***integer* y1:** point 1 y coordinate    
+***integer* x2:** point 2 x coordinate    
+***integer* y2:** point 2 y coordinate    
 
 #### Returns
 None
@@ -1199,17 +1197,16 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_draw_string()</span>
 
+#### Description
+Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/controller_draw_string_params.png" width="450px"/>
 
 ***integer* xStart:** starting x position   
 ***integer* yStart:** starting y position   
-**text:** any string input    
-
-#### Description
-Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
-
+**text:** any string input
 
 #### Returns
 None
@@ -1236,16 +1233,6 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_draw_rectangle()</span>
 
-#### Parameters
-
-<img src="/img/CDE/blockly_docu/senior/controller_draw_rectangle_params.png" width="550px"/>
-
-***integer* xStart:** top left corner x coordinate    
-***integer* yStart:** top left corner y coordinate    
-***integer* width:** width of rectangle   
-***integer* height:** height of rectangle   
-***boolean* flagFill:** optional parameter to fill in the rectangle or not. default value is False    
-
 #### Description
 
 ```python
@@ -1257,6 +1244,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 Draws a rectangle onto the controller screen starting from point (x,y) and extends to given height and width
 
+#### Parameters
+
+<img src="/img/CDE/blockly_docu/senior/controller_draw_rectangle_params.png" width="550px"/>
+
+***integer* xStart:** top left corner x coordinate    
+***integer* yStart:** top left corner y coordinate    
+***integer* width:** width of rectangle   
+***integer* height:** height of rectangle   
+***boolean* flagFill:** optional parameter to fill in the rectangle or not. default value is False    
 
 #### Returns
 None
@@ -1283,15 +1279,6 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_draw_square()</span>
 
-#### Parameters
-
-<img src="/img/CDE/blockly_docu/senior/controller_draw_square_params.png" width="500px"/>
-
-***integer* xStart:** top left corner x coordinate    
-***integer* yStart:** top left corner y coordinate    
-***integer* width:** width of square    
-***boolean* flagFill:** optional parameter to fill in the square or not. default value is False   
-
 #### Description
 ```python
 width
@@ -1301,6 +1288,14 @@ width
 ```
 Draws a square on the controller screen starting from point (x,y) and will extend to the given width
 
+#### Parameters
+
+<img src="/img/CDE/blockly_docu/senior/controller_draw_square_params.png" width="500px"/>
+
+***integer* xStart:** top left corner x coordinate    
+***integer* yStart:** top left corner y coordinate    
+***integer* width:** width of square    
+***boolean* flagFill:** optional parameter to fill in the square or not. default value is False   
 
 #### Returns
 None
@@ -1327,16 +1322,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_draw_point()</span>
 
+#### Description
+Draws a point on the CoDrone EDU LED screen at point (x, y).
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/senior/controller_draw_point_params.png" width="350px"/>
 
 ***integer* x:** x coordinate   
 ***integer* y:** y coordinate
-
-#### Description
-Draws a point on the CoDrone EDU LED screen at point (x, y).
-
 
 #### Returns
 None
@@ -1363,12 +1357,11 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 <span className="light_gray">drone.</span><span className="dark_gray">controller_clear_screen()</span>
 
-#### Parameters
-None
-
 #### Description
 Clears the CoDrone EDU controller screen.
 
+#### Parameters
+None
 
 #### Returns
 None
