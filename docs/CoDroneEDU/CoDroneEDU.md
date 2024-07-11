@@ -13,7 +13,7 @@ customHeadElements:
 
 <div className='level1_main_image'>
 
-  <img src="/img/CDE/drone_remote-3.png" width="300px"/>
+  <img src="/img/CDE/drone_remote_fusion_1.jpg" width="300px"/>
 
 </div>
 

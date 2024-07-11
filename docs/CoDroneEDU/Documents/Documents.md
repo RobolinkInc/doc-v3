@@ -28,14 +28,14 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Documents/Technical-Specifications-Summary)
-  [Technical Specifications<br />Summary](/docs/CoDroneEDU/Documents/Technical-Specifications-Summary)
+  [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Documents/Technical-Specifications)
+  [Technical Specifications<br />Summary](/docs/CoDroneEDU/Documents/Technical-Specifications)
 
   <!-- [![Complete User and<br />Safety Guide](/img/CDE/safety-guide-icon.png)](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide)
   [Complete User and<br />Safety Guide](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide) -->
 
-  [![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
-  [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
+  <!--[![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
+  [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/889-Compliance-Statement)-->
 
 </div>
 

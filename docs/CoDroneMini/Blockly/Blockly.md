@@ -1,9 +1,3 @@
----
-title: "Blockly"
-customHeadElements:
-  - <link rel="manifest" href="manifest.json" />
----
-
 <div className='docs_title'>
   <h1>Blockly</h1>
 </div>
@@ -18,11 +12,11 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![What is Blockly?](/img/CDM/what-is-icon.png)](/docs/CoDroneMini/Blockly/What-is-Blockly)
-  [What is Blockly?](/docs/CoDroneMini/Blockly/What-is-Blockly)  
+  <!-- [![How to use Blockly](/img/CDM/what-is-icon.png)](/docs/CoDroneMini/Blockly/How-to-use-Blockly)
+  [How to use Blockly](/docs/CoDroneMini/Blockly/How-to-use-Blockly) -->  
 
-  [![Offline App Documentation](/img/CDM/app-docu-icon.png)](/docs/CoDroneMini/Blockly/Offline-App-Documentation)
-  [Offline<br />App Documentation](/docs/CoDroneMini/Blockly/Offline-App-Documentation)
+  <!-- [![Offline App Documentation](/img/CDM/app-docu-icon.png)](/docs/CoDroneMini/Blockly/Offline-App-Documentation)
+  [Offline<br />App Documentation](/docs/CoDroneMini/Blockly/Offline-App-Documentation) -->
 
   [![Junior Block Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Junior-Block-Documentation)
   [Junior Block<br />Documentation](/docs/CoDroneMini/Blockly/Junior-Block-Documentation)
