@@ -15,18 +15,18 @@ customHeadElements:
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
 
-  [![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/What-is-Python)
-  [What is Python?](/docs/CoDroneEDU/Python/What-is-Python)  
+  <!--[![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/What-is-Python)
+  [What is Python?](/docs/CoDroneEDU/Python/What-is-Python)--> 
 
   [![Setup and Installation](/img/CDE/set-up.png)](/docs/CoDroneEDU/Python/Setup-and-Installation)
   [Setup and Installation](/docs/CoDroneEDU/Python/Setup-and-Installation)
 
-  [![Update Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Update-Library)
-  [Update Library](/docs/CoDroneEDU/Python/Update-Library)
+  [![Updating Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
+  [Updating Library](/docs/CoDroneEDU/Python/Updating-Library)
 
 
 </div>

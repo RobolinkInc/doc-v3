@@ -24,7 +24,7 @@ Please click the tab below to go to the page.
   [![python](/img/CDPL/Python-logo.png)](/docs/CoDronePro_Lite/Python/)
   [Python](/docs/CoDronePro_Lite/Python/)
 
-  [![arduino](/img/CDPL/Arduino.png)](/docs/CoDronePro_Lite/Arduino/)
+  [![arduino](/img/CDPL/Arduino_Logo.svg)](/docs/CoDronePro_Lite/Arduino/)
   [Arduino](/docs/CoDronePro_Lite/Arduino/)
 
 

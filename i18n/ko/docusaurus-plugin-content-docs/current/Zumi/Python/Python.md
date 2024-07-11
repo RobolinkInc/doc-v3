@@ -19,8 +19,8 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![What is Python?](/img/Zumi/what-is-icon.png)](/docs/Zumi/Python/What-is-Python)
-  [What is Python?](/docs/Zumi/Python/What-is-Python)  
+  <!-- [![What is Python?](/img/Zumi/what-is-icon.png)](/docs/Zumi/Python/What-is-Python)
+  [What is Python?](/docs/Zumi/Python/What-is-Python)   -->
 
   [![Function Documentation](/img/Zumi/doc-app.png)](/docs/Zumi/Python/Function-Documentation)
   [Function<br />Documentation](/docs/Zumi/Python/Function-Documentation)
@@ -29,7 +29,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_2_images'>
+<!-- <div className='column_2_images'>
 
 <div className='level_image_column'>
 
@@ -41,6 +41,6 @@ customHeadElements:
 
 </div>
 
-<div id='blank'></div>
+</div> -->
 
-</div>
+<div id='blank'></div>

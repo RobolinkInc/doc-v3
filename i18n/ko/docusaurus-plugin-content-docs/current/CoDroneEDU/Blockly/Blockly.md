@@ -14,15 +14,15 @@ customHeadElements:
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
 
-  [![What is Blockly?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Blockly/What-is-Blockly)
-  [What is Blockly?](/docs/CoDroneEDU/Blockly/What-is-Blockly)  
+  [![How to use Blockly](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)
+  [How to use Blockly](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)  
 
-  [![Offline App Documentation](/img/CDE/app-docu-icon.png)](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)
-  [Offline<br />App Documentation](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)
+  <!--[![Offline App Documentation](/img/CDE/app-docu-icon.png)](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)
+  [Offline<br />App Documentation](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)-->
 
   [![Junior Block Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/Junior-Block-Documentation)
   [Junior Block<br />Documentation](/docs/CoDroneEDU/Blockly/Junior-Block-Documentation)

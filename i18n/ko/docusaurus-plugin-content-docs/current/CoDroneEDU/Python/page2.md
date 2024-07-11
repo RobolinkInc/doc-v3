@@ -11,7 +11,9 @@ customHeadElements:
 
 Install Python on your Mac or Windows machine. If you’re using a guest or limited account, **make sure you have access to admin credentials** for installing new software on the computer. This is especially important for students using a school computer or parent computer with limited access. If you’re on a Mac computer, you may need to modify the security settings in system preferences in order to download software.
 
-⚠️ **Note (Last Edited 10/30/23):** The latest version of Python (3.12) has an issue with a library that manages packages in virtual environments. Please use [Python 3.11](https://www.python.org/downloads/release/python-3116/) when following along with this tutorial.
+:::caution
+**(Last Edited 10/30/23):** The latest version of Python (3.12) has an issue with a library that manages packages in virtual environments. Please use [Python 3.11](https://www.python.org/downloads/release/python-3116/) when following along with this tutorial.
+:::
 
 Click [here](https://www.python.org/downloads/release/python-3116/) to go to the Python website to install v3.11. Follow along with the instructions in the video below. Regardless of the Python version shown in the video, the instructions will still apply.
 
@@ -31,7 +33,9 @@ Click [here](https://www.python.org/downloads/release/python-3116/) to go to the
 
 Next, install PyCharm Community (free) edition , which is what we’ll use for writing out our Python code and running it on CoDrone EDU.
 
-**Note:** If you choose not to use PyCharm and prefer your own editor or IDE, you will need to know how to install packages on your platform of choice. If you are not sure how to do this, we recommend following the tutorial for PyCharm instead.
+:::note
+If you choose not to use PyCharm and prefer your own editor or IDE, you will need to know how to install packages on your platform of choice. If you are not sure how to do this, we recommend following the tutorial for PyCharm instead.
+:::
 
 Click [here](https://www.jetbrains.com/pycharm/download/) to go to the PyCharm download page and follow the instructions in the video below.
 
@@ -53,9 +57,11 @@ Now you need to create a new project and set it up with the CoDrone EDU library.
 ```python
 from codrone_edu.drone import *
 ```
-**Note: If a main.py file was not generated, you can make a new one by right clicking on the project name and selecting “New>Python File”. This is for both Windows and Mac.**
-
+<br/>
+:::note
+If a main.py file was not generated, you can make a new one by right clicking on the project name and selecting “New > Python File”. This is for both Windows and Mac.
 <img src="/img/CDE/Python_setup_installation_1.png" width="650px"/>
+:::
 
 <br/>
 

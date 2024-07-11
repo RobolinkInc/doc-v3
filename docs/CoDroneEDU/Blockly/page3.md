@@ -24,11 +24,11 @@ version 2.1.8 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 <img src="/img/CDE/blockly_docu/junior/takeoff.png" width="120px"/>  
 
-#### Parameters
-None
-
 #### Description
 This functions makes the drone take off. CoDrone EDU takes off at an average height of 1 meter off the ground. A takeoff block must be used before any other flight command or flight movement.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -45,11 +45,11 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/land.PNG" width="90px"/>  
 
-#### Parameters
-None
-
 #### Description
 This function makes the drone land by throttling down safely.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -66,11 +66,11 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/emergencystop.png" width="180px"/>  
 
-#### Parameters
-None
-
 #### Description
 This function stops all motors immediately. Use with caution to avoid damaging your drone.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -87,11 +87,11 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/hover.png" width="220px"/>  
 
-#### Parameters
-***integer* duration:** the duration of hover, in seconds
-
 #### Description
 This function makes the drone hover in place for a given duration in seconds.
+
+#### Parameters
+***integer* duration:** the duration of hover, in seconds
 
 #### Returns
 None
@@ -108,6 +108,9 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/go_for_seconds_at_power.png" width="480px"/>  
 
+#### Description
+This function flies the drone in a direction for a given duration and a power percentage.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/go_at_power_params.png" width="480px"/> 
@@ -115,9 +118,6 @@ None
 **direction:** forward, backward, up, down, left, right     
 ***integer* duration:** the duration of movement, in seconds       
 ***integer* power:** the power/speed of drone between 0 and 100
-
-#### Description
-This function flies the drone in a direction for a given duration and a power percentage.
 
 #### Returns
 None
@@ -134,15 +134,15 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/turn_to.png" width="240px"/>  
 
+#### Description
+Turns CoDrone EDU to the left or to the right a given number of degrees.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/turn_to_params.png" width="240px"/>  
 
 **direction:** left, right      
 ***integer* degrees:** the angle of the turn between -180 and +180
-
-#### Description
-Turns CoDrone EDU to the left or to the right a given number of degrees.
 
 #### Returns
 None
@@ -159,13 +159,13 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/turn_direction_seconds_power.png" width="450px"/>  
 
+#### Description
+Turns CoDrone EDU to the left or to the right for a duration in seconds at a percentange of power.
+
 #### Parameters
 **direction:** left, right      
 ***integer* duration:** the duration of the movement, in seconds       
 ***integer* power:** the power/speed of the drone between 0 and 100
-
-#### Description
-Turns CoDrone EDU to the left or to the right for a duration in seconds at a percentange of power.
 
 #### Returns
 None
@@ -184,14 +184,14 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/flip.png" width="180px"/>  
 
+#### Description
+This functions makes the drone flip back, front, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/flip_params.png" width="200px"/>  
 
 **direction:** back, front, right, left
-
-#### Description
-This functions makes the drone flip back, front, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
 
 #### Returns
 None
@@ -212,15 +212,15 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 
 <img src="/img/CDE/blockly_docu/junior/set_drone_led.png" width="450px"/>  
 
+#### Description
+Sets the color and brightness of the CoDrone EDU drone LED.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/set_drone_led_params.png" width="450px"/>  
 
 **color:** select a color from the color palette        
 ***integer* brightness:** the brightness of the LED between 0 and 255
-
-#### Description
-Sets the color and brightness of the CoDrone EDU drone LED.
 
 #### Returns
 None
@@ -237,11 +237,11 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/drone_led_off.png" width="180px"/>  
 
-#### Parameters
-None
-
 #### Description
 Turns off the CoDrone EDU drone LED.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -258,15 +258,15 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/set_controller_led.png" width="475px"/>  
 
+#### Description
+Sets the color and brightness of the CoDrone EDU controller LED.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/set_controller_LED_params.png" width="475px"/>  
 
 **color:** select a color from the color palette        
 ***integer* brightness:** positive integer between 0 and 255
-
-#### Description
-Sets the color and brightness of the CoDrone EDU controller LED.
 
 #### Returns
 None
@@ -283,11 +283,11 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/controller_led_off.png" width="220px"/>  
 
-#### Parameters
-None
-
 #### Description
 Turns off the CoDrone EDU controller LED.
+
+#### Parameters
+None
 
 #### Returns
 None
@@ -306,15 +306,15 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/play_note_drone.png" width="430px"/>  
 
+#### Description
+Plays a note for a duration in seconds using the CoDrone EDU drone buzzer.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/play_note_drone_params.png" width="430px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin       
 ***integer* duration:** the duration of the note played, in seconds
-
-#### Description
-Plays a note for a duration in seconds using the CoDrone EDU drone buzzer.
 
 #### Returns
 None
@@ -331,15 +331,15 @@ None
 
 <img src="/img/CDE/blockly_docu/junior/play_note_controller.png" width="450px"/>  
 
+#### Description
+Plays a note for a duration in seconds using the CoDrone EDU controller buzzer.
+
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/play_note_controller_params.png" width="450px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin       
 ***integer* duration:** the duration of the note played, in seconds
-
-#### Description
-Plays a note for a duration in seconds using the CoDrone EDU controller buzzer.
 
 #### Returns
 None
