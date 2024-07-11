@@ -25,14 +25,6 @@ customHeadElements:
   [![Junior Block Documentation](/img/Zumi/doc-app.png)](/docs/Zumi/Blockly/Junior-Block-Documentation)
   [Junior Block<br />Documentation](/docs/Zumi/Blockly/Junior-Block-Documentation)
 
-</div>
-
-</div>
-
-<div className='column_2_images'>
-
-<div className='level_image_column'>
-
   [![Senior Block Documentation](/img/Zumi/doc-app.png)](/docs/Zumi/Blockly/Senior-Block-Documentation)
   [Senior Block<br />Documentation](/docs/Zumi/Blockly/Senior-Block-Documentation) 
 
@@ -41,6 +33,7 @@ customHeadElements:
 
 </div>
 
-<div id='blank'></div>
-
 </div>
+
+
+<div id='blank'></div>

@@ -10,7 +10,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDPL/Arduino.png" width="220px"/>
+  <img src="/img/CDPL/Arduino_Logo.svg" width="220px"/>
 
 </div>
 

@@ -21,14 +21,6 @@
   [![Junior Block Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Junior-Block-Documentation)
   [Junior Block<br />Documentation](/docs/CoDroneMini/Blockly/Junior-Block-Documentation)
 
-</div>
-
-</div>
-
-<div className='column_2_images'>
-
-<div className='level_image_column'>
-
   [![Senior Block Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Senior-Block-Documentation)
   [Senior Block<br />Documentation](/docs/CoDroneMini/Blockly/Senior-Block-Documentation) 
 
@@ -37,6 +29,8 @@
 
 </div>
 
+</div>
+
+
 <div id='blank'></div>
 
-</div>

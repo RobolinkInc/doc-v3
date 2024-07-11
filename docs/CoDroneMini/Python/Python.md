@@ -29,15 +29,7 @@ customHeadElements:
   [Update Library](/docs/CoDroneMini/Python/Update-Library)
  -->
 
-</div>
-
-</div>
-
-<div className='column_2_images'>
-
-<div className='level_image_column'>
-
-  [![Function Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Python/Function-Documentation)
+ [![Function Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Python/Function-Documentation)
   [Function<br />Documentation](/docs/CoDroneMini/Python/Function-Documentation)
 
   [![Python Changelog](/img/CDM/doc-app.png)](/docs/CoDroneMini/Python/Python-Changelog)
@@ -45,6 +37,7 @@ customHeadElements:
 
 </div>
 
-<div id='blank'></div>
-
 </div>
+
+
+<div id='blank'></div>

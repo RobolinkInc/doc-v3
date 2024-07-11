@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 0.0.0 ([Changelog](/docs/Zumi/Python/Python-Changelog))
+version 2.90
 </div>
 
 ## MPU
@@ -3987,7 +3987,7 @@ screen.happy()
 Draws Zumi's default eyes on the screen.
 
 #### Syntax
-```hello```<br />
+```hello()```<br />
 
 #### Parameters
 None

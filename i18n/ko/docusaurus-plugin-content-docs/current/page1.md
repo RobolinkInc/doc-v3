@@ -7,7 +7,7 @@ customHeadElements:
 
 <div className="document-div">
 
-<h2>용어 설명서</h2>
+<h2>Terms of Use</h2>
 
 <h5>Last Updated: May 15, 2024</h5>
 

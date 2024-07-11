@@ -10,7 +10,7 @@ customHeadElements:
 
 <br/>
 
-<div className='column_2_images'>
+<div className='column_3_images'>
 
 <div className='level_image_column'>
 
@@ -20,25 +20,28 @@ customHeadElements:
   [![Firmware](/img/CDE/firmware-icon.png)](/docs/CoDroneEDU/Documents/Firmware)
   [Firmware](/docs/CoDroneEDU/Documents/Firmware)
 
-</div>
+  [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Documents/Technical-Specifications)
+  [Technical Specifications<br />Summary](/docs/CoDroneEDU/Documents/Technical-Specifications)
 
 </div>
 
-<div className='column_2_images'>
+</div>
+
+<!-- <div className='column_2_images'>
 
 <div className='level_image_column'>
 
   [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Documents/Technical-Specifications)
   [Technical Specifications<br />Summary](/docs/CoDroneEDU/Documents/Technical-Specifications)
 
-  <!-- [![Complete User and<br />Safety Guide](/img/CDE/safety-guide-icon.png)](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide)
-  [Complete User and<br />Safety Guide](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide) -->
+  [![Complete User and<br />Safety Guide](/img/CDE/safety-guide-icon.png)](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide)
+  [Complete User and<br />Safety Guide](/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide) 
 
-  <!--[![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
-  [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/889-Compliance-Statement)-->
+  [![889 Compliance<br />Statement](/img/CDE/889-compliance-statement-icon.png)](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
+  [889 Compliance<br />Statement](/docs/CoDroneEDU/Documents/889-Compliance-Statement)
 
+</div> 
 </div>
+-->
 
 <div id='blank'></div>
-
-</div>

@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 0.0.0 ([Changelog](/docs/CoDroneMini/Python/Python-Changelog))
+version 1.1.3 ([Changelog](/docs/CoDroneMini/Python/Python-Changelog))
 </div>
 
 ## Connection

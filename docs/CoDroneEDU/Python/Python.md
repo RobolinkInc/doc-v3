@@ -15,7 +15,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
 

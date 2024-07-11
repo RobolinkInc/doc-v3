@@ -15,7 +15,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
 
@@ -28,14 +28,6 @@ customHeadElements:
   [![Junior Block Documentation](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Blockly/Junior-Block-Documentation)
   [Junior Block<br />Documentation](/docs/CoDronePro_Lite/Blockly/Junior-Block-Documentation)
 
-</div>
-
-</div>
-
-<div className='column_2_images'>
-
-<div className='level_image_column'>
-
   [![Senior Block Documentation](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Blockly/Senior-Block-Documentation)
   [Senior Block<br />Documentation](/docs/CoDronePro_Lite/Blockly/Senior-Block-Documentation) 
 
@@ -44,6 +36,7 @@ customHeadElements:
 
 </div>
 
-<div id='blank'></div>
-
 </div>
+
+
+<div id='blank'></div>
