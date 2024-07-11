@@ -635,7 +635,7 @@ Returns the calculated distance from either the front or bottom infrared (IR) ra
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/get_range_example.png" width="350px"/>  
+<img src="/img/CDE/blockly_docu/senior/get_range_example.png" width="450px"/>  
 
 <hr/>
 
