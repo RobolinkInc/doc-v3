@@ -11,7 +11,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDPL/Blockly-logo.png" width="200px"/>
+  <img src="/img/CDPL/new-Blockly-logo.png" width="200px"/>
 
 </div>
 
