@@ -169,6 +169,7 @@ const config = {
         //,'ja'
         ],
         excludeRoutes: [
+          //en
           '/docs/terms-of-use',
           '/docs/privacy-policy',
           '/docs/CoDroneEDU/Blockly/Offline-App-Documentation',
@@ -194,7 +195,34 @@ const config = {
           '/docs/CoDronePro_Lite/Arduino/What-is-Arduino',
           '/docs/CoDronePro_Lite/Arduino/Setup-and-Installation',
           '/docs/CoDronePro_Lite/Arduino/Update-Library',
-          '/docs/CoDronePro_Lite/Arduino/Arduino-Changelog'
+          '/docs/CoDronePro_Lite/Arduino/Arduino-Changelog',
+          //ko
+          '/ko/docs/terms-of-use',
+          '/ko/docs/privacy-policy',
+          '/ko/docs/CoDroneEDU/Blockly/Offline-App-Documentation',
+          '/ko/docs/CoDroneEDU/Python/What-is-Python',
+          '/ko/docs/CoDroneEDU/Python/Webpy-Changelog',
+          '/ko/docs/CoDroneEDU/Documents/Complete-User-and-Safety-Guide',
+          '/ko/docs/CoDroneEDU/Documents/889-Compliance-Statement',
+          '/ko/docs/CoDroneMini/Blockly/How-to-use-Blockly',
+          '/ko/docs/CoDroneMini/Blockly/Offline-App-Documentation',
+          '/ko/docs/CoDroneMini/Python/What-is-Python',
+          '/ko/docs/CoDroneMini/Python/Updating-Library',
+          '/ko/docs/Zumi/Blockly/What-is-Blockly',
+          '/ko/docs/Zumi/Blockly/Blockly-Changelog',
+          '/ko/docs/Zumi/Python/What-is-Python',
+          '/ko/docs/Zumi/Python/Python-Changelog',
+          '/ko/docs/CoDronePro_Lite/Blockly/What-is-Blockly',
+          '/ko/docs/CoDronePro_Lite/Blockly/Offline-App-Documentation',
+          '/ko/docs/CoDronePro_Lite/Blockly/Blockly-Changelog',
+          '/ko/docs/CoDronePro_Lite/Python/What-is-Python',
+          '/ko/docs/CoDronePro_Lite/Python/Setup-and-Installation',
+          '/ko/docs/CoDronePro_Lite/Python/Update-Library',
+          '/ko/docs/CoDronePro_Lite/Python/Python-Changelog',
+          '/ko/docs/CoDronePro_Lite/Arduino/What-is-Arduino',
+          '/ko/docs/CoDronePro_Lite/Arduino/Setup-and-Installation',
+          '/ko/docs/CoDronePro_Lite/Arduino/Update-Library',
+          '/ko/docs/CoDronePro_Lite/Arduino/Arduino-Changelog'
         ],
       }],
       [
