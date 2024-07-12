@@ -2774,7 +2774,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2805,7 +2805,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2836,7 +2836,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2868,7 +2868,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2900,7 +2900,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2931,7 +2931,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2962,7 +2962,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -2993,7 +2993,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3024,7 +3024,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3055,7 +3055,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3086,7 +3086,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3117,7 +3117,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3148,7 +3148,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3179,7 +3179,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3209,7 +3209,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3239,7 +3239,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3269,7 +3269,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
@@ -3299,7 +3299,7 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
