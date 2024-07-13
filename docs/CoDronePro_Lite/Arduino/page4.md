@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 0.0.0
+version 2.2.1
 </div>
 
 ## Connection
