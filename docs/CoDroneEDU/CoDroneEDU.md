@@ -17,12 +17,12 @@ customHeadElements:
 
 </div>
 
-Welcome to CoDrone EDU’s journey. The CoDrone EDU is a programmable drone, meant for learning in the classroom.  
+Welcome to CoDrone EDU! The CoDrone EDU is a programmable drone, meant for learning in the classroom.  
 Code it in Python or start from the basics with block-based coding.  
 
 <br />
 
-Please click the tab below to go to the page.   
+Please click the tabs below to go to the page.   
 
 <div className='level_image_column'>
 
