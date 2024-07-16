@@ -705,7 +705,7 @@ None
 Sets the color of CoDrone Mini's LED blinking pattern. "Blink" flashes the LED on and off and an interval determined by the speed parameter. "Double blink" flashes the LED twice before pausing at the interval determined by the speed parameter. 
 
 #### Parameters
-
+<img src="/img/CDM/blockly_docu/senior/lights/LEDcolor_pattern_params.png" width="500px"/>
 ***integer* red:** the pixel value for the color red between 0 and 255 <br /> 
 ***integer* green:** the pixel value for the color green between 0 and 255 <br /> 
 ***integer* blue:** the pixel value for the color blue between 0 and 255 <br /> 
