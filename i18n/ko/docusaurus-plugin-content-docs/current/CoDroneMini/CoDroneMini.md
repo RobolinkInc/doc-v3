@@ -6,12 +6,12 @@ customHeadElements:
 ---
 
 <div className='docs_title'>
-  <h1>Codrone Mini</h1>
+  <h1>CoDrone Mini</h1>
 </div>
 
 <div className='level1_body'>
 
-Welcome to Codorne Mini’s journey.
+Welcome to CoDrone Mini’s journey.
 
 <br />
 
