@@ -2,9 +2,9 @@ name: autopublish
 
 on:
   pull_request:
-    branches: [deploy-prod]
+    branches: [main]
   push:
-    branches: [deploy-prod]
+    branches: [main]
 
 jobs:
   checks:
@@ -48,7 +48,7 @@ jobs:
           npm i
           fi
           npx docusaurus build
-          echo "docs.robolink.com" >./build/CNAME
+          echo "staging-docs.robolink.com" >./build/CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
