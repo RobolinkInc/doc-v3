@@ -12,7 +12,7 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
   <div className="firmware_div">
     <h3>CoDrone EDU</h3>
     <div className="firmware_div-fig">
-      <img src="/img/CDE/drone_remote-3.png" width="350px"/>
+      <img src="/img/CDE/drone_remote-4.png" width="350px"/>
     </div>
     <h4>Drone Version</h4>
     <p>Latest Version: 22.8.1</p>
@@ -25,7 +25,7 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
   <div className="firmware_div">
     <h3>CoDrone EDU (JROTC Edition)</h3>
     <div className="firmware_div-fig">
-      <img src="/img/CDE/drone_remote-3.png" width="350px"/>
+      <img src="/img/CDE/drone_remote_cdej-3.jpg" width="350px"/>
     </div>
     <h4>Drone Version</h4>
     <p>Latest Version: 24.2.12</p>
