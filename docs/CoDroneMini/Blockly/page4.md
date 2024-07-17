@@ -225,7 +225,7 @@ None
 
 #### Block
 
-<img src="/img/CDM/blockly_docu/senior/flight_variables/set_yaw_example.png"/>
+<img src="/img/CDM/blockly_docu/senior/flight_variables/set_yaw.png"/>
 
 #### Description
 
@@ -250,7 +250,7 @@ None
 
 #### Block
 
-<img src="/img/CDM/blockly_docu/senior/flight_variables/set_throttle_example.png"/>
+<img src="/img/CDM/blockly_docu/senior/flight_variables/set_throttle.png"/>
 
 #### Description
 
@@ -811,7 +811,7 @@ Plays a note at a particular frequency for a specified amount of time using the 
 
 #### Parameters
 
-***integer* frequency:** The note's frequency in Hertz
+***integer* frequency:** The note's frequency in Hertz<br />
 ***integer* duration:** the duration of the note played in seconds
 
 #### Returns

@@ -39,7 +39,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180x"/>  
+<img src="/img/CDE/blockly_docu/senior/takeoff_land_example.png" width="90x"/>  
 
 <hr/>
 
@@ -64,7 +64,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/takeoff_land_example.png" width="90px"/>  
 
 <hr/>
 
@@ -114,7 +114,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/hover_example.png" width="180px"/>  
 
 <hr/>
 
@@ -264,7 +264,7 @@ Place the drone on the floor a few feet away from a wall. When you run the code,
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_roll.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_roll.png" width="140px"/>  
 
 #### Code
 
@@ -289,7 +289,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_pitch.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_pitch.png" width="160px"/>  
 
 #### Code
 
@@ -314,7 +314,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_yaw.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_yaw.png" width="140px"/>  
 
 #### Code
 
@@ -339,7 +339,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_throttle.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_throttle.png" width="180px"/>  
 
 #### Code
 
@@ -356,7 +356,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/set_throttle_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_throttle_example.png" width="180px"/>  
 
 <hr/>
 
@@ -381,7 +381,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/move_no_params_example.png" width="400px"/>  
+<img src="/img/CDE/blockly_docu/senior/move_no_params_example.png" width="160px"/>  
 
 <hr/>
 
@@ -1105,7 +1105,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/hertz_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_hertz_example.png" width="500px"/>  
 
 <hr/>
 
@@ -1131,7 +1131,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior//hertz_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_hertz_example.png" width="500px"/>  
 
 <hr className="section_hr"/>
 

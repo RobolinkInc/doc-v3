@@ -35,7 +35,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/takeoff_hover_land_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/junior/takeoff_land_example.png" width="120px"/>  
 
 <hr/>
 
@@ -56,7 +56,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/takeoff_hover_land_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/junior/takeoff_land_example.png" width="120px"/>  
 
 <hr/>
 
@@ -77,7 +77,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/emergencystop_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/junior/emergencystop_example.png" width="180px"/>  
 
 <hr/>
 
@@ -98,7 +98,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/takeoff_hover_land_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/junior/hover_example.png" width="240px"/>  
 
 <hr/>
 
@@ -273,7 +273,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/set_controller_LED_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/junior/set_controller_led_example.png" width="500px"/>  
 
 <hr/>
 
