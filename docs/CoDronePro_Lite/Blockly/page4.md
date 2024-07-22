@@ -175,7 +175,7 @@ None
 
 #### Block
 
-<img src="/img/CDPL/blockly_docu/senior/flight_variables/set_roll.png"/>
+<img src="/img/CDPL/blockly_docu/senior/flight_variables/set_roll.png" width="220px"/>
 
 #### Description
 
@@ -489,7 +489,7 @@ None
 
 #### Example
 
-<img src="/img/CDPL/blockly_docu/senior/lights/eyecolor_brightness.png"/>
+<img src="/img/CDPL/blockly_docu/senior/lights/eyecolor_brightness_example.png"/>
 
 <hr/>
 

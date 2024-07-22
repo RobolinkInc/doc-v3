@@ -129,7 +129,7 @@ Moves the drone in a direction for a given duration and power percentage.
 
 #### Parameters
 
-<img src="/img/CDM/blockly_docu/junior/flight_commands/go_power_params.png"/>
+<img src="/img/CDM/blockly_docu/junior/flight_commands/go_power_params.png" width="460px"/>
 
 **direction:** forward, backward, up, down, left, right <br />
 ***integer* power:** the power/speed of the drone between 0 and 100 <br /> 

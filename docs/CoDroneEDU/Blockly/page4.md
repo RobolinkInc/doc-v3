@@ -39,7 +39,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180x"/>  
+<img src="/img/CDE/blockly_docu/senior/takeoff_land_example.png" width="90x"/>  
 
 <hr/>
 
@@ -64,7 +64,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/takeoff_land_example.png" width="90px"/>  
 
 <hr/>
 
@@ -114,7 +114,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/take_off_hover_land.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/hover_example.png" width="180px"/>  
 
 <hr/>
 
@@ -142,9 +142,13 @@ Moves the drone for a certain amount of time (in seconds) in a given direction d
 None
 
 #### Example
-In this example, roll and pitch are both set to positive 30% while yaw and throttle remain at 0%. CoDrone EDU will fly forward and to the right (diagonally) for 1 second at 30% speed.
 
-<img src="/img/CDE/blockly_docu/senior/move-example.png" width="480px"/>  
+<!-- In this example, the drone will move for 2 seconds with the roll and pitch set to 30%. Then, the drone will move for another 2 seconds with the roll and pitch set to -30%.
+<img src="/img/CDE/blockly_docu/senior/move-example1.png" width="480px"/>
+<br/>
+<br/> -->
+In the example below, the drone will move for 3 seconds with the yaw and throttle set to 50% and 25%. Then, the drone will move for another 3 seconds with the yaw and throttle set to -50% and -25%.
+<img src="/img/CDE/blockly_docu/senior/move-example2.png" width="480px"/> 
 
 <hr/>
 
@@ -208,7 +212,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/turn_direction_degree.PNG" width="210px"/>  
+<img src="/img/CDE/blockly_docu/senior/turn_direction_degree.png" width="210px"/>  
 
 #### Code
 
@@ -227,7 +231,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/turn_direction_degree_example.PNG" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/turn_direction_degree_example.png" width="240px"/>  
 
 <hr/>
 
@@ -252,7 +256,7 @@ CoDrone EDU will fly forward and stop when an obstacle is detected a given dista
 None
 
 #### Example
-Place the drone on the floor a few feet away from a wall. When you run the code, the drone will fly forward until the wall is detected 30 centimeters away. The next block will immediately execute. In this case, the drone will land.
+Place the drone on the floor a few feet away from a wall. When you run the code, the drone will fly forward until the wall is detected 20 centimeters away. The next block will immediately execute. In this case, the drone will land.
 
 <img src="/img/CDE/blockly_docu/senior/avoid_wall_example.png" width="280px"/>  
 
@@ -264,7 +268,7 @@ Place the drone on the floor a few feet away from a wall. When you run the code,
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_roll.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_roll.png" width="140px"/>  
 
 #### Code
 
@@ -281,7 +285,12 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/set_roll_example.png" width="180px"/>  
+<!-- In this example, after taking off, the drone sets its roll variable at 20% for rightward movement and then sets its roll variable at -20% for leftward movement. This will not make the drone move yet.
+<img src="/img/CDE/blockly_docu/senior/set_roll_example2.png" width="180px"/>
+<br/>
+<br/> -->
+In this example, after taking off, the drone sets its roll variable at 30% for rightward movement and moves for 2 seconds. And then the drone sets its roll variable at -30% for leftward movement and moves for 2 seconds.
+<img src="/img/CDE/blockly_docu/senior/set_roll_example1.png" width="180px"/>  
 
 <hr/>
 
@@ -289,7 +298,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_pitch.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_pitch.png" width="160px"/>  
 
 #### Code
 
@@ -306,7 +315,12 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/set_pitch_example.png" width="180px"/>  
+<!-- In this example, after taking off, the drone sets its pitch variable at 20% for forward movement and then sets its pitch variable at -20% for backward movement. This will not make the drone move yet.
+<img src="/img/CDE/blockly_docu/senior/set_pitch_example2.png" width="180px"/>
+<br/>
+<br/> -->
+In this example, after taking off, the drone sets its pitch variable at 30% for forward movement and moves for 2 seconds. And then the drone sets its pitch variable at -30% for backward movement and moves for 2 seconds.
+<img src="/img/CDE/blockly_docu/senior/set_pitch_example1.png" width="180px"/> 
 
 <hr/>
 
@@ -314,7 +328,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_yaw.png" width="180px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_yaw.png" width="140px"/>  
 
 #### Code
 
@@ -331,7 +345,12 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/set_yaw_example.png" width="180px"/>  
+<!-- In this example, after taking off, the drone sets its yaw variable at 20% for right turns and then sets its yaw variable at -20% for left turns. This will not make the drone move yet.
+<img src="/img/CDE/blockly_docu/senior/set_yaw_example2.png" width="180px"/>
+<br/>
+<br/> -->
+In this example, after taking off, the drone sets its yaw variable at 30% for right turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for left turns and moves for 2 seconds.
+<img src="/img/CDE/blockly_docu/senior/set_yaw_example1.png" width="180px"/>  
 
 <hr/>
 
@@ -339,7 +358,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/set_throttle.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/set_throttle.png" width="180px"/>  
 
 #### Code
 
@@ -356,7 +375,12 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/set_throttle_example.png" width="240px"/>  
+<!-- In this example, after taking off, the drone sets its throttle variable at 20% for upward movement and then sets its throttle variable at -20% for downward movement. This will not make the drone move yet.
+<img src="/img/CDE/blockly_docu/senior/set_throttle_example2.png" width="180px"/>
+<br/>
+<br/> -->
+In this example, after taking off, the drone sets its throttle variable at 30% for upward movement and moves for 2 seconds. And then the drone sets its throttle variable at -30% for downward movement and moves for 2 seconds.
+<img src="/img/CDE/blockly_docu/senior/set_throttle_example1.png" width="180px"/>    
 
 <hr/>
 
@@ -381,7 +405,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/move_no_params_example.png" width="400px"/>  
+<img src="/img/CDE/blockly_docu/senior/move_no_params_example.png" width="160px"/>  
 
 <hr/>
 
@@ -635,7 +659,12 @@ Returns the calculated distance from either the front or bottom infrared (IR) ra
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/get_range_example.png" width="450px"/>  
+In this example, after takeoff, the drone has its throttle set at 20% power, moving upward. Before entering the loop, it checks if the drone has already reached the maximum bottom range (set as 100), measured in centimeters. If not, it will continuously fly upward until the current bottom range is more than the max bottom range.
+<img src="/img/CDE/blockly_docu/senior/get_range_example1.png" width="450px"/>
+<!-- <br/>
+<br/>
+In this example below, run the program, manually point the drone to a wall, and then move it aroun until the drone is less than 70 cm away from a wall. Click the Stop button if you want to stop running the program.
+<img src="/img/CDE/blockly_docu/senior/get_range_example2.png" width="450px"/>  --> 
 
 <hr/>
 
@@ -761,11 +790,16 @@ Returns the current estimated position of the CoDrone EDU using the optical flow
 <img src="/img/CDE/blockly_docu/senior/xyz.jpg" width="350px"/> 
 
 #### Returns
-***float* position:** float x,y, or z value in units selected
+***float* position:** x,y, or z value in units selected
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/get_pos_ex.png" width="450px"/>  
+In this example, after takeoff, the console prints the x-y-z coordinates of the drone's position, in centimeters. Then, prints the x-y-z coordinates again after moving for 2 seconds.
+<img src="/img/CDE/blockly_docu/senior/get_pos_ex1.png" width="450px"/>
+<!-- <br/>
+<br/>
+In this example, after takeoff, the console prints the x-y-z coordinates of the drone's position, in inches. Prints x-coordinate of the drone after moving right. Prints y-coordinate of the drone after moving forward. Prints z-coordinate of the drone after flying higher.
+<img src="/img/CDE/blockly_docu/senior/get_pos_ex2.png" width="450px"/>   -->
 
 <hr/>
 
@@ -789,8 +823,12 @@ None
 ***integer* battery percentage:** the battery percentage from 0 to 100
 
 #### Example
-
-<img src="/img/CDE/blockly_docu/senior/get_battery_example.png" width="160px"/>  
+In this example, the program will check the drone's battery before takeoff and after landing.
+<img src="/img/CDE/blockly_docu/senior/get_battery_example1.png" width="160px"/>
+<!-- <br/>
+<br/>
+In the example below, the program will check the drone's battery before takeoff and after the front flip. The difference of battery percentage will be larger in this example than the previous one.
+<img src="/img/CDE/blockly_docu/senior/get_battery_example2.png" width="160px"/> --> 
 
 <hr/>
 
@@ -814,7 +852,7 @@ Returns the calculated distance from the bottom infrared (IR) range sensor to th
 **units:** cm, in, mm, m
 
 #### Returns
-***flaot* height:** float height value in the units selected
+***float* height:** float height value in the units selected
 
 #### Example
 
@@ -931,7 +969,12 @@ This functions reads the color data from either of the two bottom color sensors 
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/get_color_data_ex.png" width="500px"/>  
+In this example, if the drone's front color detector detects the color green, the drone's LED will light up green; otherwise, the drone's LED will turn off.
+<img src="/img/CDE/blockly_docu/senior/get_color_data_ex1.png" width="500px"/>
+<!-- <br/>
+<br/>
+In the example below, place the drone under two different colored surfaces, so that the back and front sensor detector aren't detecting the same surface. The program will output different colors for the back and front sensor.
+<img src="/img/CDE/blockly_docu/senior/get_color_data_ex2.png" width="500px"/>  --> 
 
 <hr/>
 
@@ -1029,7 +1072,7 @@ To use this example file turn the drone manually with your hand and watch the Z 
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer.png" width="500px"/>  
 
 #### Code
 
@@ -1040,7 +1083,7 @@ Plays a note for a duration in milliseconds using the CoDrone EDU drone buzzer.
 
 #### Parameters
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_params.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer_params.png" width="500px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin   
 ***integer* duration:** the duration of note played in milliseconds
@@ -1050,7 +1093,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_example.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer_example.png" width="500px"/>  
 
 <hr/>
 
@@ -1058,7 +1101,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer.PNG" width="500px"/>   
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer.png" width="500px"/>   
 
 #### Code
 
@@ -1069,7 +1112,7 @@ Plays a note for a duration in milliseconds using the CoDrone EDU controller buz
 
 #### Parameters
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer_params.PNG" width="500px"/> 
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer_params.png" width="500px"/> 
 
 **note:** note range from C3 to B7, Mute, Fin   
 ***integer* duration:** the duration of note played in milliseconds
@@ -1079,7 +1122,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer_example.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer_example.png" width="500px"/>  
 
 <hr/>
 
@@ -1087,7 +1130,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_hertz.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer_hertz.png" width="500px"/>  
 
 #### Code
 
@@ -1105,7 +1148,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/hertz_example.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_hertz_example.png" width="500px"/>  
 
 <hr/>
 
@@ -1113,7 +1156,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer_hertz.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer_hertz.png" width="500px"/>  
 
 #### Code
 
@@ -1131,7 +1174,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior//hertz_example.PNG" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_hertz_example.png" width="500px"/>  
 
 <hr className="section_hr"/>
 
