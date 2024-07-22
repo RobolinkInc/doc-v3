@@ -537,8 +537,16 @@ If choosing the "get" option, it returns the value of the item in a given positi
 #### Example
 In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. For the first and third print statements, ``undefined`` is printed since the position numbers are out of range (the positions don't exist) in ``test_list``. ``5`` and ``3`` are printed for the second and fourth print statements, respectively, since ``5`` is in position #2 and ``3`` is in position #4. 
 <img src="/img/CDE/blockly_docu/junior/get_remove_example1.png" width="470px"/>
-<!-- <img src="/img/CDE/blockly_docu/junior/get_remove_example2.png"/>
-<img src="/img/CDE/blockly_docu/junior/get_remove_example3.png"/>  -->
+<br/>
+<br/>
+
+In the example below, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. Then, in order, the items at position #4, position #3, and position #2 are removed from ``test_list``. The console prints ``test_list``, which outputs ``[100]``.
+<img src="/img/CDE/blockly_docu/junior/get_remove_example2.png" width="430px"/>
+<br/>
+<br/>
+
+In the example below, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. Then, in order, the items at positiong #4, position #3, and position #2 are printed on the console and removed from ``test_list``. The console prints ``test_list``, which outputs ``[100]``. **NOTE:** "get and removed" option makes the block capable to be attached to a variable block as well.
+<img src="/img/CDE/blockly_docu/junior/get_remove_example3.png" width="550px"/> 
 
 <hr/>
 
@@ -568,10 +576,13 @@ None
 
 #### Example
 
-In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. On the next block, the item at position #0 (``100``) be a set with a new value given in the **value** parameter. The new value is equal to the current value of the item at position #0 (represented by the "get" block inside) subtracted by 1 (``99``). Finally, printing ``test_list`` will result this output: ``[99,5,2,3]``.
+In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. On the next block, the item at position #1 (``100``) be a set with a new value given by the **value** parameter. The new value is equal to the current value of the item at position #1 (represented by the "get" block inside) subtracted by 1 (``99``). Finally, printing ``test_list`` will result this output: ``[99,5,2,3]``.
 <img src="/img/CDE/blockly_docu/junior/set_insert_example1.png" width="880px"/>
-<!-- <img src="/img/CDE/blockly_docu/junior/set_insert_example2.png"/>
-<img src="/img/CDE/blockly_docu/junior/set_insert_example3.png"/> --> 
+<br/>
+<br/>
+
+In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. On the next block, a new item will be inserted/at position #5 with a value given by the **value** parameter. The new item's value is equal to the value of the item at position #1 (represented by the "get" block inside) subtracted by 1 (``99``). Finally, printing ``test_list`` will result this output: ``[100,5,2,3,99]``.
+<img src="/img/CDE/blockly_docu/junior/set_insert_example2.png" width="880px"/>
 
 <hr/>
 
@@ -613,7 +624,8 @@ In this example, the list variable ``test_list`` is created with a value of ``[2
 
 #### Description
 
-Returns sorted list based on numerical/alphaetical order and ascending/descending order. This could be attached to a "print" block or a "set variable" block.
+Returns sorted list based on numerical/alphaetical order and ascending/descending order. This could be attached to a "print" block or a "set variable" block.<br/><br/>
+**NOTE:** alphabetical ordering, in programming, is done using the strings' letters' <a href="https://www.geeksforgeeks.org/ascii-table/" target="_blank">ASCII codes</a>. The uppercase alphabet (A-Z) has ASCII values between 65 and 90, and the lowercase alphabet (a-z) has ASCII values between 97 and 122. This means lowercase alphabet has higher ASCII values than the uppercase alphabet. 
 
 #### Parameters
 
@@ -621,7 +633,7 @@ Returns sorted list based on numerical/alphaetical order and ascending/descendin
 <img src="/img/CDE/blockly_docu/junior/sort_params2.png" width="300px"/>
 
 **order type:** The way the list is sorted, by alphabetical or numerical order <br/>
-**order:** ascending (A-Z or smallest to biggest) or descending (Z-A or biggest to smallest)
+**order:** ascending (A-z or smallest to biggest) or descending (z-A or biggest to smallest)
 
 #### Returns
 
@@ -631,9 +643,16 @@ Returns sorted list based on numerical/alphaetical order and ascending/descendin
 
 In this example, a list variable ``test_list`` is created with a value of ``[5,2,3]``. The console prints the output of the sorted list from ``test_list`` in ascending, numerical order ``[2,3,5]``.
 <img src="/img/CDE/blockly_docu/junior/sort_example1.png" width="500px"/>
-<!-- <img src="/img/CDE/blockly_docu/junior/sort_example2.png"/> 
-<img src="/img/CDE/blockly_docu/junior/sort_example3.png"/> 
-<img src="/img/CDE/blockly_docu/junior/sort_example4.png"/>  -->
+<br/>
+<br/>
+
+In the example below, a list variable ``test_list`` is created with a value of ``["Zebra","apple","Mouse"]``. The console prints the sorted list from ``test_list`` in descending alphabetical order, which is ``["apple", "Zebra", "Mouse"]``.
+<img src="/img/CDE/blockly_docu/junior/sort_example2.png" width="500px"/>
+<br/>
+<br/>
+
+In the example below, a list variable ``test_list`` is created with a value of ``["Zebra","apple","Mouse"]``. The console prints the sorted list from ``test_list`` in descending alphabetical order (ignoring case), which is ``["Zebra", "Mouse", "apple"]``. Ignoring case essentially reads the uppercase letters as lowercase letters, so a lowercase "z" has a greater ASCII value than a lowercase "m" (and lowercase "m" greater than lowercase "a").
+<img src="/img/CDE/blockly_docu/junior/sort_example3.png" width="600px"/>
 
 <hr/>
 
@@ -650,9 +669,8 @@ If choosing the "list from text" option, the block internally splits the given t
 #### Parameters
 
 <img src="/img/CDE/blockly_docu/junior/delimiter_params1.png" width="400px"/> 
-<!-- <img src="/img/CDE/blockly_docu/junior/delimiter_params2.png"/>  -->
 
-***string/list* string/list variable:** the variable, which is a list or text, that will be converted into a string or list.
+***string/list* string/list variable:** the variable, which is a list or text, that will be converted into a string or list.<br/>
 ***string* delimiter:** a string of characters that will join a list's items or split the text's contents.
 
 #### Returns
