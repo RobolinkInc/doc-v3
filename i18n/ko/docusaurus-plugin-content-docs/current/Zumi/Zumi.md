@@ -19,7 +19,7 @@ Please click the tab below to go to the page.
 
 <div className='level_image_column'>
 
-  [![blockly](/img/Zumi/Blockly-logo.png)](/docs/Zumi/Blockly/)
+  [![blockly](/img/Zumi/new-Blockly-logo.png)](/docs/Zumi/Blockly/)
   [Blockly](/docs/Zumi/Blockly/)
 
   [![python](/img/Zumi/Python-logo.png)](/docs/Zumi/Python/)

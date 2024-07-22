@@ -21,7 +21,7 @@ version 2.90
 
 #### Block
 
-<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" width="380px" height="90px"/>  
+<img src="/img/Zumi/blockly_docu/junior/driving/forward.png" height="100px"/>  
 
 #### Description
 
@@ -229,7 +229,7 @@ None
 #### Example
 
 In this example/scenario, the Zumi wasn't driving straight when the first forward block ran, drifting off to the side. After the calibrate gyro block and the second forward block ran, Zumi was able to drive straight as it should.
-<img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro_example.png" width="210px" height="90px"/>
+<img src="/img/Zumi/blockly_docu/junior/driving/calibrate_gyro_example.png" height="300px"/>
 
 <hr className="section_hr"/>
 
