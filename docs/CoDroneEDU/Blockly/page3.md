@@ -43,7 +43,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/junior/land.png" width="90px"/>  
+<img src="/img/CDE/blockly_docu/junior/land.PNG" width="90px"/>  
 
 #### Description
 This function makes the drone land by throttling down safely.

@@ -212,7 +212,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/turn_direction_degree.png" width="210px"/>  
+<img src="/img/CDE/blockly_docu/senior/turn_direction_degree.PNG" width="210px"/>  
 
 #### Code
 
@@ -231,7 +231,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/turn_direction_degree_example.png" width="240px"/>  
+<img src="/img/CDE/blockly_docu/senior/turn_direction_degree_example.PNG" width="240px"/>  
 
 <hr/>
 
@@ -1072,7 +1072,7 @@ To use this example file turn the drone manually with your hand and watch the Z 
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer.PNG" width="500px"/>  
 
 #### Code
 
@@ -1083,7 +1083,7 @@ Plays a note for a duration in milliseconds using the CoDrone EDU drone buzzer.
 
 #### Parameters
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_params.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer_params.PNG" width="500px"/>  
 
 **note:** note range from C3 to B7, Mute, Fin   
 ***integer* duration:** the duration of note played in milliseconds
@@ -1093,7 +1093,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer_example.PNG" width="500px"/>  
 
 <hr/>
 
@@ -1101,7 +1101,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer.png" width="500px"/>   
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer.PNG" width="500px"/>   
 
 #### Code
 
@@ -1112,7 +1112,7 @@ Plays a note for a duration in milliseconds using the CoDrone EDU controller buz
 
 #### Parameters
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer_params.png" width="500px"/> 
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer_params.PNG" width="500px"/> 
 
 **note:** note range from C3 to B7, Mute, Fin   
 ***integer* duration:** the duration of note played in milliseconds
@@ -1122,7 +1122,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer_example.PNG" width="500px"/>  
 
 <hr/>
 
@@ -1130,7 +1130,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_hertz.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/drone_buzzer_hertz.PNG" width="500px"/>  
 
 #### Code
 
@@ -1156,7 +1156,7 @@ None
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/controller_buzzer_hertz.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_buzzer_hertz.PNG" width="500px"/>  
 
 #### Code
 
