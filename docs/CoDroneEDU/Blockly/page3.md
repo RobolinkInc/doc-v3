@@ -273,7 +273,7 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/set_controller_led_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/junior/set_controller_LED_example.png" width="500px"/>  
 
 <hr/>
 
