@@ -1148,12 +1148,13 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/hertz_example.PNG" width="500px"/>
+In this example, the drone will be buzzing a different frequency for half a second each.
+<img src="/img/CDE/blockly_docu/senior/drone_hertz_example.png" width="500px"/>
 <br/>
 <br/>
 
 In the example below, a list variable ``test_list`` is created ``[450,500,650,800,700]``. The loop iterates through the list using the "length of" block as the stop parameter of the loop block. The ``frequency`` variable is set a value from ``test_list`` at position "i" (the loop's index variable). Depending on which conditional statement ``frequency`` satisfies, the drone will buzz a specific frequency.
-<img src="/img/CDE/blockly_docu/senior/drone_buzzer_hertz_example2.png" width="600px"/>
+<img src="/img/CDE/blockly_docu/senior/drone_hertz_example2.png" width="600px"/>
 
 
 <hr/>
