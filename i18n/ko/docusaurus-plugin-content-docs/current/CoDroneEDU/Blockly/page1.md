@@ -1,5 +1,5 @@
 ---
-title: "Blockly란 무엇인가요?"
+title: "How to use Blockly"
 slug: How-to-use-Blockly
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
@@ -8,20 +8,17 @@ customHeadElements:
 
 ## Blockly란 무엇인가요?
 
-Learn the foundations of coding with drag-and-drop blocks in our visual programming language. This is an excellent starting place for beginner programmers and drone pilots.
+Learn the foundations of coding with drag-and-drop blocks in our visual programming language. This is an excellent starting place for beginner programmers and drone pilots. The types of blocks are divided into junior blocks and senior blocks according to the difficulty level.  
 
-Blockly is a block coding program from Robolink based on Python. The types of blocks are divided into junior blocks and senior blocks according to the difficulty level.  
+Junior blocks are written with "natural language" and Senior blocks introduce programming syntax. Senior blocks introduce more advanced concepts and prepare students to transition into text-based programming. You can mix Junior and Senior blocks in your programs.
 
-Junior blocks have these things: (CoDrone EDU blocks) Flight Commands, Flight Sequences, Status Checkers, Lights, Sounds, (Programming blocks) Events, Input/Output, Logic, Loops, Math, Timing, Variables, Lists. 
-
-Senior blocks have these things: (CoDrone EDU blocks) Flight Commands, Flight Variables, Status Checkers, Sensors, Lights, Sounds, Screen, Colors, (Programming blocks) Events, Input/Output, Logic, Loops, Math, Timing, Variables, Functions, Lists.
 
 ## How to Access Blockly
 
 Blockly is an online application that you can access right from Google Chrome. With Blockly, you can connect it to your drone since Blockly runs from your browser&mdash;no need for any installation!
 
 ### Link to Blockly
-Start programming your drone with Blockly by heading to <a href="robolink.com/blockly-cde">robolink.com/blockly-cde</a>! After going to the provided link for Blockly, click on the CoDroneEDU icon to create the enviroment for CoDroneEDU programming.
+Start programming your drone with Blockly by heading to <a href="robolink.com/blockly-cde">robolink.com/blockly-cde</a>! After going to the provided link for Blockly, click on the CoDrone EDU icon to open a workspace for CoDrone EDU programming.
 
 ## Device requirements
 
@@ -31,7 +28,7 @@ Start programming your drone with Blockly by heading to <a href="robolink.com/bl
 <br/>
 <br/>
 
-Try to use the cable that comes with CoDrone EDU whenever possible! This Micro USB cable can transfer data, which is necessary for programming. Most Micro USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
+Try to use the cable that comes with CoDrone EDU whenever possible! This USB cable can transfer data, which is necessary for programming. Most USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
 
 ### Google Chrome Requirements
 

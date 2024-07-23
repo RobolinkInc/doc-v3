@@ -41,9 +41,12 @@ drone = Drone()
 drone.pair() # pair automatically, may not always work
 # drone.pair(port_name = 'COM3')    # pair with a specific port
 
+
 drone.takeoff()
 drone.hover(1)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -52,7 +55,7 @@ drone.close()
 
 ## Flight Commands (Start / Stop)
 
-### take_off()
+### takeoff()
 
 #### Description
 This function makes the drone takeoff and hover. The drone will always hover for 1 second in order to stabilize before it executes the next command.
@@ -74,10 +77,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
-    
 drone.hover(3)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -106,9 +112,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.hover(3) # include a hover() or time.sleep() to prevent land() from skipping
 drone.land()
+
+
 drone.close()
 ```
 
@@ -136,9 +146,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.hover(3) #Recommended to have a hover() or time.sleep(1) before landing
 drone.emergency_stop()
+
+
 drone.close()
 ```
 
@@ -168,12 +182,14 @@ import time
 drone = Drone()
 drone.pair()
 
-drone.set_trim(-5, 0) # example: drone is drifting right, so trim to roll left a little bit
 
+drone.set_trim(-5, 0) # example: drone is drifting right, so trim to roll left a little bit
 time.sleep(1) # Add a time.sleep(1) before takeoff if you're planning to set the trim before takeoff
 drone.takeoff()
 drone.hover(3)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -200,6 +216,8 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.set_trim(5,0)
 print(drone.get_trim())
 drone.takeoff()
@@ -207,6 +225,8 @@ drone.hover(3)
 drone.land()
 drone.reset_trim()
 print(drone.get_trim())
+
+
 drone.close()
 ```
 
@@ -235,6 +255,8 @@ import time
 
 drone = Drone()
 drone.pair()
+
+
 print("Before")
 print("X angle:", drone.get_x_angle())
 print("Y angle:", drone.get_y_angle())
@@ -252,6 +274,8 @@ print("Reset")
 print("X angle:", drone.get_x_angle())
 print("Y angle:", drone.get_y_angle())
 print("Z angle:", drone.get_z_angle())
+
+
 drone.close()
 ```
 
@@ -284,10 +308,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # fly forward until a wall is found 50 cm away. run this loop for 10 seconds.
 drone.avoid_wall(10, 50)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -316,10 +344,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # default circle parameters (75, 1)
 drone.circle()
 drone.land()
+
+
 drone.close()
 ```
 
@@ -348,6 +380,8 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # if a wall is detected in less than 500mm true will be returned.
 if drone.detect_wall():
@@ -356,6 +390,8 @@ else:
     print("no wall detected!")
 
 drone.land()
+
+
 drone.close()
 ```
 
@@ -387,6 +423,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.takeoff()
 
 drone.hover(3)
@@ -400,6 +437,7 @@ drone.set_pitch(-30) # move backward for 1 second
 drone.move(1)
 
 drone.land()
+
 
 drone.close()
 ```
@@ -427,9 +465,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.hover(3)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -461,10 +503,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # maintain a distance of 60cm from an object once detected for 10 seconds
 drone.keep_distance(10, 60)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -492,11 +538,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # Drone goes up for 1 second with 50 power
 drone.set_pitch(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
+
+
 drone.close()
 ```
 
@@ -523,11 +573,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.set_pitch(50)
 drone.set_roll(50)
 drone.print_move_values() # will print pitch and roll at 50 and throttle and yaw at 0
 drone.land()
+
+
 drone.close()
 ```
 
@@ -556,11 +610,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.set_pitch(50)
 drone.set_roll(50)
 drone.reset_move() # reset the pitch and roll to 0.
 drone.land()
+
+
 drone.close()
 ```
 
@@ -590,10 +648,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.sendControl(0, 30, 0, 0) # setting pitch to 30
 time.sleep(1) # wait for 1 second while the drone is moving forward
 drone.land()
+
+
 drone.close()
 ```
 
@@ -625,9 +687,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.sendControlWhile(0, 30, 0, 0,1000)  # set pitch to 30 and move for 1000 ms (1 second)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -655,11 +721,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # Drone goes forward for 1 second with 50 power
 drone.set_pitch(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
+
+
 drone.close()
 ```
 
@@ -687,11 +757,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # Drone goes right for 1 second with 50 power
 drone.set_roll(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
+
+
 drone.close()
 ```
 
@@ -718,11 +792,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # Drone goes up for 1 second with 50 power
 drone.set_throttle(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
+
+
 drone.close()
 ```
 
@@ -749,11 +827,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # Drone turns right for 1 second with 50 power
 drone.set_yaw(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
+
+
 drone.close()
 ```
 
@@ -783,10 +865,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # default spiral parameters (50, 5, 1)
 drone.spiral()
 drone.land()
+
+
 drone.close()
 ```
 
@@ -816,10 +902,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # default square parameters (60, 1, 1)
 drone.square()
 drone.land()
+
+
 drone.close()
 ```
 
@@ -850,10 +940,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # default sway parameters (30, 2, 1)
 drone.sway()
 drone.land()
+
+
 drone.close()
 ```
 
@@ -884,10 +978,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 # default triangle parameters (60, 1, 1)
 drone.triangle()
 drone.land()
+
+
 drone.close()
 ```
 
@@ -917,9 +1015,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.turn_degree(90) # drone will turn left 90 degrees
 drone.land()
+
+
 drone.close()
 ```
 
@@ -951,11 +1053,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.turn_left() # make a 90 degree left turn.
 drone.hover(1) # wait for 1 second in the air
 drone.turn_left(30, 3) # make a 30 degree left turn with a 3 second timeout.
 drone.land()
+
+
 drone.close()
 ```
 
@@ -987,11 +1093,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.turn_right() # make a 90 degree right turn.
 drone.hover(1) # wait for 1 second in the air
 drone.turn_right(30, 3) # make a 30 degree right turn with a 3 second timeout.
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1022,9 +1132,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.go(50, 50, 0, 0, 5) # Drone flies diagonally forward and right for 5 seconds
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1056,10 +1170,14 @@ import time
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.move_forward(distance=50, units="cm", speed=1)
 time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1091,10 +1209,14 @@ import time
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.move_backward(distance=50, units="cm", speed=1)
 time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1126,10 +1248,14 @@ import time
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.move_left(distance=50, units="cm", speed=1)
 time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1161,10 +1287,14 @@ import time
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.move_right(distance=50, units="cm", speed=1)
 time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1216,6 +1346,9 @@ drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
 time.sleep(1)
 
 drone.land()
+
+
+drone.close()
 ```
 
 <hr className="section_hr"/>
@@ -1244,7 +1377,9 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.controller_LED_off()
+
 drone.close()
 ```
 
@@ -1272,7 +1407,9 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.drone_LED_off()
+
 drone.close()
 ```
 
@@ -1302,7 +1439,9 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.set_controller_LED(0, 0, 255, 100)
+
 drone.close()
 ```
 
@@ -1333,7 +1472,9 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.set_drone_LED(0, 0, 255, 100)
+
 drone.close()
 ```
 
@@ -1364,8 +1505,10 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.controller_buzzer(400, 300)
 drone.controller_buzzer(600, 300)
+
 drone.close()
 ```
 
@@ -1394,8 +1537,10 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.drone_buzzer(400, 300)
 drone.drone_buzzer(600, 300)
+
 drone.close()
 ```
 
@@ -1424,6 +1569,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.start_drone_buzzer(500) # starting the buzzer
 
 # these commands run while the buzzer runs in the background
@@ -1434,6 +1580,7 @@ for i in range(5):
     time.sleep(0.5)
 
 drone.stop_drone_buzzer() # stops the buzzer
+
 drone.close()
 ```
 
@@ -1461,6 +1608,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.start_drone_buzzer(500) # starting the buzzer
 
 # these commands run while the buzzer runs in the background
@@ -1469,6 +1617,7 @@ for i in range(5):
     time.sleep(0.5)
     drone.set_drone_LED(0, 255, 0, 100)
     time.sleep(0.5)
+
 
 drone.stop_drone_buzzer() # stops the buzzer
 drone.close()
@@ -1499,6 +1648,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.start_controller_buzzer(Note.A4) # starting the buzzer
 
 # these commands run while the buzzer runs in the background
@@ -1507,6 +1657,7 @@ for i in range(3):
     time.sleep(0.5)
     drone.set_controller_LED(0, 255, 0, 100)
     time.sleep(0.5)
+
 
 drone.stop_controller_buzzer() # stops the buzzer
 drone.close()
@@ -1537,6 +1688,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.start_controller_buzzer(440) # starting the buzzer
 
 # these commands run while the buzzer runs in the background
@@ -1545,6 +1697,7 @@ for i in range(3):
     time.sleep(0.5)
     drone.set_controller_LED(0, 255, 0, 100)
     time.sleep(0.5)
+
 
 drone.stop_controller_buzzer() # stops the buzzer
 drone.close()
@@ -1576,8 +1729,12 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 battery = drone.get_battery()
 print(battery)
+
+
 drone.close()
 ```
 
@@ -1609,6 +1766,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 max_bottom_range = 100
 drone.takeoff()
 drone.set_throttle(20)
@@ -1618,6 +1776,7 @@ while current_bottom_range <= max_bottom_range:
   current_bottom_range = drone.get_bottom_range("cm")
   print(current_bottom_range)
 drone.land()
+
 
 drone.close()
 ```
@@ -1648,8 +1807,12 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 temperature = drone.get_temperature()
 print(temperature)
+
+
 drone.close()
 ```
 
@@ -1676,7 +1839,11 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 print(drone.get_flight_state())
+
+
 drone.close()
 ```
 
@@ -1705,11 +1872,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.set_pitch(50)
 drone.move(1)
 print(drone.get_flow_x())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1738,11 +1909,15 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 drone.set_roll(50)
 drone.move(1)
 print(drone.get_flow_y())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1775,11 +1950,14 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.takeoff()
 drone.hover(3)
 distance = drone.get_front_range()
 print(distance)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1809,9 +1987,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 print(drone.get_pos_x())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1840,9 +2022,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 print(drone.get_pos_y())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1871,9 +2057,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 print(drone.get_pos_z())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1907,10 +2097,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 data = drone.get_position_data()
 print(data)
 drone.land()
+
+
 drone.close()
 ```
 
@@ -1939,9 +2133,12 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 # print the pressure
 pressure = drone.get_pressure()
 print(pressure)
+
+
 drone.close()
 ```
 
@@ -1969,11 +2166,14 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 # print the trim values
 trim  = drone.get_trim()
 print(trim)
 print(trim[0])
 print(trim[1])
+
+
 drone.close()
 ```
 
@@ -2002,9 +2202,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 print(drone.get_x_accel())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -2033,7 +2237,9 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 print(drone.get_x_angle())
+
 
 drone.close()
 ```
@@ -2063,9 +2269,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 print(drone.get_y_accel())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -2124,9 +2334,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.takeoff()
 print(drone.get_z_accel())
 drone.land()
+
+
 drone.close()
 ```
 
@@ -2189,6 +2403,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 max_height = 100
 drone.takeoff()
 drone.set_throttle(20)
@@ -2198,6 +2413,7 @@ while current_height <= max_height:
   current_height = drone.get_height("cm")
   print(current_height)
 drone.land()
+
 
 drone.close()
 ```
@@ -2226,8 +2442,12 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 color_data = drone.get_back_color()
 print(color_data)
+
+
 drone.close()
 ```
 
@@ -2254,7 +2474,11 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 color_data = drone.get_color_data()
+
+
 drone.close()
 ```
 
@@ -2281,8 +2505,12 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 color_data = drone.get_front_color()
 print(color_data)
+
+
 drone.close()
 ```
 
@@ -2312,12 +2540,16 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 # This example assumes the "custom_color_data" directory exists
 drone.load_classifier("custom_color_data")
 
 color_data = drone.get_color_data()
 color = drone.predict_colors(color_data)
 print(color)
+
+
 drone.close()
 ```
 
@@ -2344,10 +2576,14 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 drone.load_classifier("color_data_file")
 color_data = drone.get_color_data()
 color = drone.predict_colors(color_data)
 print(color)
+
+
 drone.close()
 ```
 
@@ -2375,9 +2611,13 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
+
 colors = drone.get_colors()
 print(colors)
-drone.close
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2404,8 +2644,11 @@ None
 #Python code
 from codrone_edu.drone import *
 import time
+
 drone = Drone()
 drone.pair()
+
+
 dataset = "color_data"
 colors = ["green", "purple", "red", "lightblue", "blue", "yellow", "black", "white"]
 for color in colors:
@@ -2424,6 +2667,9 @@ for color in colors:
         print(" 100%")
     drone.new_color_data(color, data, dataset)
 print("Done calibrating.")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2449,8 +2695,11 @@ None
 #Python code
 from codrone_edu.drone import *
 import time
+
 drone = Drone()
 drone.pair()
+
+
 dataset = "color_data"
 colors = ["green", "purple", "red", "lightblue", "blue", "yellow", "black", "white"]
 for color in colors:
@@ -2469,6 +2718,9 @@ for color in colors:
         print(" 100%")
     drone.append_color_data(color, data, dataset)
 print("Done calibrating.")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2497,11 +2749,14 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.set_initial_pressure() # Take an initial pressure reading as a reference 
 
 for i in range(300):
     print(drone.height_from_pressure(), " centimeters")
     time.sleep(0.2)
+
+drone.close()
 ```
 
 <hr/>
@@ -2528,6 +2783,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 # Here is where we save our initial pressure. Now the 'height_from_pressure()' function has a reference for height
 drone.set_initial_pressure()
 
@@ -2535,6 +2791,9 @@ drone.set_initial_pressure()
 for i in range(300):
     print(drone.height_from_pressure(), " millimeters")
     time.sleep(0.2)
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2564,9 +2823,12 @@ import time
 drone = Drone()
 drone.pair()
 
+
 for i in range(100):
     print(drone.get_angular_speed_x())
     time.sleep(0.05)
+
+
 drone.close()
 ```
 
@@ -2597,9 +2859,12 @@ import time
 drone = Drone()
 drone.pair()
 
+
 for i in range(100):
     print(drone.get_angular_speed_y())
     time.sleep(0.05)
+
+
 drone.close()
 ```
 
@@ -2629,9 +2894,12 @@ import time
 drone = Drone()
 drone.pair()
 
+
 for i in range(100):
     print(drone.get_angular_speed_z())
     time.sleep(0.05)
+
+
 drone.close()
 ```
 
@@ -2692,11 +2960,14 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 # collect multiple data points
 data = drone.get_sensor_data()
 for i in range(len(data)):
 
     print(i, data[i])  # print out each data point
+
+
 
 drone.close()
 ```
@@ -2740,12 +3011,15 @@ from codrone_edu.protocol import *
 drone = Drone()
 drone.pair()
 
+
 # For demonstration purposes, activate motion calibration
 drone.sendCommand(CommandType.ClearBias)
 sleep(0.1)
 for i in range(10):
     drone.get_error_data() # see motion error state during calibration
     time.sleep(0.5)
+
+
 drone.close()
 ```
 
@@ -2774,12 +3048,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.down_arrow_pressed():
         print("down arrow button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2805,11 +3083,14 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
     print(drone.get_button_data())
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2836,12 +3117,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
     if drone.h_pressed():
         print("H button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2868,12 +3152,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
     if drone.l1_pressed():
         print("L1 button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2900,12 +3187,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
 
 while True:
     time.sleep(0.1)
     if drone.l2_pressed():
         print("L2 button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2931,12 +3221,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.left_arrow_pressed():
         print("left arrow button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2962,12 +3256,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.p_pressed():
         print("P button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -2993,12 +3291,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.power_pressed():
         print("power button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3024,12 +3326,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.r1_pressed():
         print("R1 button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3055,12 +3361,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.r2_pressed():
         print("R2 button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3086,12 +3396,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.right_arrow_pressed():
         print("right arrow button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3117,12 +3431,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.s_pressed():
         print("S button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3148,12 +3466,16 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     if drone.up_arrow_pressed():
         print("up arrow button has been pressed!")
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3179,11 +3501,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     print(drone.get_joystick_data())
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3209,11 +3535,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     print(drone.get_left_joystick_x())
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3239,11 +3569,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     print(drone.get_left_joystick_y())
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3269,11 +3603,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     print(drone.get_right_joystick_x())
+
+
+drone.close()
 ```
 
 <hr/>
@@ -3299,11 +3637,15 @@ from codrone_edu.drone import *
 import time
 
 drone = Drone()
-drone.open()
+drone.pair()
+
 
 while True:
     time.sleep(0.1)
     print(drone.get_right_joystick_y())
+
+
+drone.close()
 ```
 
 <hr className="section_hr"/>
@@ -3332,7 +3674,9 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 drone.controller_clear_screen()
+
 drone.close()
 ```
 
@@ -3359,7 +3703,9 @@ from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
+
 image = drone.controller_create_canvas() # see controller_draw_canvas for how to draw on this new image object
+
 drone.close()
 ```
 
@@ -3391,6 +3737,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # create image object
 
@@ -3398,6 +3745,7 @@ arc_list = [(20, 40), (50, 50)]
 drone.controller_draw_arc(arc_list, 0, 180, image) # set arc onto image object
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -3426,6 +3774,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # create image object
 
@@ -3438,6 +3787,7 @@ drone.controller_draw_arc(arc_list, 0, 180, image)
 drone.controller_draw_chord(chord_list, 0, 180, image)
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -3470,6 +3820,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # create image object
 
@@ -3477,6 +3828,7 @@ chord_list = [(20, 40), (50, 50)]
 drone.controller_draw_chord(chord_list, 0, 180, image) # set chord onto image object
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -3508,6 +3860,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # create image object
 
@@ -3515,6 +3868,7 @@ ellipse_list = [(10, 10), (40, 40)]
 drone.controller_draw_ellipse(ellipse_list, image) # set ellipse onto image object
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -3544,11 +3898,13 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 
 image = get_image_data("example.png") # where example.png is an image in the same directory as the program
 
 drone.controller_draw_image(image) # draws the image onto the controller's screen
+
 
 drone.close()
 ```
@@ -3589,9 +3945,11 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 
 drone.controller_draw_line(0,0, 60, 60)
+
 
 drone.close()
 ```
@@ -3622,9 +3980,11 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 
 drone.controller_draw_point(10, 10) # place a pixel at the (10,10) coordinate
+
 
 drone.close()
 ```
@@ -3654,11 +4014,13 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen()
 
 point_list_square = ((10, 10), (30, 10), (30, 30), (10, 30)) # creating a list of coordinates
 
 drone.controller_draw_polygon(point_list_square)
+
 
 drone.close()
 ```
@@ -3700,9 +4062,11 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen()
 
 drone.controller_draw_rectangle(30, 15, 50, 30)
+
 
 drone.close()
 ```
@@ -3742,9 +4106,10 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
-drone.controller_clear_screen()
 
+drone.controller_clear_screen()
 drone.controller_draw_square(10, 10, 25)
+
 
 drone.close()
 ```
@@ -3779,9 +4144,10 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
-drone.controller_clear_screen()
 
+drone.controller_clear_screen()
 drone.controller_draw_string_align(0, 70, 0, "Hello, world!")
+
 
 drone.close()
 ```
@@ -3814,8 +4180,10 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen()
 drone.controller_draw_string(0, 0, "Hello, world!")
+
 
 drone.close()
 ```
@@ -3844,6 +4212,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+
 drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # create image object
 
@@ -3856,6 +4225,7 @@ drone.controller_draw_arc(arc_list, 0, 180, image)
 drone.controller_draw_chord(chord_list, 0, 180, image)
 
 drone.controller_preview_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
