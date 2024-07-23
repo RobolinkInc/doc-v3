@@ -227,7 +227,12 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/junior/set_drone_led_example.png" width="500px"/>  
+In this example, the program is switching between three colors (red, yellow, and green) every half second for 10 times.
+<img src="/img/CDE/blockly_docu/junior/set_drone_led_example.png" width="500px"/>
+<br/>
+<br/>
+In this example, a list variable ``test_list`` is created ``["Red", "Blue", "White"]``. For 25 iterations, the ``color`` is set to a random color (a string) from ``test_list``, and the drone's LED color lights up with that color.
+<img src="/img/CDE/blockly_docu/junior/set_drone_led_example2.png" width="540px"/>  
 
 <hr/>
 
