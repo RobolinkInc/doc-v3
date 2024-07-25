@@ -19,7 +19,7 @@ Please click the tab below to go to the page.
 
 <div className='level_image_column'>
 
-  [![blockly](/img/CDM/Blockly-logo.png)](/docs/CoDroneMini/Blockly/)
+  [![blockly](/img/CDM/new-Blockly-logo.png)](/docs/CoDroneMini/Blockly/)
   [Blockly](/docs/CoDroneMini/Blockly/)
 
   [![python](/img/CDM/Python-logo.png)](/docs/CoDroneMini/Python/)

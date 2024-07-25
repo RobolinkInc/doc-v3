@@ -38,8 +38,15 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi
+
 zumi = Zumi()
+
+zumi.forward(40,2.0)
+time.sleep(2)
 zumi.calibrate_gyro()
+time.sleep(2)
+zumi.forward(40,2.0)
+
 print("Done")
 ```
 <hr/>
@@ -307,13 +314,13 @@ zumi = Zumi()
 
 for i in range(0,50):
     zumi.go_straight(50,0)
-    #print the error of the z angle along with some of the PID accumulators
+    # print the error of the z angle along with some of the PID accumulators
     print(zumi.PID_time_past,", ", zumi.error_past,", ", zumi.error_sum," , ", zumi.angle_list[2])
 
 zumi.stop()
-
-#this will reset those values
+# this will reset those values
 zumi.reset_PID()
+
 print(" Now ")
 print(zumi.PID_time_past,", ", zumi.error_past,", ", zumi.error_sum, " , ", zumi.angle_list[2])
 
@@ -505,8 +512,15 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi
+
 zumi = Zumi()
+
+zumi.forward(40,2.0)
+time.sleep(2)
 zumi.calibrate_gyro()
+time.sleep(2)
+zumi.forward(40,2.0)
+
 print("Done")
 ```
 <hr/>
@@ -714,11 +728,12 @@ from zumi.zumi import Zumi
 import time
 
 zumi = Zumi()
+FRONT_RIGHT = 0
 
-for i in range(0,100):
-    FRONT_RIGHT = 0
+for i in range(5):
+    zumi.forward(40,1)
     ir_reading = zumi.get_IR_data(FRONT_RIGHT)
-    zumi.play_note(int(ir_reading/4),20) 
+    print(ir_reading)
     # Divide by 4 because note is between 0 and 60
     
     time.sleep(0.05)
@@ -927,7 +942,7 @@ for i in range(0,50):
     zumi.forward_step(0,50)
     
 print(zumi.angle_list[2],", ", zumi.error_past)
-    
+
 zumi.stop()
 zumi.reset_drive()
 
@@ -957,6 +972,7 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi
+
 zumi = Zumi()
 
 print("z angle " , zumi.angle_list[2])
@@ -991,6 +1007,7 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi
+
 zumi = Zumi()
 
 for i in range(0,50):
@@ -1035,6 +1052,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 
@@ -1070,7 +1088,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.circle_left(step=3)
 
 ```
@@ -1097,7 +1118,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.circle_right(step=3)
 
 ```
@@ -1128,6 +1152,8 @@ from zumi.zumi import Zumi
 import time
 
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.circle(speed=60, step=4, direction=-1)
 
 ```
@@ -1153,6 +1179,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.control_motors(30,30)
@@ -1183,13 +1210,14 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi
+
 zumi = Zumi()
 
 #must start off in a black area.
 zumi.drive_over_markers(5)
 
 #Drive over 10 road marker with a timeout of 6 seconds
-zumi.drive_over_markers(road_markers=10,speed=30,time_out=6)
+zumi.drive_over_markers(5,40,100,3)
 
 ```
 <hr/>
@@ -1216,7 +1244,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.figure_8(step=5)
 
 ```
@@ -1279,7 +1310,7 @@ from zumi.zumi import Zumi
 zumi = Zumi()
 
 for i in range(0, 200):
-    zumi.forward_step(80,0)
+    zumi.forward_step(40,20)
 
 zumi.stop()
 ```
@@ -1307,6 +1338,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.forward()
@@ -1437,6 +1469,8 @@ from zumi.zumi import Zumi
 import time
 
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.j_turn(speed=60, delay=0.003)
 
 ```
@@ -1464,7 +1498,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.left_u_turn()
 time.sleep(1)
 zumi.left_u_turn(step=3)
@@ -1708,6 +1745,8 @@ from zumi.zumi import Zumi
 import time
 
 zumi = Zumi()
+
+zumi.forward(40,2)
 zumi.parallel_park(speed=20, step=2)
 
 ```
@@ -1735,7 +1774,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.rectangle_left(ratio=3)
 ```
 <hr/>
@@ -1762,7 +1804,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.rectangle_right(ratio=3)
 ```
 <hr/>
@@ -1790,7 +1835,10 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
+zumi.forward(40,1)
 zumi.rectangle(ratio=3)
 ```
 <hr/>
@@ -1880,8 +1928,8 @@ from zumi.zumi import Zumi
 
 zumi = Zumi()
 
-for i in range(0, 200):
-    zumi.reverse_step(80,0)
+for i in range(50):
+    zumi.reverse_step(40,0)
 
 zumi.stop()
 ```
@@ -1909,6 +1957,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.reverse()
@@ -1917,6 +1966,7 @@ zumi.reverse(speed=50)
 time.sleep(1)
 zumi.reverse(duration=2.1)
 time.sleep(1)
+zumi.reverse(50,2.1,45)
 
 ```
 <hr/>
@@ -1943,7 +1993,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 zumi.right_u_turn(speed=20)
 time.sleep(1)
 zumi.right_u_turn(delay=0.04)
@@ -1972,6 +2024,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.smooth_forward(3)
@@ -2002,6 +2055,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.smooth_reverse(3)
@@ -2033,6 +2087,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.smooth_turn_left()
@@ -2064,6 +2119,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.smooth_turn_right()
@@ -2101,6 +2157,7 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi
+
 zumi = Zumi()
 
 # Place Zumi on the black portion of the speed calibration sheet 
@@ -2133,7 +2190,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 zumi.square_left(seconds=1.5)
 ```
 <hr/>
@@ -2159,7 +2218,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 zumi.square_right(seconds=1.5)
 ```
 <hr/>
@@ -2242,7 +2303,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 zumi.triangle_left(speed=30)
 ```
 <hr/>
@@ -2268,7 +2331,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 zumi.triangle_right(speed=30)
 ```
 <hr/>
@@ -2295,7 +2360,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 zumi.triangle(speed=30, direction=-1)
 ```
 <hr/>
@@ -2322,12 +2389,12 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.turn_left()
 time.sleep(1)
 zumi.turn_left(130,1.5)
-
 ```
 <hr/>
 
@@ -2352,6 +2419,7 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
 
 zumi.turn_right(45)
@@ -2384,7 +2452,9 @@ None
 #Python code
 from zumi.zumi import Zumi
 import time
+
 zumi = Zumi()
+
 # zumi will turn to the left
 zumi.turn(90)
 
@@ -2416,7 +2486,9 @@ None
 #Python code
 from zumi.zumi import Zumi 
 import time
+
 zumi = Zumi()
+
 zumi.all_lights_on()
 time.sleep(2)
 zumi.all_lights_off()
@@ -2441,8 +2513,10 @@ None
 #### Example Code
 ```python
 #Python code
-from zumi.zumi import Zumi 
+from zumi.zumi import Zumi
+
 zumi = Zumi()
+
 zumi.all_lights_on()
 ```
 <hr/>
@@ -2491,8 +2565,10 @@ None
 #### Example Code
 ```python
 #Python code
-from zumi.zumi import Zumi 
+from zumi.zumi import Zumi
+
 zumi = Zumi()
+
 zumi.brake_lights_on()
 ```
 <hr/>
@@ -2518,6 +2594,7 @@ from zumi.zumi import Zumi
 import time
 
 zumi = Zumi()
+
 zumi.hazard_lights_on()
 time.sleep(2)
 zumi.hazard_lights_off()
@@ -2542,7 +2619,9 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi 
+
 zumi = Zumi()
+
 zumi.hazard_lights_on()
 ```
 <hr/>
@@ -2566,6 +2645,7 @@ None
 #Python code
 from zumi.zumi import Zumi 
 import time
+
 zumi = Zumi()
 
 zumi.headlights_on()
@@ -2593,10 +2673,10 @@ None
 #Python code
 from zumi.zumi import Zumi 
 import time
+
 zumi = Zumi()
+
 zumi.headlights_on()
-time.sleep(2)
-zumi.all_lights_off()
 ```
 <hr/>
 
@@ -2684,7 +2764,9 @@ None
 from zumi.zumi import Zumi 
 from zumi.protocol import Note
 import time
+
 zumi = Zumi()
+
 zumi.play_note(30, 500)
 time.sleep(1)
 zumi.play_note(Note.C4)
@@ -2715,6 +2797,7 @@ from zumi.zumi import Zumi
 import time
 
 zumi = Zumi()
+
 zumi.signal_left_on()
 time.sleep(2)
 zumi.signal_left_off()
@@ -2739,7 +2822,9 @@ None
 ```python
 #Python code
 from zumi.zumi import Zumi 
+
 zumi = Zumi()
+
 zumi.signal_left_on()
 ```
 <hr/>
@@ -2763,7 +2848,9 @@ None
 #Python code
 from zumi.zumi import Zumi 
 import time
+
 zumi = Zumi()
+
 zumi.signal_right_on()
 time.sleep(2)
 zumi.signal_right_off()
@@ -2787,8 +2874,10 @@ None
 #### Example Code
 ```python
 #Python code
-from zumi.zumi import Zumi 
+from zumi.zumi import Zumi
+
 zumi = Zumi()
+
 zumi.signal_right_on()
 ```
 <hr className="section_hr"/>
@@ -2818,8 +2907,8 @@ from zumi.util.camera import Camera
 import time
 
 camera=Camera()
-camera.start_camera()
 
+camera.start_camera()
 frame = camera.capture()
 camera.show_image(frame)
 time.sleep(5)   
@@ -2846,8 +2935,8 @@ None
 ```python
 from zumi.util.camera import Camera
 
-
 camera = Camera()
+
 camera.start_camera()
 try:
     for x in range(30):
@@ -2878,11 +2967,11 @@ None
 #Python code
 from zumi.util.camera import Camera
 
-
 camera=Camera()
+
 camera.start_camera()
 camera.save_photo()
-camera.close()
+camera.close() # closes camera stream
 ```
 <hr/>
 
@@ -2906,6 +2995,7 @@ None
 from zumi.util.camera import Camera
 
 camera=Camera()
+
 camera.start_camera()
 camera.close()
 print("Camera is closed?")
@@ -2935,8 +3025,8 @@ None
 #Python code
 from zumi.util.camera import Camera
 
-
 camera=Camera()
+
 camera.start_camera()
 camera.save_photo() 
 #"<current_time>.jpg" file will be saved in the current working directory
@@ -2968,8 +3058,8 @@ from zumi.util.camera import Camera
 import time
 
 camera=Camera()
-camera.start_camera()
 
+camera.start_camera()
 frame = camera.capture()
 camera.show_image(frame)
 camera.close()
@@ -3008,7 +3098,7 @@ import time
 #camera = Camera(image_w=128,image_h=64)
 camera = Camera(image_w=60,image_h=32)
 
-camera.start_camera()
+camera.start_camera() # opens camera stream
 
 time_start = time.time()
 try: 
@@ -3246,7 +3336,11 @@ Returns the message from decoded QR code.
 
 #### Example Code
 ```python
+from zumi.util.vision import Vision
+from zumi.util.camera import Camera
+
 camera = Camera()
+
 camera.start_camera()
 frame = camera.capture()
 camera.close()
@@ -3279,8 +3373,8 @@ Searches captured image for facial features to find face's pixel location in the
 from zumi.util.camera import Camera
 from zumi.util.vision import Vision
 
-camera    = Camera()
-vision    = Vision()
+camera = Camera()
+vision = Vision()
 
 camera.start_camera()
 image = camera.capture()
@@ -3353,8 +3447,8 @@ Searches captured image for smiling facial features to find smile's pixel locati
 from zumi.util.camera import Camera
 from zumi.util.vision import Vision
 
-camera    = Camera()
-vision    = Vision()
+camera = Camera()
+vision = Vision()
 
 camera.start_camera()
 image = camera.capture()
@@ -3440,6 +3534,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.print("Hello")
 screen.clear_display()
 
@@ -3467,9 +3562,9 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_circle(30,30,10)
 time.sleep(1)
-
 screen.clear_drawing()
 screen.print("Hello")
 
@@ -3501,6 +3596,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.clock(3,15,"Monday")
 ```
 <hr/>
@@ -3523,7 +3619,8 @@ None
 #### Example Code
 ```python
 #Python code
-from zumi.util.screen import Screen 
+from zumi.util.screen import Screen
+
 screen = Screen()
 
 screen.close_eyes()
@@ -3557,6 +3654,7 @@ None
 from zumi.util.screen import Screen
 
 screen=Screen()
+
 screen.draw_arc(0,0,50,50,-180,0)
 ```
 <hr/>
@@ -3588,6 +3686,7 @@ None
 from zumi.util.screen import Screen
 
 screen=Screen()
+
 screen.draw_chord(0,0,20,20,-180,0)
 screen.draw_chord(30,30,50,50,-180,0)
 
@@ -3621,6 +3720,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_circle(10,0,20,fill_in=False)
 ```
 <hr/>
@@ -3651,6 +3751,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_ellipse(0,0,100,30,fill_in=True)
 ```
 <hr/>
@@ -3709,6 +3810,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_line(0,0,40,40,fill_in=True)
 screen.draw_line(40,0,0,40,thickness=10,fill_in=True)
 ```
@@ -3738,6 +3840,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_point(100,30)
 ```
 <hr/>
@@ -3766,6 +3869,7 @@ import time
 
 screen=Screen()
 points = [(30,50),(90,10),(20,10),(5,20)]
+
 screen.draw_polygon(points)
 ```
 <hr/>
@@ -3797,6 +3901,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_rect(0,0,128,64,thickness=1,fill_in=True)
 ```
 <hr/>
@@ -3827,6 +3932,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 screen.draw_square(0,0,30,thickness=1,fill_in=True)
 ```
 <hr/>
@@ -3895,6 +4001,7 @@ from zumi.util.screen import Screen
 import time
 
 screen=Screen()
+
 for i in range(10):
     screen.draw_text(str(i)+'!')
     time.sleep(0.1)
@@ -3929,6 +4036,7 @@ None
 from zumi.util.screen import Screen
 
 screen=Screen()
+
 screen.draw_triangle(0,10,20,50,50,0)
 ```
 <hr/>
@@ -4114,6 +4222,7 @@ None
 ```python
 #Python code
 from zumi.util.screen import Screen 
+
 screen = Screen()
 
 screen.sad()
@@ -4138,6 +4247,9 @@ None
 ```python
 from zumi.util.screen import Screen
 from zumi.util.camera import Camera
+
+screen = Screen()
+camera = Camera()
 
 camera.start_camera() # Turn on the camera
 image = camera.capture() # Take a picture

@@ -4,7 +4,7 @@
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDM/Blockly-logo.png" width="200px"/>
+  <img src="/img/CDM/new-Blockly-logo.png" width="200px"/>
 
 </div>
 
