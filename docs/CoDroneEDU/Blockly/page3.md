@@ -25,7 +25,7 @@ version 2.1.8 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 <img src="/img/CDE/blockly_docu/junior/takeoff.png" width="120px"/>  
 
 #### Description
-This functions makes the drone take off. CoDrone EDU takes off at an average height of 1 meter off the ground. A takeoff block must be used before any other flight command or flight movement.
+This functions makes the drone take off. CoDrone EDU takes off at an average height of 80 centimeters off the ground. A takeoff block must be used before any other flight command or flight movement. **NOTE:** The takeoff height cannot be modified.
 
 #### Parameters
 None
@@ -320,8 +320,12 @@ Plays a note for a duration in seconds using the CoDrone EDU drone buzzer.
 None
 
 #### Example
-
-<img src="/img/CDE/blockly_docu/junior/play_note_drone_example.png" width="430px"/>  
+In this example, a different note is being played for half a second on the drone.
+<img src="/img/CDE/blockly_docu/junior/play_note_drone_example.png" width="430px"/>
+<br/>
+<br/>
+In the example below, the G7 note is played for 3 seconds on the drone before takeoff. After takeoff, the G7 note played for 3 seconds again on the drone. After turning to the left 90 degrees, the G7 note is played again for 3 seconds.
+<img src="/img/CDE/blockly_docu/junior/play_note_drone_example2.png" width="430px"/>
 
 <hr/>
 

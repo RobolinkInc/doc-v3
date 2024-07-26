@@ -29,7 +29,7 @@ version 2.1.8 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 #### Description
 
-This functions makes the drone take off. CoDrone EDU takes off at an average height of 1 meter off the ground. A takeoff block must be used before any other flight command or flight movement.
+This functions makes the drone take off. CoDrone EDU takes off at an average height of 80 centimeters off the ground. A takeoff block must be used before any other flight command or flight movement. **NOTE:** The takeoff height cannot be modified.
 
 #### Parameters
 None
@@ -1180,7 +1180,58 @@ None
 
 #### Example
 
-<img src="/img/CDE/blockly_docu/senior/controller_hertz_example.png" width="500px"/>  
+<img src="/img/CDE/blockly_docu/senior/controller_hertz_example.png" width="500px"/>
+
+<hr/>
+
+### start_drone_buzzer()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/start_drone_buzzer.png" width="300px"/>  
+
+#### Code
+
+<span className="light_gray">drone.</span><span className="dark_gray">start_drone_buzzer()</span>
+
+#### Description
+Plays a note on the CoDrone until it is programmed to be stopped with ``stop_drone_buzzer()``.
+
+#### Parameters
+<img src="/img/CDE/blockly_docu/senior/start_drone_buzzer_params.png" width="300px"/> 
+**Note:** note played on the drone
+
+#### Returns
+None
+
+#### Example
+
+<img src="/img/CDE/blockly_docu/senior/start_stop_drone_buzzer_example.png" width="300px"/> 
+
+<hr/>
+
+### stop_drone_buzzer()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/stop_drone_buzzer.png" width="200px"/>  
+
+#### Code
+
+<span className="light_gray">drone.</span><span className="dark_gray">stop_drone_buzzer()</span>
+
+#### Description
+Stops note played from the drone.
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example
+
+<img src="/img/CDE/blockly_docu/senior/start_stop_drone_buzzer_example.png" width="300px"/>
 
 <hr className="section_hr"/>
 

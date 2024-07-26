@@ -5,7 +5,42 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-## Setup and Installation
+## Coding in the browser
+
+### What is *Python for Robolink*?
+*Python for Robolink*, a browser-based program, allows you to connect to and program your drone without needing to install Python or an IDE (integrated development environment).
+<img src="/img/CDE/python_docu/python_for_robolink_editor.png"/>
+
+#### Why did we create two ways to code in Python?
+While we still suggest using the desktop version by downloading PyCharm to your computer, we wanted to ensure that everyone has the opportunity to learn Python. *Python for Robolink* is ideal for people who do not have access to a device that has the capability of downloading and storing applications.
+
+Use *Python for Robolink* if...
+1. You are using a Chromebook
+2. You do not have space on your current device to download PyCharm
+3. Your IT team has not installed PyCharm on your computers yet
+4. You do not have time to install PyCharm on every device
+
+### How to Access *Python for Robolink*
+Since *Python for Robolink* is a browser-based program, it can be accessed from any device that has Google Chrome, with the exception of iPads, tablets, and cell phones.
+
+#### Link to *Python for Robolink*
+Start programming your drone with *Python for Robolink* by heading to <a href="https://codrone.robolink.com/edu/python/">codrone.robolink.com/edu/python/</a>
+
+### Device requirements
+
+#### Hardware Requirements
+Try to use the cable that comes with CoDrone EDU whenever possible! This USB cable can transfer data, which is necessary for programming. Most USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
+
+#### Google Chrome Requirements
+Your Google Chrome should be updated to the most recent version. If you are not sure how to check, click on the the menu on the top right, scroll down to “Help”, and select “About Google Chrome”. Google Chrome might automatically update. If not, please update Chrome.
+
+<img src="/img/CDE/chrome_requirements_1.png" width="512px"/>  
+<br/>
+<br/>
+
+<img src="/img/CDE/chrome_requirements_2.png"/>
+
+## Coding in PyCharm
 
 ### How to install Python
 
