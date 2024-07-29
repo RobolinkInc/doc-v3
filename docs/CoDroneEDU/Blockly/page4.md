@@ -1542,7 +1542,6 @@ None
 #### Code
 <span className="light_gray">drone.</span><span className="dark_gray">load_classifier()</span>
 
-
 #### Description
 
 Loads color set onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors.
@@ -1558,6 +1557,35 @@ None
 #### Example
 
 To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_set" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
+<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
+
+<hr/>
+
+### predict_color()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/predict_color.png" width="250px"/>
+
+#### Code
+color_data = <span className="light_gray">drone.</span>get_color_data()<br/>
+<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[0]</span>
+
+
+#### Description
+
+Predicts what color the color sensors are currently seeing (front or back).
+
+#### Parameters
+
+**sensor:** the front or back sensor
+
+#### Returns
+
+***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
+
+#### Example
+In this example, placing the drone on different colored surfaces (red, yellow, or blue) will make the drone play a different note using the "predict_color" block.
 <img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
 
 <hr className="section_hr"/>
@@ -1588,32 +1616,6 @@ None
 
 <hr/>
 
-### predict_color()
-
-#### Block
-
-<img src="/img/CDE/blockly_docu/senior/predict_color.png" width="250px"/>
-
-#### Code
-color_data = <span className="light_gray">drone.</span>get_color_data()<br/>
-<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[0]</span>
-
-
-#### Description
-
-Predicts what color the color sensors are currently seeing (front or back).
-
-#### Parameters
-
-**sensor:** the front or back sensor
-
-#### Returns
-
-***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
-
-#### Example
-In this example, placing the drone on different colored surfaces (red, yellow, or blue) will make the drone play a different note using the "predict_color" block.
-<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
 ### create list with
 
 #### Block
