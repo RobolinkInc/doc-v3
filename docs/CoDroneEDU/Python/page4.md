@@ -58,7 +58,7 @@ drone.close()
 ### takeoff()
 
 #### Description
-This function makes the drone takeoff and hover. The drone will always hover for 1 second in order to stabilize before it executes the next command.
+This function makes the drone takeoff at an average height of 80 centimeters and hover. The drone will always hover for 1 second in order to stabilize before it executes the next command. **NOTE:** The takeoff parameters or height cannot be modified.
 
 #### Syntax
 ``takeoff()``    
