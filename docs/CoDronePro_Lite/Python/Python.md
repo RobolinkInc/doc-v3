@@ -11,7 +11,7 @@ customHeadElements:
 
 <div className='level2_main_image'>
 
-  <img src="/img/CDPL/Python-logo.png" width="220px"/>
+  <img src="/img/CDPL/python-logo-generic.svg" width="220px"/>
 
 </div>
 

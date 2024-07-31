@@ -22,7 +22,7 @@ Please click the tab below to go to the page.
   [![blockly](/img/Zumi/new-Blockly-logo.png)](/docs/Zumi/Blockly/)
   [Blockly](/docs/Zumi/Blockly/)
 
-  [![python](/img/Zumi/Python-logo.png)](/docs/Zumi/Python/)
+  [![python](/img/Zumi/python-logo-generic.svg)](/docs/Zumi/Python/)
   [Python](/docs/Zumi/Python/)
 
 

@@ -21,7 +21,7 @@ Please click the tab below to go to the page.
   [![blockly](/img/CDPL/new-Blockly-logo.png)](/docs/CoDronePro_Lite/Blockly/)
   [Blockly](/docs/CoDronePro_Lite/Blockly/)
 
-  [![python](/img/CDPL/Python-logo.png)](/docs/CoDronePro_Lite/Python/)
+  [![python](/img/CDPL/python-logo-generic.svg)](/docs/CoDronePro_Lite/Python/)
   [Python](/docs/CoDronePro_Lite/Python/)
 
   [![arduino](/img/CDPL/Arduino_Logo.svg)](/docs/CoDronePro_Lite/Arduino/)

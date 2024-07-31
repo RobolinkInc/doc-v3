@@ -22,7 +22,7 @@ Please click the tab below to go to the page.
   [![blockly](/img/CDM/new-Blockly-logo.png)](/docs/CoDroneMini/Blockly/)
   [Blockly](/docs/CoDroneMini/Blockly/)
 
-  [![python](/img/CDM/Python-logo.png)](/docs/CoDroneMini/Python/)
+  [![python](/img/CDM/python-logo-generic.svg)](/docs/CoDroneMini/Python/)
   [Python](/docs/CoDroneMini/Python/)
 
 
