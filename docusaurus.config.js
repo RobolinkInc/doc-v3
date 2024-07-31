@@ -28,17 +28,17 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ko'
-    //'ja'
+    locales: ['en'
+    //'ko','ja'
     ],
     localeConfigs: {
       en: {
         htmlLang: 'en-GB',
-      },
-      ko: {
-        htmlLang: 'ko-KR',
-        label: '한글 Korean', 
       }
+      // ko: {
+      //   htmlLang: 'ko-KR',
+      //   label: '한글 Korean', 
+      // }
       // ja: {
       //   htmlLang: 'ja-JP',
       //   label: '日本語 Japanese',
