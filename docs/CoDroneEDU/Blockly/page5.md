@@ -8,6 +8,24 @@ customHeadElements:
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.1.9
+#### August 1, 2024
+
+- Improved UI to display all icons when opening the side tabs
+- Fixed an issue where Blockly miscounted the number of 'start_flag' blocks, allowing users to drag more than one 'start_flag' block if the dragging event was too fast
+- Added "List" blocks to enhance coding capabilities.
+- Corrected a buzzer functionality issue 
+- The console log now shows the version of the CoDrone JavaScript Library being used.
+- Integrated the "start/stop" buzzer feature from Python into Blockly.
+- Added the capability to download workspace code as a PNG file for easier sharing and documentation.
+- Corrected the URL in the release notes menu option to point to the correct resource.
+- Fixed an issue where incorrect URLs displayed Apache and OS version details.
+- Resolved a problem where Blockly could load any URL after the default URL was accessed.
+- Added a "Return to Docs" button for better navigation back to the documentation in the side tab
+- Improved battery request messages in the console to reflect getting the drone state data instead
+
+<hr/>
+
 ### Version 2.1.8
 #### June 12, 2024
 
