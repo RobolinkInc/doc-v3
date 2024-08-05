@@ -139,3 +139,7 @@ const waitForBreadcrumbs = setInterval(() => {
         }
     }, 3000);
 }, 100);
+
+window.openModalPython = openModalPython;
+window.closeModalPython = closeModalPython;
+window.handleExternalPython = handleExternalPython;

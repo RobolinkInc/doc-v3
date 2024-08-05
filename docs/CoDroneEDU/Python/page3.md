@@ -11,7 +11,7 @@ Occasionally, there will be updates to the CoDrone EDU Python library. The curre
 
 :::tip
 
-If your version of Python is different from the CoDrone EDU library version, it can be a good idea to stay up to date (although updating your Python version is not always necessary). See Python versions available <a role="button" id="popupBtn" onClick={openModalPython}>here</a>
+If your version of Python is different from the CoDrone EDU library version, it can be a good idea to stay up to date (although updating your Python version is not always necessary). See Python versions available <a role="button" id="popupBtn" onClick={() => window.openModalPython()}>here</a>
 <div id="modalWrap_python">
     <div id="modalContent">
         <div id="modalBody">
@@ -28,11 +28,11 @@ If your version of Python is different from the CoDrone EDU library version, it 
             </div>
             <br/>
             <div className="popup_div">
-                <a id="popup_stay" href="#" onClick={closeModalPython}>Stay on this site</a>
+                <a id="popup_stay" href="#" onClick={() => window.closeModalPython()}>Stay on this site</a>
             </div>
             <br/>
             <div className="popup_div">
-            <button type="button" id="popup_go" onClick={handleExternalPython}>Continue to external site</button>
+            <button type="button" id="popup_go" onClick={() => window.handleExternalPython()}>Continue to external site</button>
         </div>
         </div>
     </div>
