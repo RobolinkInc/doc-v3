@@ -125,8 +125,8 @@ const config = {
           </div>
           <div class="box" id="box">
             <div>
-              <a role="button" id="popupBtn" onclick="openModal()"> Robolink Help&nbsp;</a> |
-                    <div id="modalWrap">
+              <a role="button" id="popupBtn" onclick="openModalFooter()"> Robolink Help&nbsp;</a> |
+                    <div id="modalWrap_footer">
                         <div id="modalContent">
                             <div id="modalBody">
                                 <div>
@@ -142,7 +142,7 @@ const config = {
                                 </div>
                                 <br>
                                 <div class="popup_div">
-                                    <a id="popup_stay" href="#" onclick="closeModal()">Stay on this site</a>
+                                    <a id="popup_stay" href="#" onclick="closeModalFooter()">Stay on this site</a>
                                 </div>
                                 <br>
                                 <div class="popup_div">

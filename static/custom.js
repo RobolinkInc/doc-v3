@@ -93,12 +93,24 @@ const documentBackgroundUpdate = setInterval(() => {
 }, 100);
 
 
-function closeModal() {
-    document.getElementById('modalWrap').style.display = 'none';
+function closeModalFooter() {
+    document.getElementById('modalWrap_footer').style.display = 'none';
 }
 
-function openModal() {
-    document.getElementById('modalWrap').style.display = 'block';
+function openModalFooter() {
+    document.getElementById('modalWrap_footer').style.display = 'block';
+}
+
+function closeModalPython() {
+    document.getElementById('modalWrap_python').style.display = 'none';
+}
+
+function openModalPython() {
+    document.getElementById('modalWrap_python').style.display = 'block';
+}
+
+function handleExternalPython() {
+    window.location.href = 'https://www.python.org/downloads/';
 }
 
 const waitForBreadcrumbs = setInterval(() => {
