@@ -93,25 +93,13 @@ const documentBackgroundUpdate = setInterval(() => {
 }, 100);
 
 
-// const waitForPopup = setInterval(() => {
-//     var popupBtn = document.getElementById('popupBtn');
-//     var modal = document.getElementById('modalWrap');
+function closeModal() {
+    document.getElementById('modalWrap').style.display = 'none';
+}
 
-//     if (popupBtn && modal) {
-//         popupBtn.onclick = function() {
-//             modal.style.display = 'block';
-//         }
-
-//         window.onclick = function(event) {
-//             if (event.target == modal) {
-//                 modal.style.display = "none";
-//             }
-//         }
-
-//         clearInterval(waitForPopup); 
-//     }
-// }, 100);
-
+function openModal() {
+    document.getElementById('modalWrap').style.display = 'block';
+}
 
 const waitForBreadcrumbs = setInterval(() => {
     const menuLinks = document.querySelectorAll(".theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1:first-child a");
