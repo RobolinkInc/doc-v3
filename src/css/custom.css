@@ -1192,9 +1192,9 @@ pre code {
 @media (max-width: 545px) {
 
   #modalBody {
-    width: 320px;
+    width: 330px;
     height: 260px;
-    padding: 23px 23px;
+    padding: 20px 20px;
   }
 
   #popup_text {

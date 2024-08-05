@@ -18,7 +18,7 @@ If your version of Python is different from the CoDrone EDU library version, it 
             <div>
                 <span id="popup_text">
                     You are leaving Robolink’s 
-                    Document page. Please be 
+                    Documentation site. Please be 
                     aware that any website 
                     outside of our Document 
                     page will be subject to 
