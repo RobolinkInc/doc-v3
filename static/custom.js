@@ -93,25 +93,25 @@ const documentBackgroundUpdate = setInterval(() => {
 }, 100);
 
 
-// const waitForPopup = setInterval(() => {
-//     var popupBtn = document.getElementById('popupBtn');
-//     var modal = document.getElementById('modalWrap');
+function closeModalFooter() {
+    document.getElementById('modalWrap_footer').style.display = 'none';
+}
 
-//     if (popupBtn && modal) {
-//         popupBtn.onclick = function() {
-//             modal.style.display = 'block';
-//         }
+function openModalFooter() {
+    document.getElementById('modalWrap_footer').style.display = 'block';
+}
 
-//         window.onclick = function(event) {
-//             if (event.target == modal) {
-//                 modal.style.display = "none";
-//             }
-//         }
+function closeModalPython() {
+    document.getElementById('modalWrap_python').style.display = 'none';
+}
 
-//         clearInterval(waitForPopup); 
-//     }
-// }, 100);
+function openModalPython() {
+    document.getElementById('modalWrap_python').style.display = 'block';
+}
 
+function handleExternalPython() {
+    window.location.href = 'https://www.python.org/downloads/';
+}
 
 const waitForBreadcrumbs = setInterval(() => {
     const menuLinks = document.querySelectorAll(".theme-doc-sidebar-menu .theme-doc-sidebar-item-link-level-1:first-child a");
@@ -139,3 +139,7 @@ const waitForBreadcrumbs = setInterval(() => {
         }
     }, 3000);
 }, 100);
+
+window.openModalPython = openModalPython;
+window.closeModalPython = closeModalPython;
+window.handleExternalPython = handleExternalPython;

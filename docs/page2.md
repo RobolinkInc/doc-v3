@@ -80,6 +80,7 @@ You may also opt to turn on the camera functionality and take photos. If you do 
 
 
 <h4 id='Automatically-collected-information'>b. Automatically collected information</h4>     
+
 When you visit and interact with the Education Portals, we automatically collect information about your device, browser, and activity:
 
 - **Cookies.** We use cookies to automatically collect information. Information that we get from cookies (or similar technologies) serves different purposes: to maintain and analyze how the Education Portals work, identify any suspicious activities so we can try to protect users from fraud and other inappropriate activities, or understand how you use the Education Portals and track your progress. We may rely on cookies placed by authorized service providers, such as [Google Analytics](#Google-Analytics). **We do not use any tracking technologies for behavioral advertising on our Education Portals. Robolink does not serve behavioral advertising to or retarget ads to Child Users or any users who visit the Education Portals.**
