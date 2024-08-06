@@ -1544,7 +1544,7 @@ None
 
 #### Description
 
-Loads color set onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors.
+Loads color set onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
 
 #### Parameters
 
@@ -1585,7 +1585,7 @@ Predicts what color the color sensors are currently seeing (front or back).
 ***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
 
 #### Example
-In this example, placing the drone on different colored surfaces (red, yellow, or blue) will make the drone play a different note using the "predict_color" block.
+In this example, the "load_color_set" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
 <img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
 
 <hr className="section_hr"/>
