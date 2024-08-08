@@ -84,6 +84,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name: 'robots', content: 'noindex, nofollow'},
+      ],
       prism: {
         additionalLanguages: ['python'],
       },
@@ -113,49 +116,44 @@ const config = {
             href: 'https://learn.robolink.com/',
             position: 'right',
           },
-          // {
-          //   type: 'html',
-          //   position: 'right',
-          //   value: `<a role="button" id="popupBtn">Go to Lessons</a>
-          //           <div id="modalWrap">
-          //               <div id="modalContent">
-          //                   <div id="modalBody">
-          //                       <div>
-          //                           <span id="popup_text">
-          //                               You are leaving Robolink’s 
-          //                               Document page. Please be 
-          //                               aware that any website 
-          //                               outside of our Document 
-          //                               page will be subject to 
-          //                               privacy policies different 
-          //                               from this website.
-          //                           </span>
-          //                       </div>
-          //                       <br>
-          //                       <div class="popup_div">
-          //                           <a id="popup_stay" href=".">Stay on this site</a>
-          //                       </div>
-          //                       <br>
-          //                       <div class="popup_div">
-          //                           <button type="button" id="popup_go" onclick="location.href='https://learn.robolink.com/'">Continue to external site</button>
-          //                       </div>
-          //                   </div>
-          //               </div>
-          //           </div>`,
-          // },
         ],
       },
       footer: {
         style: 'dark',
         copyright: 
-        `<div class=footer-wrap>
+        `<div class="footer-wrap">
           <div class="footerBox" id="footerBox">
             <img id="imgFooter" src="/img/R-footer-logo.svg" />
             <span>5075 Shoreham Pl. Ste 110, San Diego, CA 92122 | +1 (858) 876-5123</span>
           </div>
           <div class="box" id="box">
             <div>
-              <a href="https://robolink.helpdocs.io/" target="_blank" rel="noopener noreferrer"> Robolink Help&nbsp;</a> |
+              <a role="button" id="popupBtn" onclick="openModalFooter()"> Robolink Help&nbsp;</a> |
+                    <div id="modalWrap_footer">
+                        <div id="modalContent">
+                            <div id="modalBody">
+                                <div>
+                                    <span id="popup_text">
+                                        You are leaving Robolink’s 
+                                        Documentation site. Please be 
+                                        aware that any website 
+                                        outside of our Document 
+                                        page will be subject to 
+                                        privacy policies different 
+                                        from this website.
+                                    </span>
+                                </div>
+                                <br>
+                                <div class="popup_div">
+                                    <a id="popup_stay" href="#" onclick="closeModalFooter()">Stay on this site</a>
+                                </div>
+                                <br>
+                                <div class="popup_div">
+                                    <button type="button" id="popup_go" onclick="location.href='https://robolink.helpdocs.io/'">Continue to external site</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
               <a href="/docs/terms-of-use"> &nbsp;Terms of use&nbsp;</a> |
               <a href="/docs/privacy-policy"> &nbsp;Privacy</a>
             </div>

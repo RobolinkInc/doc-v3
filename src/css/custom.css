@@ -202,73 +202,6 @@
   font-family: 'Cabin-Regular', sans-serif; 
 }
 
-#popupBtn  {
-  background-color: #E61848;
-  border-radius: 50px;
-  width: 140px;
-  height: 40px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: medium;
-  color: white;
-  text-decoration: none;
-  margin-right: 6px;
-  border: none;
-}
-
-#modalWrap {
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(102, 102, 102, 0.65); 
-  display: none;
-}
-
-#modalBody {
-  width: 483px;
-  height: 280px;
-  padding: 30px 30px;
-  margin: 0 auto;
-  border-radius: 20px;
-  background-color: #fff;
-}
-
-.popup_div {
-  text-align: center
-}
-
-#popup_text {
-  font-size: 17px;
-  color: #717070;
-}
-
-#popup_stay {
-  color: #FFC500;
-  text-decoration: underline;
-  font-size: 17px;
-}
-
-#popup_go {
-  display:inline-block;
-  background-color: #E61848;
-  border-radius: 50px;
-  width: 250px;
-  height: 45px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border: none;
-  font-size: 15px;
-}
-
 
 .navbar__link:nth-child(3) svg {
   display: none;
@@ -316,16 +249,6 @@
 
   .main-wrapper > div > button {
     display: none;
-  }
-
-  #popupBtn  {
-    border-radius: 0;
-    width: 150%;
-    height: 32px;
-    justify-content:left;
-    color: white;
-    margin: -4px 0px 0px -8px;
-    padding-left: 10px;
   }
 
   .print_div {
@@ -1186,6 +1109,118 @@ pre code {
   height: 90%;
 }
 
+#popupBtn:hover {
+  text-decoration: underline;
+}
+
+#modalWrap_footer {
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(102, 102, 102, 0.65); 
+  display: none;
+}
+
+#modalWrap_python {
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(102, 102, 102, 0.65); 
+  display: none;
+}
+
+#modalBody {
+  text-align: center;
+  width: 483px;
+  height: 280px;
+  padding: 32px 32px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.popup_div {
+  text-align: center;
+}
+
+#modalWrap_python .popup_div {
+  margin-top: -2px;
+}
+
+#popup_text {
+  font-size: 17px;
+  color: #717070;
+}
+
+#popup_text p{
+  font-size: 17px;
+  color: #717070;
+  padding: 0px;
+  margin: 0px;
+}
+
+#popup_stay {
+  color: #FFC500 !important; 
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+#popup_go {
+  display:inline-block;
+  background-color: #E61848;
+  border-radius: 50px;
+  width: 250px;
+  height: 45px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  font-size: 15px;
+}
+
+@media (max-width: 545px) {
+
+  #modalBody {
+    width: 330px;
+    height: 260px;
+    padding: 20px 20px;
+  }
+
+  #popup_text {
+    font-size: 15px;
+    color: #717070;
+  }
+
+  #popup_text p{
+    font-size: 15px;
+    color: #717070;
+  }
+
+  #popup_stay {
+    font-size: 15px;
+  }
+  
+  #popup_go {
+    width: 200px;
+    height: 40px;
+    font-size: 13px;
+  }
+  
+
+
+}
+
 .row > .col:first-child{
   overflow-y: auto;
   padding-right: 30px;
@@ -1308,4 +1343,46 @@ hr {
   width: 100%;
   border: none;
   border-top: solid 3px #aaa;
+}
+
+.firmware-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.firmware_div {
+  flex-basis: auto;
+  background-color: inherit;
+  flex-basis: auto;
+  /* display: flex; */
+  /* align-content:flex-start; */
+}
+
+.firmware_div-fig {
+  display: flex;
+  justify-content: center;
+}
+
+.firmware_div-fig img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+
+
+/* .firmware_span-nowrap {
+  white-space: nowrap;
+  font-size: 34px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.26);
+} */
+
+.firmware-row :is(h4,h3,p,img) {
+  text-align: center;
+  padding: 0;
+}
+
+.firmware-row img {
+  margin: 0;
 }
