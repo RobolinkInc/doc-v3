@@ -192,7 +192,7 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 <span className="light_gray">drone.</span><span className="dark_gray">turn_degree()</span>
 
 #### Description
-Turns right or left with absolute reference frame to drone's initial heading. Positive degrees to turn left and negative degrees to turn right. When the drone pairs after powering on, the current heading will be set as 0 degrees.
+Turns right or left with absolute reference frame to drone's initial heading. Input positive degrees to turn left and negative degrees to turn right. When the drone pairs to the controller after powering on, the current heading will be set as 0 degrees.
 
 #### Parameters
 ***integer* degrees:** angle of the turn between -180 and +180
