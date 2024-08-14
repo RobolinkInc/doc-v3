@@ -47,8 +47,8 @@ Each of the following terms and policies are incorporated into these Terms:
 Purchase Order Terms: [https://www.robolink.com/pages/purchase-order](https://www.robolink.com/pages/purchase-order)  
 Refund Policy: [https://www.robolink.com/policies/refund-policy](https://www.robolink.com/policies/refund-policy)  
 Shipping and Return Policy: [https://www.robolink.com/pages/shipping-policy](https://www.robolink.com/pages/shipping-policy)  
-Privacy Notice: [LINK]  
-Education and Children’s Privacy Notice: [LINK]  
+Privacy Notice: [https://www.robolink.com/policies/privacy-policy](https://www.robolink.com/policies/privacy-policy)    
+Education and Children’s Privacy Notice: [https://learn.robolink.com/privacy-policy](https://learn.robolink.com/privacy-policy)  
 Warranty Policy: [https://www.robolink.com/pages/warranty-policy](https://www.robolink.com/pages/warranty-policy)  
 
 You agree to pay all fees incurred by you or on your behalf through the Site(s), at the prices in effect when such charges are incurred including, without limitation, all shipping and handling charges.  You authorize us to charge all sums for the orders you make to the payment method specified at the time.  In addition, you remain responsible for any taxes that may be applicable to your transactions.  You authorize us to charge all applicable amounts for the orders you make to the payment method specified at the time of purchase.
