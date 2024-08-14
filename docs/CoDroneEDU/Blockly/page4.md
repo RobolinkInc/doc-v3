@@ -143,10 +143,10 @@ None
 
 #### Example
 
-<!-- In this example, the drone will move for 2 seconds with the roll and pitch set to 30%. Then, the drone will move for another 2 seconds with the roll and pitch set to -30%.
+In this example, the drone will move for 2 seconds with the roll and pitch set to 30%. Then, the drone will move for another 2 seconds with the roll and pitch set to -30%.
 <img src="/img/CDE/blockly_docu/senior/move-example1.png" width="480px"/>
 <br/>
-<br/> -->
+<br/>
 In the example below, the drone will move for 3 seconds with the yaw and throttle set to 50% and 25%. Then, the drone will move for another 3 seconds with the yaw and throttle set to -50% and -25%.
 <img src="/img/CDE/blockly_docu/senior/move-example2.png" width="480px"/> 
 
@@ -175,9 +175,15 @@ This functions makes the drone flip back, front, right, or left. Make sure your 
 None
 
 #### Example
-Add a hover or delay block after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command.
 
-<img src="/img/CDE/blockly_docu/senior/flip_example.png" width="500px"/>  
+Add a hover or delay block after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command. Not adding a delay after a flip can cause following blocks to not be performed.
+
+<img src="/img/CDE/blockly_docu/senior/flip_example.png" width="500px"/>
+<br/>
+<br/>
+
+In this example below, after take off, the drone should flip forward and backward **(flips might not be executed since a flip needs a wait/sleep block)**. 
+<img src="/img/CDE/blockly_docu/senior/flip_example2.png" width="180px"/>  
 
 <hr/>
 
@@ -285,10 +291,10 @@ None
 
 #### Example
 
-<!-- In this example, after taking off, the drone sets its roll variable at 20% for rightward movement and then sets its roll variable at -20% for leftward movement. This will not make the drone move yet.
+In this example, after taking off, the drone sets its roll variable at 20% for rightward movement and then sets its roll variable at -20% for leftward movement. This will not make the drone move yet.
 <img src="/img/CDE/blockly_docu/senior/set_roll_example2.png" width="180px"/>
 <br/>
-<br/> -->
+<br/>
 In this example, after taking off, the drone sets its roll variable at 30% for rightward movement and moves for 2 seconds. And then the drone sets its roll variable at -30% for leftward movement and moves for 2 seconds.
 <img src="/img/CDE/blockly_docu/senior/set_roll_example1.png" width="180px"/>  
 
@@ -315,10 +321,10 @@ None
 
 #### Example
 
-<!-- In this example, after taking off, the drone sets its pitch variable at 20% for forward movement and then sets its pitch variable at -20% for backward movement. This will not make the drone move yet.
+In this example, after taking off, the drone sets its pitch variable at 20% for forward movement and then sets its pitch variable at -20% for backward movement. This will not make the drone move yet.
 <img src="/img/CDE/blockly_docu/senior/set_pitch_example2.png" width="180px"/>
 <br/>
-<br/> -->
+<br/>
 In this example, after taking off, the drone sets its pitch variable at 30% for forward movement and moves for 2 seconds. And then the drone sets its pitch variable at -30% for backward movement and moves for 2 seconds.
 <img src="/img/CDE/blockly_docu/senior/set_pitch_example1.png" width="180px"/> 
 
@@ -345,11 +351,11 @@ None
 
 #### Example
 
-<!-- In this example, after taking off, the drone sets its yaw variable at 20% for right turns and then sets its yaw variable at -20% for left turns. This will not make the drone move yet.
+In this example, after taking off, the drone sets its yaw variable at 20% for right turns and then sets its yaw variable at -20% for left turns. This will not make the drone move yet.
 <img src="/img/CDE/blockly_docu/senior/set_yaw_example2.png" width="180px"/>
 <br/>
-<br/> -->
-In this example, after taking off, the drone sets its yaw variable at 30% for left turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for right turns and moves for 2 seconds.
+<br/>
+In this example, after taking off, the drone sets its yaw variable at 30% for right turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for left turns and moves for 2 seconds.     
 <img src="/img/CDE/blockly_docu/senior/set_yaw_example1.png" width="180px"/>  
 
 <hr/>
@@ -375,10 +381,10 @@ None
 
 #### Example
 
-<!-- In this example, after taking off, the drone sets its throttle variable at 20% for upward movement and then sets its throttle variable at -20% for downward movement. This will not make the drone move yet.
+In this example, after taking off, the drone sets its throttle variable at 20% for upward movement and then sets its throttle variable at -20% for downward movement. This will not make the drone move yet.
 <img src="/img/CDE/blockly_docu/senior/set_throttle_example2.png" width="180px"/>
 <br/>
-<br/> -->
+<br/>
 In this example, after taking off, the drone sets its throttle variable at 30% for upward movement and moves for 2 seconds. And then the drone sets its throttle variable at -30% for downward movement and moves for 2 seconds.
 <img src="/img/CDE/blockly_docu/senior/set_throttle_example1.png" width="180px"/>    
 
@@ -661,10 +667,10 @@ Returns the calculated distance from either the front or bottom infrared (IR) ra
 
 In this example, after takeoff, the drone has its throttle set at 20% power, moving upward. Before entering the loop, it checks if the drone has already reached the maximum bottom range (set as 100), measured in centimeters. If not, it will continuously fly upward until the current bottom range is more than the max bottom range.
 <img src="/img/CDE/blockly_docu/senior/get_range_example1.png" width="450px"/>
-<!-- <br/>
+<br/>
 <br/>
 In this example below, run the program, manually point the drone to a wall, and then move it aroun until the drone is less than 70 cm away from a wall. Click the Stop button if you want to stop running the program.
-<img src="/img/CDE/blockly_docu/senior/get_range_example2.png" width="450px"/>  --> 
+<img src="/img/CDE/blockly_docu/senior/get_range_example2.png" width="450px"/>  
 
 <hr/>
 
@@ -796,10 +802,10 @@ Returns the current estimated position of the CoDrone EDU using the optical flow
 
 In this example, after takeoff, the console prints the x-y-z coordinates of the drone's position, in centimeters. Then, prints the x-y-z coordinates again after moving for 2 seconds.
 <img src="/img/CDE/blockly_docu/senior/get_pos_ex1.png" width="450px"/>
-<!-- <br/>
+<br/>
 <br/>
 In this example, after takeoff, the console prints the x-y-z coordinates of the drone's position, in inches. Prints x-coordinate of the drone after moving right. Prints y-coordinate of the drone after moving forward. Prints z-coordinate of the drone after flying higher.
-<img src="/img/CDE/blockly_docu/senior/get_pos_ex2.png" width="450px"/>   -->
+<img src="/img/CDE/blockly_docu/senior/get_pos_ex2.png" width="450px"/>  
 
 <hr/>
 
@@ -825,10 +831,10 @@ None
 #### Example
 In this example, the program will check the drone's battery before takeoff and after landing.
 <img src="/img/CDE/blockly_docu/senior/get_battery_example1.png" width="160px"/>
-<!-- <br/>
+<br/>
 <br/>
 In the example below, the program will check the drone's battery before takeoff and after the front flip. The difference of battery percentage will be larger in this example than the previous one.
-<img src="/img/CDE/blockly_docu/senior/get_battery_example2.png" width="160px"/> --> 
+<img src="/img/CDE/blockly_docu/senior/get_battery_example2.png" width="160px"/> 
 
 <hr/>
 
@@ -971,10 +977,10 @@ This functions reads the color data from either of the two bottom color sensors 
 
 In this example, if the drone's front color detector detects the color green, the drone's LED will light up green; otherwise, the drone's LED will turn off.
 <img src="/img/CDE/blockly_docu/senior/get_color_data_ex1.png" width="500px"/>
-<!-- <br/>
+<br/>
 <br/>
 In the example below, place the drone under two different colored surfaces, so that the back and front sensor detector aren't detecting the same surface. The program will output different colors for the back and front sensor.
-<img src="/img/CDE/blockly_docu/senior/get_color_data_ex2.png" width="500px"/>  --> 
+<img src="/img/CDE/blockly_docu/senior/get_color_data_ex2.png" width="500px"/>  
 
 <hr/>
 
@@ -1234,6 +1240,58 @@ None
 
 <img src="/img/CDE/blockly_docu/senior/start_stop_drone_buzzer_example.png" width="300px"/>
 
+<hr/>
+
+### start_controller_buzzer()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/start_controller_buzzer.png" width="350px"/>  
+
+#### Code
+
+<span className="light_gray">drone.</span><span className="dark_gray">start_controller_buzzer()</span>
+
+#### Description
+Plays a note on the controller until it is programmed to be stopped with ``stop_controller_buzzer()``.
+
+#### Parameters
+<img src="/img/CDE/blockly_docu/senior/start_controller_buzzer_params.png" width="350px"/>
+
+**Note:** note played on the controller
+
+#### Returns
+None
+
+#### Example
+
+<img src="/img/CDE/blockly_docu/senior/start_stop_controller_buzzer_example.png" width="350px"/> 
+
+<hr/>
+
+### stop_controller_buzzer()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/stop_controller_buzzer.png" width="250px"/>  
+
+#### Code
+
+<span className="light_gray">drone.</span><span className="dark_gray">stop_controller_buzzer()</span>
+
+#### Description
+Stops note played from the controller.
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example
+
+<img src="/img/CDE/blockly_docu/senior/start_stop_controller_buzzer_example.png" width="350px"/>
+
 <hr className="section_hr"/>
 
 ## Screen
@@ -1470,6 +1528,65 @@ None
 #### Example
 
 <img src="/img/CDE/blockly_docu/senior/controller_clear_screen_example.png" width="600px"/>
+
+<hr className="section_hr"/>
+
+## Colors
+
+### load_color_set()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/load_color_set.png" width="300px"/>
+
+#### Code
+<span className="light_gray">drone.</span><span className="dark_gray">load_classifier()</span>
+
+#### Description
+
+Loads color set onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_set" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
+<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
+
+<hr/>
+
+### predict_color()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/predict_color.png" width="250px"/>
+
+#### Code
+color_data = <span className="light_gray">drone.</span>get_color_data()<br/>
+<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[0]</span>
+
+
+#### Description
+
+Predicts what color the color sensors are currently seeing (front or back).
+
+#### Parameters
+
+**sensor:** the front or back sensor
+
+#### Returns
+
+***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
+
+#### Example
+In this example, the "load_color_set" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
+<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
 
 <hr className="section_hr"/>
 
