@@ -635,7 +635,7 @@ Send roll, pitch, yaw, and throttle values to the drone.
 #### Parameters
 ***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right <br/>
 ***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is left, positive is right <br/>
+***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
 ***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up 
 
 #### Returns
@@ -673,7 +673,7 @@ Send roll, pitch, yaw, and throttle values to the drone continously for the give
 #### Parameters
 ***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right  <br/>
 ***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards  <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is left, positive is right  <br/>
+***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
 ***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up <br/>
 ***integer* duration:** A duration in milliseconds  
 
@@ -815,7 +815,7 @@ This is a setter function that allows you to set the yaw variable. Once you set 
 ``set_yaw(power)``    
 
 #### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is left, positive yaw is right.
+***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is right, positive yaw is left.
 
 #### Returns
 None
@@ -994,7 +994,7 @@ drone.close()
 ### turn_degree()
 
 #### Description
-Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to right and negative degrees turn to the left.
+Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to the left and negative degrees turn to the right.
 
 #### Syntax
 ``turn_degree(degree, timeout, p_value)``    
@@ -1118,7 +1118,7 @@ Sends roll, pitch, yaw, throttle values continuously to the drone for duration (
 #### Parameters
 ***integer* roll:** roll power (-100 - 100) <br/> 
 ***integer* pitch:** pitch power (-100 - 100) <br/>
-***integer* yaw:** yaw power (-100 - 100) <br/>   
+***integer* yaw:** yaw power (-100 - 100) <br/>
 ***integer* throttle:** throttle power (-100 - 100) <br/>
 ***integer* duration:** Duration of the movement in seconds
 
@@ -1136,215 +1136,6 @@ drone.pair()
 
 drone.takeoff()
 drone.go(50, 50, 0, 0, 5) # Drone flies diagonally forward and right for 5 seconds
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### move_forward()
-
-#### Description
-Moves the drone forward for the given distance and unit for that distance.
-
-#### Syntax
-``move_forward(distance)``    
-``move_forward(distance, unit, speed)``   
-
-
-#### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).     
-***integer* speed:** default 1 meter per second. Max is 2 meters/second     
-
-#### Returns
-None
-
-#### Example Code
-```python
-#Python code
-from codrone_edu.drone import *
-import time
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.move_forward(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### move_backward()
-
-#### Description
-Moves the drone backward for the given distance and unit for that distance.
-
-#### Syntax
-``move_backward(distance)``      
-``move_backward(distance, unit, speed)``   
-
-
-#### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
-***integer* speed:** default 1 meter per second. Max is 2 meters/second   
-
-#### Returns
-None
-
-#### Example Code
-```python
-#Python code
-from codrone_edu.drone import *
-import time
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.move_backward(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### move_left()
-
-#### Description
-Moves the drone left for the given distance and unit for that distance.
-
-#### Syntax
-``move_left(distance)``    
-``move_left(distance, unit, speed)``  
-
-
-#### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
-***integer* speed:** default 1 meter per second. Max is 2 meters/second
-
-#### Returns
-None
-
-#### Example Code
-```python
-#Python code
-from codrone_edu.drone import *
-import time
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.move_left(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### move_right()
-
-#### Description
-Moves the drone right for the given distance and unit for that distance.
-
-#### Syntax
-``move_right(distance)``     
-``move_right(distance, unit, speed)`` 
-
-
-#### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
-***integer* speed:** default 1 meter per second. Max is 2 meters/second 
-
-#### Returns
-None
-
-#### Example Code
-```python
-#Python code
-from codrone_edu.drone import *
-import time
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.move_right(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### send_absolute_position()
-
-#### Description
-Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
-The 'x' position of the drone is forwards and reverse.    
-The 'y' position of the drone is left and right.    
-The 'z' position of the drone is up and down.   
-<img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
-<br/>
-<img src="/img/CDE/python_docu/xyz.jpg"  width="70%"/>
-
-#### Syntax
-``send_absolute_position(positionX, positionY, positionZ, velocity, heading, rotationalVelocity)``    
-
-
-#### Parameters
-***float* positionX:** The X position of the drone (-10 ~ 10). Forward is positive. Backwards is negative.   
-***float* positionY:** The Y position of the drone (-10 ~ 10). Left is positive. Right is negative.    
-***float* positionZ:** The Z position of the drone (-10 ~ 10). Up is positive. Down is negative.   
-***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 10). The movement speed of the drone.   
-***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
-***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
-
-#### Returns
-None
-
-#### Example Code
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-drone.takeoff()
-
-# Sending the drone forward from its takeoff location 0.5 meters moving at 0.5 m/s
-drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
-time.sleep(1) # Sleep command needed in order for this movement to execute.
-
-# Sending the same command will cause the drone to hover around 
-# the same area since this command uses absolute positioning from the takeoff location
-drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
-time.sleep(1)
-
 drone.land()
 
 
