@@ -198,7 +198,7 @@ In this example below, after take off, the drone should flip forward and backwar
 <span className="light_gray">drone.</span><span className="dark_gray">turn_degree()</span>
 
 #### Description
-Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to right and negative degrees turn to the left. When the drone pairs after powering on, the current heading will be set as 0 degrees.
+Turns right or left with absolute reference frame to drone's initial heading. Input positive degrees to turn left and negative degrees to turn right. When the drone pairs to the controller after powering on, the current heading will be set as 0 degrees.
 
 #### Parameters
 ***integer* degrees:** angle of the turn between -180 and +180
@@ -355,7 +355,7 @@ In this example, after taking off, the drone sets its yaw variable at 20% for ri
 <img src="/img/CDE/blockly_docu/senior/set_yaw_example2.png" width="180px"/>
 <br/>
 <br/>
-In this example, after taking off, the drone sets its yaw variable at 30% for right turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for left turns and moves for 2 seconds.
+In this example, after taking off, the drone sets its yaw variable at 30% for right turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for left turns and moves for 2 seconds.     
 <img src="/img/CDE/blockly_docu/senior/set_yaw_example1.png" width="180px"/>  
 
 <hr/>
@@ -685,7 +685,7 @@ In this example below, run the program, manually point the drone to a wall, and 
 <span className="light_gray">drone.</span><span className="dark_gray">get_angle()</span>
 
 #### Description
-This function returns the current gyroscope angle measurement for either the x (roll),y (pitch),or z (yaw) axis.
+This function returns the current gyroscope angle measurement for either the x (roll),y (pitch), or z (yaw) axis.
 
 #### Parameters
 

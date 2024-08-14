@@ -635,7 +635,7 @@ Send roll, pitch, yaw, and throttle values to the drone.
 #### Parameters
 ***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right <br/>
 ***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is left, positive is right <br/>
+***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
 ***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up 
 
 #### Returns
@@ -673,7 +673,7 @@ Send roll, pitch, yaw, and throttle values to the drone continously for the give
 #### Parameters
 ***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right  <br/>
 ***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards  <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is left, positive is right  <br/>
+***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
 ***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up <br/>
 ***integer* duration:** A duration in milliseconds  
 
@@ -815,7 +815,7 @@ This is a setter function that allows you to set the yaw variable. Once you set 
 ``set_yaw(power)``    
 
 #### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is left, positive yaw is right.
+***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is right, positive yaw is left.
 
 #### Returns
 None
@@ -994,7 +994,7 @@ drone.close()
 ### turn_degree()
 
 #### Description
-Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to right and negative degrees turn to the left.
+Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to the left and negative degrees turn to the right.
 
 #### Syntax
 ``turn_degree(degree, timeout, p_value)``    
@@ -1118,7 +1118,7 @@ Sends roll, pitch, yaw, throttle values continuously to the drone for duration (
 #### Parameters
 ***integer* roll:** roll power (-100 - 100) <br/> 
 ***integer* pitch:** pitch power (-100 - 100) <br/>
-***integer* yaw:** yaw power (-100 - 100) <br/>   
+***integer* yaw:** yaw power (-100 - 100) <br/>
 ***integer* throttle:** throttle power (-100 - 100) <br/>
 ***integer* duration:** Duration of the movement in seconds
 
