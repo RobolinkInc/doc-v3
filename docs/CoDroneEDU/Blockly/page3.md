@@ -35,6 +35,8 @@ None
 
 #### Example
 
+<button id="loadXmlButton" data-xml-id="take_off_junior">Open in Blockly</button>
+
 <img src="/img/CDE/blockly_docu/junior/takeoff_land_example.png" width="120px"/>  
 
 <hr/>

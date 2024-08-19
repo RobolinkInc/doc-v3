@@ -140,6 +140,16 @@ const waitForBreadcrumbs = setInterval(() => {
     }, 3000);
 }, 100);
 
+document.addEventListener('DOMContentLoaded', function () {
+    const loadXmlButton = document.getElementById('loadXmlButton');
+
+    if (loadXmlButton) {
+        loadXmlButton.addEventListener('click', () => {
+            const xmlId = 'take_off_junior';
+            window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
+        });
+    }
+})
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
 window.handleExternalPython = handleExternalPython;
