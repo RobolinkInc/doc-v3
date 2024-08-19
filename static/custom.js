@@ -140,6 +140,11 @@ const waitForBreadcrumbs = setInterval(() => {
     }, 3000);
 }, 100);
 
+function loadBlocklyXml(xmlId) {
+    window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
+    console.log(`${xmlId} clicked!`);
+}
+
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
 window.handleExternalPython = handleExternalPython;
