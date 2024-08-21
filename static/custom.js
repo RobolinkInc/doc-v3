@@ -145,6 +145,23 @@ function loadBlocklyXml(xmlId) {
     console.log(`${xmlId} clicked!`);
 }
 
+function loadBlocklyXml(xmlId) {
+    const currentHost = window.location.host;
+    const blocklyHost = 'codrone.robolink.com/edu/blockly-staging/'; 
+    const docsSiteHost = 'staging-docs.robolink.com/'; 
+
+    if (currentHost === blocklyHost) {
+        window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
+        console.log(`${xmlId} clicked!`);
+    } else if (currentHost === docsSiteHost) {
+        const newUrl = `https://codrone.robolink.com/edu/blockly-staging/?xmlId=${encodeURIComponent(xmlId)}`;
+        window.open(newUrl, '_blank');
+        console.log(`Opening new site with xmlId=${xmlId}`);
+    } else {
+        console.log("Unable Host");
+    }
+}
+
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
 window.handleExternalPython = handleExternalPython;
