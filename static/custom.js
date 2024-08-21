@@ -146,8 +146,10 @@ function loadBlocklyXml(xmlId) {
 }
 
 function loadBlocklyXml(xmlId) {
-    const currentHost = window.location.host;
-    const blocklyHost = 'codrone.robolink.com/edu/blockly-staging'; 
+    const fullUrl = window.location.href;
+    const url = new URL(fullUrl);
+    const currentHost = url.hostname;
+    const blocklyHost = 'codrone.robolink.com'; 
     const docsSiteHost = 'staging-docs.robolink.com'; 
     console.log(currentHost);
 
