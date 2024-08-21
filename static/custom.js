@@ -147,8 +147,9 @@ function loadBlocklyXml(xmlId) {
 
 function loadBlocklyXml(xmlId) {
     const currentHost = window.location.host;
-    const blocklyHost = 'codrone.robolink.com/edu/blockly-staging/'; 
-    const docsSiteHost = 'staging-docs.robolink.com/'; 
+    const blocklyHost = 'codrone.robolink.com/edu/blockly-staging'; 
+    const docsSiteHost = 'staging-docs.robolink.com'; 
+    console.log(currentHost);
 
     if (currentHost === blocklyHost) {
         window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
