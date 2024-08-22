@@ -141,7 +141,7 @@ const waitForBreadcrumbs = setInterval(() => {
 }, 100);
 
 function loadBlocklyXml(xmlId) {
-    const fullUrl = window.location.href;
+    const fullUrl = window.top.location.href;
     const url = new URL(fullUrl);
     const currentHost = url.hostname;
     const blocklyHost = 'codrone.robolink.com'; 
