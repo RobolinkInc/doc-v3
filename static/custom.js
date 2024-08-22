@@ -141,11 +141,6 @@ const waitForBreadcrumbs = setInterval(() => {
 }, 100);
 
 function loadBlocklyXml(xmlId) {
-    window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
-    console.log(`${xmlId} clicked!`);
-}
-
-function loadBlocklyXml(xmlId) {
     const fullUrl = window.location.href;
     const url = new URL(fullUrl);
     const currentHost = url.hostname;
