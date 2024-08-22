@@ -141,22 +141,24 @@ const waitForBreadcrumbs = setInterval(() => {
 }, 100);
 
 function loadBlocklyXml(xmlId) {
-    const fullUrl = window.top.location.href;
-    const url = new URL(fullUrl);
-    const currentHost = url.hostname;
-    const blocklyHost = 'codrone.robolink.com'; 
+    let fullUrl = '';
+    let currentHost = '';
+    try {
+        fullUrl = window.top.location.href;
+        const url = new URL(fullUrl);
+        currentHost = url.hostname;
+    } catch (e) {
+        currentHost = '';
+    }
     const docsSiteHost = 'staging-docs.robolink.com'; 
-    console.log(currentHost);
 
-    if (currentHost === blocklyHost) {
-        window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
-        console.log(`${xmlId} clicked!`);
-    } else if (currentHost === docsSiteHost) {
+    if (currentHost === docsSiteHost) {
         const newUrl = `https://codrone.robolink.com/edu/blockly-staging/?xmlId=${encodeURIComponent(xmlId)}`;
         window.open(newUrl, '_blank');
         console.log(`Opening new site with xmlId=${xmlId}`);
     } else {
-        console.log("Unable Host");
+        window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
+        console.log(`${xmlId} clicked!`);
     }
 }
 
