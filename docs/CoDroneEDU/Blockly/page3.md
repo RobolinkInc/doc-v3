@@ -35,7 +35,12 @@ None
 
 #### Example
 
-<button id="loadXmlButton" onClick={() => loadBlocklyXml('take_off_junior')}>Open in Blockly</button>
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('takeoff_land_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/takeoff_land_example.png" width="120px"/>  
 
@@ -58,6 +63,13 @@ None
 
 #### Example
 
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('takeoff_land_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/takeoff_land_example.png" width="120px"/>  
 
 <hr/>
@@ -79,6 +91,13 @@ None
 
 #### Example
 
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('emergencystop_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/emergencystop_example.png" width="180px"/>  
 
 <hr/>
@@ -99,6 +118,13 @@ This function makes the drone hover in place for a given duration in seconds.
 None
 
 #### Example
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('hover_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/hover_example.png" width="240px"/>  
 
@@ -126,6 +152,13 @@ None
 
 #### Example
 
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('go_at_power_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/go_at_power_example.png" width="420px"/>  
 
 <hr/>
@@ -151,6 +184,13 @@ None
 
 #### Example
 
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('turn_to_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/turn_to_example.png" width="240px"/>  
 
 <hr/>
@@ -173,6 +213,13 @@ Turns CoDrone EDU to the left or to the right for a duration in seconds at a per
 None
 
 #### Example
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('turn_direction_seconds_power_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/turn_direction_seconds_power_example.png" width="450px"/>  
 
@@ -200,6 +247,13 @@ None
 
 #### Example
 Add a hover or delay block after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/flip_example.png" width="500px"/>  
 
@@ -230,10 +284,26 @@ None
 #### Example
 
 In this example, the program is switching between three colors (red, yellow, and green) every half second for 10 times.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_drone_led_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/set_drone_led_example.png" width="500px"/>
 <br/>
 <br/>
 In this example, a list variable ``test_list`` is created ``["Red", "Blue", "White"]``. For 25 iterations, the ``color`` is set to a random color (a string) from ``test_list``, and the drone's LED color lights up with that color.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_drone_led_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/set_drone_led_example2.png" width="540px"/>  
 
 <hr/>
@@ -254,6 +324,13 @@ None
 None
 
 #### Example
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('drone_led_off_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/drone_led_off_example.png" width="480px"/>  
 
@@ -280,6 +357,13 @@ None
 
 #### Example
 
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_controller_LED_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/set_controller_LED_example.png" width="500px"/>  
 
 <hr/>
@@ -300,6 +384,13 @@ None
 None
 
 #### Example
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('controller_led_off_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/controller_led_off_example.png" width="480px"/>  
 
@@ -328,10 +419,26 @@ None
 
 #### Example
 In this example, a different note is being played for half a second on the drone.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('play_note_drone_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/play_note_drone_example.png" width="430px"/>
 <br/>
 <br/>
 In the example below, the G7 note is played for 3 seconds on the drone before takeoff. After takeoff, the G7 note played for 3 seconds again on the drone. After turning to the left 90 degrees, the G7 note is played again for 3 seconds.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('play_note_drone_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/play_note_drone_example2.png" width="430px"/>
 
 <hr/>
@@ -356,6 +463,13 @@ Plays a note for a duration in seconds using the CoDrone EDU controller buzzer.
 None
 
 #### Example
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('play_note_controller_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
 
 <img src="/img/CDE/blockly_docu/junior/play_note_controller_example.png" width="450px"/>  
 
@@ -383,6 +497,13 @@ None
 
 #### Example
 
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('create_empty_list_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/create_empty_list_example.png" width="360px"/> 
 
 <hr/>
@@ -408,9 +529,25 @@ Clicking on the gear icon will give you the option to manually add or reduce the
 
 #### Example
 In this example, a list variable was created with a value of the same data type. The ``test_list`` variable is assigned the value of ``[2.5,3.5,1]``
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('create_list_with_example1_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/create_list_with_example1.png" width="420px"/><br/>
 
 In this example, a list variable was created with a value of different data types. The ``test_list`` variable is assigned the value of ``[2,True,"Hello"]``
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('create_list_with_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/create_list_with_example2.png" width="490px"/> 
 
 <hr/>
@@ -437,6 +574,14 @@ Creates a list with a given value repeated a given number of times by the user. 
 #### Example
 
 In this example, instead of simply putting a number block, the first parameter contains an operation block that will return a number, which is 2. The second parameter contains a number block of 3. Printing test_list will result in ``[2,2,2]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('create_list_repeated_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/create_list_repeated_example.png" width="800px"/> 
 
 <hr/>
@@ -462,6 +607,14 @@ None
 #### Example
 
 After creating the list ``[1,2,3]`` and assigning it to the variable ``test_list``, the console will print the length of ``test_list``, which is ``3`` (three items in the list). 
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('length_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/length_example.png" width="400px"/> 
 
 <hr/>
@@ -486,9 +639,25 @@ Returns a boolean value indicating if the list is empty or not (if the list has 
 
 #### Example
 In this example, ``test_list`` block is attached to the "create empty list" block. The console prints ``test_list``, which is ``[]``. Then, the console prints the length of ``test_list``, which is 0. Finally, the console prints whether or not ``test_list`` is empty, which is ``True``. These 3 printing statements are ways to verify if the list is indeed empty or not. "is empty" is useful when applying if-statements to it.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('is_empty_example1_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/is_empty_example1.png" width="340px"/><br/>
 
 In this example, the console prints whether or not ``test_list`` is empty, which is ``False``. ``test_list`` indeed is not empty since there are items in it.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('is_empty_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/is_empty_example2.png" width="400px"/> 
 
 <hr/>
@@ -518,6 +687,14 @@ Retuns the index (position) of the first/last occurrence of the given item in th
 #### Example
 
 In this example, the ``test_list`` variable is assigned the value of ``[1,2,3]``. The console prints ``2`` as the first occurrence of the item "2" in ``test_list`` since it is the second item in ``test_list``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('find_occurrence_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/find_occurrence_example.png" width="580px"/>
 
 <hr/>
@@ -547,16 +724,40 @@ If choosing the "get" option, it returns the value of the item in a given positi
 
 #### Example
 In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. For the first and third print statements, ``undefined`` is printed since the position numbers are out of range (the positions don't exist) in ``test_list``. ``5`` and ``3`` are printed for the second and fourth print statements, respectively, since ``5`` is in position #2 and ``3`` is in position #4. 
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('get_remove_example1_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/get_remove_example1.png" width="470px"/>
 <br/>
 <br/>
 
 In the example below, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. Then, in order, the items at position #4, position #3, and position #2 are removed from ``test_list``. The console prints ``test_list``, which outputs ``[100]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('get_remove_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/get_remove_example2.png" width="430px"/>
 <br/>
 <br/>
 
 In the example below, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. Then, in order, the items at positiong #4, position #3, and position #2 are printed on the console and removed from ``test_list``. The console prints ``test_list``, which outputs ``[100]``. **NOTE:** "get and removed" option makes the block capable to be attached to a variable block as well.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('get_remove_example3_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/get_remove_example3.png" width="550px"/> 
 
 <hr/>
@@ -588,11 +789,27 @@ None
 #### Example
 
 In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. On the next block, the item at position #1 (``100``) be a set with a new value given by the **value** parameter. The new value is equal to the current value of the item at position #1 (represented by the "get" block inside) subtracted by 1 (``99``). Finally, printing ``test_list`` will result this output: ``[99,5,2,3]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_insert_example1_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/set_insert_example1.png" width="880px"/>
 <br/>
 <br/>
 
 In this example, the list variable ``test_list`` is created with a value of ``[100,5,2,3]``. On the next block, a new item will be inserted/at position #5 with a value given by the **value** parameter. The new item's value is equal to the value of the item at position #1 (represented by the "get" block inside) subtracted by 1 (``99``). Finally, printing ``test_list`` will result this output: ``[100,5,2,3,99]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_insert_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/set_insert_example2.png" width="880px"/>
 
 <hr/>
@@ -623,6 +840,14 @@ Returns a list that is sub-list of a given list from a given starting position t
 #### Example
 
 In this example, the list variable ``test_list`` is created with a value of ``[23,2,100,5,4,3]``. The list variable ``new_list`` is created with a value of ``[23,2,100,5]``. This is because the "get sub-list" block gets a portion of ``test_list`` from position #1 (``23``) to position #4 (``5``). 
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('sublist_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/sublist_example.png" width="800px"/> 
 
 <hr/>
@@ -653,16 +878,40 @@ Returns sorted list based on numerical/alphaetical order and ascending/descendin
 #### Example
 
 In this example, a list variable ``test_list`` is created with a value of ``[5,2,3]``. The console prints the output of the sorted list from ``test_list`` in ascending, numerical order ``[2,3,5]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('sort_example1_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/sort_example1.png" width="500px"/>
 <br/>
 <br/>
 
 In the example below, a list variable ``test_list`` is created with a value of ``["Zebra","apple","Mouse"]``. The console prints the sorted list from ``test_list`` in descending alphabetical order, which is ``["apple", "Zebra", "Mouse"]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('sort_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/sort_example2.png" width="500px"/>
 <br/>
 <br/>
 
 In the example below, a list variable ``test_list`` is created with a value of ``["Zebra","apple","Mouse"]``. The console prints the sorted list from ``test_list`` in descending alphabetical order (ignoring case), which is ``["Zebra", "Mouse", "apple"]``. Ignoring case essentially reads the uppercase letters as lowercase letters, so a lowercase "z" has a greater ASCII value than a lowercase "m" (and lowercase "m" greater than lowercase "a").
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('sort_example3_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/sort_example3.png" width="600px"/>
 
 <hr/>
@@ -690,9 +939,25 @@ If choosing the "list from text" option, the block internally splits the given t
 
 #### Example
 In this example, the string ``"14,2,1"`` will be converted into a list with the ``","`` delimiter. The list variable ``test_list`` will be set to this conversion. The console will print ``test_list``, which is ``[14,2,1]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('delimiter_example1_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/delimiter_example1.png" width="700px"/>
 
 In this example, the list variable ``test_list`` will have value of ``[23,2,100]``. The string variable ``test_string`` will have the value of ``"23--2--100"`` since it's set to the value of the converted list of ``test_list`` with the ``--`` delimiter.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('delimiter_example2_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/delimiter_example2.png" width="700px"/>
 
 <hr/>
@@ -718,4 +983,12 @@ Returns a list with the reversed order of the given list.
 #### Example
 
 In this example, the list variable ``test_list`` has a value of ``[23,2,100,5,4,3]``. Then, the list variable ``new_list`` is set to the value of a reversed list of ``test_list``. The console will print ``[3,4,5,100,2,23]``.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('reverse_list_example_junior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
 <img src="/img/CDE/blockly_docu/junior/reverse_list_example.png" width="450px"/>
