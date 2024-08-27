@@ -8,6 +8,16 @@ customHeadElements:
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.2.0
+#### August 21, 2024
+
+- Fixed a bug in "avoid_wall" where the drone would not fly forward when range sensor was below a threshold value.
+- Improved the comments in Python code generation when blocks in the workspace are disabled.
+- Improved the menu design for easier navigation
+- Added the text "Get" in front of the variable block to distinguish it from the "Set" variable block.
+
+<hr/>
+
 ### Version 2.1.9
 #### August 1, 2024
 

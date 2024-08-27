@@ -140,6 +140,28 @@ const waitForBreadcrumbs = setInterval(() => {
     }, 3000);
 }, 100);
 
+function loadBlocklyXml(xmlId) {
+    let fullUrl = '';
+    let currentHost = '';
+    try {
+        fullUrl = window.top.location.href;
+        const url = new URL(fullUrl);
+        currentHost = url.hostname;
+    } catch (e) {
+        currentHost = '';
+    }
+    const docsSiteHost = 'staging-docs.robolink.com'; 
+
+    if (currentHost === docsSiteHost) {
+        const newUrl = `https://codrone.robolink.com/edu/blockly-staging/?xmlId=${encodeURIComponent(xmlId)}`;
+        window.open(newUrl, '_blank');
+        console.log(`Opening new site with xmlId=${xmlId}`);
+    } else {
+        window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
+        console.log(`${xmlId} clicked!`);
+    }
+}
+
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
 window.handleExternalPython = handleExternalPython;

@@ -84,6 +84,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {name: 'robots', content: 'noindex, nofollow'},
+        { name: 'google-site-verification', content: 'JtmgM64m0UrRkixkUBQabzDd4wZcyI5hL8o6czvikJk' },
+      ],
       prism: {
         additionalLanguages: ['python'],
       },

@@ -3363,7 +3363,6 @@ Searches captured image for facial features to find face's pixel location in the
 ***float* scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)<br/>
 ***integer* min_neighbors:** minimum number of neighbors (features that have similarities)<br/>
 ***integer* min_size:** minimum size of face to be detected<br/>
-***integer* max_size:** maximum size of face to be detected<br/>
 
 #### Returns
 ***list* area:** [x,y,w,h] of the face's x and y coordinates along with the area's width and height. Returns ```None``` if not detected
@@ -3386,6 +3385,48 @@ face_location = vision.find_face(image, scale_factor = 1.05, min_neighbors=8, mi
 print("[x,y,w,h] =",face_location)
 camera.show_image(image) # displays image with outlined face (if it exists) in Jupyter Notebook
 ```
+<hr/>
+
+### find_stop_sign()
+
+#### Description
+
+Searches an image for a stop sign and returns a list containing x-y coordinates, width, and height of the stop sign's frame.
+
+#### Syntax
+
+``find_stop_sign(frame, scale_factor=1.05, min_neighbors=8, min_size=(40,40))``
+
+#### Parameters
+
+***ndarray* frame:** an image array<br/> 
+***float* scale_factor:** a number to reduce image size for easier training. By default, scale_factor is 1.05 (reducing the image by 5%)<br/>
+***integer* min_neighbors:** minimum number of neighbors (features that have similarities)<br/>
+***integer* min_size:** minimum size for the stop sign to be detected<br/>
+
+#### Returns
+
+***list* area:** [x,y,w,h] of the stop sign's x and y coordinates along with the area's width and height. Returns ```None``` if not detected
+
+#### Example
+```python
+from zumi.util.camera import Camera
+from zumi.util.vision import Vision
+
+camera = Camera()
+vision = Vision()
+
+camera.start_camera()
+image = camera.capture()
+camera.close()
+
+stop_sign_location = vision.find_stop_sign(image, scale_factor = 1.05, min_neighbors=8, min_size= (40,40))
+# returns location of stop sign frame within image. None if not found
+
+print("[x,y,w,h] =",stop_sign_location)
+camera.show_image(image) # displays image with outlined stop sign (if it exists) in Jupyter Notebook
+```
+
 <hr/>
 
 ### find_QR_code()
