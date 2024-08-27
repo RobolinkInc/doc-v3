@@ -43,6 +43,9 @@ customHeadElements:
   [![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Python-Changelog)
   [Python Changelog](/docs/CoDroneEDU/Python/Python-Changelog)
 
+  [![PFR Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/PFR-Changelog)
+  [Python for Robolink Changelog](/docs/CoDroneEDU/Python/PFR-Changelog)
+
 </div>
 
 <div id='blank'></div>

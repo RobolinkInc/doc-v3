@@ -1,15 +1,16 @@
 ---
-title: "Webpy Changelog"
-slug: Webpy-Changelog
+title: "Python for Robolink Changelog"
+slug: PFR-Changelog
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
 
-## CoDrone EDU Library Changelog
+## *Python for Robolink* Library Changelog
 
-### Version 1.0.0
-#### 2024
-- updating...
+### Version 1.7
+#### August 22, 2024
+- Support Auto Code Completion
+- Run Code without Drone Connection
+- Bug Fixes and Improvements
 
-<hr/>
