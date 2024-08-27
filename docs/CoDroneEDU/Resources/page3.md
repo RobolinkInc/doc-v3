@@ -5,7 +5,7 @@ customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-## CoDrone EDU Technical Specficitions
+## CoDrone EDU Technical Specifications
 
 The document below is the product specifications for the CoDrone EDU (the drone and the controller), which provides details on the packaging, price, hardware used, dimensions, etc.
 
