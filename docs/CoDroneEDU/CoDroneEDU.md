@@ -32,8 +32,8 @@ Please click the tabs below to go to the page.
   [![python](/img/CDE/Python-logo.png)](/docs/CoDroneEDU/Python/)
   [Python](/docs/CoDroneEDU/Python/)
 
-  [![documents](/img/CDE/document-main-icon.png)](/docs/CoDroneEDU/Documents/)
-  [Documents](/docs/CoDroneEDU/Documents/)
+  [![resources](/img/CDE/document-main-icon.png)](/docs/CoDroneEDU/Resources/)
+  [Resources](/docs/CoDroneEDU/Resources/)
 
 
 </div>
