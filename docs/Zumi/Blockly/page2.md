@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 2.90
+version 2.92
 </div>
 
 ## Driving
