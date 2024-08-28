@@ -1,23 +1,3 @@
-import { useEffect } from "react";
-
-useEffect(() => {
-    window.addEventListener("message", (event) => {
-        if(event.origin !== "https://codrone.robolink.com"){
-            return;
-        }
-        if(event.data == "href") {
-            event.source.postMessage(window.location.href, event.origin);
-        }
-        if(event.data == "back") {
-            window.history.back();
-        }
-        if(event.data == "forward"){
-            window.history.forward();
-        }
-    });
-}, []);
-
-
 const waitForMenuLoadInterval = setInterval(() => {
     const menulinks = document.querySelectorAll('a.menu__link')
     if (menulinks.length) {
