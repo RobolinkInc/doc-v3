@@ -148,6 +148,7 @@ function loadBlocklyXml(xmlId) {
 }
 
 window.addEventListener("message", (event) => {
+    console.log('added');
     if(event.origin !== "https://codrone.robolink.com"){
         console.log("Not from codrone robolink");
         return;
