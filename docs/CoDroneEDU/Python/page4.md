@@ -3445,6 +3445,12 @@ drone.close()
 
 ### controller_clear_screen()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Clears all drawings from the controller screen
 
@@ -3475,6 +3481,12 @@ drone.close()
 
 ### controller_create_canvas()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Creates a new image object for drawing
 
@@ -3503,6 +3515,12 @@ drone.close()
 <hr/>
 
 ### controller_draw_arc()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Description
 Draws an arc (a portion of a circle outline) between the start and end angles, inside the given bounding box.
@@ -3544,6 +3562,12 @@ drone.close()
 <hr/>
 
 ### controller_draw_canvas()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Description
 Draws custom image canvas onto the controller screen
@@ -3587,6 +3611,12 @@ drone.close()
 
 ### controller_draw_chord()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Same as controller_draw_arc(), but connects the end points with a straight line.
 
@@ -3628,6 +3658,12 @@ drone.close()
 
 ### controller_draw_ellipse()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Draws an ellipse inside the given bounding box.
 
@@ -3668,6 +3704,12 @@ drone.close()
 
 ### controller_draw_image()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Draws image when given a pixel_list of image data
 
@@ -3703,6 +3745,12 @@ drone.close()
 <hr/>
 
 ### controller_draw_line()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Description
 Draws a line between points (x1, y1) and (x2, y2)
@@ -3749,6 +3797,12 @@ drone.close()
 
 ### controller_draw_point()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Draws a single pixel at the point (x,y)
 
@@ -3783,6 +3837,12 @@ drone.close()
 <hr/>
 
 ### controller_draw_polygon()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Description
 The polygon outline consists of straight lines between the given coordinates, plus a straight line between the last and the first coordinate.
@@ -3819,6 +3879,12 @@ drone.close()
 <hr/>
 
 ### controller_draw_rectangle()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Description
 Draws a rectangle onto the controller screen starting from point (x,y) and extends to given height and width
@@ -3866,6 +3932,12 @@ drone.close()
 
 ### controller_draw_square()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Draws a square on the controller screen starting from point (x,y) and will extend to the given width
 ```python
@@ -3909,6 +3981,12 @@ drone.close()
 
 ### controller_draw_string_align()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
@@ -3947,6 +4025,12 @@ drone.close()
 
 ### controller_draw_string()
 
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
 #### Description
 Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
@@ -3982,6 +4066,12 @@ drone.close()
 <hr/>
 
 ### controller_preview_canvas()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
 
 #### Description
 Creates a pop up window to preview your current image object on your computer screen.
