@@ -147,6 +147,26 @@ function loadBlocklyXml(xmlId) {
     }
 }
 
+window.addEventListener("message", (event) => {
+    if(event.origin !== "https://codrone.robolink.com"){
+        console.log("Not from codrone robolink");
+        return;
+    }
+    if(event.data == "href") {
+        console.log("href event");
+        event.source.postMessage(window.location.href, event.origin);
+    }
+    if(event.data == "back") {
+        console.log("back event");
+        window.history.back();
+    }
+    if(event.data == "forward"){
+        console.log("forward event");
+        window.history.forward();
+    }
+});
+
+
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
 window.handleExternalPython = handleExternalPython;
