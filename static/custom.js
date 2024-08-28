@@ -138,7 +138,7 @@ function loadBlocklyXml(xmlId) {
     const docsSiteHost = 'staging-docs.robolink.com'; 
 
     if (currentHost === docsSiteHost) {
-        const newUrl = `https://codrone.robolink.com/edu/blockly-staging/?xmlId=${encodeURIComponent(xmlId)}`;
+        const newUrl = `https://codrone.robolink.com/edu/blockly-dev/?xmlId=${encodeURIComponent(xmlId)}`;
         window.open(newUrl, '_blank');
         console.log(`Opening new site with xmlId=${xmlId}`);
     } else {
