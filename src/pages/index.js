@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -45,23 +44,6 @@ const features = [
 ]
 
 export default function Home() {
-
-  useEffect(() => {
-    window.addEventListener("message", (event) => {
-        if(event.origin !== "https://codrone.robolink.com"){
-            return;
-        }
-        if(event.data == "href") {
-            event.source.postMessage(window.location.href, event.origin);
-        }
-        if(event.data == "back") {
-            window.history.back();
-        }
-        if(event.data == "forward"){
-            window.history.forward();
-        }
-    });
-  }, []);
 
   const { i18n } = useDocusaurusContext();
   const { currentLocale } = i18n;
