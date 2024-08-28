@@ -173,7 +173,6 @@ const config = {
           '/docs/privacy-policy',
           '/docs/CoDroneEDU/Blockly/Offline-App-Documentation',
           '/docs/CoDroneEDU/Python/What-is-Python',
-          '/docs/CoDroneEDU/Python/Webpy-Changelog',
           '/docs/CoDroneEDU/Resources/Complete-User-and-Safety-Guide',
           '/docs/CoDroneEDU/Resources/889-Compliance-Statement',
           '/docs/CoDroneMini/Blockly/How-to-use-Blockly',
