@@ -1,12 +1,12 @@
 ---
 title: "Python for Robolink Changelog"
-slug: PFR-Changelog
+slug: Python-for-Robolink-Changelog
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
 
-## *Python for Robolink* Library Changelog
+## *Python for Robolink*&nbsp; Changelog
 
 ### Version 1.7
 #### August 22, 2024
