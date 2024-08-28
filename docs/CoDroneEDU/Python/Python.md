@@ -33,7 +33,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_2_images'>
+<div className='column_3_images'>
 
 <div className='level_image_column'>
 
@@ -44,7 +44,7 @@ customHeadElements:
   [Python Changelog](/docs/CoDroneEDU/Python/Python-Changelog)
 
   [![PFR Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/PFR-Changelog)
-  [Python for Robolink Changelog](/docs/CoDroneEDU/Python/PFR-Changelog)
+  [Python for Robolink<br />Changelog](/docs/CoDroneEDU/Python/PFR-Changelog)
 
 </div>
 

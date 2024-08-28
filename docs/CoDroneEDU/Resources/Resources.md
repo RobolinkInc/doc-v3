@@ -20,8 +20,8 @@ customHeadElements:
   [![Firmware](/img/CDE/firmware-icon.png)](/docs/CoDroneEDU/Resources/Firmware)
   [Firmware](/docs/CoDroneEDU/Resources/Firmware)
 
-  [![Technical Specifications<br />Summary](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Resources/Technical-Specifications)
-  [Technical Specifications<br />Summary](/docs/CoDroneEDU/Resources/Technical-Specifications)
+  [![Technical Specifications](/img/CDE/pdf-folder-icon.png)](/docs/CoDroneEDU/Resources/Technical-Specifications)
+  [Technical Specifications](/docs/CoDroneEDU/Resources/Technical-Specifications)
 
 </div>
 
