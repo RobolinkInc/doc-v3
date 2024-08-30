@@ -148,18 +148,8 @@ function loadBlocklyXml(xmlId) {
 }
 
 window.addEventListener("message", (event) => {
-    let fullUrl = '';
-    let currentHost = '';
-    try {
-        fullUrl = window.top.location.href;
-        const url = new URL(fullUrl);
-        currentHost = url.hostname;
-    } catch (e) {
-        currentHost = '';
-    }
-    const blocklyHost = 'codrone.robolink.com';
-    console.log(currnetHost);
-    if(currentHost !== blocklyHost){
+    const docsSiteHost = 'https://staging-docs.robolink.com'; 
+    if(event.origin !== docsSiteHost){
         console.log("Not from codrone robolink");
         return;
     }
