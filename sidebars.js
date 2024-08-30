@@ -51,7 +51,7 @@ const sidebars = {
         'CoDroneEDU/Python/page3',
         'CoDroneEDU/Python/page4',
         'CoDroneEDU/Python/page5',
-        //'CoDroneEDU/Python/page6',
+        'CoDroneEDU/Python/page6',
       ],
     },
     {
