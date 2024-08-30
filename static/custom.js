@@ -148,21 +148,17 @@ function loadBlocklyXml(xmlId) {
 }
 
 window.addEventListener("message", (event) => {
-    const docsSiteHost = 'https://staging-docs.robolink.com'; 
-    if(event.origin !== docsSiteHost){
+    if(event.origin !== "https://codrone.robolink.com"){
         console.log("Not from codrone robolink");
         return;
     }
     if(event.data == "href") {
-        console.log("href event");
-        window.parent.postMessage(window.location.href, event.origin);
+        event.source.postMessage(window.location.href, event.origin);
     }
     if(event.data == "back") {
-        console.log("back event");
         window.history.back();
     }
     if(event.data == "forward"){
-        console.log("forward event");
         window.history.forward();
     }
 });
