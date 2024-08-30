@@ -148,14 +148,24 @@ function loadBlocklyXml(xmlId) {
 }
 
 window.addEventListener("message", (event) => {
-    console.log('added');
-    if(event.origin !== "https://codrone.robolink.com"){
+    let fullUrl = '';
+    let currentHost = '';
+    try {
+        fullUrl = window.top.location.href;
+        const url = new URL(fullUrl);
+        currentHost = url.hostname;
+    } catch (e) {
+        currentHost = '';
+    }
+    const blocklyHost = 'codrone.robolink.com';
+    console.log(currnetHost);
+    if(currentHost !== blocklyHost){
         console.log("Not from codrone robolink");
         return;
     }
     if(event.data == "href") {
         console.log("href event");
-        event.source.postMessage(window.location.href, event.origin);
+        window.parent.postMessage(window.location.href, event.origin);
     }
     if(event.data == "back") {
         console.log("back event");
