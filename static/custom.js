@@ -135,15 +135,13 @@ function loadBlocklyXml(xmlId) {
     } catch (e) {
         currentHost = '';
     }
-    const docsSiteHost = 'staging-docs.robolink.com'; 
+    const docsSiteHost = 'docs.robolink.com'; 
 
     if (currentHost === docsSiteHost) {
-        const newUrl = `https://codrone.robolink.com/edu/blockly-dev/?xmlId=${encodeURIComponent(xmlId)}`;
+        const newUrl = `https://codrone.robolink.com/edu/blockly/?xmlId=${encodeURIComponent(xmlId)}`;
         window.open(newUrl, '_blank');
-        console.log(`Opening new site with xmlId=${xmlId}`);
     } else {
         window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
-        console.log(`${xmlId} clicked!`);
     }
 }
 
