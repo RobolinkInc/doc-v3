@@ -147,20 +147,22 @@ function loadBlocklyXml(xmlId) {
     }
 }
 
-window.addEventListener("message", (event) => {
-    if(event.origin !== "https://codrone.robolink.com"){
-        console.log("Not from codrone robolink");
-        return;
-    }
-    if(event.data == "href") {
-        event.source.postMessage(window.location.href, event.origin);
-    }
-    if(event.data == "back") {
-        window.history.back();
-    }
-    if(event.data == "forward"){
-        window.history.forward();
-    }
+window.addEventListener('DOMContentLoaded', (e) => {
+    window.addEventListener("message", (event) => {
+        if(event.origin !== "https://codrone.robolink.com"){
+            console.log("Not from codrone robolink");
+            return;
+        }
+        if(event.data == "href") {
+            event.source.postMessage(window.location.href, event.origin);
+        }
+        if(event.data == "back") {
+            window.history.back();
+        }
+        if(event.data == "forward"){
+            window.history.forward();
+        }
+    });
 });
 
 
