@@ -44,6 +44,7 @@ const features = [
 ]
 
 export default function Home() {
+
   const { i18n } = useDocusaurusContext();
   const { currentLocale } = i18n;
 

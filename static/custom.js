@@ -64,21 +64,6 @@ const initScrollSpy = () => {
 
 initScrollSpy()
 
-window.addEventListener("message", (event) => {
-    if(event.origin !== "https://codrone.robolink.com"){
-        return;
-    }
-    if(event.data == "href") {
-        event.source.postMessage(window.location.href, event.origin);
-    }
-    if(event.data == "back") {
-        window.history.back();
-    }
-    if(event.data == "forward"){
-        window.history.forward();
-    }
-});
-
 const documentBackgroundUpdate = setInterval(() => {
     const currentPath = window.location.pathname;
     if (currentPath.includes("/docs/terms-of-use") || currentPath.includes("/docs/privacy-policy")) {
@@ -139,6 +124,44 @@ const waitForBreadcrumbs = setInterval(() => {
         }
     }, 3000);
 }, 100);
+
+function loadBlocklyXml(xmlId) {
+    let fullUrl = '';
+    let currentHost = '';
+    try {
+        fullUrl = window.top.location.href;
+        const url = new URL(fullUrl);
+        currentHost = url.hostname;
+    } catch (e) {
+        currentHost = '';
+    }
+    const docsSiteHost = 'docs.robolink.com'; 
+
+    if (currentHost === docsSiteHost) {
+        const newUrl = `https://codrone.robolink.com/edu/blockly/?xmlId=${encodeURIComponent(xmlId)}`;
+        window.open(newUrl, '_blank');
+    } else {
+        window.parent.postMessage({ type: 'loadBlocklyXml', xmlId }, '*');
+    }
+}
+
+// window.addEventListener("message", (event) => {
+//     if(event.origin !== "https://codrone.robolink.com"){
+//         console.log("Not from codrone robolink");
+//         return;
+//     }
+//     if(event.data == "href") {
+//         event.source.postMessage(window.location.href, event.origin);
+//     }
+//     if(event.data == "back") {
+//         window.history.back();
+//     }
+//     if(event.data == "forward"){
+//         window.history.forward();
+//     }
+// });
+
+
 
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;

@@ -8,6 +8,17 @@ customHeadElements:
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.2.1
+#### September 4, 2024
+
+- Fixed a bug where the console did not consistently print the correct number of outputs, ensuring reliable feedback during coding sessions.
+- Improved user interface by changing when the start flag removal warning appears to a more noticeable modal window.
+- Re-ordered RUN, LAND, STOP buttons on the Blockly interface to encourage using "Land" over "Stop" whenever possible.
+- Updated default "count with" parameters in loops to start at 0 instead of 1
+- Enabled "Open in Blockly" from documentation, automatically populating the workspace with an example from our our documentation site.
+
+<hr/>
+
 ### Version 2.2.0
 #### August 21, 2024
 
