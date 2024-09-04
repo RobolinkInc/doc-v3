@@ -145,6 +145,29 @@ function loadBlocklyXml(xmlId) {
     }
 }
 
+function loadPFRPython(pyId) {
+    let fullUrl = '';
+    let currentHost = '';
+    try {
+        fullUrl = window.top.location.href;
+        const url = new URL(fullUrl);
+        currentHost = url.hostname;
+    } catch (e) {
+        currentHost = '';
+    }
+    const docsSiteHost = 'docs.robolink.com'; 
+    const testSiteHost = 'staging-docs.robolink.com';
+    if (currentHost === docsSiteHost || currentHost === testSiteHost) {
+        //const newUrl = `https://codrone.robolink.com/edu/python/?pyId=${encodeURIComponent(pyId)}`;
+        const newUrl = `http://localhost:3000/edu/python-staging/?pyId=${encodeURIComponent(pyId)}`;
+        window.open(newUrl, '_blank');
+        console.log("open new tab", pyId);
+    } else {
+        window.parent.postMessage({ type: 'loadPFRPython', pyId }, '*');
+        console.log("send message", pyId);
+    }
+}
+
 // window.addEventListener("message", (event) => {
 //     if(event.origin !== "https://codrone.robolink.com"){
 //         console.log("Not from codrone robolink");

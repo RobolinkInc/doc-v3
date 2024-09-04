@@ -33,6 +33,14 @@ This function connects your controller with the program. You can also set the sp
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('pair_example')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *

@@ -1243,6 +1243,29 @@ pre code {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.loadPFRDiv {
+  position: relative;
+}
+
+.loadPFRButton {
+  position: absolute;
+  top: 5px;
+  right: 35px;
+  width: 145px;
+  height: 36px;
+  background: linear-gradient(to right, white 36px, #376F9E 36px);
+  border: none;
+  border-radius: 18px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
 .button-logo {
   margin-left: 6px;
   width: 25px;
