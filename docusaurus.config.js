@@ -10,7 +10,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://staging-docs.robolink.com',
+  url: 'https://docs.robolink.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -85,7 +85,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        {name: 'robots', content: 'noindex, nofollow'},
         { name: 'google-site-verification', content: 'JtmgM64m0UrRkixkUBQabzDd4wZcyI5hL8o6czvikJk' },
       ],
       prism: {
