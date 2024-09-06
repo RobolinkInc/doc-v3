@@ -998,6 +998,7 @@ code .token.number {
 
 .language-python .clean-btn,
 .language-c .clean-btn {
+  margin-top: 38px;
   background-color: rgba(172, 173, 175, 60) !important;
 }
 
