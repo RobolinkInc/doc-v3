@@ -20,7 +20,7 @@ The document below is the product specifications for the CoDrone EDU&mdash;the d
 
 The document below is the product specifications for the CoDrone EDU (JROTC edition)&mdash;the drone and the controller, which provides details on the packaging, price, hardware used, dimensions, etc.
 
-[CoDroneEDU_JROTC_Technical_Specifications_v1.1.pdf](/files/cdej_technical_specifications_v_1_0.pdf)
+[CoDroneEDU_JROTC_Technical_Specifications_v1.0.pdf](/files/cdej_technical_specifications_v_1_0.pdf)
 <iframe src="/files/cdej_technical_specifications_v_1_0.pdf#view=FitH&navpanes=0" title="cdej_technical_specifications_v_1_0.pdf" width="97%" height="800px">
     This browser does not support PDF previews. Click [here](/files/cdej_technical_specifications_v_1_0.pdf) to download the PDF file.
 </iframe>
