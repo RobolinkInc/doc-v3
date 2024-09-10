@@ -2831,11 +2831,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
@@ -2875,11 +2877,13 @@ Predicts what color the color sensors are currently seeing.
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
