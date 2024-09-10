@@ -1544,7 +1544,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Status Checkers
+## Sound
 
 ### controller_buzzer()
 
@@ -3416,6 +3416,37 @@ for i in range(10):
     time.sleep(0.5)
 
 
+drone.close()
+```
+
+<hr/>
+
+### get_movement_state()
+
+#### Description
+This command requests the moving state of the drone, whether it is ready to fly, hovering, etc.
+
+#### Syntax
+``get_movement_state()``
+
+#### Parameters
+None
+
+#### Returns
+***enum* ModeMovement:** The movement state of the drone (None_, Ready, Hovering, ReturnHome)
+
+#### Example Code
+```python
+from codrone_edu.drone import *
+drone = Drone()
+
+drone.pair()
+print(drone.get_movement_state()) # prints "ModeMovement.Ready" after pairing
+
+drone.takeoff()
+print(drone.get_movement_state()) # "ModeMovement.Hovering" after takeoff
+
+drone.land()
 drone.close()
 ```
 
