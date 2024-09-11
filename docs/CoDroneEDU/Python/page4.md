@@ -1338,51 +1338,6 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
-
-### go()
-
-#### Description
-Sends roll, pitch, yaw, throttle values continuously to the drone for duration (seconds)
-
-#### Syntax
-``go(roll, pitch, yaw, throttle, duration)``    
-
-#### Parameters
-***integer* roll:** roll power (-100 - 100) <br/> 
-***integer* pitch:** pitch power (-100 - 100) <br/>
-***integer* yaw:** yaw power (-100 - 100) <br/>
-***integer* throttle:** throttle power (-100 - 100) <br/>
-***integer* duration:** Duration of the movement in seconds
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('go_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.go(50, 50, 0, 0, 5) # Drone flies diagonally forward and right for 5 seconds
-drone.land()
-
-
-drone.close()
-```
-
 <hr className="section_hr"/>
 
 ## LED
@@ -1556,7 +1511,7 @@ Plays a note using the controller's buzzer.
 
 
 #### Parameters
-***integer/Note* note:** frequency of the note, in Hertz or a Note object
+***integer/Note* note:** frequency of the note, in Hertz or a Note object<br/>
 ***integer* duration:** Duration of the note in milliseconds
 
 #### Returns
@@ -1596,7 +1551,7 @@ Plays a note using the drone's buzzer.
 
 
 #### Parameters
-***integer/Note* note:** frequency of the note, in Hertz or a Note object
+***integer/Note* note:** frequency of the note, in Hertz or a Note object<br/>
 ***integer* duration:** Duration of the note in milliseconds
 
 #### Returns
@@ -2823,7 +2778,7 @@ drone.close()
 
 
 #### Parameters
-***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.
+***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.<br/>
 ***boolean* show_graph:** An optional boolean parameter that will show a graph of the color set data. The default value is False.
 
 #### Returns
