@@ -159,12 +159,10 @@ function loadPFRPython(pyId) {
     const testSiteHost = 'staging-docs.robolink.com';
     if (currentHost === docsSiteHost || currentHost === testSiteHost) {
         //const newUrl = `https://codrone.robolink.com/edu/python/?pyId=${encodeURIComponent(pyId)}`;
-        const newUrl = `http://localhost:3000/edu/python-staging/?pyId=${encodeURIComponent(pyId)}`;
+        const newUrl = `https://codrone.robolink.com/edu/python-staging/?pyId=${encodeURIComponent(pyId)}`;
         window.open(newUrl, '_blank');
-        console.log("open new tab", pyId);
     } else {
         window.parent.postMessage({ type: 'loadPFRPython', pyId }, '*');
-        console.log("send message", pyId);
     }
 }
 
