@@ -2965,11 +2965,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
@@ -3024,11 +3026,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
@@ -4258,11 +4262,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_create_canvas_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_create_canvas_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
@@ -4356,11 +4362,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_canvas_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_canvas_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
@@ -4948,11 +4956,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_preview_canvas_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_preview_canvas_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
