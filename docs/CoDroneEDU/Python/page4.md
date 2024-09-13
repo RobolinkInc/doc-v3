@@ -1544,7 +1544,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Status Checkers
+## Sound
 
 ### controller_buzzer()
 
@@ -2694,12 +2694,6 @@ drone.close()
 
 ### get_back_color()
 
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 #### Description
 ``get_back_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the back color sensor.
 
@@ -2741,12 +2735,6 @@ drone.close()
 
 ### get_color_data()
 
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 #### Description
 Getter function that gets a list of color data from the drone.
 
@@ -2785,12 +2773,6 @@ drone.close()
 <hr/>
 
 ### get_front_color()
-
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
 
 #### Description
 ``get_front_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the front color sensor.
