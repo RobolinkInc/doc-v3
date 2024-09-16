@@ -17,9 +17,9 @@ Every CoDrone EDU kit comes with a user manual that comes in handy if you need a
 
 <hr className="section_hr"/>
 
-## CoDrone EDU (JROTC Edition) User Manual
+## CoDrone EDU (JROTC edition) User Manual
 
-Every CoDrone EDU (JROTC Edition) kit comes with a user manual that comes in handy if you need a quick reminder on how to pair, charge, or use all of the controller buttons. If you lost your manual or need a digital copy, you can view the PDF at the link below. We recommend always having the user manual with you in class or when you compete.
+Every CoDrone EDU (JROTC edition) kit comes with a user manual that comes in handy if you need a quick reminder on how to pair, charge, or use all of the controller buttons. If you lost your manual or need a digital copy, you can view the PDF at the link below. We recommend always having the user manual with you in class or when you compete.
 
 [CoDroneEDU_JROTC_Manual_v1.1.pdf](/files/co-drone-edu-jrotc-manual-v-1-1.pdf)
 
