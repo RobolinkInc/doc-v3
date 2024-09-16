@@ -4252,6 +4252,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Creates a new image object for drawing
@@ -4352,6 +4357,12 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
 
 #### Description
 Draws custom image canvas onto the controller screen
