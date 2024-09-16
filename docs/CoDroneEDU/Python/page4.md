@@ -4302,6 +4302,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Draws an arc (a portion of a circle outline) between the start and end angles, inside the given bounding box.
@@ -4421,6 +4426,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Same as controller_draw_arc(), but connects the end points with a straight line.
@@ -4474,6 +4484,11 @@ drone.close()
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
 
 :::
 
