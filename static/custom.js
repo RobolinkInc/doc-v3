@@ -167,6 +167,7 @@ function loadPFRPython(pyId) {
 }
 
 window.addEventListener("message", (event) => {
+    console.log("Event added");
     if(event.origin !== "https://codrone.robolink.com"){
         return;
     }
