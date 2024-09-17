@@ -165,6 +165,14 @@ function loadPFRPython(pyId) {
     }
 }
 
+window.addEventListener('hashchange', function() {
+    window.parent.postMessage(window.location.href, 'https://codrone.robolink.com');  
+});
+
+window.addEventListener('popstate', function() {
+    window.parent.postMessage(window.location.href, 'https://codrone.robolink.com');  
+})
+
 window.addEventListener("message", (event) => {
     console.log('Message received:', event);
     if(event.origin !== "https://codrone.robolink.com"){
