@@ -166,16 +166,21 @@ function loadPFRPython(pyId) {
 }
 
 window.addEventListener("message", (event) => {
+    console.log('Message received:', event);
     if(event.origin !== "https://codrone.robolink.com"){
         return;
     }
+    console.log('Origin verified:', event.origin);
     if(event.data == "href") {
+        console.log('href:', window.location.href, event.origin);
         event.source.postMessage(window.location.href, event.origin);
     }
     if(event.data == "back") {
+        console.log('back');
         window.history.back();
     }
     if(event.data == "forward"){
+        console.log('forward');
         window.history.forward();
     }
 });
