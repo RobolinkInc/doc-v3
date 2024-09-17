@@ -165,32 +165,55 @@ function loadPFRPython(pyId) {
     }
 }
 
-window.addEventListener('click', (event) => {
-    console.log('click:', window.location.href, event.origin);
-    window.parent.postMessage(window.location.href, "https://codrone.robolink.com");
-});
+// window.addEventListener("message", (event) => {
+//     console.log('Message received:', event);
+//     if(event.origin !== "https://codrone.robolink.com"){
+//         return;
+//     }
+//     console.log('Origin verified:', event.origin);
+//     if(event.data == "href") {
+//         console.log('href:', window.location.href, event.origin);
+//         event.source.postMessage(window.location.href, event.origin);
+//     }
+//     if(event.data == "back") {
+//         console.log('back');
+//         window.history.back();
+//     }
+//     if(event.data == "forward"){
+//         console.log('forward');
+//         window.history.forward();
+//     }
+// });
 
-window.addEventListener("message", (event) => {
-    console.log('Message received:', event);
-    if(event.origin !== "https://codrone.robolink.com"){
-        return;
-    }
-    console.log('Origin verified:', event.origin);
-    if(event.data == "href") {
-        console.log('href:', window.location.href, event.origin);
-        event.source.postMessage(window.location.href, event.origin);
-    }
-    if(event.data == "back") {
-        console.log('back');
-        window.history.back();
-    }
-    if(event.data == "forward"){
-        console.log('forward');
-        window.history.forward();
-    }
-});
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     let lastPathname = location.pathname;
+  
+//     window.addEventListener('popstate', () => {
+//       if (location.pathname !== lastPathname) {
+//         console.log('URL changed:', location.pathname);
+//         event.source.postMessage(window.location.href,event.origin);
+//         lastPathname = location.pathname;
+//       }
+//     });
 
-
+//     (function(history) {
+//       const pushState = history.pushState;
+//       const replaceState = history.replaceState;
+  
+//       history.pushState = function(state, title, url) {
+//         const result = pushState.apply(this, arguments);
+//         console.log('URL changed via pushState:', url);
+//         return result;
+//       };
+  
+//       history.replaceState = function(state, title, url) {
+//         const result = replaceState.apply(this, arguments);
+//         console.log('URL changed via replaceState:', url);
+//         return result;
+//       };
+//     })(window.history);
+//   });
+  
 
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
