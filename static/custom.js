@@ -165,13 +165,10 @@ function loadPFRPython(pyId) {
     }
 }
 
-window.addEventListener('hashchange', function() {
-    window.parent.postMessage(window.location.href, 'https://codrone.robolink.com');  
+window.addEventListener('click', (event) => {
+    console.log('click:', window.location.href, event.origin);
+    window.parent.postMessage(window.location.href, "https://codrone.robolink.com");
 });
-
-window.addEventListener('popstate', function() {
-    window.parent.postMessage(window.location.href, 'https://codrone.robolink.com');  
-})
 
 window.addEventListener("message", (event) => {
     console.log('Message received:', event);
