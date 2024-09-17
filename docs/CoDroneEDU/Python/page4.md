@@ -1544,7 +1544,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Status Checkers
+## Sound
 
 ### controller_buzzer()
 
@@ -2814,6 +2814,12 @@ drone.close()
 
 ### load_classifier()
 
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
 #### Description
 ``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
 
@@ -2862,6 +2868,12 @@ drone.close()
 <hr/>
 
 ### predict_colors()
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Predicts what color the color sensors are currently seeing.
@@ -2948,6 +2960,12 @@ drone.close()
 
 ### new_color_data()
 
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
 #### Description
 ``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
 
@@ -3008,7 +3026,13 @@ drone.close()
 
 <hr/>
 
-### append_color_data() 
+### append_color_data()
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 ``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
