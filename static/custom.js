@@ -187,6 +187,7 @@ function loadPFRPython(pyId) {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     let lastPathname = location.pathname;
+    const allowedOrigin = "https://codrone.robolink.com";
 
     window.addEventListener('popstate', () => {
       if (location.pathname !== lastPathname) {
