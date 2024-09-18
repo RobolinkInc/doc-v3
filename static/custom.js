@@ -185,13 +185,14 @@ function loadPFRPython(pyId) {
 //     }
 // });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (event) => {
     let lastPathname = location.pathname;
     const allowedOrigin = "https://codrone.robolink.com";
+    console.log("test back to docs", event.origin);
 
     window.addEventListener('popstate', () => {
       if (location.pathname !== lastPathname) {
-        if (window.parent.location.origin === allowedOrigin) {
+        if (event.origin === allowedOrigin) {
             window.parent.postMessage(window.location.href, allowedOrigin);
         }
         lastPathname = location.pathname;
@@ -201,10 +202,11 @@ document.addEventListener('DOMContentLoaded', () => {
     (function(history) {
       const pushState = history.pushState;
       const replaceState = history.replaceState;
-
+    
       history.pushState = function(state, title, url) {
         const result = pushState.apply(this, arguments);
-        if (window.parent.location.origin === allowedOrigin) {
+        if (event.origin === allowedOrigin) {
+            console.log("test back to docs");
             window.parent.postMessage(window.location.href, allowedOrigin);
         }
         return result;
@@ -212,7 +214,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       history.replaceState = function(state, title, url) {
         const result = replaceState.apply(this, arguments);
-        if (window.parent.location.origin === allowedOrigin) {
+        if (event.origin === allowedOrigin) {
+            console.log("test back to docs");
             window.parent.postMessage(window.location.href, allowedOrigin);
         }
         return result;
