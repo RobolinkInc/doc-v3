@@ -33,6 +33,14 @@ This function connects your controller with the program. You can also set the sp
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('pair_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -71,6 +79,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('takeoff_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -106,6 +122,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('land_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -140,6 +164,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('emergency_stop_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -174,6 +206,14 @@ You can set the **roll** and **pitch** trim of the drone in case your drone is d
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_trim_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -210,6 +250,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_trim_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -248,6 +296,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_sensor_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -302,6 +358,15 @@ A looped method that makes the drone fly forward until it reaches a desired dist
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('avoid_wall_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -338,6 +403,14 @@ Flies the drone in the shape of a circle.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('circle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -374,6 +447,14 @@ Returns True when a distance below the threshold is reached. The sensor range is
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('detect_wall_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -415,6 +496,14 @@ None
 
 #### Example Code
 Add a hover or delay after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('flip_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 import time
@@ -459,6 +548,14 @@ This function makes the drone hover for a given amount of time. If given no para
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('hover_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -497,6 +594,14 @@ A looped method that makes the drone fly forward until it reaches a desired dist
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('keep_distance_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -532,6 +637,14 @@ The move command will move the drone based on the set flight variables (set_pitc
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -567,6 +680,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('print_move_values_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -604,6 +725,14 @@ The reset_move command will reset the values of roll, pitch, yaw, and throttle t
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_move_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -642,6 +771,14 @@ Send roll, pitch, yaw, and throttle values to the drone.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('sendControl_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -681,6 +818,14 @@ Send roll, pitch, yaw, and throttle values to the drone continously for the give
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('sendControlWhile_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -715,6 +860,14 @@ This is a setter function that allows you to set the pitch variable. Once you se
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_pitch_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -751,6 +904,14 @@ This is a setter function that allows you to set the roll variable. Once you set
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_roll_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -786,6 +947,14 @@ This is a setter function that allows you to set the throttle variable. Once you
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_throttle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -821,6 +990,14 @@ This is a setter function that allows you to set the yaw variable. Once you set 
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_yaw_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -859,6 +1036,14 @@ Flies the drone in the shape of a downward spiral.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('spiral_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -896,6 +1081,14 @@ Flies the drone in the shape of a square.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('square_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -934,6 +1127,14 @@ Flies the drone in a swaying motion.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('sway_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -972,6 +1173,14 @@ Flies the drone in the shape of a triangle.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('triangle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1009,6 +1218,14 @@ Turns right or left with absolute reference frame to drone's initial heading. Po
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_degree_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1047,6 +1264,14 @@ Turns the drone left using the built in gyroscope. The default degree is 90.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_left_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1087,6 +1312,14 @@ Turns the drone right using the built in gyroscope. The default degree is 90.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_right_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1126,6 +1359,14 @@ Sends roll, pitch, yaw, throttle values continuously to the drone for duration (
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('go_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1162,6 +1403,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_LED_off_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1192,6 +1441,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('drone_LED_off_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1224,6 +1481,14 @@ This function sets the LED color and brightness of the CoDrone EDU controller's 
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_controller_LED_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1257,6 +1522,14 @@ This function sets the LED color and brightness of the CoDrone EDU's LED. This i
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_drone_LED_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1271,7 +1544,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Status Checkers
+## Sound
 
 ### controller_buzzer()
 
@@ -1290,6 +1563,14 @@ Plays a note using the controller's buzzer.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_buzzer_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1322,6 +1603,14 @@ Plays a note using the drone's buzzer.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('drone_buzzer_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1353,6 +1642,14 @@ This function allows the drone buzzer to be played in the background while other
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('start_drone_buzzer_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1392,6 +1689,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('stop_drone_buzzer_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1432,6 +1737,14 @@ This function allows the controller buzzer to be played in the background while 
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('start_controller_buzzer_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1472,6 +1785,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('stop_controller_buzzer_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1514,6 +1835,14 @@ None
 ***integer* battery percentage:** The current battery percentage of the drone's battery.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_battery_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1549,6 +1878,14 @@ This function uses the bottom range sensor to measure distance from the drone to
 999.9 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_bottom_range_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 import time
@@ -1592,6 +1929,14 @@ The sensor reads the drone’s temperature, not the air around it. Default unit 
 ***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_temperature_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1624,6 +1969,14 @@ None
 ***string* state:** The current flight state of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flight_state_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1657,6 +2010,14 @@ This getter function gets the relative position value calculated by the optical 
 ***integer* relative x-position:** The relative position value calculated by the optical flow sensor from the x direction. (cm default).
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_x_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1694,6 +2055,14 @@ This getter function gets the relative position value calculated by the optical 
 ***integer* relative y-position**The relative position value calculated by the optical flow sensor from the y direction. (cm default). 
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1734,6 +2103,14 @@ This function uses the front range sensor to measure distance from the drone to 
 999 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_front_range_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1772,6 +2149,14 @@ Getter function that gets the x position of the drone. (x is forwards and backwa
 ***integer* x-position:** The current x position of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_pos_x_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1807,6 +2192,14 @@ Getter function that gets the y position of the drone. (y is left and right)
 ***integer* y-position:** The current y position of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_pos_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1842,6 +2235,14 @@ Getter function that gets the z position of the drone. (z is up and down)
 ***integer* z-position:** The current z position of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_pos_z_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1882,6 +2283,14 @@ The 'z' position of the drone is up and down.
 ***list* position data:** A list of position data for the drone. The list contains the current time of the running program [0], x position data [1], y position data [2], z position data [3].
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_position_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1917,6 +2326,14 @@ None
 ***float* pressure:** air pressure measured by barometer in Pascals.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_pressure_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1950,6 +2367,14 @@ None
 ***list* trim data:** A list of trim data &mdash; [0] for roll trim and [1] for pitch trim
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_trim_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1987,6 +2412,14 @@ None
 ***integer* x-acceleration:** The current x acceleration of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_x_accel_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2021,6 +2454,14 @@ None
 ***integer* roll angle:** The current angle in regards to the X direction in degrees.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_x_angle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2054,6 +2495,14 @@ None
 ***integer* y-acceleration:** The current y acceleration of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_y_accel_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2088,6 +2537,14 @@ None
 ***integer* pitch angle:** The current angle in regards to the Y direction, in degrees.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_y_angle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2119,6 +2576,14 @@ None
 ***integer* z-acceleration:** The current z acceleration of the drone.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_z_accel_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2152,6 +2617,14 @@ None
 ***integer* yaw angle:** The current angle in regards to the Z direction.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_z_angle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2186,6 +2659,14 @@ This function uses the bottom range sensor to measure distance from the drone to
 999.9 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_height_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 import time
@@ -2227,6 +2708,14 @@ None
 **back color data:** Returns the back color sensor data.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_back_color_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2259,6 +2748,14 @@ None
 ***list* color data:** Returns a list of color data.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_color_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2290,6 +2787,14 @@ None
 **front color data:** Returns the back color sensor data.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_front_color_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2309,6 +2814,12 @@ drone.close()
 
 ### load_classifier()
 
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
 #### Description
 ``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
 
@@ -2325,6 +2836,16 @@ drone.close()
 None
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2348,6 +2869,12 @@ drone.close()
 
 ### predict_colors()
 
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
 #### Description
 Predicts what color the color sensors are currently seeing.
 
@@ -2361,6 +2888,16 @@ Predicts what color the color sensors are currently seeing.
 ***list* predictions:** A prediction of which color the front and back color sensors are currently seeing, as a list.
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2396,6 +2933,14 @@ None
 ***list* predictions:** Returns a list containing the front and back color sensor predictions as strings (Red, Green, Yellow, Blue, Cyan, Magenta, Black, White, Unknown)
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_colors_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2415,6 +2960,12 @@ drone.close()
 
 ### new_color_data()
 
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
 #### Description
 ``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
 
@@ -2431,6 +2982,16 @@ drone.close()
 None
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2465,7 +3026,13 @@ drone.close()
 
 <hr/>
 
-### append_color_data() 
+### append_color_data()
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 ``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
@@ -2482,6 +3049,16 @@ drone.close()
 None
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2533,6 +3110,14 @@ This function gets the drone's current height in centimeters based on the initia
 ***float* height:** Estimated height in centimeters relative to starting position.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('height_from_pressure_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2567,6 +3152,14 @@ None
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_initial_pressure_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2606,6 +3199,14 @@ None
 
 #### Example Code
 Tilt the drone left and right while the program runs to see the angular speed change. Then, hold the drone as still as possible and watch angular speed drop.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_angular_speed_x_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2642,6 +3243,14 @@ None
 
 #### Example Code
 Tilt the drone forward and backward while the program runs to see the angular speed change. Then, hold the drone as still as possible and watch angular speed drop.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_angular_speed_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2677,6 +3286,14 @@ None
 
 #### Example Code
 Turn the drone left and right on a flat surface while the program runs to see the angular speed change. Then, hold the drone as still as possible and watch angular speed drop.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_angular_speed_z_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2744,6 +3361,14 @@ This functions returns a list of 31 values including time stamps and sensor valu
 * data[30] current speed setting
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_sensor_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2793,6 +3418,14 @@ This command requests if the drone is in an error state. One or more of the foll
 
 #### Example Code
 Turn the drone left and right on a flat surface while the program runs to see the angular speed change. Then, hold the drone as still as possible and watch angular speed drop.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_error_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from time import sleep
@@ -2833,6 +3466,14 @@ None
 ***boolean* pressed down:** True if the down arrow button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('down_arrow_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2868,6 +3509,14 @@ None
 ***list* button data:** A list of data that includes the time of the current program, the number associated with the most recent button pressed, and finally the state of the most recent button pressed. (Down, Pressed, Up)
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_button_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2902,6 +3551,14 @@ None
 ***boolean* pressed H:** True if the H button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('h_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2937,6 +3594,14 @@ None
 ***boolean* pressed L1:** True if the L1 button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('l1_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -2972,6 +3637,14 @@ None
 ***boolean* pressed L2:** True if the L2 button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('l2_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3006,6 +3679,14 @@ None
 ***boolean* pressed left:** True if the left arrow button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('left_arrow_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3041,6 +3722,14 @@ None
 ***boolean* pressed P:** True if the P button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('p_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3076,6 +3765,14 @@ None
 ***boolean* pressed power:** True if the power button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('power_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3111,6 +3808,14 @@ None
 ***boolean* pressed R1:** True if the R1 button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('r1_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3146,6 +3851,14 @@ None
 ***boolean* pressed R2:** True if the R2 button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('r2_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3181,6 +3894,14 @@ None
 ***boolean* pressed right:** True if the right arrow button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('right_arrow_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3216,6 +3937,14 @@ None
 ***boolean* pressed S:** True if the S button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('s_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3251,6 +3980,14 @@ None
 ***boolean* pressed up:** True if the up arrow button is pressed or held. Otherwise the function will return false.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('up_arrow_pressed_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3286,6 +4023,14 @@ None
 ***list* joystick data:** A list of data that includes the time of the current program, and information about the left and right joysticks.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_joystick_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3320,6 +4065,14 @@ None
 ***integer* left joystick x-value:** A value between -100 and 100 depending on the x position of the left joystick.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_left_joystick_x_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3354,6 +4107,14 @@ None
 ***integer* left joystick y-value:** A value between -100 and 100 depending on the y position of the left joystick.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_left_joystick_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3388,6 +4149,14 @@ None
 ***integer* right joystick x-value:** A value between -100 and 100 depending on the x position of the right joystick.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_right_joystick_x_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3422,6 +4191,14 @@ None
 ***integer* right joystick y-value:** A value between -100 and 100 depending on the y position of the right joystick.
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_right_joystick_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3465,6 +4242,14 @@ Clears all drawings from the controller screen
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_clear_screen_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3500,6 +4285,16 @@ None
 ***Image* image:** Returns a new image object that is 127 x 63 pixels
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_create_canvas_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3539,6 +4334,14 @@ Draws an arc (a portion of a circle outline) between the start and end angles, i
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_arc_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3582,6 +4385,16 @@ Draws custom image canvas onto the controller screen
 None
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_canvas_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3634,6 +4447,14 @@ Same as controller_draw_arc(), but connects the end points with a straight line.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_chord_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3680,6 +4501,14 @@ Draws an ellipse inside the given bounding box.
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_ellipse_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3724,6 +4553,14 @@ Draws image when given a pixel_list of image data
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3777,6 +4614,14 @@ Draws a line between points (x1, y1) and (x2, y2)
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_line_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3818,6 +4663,14 @@ Draws a single pixel at the point (x,y)
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_point_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3858,6 +4711,14 @@ The polygon outline consists of straight lines between the given coordinates, pl
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_polygon_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3912,6 +4773,14 @@ width
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_rectangle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -3962,6 +4831,14 @@ width
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_square_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -4006,6 +4883,14 @@ Draws a string from the given x_start, x_end and y positions. The string can be 
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_string_align_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -4048,6 +4933,14 @@ Draws a string from the given x_start, x_end and y positions. The string can be 
 None
 
 #### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_string_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -4086,6 +4979,16 @@ Creates a pop up window to preview your current image object on your computer sc
 None
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_preview_canvas_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *

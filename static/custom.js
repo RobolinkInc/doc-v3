@@ -136,8 +136,8 @@ function loadBlocklyXml(xmlId) {
         currentHost = '';
     }
     const docsSiteHost = 'docs.robolink.com'; 
-
-    if (currentHost === docsSiteHost) {
+    const testSiteHost = 'staging-docs.robolink.com';
+    if (currentHost === docsSiteHost || currentHost === testSiteHost) {
         const newUrl = `https://codrone.robolink.com/edu/blockly/?xmlId=${encodeURIComponent(xmlId)}`;
         window.open(newUrl, '_blank');
     } else {
@@ -145,23 +145,75 @@ function loadBlocklyXml(xmlId) {
     }
 }
 
+function loadPFRPython(pyId) {
+    let fullUrl = '';
+    let currentHost = '';
+    try {
+        fullUrl = window.top.location.href;
+        const url = new URL(fullUrl);
+        currentHost = url.hostname;
+    } catch (e) {
+        currentHost = '';
+    }
+    const docsSiteHost = 'docs.robolink.com'; 
+    const testSiteHost = 'staging-docs.robolink.com';
+    if (currentHost === docsSiteHost || currentHost === testSiteHost) {
+        const newUrl = `https://codrone.robolink.com/edu/python/?pyId=${encodeURIComponent(pyId)}`;
+        window.open(newUrl, '_blank');
+    } else {
+        window.parent.postMessage({ type: 'loadPFRPython', pyId }, '*');
+    }
+}
+
 // window.addEventListener("message", (event) => {
+//     console.log('Message received:', event);
 //     if(event.origin !== "https://codrone.robolink.com"){
-//         console.log("Not from codrone robolink");
 //         return;
 //     }
+//     console.log('Origin verified:', event.origin);
 //     if(event.data == "href") {
+//         console.log('href:', window.location.href, event.origin);
 //         event.source.postMessage(window.location.href, event.origin);
 //     }
 //     if(event.data == "back") {
+//         console.log('back');
 //         window.history.back();
 //     }
 //     if(event.data == "forward"){
+//         console.log('forward');
 //         window.history.forward();
 //     }
 // });
 
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     let lastPathname = location.pathname;
+  
+//     window.addEventListener('popstate', () => {
+//       if (location.pathname !== lastPathname) {
+//         console.log('URL changed:', location.pathname);
+//         event.source.postMessage(window.location.href,event.origin);
+//         lastPathname = location.pathname;
+//       }
+//     });
 
+//     (function(history) {
+//       const pushState = history.pushState;
+//       const replaceState = history.replaceState;
+  
+//       history.pushState = function(state, title, url) {
+//         const result = pushState.apply(this, arguments);
+//         console.log('URL changed via pushState:', url);
+//         return result;
+//       };
+  
+//       history.replaceState = function(state, title, url) {
+//         const result = replaceState.apply(this, arguments);
+//         console.log('URL changed via replaceState:', url);
+//         return result;
+//       };
+//     })(window.history);
+//   });
+  
 
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
