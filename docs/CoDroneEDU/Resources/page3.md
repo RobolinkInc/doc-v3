@@ -14,7 +14,7 @@ The document below is the product specifications for the CoDrone EDU&mdash;the d
     This browser does not support PDF previews. Click [here](/files/cde_technical_specifications_v_1_1.pdf) to download the PDF file.
 </iframe>
 
-<hr class="section_hr"/>
+<hr className="section_hr"/>
 
 ## CoDrone EDU (JROTC edition) Technical Specifications
 
