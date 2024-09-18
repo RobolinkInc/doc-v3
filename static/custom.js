@@ -192,7 +192,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('popstate', () => {
       if (location.pathname !== lastPathname) {
         if (window.parent && window.parent !== window) {
-            console.log("test back to docs 0");
             window.parent.postMessage(window.location.href, allowedOrigin);
         }
         lastPathname = location.pathname;
@@ -206,7 +205,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       history.pushState = function(state, title, url) {
         const result = pushState.apply(this, arguments);
         if (window.parent && window.parent !== window) {
-            console.log("test back to docs 1");
             window.parent.postMessage(window.location.href, allowedOrigin);
         }
         return result;
@@ -215,7 +213,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
       history.replaceState = function(state, title, url) {
         const result = replaceState.apply(this, arguments);
         if (window.parent && window.parent !== window) {
-            console.log("test back to docs 2");
             window.parent.postMessage(window.location.href, allowedOrigin);
         }
         return result;
