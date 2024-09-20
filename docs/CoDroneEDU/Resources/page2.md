@@ -43,13 +43,13 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 ### Version 24.9.1
 #### September 1, 2024
 - Drone height is more stable.
-- This is a new firmware for the CDE drone
+- This is a new firmware for the CDE drone.
 
 <hr/>
 
 ### Version 22.8.1
 #### August 8, 2022
-- This is the old firmware for the CDE drone
+- This is the old firmware for the CDE drone.
 
 <hr className="section_hr"/>
 
@@ -71,13 +71,13 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 
 ### Version 24.9.2
 #### September 2, 2024
-- This is a new firmware for the CDEJ drone
+- This is a new firmware for the CDEJ drone.
 
 <hr/>
 
 ### Version 24.2.12
 #### February 15, 2024
-- This is the old firmware for the CDE controller.
+- This is the old firmware for the CDEJ drone.
 
 <hr className="section_hr"/>
 
@@ -85,10 +85,10 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 
 ### Version 24.9.2
 #### September 2, 2024
-- This is a new firmware for the CDEJ drone
+- This is a new firmware for the CDEJ controller.
 
 <hr/>
 
 ### Version 23.12.11
 #### December 20, 2023
-- This is the old firmware for the CDE controller.
+- This is the old firmware for the CDEJ controller.
