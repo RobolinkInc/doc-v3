@@ -58,10 +58,43 @@ drone.land()
 drone.close()
 ```
 
+<hr/>
+
+### close()
+
+#### Description
+This function closes the connection of your controller with the program.
+
+#### Syntax
+``close()``
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.hover(1)
+drone.land()
+
+
+drone.close() # closes connection between controller and program
+```
+
 <hr className="section_hr"/>
 
 
-## Flight Commands (Start / Stop)
+## Flight Commands
 
 ### takeoff()
 
@@ -190,17 +223,16 @@ drone.close()
 
 <hr/>
 
-### set_trim()
+### hover()
 
 #### Description
-You can set the **roll** and **pitch** trim of the drone in case your drone is drifting. For example, if the drone is drifting to its right, you may want to set the roll to a small negative value. This trim will remain saved, even after powering off until you've changed the trim either programmatically, or done a reset with the remote. **NOTE:** If you're setting the trim right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff commmand might be skipped.
+This function makes the drone hover for a given amount of time. If given no parameters, it will hover indefinitely until given a another command.
 
 #### Syntax
-``set_trim(roll, pitch)``    
+``hover(duration)``    
 
 #### Parameters
-***integer* roll:** the power of the roll (-100 - 100)  
-***integer* pitch:** the power of the pitch (-100 - 100)
+***integer* duration:** Duration of the hovering in seconds
 
 #### Returns
 None
@@ -208,7 +240,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_trim_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('hover_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -217,17 +249,150 @@ None
 ```python
 #Python code
 from codrone_edu.drone import *
-import time
 
 drone = Drone()
 drone.pair()
 
 
-drone.set_trim(-5, 0) # example: drone is drifting right, so trim to roll left a little bit
-time.sleep(1) # Add a time.sleep(1) before takeoff if you're planning to set the trim before takeoff
 drone.takeoff()
 drone.hover(3)
 drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### avoid_wall()
+
+#### Description
+A looped method that makes the drone fly forward until it reaches a desired distance based on the front range sensor. The range of front sensor is from 0cm-100cm
+
+#### Syntax
+``avoid_wall()``    
+``avoid_wall(timeout)``    
+``avoid_wall(distance)``    
+``avoid_wall(timeout, distance)``
+
+#### Parameters
+***integer* timeout:** timeout is an optional parameter that is the duration in seconds that the function will run. the default value is 2    
+***integer* distance:** distance is an optional parameter that is the distance in centimeters the drone will stop at in front of an object. the default value is 70
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('avoid_wall_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# fly forward until a wall is found 50 cm away. run this loop for 10 seconds.
+drone.avoid_wall(10, 50)
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### keep_distance()
+
+#### Description
+A looped method that makes the drone fly forward until it reaches a desired distance. Once the desired distance in reached the drone will maintain that distance. The sensor range is up to 150 cm.
+
+#### Syntax
+``keep_distance()``   
+``keep_distance(timeout)``  
+``keep_distance(distance)``  
+``keep_distance(timeout, distance)``
+
+
+#### Parameters
+***integer* timeout:** the duration in seconds that the function will execute. The default value is 2 seconds.<br/>
+***integer* distance:** the distance in centimeters the drone will stop and maintain distance in front of an object. The default value is 50 centimeters.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('keep_distance_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# maintain a distance of 60cm from an object once detected for 10 seconds
+drone.keep_distance(10, 60)
+drone.land()
+
+
+drone.close()
+```
+<hr/>
+
+### get_trim()
+
+#### Description
+This function gets the current trim values of the drone.
+
+#### Syntax
+``get_trim()``    
+
+#### Parameters
+None
+
+#### Returns
+***list* trim data:** A list of trim data &mdash; [0] for roll trim and [1] for pitch trim
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_trim_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+# print the trim values
+trim  = drone.get_trim()
+print(trim)
+print(trim[0])
+print(trim[1])
 
 
 drone.close()
@@ -280,17 +445,17 @@ drone.close()
 
 <hr/>
 
-### reset_sensor()
+### set_trim()
 
 #### Description
-This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the take off might be skipped.
+You can set the **roll** and **pitch** trim of the drone in case your drone is drifting. For example, if the drone is drifting to its right, you may want to set the roll to a small negative value. This trim will remain saved, even after powering off until you've changed the trim either programmatically, or done a reset with the remote. **NOTE:** If you're setting the trim right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff commmand might be skipped.
 
 #### Syntax
-``reset_sensor()``    
-
+``set_trim(roll, pitch)``    
 
 #### Parameters
-None
+***integer* roll:** the power of the roll (-100 - 100)  
+***integer* pitch:** the power of the pitch (-100 - 100)
 
 #### Returns
 None
@@ -298,7 +463,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_sensor_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_trim_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -313,63 +478,8 @@ drone = Drone()
 drone.pair()
 
 
-print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
-drone.takeoff()
-drone.set_yaw(50)
-drone.move(1)
-drone.land()
-print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
-drone.reset_sensor() 
-print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
-
-
-drone.close()
-```
-
-<hr className="section_hr"/>
-
-## Flight Commands (Position)
-
-### hover()
-
-#### Description
-This function makes the drone hover for a given amount of time. If given no parameters, it will hover indefinitely until given a another command.
-
-#### Syntax
-``hover(duration)``    
-
-#### Parameters
-***integer* duration:** Duration of the hovering in seconds
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('hover_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
+drone.set_trim(-5, 0) # example: drone is drifting right, so trim to roll left a little bit
+time.sleep(1) # Add a time.sleep(1) before takeoff if you're planning to set the trim before takeoff
 drone.takeoff()
 drone.hover(3)
 drone.land()
@@ -512,150 +622,6 @@ drone.takeoff()
 drone.turn_right() # make a 90 degree right turn.
 drone.hover(1) # wait for 1 second in the air
 drone.turn_right(30, 3) # make a 30 degree right turn with a 3 second timeout.
-drone.land()
-
-
-drone.close()
-```
-
-<hr className="section_hr"/>
-
-## Flight Commands (Navigation)
-
-### avoid_wall()
-
-#### Description
-A looped method that makes the drone fly forward until it reaches a desired distance based on the front range sensor. The range of front sensor is from 0cm-100cm
-
-#### Syntax
-``avoid_wall()``    
-``avoid_wall(timeout)``    
-``avoid_wall(distance)``    
-``avoid_wall(timeout, distance)``
-
-#### Parameters
-***integer* timeout:** timeout is an optional parameter that is the duration in seconds that the function will run. the default value is 2    
-***integer* distance:** distance is an optional parameter that is the distance in centimeters the drone will stop at in front of an object. the default value is 70
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('avoid_wall_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# fly forward until a wall is found 50 cm away. run this loop for 10 seconds.
-drone.avoid_wall(10, 50)
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### detect_wall()
-
-#### Description
-Returns True when a distance below the threshold is reached. The sensor range is up to 1.5 meters (150cm)
-
-#### Syntax
-``detect_wall()``    
-``detect_wall(distance)``  
-
-
-#### Parameters
-***integer* distance:** An optional parameter that is the threshold in centimeters that will return True. The default value is 50
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('detect_wall_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# if a wall is detected in less than 500mm true will be returned.
-if drone.detect_wall():
-    print("wall detected!")
-else:
-    print("no wall detected!")
-
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### keep_distance()
-
-#### Description
-A looped method that makes the drone fly forward until it reaches a desired distance. Once the desired distance in reached the drone will maintain that distance. The sensor range is up to 150 cm.
-
-#### Syntax
-``keep_distance()``   
-``keep_distance(timeout)``  
-``keep_distance(distance)``  
-``keep_distance(timeout, distance)``
-
-
-#### Parameters
-***integer* timeout:** the duration in seconds that the function will execute. The default value is 2 seconds.<br/>
-***integer* distance:** the distance in centimeters the drone will stop and maintain distance in front of an object. The default value is 50 centimeters.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('keep_distance_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# maintain a distance of 60cm from an object once detected for 10 seconds
-drone.keep_distance(10, 60)
 drone.land()
 
 
@@ -1862,49 +1828,6 @@ print(temperature)
 drone.close()
 ```
 
-<hr/>
-
-### get_trim()
-
-#### Description
-This function gets the current trim values of the drone.
-
-#### Syntax
-``get_trim()``    
-
-#### Parameters
-None
-
-#### Returns
-***list* trim data:** A list of trim data &mdash; [0] for roll trim and [1] for pitch trim
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_trim_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-# print the trim values
-trim  = drone.get_trim()
-print(trim)
-print(trim[0])
-print(trim[1])
-
-
-drone.close()
-```
-
 <hr className="section_hr"/>
 
 ## Sensors (Position)
@@ -2089,6 +2012,54 @@ drone.close()
 <hr className="section_hr"/>
 
 ## Sensors (Range Sensor)
+
+### detect_wall()
+
+#### Description
+Returns True when a distance below the threshold is reached. The sensor range is up to 1.5 meters (150cm)
+
+#### Syntax
+``detect_wall()``    
+``detect_wall(distance)``  
+
+
+#### Parameters
+***integer* distance:** An optional parameter that is the threshold in centimeters that will return True. The default value is 50
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('detect_wall_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# if a wall is detected in less than 500mm true will be returned.
+if drone.detect_wall():
+    print("wall detected!")
+else:
+    print("no wall detected!")
+
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
 
 ### get_bottom_range()
 
@@ -2706,6 +2677,63 @@ drone = Drone()
 drone.pair()
 
 print(drone.get_z_angle())
+
+drone.close()
+```
+
+<hr/>
+
+### reset_sensor()
+
+#### Description
+This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the take off might be skipped.
+
+#### Syntax
+``reset_sensor()``    
+
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_sensor_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+print("Before")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+drone.takeoff()
+drone.set_yaw(50)
+drone.move(1)
+drone.land()
+print("After")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+drone.reset_sensor() 
+print("Reset")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+
 
 drone.close()
 ```
