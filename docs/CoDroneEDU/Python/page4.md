@@ -2562,7 +2562,7 @@ drone.close()
 ### get_z_accel()
 
 #### Description
-Getter function that gets the z acceleration of the drone. (z is up and down)
+Getter function that gets the z acceleration of the drone (z is up and down). At rest, the gyroscope sensor should be reading a value of 9.8 meters per second squared (m/s<sup>2</sup>) since gravity is an external force that is always acting on the drone.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
