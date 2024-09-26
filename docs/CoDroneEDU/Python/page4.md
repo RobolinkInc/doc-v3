@@ -753,97 +753,6 @@ drone.close()
 
 <hr/>
 
-### sendControl()
-
-#### Description
-Send roll, pitch, yaw, and throttle values to the drone.
-
-#### Syntax
-``sendControl(roll, pitch, yaw, throttle)``    
-
-#### Parameters
-***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right <br/>
-***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
-***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up 
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('sendControl_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.sendControl(0, 30, 0, 0) # setting pitch to 30
-time.sleep(1) # wait for 1 second while the drone is moving forward
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### sendControlWhile()
-
-#### Description
-Send roll, pitch, yaw, and throttle values to the drone continously for the given duration in milliseconds
-
-#### Syntax
-``sendControlWhile(roll, pitch, yaw, throttle, duration)``    
-
-
-#### Parameters
-***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right  <br/>
-***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards  <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
-***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up <br/>
-***integer* duration:** A duration in milliseconds  
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('sendControlWhile_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.sendControlWhile(0, 30, 0, 0,1000)  # set pitch to 30 and move for 1000 ms (1 second)
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
 ### set_pitch()
 
 #### Description
@@ -1338,51 +1247,6 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
-
-### go()
-
-#### Description
-Sends roll, pitch, yaw, throttle values continuously to the drone for duration (seconds)
-
-#### Syntax
-``go(roll, pitch, yaw, throttle, duration)``    
-
-#### Parameters
-***integer* roll:** roll power (-100 - 100) <br/> 
-***integer* pitch:** pitch power (-100 - 100) <br/>
-***integer* yaw:** yaw power (-100 - 100) <br/>
-***integer* throttle:** throttle power (-100 - 100) <br/>
-***integer* duration:** Duration of the movement in seconds
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('go_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.go(50, 50, 0, 0, 5) # Drone flies diagonally forward and right for 5 seconds
-drone.land()
-
-
-drone.close()
-```
-
 <hr className="section_hr"/>
 
 ## LED
@@ -1556,7 +1420,7 @@ Plays a note using the controller's buzzer.
 
 
 #### Parameters
-***integer/Note* note:** frequency of the note, in Hertz or a Note object
+***integer/Note* note:** frequency of the note, in Hertz or a Note object<br/>
 ***integer* duration:** Duration of the note in milliseconds
 
 #### Returns
@@ -1596,7 +1460,7 @@ Plays a note using the drone's buzzer.
 
 
 #### Parameters
-***integer/Note* note:** frequency of the note, in Hertz or a Note object
+***integer/Note* note:** frequency of the note, in Hertz or a Note object<br/>
 ***integer* duration:** Duration of the note in milliseconds
 
 #### Returns
@@ -2829,7 +2693,7 @@ This function is currently unavailable for *Python for Robolink*.
 
 
 #### Parameters
-***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.
+***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.<br/>
 ***boolean* show_graph:** An optional boolean parameter that will show a graph of the color set data. The default value is False.
 
 #### Returns
