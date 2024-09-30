@@ -4203,11 +4203,6 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
 
 #### Description
 Clears all drawings from the controller screen
@@ -4250,11 +4245,6 @@ drone.close()
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
 
 :::
 
@@ -4300,11 +4290,6 @@ drone.close()
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
 
 :::
 
@@ -4362,12 +4347,6 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 
 #### Description
 Draws custom image canvas onto the controller screen
@@ -4426,11 +4405,6 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
 
 #### Description
 Same as controller_draw_arc(), but connects the end points with a straight line.
@@ -4484,11 +4458,6 @@ drone.close()
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
-
-:::
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
 
 :::
 
