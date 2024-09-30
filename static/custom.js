@@ -198,6 +198,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
     });
 
+    addEventListener("resize", (event) => {
+       if(screen.width >=998) {
+        initScrollSpy();
+       }
+    });
+
     (function(history) {
       const pushState = history.pushState;
       const replaceState = history.replaceState;
