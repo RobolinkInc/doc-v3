@@ -186,40 +186,49 @@ function loadPFRPython(pyId) {
 // });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    let lastPathname = location.pathname;
-    const allowedOrigin = "https://codrone.robolink.com";
 
-    window.addEventListener('popstate', () => {
-      if (location.pathname !== lastPathname) {
-        if (window.parent && window.parent !== window) {
-            window.parent.postMessage(window.location.href, allowedOrigin);
-        }
-        lastPathname = location.pathname;
-      }
+    addEventListener("resize", (event) => {
+       if(screen.width >=998) {
+        initScrollSpy();
+       }
     });
 
-    (function(history) {
-      const pushState = history.pushState;
-      const replaceState = history.replaceState;
-    
-      history.pushState = function(state, title, url) {
-        const result = pushState.apply(this, arguments);
-        if (window.parent && window.parent !== window) {
-            window.parent.postMessage(window.location.href, allowedOrigin);
-        }
-        return result;
-      };
-
-      history.replaceState = function(state, title, url) {
-        const result = replaceState.apply(this, arguments);
-        if (window.parent && window.parent !== window) {
-            window.parent.postMessage(window.location.href, allowedOrigin);
-        }
-        return result;
-      };
-    })(window.history);
 });
-  
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     let lastPathname = location.pathname;
+//     const allowedOrigin = "https://codrone.robolink.com";
+
+//     window.addEventListener('popstate', () => {
+//       if (location.pathname !== lastPathname) {
+//         if (window.parent && window.parent !== window) {
+//             window.parent.postMessage(window.location.href, allowedOrigin);
+//         }
+//         lastPathname = location.pathname;
+//       }
+//     });
+
+//     (function(history) {
+//       const pushState = history.pushState;
+//       const replaceState = history.replaceState;
+    
+//       history.pushState = function(state, title, url) {
+//         const result = pushState.apply(this, arguments);
+//         if (window.parent && window.parent !== window) {
+//             window.parent.postMessage(window.location.href, allowedOrigin);
+//         }
+//         return result;
+//       };
+
+//       history.replaceState = function(state, title, url) {
+//         const result = replaceState.apply(this, arguments);
+//         if (window.parent && window.parent !== window) {
+//             window.parent.postMessage(window.location.href, allowedOrigin);
+//         }
+//         return result;
+//       };
+//     })(window.history);
+// });
 
 window.openModalPython = openModalPython;
 window.closeModalPython = closeModalPython;
