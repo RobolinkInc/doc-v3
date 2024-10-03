@@ -124,7 +124,7 @@ const config = {
         `<div class="footer-wrap">
           <div class="footerBox" id="footerBox">
             <img id="imgFooter" src="/img/R-footer-logo.svg" />
-            <span>5075 Shoreham Pl. Ste 110, San Diego, CA 92122 | +1 (858) 876-5123</span>
+            <span>8920 Kenamar Dr, Suite 209, San Diego, CA 92121 | +1 (858) 876-5123</span>
           </div>
           <div class="box" id="box">
             <div>
