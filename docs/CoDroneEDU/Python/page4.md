@@ -2426,7 +2426,7 @@ drone.close()
 ### get_z_accel()
 
 #### Description
-Getter function that gets the z acceleration of the drone. (z is up and down)
+Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest on a flat surface, the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
