@@ -18,7 +18,7 @@ Junior blocks are written with "natural language" and Senior blocks introduce pr
 Blockly is an online application that you can access right from Google Chrome. With Blockly, you can connect it to your drone since Blockly runs from your browser&mdash;no need for any installation!
 
 ### Link to Blockly
-Start programming your drone with Blockly by heading to <a href="robolink.com/blockly-cde">robolink.com/blockly-cde</a>! After going to the provided link for Blockly, click on the CoDrone EDU icon to open a workspace for CoDrone EDU programming.
+Start programming your drone with Blockly by heading to <a href="https://codrone.robolink.com/edu/blockly/" target="_blank">codrone.robolink.com/edu/blockly</a>! After going to the provided link for Blockly, click on the CoDrone EDU icon to open a workspace for CoDrone EDU programming.
 
 ## Device requirements
 
