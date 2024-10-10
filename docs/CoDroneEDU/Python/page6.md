@@ -16,6 +16,8 @@ customHeadElements:
 - Corrected line number reporting in error messages
 - Bug Fixes and Improvements
 
+<hr/>
+
 ### Version 1.7
 #### August 22, 2024
 - Support Auto Code Completion
