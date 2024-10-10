@@ -4408,6 +4408,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Draws image when given a pixel_list of image data
@@ -4833,6 +4838,11 @@ drone.close()
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
 
 :::
 
