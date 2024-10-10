@@ -744,7 +744,13 @@ drone.pair()
 drone.takeoff()
 drone.set_pitch(50)
 drone.set_roll(50)
+
+drone.move(2)
+
 drone.reset_move() # reset the pitch and roll to 0.
+
+drone.move(2) # after resetting flight variables, move(2) won't move the drone
+
 drone.land()
 
 
@@ -2426,7 +2432,7 @@ drone.close()
 ### get_z_accel()
 
 #### Description
-Getter function that gets the z acceleration of the drone. (z is up and down)
+Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest on a flat surface, the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -4402,6 +4408,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Draws image when given a pixel_list of image data
@@ -4827,6 +4838,11 @@ drone.close()
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
 
 :::
 

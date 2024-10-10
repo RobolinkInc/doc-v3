@@ -1244,14 +1244,13 @@ pre code {
 }
 
 .loadPFRDiv {
-  display: none; /*remove PFR*/
   position: relative;
 }
 
 .loadPFRButton {
   position: absolute;
-  top: 5px;
-  right: 35px;
+  top: -40px;
+  right: 30px;
   width: 145px;
   height: 36px;
   background: linear-gradient(to right, white 36px, #376F9E 36px);
