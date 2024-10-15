@@ -5130,6 +5130,8 @@ image = drone.controller_create_canvas()  # create image object
 chord_list = [(20, 40), (50, 50)]
 drone.controller_draw_chord(chord_list, 0, 180, image) # set chord onto image object
 
+time.sleep(0.4) # small delay to avoid missing pixels when drawing canvas
+
 drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 
@@ -5184,6 +5186,8 @@ image = drone.controller_create_canvas()  # create image object
 ellipse_list = [(10, 10), (40, 40)]
 drone.controller_draw_ellipse(ellipse_list, image) # set ellipse onto image object
 
+time.sleep(0.4) # small delay to avoid missing pixels when drawing canvas
+
 drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 
@@ -5235,7 +5239,6 @@ drone.controller_clear_screen() # clear screen for drawing
 image = get_image_data("example.png") # where example.png is an image in the same directory as the program
 
 drone.controller_draw_image(image) # draws the image onto the controller's screen
-
 
 drone.close()
 ```
