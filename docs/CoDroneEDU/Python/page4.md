@@ -5236,7 +5236,7 @@ drone.pair()
 
 drone.controller_clear_screen() # clear screen for drawing
 
-image = get_image_data("example.png") # where example.png is an image in the same directory as the program
+image = drone.get_image_data("example.png") # where example.png is an image in the same directory as the program
 
 drone.controller_draw_image(image) # draws the image onto the controller's screen
 
@@ -5677,5 +5677,47 @@ drone.controller_preview_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
-
 <hr/>
+
+### get_image_data()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+This function retrieves .png or .jpg file and resizes to fit inside controller
+
+#### Syntax
+``get_image_data(image_file_name)``
+
+#### Parameters
+**string* image_file_name:** the name of the image file, including file extension (ex. "image.png")
+
+#### Returns
+**list* image_data:** list consisting of RGB values
+
+#### Example Code
+```python
+
+drone = Drone()
+drone.pair()
+
+drone.controller_clear_screen()
+
+img_list = ("images/boom.png", "images/flower.png", "images/mario.png", "images/pikachu.jpg", "images/rose.jpg", "images/troll_face.png", "images/pixel_dino.png")
+
+for i in range(len(img_list)):
+    img = drone.get_image_data(img_list[i]) # img stores image data
+    drone.controller_draw_image(img) # draws image on controller
+    time.sleep(1)
+
+```
