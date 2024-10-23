@@ -15,9 +15,9 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
       <img src="/img/CDE/drone_remote-4.png" width="350px"/>
     </div>
     <h4>Drone Version</h4>
-    <p>Latest Version: 22.8.1</p>
+    <p>Latest Version: 24.9.1</p>
     <h4>Controller Version</h4>
-    <p>Latest Version: 23.1.1</p>
+    <p>Latest Version: 24.9.1</p>
 </div>
 
   <div className="firmware_div">
@@ -37,54 +37,43 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 ## CoDrone EDU Drone Firmware Changelog
 
 ### Version 24.9.1
-#### September 1, 2024
-- Drone height is more stable.
-- This is a new firmware for the CDE drone.
+#### October 22, 2024
+**New Features** :sparkles:
+- Motor Stall Prevention &mdash; If the drone detects a problem with one of the motors (like it’s stuck or acting strangely) during takeoff, it will automatically stop trying to fly.
 
-<hr/>
+**Bug Fixes** :bug:
+- Takeoff improvement &mdash; The firmware has been improved to reduce the frequency of an error with the height sensor during takeoff.
 
-### Version 22.8.1
-#### August 8, 2022
-- This is the old firmware for the CDE drone.
+- Flight Count Issue Resolved &mdash; Previously, resetting the drone’s settings would also reset the flight time. This has been corrected so your flight time remains accurate.
 
 <hr className="section_hr"/>
 
 ## CoDrone EDU Controller Firmware Changelog
 
 ### Version 24.9.1
-#### September 1, 2024
-- This is a new firmware for the CDE controller. 
+#### October 22, 2024
 
-<hr/>
+**New Features** :sparkles:
+- Motor Stall Prevention &mdash; The controller will display "MOTOR STALL" when the drone detects a problem with one or more motors.
 
-### Version 23.1.1
-#### January 3, 2023
-- This is the old firmware for the CDE controller.
+- Color Sensor Notification During Flight &mdash; When flying, the color sensor status screen will now display a message that it is disabled during flight.
+
+**Improvements** :arrow_up:
+- Display Stability &mdash; The screen will now go blank less often thanks to a speed improvement in how the drone communicates with the display.
+
+- New Screens Added &mdash; We’ve updated the interface to include new screens to match CoDrone EDU (JROTC ed.)
+
+**Bug Fixes** :bug:
+- Takeoff improvement &mdash; If the error with the height sensor occurs during a takeoff attempt, the controller will automatically display a “[RANGE GROUND] WRONG VALUE” message.
 
 <hr className="section_hr"/>
 
 ## CoDrone EDU (JROTC edition) Drone Firmware Changelog
 
-### Version 24.9.2
-#### September 2, 2024
-- This is a new firmware for the CDEJ drone.
-
-<hr/>
-
-### Version 24.2.12
-#### February 15, 2024
-- This is the old firmware for the CDEJ drone.
+*No new release yet.*
 
 <hr className="section_hr"/>
 
 ## CoDrone EDU (JROTC edition) Controller Firmware Changelog
 
-### Version 24.9.2
-#### September 2, 2024
-- This is a new firmware for the CDEJ controller.
-
-<hr/>
-
-### Version 23.12.11
-#### December 20, 2023
-- This is the old firmware for the CDEJ controller.
+*No new release yet.*
