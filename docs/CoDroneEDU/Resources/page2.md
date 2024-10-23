@@ -34,10 +34,10 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 
 <hr className="section_hr"/>
 
-## CoDrone EDU Drone Firmware Changelog
+## CoDrone EDU Drone Release Notes
 
 ### Version 24.9.1
-#### October 22, 2024
+#### October 23, 2024
 **New Features** :sparkles:
 - Motor Stall Prevention &mdash; If the drone detects a problem with one of the motors (like it’s stuck or acting strangely) during takeoff, it will automatically stop trying to fly.
 
@@ -48,10 +48,10 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 
 <hr className="section_hr"/>
 
-## CoDrone EDU Controller Firmware Changelog
+## CoDrone EDU Controller Release Notes
 
 ### Version 24.9.1
-#### October 22, 2024
+#### October 23, 2024
 
 **New Features** :sparkles:
 - Motor Stall Prevention &mdash; The controller will display "MOTOR STALL" when the drone detects a problem with one or more motors.
@@ -68,12 +68,12 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 
 <hr className="section_hr"/>
 
-## CoDrone EDU (JROTC edition) Drone Firmware Changelog
+## CoDrone EDU (JROTC edition) Drone Release Notes
 
 *No new release yet.*
 
 <hr className="section_hr"/>
 
-## CoDrone EDU (JROTC edition) Controller Firmware Changelog
+## CoDrone EDU (JROTC edition) Controller Release Notes
 
 *No new release yet.*
