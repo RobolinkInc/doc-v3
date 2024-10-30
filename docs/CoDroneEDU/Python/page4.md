@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 1.9 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
+version 2.0 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
 </div>
 
 ## Connection
@@ -1008,11 +1008,59 @@ drone.close()
 
 <hr/>
 
+### get_move_values()
+
+#### Description
+Previously named ``print_move_values()``. Returns the current values of roll, pitch, yaw, and throttle flight variables.
+
+#### Syntax
+``get_move_values()``    
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_move_values_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+# Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+
+drone.pair()
+
+drone.set_roll(30)
+drone.set_pitch(40)
+drone.set_yaw(50)
+drone.set_throttle(60)
+
+move_list = drone.get_move_values() # get_move_values() returns list of flight variables
+
+print("roll:", move_list[0])
+print("pitch:", move_list[1])
+print("yaw:", move_list[2])
+print("throttle:", move_list[3])
+
+drone.close()
+```
+
+<hr/>
+
 ### print_move_values()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please get_move_values(). get_move_values() returns move values (roll, pitch, yaw, throttle) instead of printing in the console.
+This function has been deprecated and will be removed in a future release. Please use ``get_move_values()`` instead, which returns move values (roll, pitch, yaw, throttle) that can be printed as needed.
 
 :::
 
@@ -3086,7 +3134,7 @@ drone.close()
 ### reset_gyro()
 
 #### Description
-This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
+Previously named ``reset_sensor()``.This function will reset the roll, pitch, and yaw angles back to zero. **NOTE:** If you are calling this function right before ``takeoff()``, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
 
 #### Syntax
 ``reset_gyro()``    
@@ -3143,7 +3191,7 @@ drone.close()
 ### reset_sensor()
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use reset_gyro().
+This function has been deprecated and will be removed in a future release. Please use reset_gyro().
 
 :::
 
