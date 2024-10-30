@@ -1093,7 +1093,13 @@ drone.pair()
 drone.takeoff()
 drone.set_pitch(50)
 drone.set_roll(50)
+
+drone.move(2)
+
 drone.reset_move() # reset the pitch and roll to 0.
+
+drone.move(2) # after resetting flight variables, move(2) won't move the drone
+
 drone.land()
 
 
@@ -2227,7 +2233,7 @@ drone.close()
 
 ## Sensors (Optical Flow Sensor)
 
-### get_flow_velocity_x()
+<!-- ### get_flow_velocity_x()
 
 #### Description
 This getter function gets the x-component of the velocity (forward and reverse) of the drone measured by the optical flow sensor.
@@ -2315,7 +2321,7 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
+<hr/> -->
 
 ### get_flow_x()
 
@@ -4963,6 +4969,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
+# creates an image object, the canvas
 image = drone.controller_create_canvas() # see controller_draw_canvas for how to draw on this new image object
 
 drone.close()
@@ -5012,7 +5019,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
 drone.controller_draw_arc(arc_list, 0, 180, image) # set arc onto image object
@@ -5065,7 +5072,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
 ellipse_list = [(10, 10), (40, 40)]
@@ -5125,7 +5132,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates image object, the canvas
 
 chord_list = [(20, 40), (50, 50)]
 drone.controller_draw_chord(chord_list, 0, 180, image) # set chord onto image object
@@ -5181,7 +5188,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 ellipse_list = [(10, 10), (40, 40)]
 drone.controller_draw_ellipse(ellipse_list, image) # set ellipse onto image object
@@ -5263,7 +5270,7 @@ Draws a line between points (x1, y1) and (x2, y2)
 ```
 
 #### Syntax
-``controller_draw_line(x1, y1, x2, y2, pixel, line_type)``    
+``controller_draw_line(x1, y1, x2, y2, image, pixel_width=1)``    
 
 
 #### Parameters
@@ -5271,8 +5278,8 @@ Draws a line between points (x1, y1) and (x2, y2)
 ***integer* y1:** point 1 y coordinate    
 ***integer* x2:** point 2 x coordinate    
 ***integer* y2:** point 2 y coordinate    
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
-***string* line_type:** optional parameter that is the type of line drawn. default is Solid    
+***Image* image:** image object created from ``create_image_canvas()``.
+***integer* pixel_width:** width of pixel line   
 
 #### Returns
 None
@@ -5295,9 +5302,11 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
-drone.controller_draw_line(0,0, 60, 60)
+drone.controller_draw_line(0,0, 60, 60, image) # draws a line from (0,0) to (60,60)
 
+drone.controller_draw_canvas(image) # draw image onto controller screen
 
 drone.close()
 ```
@@ -5316,12 +5325,12 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws a single pixel at the point (x,y)
 
 #### Syntax
-``controller_draw_point(x, y, pixel)``    
+``controller_draw_point(x, y, image)``    
 
 #### Parameters
 ***integer* x:** x coordinate <br/>
 ***integer* y:** y coordinate <br/>
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black
+***Image* image:** image object created from ``create_image_canvas()``
 
 #### Returns
 None
@@ -5345,8 +5354,11 @@ drone.pair()
 
 drone.controller_clear_screen() # clear screen for drawing
 
-drone.controller_draw_point(10, 10) # place a pixel at the (10,10) coordinate
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
+drone.controller_draw_point(10, 10, image) # place a pixel at the (10,10) coordinate of canvas
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -5365,11 +5377,14 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 The polygon outline consists of straight lines between the given coordinates, plus a straight line between the last and the first coordinate.
 
 #### Syntax
-``controller_draw_polygon(point_list)``    
+``controller_draw_polygon(point_list, image, fill_in=None, pixel_width=1)``    
 
 
 #### Parameters
 ***list* point_list:** the list of coordinates
+***Image* image:** image object created from ``create_image_canvas()``.   
+***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.
 
 #### Returns
 None
@@ -5392,10 +5407,13 @@ drone.pair()
 
 
 drone.controller_clear_screen()
+image = drone.controller_create_canvas() # creates an image object, the canvas
 
-point_list_square = ((10, 10), (30, 10), (30, 30), (10, 30)) # creating a list of coordinates
+point_list = [(0, 0), (15,15), (30,0)] # list of points that will be connected to draw a polygon
 
-drone.controller_draw_polygon(point_list_square)
+drone.controller_draw_polygon(point_list, image) # forms polygon using list of points
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 
 drone.close()
@@ -5421,7 +5439,7 @@ width
 ```
 
 #### Syntax
-``controller_draw_rectangle(x, y, width, height, pixel, fill, line_type)``    
+``controller_draw_rectangle(x, y, width, height, image, fill_in=None, pixel_width=1)``    
 
 
 #### Parameters
@@ -5429,9 +5447,9 @@ width
 ***integer* y:** top left corner y coordinate   
 ***integer* width:** width of rectangle   
 ***integer* height:** height of rectangle   
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
-***boolean* fill:** optional parameter to fill in the rectangle or not. default value is False    
-***string* line_type:** optional parameter that is the type of line drawn. default is Solid
+***Image* image:** image object created from ``create_image_canvas()``.   
+***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
 
 #### Returns
 None
@@ -5454,9 +5472,12 @@ drone.pair()
 
 
 drone.controller_clear_screen()
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
-drone.controller_draw_rectangle(30, 15, 50, 30)
+# draws rectangle starting at (0,0) on canvas with width of 40px and height of 20px
+drone.controller_draw_rectangle(0, 0, 40, 20,image)
 
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -5481,15 +5502,15 @@ width
 ```
 
 #### Syntax
-``controller_draw_square(x, y, width, pixel, fill, line_type)``    
+``controller_draw_square(x, y, width, image, fill_in=None, pixel_width=1)``    
 
 #### Parameters
 ***integer* x:** top left corner x coordinate   
 ***integer* y:** top left corner y coordinate   
 ***integer* width:** width of square    
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
-***boolean* fill:** optional parameter to fill in the square or not. default value is False   
-***string* line_type:** optional parameter that is the type of line drawn. default is Solid
+***Image* image:** image object created from ``create_image_canvas()``.   
+***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
 None
@@ -5512,8 +5533,12 @@ drone.pair()
 
 
 drone.controller_clear_screen()
-drone.controller_draw_square(10, 10, 25)
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
+# draws a square on canvas that's 30 x 30px at (0, 0)
+drone.controller_draw_square(0, 0, 30, image)
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -5539,10 +5564,7 @@ Draws a string from the given x_start, x_end and y positions. The string can be 
 ***integer* x_end:** ending x position    
 ***integer* y:** y position   
 ***string* string:** the string to write   
-***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align Left, Right, or Center. default value is Center    
-***integer* string_font:** optional parameter that is the font of the string to be written. default value is LiberationMono5x8    
-***integer* pixel_color:** optional parameter that is the pixel color of the written string. default value is Black
-
+***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align Left, Right, or Center. default value is Center
 #### Returns
 None
 
@@ -5564,8 +5586,12 @@ drone.pair()
 
 
 drone.controller_clear_screen()
-drone.controller_draw_string_align(0, 70, 0, "Hello, world!")
+image = drone.controller_create_canvas() # creates an image object, the canvas
 
+# draws string on canvas that is aligned to the right, between x=0 and x=100 at position y=0.
+drone.controller_draw_string_align(0, 100, 0,"Hello, world!", image, "right")
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -5700,10 +5726,10 @@ This function retrieves .png or .jpg file and resizes to fit inside controller
 ``get_image_data(image_file_name)``
 
 #### Parameters
-**string* image_file_name:** the name of the image file, including file extension (ex. "image.png")
+***string* image_file_name:** the name of the image file, including file extension (ex. "image.png")
 
 #### Returns
-**list* image_data:** list consisting of RGB values
+***list* image_data:** list consisting of RGB values
 
 #### Example Code
 ```python
