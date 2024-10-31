@@ -1410,7 +1410,7 @@ drone.pair()
 
 
 drone.takeoff()
-# Drone turns right for 1 second with 50 power
+# Drone turns left for 1 second with 50 power
 drone.set_yaw(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
@@ -2281,18 +2281,18 @@ drone.close()
 
 ## Sensors (Optical Flow Sensor)
 
-<!-- ### get_flow_velocity_x()
+### get_flow_velocity_x()
 
 #### Description
-This getter function gets the x-component of the velocity (forward and reverse) of the drone measured by the optical flow sensor.
+Previously named ``get_flow_x()``. This getter function gets the raw data that's proportional to the x-velocity (forward and reverse) of the drone measured by the optical flow sensor.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
 ``get_flow_velocity_x()``    
-``get_flow_velocity_x(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
+
 
 #### Parameters
-***string* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
+None
 
 #### Returns
 ***integer* x-velocity:** The velocity of the drone measured by the optical flow sensor in the x direction
@@ -2329,15 +2329,15 @@ drone.close()
 ### get_flow_velocity_y()
 
 #### Description
-This getter function gets the y-component of the velocity (left and right) of the drone measured by the optical flow sensor.
+Previously named ``get_flow_y()``. This getter function gets the raw data that's proportional to the y-velocity (left and right) of the drone measured by the optical flow sensor.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
 ``get_flow_velocity_y()``    
-``get_flow_velocity_y(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
+
 
 #### Parameters
-***integer* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
+None
 
 #### Returns
 ***integer* y-velocity:** The velocity of the drone measured by the optical flow sensor in the y direction
@@ -2369,26 +2369,24 @@ drone.land()
 drone.close()
 ```
 
-<hr/> -->
+<hr/>
 
 ### get_flow_x()
-
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_flow_velocity_x().
+This function has been deprecated and will be removed in a future release. Please use get_flow_velocity_x().
 
 :::
 
 #### Description
-This getter function gets the x-component of the velocity (forward and reverse) of the drone measured by the optical flow sensor.
+This getter function gets the raw data that's proportional to the x-velocity (forward and reverse) of the drone measured by the optical flow sensor.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
 ``get_flow_x()``    
-``get_flow_x(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
 
 #### Parameters
-***string* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
+None
 
 #### Returns
 ***integer* x-velocity:** The velocity of the drone measured by the optical flow sensor in the x direction
@@ -2426,20 +2424,19 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_flow_velocity_y().
+This function has been deprecated and will be removed in a future release. Please use get_flow_velocity_y().
 
 :::
 
 #### Description
-This getter function gets the y-component of the velocity (left and right) of the drone measured by the optical flow sensor.
+This getter function gets the raw data that's proportional to the y-velocity (left and right) of the drone measured by the optical flow sensor.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
 ``get_flow_y()``    
-``get_flow_y(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
 
 #### Parameters
-***integer* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
+None
 
 #### Returns
 ***integer* y-velocity:** The velocity of the drone measured by the optical flow sensor in the y direction
@@ -2478,7 +2475,7 @@ drone.close()
 ### get_accel_x()
 
 #### Description
-Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
+Previously named ``get_x_accel()``. Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2521,7 +2518,7 @@ drone.close()
 ### get_accel_y()
 
 #### Description
-Getter function that gets the y acceleration of the drone. (y is left and right)
+Previously named ``get_y_accel()``. Getter function that gets the y acceleration of the drone. (y is left and right)
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2564,7 +2561,7 @@ drone.close()
 ### get_accel_z()
 
 #### Description
-Getter function that gets the z acceleration of the drone. (z is up and down)
+Previously named ``get_z_accel()``. Getter function that gets the z acceleration of the drone. (z is up and down)
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -2607,7 +2604,7 @@ drone.close()
 ### get_angle_x()
 
 #### Description
-This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
 
 #### Syntax
 ``get_angle_x()``    
@@ -2647,7 +2644,7 @@ drone.close()
 ### get_angle_y()
 
 #### Description
-This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
 
 #### Syntax
 ``get_angle_y()``    
@@ -2685,7 +2682,7 @@ drone.close()
 ### get_angle_z()
 
 #### Description
-This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
 
 #### Syntax
 ``get_angle_z()``    
@@ -2855,7 +2852,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_accel_x().
+This function has been deprecated and will be removed in a future release. Please use get_accel_x().
 
 :::
 
@@ -2904,7 +2901,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_angle_x().
+This function has been deprecated and will be removed in a future release. Please use get_angle_x().
 
 :::
 
@@ -2950,7 +2947,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_accel_y().
+This function has been deprecated and will be removed in a future release. Please use get_accel_y().
 
 :::
 
@@ -2999,7 +2996,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_angle_y().
+This function has been deprecated and will be removed in a future release. Please use get_angle_y().
 
 :::
 
@@ -3043,7 +3040,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_accel_z().
+This function has been deprecated and will be removed in a future release. Please use get_accel_z().
 
 :::
 
@@ -3092,7 +3089,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_angle_z().
+This function has been deprecated and will be removed in a future release. Please use get_angle_z().
 
 :::
 
@@ -3134,7 +3131,7 @@ drone.close()
 ### reset_gyro()
 
 #### Description
-Previously named ``reset_sensor()``.This function will reset the roll, pitch, and yaw angles back to zero. **NOTE:** If you are calling this function right before ``takeoff()``, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
+Previously named ``reset_sensor()``. This function will reset the roll, pitch, and yaw angles back to zero. **NOTE:** If you are calling this function right before ``takeoff()``, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
 
 #### Syntax
 ``reset_gyro()``    
@@ -3256,7 +3253,7 @@ drone.close()
 ### get_drone_temperature()
 
 #### Description
-This is a getter function gets the drone's temperature from the barometer.
+Previously named ``get_temperature()``. This is a getter function gets the drone's temperature from the barometer.
 The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
 
 #### Syntax
@@ -3300,7 +3297,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use get_drone_temperature().
+This function has been deprecated and will be removed in a future release. Please use get_drone_temperature().
 
 :::
 
@@ -3709,7 +3706,7 @@ drone.close()
 ### load_classifier()
 :::warning
 
-This function has been deprecated since the release of version 2.0 of our codrone_edu library. Please use load_color_data().
+This function has been deprecated and will be removed in a future release. Please use load_classifier().
 
 :::
 
@@ -3774,7 +3771,7 @@ This function is currently unavailable for *Python for Robolink*.
 :::
 
 #### Description
-``load_color_data()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
+Previously name ``load_classifier()``. ``load_color_data()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
 
 #### Syntax
 ``load_color_data()``   
@@ -3927,7 +3924,7 @@ drone = Drone()
 drone.pair()
 
 
-drone.load_classifier("color_data_file")
+drone.load_color_data("color_data_file")
 color_data = drone.get_color_data()
 color = drone.predict_colors(color_data)
 print(color)
@@ -4065,7 +4062,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flight_state_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_movement_state_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -4972,7 +4969,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
-drone.controller_clear_screen()
+drone.controller_clear_screen() # resets controller screen
 
 drone.close()
 ```
@@ -4988,10 +4985,12 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 :::
 
 #### Description
-Creates a new image object for drawing
+Creates a new image object for drawing on the controller. You can create a canvas with a white or black background.
 
 #### Syntax
 ``controller_create_canvas()``    
+``controller_create_canvas(color="white")``    
+
 
 #### Parameters
 None
@@ -5018,7 +5017,7 @@ drone = Drone()
 drone.pair()
 
 # creates an image object, the canvas
-image = drone.controller_create_canvas() # see controller_draw_canvas for how to draw on this new image object
+image = drone.controller_create_canvas() # see controller_draw_canvas() for how to draw on this new image object
 
 drone.close()
 ```
@@ -5037,13 +5036,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws an arc (a portion of a circle outline) between the start and end angles, inside the given bounding box.
 
 #### Syntax
-``controller_draw_arc(arc_list, start_angle, end_angle, image, pixel_width)``    
+``controller_draw_arc(arc_list, start_angle, end_angle, image)``    
+``controller_draw_arc(arc_list, start_angle, end_angle, image, pixel_width=1)``    
 
 #### Parameters
-***list* arc_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.   
-***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.    
-***integer* end_angle:** Ending angle, in degrees.    
-***Image* image:** image object created from ``create_image_canvas()``.    
+***list* arc_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.<br/>
+***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.<br/>
+***integer* end_angle:** Ending angle, in degrees.<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of arc. By default, color is black.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
 
 #### Returns
@@ -5150,14 +5151,17 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Same as controller_draw_arc(), but connects the end points with a straight line.
 
 #### Syntax
-``controller_draw_chord(arc_list, start_angle, end_angle, image, pixel_width)``
+``controller_draw_chord(arc_list, start_angle, end_angle, image)``<br/>
+``controller_draw_chord(arc_list, start_angle, end_angle, image, color="black", fill_in=None, pixel_width=1)``
 
 #### Parameters
-***list* chord_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.   
-***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.    
-***integer* end_angle:** Ending angle, in degrees.    
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.    
+***list* chord_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.<br/>   
+***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.<br/>
+***integer* end_angle:** Ending angle, in degrees.<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of chord. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
 
 #### Returns
 None
@@ -5185,10 +5189,7 @@ image = drone.controller_create_canvas()  # creates image object, the canvas
 chord_list = [(20, 40), (50, 50)]
 drone.controller_draw_chord(chord_list, 0, 180, image) # set chord onto image object
 
-time.sleep(0.4) # small delay to avoid missing pixels when drawing canvas
-
 drone.controller_draw_canvas(image)  # draw image onto controller screen
-
 
 drone.close()
 ```
@@ -5207,13 +5208,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws an ellipse inside the given bounding box.
 
 #### Syntax
-``controller_draw_ellipse(ellipse_list, image, fill_in, pixel_width)``    
+``controller_draw_ellipse(ellipse_list, image)``    
+``controller_draw_ellipse(ellipse_list, image, color="black", fill_in=None, pixel_width=1)``
 
 #### Parameters
-***list* ellipse_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)] where x1 >= x0 and y1 >= y0.    
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
-***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.    
+***list* ellipse_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)] where x1 >= x0 and y1 >= y0.<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of ellipse. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
 
 #### Returns
 None
@@ -5240,8 +5243,6 @@ image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 ellipse_list = [(10, 10), (40, 40)]
 drone.controller_draw_ellipse(ellipse_list, image) # set ellipse onto image object
-
-time.sleep(0.4) # small delay to avoid missing pixels when drawing canvas
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
 
@@ -5318,16 +5319,18 @@ Draws a line between points (x1, y1) and (x2, y2)
 ```
 
 #### Syntax
-``controller_draw_line(x1, y1, x2, y2, image, pixel_width=1)``    
+``controller_draw_line(x1, y1, x2, y2, image)``    
+``controller_draw_line(x1, y1, x2, y2, image, color="black", pixel_width=1)``    
 
 
 #### Parameters
-***integer* x1:** point 1 x coordinate    
-***integer* y1:** point 1 y coordinate    
-***integer* x2:** point 2 x coordinate    
-***integer* y2:** point 2 y coordinate    
-***Image* image:** image object created from ``create_image_canvas()``.
-***integer* pixel_width:** width of pixel line   
+***integer* x1:** point 1 x coordinate<br/>
+***integer* y1:** point 1 y coordinate<br/>
+***integer* x2:** point 2 x coordinate<br/>
+***integer* y2:** point 2 y coordinate<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of line. By default, color is black<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
 
 #### Returns
 None
@@ -5374,11 +5377,14 @@ Draws a single pixel at the point (x,y)
 
 #### Syntax
 ``controller_draw_point(x, y, image)``    
+``controller_draw_point(x, y, image, color="black")``    
+
 
 #### Parameters
 ***integer* x:** x coordinate <br/>
 ***integer* y:** y coordinate <br/>
-***Image* image:** image object created from ``create_image_canvas()``
+***Image* image:** image object created from ``create_image_canvas()``<br/>
+***string* color:** color of point. By default, color is black.
 
 #### Returns
 None
@@ -5425,14 +5431,16 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 The polygon outline consists of straight lines between the given coordinates, plus a straight line between the last and the first coordinate.
 
 #### Syntax
-``controller_draw_polygon(point_list, image, fill_in=None, pixel_width=1)``    
+``controller_draw_polygon(point_list, image)``    
+``controller_draw_polygon(point_list, image, color="black", fill_in=None, pixel_width=1)``    
 
 
 #### Parameters
-***list* point_list:** the list of coordinates
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
-***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.
+***list* point_list:** the list of coordinates<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of polygon. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
 None
@@ -5487,17 +5495,19 @@ width
 ```
 
 #### Syntax
-``controller_draw_rectangle(x, y, width, height, image, fill_in=None, pixel_width=1)``    
+``controller_draw_rectangle(x, y, width, height, image)``    
+``controller_draw_rectangle(x, y, width, height, image, color="black" fill_in=None, pixel_width=1)``    
 
 
 #### Parameters
-***integer* x:** top left corner x coordinate   
-***integer* y:** top left corner y coordinate   
-***integer* width:** width of rectangle   
-***integer* height:** height of rectangle   
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
-***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
+***integer* x:** top left corner x coordinate<br/>
+***integer* y:** top left corner y coordinate<br/>
+***integer* width:** width of rectangle<br/>
+***integer* height:** height of rectangle<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of rectangle. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
 None
@@ -5550,14 +5560,16 @@ width
 ```
 
 #### Syntax
-``controller_draw_square(x, y, width, image, fill_in=None, pixel_width=1)``    
+``controller_draw_square(x, y, width, image)``    
+``controller_draw_square(x, y, width, image, color="black", fill_in=None, pixel_width=1)``    
 
 #### Parameters
-***integer* x:** top left corner x coordinate   
-***integer* y:** top left corner y coordinate   
-***integer* width:** width of square    
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
+***integer* x:** top left corner x coordinate<br/>
+***integer* y:** top left corner y coordinate<br/>
+***integer* width:** width of square<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of square. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
@@ -5602,17 +5614,21 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 :::
 
 #### Description
-Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
+Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions.
 
 #### Syntax
-``controller_draw_string_align(x_start, x_end, y, string, alignment, string_font, pixel_color)``    
+``controller_draw_string_align(x_start, x_end, y, string, image)``    
+``controller_draw_string_align(x_start, x_end, y, string, image, color="black", alignment="left")``    
 
 #### Parameters
-***integer* x_start:** starting x position    
-***integer* x_end:** ending x position    
-***integer* y:** y position   
-***string* string:** the string to write   
-***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align Left, Right, or Center. default value is Center
+***integer* x_start:** starting x position<br/>
+***integer* x_end:** ending x position<br/>
+***integer* y:** y position<br/>
+***string* string:** the string to write<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of string. By default, color is black.<br/>
+***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align left, right, or center. default value is left
+
 #### Returns
 None
 
@@ -5637,7 +5653,7 @@ drone.controller_clear_screen()
 image = drone.controller_create_canvas() # creates an image object, the canvas
 
 # draws string on canvas that is aligned to the right, between x=0 and x=100 at position y=0.
-drone.controller_draw_string_align(0, 100, 0,"Hello, world!", image, "right")
+drone.controller_draw_string_align(0, 100, 0, "Hello, world!", image, alignment="right")
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
 
@@ -5658,14 +5674,16 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
 #### Syntax
-``controller_draw_string(x, y, string, string_font, pixel_color)``    
+``controller_draw_string(x, y, string, image)``    
+``controller_draw_string(x, y, string, image, color="black")``    
 
 #### Parameters
-***integer* x:** starting x position    
-***integer* y:** starting y position    
-***string* string:** the string to write   
-***integer* string_font:** optional parameter that is the font of the string to be written. default value is LiberationMono5x8    
-***string* pixel_color:** optional parameter that is the pixel color of the written string. default value is Black   
+***integer* x:** starting x position<br/>
+***integer* y:** starting y position<br/>
+***string* string:** the string to write<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of string. By default, color is black.
+
 
 #### Returns
 None
@@ -5688,8 +5706,11 @@ drone.pair()
 
 
 drone.controller_clear_screen()
-drone.controller_draw_string(0, 0, "Hello, world!")
+image = drone.controller_create_canvas() # creates an image object, the canvas
 
+drone.controller_draw_string(0, 0, "Hello, world!", image) # draw "Hello, world!" on image object at (0,0)
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -5705,13 +5726,13 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 :::
 
 #### Description
-Creates a pop up window to preview your current image object on your computer screen.
+Creates a pop up window to preview image object from the most recent controller_create_canvas() call onto your computer screen. **NOTE:** Preview image will reset every time controller_create_canvas() is called.
 
 #### Syntax
-``controller_preview_canvas(image)``    
+``controller_preview_canvas()``    
 
 #### Parameters
-***Image* image:** image object to be previewed
+None
 
 #### Returns
 None
@@ -5736,7 +5757,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # create image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
 ellipse_list = [(10, 10), (40, 40)]
@@ -5746,7 +5767,7 @@ drone.controller_draw_ellipse(ellipse_list, image) # draw onto image object
 drone.controller_draw_arc(arc_list, 0, 180, image)
 drone.controller_draw_chord(chord_list, 0, 180, image)
 
-drone.controller_preview_canvas(image)  # draw image onto controller screen
+drone.controller_preview_canvas()  # a window will pop up with your drawing
 
 
 drone.close()
@@ -5768,7 +5789,7 @@ This function is currently unavailable for *Python for Robolink*.
 :::
 
 #### Description
-This function retrieves .png or .jpg file and resizes to fit inside controller
+This function retrieves .png or .jpg file and resizes to fit inside controller.
 
 #### Syntax
 ``get_image_data(image_file_name)``
