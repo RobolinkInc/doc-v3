@@ -10,12 +10,14 @@ customHeadElements:
 
 ### Version 2.0
 #### October 30, 2024
-##### New Features
+**New Features** :sparkles:
 - added get_move_values()
 - added get_movement_state()
 - added get_error_data()
-##### Improvements
+
+**Improvements** :arrow_up:
 - compatible with Python version 3.12.x
+- Improved pair() performance
 - flight sequences to fit in a 5x5ft area
 - improved reset_trim() for CDEJ to ensure trim is reset
 - renamed reset_sensor() -> reset_gyro() and increased delay to ensure reset
@@ -31,13 +33,15 @@ customHeadElements:
 - renamed get_x_angle() -> get_angle_z()
 - renamed load_classifier() -> load_color_data()
 - controller screen draw functions have an image parameter
-##### Bug Fixes
-- fixed reset_gyro() (formerly, reset_sensor()) to ensure gyro angles are reset
-- fixed reset_trim() to ensure trim is reset for CDEJ 
-- fixed strange movement when calling send_absolute_position() consecutively
-##### Other changes
-- removed go()
 
+**Bug Fixes** :bug:
+- fixed reset_gyro() (formerly, reset_sensor()) to ensure gyro angles are reset
+- fixed reset_trim() to ensure trim is reset for CDEJ
+
+**Other Changes**
+- removed go()
+- get_image_data() is now a Drone class method (ex. drone.get_image_data())
+- controller_preview_canvas() no longer contains image parameter.
 
 ### Version 1.9
 #### October 8, 2023
