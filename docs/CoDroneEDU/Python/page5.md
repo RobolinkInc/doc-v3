@@ -20,7 +20,6 @@ customHeadElements:
 **Improvements** :arrow_up:
 - compatible with Python version 3.12.x
 - Improved pair() performance
-- flight sequences to fit in a 5x5ft area
 - improved reset_trim() for CDEJ to ensure trim is reset
 - renamed reset_sensor() -> reset_gyro() and increased delay to ensure reset
 - renamed reset_move() -> reset_move_values()
