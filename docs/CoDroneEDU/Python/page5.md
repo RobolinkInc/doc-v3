@@ -13,7 +13,9 @@ customHeadElements:
 **New Features** :sparkles:
 - added get_move_values()
 - added get_movement_state()
-- added get_error_data()
+- added get_count_data()
+- added get_address_data()
+- added get_information_data()
 
 **Improvements** :arrow_up:
 - compatible with Python version 3.12.x

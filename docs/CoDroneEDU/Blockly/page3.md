@@ -13,7 +13,9 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 2.2.1 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+
+version 2.2.3 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+
 </div>
 
 ## Flight Commands

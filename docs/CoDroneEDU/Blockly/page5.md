@@ -8,6 +8,27 @@ customHeadElements:
 
 ## CoDrone EDU Library Changelog
 
+### Version 2.2.3
+#### October 10, 2024
+
+- Resolved uncaught errors
+- Updated Python auto-generated code to match current library version
+- Corrected issue where the “disable block” function was not working properly.
+- Adjusted menu sizing for smaller screens
+- Updated tab colors to be consistent with category selection
+- Added the ability to open Blockly code as a Python program in Python for Robolink
+
+<hr/>
+
+### Version 2.2.2
+#### September 18, 2024
+
+- Added a release version number to the menu to easily check for updates and improvements.
+- Included a link to our Privacy Policy in the menu for quick access.
+- Resolved an issue where clicking the emergency stop too quickly after running code could cause an error on the site.
+
+<hr/>
+
 ### Version 2.2.1
 #### September 4, 2024
 

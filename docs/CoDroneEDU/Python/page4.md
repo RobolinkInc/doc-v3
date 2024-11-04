@@ -75,6 +75,13 @@ None
 None
 
 #### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('close_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
 ```python
 #Python code
 from codrone_edu.drone import *
@@ -1592,7 +1599,7 @@ Plays a note using the controller's buzzer.
 
 
 #### Parameters
-***integer/Note* note:** frequency of the note, in Hertz or a Note object
+***integer/Note* note:** frequency of the note, in Hertz or a Note object<br/>
 ***integer* duration:** Duration of the note in milliseconds
 
 #### Returns
@@ -1632,7 +1639,7 @@ Plays a note using the drone's buzzer.
 
 
 #### Parameters
-***integer/Note* note:** frequency of the note, in Hertz or a Note object
+***integer/Note* note:** frequency of the note, in Hertz or a Note object<br/>
 ***integer* duration:** Duration of the note in milliseconds
 
 #### Returns
@@ -1848,49 +1855,6 @@ for i in range(3):
 
 
 drone.stop_controller_buzzer() # stops the buzzer
-drone.close()
-```
-
-<hr className="section_hr"/>
-
-## Sensors (General)
-
-### get_battery()
-
-#### Description
-This function returns the current battery level percentage of the drone.
-
-#### Syntax
-``get_battery()``    
-
-
-#### Parameters
-None
-
-#### Returns
-***integer* battery percentage:** The current battery percentage of the drone's battery.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_battery_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-battery = drone.get_battery()
-print(battery)
-
-
 drone.close()
 ```
 
@@ -3045,7 +3009,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-Getter function that gets the z acceleration of the drone. (z is up and down)
+Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest on a flat surface, the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -3936,6 +3900,47 @@ drone.close()
 <hr className="section_hr"/>
 
 ## Sensors (State Data)
+
+### get_battery()
+
+#### Description
+This function returns the current battery level percentage of the drone.
+
+#### Syntax
+``get_battery()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* battery percentage:** The current battery percentage of the drone's battery.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_battery_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+battery = drone.get_battery()
+print(battery)
+
+
+drone.close()
+```
+
+<hr/>
 
 ### get_error_data()
 
@@ -5259,6 +5264,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Draws image when given a pixel_list of image data
@@ -5724,6 +5734,11 @@ drone.close()
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
 
 #### Description
 Creates a pop up window to preview image object from the most recent controller_create_canvas() call onto your computer screen. **NOTE:** Preview image will reset every time controller_create_canvas() is called.
@@ -5801,6 +5816,16 @@ This function retrieves .png or .jpg file and resizes to fit inside controller.
 ***list* image_data:** list consisting of RGB values
 
 #### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('get_image_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
 ```python
 
 drone = Drone()

@@ -12,7 +12,9 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 2.2.1 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+
+version 2.2.3 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+
 </div>
 
 ## Flight Commands
@@ -463,7 +465,7 @@ None
 
 #### Example
 
-In this example, after taking off, the drone sets its yaw variable at 20% for right turns and then sets its yaw variable at -20% for left turns. This will not make the drone move yet.
+In this example, after taking off, the drone sets its yaw variable at 20% for left turns and then sets its yaw variable at -20% for right turns. This will not make the drone move yet.
 
 <div className="loadXmlDiv">
   <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_yaw_example2_senior')}>
@@ -475,7 +477,7 @@ In this example, after taking off, the drone sets its yaw variable at 20% for ri
 <img src="/img/CDE/blockly_docu/senior/set_yaw_example2.png" width="180px"/>
 <br/>
 <br/>
-In this example, after taking off, the drone sets its yaw variable at 30% for right turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for left turns and moves for 2 seconds. 
+In this example, after taking off, the drone sets its yaw variable at 30% for left turns and moves for 2 seconds. And then the drone sets its yaw variable at -30% for right turns and moves for 2 seconds. 
 
 <div className="loadXmlDiv">
   <button className="loadXmlButton" onClick={() => loadBlocklyXml('set_yaw_example1_senior')}>
