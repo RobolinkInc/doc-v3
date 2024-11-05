@@ -44,6 +44,8 @@ customHeadElements:
 - get_image_data() is now a Drone class method (ex. drone.get_image_data())
 - controller_preview_canvas() no longer contains image parameter.
 
+<hr/>
+
 ### Version 1.9
 #### October 8, 2023
 - Fixed a bug in returning controller button press data for the custom controller lesson      
