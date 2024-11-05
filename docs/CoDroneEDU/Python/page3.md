@@ -7,11 +7,11 @@ customHeadElements:
 
 ## Updating CoDrone EDU Python Library
 
-Occasionally, there will be updates to the CoDrone EDU Python library. The current library version is version 1.9.
+Occasionally, there will be updates to the CoDrone EDU Python library. The current library version is version 2.0. You can view the changelog [here](/docs/CoDroneEDU/Python/Python-Changelog).
 
 :::tip
 
-If your version of Python is different from the CoDrone EDU library version, it can be a good idea to stay up to date (although updating your Python version is not always necessary). See Python versions available <a role="button" id="popupBtn" onClick={() => window.openModalPython()}>here</a>
+If your version of Python is different from the CoDrone EDU library version, it can be a good idea to stay up to date (although updating your Python version is not always necessary). See Python versions available <a role="button" id="popupBtn" onClick={() => window.openModalPython()}>here</a>.
 <div id="modalWrap_python">
     <div id="modalContent">
         <div id="modalBody">
