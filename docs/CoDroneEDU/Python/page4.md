@@ -3291,7 +3291,7 @@ drone.close()
 ### reset_gyro()
 
 #### Description
-Previously named ``reset_sensor()``. This function will reset the roll, pitch, and yaw angles back to zero. **NOTE:** If you are calling this function right before ``takeoff()``, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
+Previously named ``reset_sensor()``. This function will reset the roll, pitch, and yaw angles back to zero.
 
 #### Syntax
 ``reset_gyro()``    
@@ -3354,7 +3354,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 
 
 #### Description
-This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
+This function will reset the gyro angles back to zero for roll, pitch, and yaw.
 
 #### Syntax
 ``reset_sensor()``    
@@ -3414,7 +3414,7 @@ drone.close()
 
 #### Description
 Previously named ``get_temperature()``. This is a getter function gets the drone's temperature from the barometer.
-The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celsius.
 
 #### Syntax
 ``get_drone_temperature()``   
@@ -3422,10 +3422,10 @@ The sensor reads the drone’s temperature, not the air around it. Default unit 
 
 
 #### Parameters
-***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celcius), "F" (Fahrenheit), and "K" (Kelvin).
+***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celsius), "F" (Fahrenheit), and "K" (Kelvin).
 
 #### Returns
-***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celsius.
 
 #### Example Code
 
@@ -3463,7 +3463,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 
 #### Description
 This is a getter function gets the drone's **temperature** from the barometer.
-The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celsius.
 
 #### Syntax
 ``get_temperature()``   
@@ -3471,10 +3471,10 @@ The sensor reads the drone’s temperature, not the air around it. Default unit 
 
 
 #### Parameters
-***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celcius), "F" (Fahrenheit), and "K" (Kelvin).
+***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celsius), "F" (Fahrenheit), and "K" (Kelvin).
 
 #### Returns
-***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celsius.
 
 #### Example Code
 
@@ -5481,11 +5481,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
