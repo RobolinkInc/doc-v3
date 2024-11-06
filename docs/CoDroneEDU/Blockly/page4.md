@@ -2003,18 +2003,18 @@ None
 
 ## Colors
 
-### load_color_set()
+### load_color_data()
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/load_color_set.png" width="300px"/>
+<img src="/img/CDE/blockly_docu/senior/load_color_data.png" width="300px"/>
 
 #### Code
 <span className="light_gray">drone.</span><span className="dark_gray">load_color_data()</span>
 
 #### Description
 
-Loads color set onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
+Loads color data onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
 
 #### Parameters
 
@@ -2026,7 +2026,7 @@ None
 
 #### Example
 
-To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_set" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
+To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_data" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
 
 <div className="loadXmlDiv">
   <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
@@ -2064,7 +2064,7 @@ Predicts what color the color sensors are currently seeing (front or back).
 ***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
 
 #### Example
-In this example, the "load_color_set" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
+In this example, the "load_color_data" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
 
 <div className="loadXmlDiv">
   <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
