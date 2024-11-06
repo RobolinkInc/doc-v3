@@ -9,18 +9,17 @@ customHeadElements:
 ## CoDrone EDU Library Changelog
 
 ### Version 2.0
-#### October 30, 2024
+#### November 7, 2024
 **New Features** :sparkles:
-- added get_move_values()
 - added get_movement_state()
 - added get_count_data()
 - added get_address_data()
 - added get_information_data()
+- get_error_data() now includes state data in addition to sensor data
 
 **Improvements** :arrow_up:
-- compatible with Python version 3.12.x
-- Improved pair() performance
-- improved reset_trim() for CDEJ to ensure trim is reset
+- improved error handling messages for the user
+- print_move_values() was renamed to get_move_values() which can be printed as needed
 - renamed reset_sensor() -> reset_gyro() and increased delay to ensure reset
 - renamed reset_move() -> reset_move_values()
 - renamed get_temperature() -> get_drone_temperature()
@@ -33,16 +32,18 @@ customHeadElements:
 - renamed get_x_angle() -> get_angle_y()
 - renamed get_x_angle() -> get_angle_z()
 - renamed load_classifier() -> load_color_data()
-- controller screen draw functions have an image parameter
+- all controller screen draw functions have an image parameter (functions not compatible with JROTC ed.)
+- send_absolute_position(), move_forward(), move_backward(), move_left(), and move_right() have been improved for testing
 
 **Bug Fixes** :bug:
-- fixed reset_gyro() (formerly, reset_sensor()) to ensure gyro angles are reset
-- fixed reset_trim() to ensure trim is reset for CDEJ
+- fixed the pkg_resources error for versions of Python greater than 3.11
+- fixed set_trim() and reset_trim() delays to work with CoDrone EDU (JROTC ed.)
+- fixed an issue that appeared when calibrating only 3 colors using the KNN model
+- corrected the index value for get_flow_velocity_y()
 
 **Other Changes**
-- removed go()
 - get_image_data() is now a Drone class method (ex. drone.get_image_data())
-- controller_preview_canvas() no longer contains image parameter.
+- controller_preview_canvas() no longer contains image parameter
 
 <hr/>
 

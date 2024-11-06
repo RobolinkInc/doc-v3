@@ -568,7 +568,7 @@ None
 
 <hr/>
 
-### move(duration)
+### move([duration])
 
 #### Block
 
@@ -853,7 +853,8 @@ None
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_range()</span>
+*front*: <span className="light_gray">drone.</span><span className="dark_gray">get_front_range()</span><br/>
+*bottom*: <span className="light_gray">drone.</span><span className="dark_gray">get_bottom_range()</span>
 
 #### Description
 Returns the calculated distance from either the front or bottom infrared (IR) range sensor to the surface. The sensor range is up to 1.5m.
@@ -907,7 +908,9 @@ In this example below, run the program, manually point the drone to a wall, and 
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_angle()</span>
+*x*: <span className="light_gray">drone.</span><span className="dark_gray">get_angle_x()</span><br/>
+*y*: <span className="light_gray">drone.</span><span className="dark_gray">get_angle_y()</span><br/>
+*z*: <span className="light_gray">drone.</span><span className="dark_gray">get_angle_z()</span>
 
 #### Description
 This function returns the current gyroscope angle measurement for either the x (roll),y (pitch), or z (yaw) axis.
@@ -944,7 +947,9 @@ This function returns the current gyroscope angle measurement for either the x (
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_angular_speed()</span>
+*x*: <span className="light_gray">drone.</span><span className="dark_gray">get_angular_speed_x()</span><br/>
+*y*: <span className="light_gray">drone.</span><span className="dark_gray">get_angular_speed_y()</span><br/>
+*z*: <span className="light_gray">drone.</span><span className="dark_gray">get_angular_speed_z()</span>
 
 #### Description
 This function returns the current angular velocity in degrees per second for either the x (roll),y (pitch), or z (yaw) axis.
@@ -981,7 +986,9 @@ This function returns the current angular velocity in degrees per second for eit
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_accel()</span>
+*x*: <span className="light_gray">drone.</span><span className="dark_gray">get_accel_x()</span><br/>
+*y*: <span className="light_gray">drone.</span><span className="dark_gray">get_accel_y()</span><br/>
+*z*: <span className="light_gray">drone.</span><span className="dark_gray">get_accel_z()</span>
 
 #### Description
 This function returns the current acceleration on either the x, y, or z axis in units of $m/s^2*10$.    
@@ -1019,7 +1026,9 @@ This function returns the current acceleration on either the x, y, or z axis in 
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_pos()</span>
+*x*: <span className="light_gray">drone.</span><span className="dark_gray">get_pos_x()</span><br/>
+*y*: <span className="light_gray">drone.</span><span className="dark_gray">get_pos_y()</span><br/>
+*z*: <span className="light_gray">drone.</span><span className="dark_gray">get_pos_z()</span>
 
 #### Description
 Returns the current estimated position of the CoDrone EDU using the optical flow sensor.
@@ -1187,22 +1196,22 @@ This function returns barometer data in either pascals or millibars.
 
 <hr/>
 
-### get_temperature()
+### get_drone_temperature()
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/get_temperature.png" width="300px"/>  
+<img src="/img/CDE/blockly_docu/senior/get_drone_temperature.png" width="300px"/>  
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_temperature()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">get_drone_temperature()</span>
 
 #### Description
 This block returns the current temperature of the drone in either Celsius or Fahrenheit.
 
 #### Parameters
 
-<img src="/img/CDE/blockly_docu/senior/get_temperature_params.png" width="300px"/>  
+<img src="/img/CDE/blockly_docu/senior/get_drone_temperature_params.png" width="300px"/>  
 
 **unit:** Fahrenheit, Celsius, Kelvin
 
@@ -1212,13 +1221,13 @@ This block returns the current temperature of the drone in either Celsius or Fah
 #### Example
 
 <div className="loadXmlDiv">
-  <button className="loadXmlButton" onClick={() => loadBlocklyXml('get_temperature_example_senior')}>
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('get_drone_temperature_example_senior')}>
     <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Blockly</span>
   </button>
 </div>
 
-<img src="/img/CDE/blockly_docu/senior/get_temperature_example.png" width="380px"/>  
+<img src="/img/CDE/blockly_docu/senior/get_drone_temperature_example.png" width="380px"/>  
 
 <hr/>
 
@@ -1265,7 +1274,8 @@ Returns the estimated elevation data from the CoDrone EDU's barometer.
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_color()</span>
+*front*: <span className="light_gray">drone.</span><span className="dark_gray">get_front_color()</span><br/>
+*back*: <span className="light_gray">drone.</span><span className="dark_gray">get_back_color()</span>
 
 #### Description
 This functions reads the color data from either of the two bottom color sensors and returns one of the 8 pre-calibrated colors (provided in the color cards). The drone must be flat on a surface (not flying) for the color sensor to activate.
@@ -1314,7 +1324,14 @@ In the example below, place the drone under two different colored surfaces, so t
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_hsvl()</span>
+(*front, hue*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[1]</span><br/>
+(*front, saturation*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[2]</span><br/>
+(*front, value*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[3]</span><br/>
+(*front, lightness*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[4]</span><br/>
+(*back, hue*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[5]</span><br/>
+(*back, saturation*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[6]</span><br/>
+(*back, value*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[7]</span><br/>
+(*back, lightness*): <span className="light_gray">drone.</span><span className="dark_gray">get_color_data()[8]</span><br/>
 
 #### Description
 Returns the HSVL (hue, saturation, value, lightness) data from either of the CoDrone EDU's bottom color sensors. The drone must be flat on a surface (not flying) for the color sensor to activate.
@@ -1354,7 +1371,8 @@ hsvl value from sensor
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">get_state_data()</span>
+*modeFlight*: <span className="light_gray">drone.</span><span className="dark_gray">get_flight_state()</span> <br/>
+*modeMovement*: <span className="light_gray">drone.</span><span className="dark_gray">get_movement_state()</span>
 
 #### Description
 Returns the current state of the CoDrone EDU.
@@ -1381,18 +1399,18 @@ Returns the current state of the CoDrone EDU.
 
 <hr/>
 
-### reset_sensor()
+### reset_gyro()
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/reset_sensor.png" width="160px"/>  
+<img src="/img/CDE/blockly_docu/senior/reset_gyro.png" width="160px"/>  
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">reset_sensor()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">reset_gyro()</span>
 
 #### Description
-Resets the Gyroscope angles to 0. Make sure the drone is on a flat surface when running this block.
+Resets the gyroscope angles to 0. Make sure the drone is on a flat surface when running this block.
 
 #### Parameters
 None
@@ -1401,21 +1419,21 @@ None
 None
 
 #### Example
-To use this example file turn the drone manually with your hand and watch the Z angle change. Stop moving the drone during the reset. You will see that the Z angle is reset to 0.
+To use this example file turn the drone manually with your hand and watch the Z angle change. Then, place the drone on a flat surface before the reset. You will see that the Z angle is reset to 0.
 
 <div className="loadXmlDiv">
-  <button className="loadXmlButton" onClick={() => loadBlocklyXml('reset_sensor_ex_senior')}>
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('reset_gyro_example_senior')}>
     <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Blockly</span>
   </button>
 </div>
 
-<img src="/img/CDE/blockly_docu/senior/reset_sensor_ex.png" width="280px"/>  
+<img src="/img/CDE/blockly_docu/senior/reset_gyro_example.png" width="280px"/>  
 
 <hr className="section_hr"/>
 
 
-## Sound
+## Sounds
 
 ### drone_buzzer()
 
@@ -1425,7 +1443,7 @@ To use this example file turn the drone manually with your hand and watch the Z 
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">buzzer()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">drone_buzzer()</span>
 
 #### Description
 Plays a note for a duration in milliseconds using the CoDrone EDU drone buzzer.
@@ -1497,7 +1515,7 @@ None
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">drone_buzzer_hertz()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">drone_buzzer()</span>
 
 #### Description
 Plays a sound frequency for a duration in milliseconds using the CoDrone EDU drone buzzer.
@@ -1546,7 +1564,7 @@ In the example below, a list variable ``test_list`` is created ``[450,500,650,80
 
 #### Code
 
-<span className="light_gray">drone.</span><span className="dark_gray">controller_buzzer_hertz()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">controller_buzzer()</span>
 
 #### Description
 Plays a sound frequency for a duration in milliseconds using the CoDrone EDU controller buzzer.
@@ -1586,7 +1604,8 @@ None
 Plays a note on the CoDrone until it is programmed to be stopped with ``stop_drone_buzzer()``.
 
 #### Parameters
-<img src="/img/CDE/blockly_docu/senior/start_drone_buzzer_params.png" width="300px"/> 
+<img src="/img/CDE/blockly_docu/senior/start_drone_buzzer_params.png" width="300px"/>
+
 **Note:** note played on the drone
 
 #### Returns
@@ -1984,18 +2003,18 @@ None
 
 ## Colors
 
-### load_color_set()
+### load_color_data()
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/senior/load_color_set.png" width="300px"/>
+<img src="/img/CDE/blockly_docu/senior/load_color_data.png" width="300px"/>
 
 #### Code
-<span className="light_gray">drone.</span><span className="dark_gray">load_classifier()</span>
+<span className="light_gray">drone.</span><span className="dark_gray">load_color_data()</span>
 
 #### Description
 
-Loads color set onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
+Loads color data onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
 
 #### Parameters
 
@@ -2007,7 +2026,7 @@ None
 
 #### Example
 
-To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_set" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
+To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_data" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
 
 <div className="loadXmlDiv">
   <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
@@ -2027,9 +2046,10 @@ To make this example work, your color set must be loaded into Blockly and loaded
 <img src="/img/CDE/blockly_docu/senior/predict_color.png" width="250px"/>
 
 #### Code
-color_data = <span className="light_gray">drone.</span>get_color_data()<br/>
-<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[0]</span>
-
+*front*: <span className="light_gray">color_data = drone.</span>get_color_data()<br/>
+<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[0]</span><br/><br/>
+*back*: <span className="light_gray">color_data = drone.</span>get_color_data()<br/>
+<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[1]</span><br/>
 
 #### Description
 
@@ -2044,7 +2064,7 @@ Predicts what color the color sensors are currently seeing (front or back).
 ***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
 
 #### Example
-In this example, the "load_color_set" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
+In this example, the "load_color_data" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
 
 <div className="loadXmlDiv">
   <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>

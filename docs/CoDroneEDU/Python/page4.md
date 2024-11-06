@@ -497,6 +497,285 @@ drone.close()
 
 <hr/>
 
+### move_forward()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone forward for the given distance and unit for that distance.
+
+#### Syntax
+``move_forward(distance)``    
+``move_forward(distance, unit, speed)``   
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).     
+***integer* speed:** default 1 meter per second. Max is 2 meters/second     
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_forward_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_forward(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### move_backward()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone backward for the given distance and unit for that distance.
+
+#### Syntax
+``move_backward(distance)``      
+``move_backward(distance, unit, speed)``   
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
+***integer* speed:** default 1 meter per second. Max is 2 meters/second   
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_backward_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_backward(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### move_left()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone left for the given distance and unit for that distance.
+
+#### Syntax
+``move_left(distance)``    
+``move_left(distance, unit, speed)``  
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
+***integer* speed:** default 1 meter per second. Max is 2 meters/second
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_left_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_left(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### move_right()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone right for the given distance and unit for that distance.
+
+#### Syntax
+``move_right(distance)``     
+``move_right(distance, unit, speed)`` 
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
+***integer* speed:** default 1 meter per second. Max is 2 meters/second 
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_right_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_right(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### send_absolute_position()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
+The 'x' position of the drone is forwards and reverse.    
+The 'y' position of the drone is left and right.    
+The 'z' position of the drone is up and down.   
+<img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
+<br/>
+<img src="/img/CDE/python_docu/xyz.jpg"  width="70%"/>
+
+#### Syntax
+``send_absolute_position(positionX, positionY, positionZ, velocity, heading, rotationalVelocity)``    
+
+
+#### Parameters
+***float* positionX:** The X position of the drone (-10 ~ 10). Forward is positive. Backwards is negative.   
+***float* positionY:** The Y position of the drone (-10 ~ 10). Left is positive. Right is negative.    
+***float* positionZ:** The Z position of the drone (-10 ~ 10). Up is positive. Down is negative.   
+***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.   
+***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
+***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('send_absolute_position_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+# Sending the drone forward from its takeoff location 0.5 meters moving at 0.5 m/s
+drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
+time.sleep(1) # Sleep command needed in order for this movement to execute.
+
+# Sending the same command will cause the drone to hover around 
+# the same area since this command uses absolute positioning from the takeoff location
+drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
+time.sleep(1)
+
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
 ### turn_degree()
 
 #### Description
@@ -925,7 +1204,7 @@ drone.close()
 ### get_move_values()
 
 #### Description
-This function returns the current values of roll, pitch, yaw, and throttle flight variables.
+Previously named ``print_move_values()``. Returns the current values of roll, pitch, yaw, and throttle flight variables.
 
 #### Syntax
 ``get_move_values()``    
@@ -934,7 +1213,7 @@ This function returns the current values of roll, pitch, yaw, and throttle fligh
 None
 
 #### Returns
-***list* Flight Variables:** A list of current flight variables: roll [0], pitch [1], yaw [2], and throttle [3].
+None
 
 #### Example Code
 
@@ -946,7 +1225,7 @@ None
 </div>
 
 ```python
-#Python code
+# Python code
 from codrone_edu.drone import *
 
 drone = Drone()
@@ -958,13 +1237,12 @@ drone.set_pitch(40)
 drone.set_yaw(50)
 drone.set_throttle(60)
 
-flight_variable_list = drone.get_move_values() # get_move_values() returns flight variables
-roll = flight_variable_list[0]
-pitch = flight_variable_list[1]
-yaw = flight_variable_list[2]
-throttle = flight_variable_list[3]
+move_list = drone.get_move_values() # get_move_values() returns list of flight variables
 
-print(roll,pitch,yaw,throttle)
+print("roll:", move_list[0])
+print("pitch:", move_list[1])
+print("yaw:", move_list[2])
+print("throttle:", move_list[3])
 
 drone.close()
 ```
@@ -1009,54 +1287,6 @@ drone.set_pitch(50)
 drone.move(1) # move command executes the movement for 1 second
 drone.land()
 
-
-drone.close()
-```
-
-<hr/>
-
-### get_move_values()
-
-#### Description
-Previously named ``print_move_values()``. Returns the current values of roll, pitch, yaw, and throttle flight variables.
-
-#### Syntax
-``get_move_values()``    
-
-#### Parameters
-None
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_move_values_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-# Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-
-drone.pair()
-
-drone.set_roll(30)
-drone.set_pitch(40)
-drone.set_yaw(50)
-drone.set_throttle(60)
-
-move_list = drone.get_move_values() # get_move_values() returns list of flight variables
-
-print("roll:", move_list[0])
-print("pitch:", move_list[1])
-print("yaw:", move_list[2])
-print("throttle:", move_list[3])
 
 drone.close()
 ```
@@ -1114,6 +1344,12 @@ drone.close()
 
 ### reset_move()
 
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``reset_move_values()`` instead.
+
+:::
+
 #### Description
 The reset_move command will reset the values of roll, pitch, yaw, and throttle to 0.
 
@@ -1163,19 +1399,18 @@ drone.close()
 
 <hr/>
 
-### sendControl()
+### reset_move_values()
 
 #### Description
-Send roll, pitch, yaw, and throttle values to the drone.
+The reset_move_values command will reset the values of roll, pitch, yaw, and throttle to 0.
 
 #### Syntax
-``sendControl(roll, pitch, yaw, throttle)``    
+``reset_move_values()``  
+``reset_move_values(attempts)``    
+
 
 #### Parameters
-***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right <br/>
-***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
-***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up 
+***integer* attempts:** Optional parameter that sends the reset_move_values command multiple times.
 
 #### Returns
 None
@@ -1183,7 +1418,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('sendControl_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_move_values_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -1198,54 +1433,15 @@ drone.pair()
 
 
 drone.takeoff()
-drone.sendControl(0, 30, 0, 0) # setting pitch to 30
-time.sleep(1) # wait for 1 second while the drone is moving forward
-drone.land()
+drone.set_pitch(50)
+drone.set_roll(50)
 
+drone.move(2)
 
-drone.close()
-```
+drone.reset_move_values() # reset the pitch and roll to 0.
 
-<hr/>
+drone.move(2) # after resetting flight variables, move(2) won't move the drone
 
-### sendControlWhile()
-
-#### Description
-Send roll, pitch, yaw, and throttle values to the drone continously for the given duration in milliseconds
-
-#### Syntax
-``sendControlWhile(roll, pitch, yaw, throttle, duration)``    
-
-
-#### Parameters
-***integer* roll:** Sets the roll variable (-100 to 100). negative is left, positive is right  <br/>
-***integer* pitch:** Sets the pitch variable (-100 to 100). negative is backwards, positive is forwards  <br/>
-***integer* yaw:** Sets the yaw variable (-100 to 100). negative is right, positive is left <br/>
-***integer* throttle:** Sets the throttle variable (-100 to 100). negative is down, positive is up <br/>
-***integer* duration:** A duration in milliseconds  
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('sendControlWhile_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.sendControlWhile(0, 30, 0, 0,1000)  # set pitch to 30 and move for 1000 ms (1 second)
 drone.land()
 
 
@@ -1587,7 +1783,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Sound
+## Sounds
 
 ### controller_buzzer()
 
@@ -2338,7 +2534,7 @@ drone.close()
 ### get_flow_x()
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_flow_velocity_x().
+This function has been deprecated and will be removed in a future release. Please use ``get_flow_velocity_x()`` instead.
 
 :::
 
@@ -2388,7 +2584,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_flow_velocity_y().
+This function has been deprecated and will be removed in a future release. Please use ``get_flow_velocity_y()`` instead.
 
 :::
 
@@ -2816,7 +3012,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_accel_x().
+This function has been deprecated and will be removed in a future release. Please use ``get_accel_x()`` instead.
 
 :::
 
@@ -2865,7 +3061,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_angle_x().
+This function has been deprecated and will be removed in a future release. Please use ``get_angle_x()`` instead.
 
 :::
 
@@ -2911,7 +3107,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_accel_y().
+This function has been deprecated and will be removed in a future release. Please use ``get_accel_y()`` instead.
 
 :::
 
@@ -2960,7 +3156,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_angle_y().
+This function has been deprecated and will be removed in a future release. Please use ``get_angle_y()`` instead.
 
 :::
 
@@ -3004,7 +3200,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_accel_z().
+This function has been deprecated and will be removed in a future release. Please use ``get_accel_z()`` instead.
 
 :::
 
@@ -3053,7 +3249,7 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_angle_z().
+This function has been deprecated and will be removed in a future release. Please use ``get_angle_z()`` instead.
 
 :::
 
@@ -3095,7 +3291,7 @@ drone.close()
 ### reset_gyro()
 
 #### Description
-Previously named ``reset_sensor()``. This function will reset the roll, pitch, and yaw angles back to zero. **NOTE:** If you are calling this function right before ``takeoff()``, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
+Previously named ``reset_sensor()``. This function will reset the roll, pitch, and yaw angles back to zero.
 
 #### Syntax
 ``reset_gyro()``    
@@ -3152,13 +3348,13 @@ drone.close()
 ### reset_sensor()
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use reset_gyro().
+This function has been deprecated and will be removed in a future release. Please use ``reset_gyro()`` instead.
 
 :::
 
 
 #### Description
-This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff might be skipped.
+This function will reset the gyro angles back to zero for roll, pitch, and yaw.
 
 #### Syntax
 ``reset_sensor()``    
@@ -3218,7 +3414,7 @@ drone.close()
 
 #### Description
 Previously named ``get_temperature()``. This is a getter function gets the drone's temperature from the barometer.
-The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celsius.
 
 #### Syntax
 ``get_drone_temperature()``   
@@ -3226,10 +3422,10 @@ The sensor reads the drone’s temperature, not the air around it. Default unit 
 
 
 #### Parameters
-***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celcius), "F" (Fahrenheit), and "K" (Kelvin).
+***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celsius), "F" (Fahrenheit), and "K" (Kelvin).
 
 #### Returns
-***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celsius.
 
 #### Example Code
 
@@ -3261,13 +3457,13 @@ drone.close()
 
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use get_drone_temperature().
+This function has been deprecated and will be removed in a future release. Please use ``get_drone_temperature()`` instead.
 
 :::
 
 #### Description
 This is a getter function gets the drone's **temperature** from the barometer.
-The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celsius.
 
 #### Syntax
 ``get_temperature()``   
@@ -3275,10 +3471,10 @@ The sensor reads the drone’s temperature, not the air around it. Default unit 
 
 
 #### Parameters
-***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celcius), "F" (Fahrenheit), and "K" (Kelvin).
+***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celsius), "F" (Fahrenheit), and "K" (Kelvin).
 
 #### Returns
-***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celsius.
 
 #### Example Code
 
@@ -3670,7 +3866,7 @@ drone.close()
 ### load_classifier()
 :::warning
 
-This function has been deprecated and will be removed in a future release. Please use load_classifier().
+This function has been deprecated and will be removed in a future release. Please use ``load_classifier()`` instead.
 
 :::
 
@@ -5285,11 +5481,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
