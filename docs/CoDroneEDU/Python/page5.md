@@ -33,7 +33,7 @@ customHeadElements:
 - renamed get_x_angle() -> get_angle_z()
 - renamed load_classifier() -> load_color_data()
 - all controller screen draw functions have an image parameter (functions not compatible with JROTC ed.)
-- send_absolute_position() has been improved for testing
+- send_absolute_position(), move_forward(), move_backward(), move_left(), and move_right() have been improved for testing
 
 **Bug Fixes** :bug:
 - fixed the pkg_resources error for versions of Python greater than 3.11
