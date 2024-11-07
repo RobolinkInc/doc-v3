@@ -6,7 +6,16 @@ customHeadElements:
 ---
 
 
-## CoDrone EDU Library Changelog
+## CoDrone EDU Blockly Changelog
+
+### Version 2.2.4
+#### November 7, 2024
+
+- Fixed bug when opening get_color() Senior block example
+- Updated block names and generated code to match the latest Python library (v2.0)
+- Improved UI and messaging when drone battery is removed while Blockly is connected 
+
+<hr/>
 
 ### Version 2.2.3
 #### October 10, 2024

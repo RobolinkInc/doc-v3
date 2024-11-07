@@ -6,7 +6,7 @@ customHeadElements:
 ---
 
 
-## CoDrone EDU Library Changelog
+## CoDrone EDU Python Library Changelog
 
 ### Version 2.0
 #### November 7, 2024
