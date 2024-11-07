@@ -14,7 +14,10 @@ customHeadElements:
 
 ### Version 1.9
 #### November 7, 2024
-- TBD by Jungwon
+- Upgraded codrone_edu Python package to v2.0
+- Improved console messages for the user
+- Updated auto-complete list according to codrone_edu Python package v2.0 changes
+- Implemented UI improvements
 
 <hr/>
 
