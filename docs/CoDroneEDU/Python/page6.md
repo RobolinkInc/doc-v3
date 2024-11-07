@@ -8,6 +8,16 @@ customHeadElements:
 
 ## *Python for Robolink*&nbsp; Changelog
 
+:::note
+*Python for Robolink* and the CoDrone EDU Python library have separate version numbers. *Python for Robolink* will always run the latest version of the CoDrone EDU Python library. For example, version 1.9 of *Python for Robolink* runs version 2.0 of the CoDrone EDU Python library (latest). Review the latest [documentation](page4.md) for the full list of functions supported.
+:::
+
+### Version 1.9
+#### November 7, 2024
+- TBD by Jungwon
+
+<hr/>
+
 ### Version 1.8
 #### October 10, 2024
 - Support open Python example code directly from the docs site
@@ -25,4 +35,3 @@ customHeadElements:
 - Bug Fixes and Improvements
 
 <hr/>
-
