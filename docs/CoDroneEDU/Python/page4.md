@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 1.9 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
+version 2.0 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
 </div>
 
 ## Connection
@@ -58,10 +58,50 @@ drone.land()
 drone.close()
 ```
 
+<hr/>
+
+### close()
+
+#### Description
+This function closes the connection of your controller with the program.
+
+#### Syntax
+``close()``
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('close_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.hover(1)
+drone.land()
+
+
+drone.close() # closes connection between controller and program
+```
+
 <hr className="section_hr"/>
 
 
-## Flight Commands (Start / Stop)
+## Flight Commands
 
 ### takeoff()
 
@@ -190,17 +230,16 @@ drone.close()
 
 <hr/>
 
-### set_trim()
+### hover()
 
 #### Description
-You can set the **roll** and **pitch** trim of the drone in case your drone is drifting. For example, if the drone is drifting to its right, you may want to set the roll to a small negative value. This trim will remain saved, even after powering off until you've changed the trim either programmatically, or done a reset with the remote. **NOTE:** If you're setting the trim right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff commmand might be skipped.
+This function makes the drone hover for a given amount of time. If given no parameters, it will hover indefinitely until given a another command.
 
 #### Syntax
-``set_trim(roll, pitch)``    
+``hover(duration)``    
 
 #### Parameters
-***integer* roll:** the power of the roll (-100 - 100)  
-***integer* pitch:** the power of the pitch (-100 - 100)
+***integer* duration:** Duration of the hovering in seconds
 
 #### Returns
 None
@@ -208,7 +247,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_trim_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('hover_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -217,17 +256,150 @@ None
 ```python
 #Python code
 from codrone_edu.drone import *
-import time
 
 drone = Drone()
 drone.pair()
 
 
-drone.set_trim(-5, 0) # example: drone is drifting right, so trim to roll left a little bit
-time.sleep(1) # Add a time.sleep(1) before takeoff if you're planning to set the trim before takeoff
 drone.takeoff()
 drone.hover(3)
 drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### avoid_wall()
+
+#### Description
+A looped method that makes the drone fly forward until it reaches a desired distance based on the front range sensor. The range of front sensor is from 0cm-100cm
+
+#### Syntax
+``avoid_wall()``    
+``avoid_wall(timeout)``    
+``avoid_wall(distance)``    
+``avoid_wall(timeout, distance)``
+
+#### Parameters
+***integer* timeout:** timeout is an optional parameter that is the duration in seconds that the function will run. the default value is 2    
+***integer* distance:** distance is an optional parameter that is the distance in centimeters the drone will stop at in front of an object. the default value is 70
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('avoid_wall_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# fly forward until a wall is found 50 cm away. run this loop for 10 seconds.
+drone.avoid_wall(10, 50)
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### keep_distance()
+
+#### Description
+A looped method that makes the drone fly forward until it reaches a desired distance. Once the desired distance in reached the drone will maintain that distance. The sensor range is up to 150 cm.
+
+#### Syntax
+``keep_distance()``   
+``keep_distance(timeout)``  
+``keep_distance(distance)``  
+``keep_distance(timeout, distance)``
+
+
+#### Parameters
+***integer* timeout:** the duration in seconds that the function will execute. The default value is 2 seconds.<br/>
+***integer* distance:** the distance in centimeters the drone will stop and maintain distance in front of an object. The default value is 50 centimeters.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('keep_distance_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# maintain a distance of 60cm from an object once detected for 10 seconds
+drone.keep_distance(10, 60)
+drone.land()
+
+
+drone.close()
+```
+<hr/>
+
+### get_trim()
+
+#### Description
+This function gets the current trim values of the drone.
+
+#### Syntax
+``get_trim()``    
+
+#### Parameters
+None
+
+#### Returns
+***list* trim data:** A list of trim data &mdash; [0] for roll trim and [1] for pitch trim
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_trim_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+# print the trim values
+trim  = drone.get_trim()
+print(trim)
+print(trim[0])
+print(trim[1])
 
 
 drone.close()
@@ -280,17 +452,17 @@ drone.close()
 
 <hr/>
 
-### reset_sensor()
+### set_trim()
 
 #### Description
-This function will reset the gyro angles back to zero for roll, pitch, and yaw. **NOTE:** If you're resetting right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the take off might be skipped.
+You can set the **roll** and **pitch** trim of the drone in case your drone is drifting. For example, if the drone is drifting to its right, you may want to set the roll to a small negative value. This trim will remain saved, even after powering off until you've changed the trim either programmatically, or done a reset with the remote. **NOTE:** If you're setting the trim right before a takeoff, make sure to add a ``time.sleep(1)`` before the ``takeoff()``, otherwise the takeoff commmand might be skipped.
 
 #### Syntax
-``reset_sensor()``    
-
+``set_trim(roll, pitch)``    
 
 #### Parameters
-None
+***integer* roll:** the power of the roll (-100 - 100)  
+***integer* pitch:** the power of the pitch (-100 - 100)
 
 #### Returns
 None
@@ -298,7 +470,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_sensor_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_trim_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -313,46 +485,310 @@ drone = Drone()
 drone.pair()
 
 
-print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+drone.set_trim(-5, 0) # example: drone is drifting right, so trim to roll left a little bit
+time.sleep(1) # Add a time.sleep(1) before takeoff if you're planning to set the trim before takeoff
 drone.takeoff()
-drone.set_yaw(50)
-drone.move(1)
+drone.hover(3)
 drone.land()
-print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
-drone.reset_sensor() 
-print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
 
 
 drone.close()
 ```
 
-<hr className="section_hr"/>
+<hr/>
 
-## Flight Commands (Movement)
+### move_forward()
 
-### avoid_wall()
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
 
 #### Description
-A looped method that makes the drone fly forward until it reaches a desired distance based on the front range sensor. The range of front sensor is from 0cm-100cm
+Moves the drone forward for the given distance and unit for that distance.
 
 #### Syntax
-``avoid_wall()``    
-``avoid_wall(timeout)``    
-``avoid_wall(distance)``    
-``avoid_wall(timeout, distance)``
+``move_forward(distance)``    
+``move_forward(distance, unit, speed)``   
+
 
 #### Parameters
-***integer* timeout:** timeout is an optional parameter that is the duration in seconds that the function will run. the default value is 2    
-***integer* distance:** distance is an optional parameter that is the distance in centimeters the drone will stop at in front of an object. the default value is 70
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).     
+***integer* speed:** default 1 meter per second. Max is 2 meters/second     
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_forward_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_forward(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### move_backward()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone backward for the given distance and unit for that distance.
+
+#### Syntax
+``move_backward(distance)``      
+``move_backward(distance, unit, speed)``   
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
+***integer* speed:** default 1 meter per second. Max is 2 meters/second   
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_backward_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_backward(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### move_left()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone left for the given distance and unit for that distance.
+
+#### Syntax
+``move_left(distance)``    
+``move_left(distance, unit, speed)``  
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
+***integer* speed:** default 1 meter per second. Max is 2 meters/second
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_left_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_left(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### move_right()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Moves the drone right for the given distance and unit for that distance.
+
+#### Syntax
+``move_right(distance)``     
+``move_right(distance, unit, speed)`` 
+
+
+#### Parameters
+***integer* distance:** the numerical value of the value to move    
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
+***integer* speed:** default 1 meter per second. Max is 2 meters/second 
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_right_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_right(distance=50, units="cm", speed=1)
+time.sleep(3) # make sure to add a delay so the drone has enough time to fly
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### send_absolute_position()
+
+:::note
+
+**Function Under Development**<br/>
+This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
+
+:::
+
+#### Description
+Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
+The 'x' position of the drone is forwards and reverse.    
+The 'y' position of the drone is left and right.    
+The 'z' position of the drone is up and down.   
+<img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
+<br/>
+<img src="/img/CDE/python_docu/xyz.jpg"  width="70%"/>
+
+#### Syntax
+``send_absolute_position(positionX, positionY, positionZ, velocity, heading, rotationalVelocity)``    
+
+
+#### Parameters
+***float* positionX:** The X position of the drone (-10 ~ 10). Forward is positive. Backwards is negative.   
+***float* positionY:** The Y position of the drone (-10 ~ 10). Left is positive. Right is negative.    
+***float* positionZ:** The Z position of the drone (-10 ~ 10). Up is positive. Down is negative.   
+***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.   
+***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
+***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
+
+#### Returns
+None
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('send_absolute_position_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+# Sending the drone forward from its takeoff location 0.5 meters moving at 0.5 m/s
+drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
+time.sleep(1) # Sleep command needed in order for this movement to execute.
+
+# Sending the same command will cause the drone to hover around 
+# the same area since this command uses absolute positioning from the takeoff location
+drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
+time.sleep(1)
+
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### turn_degree()
+
+#### Description
+Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to the left and negative degrees turn to the right.
+
+#### Syntax
+``turn_degree(degree, timeout, p_value)``    
+
+
+#### Parameters
+***integer* degree:** angle of turn in degrees (-180 - 180)<br/>
+***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3.<br/>
+***integer* p_value:** optional parameter that is the gain of the proportional controller, if this increased CDE will turn quicker, the smaller the slower. default value is 10.     
 
 #### Returns
 None
@@ -360,12 +796,11 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('avoid_wall_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_degree_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
 </div>
-
 
 ```python
 #Python code
@@ -376,8 +811,7 @@ drone.pair()
 
 
 drone.takeoff()
-# fly forward until a wall is found 50 cm away. run this loop for 10 seconds.
-drone.avoid_wall(10, 50)
+drone.turn_degree(90) # drone will turn left 90 degrees
 drone.land()
 
 
@@ -385,6 +819,104 @@ drone.close()
 ```
 
 <hr/>
+
+### turn_left()
+
+#### Description
+Turns the drone left using the built in gyroscope. The default degree is 90.
+
+#### Syntax
+``turn_left()``        
+``turn_left(degree)``    
+``turn_left(timeout)``    
+``turn_left(degree, timeout)``   
+
+
+#### Parameters
+***integer* degree:** optional parameter that turns the drone in the given degree. default value is 90.   
+***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_left_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.turn_left() # make a 90 degree left turn.
+drone.hover(1) # wait for 1 second in the air
+drone.turn_left(30, 3) # make a 30 degree left turn with a 3 second timeout.
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### turn_right()
+
+#### Description
+Turns the drone right using the built in gyroscope. The default degree is 90.
+
+#### Syntax
+``turn_right()``     
+``turn_right(degree)``      
+``turn_right(timeout)``    
+``turn_right(degree, timeout)``   
+
+
+#### Parameters
+***integer* degree:** optional parameter that turns the drone in the given degree. default value is 90.   
+***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3. 
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_right_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.turn_right() # make a 90 degree right turn.
+drone.hover(1) # wait for 1 second in the air
+drone.turn_right(30, 3) # make a 30 degree right turn with a 3 second timeout.
+drone.land()
+
+
+drone.close()
+```
+
+<hr className="section_hr"/>
+
+## Flight Sequences
 
 ### circle()
 
@@ -422,54 +954,6 @@ drone.pair()
 drone.takeoff()
 # default circle parameters (75, 1)
 drone.circle()
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### detect_wall()
-
-#### Description
-Returns True when a distance below the threshold is reached. The sensor range is up to 1.5 meters (150cm)
-
-#### Syntax
-``detect_wall()``    
-``detect_wall(distance)``  
-
-
-#### Parameters
-***integer* distance:** An optional parameter that is the threshold in centimeters that will return True. The default value is 50
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('detect_wall_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# if a wall is detected in less than 500mm true will be returned.
-if drone.detect_wall():
-    print("wall detected!")
-else:
-    print("no wall detected!")
-
 drone.land()
 
 
@@ -525,406 +1009,6 @@ drone.move(1)
 drone.set_pitch(-30) # move backward for 1 second
 drone.move(1)
 
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### hover()
-
-#### Description
-This function makes the drone hover for a given amount of time. If given no parameters, it will hover indefinitely until given a another command.
-
-#### Syntax
-``hover(duration)``    
-
-#### Parameters
-***integer* duration:** Duration of the hovering in seconds
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('hover_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.hover(3)
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### keep_distance()
-
-#### Description
-A looped method that makes the drone fly forward until it reaches a desired distance. Once the desired distance in reached the drone will maintain that distance. The sensor range is up to 150 cm.
-
-#### Syntax
-``keep_distance()``   
-``keep_distance(timeout)``  
-``keep_distance(distance)``  
-``keep_distance(timeout, distance)``
-
-
-#### Parameters
-***integer* timeout:** the duration in seconds that the function will execute. The default value is 2 seconds.<br/>
-***integer* distance:** the distance in centimeters the drone will stop and maintain distance in front of an object. The default value is 50 centimeters.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('keep_distance_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# maintain a distance of 60cm from an object once detected for 10 seconds
-drone.keep_distance(10, 60)
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### move()
-
-#### Description
-The move command will move the drone based on the set flight variables (set_pitch, set_roll, etc). If given a parameter the move command will execute the movement for the given amount of seconds. If given no parameter then the drone will execute the move command indefinitley. You must ``takeoff()`` first to use a ``move()`` function.
-
-#### Syntax
-``move(duration)``    
-
-
-#### Parameters
-***integer* duration:** Duration of the movement in seconds
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('move_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# Drone goes up for 1 second with 50 power
-drone.set_pitch(50)
-drone.move(1) # move command executes the movement for 1 second
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### print_move_values()
-
-#### Description
-Prints the current values of roll, pitch, yaw, and throttle flight variables.
-
-#### Syntax
-``print_move_values()``    
-
-#### Parameters
-None
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('print_move_values_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.set_pitch(50)
-drone.set_roll(50)
-drone.print_move_values() # will print pitch and roll at 50 and throttle and yaw at 0
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### reset_move()
-
-#### Description
-The reset_move command will reset the values of roll, pitch, yaw, and throttle to 0.
-
-#### Syntax
-``reset_move()``  
-``reset_move(attempts)``    
-
-
-#### Parameters
-***integer* attempts:** Optional parameter that sends the reset_move command multiple times.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_move_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.set_pitch(50)
-drone.set_roll(50)
-
-drone.move(2)
-
-drone.reset_move() # reset the pitch and roll to 0.
-
-drone.move(2) # after resetting flight variables, move(2) won't move the drone
-
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### set_pitch()
-
-#### Description
-This is a setter function that allows you to set the pitch variable. Once you set pitch, you have to use move() to actually execute the movement. The pitch variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to pitch again.
-
-#### Syntax
-``set_pitch(power)``    
-
-
-#### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative pitch is backwards, positive pitch is forwards.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_pitch_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# Drone goes forward for 1 second with 50 power
-drone.set_pitch(50)
-drone.move(1) # move command executes the movement for 1 second
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### set_roll()
-
-#### Description
-This is a setter function that allows you to set the roll variable. Once you set roll, you have to use ``move()`` to actually execute the movement. The roll variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to roll again.
-
-#### Syntax
-``set_roll(power)``    
-
-
-#### Parameters
-***integer* power:** Sets the roll variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative roll is left, positive roll is right.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_roll_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# Drone goes right for 1 second with 50 power
-drone.set_roll(50)
-drone.move(1) # move command executes the movement for 1 second
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### set_throttle()
-
-#### Description
-This is a setter function that allows you to set the throttle variable. Once you set throttle, you have to use move() to actually execute the movement. The throttle variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to throttle again.
-
-#### Syntax
-``set_throttle(power)``    
-
-#### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative throttle is down, positive throttle is up.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_throttle_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# Drone goes up for 1 second with 50 power
-drone.set_throttle(50)
-drone.move(1) # move command executes the movement for 1 second
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### set_yaw()
-
-#### Description
-This is a setter function that allows you to set the yaw variable. Once you set yaw, you have to use ``move()``to actually execute the movement. The yaw variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to yaw again.
-
-#### Syntax
-``set_yaw(power)``    
-
-#### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is right, positive yaw is left.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_yaw_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-# Drone turns left for 1 second with 50 power
-drone.set_yaw(50)
-drone.move(1) # move command executes the movement for 1 second
 drone.land()
 
 
@@ -1113,21 +1197,20 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
-### turn_degree()
+## Flight Variables
+
+### get_move_values()
 
 #### Description
-Turns right or left with absolute reference frame to drone's initial heading. Positive degrees turn to the left and negative degrees turn to the right.
+Previously named ``print_move_values()``. Returns the current values of roll, pitch, yaw, and throttle flight variables.
 
 #### Syntax
-``turn_degree(degree, timeout, p_value)``    
-
+``get_move_values()``    
 
 #### Parameters
-***integer* degree:** angle of turn in degrees (-180 - 180)<br/>
-***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3.<br/>
-***integer* p_value:** optional parameter that is the gain of the proportional controller, if this increased CDE will turn quicker, the smaller the slower. default value is 10.     
+None
 
 #### Returns
 None
@@ -1135,7 +1218,56 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_degree_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_move_values_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+# Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+
+drone.pair()
+
+drone.set_roll(30)
+drone.set_pitch(40)
+drone.set_yaw(50)
+drone.set_throttle(60)
+
+move_list = drone.get_move_values() # get_move_values() returns list of flight variables
+
+print("roll:", move_list[0])
+print("pitch:", move_list[1])
+print("yaw:", move_list[2])
+print("throttle:", move_list[3])
+
+drone.close()
+```
+
+<hr/>
+
+### move()
+
+#### Description
+The move command will move the drone based on the set flight variables (set_pitch, set_roll, etc). If given a parameter the move command will execute the movement for the given amount of seconds. If given no parameter then the drone will execute the move command indefinitley. You must ``takeoff()`` first to use a ``move()`` function.
+
+#### Syntax
+``move(duration)``    
+
+
+#### Parameters
+***integer* duration:** Duration of the movement in seconds
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -1150,7 +1282,9 @@ drone.pair()
 
 
 drone.takeoff()
-drone.turn_degree(90) # drone will turn left 90 degrees
+# Drone goes up for 1 second with 50 power
+drone.set_pitch(50)
+drone.move(1) # move command executes the movement for 1 second
 drone.land()
 
 
@@ -1159,21 +1293,22 @@ drone.close()
 
 <hr/>
 
-### turn_left()
+### print_move_values()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_move_values()`` instead, which returns move values (roll, pitch, yaw, throttle) that can be printed as needed.
+
+:::
 
 #### Description
-Turns the drone left using the built in gyroscope. The default degree is 90.
+Prints the current values of roll, pitch, yaw, and throttle flight variables.
 
 #### Syntax
-``turn_left()``        
-``turn_left(degree)``    
-``turn_left(timeout)``    
-``turn_left(degree, timeout)``   
-
+``print_move_values()``    
 
 #### Parameters
-***integer* degree:** optional parameter that turns the drone in the given degree. default value is 90.   
-***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3.
+None
 
 #### Returns
 None
@@ -1181,7 +1316,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_left_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('print_move_values_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -1196,9 +1331,9 @@ drone.pair()
 
 
 drone.takeoff()
-drone.turn_left() # make a 90 degree left turn.
-drone.hover(1) # wait for 1 second in the air
-drone.turn_left(30, 3) # make a 30 degree left turn with a 3 second timeout.
+drone.set_pitch(50)
+drone.set_roll(50)
+drone.print_move_values() # will print pitch and roll at 50 and throttle and yaw at 0
 drone.land()
 
 
@@ -1207,21 +1342,24 @@ drone.close()
 
 <hr/>
 
-### turn_right()
+### reset_move()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``reset_move_values()`` instead.
+
+:::
 
 #### Description
-Turns the drone right using the built in gyroscope. The default degree is 90.
+The reset_move command will reset the values of roll, pitch, yaw, and throttle to 0.
 
 #### Syntax
-``turn_right()``     
-``turn_right(degree)``      
-``turn_right(timeout)``    
-``turn_right(degree, timeout)``   
+``reset_move()``  
+``reset_move(attempts)``    
 
 
 #### Parameters
-***integer* degree:** optional parameter that turns the drone in the given degree. default value is 90.   
-***integer* timeout:** optional parameter that is duration in seconds that drone will try to turn. default value is 3. 
+***integer* attempts:** Optional parameter that sends the reset_move command multiple times.
 
 #### Returns
 None
@@ -1229,7 +1367,7 @@ None
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_right_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_move_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -1244,9 +1382,240 @@ drone.pair()
 
 
 drone.takeoff()
-drone.turn_right() # make a 90 degree right turn.
-drone.hover(1) # wait for 1 second in the air
-drone.turn_right(30, 3) # make a 30 degree right turn with a 3 second timeout.
+drone.set_pitch(50)
+drone.set_roll(50)
+
+drone.move(2)
+
+drone.reset_move() # reset the pitch and roll to 0.
+
+drone.move(2) # after resetting flight variables, move(2) won't move the drone
+
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### reset_move_values()
+
+#### Description
+The reset_move_values command will reset the values of roll, pitch, yaw, and throttle to 0.
+
+#### Syntax
+``reset_move_values()``  
+``reset_move_values(attempts)``    
+
+
+#### Parameters
+***integer* attempts:** Optional parameter that sends the reset_move_values command multiple times.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_move_values_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.set_pitch(50)
+drone.set_roll(50)
+
+drone.move(2)
+
+drone.reset_move_values() # reset the pitch and roll to 0.
+
+drone.move(2) # after resetting flight variables, move(2) won't move the drone
+
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### set_pitch()
+
+#### Description
+This is a setter function that allows you to set the pitch variable. Once you set pitch, you have to use move() to actually execute the movement. The pitch variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to pitch again.
+
+#### Syntax
+``set_pitch(power)``    
+
+
+#### Parameters
+***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative pitch is backwards, positive pitch is forwards.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_pitch_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# Drone goes forward for 1 second with 50 power
+drone.set_pitch(50)
+drone.move(1) # move command executes the movement for 1 second
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### set_roll()
+
+#### Description
+This is a setter function that allows you to set the roll variable. Once you set roll, you have to use ``move()`` to actually execute the movement. The roll variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to roll again.
+
+#### Syntax
+``set_roll(power)``    
+
+
+#### Parameters
+***integer* power:** Sets the roll variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative roll is left, positive roll is right.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_roll_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# Drone goes right for 1 second with 50 power
+drone.set_roll(50)
+drone.move(1) # move command executes the movement for 1 second
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### set_throttle()
+
+#### Description
+This is a setter function that allows you to set the throttle variable. Once you set throttle, you have to use move() to actually execute the movement. The throttle variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to throttle again.
+
+#### Syntax
+``set_throttle(power)``    
+
+#### Parameters
+***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative throttle is down, positive throttle is up.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_throttle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# Drone goes up for 1 second with 50 power
+drone.set_throttle(50)
+drone.move(1) # move command executes the movement for 1 second
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### set_yaw()
+
+#### Description
+This is a setter function that allows you to set the yaw variable. Once you set yaw, you have to use ``move()``to actually execute the movement. The yaw variable will remain what you last set it until the end of the flight sequence, so you will have to set it back to 0 if you don't want the drone to yaw again.
+
+#### Syntax
+``set_yaw(power)``    
+
+#### Parameters
+***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is right, positive yaw is left.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_yaw_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+# Drone turns left for 1 second with 50 power
+drone.set_yaw(50)
+drone.move(1) # move command executes the movement for 1 second
 drone.land()
 
 
@@ -1414,7 +1783,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Sound
+## Sounds
 
 ### controller_buzzer()
 
@@ -1687,319 +2056,7 @@ drone.close()
 
 <hr className="section_hr"/>
 
-## Sensors
-
-### get_battery()
-
-#### Description
-This function returns the current battery level percentage of the drone.
-
-#### Syntax
-``get_battery()``    
-
-
-#### Parameters
-None
-
-#### Returns
-***integer* battery percentage:** The current battery percentage of the drone's battery.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_battery_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-battery = drone.get_battery()
-print(battery)
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_bottom_range()
-
-#### Description
-This is a getter function which returns the current bottom range of the drone. The default unit of measurement is centimeters.
-This function uses the bottom range sensor to measure distance from the drone to the surface below the drone.
-
-#### Syntax
-``get_bottom_range()``      
-``get_bottom_range(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```   
-
-#### Parameters
-***string* unit:** The unit of measurement that is chosen for the height distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
-
-#### Returns
-***integer* bottom range:** The current bottom range calculated by the bottom range sensor (cm default). -100 or 0 when the sensor returns an error.
-999.9 when the detected object is out of range (1.5 meters) or the sensor timed out.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_bottom_range_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-import time
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-max_bottom_range = 100
-drone.takeoff()
-drone.set_throttle(20)
-current_bottom_range = drone.get_bottom_range("cm")
-while current_bottom_range <= max_bottom_range:
-  drone.move()
-  current_bottom_range = drone.get_bottom_range("cm")
-  print(current_bottom_range)
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_temperature()
-
-#### Description
-This is a getter function gets the drone's **temperature** from the barometer.
-The sensor reads the drone’s temperature, not the air around it. Default unit is Celcius.
-
-#### Syntax
-``get_temperature()``   
-``get_temperature(unit)``   
-
-
-#### Parameters
-***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celcius), "F" (Fahrenheit), and "K" (Kelvin).
-
-#### Returns
-***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celcius.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_temperature_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-temperature = drone.get_temperature()
-print(temperature)
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_flight_state()
-
-#### Description
-``get_flight_state()`` is a getter function that gets the current flight state of the drone.
-
-#### Syntax
-``get_flight_state()``    
-
-#### Parameters
-None
-
-#### Returns
-***string* state:** The current flight state of the drone.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flight_state_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-print(drone.get_flight_state())
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_flow_x()
-
-#### Description
-This getter function gets the relative position value calculated by the optical flow sensor from the x direction (forward and reverse).
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
-
-#### Syntax
-``get_flow_x()``    
-``get_flow_x(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
-
-#### Parameters
-***string* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
-
-#### Returns
-***integer* relative x-position:** The relative position value calculated by the optical flow sensor from the x direction. (cm default).
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_x_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.set_pitch(50)
-drone.move(1)
-print(drone.get_flow_x())
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_flow_y()
-
-#### Description
-This getter function gets the relative position value calculated by the optical flow sensor from the y direction (left and right).
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
-
-#### Syntax
-``get_flow_y()``    
-``get_flow_y(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
-
-#### Parameters
-***integer* unit:** The unit of measurement that is chosen for the distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
-
-#### Returns
-***integer* relative y-position**The relative position value calculated by the optical flow sensor from the y direction. (cm default). 
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_y_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.set_roll(50)
-drone.move(1)
-print(drone.get_flow_y())
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_front_range()
-
-#### Description
-This is a getter function which returns the current **Range** from the front range sensor. The default unit of measurement is centimeters.
-This function uses the front range sensor to measure distance from the drone to the surface in front of the drone.
-
-#### Syntax
-``get_front_range()``     
-``get_front_range(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
-
-
-#### Parameters
-***string* unit:** A string for the unit of measurement that is chosen for the range distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
-
-#### Returns
-***integer* front range:** The current range calculated by the front range sensor (cm by default).
--10 or 0 when the sensor returns an error value.
-999 when the detected object is out of range (1.5 meters) or the sensor timed out.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_front_range_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-drone.hover(3)
-distance = drone.get_front_range()
-print(distance)
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
+## Sensors (Position)
 
 ### get_pos_x()
 
@@ -2178,113 +2235,30 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
-### get_pressure()
+## Sensors (Range Sensor)
+
+### detect_wall()
 
 #### Description
-This is a getter function that returns the data from the barometer. The function returns a value in the unit Pascals. **Note:** 1atm = 101325 Pa
+Returns True when a distance below the threshold is reached. The sensor range is up to 1.5 meters (150cm)
 
 #### Syntax
-``get_pressure()``    
+``detect_wall()``    
+``detect_wall(distance)``  
 
 
 #### Parameters
-None
+***integer* distance:** An optional parameter that is the threshold in centimeters that will return True. The default value is 50
 
 #### Returns
-***float* pressure:** air pressure measured by barometer in Pascals.
+None
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_pressure_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-# print the pressure
-pressure = drone.get_pressure()
-print(pressure)
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_trim()
-
-#### Description
-This function gets the current trim values of the drone.
-
-#### Syntax
-``get_trim()``    
-
-#### Parameters
-None
-
-#### Returns
-***list* trim data:** A list of trim data &mdash; [0] for roll trim and [1] for pitch trim
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_trim_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-# print the trim values
-trim  = drone.get_trim()
-print(trim)
-print(trim[0])
-print(trim[1])
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_x_accel()
-
-#### Description
-Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
-
-#### Syntax
-``get_x_accel()``    
-
-
-#### Parameters
-None
-
-#### Returns
-***integer* x-acceleration:** The current x acceleration of the drone.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_x_accel_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('detect_wall_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2299,7 +2273,12 @@ drone.pair()
 
 
 drone.takeoff()
-print(drone.get_x_accel())
+# if a wall is detected in less than 500mm true will be returned.
+if drone.detect_wall():
+    print("wall detected!")
+else:
+    print("no wall detected!")
+
 drone.land()
 
 
@@ -2308,25 +2287,27 @@ drone.close()
 
 <hr/>
 
-### get_x_angle()
+### get_bottom_range()
 
 #### Description
-This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+This is a getter function which returns the current bottom range of the drone. The default unit of measurement is centimeters.
+This function uses the bottom range sensor to measure distance from the drone to the surface below the drone.
 
 #### Syntax
-``get_x_angle()``    
-
+``get_bottom_range()``      
+``get_bottom_range(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```   
 
 #### Parameters
-None
+***string* unit:** The unit of measurement that is chosen for the height distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified cm is chosen by default.
 
 #### Returns
-***integer* roll angle:** The current angle in regards to the X direction in degrees.
+***integer* bottom range:** The current bottom range calculated by the bottom range sensor (cm default). -100 or 0 when the sensor returns an error.
+999.9 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_x_angle_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_bottom_range_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2334,13 +2315,22 @@ None
 
 ```python
 #Python code
+import time
 from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
 
 
-print(drone.get_x_angle())
+max_bottom_range = 100
+drone.takeoff()
+drone.set_throttle(50)
+current_bottom_range = drone.get_bottom_range("cm")
+while current_bottom_range <= max_bottom_range:
+  drone.move()
+  current_bottom_range = drone.get_bottom_range("cm")
+  print(current_bottom_range)
+drone.land()
 
 
 drone.close()
@@ -2348,26 +2338,29 @@ drone.close()
 
 <hr/>
 
-### get_y_accel()
+### get_front_range()
 
 #### Description
-Getter function that gets the y acceleration of the drone. (y is left and right)
-<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+This is a getter function which returns the current **Range** from the front range sensor. The default unit of measurement is centimeters.
+This function uses the front range sensor to measure distance from the drone to the surface in front of the drone.
 
 #### Syntax
-``get_y_accel()``    
+``get_front_range()``     
+``get_front_range(unit="cm")`` &mdash; ```"m"```, ```"mm"```, and ```"in"``` are other options for ```unit```
 
 
 #### Parameters
-None
+***string* unit:** A string for the unit of measurement that is chosen for the range distance. Available units are "m" (meter), "cm" (centimeter), "mm" (millimeter), or "in" (inch). If a parameter is not specified "cm" is chosen by default.
 
 #### Returns
-***integer* y-acceleration:** The current y acceleration of the drone.
+***integer* front range:** The current range calculated by the front range sensor (cm by default).
+-10 or 0 when the sensor returns an error value.
+999 when the detected object is out of range (1.5 meters) or the sensor timed out.
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_y_accel_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_front_range_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2382,127 +2375,11 @@ drone.pair()
 
 
 drone.takeoff()
-print(drone.get_y_accel())
+drone.hover(3)
+distance = drone.get_front_range()
+print(distance)
 drone.land()
 
-
-drone.close()
-```
-
-<hr/>
-
-### get_y_angle()
-
-#### Description
-This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
-
-#### Syntax
-``get_y_angle()``    
-
-
-#### Parameters
-None
-
-#### Returns
-***integer* pitch angle:** The current angle in regards to the Y direction, in degrees.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_y_angle_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-print(drone.get_y_angle())
-
-drone.close()
-```
-
-<hr/>
-
-### get_z_accel()
-
-#### Description
-Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest on a flat surface, the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
-<img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
-
-#### Syntax
-``get_z_accel()``    
-
-
-#### Parameters
-None 
-
-#### Returns
-***integer* z-acceleration:** The current z acceleration of the drone.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_z_accel_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.takeoff()
-print(drone.get_z_accel())
-drone.land()
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_z_angle()
-
-#### Description
-This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
-
-#### Syntax
-``get_z_angle()``    
-
-#### Parameters
-None
-
-#### Returns
-***integer* yaw angle:** The current angle in regards to the Z direction.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_z_angle_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-print(drone.get_z_angle())
 
 drone.close()
 ```
@@ -2548,7 +2425,7 @@ drone.pair()
 
 max_height = 100
 drone.takeoff()
-drone.set_throttle(20)
+drone.set_throttle(50)
 current_height = drone.get_height("cm")
 while current_height <= max_height:
   drone.move()
@@ -2560,27 +2437,30 @@ drone.land()
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
-### get_back_color()
+## Sensors (Optical Flow Sensor)
+
+### get_flow_velocity_x()
 
 #### Description
-``get_back_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the back color sensor.
+Previously named ``get_flow_x()``. This getter function gets the raw data that's proportional to the x-velocity (forward and reverse) of the drone measured by the optical flow sensor.
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
-``get_back_color()``    
+``get_flow_velocity_x()``    
 
 
 #### Parameters
 None
 
 #### Returns
-**back color data:** Returns the back color sensor data.
+***integer* x-velocity:** The velocity of the drone measured by the optical flow sensor in the x direction
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_back_color_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_velocity_x_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2594,8 +2474,11 @@ drone = Drone()
 drone.pair()
 
 
-color_data = drone.get_back_color()
-print(color_data)
+drone.takeoff()
+drone.set_pitch(50)
+drone.move(1)
+print(drone.get_flow_velocity_x())
+drone.land()
 
 
 drone.close()
@@ -2603,24 +2486,26 @@ drone.close()
 
 <hr/>
 
-### get_color_data()
+### get_flow_velocity_y()
 
 #### Description
-Getter function that gets a list of color data from the drone.
+Previously named ``get_flow_y()``. This getter function gets the raw data that's proportional to the y-velocity (left and right) of the drone measured by the optical flow sensor.
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
-``get_color_data()``    
+``get_flow_velocity_y()``    
+
 
 #### Parameters
 None
 
 #### Returns
-***list* color data:** Returns a list of color data.
+***integer* y-velocity:** The velocity of the drone measured by the optical flow sensor in the y direction
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_color_data_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_velocity_y_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2634,7 +2519,11 @@ drone = Drone()
 drone.pair()
 
 
-color_data = drone.get_color_data()
+drone.takeoff()
+drone.set_roll(50)
+drone.move(1)
+print(drone.get_flow_velocity_y())
+drone.land()
 
 
 drone.close()
@@ -2642,170 +2531,30 @@ drone.close()
 
 <hr/>
 
-### get_front_color()
-
-#### Description
-``get_front_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the front color sensor.
-
-#### Syntax
-``get_front_color()``    
-
-#### Parameters
-None
-
-#### Returns
-**front color data:** Returns the back color sensor data.
-
-#### Example Code
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_front_color_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-color_data = drone.get_front_color()
-print(color_data)
-
-
-drone.close()
-```
-
-<hr/>
-
-### load_classifier()
-
+### get_flow_x()
 :::warning
 
-This function is currently unavailable for *Python for Robolink*.
+This function has been deprecated and will be removed in a future release. Please use ``get_flow_velocity_x()`` instead.
 
 :::
 
 #### Description
-``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
+This getter function gets the raw data that's proportional to the x-velocity (forward and reverse) of the drone measured by the optical flow sensor.
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
-``load_classifier()``   
-``load_classifier(dataset, show_graph)``   
-
-
-#### Parameters
-***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.<br/>
-***boolean* show_graph:** An optional boolean parameter that will show a graph of the color set data. The default value is False.
-
-#### Returns
-None
-
-#### Example Code
-
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-# This example assumes the "custom_color_data" directory exists
-drone.load_classifier("custom_color_data")
-
-color_data = drone.get_color_data()
-color = drone.predict_colors(color_data)
-print(color)
-
-
-drone.close()
-```
-
-<hr/>
-
-### predict_colors()
-
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
-#### Description
-Predicts what color the color sensors are currently seeing.
-
-#### Syntax
-``predict_colors(color_data)``    
-
-#### Parameters
-***list* color_data:** loaded from ```drone.get_color_data()```
-
-#### Returns
-***list* predictions:** A prediction of which color the front and back color sensors are currently seeing, as a list.
-
-#### Example Code
-
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-
-drone = Drone()
-drone.pair()
-
-
-drone.load_classifier("color_data_file")
-color_data = drone.get_color_data()
-color = drone.predict_colors(color_data)
-print(color)
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_colors()
-
-#### Description
-``get_colors()`` is a getter function that returns one of the 8 pre-calibrated colors (provided in the color cards).
-
-#### Syntax
-``get_colors()``    
-
+``get_flow_x()``    
 
 #### Parameters
 None
 
 #### Returns
-***list* predictions:** Returns a list containing the front and back color sensor predictions as strings (Red, Green, Yellow, Blue, Cyan, Magenta, Black, White, Unknown)
+***integer* x-velocity:** The velocity of the drone measured by the optical flow sensor in the x direction
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_colors_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_x_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2819,8 +2568,11 @@ drone = Drone()
 drone.pair()
 
 
-colors = drone.get_colors()
-print(colors)
+drone.takeoff()
+drone.set_pitch(50)
+drone.move(1)
+print(drone.get_flow_x())
+drone.land()
 
 
 drone.close()
@@ -2828,161 +2580,31 @@ drone.close()
 
 <hr/>
 
-### new_color_data()
+### get_flow_y()
 
 :::warning
 
-This function is currently unavailable for *Python for Robolink*.
+This function has been deprecated and will be removed in a future release. Please use ``get_flow_velocity_y()`` instead.
 
 :::
 
 #### Description
-``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
+This getter function gets the raw data that's proportional to the y-velocity (left and right) of the drone measured by the optical flow sensor.
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
-``new_color_data(label, data, dataset)``    
-
+``get_flow_y()``    
 
 #### Parameters
-***string* label:** label name that will be used for the filename.    
-***list* data:** HSV data samples    
-***string* dataset:** Folder name where the text file will be stored.   
-
-#### Returns
 None
 
-#### Example Code
-
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-import time
-
-drone = Drone()
-drone.pair()
-
-
-dataset = "color_data"
-colors = ["green", "purple", "red", "lightblue", "blue", "yellow", "black", "white"]
-for color in colors:
-    data = []
-    samples = 500
-    for i in range(1):
-        print("Sample: ", i+1)
-        next = input("Press enter to calibrate " + color)
-        print("0% ", end="")
-        for j in range(samples):
-            color_data = drone.get_color_data()[0:9]
-            data.append(color_data)
-            time.sleep(0.005)
-            if j % 10 == 0:
-                print("-", end="")
-        print(" 100%")
-    drone.new_color_data(color, data, dataset)
-print("Done calibrating.")
-
-
-drone.close()
-```
-
-<hr/>
-
-### append_color_data()
-
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
-#### Description
-``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
-
-#### Syntax
-``append_color_data(label, data, dataset)``    
-
-#### Parameters
-***string* label:** label name that will be used for the filename.    
-***list* data:** HSV data samples    
-***string* dataset:** Folder name where the text file will be stored.    
-
 #### Returns
-None
-
-#### Example Code
-
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
-</div>
-
-```python
-#Python code
-from codrone_edu.drone import *
-import time
-
-drone = Drone()
-drone.pair()
-
-
-dataset = "color_data"
-colors = ["green", "purple", "red", "lightblue", "blue", "yellow", "black", "white"]
-for color in colors:
-    data = []
-    samples = 500
-    for i in range(1):
-        print("Sample: ", i+1)
-        next = input("Press enter to calibrate " + color)
-        print("0% ", end="")
-        for j in range(samples):
-            color_data = drone.get_color_data()[0:9]
-            data.append(color_data)
-            time.sleep(0.005)
-            if j % 10 == 0:
-                print("-", end="")
-        print(" 100%")
-    drone.append_color_data(color, data, dataset)
-print("Done calibrating.")
-
-
-drone.close()
-```
-
-<hr/>
-
-### height_from_pressure()
-
-#### Description
-This function gets the drone's current height in centimeters based on the initial pressure sensor reading. You must call **set_initial_pressure()** to establish a reference point.
-
-#### Syntax
-``height_from_pressure()``    
-``height_from_pressure(b, m)``   
-
-#### Parameters
-***float* b:** slope intercept in pascals (default is set to 0)     
-***float* m:** slope in centimeters/pascals (default is set to 9.34)
-
-#### Returns
-***float* height:** Estimated height in centimeters relative to starting position.
+***integer* y-velocity:** The velocity of the drone measured by the optical flow sensor in the y direction
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('height_from_pressure_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flow_y_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -2996,35 +2618,40 @@ drone = Drone()
 drone.pair()
 
 
-drone.set_initial_pressure() # Take an initial pressure reading as a reference 
+drone.takeoff()
+drone.set_roll(50)
+drone.move(1)
+print(drone.get_flow_y())
+drone.land()
 
-for i in range(300):
-    print(drone.height_from_pressure(), " centimeters")
-    time.sleep(0.2)
 
 drone.close()
 ```
 
-<hr/>
+<hr className="section_hr"/>
 
-### set_initial_pressure()
+## Sensors (Gyroscope Sensor)
+
+### get_accel_x()
 
 #### Description
-This function saves an initial pressure reading to the drone. This function is used in combination with other functions such as ``height_from_pressure()``
+Previously named ``get_x_accel()``. Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
-``set_initial_pressure()``    
+``get_accel_x()``    
+
 
 #### Parameters
 None
 
 #### Returns
-None
+***integer* x-acceleration:** The current x acceleration of the drone.
 
 #### Example Code
 
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('set_initial_pressure_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_accel_x_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -3038,14 +2665,211 @@ drone = Drone()
 drone.pair()
 
 
-# Here is where we save our initial pressure. Now the 'height_from_pressure()' function has a reference for height
-drone.set_initial_pressure()
+drone.takeoff()
+print(drone.get_accel_x())
+drone.land()
 
-# The drone will not take off in this example but by moving it up and down manually the resulting height will print
-for i in range(300):
-    print(drone.height_from_pressure(), " millimeters")
-    time.sleep(0.2)
 
+drone.close()
+```
+
+<hr/>
+
+### get_accel_y()
+
+#### Description
+Previously named ``get_y_accel()``. Getter function that gets the y acceleration of the drone. (y is left and right)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
+#### Syntax
+``get_accel_y()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* y-acceleration:** The current y acceleration of the drone.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_accel_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+print(drone.get_accel_y())
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_accel_z()
+
+#### Description
+Previously named ``get_z_accel()``. Getter function that gets the z acceleration of the drone. (z is up and down)
+<img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
+
+#### Syntax
+``get_accel_z()``    
+
+
+#### Parameters
+None 
+
+#### Returns
+***integer* z-acceleration:** The current z acceleration of the drone.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_accel_z_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+print(drone.get_accel_z())
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_angle_x()
+
+#### Description
+Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+
+#### Syntax
+``get_angle_x()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* roll angle:** The current angle in regards to the X direction in degrees.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_angle_x_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+print(drone.get_angle_x())
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_angle_y()
+
+#### Description
+Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+
+#### Syntax
+``get_angle_y()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* pitch angle:** The current angle in regards to the Y direction, in degrees.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_angle_y_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+print(drone.get_angle_y())
+
+drone.close()
+```
+
+<hr/>
+
+### get_angle_z()
+
+#### Description
+Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+
+#### Syntax
+``get_angle_z()``    
+
+#### Parameters
+None
+
+#### Returns
+***integer* yaw angle:** The current angle in regards to the Z direction.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_angle_z_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+print(drone.get_angle_z())
 
 drone.close()
 ```
@@ -3183,6 +3007,1284 @@ drone.close()
 
 <hr/>
 
+
+### get_x_accel()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_accel_x()`` instead.
+
+:::
+
+#### Description
+Getter function that gets the x acceleration of the drone. (x is forwards and backwards)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
+#### Syntax
+``get_x_accel()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* x-acceleration:** The current x acceleration of the drone.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_x_accel_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+print(drone.get_x_accel())
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_x_angle()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_angle_x()`` instead.
+
+:::
+
+#### Description
+This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+
+#### Syntax
+``get_x_angle()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* roll angle:** The current angle in regards to the X direction in degrees.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_x_angle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+print(drone.get_x_angle())
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_y_accel()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_accel_y()`` instead.
+
+:::
+
+#### Description
+Getter function that gets the y acceleration of the drone. (y is left and right)
+<img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
+
+#### Syntax
+``get_y_accel()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* y-acceleration:** The current y acceleration of the drone.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_y_accel_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+print(drone.get_y_accel())
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_y_angle()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_angle_y()`` instead.
+
+:::
+
+#### Description
+This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+
+#### Syntax
+``get_y_angle()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* pitch angle:** The current angle in regards to the Y direction, in degrees.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_y_angle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+print(drone.get_y_angle())
+
+drone.close()
+```
+
+<hr/>
+
+### get_z_accel()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_accel_z()`` instead.
+
+:::
+
+#### Description
+Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest on a flat surface, the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
+<img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
+
+#### Syntax
+``get_z_accel()``    
+
+
+#### Parameters
+None 
+
+#### Returns
+***integer* z-acceleration:** The current z acceleration of the drone.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_z_accel_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+print(drone.get_z_accel())
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_z_angle()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_angle_z()`` instead.
+
+:::
+
+#### Description
+This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+
+#### Syntax
+``get_z_angle()``    
+
+#### Parameters
+None
+
+#### Returns
+***integer* yaw angle:** The current angle in regards to the Z direction.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_z_angle_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+print(drone.get_z_angle())
+
+drone.close()
+```
+
+<hr/>
+
+### reset_gyro()
+
+#### Description
+Previously named ``reset_sensor()``. This function will reset the roll, pitch, and yaw angles back to zero.
+
+#### Syntax
+``reset_gyro()``    
+
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_gyro_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+print("Before")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+drone.takeoff()
+drone.set_yaw(50)
+drone.move(1)
+drone.land()
+print("After")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+drone.reset_gyro() 
+print("Reset")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+
+
+drone.close()
+```
+
+<hr/>
+
+### reset_sensor()
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``reset_gyro()`` instead.
+
+:::
+
+
+#### Description
+This function will reset the gyro angles back to zero for roll, pitch, and yaw.
+
+#### Syntax
+``reset_sensor()``    
+
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('reset_sensor_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+print("Before")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+drone.takeoff()
+drone.set_yaw(50)
+drone.move(1)
+drone.land()
+print("After")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+drone.reset_sensor() 
+print("Reset")
+print("X angle:", drone.get_x_angle())
+print("Y angle:", drone.get_y_angle())
+print("Z angle:", drone.get_z_angle())
+
+
+drone.close()
+```
+
+<hr className="section_hr"/>
+
+## Sensors (Pressure Sensor)
+
+### get_drone_temperature()
+
+#### Description
+Previously named ``get_temperature()``. This is a getter function gets the drone's temperature from the barometer.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celsius.
+
+#### Syntax
+``get_drone_temperature()``   
+``get_drone_temperature(unit)``   
+
+
+#### Parameters
+***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celsius), "F" (Fahrenheit), and "K" (Kelvin).
+
+#### Returns
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celsius.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_drone_temperature_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+temperature = drone.get_drone_temperature()
+print(temperature)
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_temperature()
+
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``get_drone_temperature()`` instead.
+
+:::
+
+#### Description
+This is a getter function gets the drone's **temperature** from the barometer.
+The sensor reads the drone’s temperature, not the air around it. Default unit is Celsius.
+
+#### Syntax
+``get_temperature()``   
+``get_temperature(unit)``   
+
+
+#### Parameters
+***string* unit:** A string for the unit of temperature of the drone. Available units are "C" (Celsius), "F" (Fahrenheit), and "K" (Kelvin).
+
+#### Returns
+***integer* temperature:** The temperature of the drone in the given unit as a float. Default unit is Celsius.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_temperature_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+temperature = drone.get_temperature()
+print(temperature)
+
+
+drone.close()
+```
+
+<hr/>
+
+### height_from_pressure()
+
+#### Description
+This function gets the drone's current height in centimeters based on the initial pressure sensor reading. You must call **set_initial_pressure()** to establish a reference point.
+
+#### Syntax
+``height_from_pressure()``    
+``height_from_pressure(b, m)``   
+
+#### Parameters
+***float* b:** slope intercept in pascals (default is set to 0)     
+***float* m:** slope in centimeters/pascals (default is set to 9.34)
+
+#### Returns
+***float* height:** Estimated height in centimeters relative to starting position.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('height_from_pressure_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.set_initial_pressure() # Take an initial pressure reading as a reference 
+
+for i in range(300):
+    print(drone.height_from_pressure(), " centimeters")
+    time.sleep(0.2)
+
+drone.close()
+```
+
+<hr/>
+
+### get_pressure()
+
+#### Description
+This is a getter function that returns the data from the barometer. The function returns a value in the unit Pascals. **Note:** 1atm = 101325 Pa
+
+#### Syntax
+``get_pressure()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***float* pressure:** air pressure measured by barometer in Pascals.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_pressure_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+# print the pressure
+pressure = drone.get_pressure()
+print(pressure)
+
+
+drone.close()
+```
+
+<hr/>
+
+### set_initial_pressure()
+
+#### Description
+This function saves an initial pressure reading to the drone. This function is used in combination with other functions such as ``height_from_pressure()``
+
+#### Syntax
+``set_initial_pressure()``    
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('set_initial_pressure_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+# Here is where we save our initial pressure. Now the 'height_from_pressure()' function has a reference for height
+drone.set_initial_pressure()
+
+# The drone will not take off in this example but by moving it up and down manually the resulting height will print
+for i in range(300):
+    print(drone.height_from_pressure(), " millimeters")
+    time.sleep(0.2)
+
+
+drone.close()
+```
+
+<hr className="section_hr"/>
+
+## Sensors (Color Sensor)
+
+### append_color_data()
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
+
+#### Syntax
+``append_color_data(label, data, dataset)``    
+
+#### Parameters
+***string* label:** label name that will be used for the filename.    
+***list* data:** HSV data samples    
+***string* dataset:** Folder name where the text file will be stored.    
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+dataset = "color_data"
+colors = ["green", "purple", "red", "lightblue", "blue", "yellow", "black", "white"]
+for color in colors:
+    data = []
+    samples = 500
+    for i in range(1):
+        print("Sample: ", i+1)
+        next = input("Press enter to calibrate " + color)
+        print("0% ", end="")
+        for j in range(samples):
+            color_data = drone.get_color_data()[0:9]
+            data.append(color_data)
+            time.sleep(0.005)
+            if j % 10 == 0:
+                print("-", end="")
+        print(" 100%")
+    drone.append_color_data(color, data, dataset)
+print("Done calibrating.")
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_back_color()
+
+#### Description
+``get_back_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the back color sensor.
+
+#### Syntax
+``get_back_color()``    
+
+
+#### Parameters
+None
+
+#### Returns
+**back color data:** Returns the back color sensor data.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_back_color_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+color_data = drone.get_back_color()
+print(color_data)
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_color_data()
+
+#### Description
+Getter function that gets a list of color data from the drone.
+
+#### Syntax
+``get_color_data()``    
+
+#### Parameters
+None
+
+#### Returns
+***list* color data:** Returns a list of color data.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_color_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+color_data = drone.get_color_data()
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_colors()
+
+#### Description
+``get_colors()`` is a getter function that returns one of the 8 pre-calibrated colors (provided in the color cards).
+
+#### Syntax
+``get_colors()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***list* predictions:** Returns a list containing the front and back color sensor predictions as strings (Red, Green, Yellow, Blue, Cyan, Magenta, Black, White, Unknown)
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_colors_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+colors = drone.get_colors()
+print(colors)
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_front_color()
+
+#### Description
+``get_front_color()`` is a getter function that calls ``get_color_data()`` but only returns the data for the front color sensor.
+
+#### Syntax
+``get_front_color()``    
+
+#### Parameters
+None
+
+#### Returns
+**front color data:** Returns the back color sensor data.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_front_color_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+color_data = drone.get_front_color()
+print(color_data)
+
+
+drone.close()
+```
+
+<hr/>
+
+### load_classifier()
+:::warning
+
+This function has been deprecated and will be removed in a future release. Please use ``load_classifier()`` instead.
+
+:::
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
+
+#### Syntax
+``load_classifier()``   
+``load_classifier(dataset, show_graph)``   
+
+
+#### Parameters
+***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.
+***boolean* show_graph:** An optional boolean parameter that will show a graph of the color set data. The default value is False.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+# This example assumes the "custom_color_data" directory exists
+drone.load_classifier("custom_color_data")
+
+color_data = drone.get_color_data()
+color = drone.predict_colors(color_data)
+print(color)
+
+
+drone.close()
+```
+
+<hr/>
+
+### load_color_data()
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+Previously name ``load_classifier()``. ``load_color_data()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
+
+#### Syntax
+``load_color_data()``   
+``load_color_data(dataset, show_graph)``   
+
+
+#### Parameters
+***string* dataset:** An optional parameter to load a custom color set. If no color set is given then the default color set will be used.
+***boolean* show_graph:** An optional boolean parameter that will show a graph of the color set data. The default value is False.
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('load_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+# This example assumes the "custom_color_data" directory exists
+drone.load_color_data("custom_color_data")
+
+color_data = drone.get_color_data()
+color = drone.predict_colors(color_data)
+print(color)
+
+
+drone.close()
+```
+
+<hr/>
+
+### new_color_data()
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
+
+#### Syntax
+``new_color_data(label, data, dataset)``    
+
+
+#### Parameters
+***string* label:** label name that will be used for the filename.    
+***list* data:** HSV data samples    
+***string* dataset:** Folder name where the text file will be stored.   
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+dataset = "color_data"
+colors = ["green", "purple", "red", "lightblue", "blue", "yellow", "black", "white"]
+for color in colors:
+    data = []
+    samples = 500
+    for i in range(1):
+        print("Sample: ", i+1)
+        next = input("Press enter to calibrate " + color)
+        print("0% ", end="")
+        for j in range(samples):
+            color_data = drone.get_color_data()[0:9]
+            data.append(color_data)
+            time.sleep(0.005)
+            if j % 10 == 0:
+                print("-", end="")
+        print(" 100%")
+    drone.new_color_data(color, data, dataset)
+print("Done calibrating.")
+
+
+drone.close()
+```
+
+<hr/>
+
+### predict_colors()
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+Predicts what color the color sensors are currently seeing.
+
+#### Syntax
+``predict_colors(color_data)``    
+
+#### Parameters
+***list* color_data:** loaded from ```drone.get_color_data()```
+
+#### Returns
+***list* predictions:** A prediction of which color the front and back color sensors are currently seeing, as a list.
+
+#### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.load_color_data("color_data_file")
+color_data = drone.get_color_data()
+color = drone.predict_colors(color_data)
+print(color)
+
+
+drone.close()
+```
+
+<hr className="section_hr"/>
+
+## Sensors (State Data)
+
+### get_battery()
+
+#### Description
+This function returns the current battery level percentage of the drone.
+
+#### Syntax
+``get_battery()``    
+
+
+#### Parameters
+None
+
+#### Returns
+***integer* battery percentage:** The current battery percentage of the drone's battery.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_battery_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+battery = drone.get_battery()
+print(battery)
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_error_data()
+
+#### Description
+This command requests if the drone is in an error state. One or more of the following error states can be printed to console.   
+* **Motion_Calibrating:** Drone is calibrating.    
+* **Motion_NoAnswer:** Gyroscope Accelerometer is unresponsive and may be damaged.    
+* **Motion_WrongValue:** Gyroscope Accelerometer is giving erroneous data.   
+* **Motion_NotCalibrated:** Gyroscope Accelerometer is not calibrated.   
+* **Pressure_NoAnswer:** Barometer is unresponsive.    
+* **Pressure_WrongValue:** Barometer is giving erroneous data.   
+* **RangeGround_NoAnswer:** Bottom Range sensor is unresponsive.     
+* **RangeGround_WrongValue:** Bottom range sensor has given an incorrect value.    
+* **Flow_NoAnswer:** Optical flow sensor is unresponsive.    
+* **Flow_CannotRecognizeGroundImage:** Optical flow sensor is giving erroneous data due to the image. 
+* **NotRegistered:** Device is not registered.
+* **FlashReadLock_UnLocked:** Flash memory read lock not engaged.
+* **BootloaderWriteLock_UnLocked:** Bootloader write lock not engaged.
+
+* **LowBattery:** Drone has low battery.
+* **TakeoffFailure_CheckPropellerAndMotor:** Takeoff failure. Check propeller and motor.
+* **CheckPropellerVibration:** Propeller vibration detected.
+* **Attitude_NotStable:** Attitude not stable.
+* **CanNotFLip_LowBattery:** Drone won't flip due to low battery (< 50%).
+* **CanNotFlip_TooHeavy:** Drone won't flip due to being too heavy (probably due to payload attached to drone).
+
+#### Syntax
+``get_error_data()``     
+``get_error_data(delay)``    
+
+
+#### Parameters
+***float* delay:** The delay in seconds that the command will wait for a response. The default value is 0.1. 
+
+#### Returns
+***string* error state:** text consisting of one or more error messages
+
+#### Example Code
+Turn the drone left and right on a flat surface while the program runs to see the angular speed change. Then, hold the drone as still as possible and watch angular speed drop.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_error_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from time import sleep
+from codrone_edu.drone import *
+from codrone_edu.protocol import *
+
+drone = Drone()
+drone.pair()
+
+
+# For demonstration purposes, activate motion calibration
+drone.sendCommand(CommandType.ClearBias)
+sleep(0.1)
+for i in range(10):
+    drone.get_error_data() # see motion error state during calibration
+    time.sleep(0.5)
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_flight_state()
+
+#### Description
+``get_flight_state()`` is a getter function that gets the current flight state of the drone.
+
+#### Syntax
+``get_flight_state()``    
+
+#### Parameters
+None
+
+#### Returns
+***string* state:** The current flight state of the drone.
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_flight_state_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+print(drone.get_flight_state())
+
+
+drone.close()
+```
+
+<hr/>
+
+### get_movement_state()
+
+#### Description
+This command requests the moving state of the drone, whether it is ready to fly, hovering, etc.
+
+#### Syntax
+``get_movement_state()``
+
+#### Parameters
+None
+
+#### Returns
+***enum* ModeMovement:** The movement state of the drone (None_, Ready, Hovering, ReturnHome)
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_movement_state_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+from codrone_edu.drone import *
+drone = Drone()
+
+drone.pair()
+print(drone.get_movement_state()) # prints "ModeMovement.Ready" after pairing
+
+drone.takeoff()
+print(drone.get_movement_state()) # "ModeMovement.Hovering" after takeoff
+
+drone.land()
+drone.close()
+```
+
+<hr/>
+
 ### get_sensor_data()
 
 #### Description
@@ -3253,65 +4355,6 @@ for i in range(len(data)):
 
     print(i, data[i])  # print out each data point
 
-
-
-drone.close()
-```
-
-<hr/>
-
-### get_error_data()
-
-#### Description
-This command requests if the drone is in an error state. One or more of the following error states can be printed to console.   
-* **Motion_Calibrating:** Drone is calibrating.    
-* **Motion_NoAnswer:** Gyroscope Accelerometer is unresponsive and may be damaged.    
-* **Motion_WrongValue:** Gyroscope Accelerometer is giving erroneous data.   
-* **Motion_NotCalibrated:** Gyroscope Accelerometer is not calibrated.   
-* **Pressure_NoAnswer:** Barometer is unresponsive.    
-* **Pressure_WrongValue:** Barometer is giving erroneous data.   
-* **RangeGround_NoAnswer:** Bottom Range sensor is unresponsive.     
-* **RangeGround_WrongValue:** Bottom range sensor has given an incorrect value.    
-* **Flow_NoAnswer:** Optical flow sensor is unresponsive.    
-* **Flow_CannotRecognizeGroundImage:** Optical flow sensor is giving erroneous data due to the image.  
-
-#### Syntax
-``get_error_data()``     
-``get_error_data(delay)``    
-
-
-#### Parameters
-***float* delay:** The delay in seconds that the command will wait for a response. The default value is 0.1. 
-
-#### Returns
-***string* error state:** text consisting of one or more error messages
-
-#### Example Code
-Turn the drone left and right on a flat surface while the program runs to see the angular speed change. Then, hold the drone as still as possible and watch angular speed drop.
-
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('get_error_data_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
-</div>
-
-```python
-#Python code
-from time import sleep
-from codrone_edu.drone import *
-from codrone_edu.protocol import *
-
-drone = Drone()
-drone.pair()
-
-
-# For demonstration purposes, activate motion calibration
-drone.sendCommand(CommandType.ClearBias)
-sleep(0.1)
-for i in range(10):
-    drone.get_error_data() # see motion error state during calibration
-    time.sleep(0.5)
 
 
 drone.close()
@@ -4127,7 +5170,7 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
-drone.controller_clear_screen()
+drone.controller_clear_screen() # resets controller screen
 
 drone.close()
 ```
@@ -4143,10 +5186,12 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 :::
 
 #### Description
-Creates a new image object for drawing
+Creates a new image object for drawing on the controller. You can create a canvas with a white or black background.
 
 #### Syntax
 ``controller_create_canvas()``    
+``controller_create_canvas(color="white")``    
+
 
 #### Parameters
 None
@@ -4172,7 +5217,8 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
-image = drone.controller_create_canvas() # see controller_draw_canvas for how to draw on this new image object
+# creates an image object, the canvas
+image = drone.controller_create_canvas() # see controller_draw_canvas() for how to draw on this new image object
 
 drone.close()
 ```
@@ -4191,13 +5237,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws an arc (a portion of a circle outline) between the start and end angles, inside the given bounding box.
 
 #### Syntax
-``controller_draw_arc(arc_list, start_angle, end_angle, image, pixel_width)``    
+``controller_draw_arc(arc_list, start_angle, end_angle, image)``    
+``controller_draw_arc(arc_list, start_angle, end_angle, image, pixel_width=1)``    
 
 #### Parameters
-***list* arc_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.   
-***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.    
-***integer* end_angle:** Ending angle, in degrees.    
-***Image* image:** image object created from ``create_image_canvas()``.    
+***list* arc_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.<br/>
+***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.<br/>
+***integer* end_angle:** Ending angle, in degrees.<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of arc. By default, color is black.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
 
 #### Returns
@@ -4221,7 +5269,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
 drone.controller_draw_arc(arc_list, 0, 180, image) # set arc onto image object
@@ -4274,7 +5322,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
 ellipse_list = [(10, 10), (40, 40)]
@@ -4304,14 +5352,17 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Same as controller_draw_arc(), but connects the end points with a straight line.
 
 #### Syntax
-``controller_draw_chord(arc_list, start_angle, end_angle, image, pixel_width)``
+``controller_draw_chord(arc_list, start_angle, end_angle, image)``<br/>
+``controller_draw_chord(arc_list, start_angle, end_angle, image, color="black", fill_in=None, pixel_width=1)``
 
 #### Parameters
-***list* chord_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.   
-***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.    
-***integer* end_angle:** Ending angle, in degrees.    
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.    
+***list* chord_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.<br/>   
+***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.<br/>
+***integer* end_angle:** Ending angle, in degrees.<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of chord. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
 
 #### Returns
 None
@@ -4334,13 +5385,12 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates image object, the canvas
 
 chord_list = [(20, 40), (50, 50)]
 drone.controller_draw_chord(chord_list, 0, 180, image) # set chord onto image object
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
-
 
 drone.close()
 ```
@@ -4359,13 +5409,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws an ellipse inside the given bounding box.
 
 #### Syntax
-``controller_draw_ellipse(ellipse_list, image, fill_in, pixel_width)``    
+``controller_draw_ellipse(ellipse_list, image)``    
+``controller_draw_ellipse(ellipse_list, image, color="black", fill_in=None, pixel_width=1)``
 
 #### Parameters
-***list* ellipse_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)] where x1 >= x0 and y1 >= y0.    
-***Image* image:** image object created from ``create_image_canvas()``.   
-***integer* fill_in:** optional parameter. None by default. 0 will fill with black.   
-***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.    
+***list* ellipse_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)] where x1 >= x0 and y1 >= y0.<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of ellipse. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
 
 #### Returns
 None
@@ -4388,7 +5440,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 ellipse_list = [(10, 10), (40, 40)]
 drone.controller_draw_ellipse(ellipse_list, image) # set ellipse onto image object
@@ -4429,11 +5481,13 @@ None
 
 #### Example Code
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_image_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
@@ -4446,10 +5500,9 @@ drone.pair()
 
 drone.controller_clear_screen() # clear screen for drawing
 
-image = get_image_data("example.png") # where example.png is an image in the same directory as the program
+image = drone.get_image_data("example.png") # where example.png is an image in the same directory as the program
 
 drone.controller_draw_image(image) # draws the image onto the controller's screen
-
 
 drone.close()
 ```
@@ -4474,16 +5527,18 @@ Draws a line between points (x1, y1) and (x2, y2)
 ```
 
 #### Syntax
-``controller_draw_line(x1, y1, x2, y2, pixel, line_type)``    
+``controller_draw_line(x1, y1, x2, y2, image)``    
+``controller_draw_line(x1, y1, x2, y2, image, color="black", pixel_width=1)``    
 
 
 #### Parameters
-***integer* x1:** point 1 x coordinate    
-***integer* y1:** point 1 y coordinate    
-***integer* x2:** point 2 x coordinate    
-***integer* y2:** point 2 y coordinate    
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
-***string* line_type:** optional parameter that is the type of line drawn. default is Solid    
+***integer* x1:** point 1 x coordinate<br/>
+***integer* y1:** point 1 y coordinate<br/>
+***integer* x2:** point 2 x coordinate<br/>
+***integer* y2:** point 2 y coordinate<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of line. By default, color is black<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
 
 #### Returns
 None
@@ -4506,9 +5561,11 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
-drone.controller_draw_line(0,0, 60, 60)
+drone.controller_draw_line(0,0, 60, 60, image) # draws a line from (0,0) to (60,60)
 
+drone.controller_draw_canvas(image) # draw image onto controller screen
 
 drone.close()
 ```
@@ -4527,12 +5584,15 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws a single pixel at the point (x,y)
 
 #### Syntax
-``controller_draw_point(x, y, pixel)``    
+``controller_draw_point(x, y, image)``    
+``controller_draw_point(x, y, image, color="black")``    
+
 
 #### Parameters
 ***integer* x:** x coordinate <br/>
 ***integer* y:** y coordinate <br/>
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black
+***Image* image:** image object created from ``create_image_canvas()``<br/>
+***string* color:** color of point. By default, color is black.
 
 #### Returns
 None
@@ -4556,8 +5616,11 @@ drone.pair()
 
 drone.controller_clear_screen() # clear screen for drawing
 
-drone.controller_draw_point(10, 10) # place a pixel at the (10,10) coordinate
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
+drone.controller_draw_point(10, 10, image) # place a pixel at the (10,10) coordinate of canvas
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -4576,11 +5639,16 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 The polygon outline consists of straight lines between the given coordinates, plus a straight line between the last and the first coordinate.
 
 #### Syntax
-``controller_draw_polygon(point_list)``    
+``controller_draw_polygon(point_list, image)``    
+``controller_draw_polygon(point_list, image, color="black", fill_in=None, pixel_width=1)``    
 
 
 #### Parameters
-***list* point_list:** the list of coordinates
+***list* point_list:** the list of coordinates<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of polygon. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
 None
@@ -4603,10 +5671,13 @@ drone.pair()
 
 
 drone.controller_clear_screen()
+image = drone.controller_create_canvas() # creates an image object, the canvas
 
-point_list_square = ((10, 10), (30, 10), (30, 30), (10, 30)) # creating a list of coordinates
+point_list = [(0, 0), (15,15), (30,0)] # list of points that will be connected to draw a polygon
 
-drone.controller_draw_polygon(point_list_square)
+drone.controller_draw_polygon(point_list, image) # forms polygon using list of points
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 
 drone.close()
@@ -4632,17 +5703,19 @@ width
 ```
 
 #### Syntax
-``controller_draw_rectangle(x, y, width, height, pixel, fill, line_type)``    
+``controller_draw_rectangle(x, y, width, height, image)``    
+``controller_draw_rectangle(x, y, width, height, image, color="black" fill_in=None, pixel_width=1)``    
 
 
 #### Parameters
-***integer* x:** top left corner x coordinate   
-***integer* y:** top left corner y coordinate   
-***integer* width:** width of rectangle   
-***integer* height:** height of rectangle   
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
-***boolean* fill:** optional parameter to fill in the rectangle or not. default value is False    
-***string* line_type:** optional parameter that is the type of line drawn. default is Solid
+***integer* x:** top left corner x coordinate<br/>
+***integer* y:** top left corner y coordinate<br/>
+***integer* width:** width of rectangle<br/>
+***integer* height:** height of rectangle<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of rectangle. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
 None
@@ -4665,9 +5738,12 @@ drone.pair()
 
 
 drone.controller_clear_screen()
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
-drone.controller_draw_rectangle(30, 15, 50, 30)
+# draws rectangle starting at (0,0) on canvas with width of 40px and height of 20px
+drone.controller_draw_rectangle(0, 0, 40, 20,image)
 
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -4692,15 +5768,17 @@ width
 ```
 
 #### Syntax
-``controller_draw_square(x, y, width, pixel, fill, line_type)``    
+``controller_draw_square(x, y, width, image)``    
+``controller_draw_square(x, y, width, image, color="black", fill_in=None, pixel_width=1)``    
 
 #### Parameters
-***integer* x:** top left corner x coordinate   
-***integer* y:** top left corner y coordinate   
-***integer* width:** width of square    
-***string* pixel:** optional parameter that changes the pixel color of the line. default value is Black    
-***boolean* fill:** optional parameter to fill in the square or not. default value is False   
-***string* line_type:** optional parameter that is the type of line drawn. default is Solid
+***integer* x:** top left corner x coordinate<br/>
+***integer* y:** top left corner y coordinate<br/>
+***integer* width:** width of square<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of square. By default, color is black.<br/>
+***string* fill_in:** color of fill. By default, no fill in.<br/>
+***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
 
 #### Returns
 None
@@ -4723,8 +5801,12 @@ drone.pair()
 
 
 drone.controller_clear_screen()
-drone.controller_draw_square(10, 10, 25)
+image = drone.controller_create_canvas()  # creates an image object, the canvas
 
+# draws a square on canvas that's 30 x 30px at (0, 0)
+drone.controller_draw_square(0, 0, 30, image)
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -4740,19 +5822,20 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 :::
 
 #### Description
-Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
+Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions.
 
 #### Syntax
-``controller_draw_string_align(x_start, x_end, y, string, alignment, string_font, pixel_color)``    
+``controller_draw_string_align(x_start, x_end, y, string, image)``    
+``controller_draw_string_align(x_start, x_end, y, string, image, color="black", alignment="left")``    
 
 #### Parameters
-***integer* x_start:** starting x position    
-***integer* x_end:** ending x position    
-***integer* y:** y position   
-***string* string:** the string to write   
-***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align Left, Right, or Center. default value is Center    
-***integer* string_font:** optional parameter that is the font of the string to be written. default value is LiberationMono5x8    
-***integer* pixel_color:** optional parameter that is the pixel color of the written string. default value is Black
+***integer* x_start:** starting x position<br/>
+***integer* x_end:** ending x position<br/>
+***integer* y:** y position<br/>
+***string* string:** the string to write<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of string. By default, color is black.<br/>
+***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align left, right, or center. default value is left
 
 #### Returns
 None
@@ -4775,8 +5858,12 @@ drone.pair()
 
 
 drone.controller_clear_screen()
-drone.controller_draw_string_align(0, 70, 0, "Hello, world!")
+image = drone.controller_create_canvas() # creates an image object, the canvas
 
+# draws string on canvas that is aligned to the right, between x=0 and x=100 at position y=0.
+drone.controller_draw_string_align(0, 100, 0, "Hello, world!", image, alignment="right")
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -4795,14 +5882,16 @@ This function is currently unavailable for CoDrone EDU (JROTC ed.).
 Draws a string from the given x_start, x_end and y positions. The string can be aligned along the x_start and x_end positions
 
 #### Syntax
-``controller_draw_string(x, y, string, string_font, pixel_color)``    
+``controller_draw_string(x, y, string, image)``    
+``controller_draw_string(x, y, string, image, color="black")``    
 
 #### Parameters
-***integer* x:** starting x position    
-***integer* y:** starting y position    
-***string* string:** the string to write   
-***integer* string_font:** optional parameter that is the font of the string to be written. default value is LiberationMono5x8    
-***string* pixel_color:** optional parameter that is the pixel color of the written string. default value is Black   
+***integer* x:** starting x position<br/>
+***integer* y:** starting y position<br/>
+***string* string:** the string to write<br/>
+***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***string* color:** color of string. By default, color is black.
+
 
 #### Returns
 None
@@ -4825,8 +5914,11 @@ drone.pair()
 
 
 drone.controller_clear_screen()
-drone.controller_draw_string(0, 0, "Hello, world!")
+image = drone.controller_create_canvas() # creates an image object, the canvas
 
+drone.controller_draw_string(0, 0, "Hello, world!", image) # draw "Hello, world!" on image object at (0,0)
+
+drone.controller_draw_canvas(image)  # draw image onto controller screen
 
 drone.close()
 ```
@@ -4847,13 +5939,13 @@ This function is currently unavailable for *Python for Robolink*.
 :::
 
 #### Description
-Creates a pop up window to preview your current image object on your computer screen.
+Creates a pop up window to preview image object from the most recent controller_create_canvas() call onto your computer screen. **NOTE:** Preview image will reset every time controller_create_canvas() is called.
 
 #### Syntax
-``controller_preview_canvas(image)``    
+``controller_preview_canvas()``    
 
 #### Parameters
-***Image* image:** image object to be previewed
+None
 
 #### Returns
 None
@@ -4878,7 +5970,7 @@ drone.pair()
 
 
 drone.controller_clear_screen() # clear screen for drawing
-image = drone.controller_create_canvas()  # create image object
+image = drone.controller_create_canvas()  # create image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
 ellipse_list = [(10, 10), (40, 40)]
@@ -4888,10 +5980,62 @@ drone.controller_draw_ellipse(ellipse_list, image) # draw onto image object
 drone.controller_draw_arc(arc_list, 0, 180, image)
 drone.controller_draw_chord(chord_list, 0, 180, image)
 
-drone.controller_preview_canvas(image)  # draw image onto controller screen
+drone.controller_preview_canvas()  # a window will pop up with your drawing
 
 
 drone.close()
 ```
-
 <hr/>
+
+### get_image_data()
+
+:::warning
+
+This function is currently unavailable for CoDrone EDU (JROTC ed.).
+
+:::
+
+:::warning
+
+This function is currently unavailable for *Python for Robolink*.
+
+:::
+
+#### Description
+This function retrieves .png or .jpg file and resizes to fit inside controller.
+
+#### Syntax
+``get_image_data(image_file_name)``
+
+#### Parameters
+***string* image_file_name:** the name of the image file, including file extension (ex. "image.png")
+
+#### Returns
+***list* image_data:** list consisting of RGB values
+
+#### Example Code
+
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('get_image_data_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
+</div>
+
+```python
+
+drone = Drone()
+drone.pair()
+
+drone.controller_clear_screen()
+
+img_list = ("images/boom.png", "images/flower.png", "images/mario.png", "images/pikachu.jpg", "images/rose.jpg", "images/troll_face.png", "images/pixel_dino.png")
+
+for i in range(len(img_list)):
+    img = drone.get_image_data(img_list[i]) # img stores image data
+    drone.controller_draw_image(img) # draws image on controller
+    time.sleep(1)
+
+```
