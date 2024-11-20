@@ -20,4 +20,4 @@ customHeadElements:
 
 - We have noticed pairing issues specifically with some Windows desktops. If you're experiencing issues pairing, try using another device if that is an available option.
 
-If you meet these minimum system requirements, you can start using <a href="https://codrone.robolink.com/pro/blockly/">Blockly</a>!
+If you meet these minimum system requirements, you can start using <a target="_blank" href="https://codrone.robolink.com/pro/blockly/">Blockly</a>!

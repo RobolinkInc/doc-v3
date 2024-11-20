@@ -16,4 +16,4 @@ customHeadElements:
 
 #### Using Blockly
 
-If you meet these minimum system requirements, you can start using <a href="https://codrone.robolink.com/edu/blockly/">Blockly</a>!
+If you meet these minimum system requirements, you can start using <a target="_blank" href="https://codrone.robolink.com/edu/blockly/">Blockly</a>!
