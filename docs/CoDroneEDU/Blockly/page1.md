@@ -1,24 +1,27 @@
 ---
-title: "How to use Blockly"
-slug: How-to-use-Blockly
+title: "Getting Started"
+slug: Getting-Started
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
 
-## What is Blockly?
+## Getting Started with Blockly
+
+### What is Blockly?
 
 Learn the foundations of coding with drag-and-drop blocks in our visual programming language. This is an excellent starting place for beginner programmers and drone pilots. The types of blocks are divided into junior blocks and senior blocks according to the difficulty level.  
 
 Junior blocks are written with "natural language" and Senior blocks introduce programming syntax. Senior blocks introduce more advanced concepts and prepare students to transition into text-based programming. You can mix Junior and Senior blocks in your programs.
 
-
-## How to Access Blockly
+### How to Access Blockly
 
 Blockly is an online application that you can access right from Google Chrome. With Blockly, you can connect it to your drone since Blockly runs from your browser&mdash;no need for any installation!
 
 ### Link to Blockly
 Start programming your drone with Blockly by heading to <a href="https://codrone.robolink.com/edu/blockly/" target="_blank">codrone.robolink.com/edu/blockly</a>! After going to the provided link for Blockly, click on the CoDrone EDU icon to open a workspace for CoDrone EDU programming.
+
+<hr className="section_hr"/>
 
 ## Device requirements
 
@@ -40,4 +43,13 @@ Your Google Chrome should be updated to the most recent version. If you are not 
 
 <img src="/img/CDE/chrome_requirements_2.png"/>
 
+### Minimum System Requirements
+- Chrome Browser version 80 or later
 
+- MacBook, PC, or Chromebook. No iPads or Android tablets.
+
+- A computer with a USB-A port
+
+- Windows 10 or newer for PC users
+
+For the best experience, it's recommended to keep your browser and devices up-to-date.

@@ -18,8 +18,8 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![How to use Blockly](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)
-  [How to use Blockly](/docs/CoDroneEDU/Blockly/How-to-use-Blockly)  
+  [![Getting Started](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Blockly/Getting-Started)
+  [Getting Started](/docs/CoDroneEDU/Blockly/Getting-Started)  
 
   <!--[![Offline App Documentation](/img/CDE/app-docu-icon.png)](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)
   [Offline<br />App Documentation](/docs/CoDroneEDU/Blockly/Offline-App-Documentation)-->
@@ -41,8 +41,8 @@ customHeadElements:
   [![Blockly Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/Blockly-Changelog)
   [Blockly Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog)
 
-  [![Minimum System Requirements](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/Minimum-System-Requirements)
-  [Minimum System Requirements](/docs/CoDroneEDU/Blockly/Minimum-System-Requirements)
+  <!-- [![Minimum System Requirements](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Blockly/Minimum-System-Requirements)
+  [Minimum System Requirements](/docs/CoDroneEDU/Blockly/Minimum-System-Requirements) -->
 
 </div>
 
