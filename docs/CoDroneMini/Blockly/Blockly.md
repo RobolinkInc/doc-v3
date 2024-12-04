@@ -27,6 +27,9 @@
   [![Blockly Changelog](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Blockly-Changelog)
   [Blockly Changelog](/docs/CoDroneMini/Blockly/Blockly-Changelog)
 
+  [![Minimum System Requirements](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Minimum-System-Requirements)
+  [Minimum System Requirements](/docs/CoDroneMini/Blockly/Minimum-System-Requirements)
+
 </div>
 
 </div>
