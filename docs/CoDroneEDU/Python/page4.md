@@ -3637,12 +3637,6 @@ drone.close()
 
 ### append_color_data()
 
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 #### Description
 ``append_color_data()`` is a function that adds onto an existing dataset of custom color prediction data. the dataset parameter must already exist in order to use this function.
 
@@ -3659,14 +3653,13 @@ None
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('append_color_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
+
 
 ```python
 #Python code
@@ -3870,12 +3863,6 @@ This function has been deprecated and will be removed in a future release. Pleas
 
 :::
 
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 #### Description
 ``load_classifier()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
 
@@ -3893,13 +3880,11 @@ None
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('load_classifier_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
@@ -3924,11 +3909,6 @@ drone.close()
 <hr/>
 
 ### load_color_data()
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
 
 #### Description
 Previously name ``load_classifier()``. ``load_color_data()`` is a function that can load a custom color set onto the CoDrone EDU. If no custom color set is given then the default color set is loaded. There is also an option to show the color set as a graph.
@@ -3947,13 +3927,11 @@ None
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('load_color_data_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('load_color_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
@@ -3979,12 +3957,6 @@ drone.close()
 
 ### new_color_data()
 
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 #### Description
 ``new_color_data()`` is a function that creates a new dataset of custom color prediction data.
 
@@ -4002,13 +3974,11 @@ None
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('new_color_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
@@ -4047,12 +4017,6 @@ drone.close()
 
 ### predict_colors()
 
-:::warning
-
-This function is currently unavailable for *Python for Robolink*.
-
-:::
-
 #### Description
 Predicts what color the color sensors are currently seeing.
 
@@ -4067,13 +4031,11 @@ Predicts what color the color sensors are currently seeing.
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('predict_colors_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
