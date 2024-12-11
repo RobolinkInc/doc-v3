@@ -107,6 +107,11 @@ If a main.py file was not generated, you can make a new one by right clicking on
 ## Device requirements
 
 ### Hardware Requirements
+
+<img src="/img/CDE/device-requirements.png" width="680px"/>  
+<br/>
+<br/>
+
 Try to use the cable that comes with CoDrone EDU whenever possible! This USB cable can transfer data, which is necessary for programming. Most USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
 
 ### Google Chrome Requirements
