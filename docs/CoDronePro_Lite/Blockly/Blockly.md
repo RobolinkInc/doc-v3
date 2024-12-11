@@ -34,6 +34,9 @@ customHeadElements:
   <!-- [![Blockly Changelog](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Blockly/Blockly-Changelog)
   [Blockly Changelog](/docs/CoDronePro_Lite/Blockly/Blockly-Changelog) -->
 
+  [![Minimum System Requirements](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Blockly/Minimum-System-Requirements)
+  [Minimum System Requirements](/docs/CoDronePro_Lite/Blockly/Minimum-System-Requirements)
+
 </div>
 
 </div>
