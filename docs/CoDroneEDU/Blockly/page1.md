@@ -25,7 +25,20 @@ Start programming your drone with Blockly by heading to <a href="https://codrone
 
 ## Device requirements
 
+
+### Minimum System Requirements
+- Chrome Browser version 80 or later
+
+- MacOS, Windows, or ChromeOS (Chromebook). No mobile devices such as tables (iPads, Android, etc.)
+
+- A computer with a USB-A port
+
+- Windows 10 or newer for PC users
+
+For the best experience, it's recommended to keep your browser and devices up-to-date.
+
 ### Hardware Requirements
+
 
 <img src="/img/CDE/device-requirements.png" width="680px"/>  
 <br/>
@@ -43,13 +56,4 @@ Your Google Chrome should be updated to the most recent version. If you are not 
 
 <img src="/img/CDE/chrome_requirements_2.png"/>
 
-### Minimum System Requirements
-- Chrome Browser version 80 or later
 
-- MacBook, PC, or Chromebook. No iPads or Android tablets.
-
-- A computer with a USB-A port
-
-- Windows 10 or newer for PC users
-
-For the best experience, it's recommended to keep your browser and devices up-to-date.
