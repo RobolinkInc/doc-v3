@@ -34,6 +34,7 @@ const sidebars = {
         'CoDroneEDU/Blockly/page3',
         'CoDroneEDU/Blockly/page4',
         'CoDroneEDU/Blockly/page5',
+        //'CoDroneEDU/Blockly/page6',
       ],
     },
     {
@@ -95,6 +96,7 @@ const sidebars = {
         'CoDroneMini/Blockly/page3',
         'CoDroneMini/Blockly/page4',
         'CoDroneMini/Blockly/page5',
+        'CoDroneMini/Blockly/page6',
       ],
     },
     {
@@ -176,6 +178,7 @@ const sidebars = {
         'CoDronePro_Lite/Blockly/page3',
         'CoDronePro_Lite/Blockly/page4',
         //'CoDronePro_Lite/Blockly/page5',
+        'CoDronePro_Lite/Blockly/page6',
       ],
     },
     {

@@ -22,8 +22,8 @@ customHeadElements:
   <!--[![What is Python?](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/What-is-Python)
   [What is Python?](/docs/CoDroneEDU/Python/What-is-Python)--> 
 
-  [![Setup and Installation](/img/CDE/set-up.png)](/docs/CoDroneEDU/Python/Setup-and-Installation)
-  [Setup and Installation](/docs/CoDroneEDU/Python/Setup-and-Installation)
+  [![Getting Started](/img/CDE/what-is-icon.png)](/docs/CoDroneEDU/Python/Getting-Started)
+  [Getting Started](/docs/CoDroneEDU/Python/Getting-Started)
 
   [![Updating Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
   [Updating Library](/docs/CoDroneEDU/Python/Updating-Library)
