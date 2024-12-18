@@ -8,6 +8,22 @@ customHeadElements:
 
 ## CoDrone EDU Blockly Changelog
 
+### Version 2.2.5
+#### December 18, 2024
+  
+**New Features** :sparkles:
+- Updated Python generated code for controller screen functions to reflect latest Python library changes (v2.0)
+- Implemented custom 404 page
+  
+**Improvements** :arrow_up:
+- Improved firmware detection and messaging in the connection window when offline
+
+**Bug Fixes** :bug:
+- Fixed error in elevation conversion from meters (m) to kilometers (km)
+- Corrected Python-generated code for Junior Turn block
+
+<hr/>
+
 ### Version 2.2.4
 #### November 7, 2024
 
