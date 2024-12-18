@@ -5132,7 +5132,17 @@ from codrone_edu.drone import *
 drone = Drone()
 drone.pair()
 
-drone.controller_clear_screen() # resets controller screen
+image = drone.controller_create_canvas()
+drone.controller_draw_rectangle(20, 30, 40, 10, image, 'black')
+drone.controller_draw_canvas(image)
+
+time.sleep(3)
+drone.controller_clear_screen() # only clears screen, does not modify the image object
+time.sleep(3)
+
+image = drone.controller_create_canvas()
+drone.controller_draw_string(60, 30, "Hello World!", image)
+drone.controller_draw_canvas(image)
 
 drone.close()
 ```
@@ -5206,7 +5216,7 @@ Draws an arc (a portion of a circle outline) between the start and end angles, i
 ***list* arc_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.<br/>
 ***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.<br/>
 ***integer* end_angle:** Ending angle, in degrees.<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of arc. By default, color is black.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
 
@@ -5230,7 +5240,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # creates image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
@@ -5283,7 +5292,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # creates image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
@@ -5293,6 +5301,7 @@ chord_list = [(60, 20), (100, 50)]
 drone.controller_draw_ellipse(ellipse_list, image) # draw onto image object
 drone.controller_draw_arc(arc_list, 0, 180, image)
 drone.controller_draw_chord(chord_list, 0, 180, image)
+
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
 
@@ -5321,7 +5330,7 @@ Same as controller_draw_arc(), but connects the end points with a straight line.
 ***list* chord_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)], where x1 >= x0 and y1 >= y0.<br/>   
 ***integer* start_angle:** Starting angle, in degrees. Angles are measured from 3 o’clock, increasing clockwise.<br/>
 ***integer* end_angle:** Ending angle, in degrees.<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of chord. By default, color is black.<br/>
 ***string* fill_in:** color of fill. By default, no fill in.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.   
@@ -5346,13 +5355,13 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # creates image object, the canvas
 
 chord_list = [(20, 40), (50, 50)]
 drone.controller_draw_chord(chord_list, 0, 180, image) # set chord onto image object
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -5376,7 +5385,7 @@ Draws an ellipse inside the given bounding box.
 
 #### Parameters
 ***list* ellipse_list:** Two points to define the bounding box. Sequence of [(x0, y0), (x1, y1)] where x1 >= x0 and y1 >= y0.<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of ellipse. By default, color is black.<br/>
 ***string* fill_in:** color of fill. By default, no fill in.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
@@ -5401,7 +5410,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 ellipse_list = [(10, 10), (40, 40)]
@@ -5460,11 +5468,10 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
-
 image = drone.get_image_data("example.png") # where example.png is an image in the same directory as the program
 
 drone.controller_draw_image(image) # draws the image onto the controller's screen
+
 
 drone.close()
 ```
@@ -5498,7 +5505,7 @@ Draws a line between points (x1, y1) and (x2, y2)
 ***integer* y1:** point 1 y coordinate<br/>
 ***integer* x2:** point 2 x coordinate<br/>
 ***integer* y2:** point 2 y coordinate<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of line. By default, color is black<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1.  
 
@@ -5522,12 +5529,12 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 drone.controller_draw_line(0,0, 60, 60, image) # draws a line from (0,0) to (60,60)
 
 drone.controller_draw_canvas(image) # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -5553,7 +5560,7 @@ Draws a single pixel at the point (x,y)
 #### Parameters
 ***integer* x:** x coordinate <br/>
 ***integer* y:** y coordinate <br/>
-***Image* image:** image object created from ``create_image_canvas()``<br/>
+***Image* image:** image object created from ``controller_create_canvas()``<br/>
 ***string* color:** color of point. By default, color is black.
 
 #### Returns
@@ -5576,13 +5583,12 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
-
 image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 drone.controller_draw_point(10, 10, image) # place a pixel at the (10,10) coordinate of canvas
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -5607,7 +5613,7 @@ The polygon outline consists of straight lines between the given coordinates, pl
 
 #### Parameters
 ***list* point_list:** the list of coordinates<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of polygon. By default, color is black.<br/>
 ***string* fill_in:** color of fill. By default, no fill in.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
@@ -5632,7 +5638,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen()
 image = drone.controller_create_canvas() # creates an image object, the canvas
 
 point_list = [(0, 0), (15,15), (30,0)] # list of points that will be connected to draw a polygon
@@ -5674,7 +5679,7 @@ width
 ***integer* y:** top left corner y coordinate<br/>
 ***integer* width:** width of rectangle<br/>
 ***integer* height:** height of rectangle<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of rectangle. By default, color is black.<br/>
 ***string* fill_in:** color of fill. By default, no fill in.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
@@ -5699,13 +5704,13 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen()
 image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 # draws rectangle starting at (0,0) on canvas with width of 40px and height of 20px
 drone.controller_draw_rectangle(0, 0, 40, 20,image)
 
 drone.controller_draw_canvas(image)  # draw image onto controller screen
+
 
 drone.close()
 ```
@@ -5737,7 +5742,7 @@ width
 ***integer* x:** top left corner x coordinate<br/>
 ***integer* y:** top left corner y coordinate<br/>
 ***integer* width:** width of square<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of square. By default, color is black.<br/>
 ***string* fill_in:** color of fill. By default, no fill in.<br/>
 ***integer* pixel_width:** optional parameter that is the line width, in pixels. default value is 1. 
@@ -5762,7 +5767,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen()
 image = drone.controller_create_canvas()  # creates an image object, the canvas
 
 # draws a square on canvas that's 30 x 30px at (0, 0)
@@ -5795,7 +5799,7 @@ Draws a string from the given x_start, x_end and y positions. The string can be 
 ***integer* x_end:** ending x position<br/>
 ***integer* y:** y position<br/>
 ***string* string:** the string to write<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of string. By default, color is black.<br/>
 ***string* alignment:** optional parameter that is the alignment between x_start and x_end. can align left, right, or center. default value is left
 
@@ -5819,7 +5823,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen()
 image = drone.controller_create_canvas() # creates an image object, the canvas
 
 # draws string on canvas that is aligned to the right, between x=0 and x=100 at position y=0.
@@ -5851,7 +5854,7 @@ Draws a string from the given x_start, x_end and y positions. The string can be 
 ***integer* x:** starting x position<br/>
 ***integer* y:** starting y position<br/>
 ***string* string:** the string to write<br/>
-***Image* image:** image object created from ``create_image_canvas()``.<br/>
+***Image* image:** image object created from ``controller_create_canvas()``.<br/>
 ***string* color:** color of string. By default, color is black.
 
 
@@ -5875,7 +5878,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen()
 image = drone.controller_create_canvas() # creates an image object, the canvas
 
 drone.controller_draw_string(0, 0, "Hello, world!", image) # draw "Hello, world!" on image object at (0,0)
@@ -5931,7 +5933,6 @@ drone = Drone()
 drone.pair()
 
 
-drone.controller_clear_screen() # clear screen for drawing
 image = drone.controller_create_canvas()  # create image object, the canvas
 
 arc_list = [(20, 40), (50, 50)]
@@ -5987,11 +5988,12 @@ This function retrieves .png or .jpg file and resizes to fit inside controller.
 </div>
 
 ```python
+#Python code
+from codrone_edu.drone import *
 
 drone = Drone()
 drone.pair()
 
-drone.controller_clear_screen()
 
 img_list = ("images/boom.png", "images/flower.png", "images/mario.png", "images/pikachu.jpg", "images/rose.jpg", "images/troll_face.png", "images/pixel_dino.png")
 
