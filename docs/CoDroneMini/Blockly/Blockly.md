@@ -8,7 +8,7 @@
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
 
@@ -24,8 +24,19 @@
   [![Senior Block Documentation](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Senior-Block-Documentation)
   [Senior Block<br />Documentation](/docs/CoDroneMini/Blockly/Senior-Block-Documentation) 
 
+</div>
+
+</div>
+
+<div className='column_2_images'>
+
+<div className='level_image_column'>
+
   [![Blockly Changelog](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Blockly-Changelog)
   [Blockly Changelog](/docs/CoDroneMini/Blockly/Blockly-Changelog)
+
+  [![Minimum System Requirements](/img/CDM/doc-app.png)](/docs/CoDroneMini/Blockly/Minimum-System-Requirements)
+  [Minimum System Requirements](/docs/CoDroneMini/Blockly/Minimum-System-Requirements)
 
 </div>
 

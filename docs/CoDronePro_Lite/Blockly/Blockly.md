@@ -15,7 +15,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_2_images'>
+<div className='column_3_images'>
 
 <div className='level_image_column'>
 
@@ -33,6 +33,9 @@ customHeadElements:
 
   <!-- [![Blockly Changelog](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Blockly/Blockly-Changelog)
   [Blockly Changelog](/docs/CoDronePro_Lite/Blockly/Blockly-Changelog) -->
+
+  [![Minimum System Requirements](/img/CDPL/doc-app.png)](/docs/CoDronePro_Lite/Blockly/Minimum-System-Requirements)
+  [Minimum System Requirements](/docs/CoDronePro_Lite/Blockly/Minimum-System-Requirements)
 
 </div>
 
