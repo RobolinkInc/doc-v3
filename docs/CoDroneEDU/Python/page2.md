@@ -104,22 +104,21 @@ If a main.py file was not generated, you can make a new one by right clicking on
 
 <hr className="section_hr"/>
 
-## Device requirements
+## System Requirements
 
-### Hardware Requirements
-
-### Minimum System Requirements
-- Chrome Browser version 80 or later (*Python for Robolink* only)
+### Device Requirements
 
 - MacOS, Windows, or ChromeOS* (*PyCharm is not supported on Chromebooks)
 
-- Mobile devices such as tables (iPads, Android, etc.) are not supported.
+- Mobile devices such as tables (iPads, Android, etc.) are not supported
 
 - A computer with a USB-A port
 
 - Windows 10 or newer for PC users
 
 For the best experience, it's recommended to keep your browser and devices up-to-date.
+
+### Hardware Requirements
 
 <img src="/img/CDE/device-requirements.png" width="680px"/>  
 <br/>
