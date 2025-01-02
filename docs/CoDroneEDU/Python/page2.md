@@ -1,11 +1,11 @@
 ---
-title: "Setup and Installation"
-slug: Setup-and-Installation
+title: "Getting Started"
+slug: Getting-Started
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
-## Coding in the browser
+## Getting Started &mdash; Coding in the browser
 
 ### What is *Python for Robolink*?
 *Python for Robolink*, a browser-based program, allows you to connect to and program your drone without needing to install Python or an IDE (integrated development environment).
@@ -26,21 +26,9 @@ Since *Python for Robolink* is a browser-based program, it can be accessed from 
 #### Link to *Python for Robolink*
 Start programming your drone with *Python for Robolink* by heading to <a href="https://codrone.robolink.com/edu/python/">codrone.robolink.com/edu/python/</a>
 
-### Device requirements
+<hr className="section_hr"/>
 
-#### Hardware Requirements
-Try to use the cable that comes with CoDrone EDU whenever possible! This USB cable can transfer data, which is necessary for programming. Most USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
-
-#### Google Chrome Requirements
-Your Google Chrome should be updated to the most recent version. If you are not sure how to check, click on the the menu on the top right, scroll down to “Help”, and select “About Google Chrome”. Google Chrome might automatically update. If not, please update Chrome.
-
-<img src="/img/CDE/chrome_requirements_1.png" width="512px"/>  
-<br/>
-<br/>
-
-<img src="/img/CDE/chrome_requirements_2.png"/>
-
-## Coding in PyCharm
+## Getting Started &mdash; Coding in PyCharm
 
 ### How to install Python
 
@@ -113,3 +101,36 @@ If a main.py file was not generated, you can make a new one by right clicking on
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Iobi5pVSzyc?si=oyGfJOsTtdFPlnXk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
 </div>
+
+<hr className="section_hr"/>
+
+## System Requirements
+
+### Device Requirements
+
+- MacOS, Windows, or ChromeOS* (*PyCharm is not supported on Chromebooks)
+
+- Mobile devices such as tables (iPads, Android, etc.) are not supported
+
+- A computer with a USB-A port
+
+- Windows 10 or newer for PC users
+
+For the best experience, it's recommended to keep your browser and devices up-to-date.
+
+### Hardware Requirements
+
+<img src="/img/CDE/device-requirements.png" width="680px"/>  
+<br/>
+<br/>
+
+Try to use the cable that comes with CoDrone EDU whenever possible! This USB cable can transfer data, which is necessary for programming. Most USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
+
+### Google Chrome Requirements
+Your Google Chrome should be updated to the most recent version. If you are not sure how to check, click on the the menu on the top right, scroll down to “Help”, and select “About Google Chrome”. Google Chrome might automatically update. If not, please update Chrome.
+
+<img src="/img/CDE/chrome_requirements_1.png" width="512px"/>  
+<br/>
+<br/>
+
+<img src="/img/CDE/chrome_requirements_2.png"/>
