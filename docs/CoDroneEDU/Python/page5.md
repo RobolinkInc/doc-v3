@@ -8,6 +8,14 @@ customHeadElements:
 
 ## CoDrone EDU Python Library Changelog
 
+### Version 2.1
+#### January 6, 2025
+**New Features** :sparkles:
+- added get_cpu_id() function
+
+**Improvements** :arrow_up:
+- Order of turn() parameters changed: turn(*seconds*, *power*) -> turn(*power*, *seconds*)
+
 ### Version 2.0
 #### November 7, 2024
 **New Features** :sparkles:
