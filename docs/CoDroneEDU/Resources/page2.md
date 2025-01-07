@@ -15,7 +15,7 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
       <img src="/img/CDE/drone_remote-4.png" width="350px"/>
     </div>
     <h4>Drone Version</h4>
-    <p>Latest Version: 24.9.1</p>
+    <p>Latest Version: 24.11.1</p>
     <h4>Controller Version</h4>
     <p>Latest Version: 24.9.1</p>
 </div>
@@ -26,15 +26,20 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
       <img src="/img/CDE/drone_remote_cdej-3.jpg" width="350px"/>
     </div>
     <h4>Drone Version</h4>
-    <p>Latest Version: 24.2.12</p>
+    <p>Latest Version: 24.12.1</p>
     <h4>Controller Version</h4>
-    <p>Latest Version: 23.12.11</p>
+    <p>Latest Version: 24.12.1</p>
   </div>
 </div>
 
 <hr className="section_hr"/>
 
 ## CoDrone EDU Drone Release Notes
+
+### Version 24.11.1
+#### January 7, 2025
+**New Features** :sparkles:
+- Added functionality to request a unique identifier for each drone.
 
 ### Version 24.9.1
 #### October 23, 2024
@@ -70,10 +75,19 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 
 ## CoDrone EDU (JROTC edition) Drone Release Notes
 
-*No new release yet.*
+### Version 24.12.1
+#### January 7, 2025
+**New Features** :sparkles:
+- Takeoff prevention &mdash; The drone will not takeoff if it detects an error with the height sensor during the takeoff sequence. 
 
 <hr className="section_hr"/>
 
 ## CoDrone EDU (JROTC edition) Controller Release Notes
 
-*No new release yet.*
+### Version 24.12.1
+#### January 7, 2025
+**New Features** :sparkles:
+- Takeoff prevention &mdash; The controller will display “RESTART DRONE” if the drone detects an error with the height sensor during takeoff sequence. Remove the battery and re-insert to reset the drone.
+
+**Bug Fixes** :bug:
+- Fixed bug where the controller was unable to detect connections or disconnections while in LINK state.
