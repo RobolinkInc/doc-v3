@@ -16,6 +16,8 @@ customHeadElements:
 **Improvements** :arrow_up:
 - Order of turn() parameters changed: turn(*seconds*, *power*) -> turn(*power*, *seconds*)
 
+<hr/>
+
 ### Version 2.0
 #### November 7, 2024
 **New Features** :sparkles:
