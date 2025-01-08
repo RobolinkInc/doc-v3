@@ -54,7 +54,7 @@ jobs:
           host: ${{ secrets.DOCS_STAGING_HOST }}
           username: ${{ secrets.DOCS_STAGING_USERNAME }}
           port: ${{ secrets.DOCS_STAGING_SSH_PORT }}
-          key: ${{ secrets.DOCS_STAGING_SSH_KEY }}
+          key: ${{ secrets.DOCS_STAGING_SSH_PASSWORD }}
           source: "./build/*"
           target: "/var/www/staging-docs"
           strip_components: 1
