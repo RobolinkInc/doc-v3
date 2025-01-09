@@ -13,7 +13,7 @@ customHeadElements:
 
 <div className='change_version'>
 
-version 2.2.5 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+version 3.0.0 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 </div>
 
@@ -1722,6 +1722,80 @@ None
 
 <hr className="section_hr"/>
 
+## Colors
+
+### load_color_data()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/load_color_data.png" width="300px"/>
+
+#### Code
+<span className="light_gray">drone.</span><span className="dark_gray">load_color_data()</span>
+
+#### Description
+
+Loads color data onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
+
+#### Parameters
+
+None
+
+#### Returns
+
+None
+
+#### Example
+
+To make this example work, your color set must be loaded into your Blockly workspace and code using the "load_color_data" block. The "predict_color" block will make a prediction of the color detected and return that color based on the color set that was loaded. Place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
+<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
+
+<hr/>
+
+### predict_color()
+
+#### Block
+
+<img src="/img/CDE/blockly_docu/senior/predict_color.png" width="250px"/>
+
+#### Code
+*front*: <span className="light_gray">drone.</span><span className="dark_gray">predict_colors(drone.get_color_data())[0]</span><br/><br/>
+*back*: <span className="light_gray">drone.</span><span className="dark_gray">predict_colors(drone.get_color_data())[1]</span><br/>
+
+#### Description
+
+Predicts what color the color sensors are currently seeing (front or back).
+
+#### Parameters
+
+**sensor:** the front or back sensor
+
+#### Returns
+
+***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
+
+#### Example
+To make this example work, your color set must be loaded into your Blockly workspace and code using the "load_color_data" block. The "predict_color" block will make a prediction of the color detected and return that color based on the color set that was loaded. Place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note.
+
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
+</div>
+
+<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
+
+<hr className="section_hr"/>
+
 ## Screen
 
 ### controller_create_canvas()
@@ -2074,82 +2148,6 @@ None
 </div>
 
 <img src="/img/CDE/blockly_docu/senior/controller_clear_screen_example.png" width="600px"/>
-
-<hr className="section_hr"/>
-
-## Colors
-
-### load_color_data()
-
-#### Block
-
-<img src="/img/CDE/blockly_docu/senior/load_color_data.png" width="300px"/>
-
-#### Code
-<span className="light_gray">drone.</span><span className="dark_gray">load_color_data()</span>
-
-#### Description
-
-Loads color data onto CoDrone EDU. The string inside the parameter is the name of your color set (name is made by the user when creating the color set). ``predict_colors()`` block uses this color set to predict colors. To learn how to create a color set, visit our lesson on <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a>.
-
-#### Parameters
-
-None
-
-#### Returns
-
-None
-
-#### Example
-
-To make this example work, your color set must be loaded into Blockly and loaded into your program using the "load_color_data" block. Place your drone on a solid surface to turn on color sensors (the lights shining on the surface means they're on). Placing it on different colored surfaces (red, yellow, or blue) to get different color predictions.
-
-<div className="loadXmlDiv">
-  <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
-    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Blockly</span>
-  </button>
-</div>
-
-<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
-
-<hr/>
-
-### predict_color()
-
-#### Block
-
-<img src="/img/CDE/blockly_docu/senior/predict_color.png" width="250px"/>
-
-#### Code
-*front*: <span className="light_gray">color_data = drone.</span>get_color_data()<br/>
-<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[0]</span><br/><br/>
-*back*: <span className="light_gray">color_data = drone.</span>get_color_data()<br/>
-<span className="light_gray">drone.</span><span className="dark_gray">predict_colors(color_data)[1]</span><br/>
-
-#### Description
-
-Predicts what color the color sensors are currently seeing (front or back).
-
-#### Parameters
-
-**sensor:** the front or back sensor
-
-#### Returns
-
-***string* predicted color:** The color that's predicted based off of what the front or back sensor detects.
-
-#### Example
-In this example, the "load_color_data" block uses a pre-made color set (visit our <a href="https://learn.robolink.com/lesson/3-8-color-sensor-cde-blockly/" target="_blank">Color Sensors</a> lesson to learn more). Then, place the drone on different colored surfaces (red, yellow, or blue) to make the drone play a different note using the "predict_color" block.
-
-<div className="loadXmlDiv">
-  <button className="loadXmlButton" onClick={() => loadBlocklyXml('colors_example_senior')}>
-    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Blockly</span>
-  </button>
-</div>
-
-<img src="/img/CDE/blockly_docu/senior/colors_example.png" width="550px"/>
 
 <hr className="section_hr"/>
 
