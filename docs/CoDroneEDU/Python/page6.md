@@ -17,6 +17,8 @@ customHeadElements:
 **New Features** :sparkles:<br/>
 - Updated *Python for Robolink* to use the latest version of codrone-edu library (version 2.1)
 
+<hr/>
+
 ### Version 1.9
 #### November 7, 2024
 **New Features** :sparkles:

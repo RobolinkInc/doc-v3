@@ -15,6 +15,8 @@ customHeadElements:
 - The “clear console” button dynamically adjusts its position when the side tabs open so it remains visible
 - Enhanced performance for better user experience and improved program responsiveness
 
+<hr/>
+
 ### Version 2.2.5
 #### December 18, 2024
   
