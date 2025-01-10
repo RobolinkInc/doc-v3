@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 2.0 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
+version 2.1 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
 </div>
 
 ## Connection
@@ -770,6 +770,52 @@ time.sleep(1)
 
 drone.land()
 
+
+drone.close()
+```
+
+<hr/>
+
+### turn()
+
+#### Description
+This function turns the drone to the left or right, based on the given power value (-100 - 100), for a given number of seconds.
+
+#### Syntax
+``turn()``<br/>
+``turn(power=50, seconds=None)``
+
+
+#### Parameters
+***int* power:** The number represents the direction and power of the turn. Negative power turns the drone to the right, and positive power turns the drone to the left.<br/>
+***float* seconds:** The duration of the turn
+
+#### Returns
+None
+
+#### Example Code
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('turn_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+drone.turn(50, 2) # drone will turn left at 50% power for 2 seconds
+
+drone.turn(-20,5) # drone will turn right 20% power for 5 seconds 
+
+drone.land()
 
 drone.close()
 ```
@@ -6042,4 +6088,5 @@ for i in range(len(img_list)):
     drone.controller_draw_image(img) # draws image on controller
     time.sleep(1)
 
+drone.close()
 ```

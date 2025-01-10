@@ -14,7 +14,7 @@ customHeadElements:
 
 <div className='change_version'>
 
-version 2.2.5 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+version 3.0.0 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 </div>
 
@@ -24,7 +24,7 @@ version 2.2.5 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 #### Block
 
-<img src="/img/CDE/blockly_docu/junior/takeoff.png" width="120px"/>  
+<img src="/img/CDE/blockly_docu/junior/takeoff.png" width="120px"/>
 
 #### Description
 This functions makes the drone take off. CoDrone EDU takes off at an average height of 80 centimeters off the ground. A takeoff block must be used before any other flight command or flight movement. **NOTE:** The takeoff height cannot be modified.
