@@ -14,7 +14,7 @@ customHeadElements:
 
 <div className='change_version'>
 
-version 3.0.0 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+version 2.2.5 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 </div>
 

@@ -7,7 +7,7 @@ customHeadElements:
 
 
 ## CoDrone EDU Blockly Changelog
-
+<!-- 
 ### Version 3.0.0
 #### January 9, 2025
 **Improvements** :arrow_up:
@@ -16,7 +16,8 @@ customHeadElements:
 - Enhanced performance for better user experience and improved program responsiveness
 
 <hr/>
-
+ -->
+ 
 ### Version 2.2.5
 #### December 18, 2024
   
