@@ -1833,6 +1833,10 @@ drone.close()
 
 ### controller_buzzer()
 
+:::note
+Controller may not make sounds if "Quiet Mode" is turned on via controller settings. To turn off "Quiet Mode", switch to "Remote Control" mode by pressing the power button, hold the "S" button to switch to the "Settings" display, scroll down to "Quiet Mode", move the left joystick to the right, and select "OFF" by pressing "R1".
+:::
+
 #### Description
 Plays a note using the controller's buzzer.
 
@@ -2007,6 +2011,10 @@ drone.close()
 <hr/>
 
 ### start_controller_buzzer()
+
+:::note
+Controller may not make sounds if "Quiet Mode" is turned on via controller settings. To turn off "Quiet Mode", switch to "Remote Control" mode by pressing the power button, hold the "S" button to switch to the "Settings" display, scroll down to "Quiet Mode", move the left joystick to the right, and select "OFF" by pressing "R1".
+:::
 
 #### Description
 This function allows the controller buzzer to be played in the background while other commands are given to the drone.
@@ -2246,7 +2254,7 @@ The 'z' position of the drone is up and down.
 
 #### Syntax
 ``get_position_data()``   
-``get_position_data(delay)``
+``get_position_data(delay=0.01)``
 
 
 #### Parameters
@@ -3053,6 +3061,46 @@ drone.close()
 
 <hr/>
 
+### get_raw_motion_data()
+
+#### Description
+This function returns raw acceleration and angular speed data from the accelerometer and gyroscope, respectively.
+
+#### Syntax
+``get_raw_motion_data()``<br/>
+``get_raw_motion_data(delay=0.01)``
+
+#### Parameters
+***float* delay:** the delay in seconds before the raw motion data is returned. default value is 0.01. 
+
+#### Returns
+***list* raw motion data:** a list containing raw acceleration in the X, Y, and Z direction and angular speed data for the roll, pitch, and yaw. The list contains the current time of the running program [0], x-acceleration [1], y-acceleration [2], z-acceleration [3], angular speed about the x-axis ("roll" axis) [4], angular speed about the y-axis ("pitch" axis)[5], angular speed about the z-axis ("yaw" axis) [6]
+
+#### Example Code
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('get_raw_motion_data_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+print(drone.get_raw_motion_data()) # returns raw motion data
+drone.land()
+
+
+drone.close()
+```
+
+<hr/>
 
 ### get_x_accel()
 
