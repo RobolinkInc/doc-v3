@@ -108,15 +108,43 @@ const config = {
             position: 'right',
           },
           {
-            type: 'search',
-            position: 'right',
-          },
-          {
             label: 'Go to Lessons',
             href: 'https://learn.robolink.com/',
             position: 'right',
           },
         ],
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'YOUR_APP_ID',
+  
+        // Public API key: it is safe to commit it
+        apiKey: 'YOUR_SEARCH_API_KEY',
+  
+        indexName: 'YOUR_INDEX_NAME',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+  
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
+  
+        //... other Algolia params
       },
       footer: {
         style: 'dark',
@@ -162,39 +190,6 @@ const config = {
       },
     }),
     plugins: [
-      [require.resolve('docusaurus-lunr-search'),{
-        languages:['en', 'ko'
-        //,'ja'
-        ],
-        excludeRoutes: [
-          //en
-          '/docs/terms-of-use',
-          '/docs/privacy-policy',
-          '/docs/CoDroneEDU/Blockly/Offline-App-Documentation',
-          '/docs/CoDroneEDU/Python/What-is-Python',
-          '/docs/CoDroneEDU/Resources/Complete-User-and-Safety-Guide',
-          '/docs/CoDroneEDU/Resources/889-Compliance-Statement',
-          '/docs/CoDroneMini/Blockly/How-to-use-Blockly',
-          '/docs/CoDroneMini/Blockly/Offline-App-Documentation',
-          '/docs/CoDroneMini/Python/What-is-Python',
-          '/docs/CoDroneMini/Python/Updating-Library',
-          '/docs/Zumi/Blockly/What-is-Blockly',
-          '/docs/Zumi/Blockly/Blockly-Changelog',
-          '/docs/Zumi/Python/What-is-Python',
-          '/docs/Zumi/Python/Python-Changelog',
-          '/docs/CoDronePro_Lite/Blockly/What-is-Blockly',
-          '/docs/CoDronePro_Lite/Blockly/Offline-App-Documentation',
-          '/docs/CoDronePro_Lite/Blockly/Blockly-Changelog',
-          '/docs/CoDronePro_Lite/Python/What-is-Python',
-          '/docs/CoDronePro_Lite/Python/Setup-and-Installation',
-          '/docs/CoDronePro_Lite/Python/Update-Library',
-          '/docs/CoDronePro_Lite/Python/Python-Changelog',
-          '/docs/CoDronePro_Lite/Arduino/What-is-Arduino',
-          '/docs/CoDronePro_Lite/Arduino/Setup-and-Installation',
-          '/docs/CoDronePro_Lite/Arduino/Update-Library',
-          '/docs/CoDronePro_Lite/Arduino/Arduino-Changelog',
-        ],
-      }],
       [
         '@docusaurus/plugin-pwa',
         {
