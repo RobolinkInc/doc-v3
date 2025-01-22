@@ -7,16 +7,20 @@ customHeadElements:
 
 
 ## CoDrone EDU Blockly Changelog
-<!-- 
-### Version 3.0.0
+
+### Version 3.0.1
 #### January 9, 2025
+
+**Bug fixes** :bug:
+- Improved performance to reduce loading time when opening Blockly
+- Fixed an issue where the battery was returning 0%
+
 **Improvements** :arrow_up:
 - The sensor dashboard now always displays the predicted color based on the default calibration even when using a custom dataset
 - The “clear console” button dynamically adjusts its position when the side tabs open so it remains visible
 - Enhanced performance for better user experience and improved program responsiveness
 
 <hr/>
- -->
  
 ### Version 2.2.5
 #### December 18, 2024
