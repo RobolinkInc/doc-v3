@@ -13,10 +13,12 @@ customHeadElements:
 :::
 
 ### Version 1.9.2
-#### January 22, 2025
+#### January 23, 2025
 **Bug Fixes** :bug:
 - Improved performance to reduce loading time when opening Python for Robolink
 - Fixed an issue where the battery was returning 0%
+
+<hr/>
 
 ### Version 1.9.1
 #### January 9, 2025
