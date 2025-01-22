@@ -9,7 +9,7 @@ customHeadElements:
 ## CoDrone EDU Blockly Changelog
 
 ### Version 3.0.1
-#### January 9, 2025
+#### January 23, 2025
 
 **Bug fixes** :bug:
 - Improved performance to reduce loading time when opening Blockly
