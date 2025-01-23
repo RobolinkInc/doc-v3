@@ -1593,7 +1593,7 @@ This is a setter function that allows you to set the throttle variable. Once you
 ``set_throttle(power)``    
 
 #### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative throttle is down, positive throttle is up.
+***integer* power:** Sets the throttle variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative throttle is down, positive throttle is up.
 
 #### Returns
 None
@@ -1636,7 +1636,7 @@ This is a setter function that allows you to set the yaw variable. Once you set 
 ``set_yaw(power)``    
 
 #### Parameters
-***integer* power:** Sets the pitch variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is right, positive yaw is left.
+***integer* power:** Sets the yaw variable (-100 - 100). The number represents the direction and power of the output for that flight motion variable. Negative yaw is right, positive yaw is left.
 
 #### Returns
 None
@@ -5259,13 +5259,11 @@ None
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_create_canvas_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_create_canvas_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
@@ -5361,13 +5359,11 @@ None
 
 #### Example Code
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_canvas_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('controller_draw_canvas_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
