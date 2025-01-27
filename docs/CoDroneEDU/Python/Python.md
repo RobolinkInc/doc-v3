@@ -37,8 +37,11 @@ customHeadElements:
 
 <div className='level_image_column'>
 
-  [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Function-Documentation)
-  [Function<br />Documentation](/docs/CoDroneEDU/Python/Function-Documentation)
+  [![Function Documentation (Drone)](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Function-Documentation-Drone)
+  [Function<br />Documentation (Drone)](/docs/CoDroneEDU/Python/Function-Documentation-Drone)
+
+  [![Function Documentation (Swarm)](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Function-Documentation-Swarm)
+  [Function<br />Documentation (Swarm)](/docs/CoDroneEDU/Python/Function-Documentation-Swarm)
 
   [![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Python-Changelog)
   [Python Changelog](/docs/CoDroneEDU/Python/Python-Changelog)

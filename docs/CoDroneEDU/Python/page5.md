@@ -1,323 +1,655 @@
 ---
-title: "Python Changelog"
-slug: Python-Changelog
+title: "Function Documentation (Swarm)"
+slug: Function-Documentation-Swarm
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
 
+<div className='print_div'>
 
-## CoDrone EDU Python Library Changelog
+<button id="print_page" onClick={() => window.print()}>Print</button>
 
-### Version 2.1
-#### January 6, 2025
-**New Features** :sparkles:
-- New function get_raw_motion_data() implemented
+</div>
 
-**Improvements** :arrow_up:
-- Reversed the parameters in the turn() function so that power (direction) comes first before duration (in seconds)
-- Addressed cases where get_control_speed() did not return updated values
-- Added library functionality to improve color calibration
-- Added library functionality to properly detect disconnections of the programming software to the drone or controller
-- Addressed cases where controller_draw_image() missed pixels while drawing
+<div className='change_version'>
+version 2.2 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
+</div>
 
-**Bug Fixes** :bug:
-- Corrected the turning direction in the turn() function to handle positive and negative values correctly.
+## Classes
 
-<hr/>
+### Swarm
 
-### Version 2.0
-#### November 7, 2024
-**New Features** :sparkles:
-- added get_movement_state()
-- added get_count_data()
-- added get_address_data()
-- added get_information_data()
-- get_error_data() now includes state data in addition to sensor data
-- controller_preview_canvas() no longer contains image parameter
+#### Description
+This class is used to connect to multiple drones and allow the connected drones to perform commands at the same time or different times.
 
-**Improvements** :arrow_up:
-- improved error handling messages for the user
-- print_move_values() was renamed to get_move_values() which can be printed as needed
-- renamed reset_sensor() -> reset_gyro() and increased delay to ensure reset
-- renamed reset_move() -> reset_move_values()
-- renamed get_temperature() -> get_drone_temperature()
-- renamed get_flow_x() -> get_flow_velocity_x()
-- renamed get_flow_y() -> get_flow_velocity_y()
-- renamed get_x_accel() -> get_accel_x()
-- renamed get_x_accel() -> get_accel_y()
-- renamed get_x_accel() -> get_accel_z()
-- renamed get_x_angle() -> get_angle_x()
-- renamed get_x_angle() -> get_angle_y()
-- renamed get_x_angle() -> get_angle_z()
-- renamed load_classifier() -> load_color_data()
-- all controller screen draw functions have an image parameter (functions not compatible with JROTC ed.)
-- send_absolute_position(), move_forward(), move_backward(), move_left(), and move_right() have been improved for testing
-- get_image_data() is now a Drone class method (ex. drone.get_image_data())
+#### Syntax
+``Swarm()``<br/>
+``Swarm(enable_print=True)``<br/>
+``Swarm(enable_pause=True)``<br/>
+``Swarm(enable_color=True, enable_print=True)``<br/>
+``Swarm(enable_color=True, enable_print=True, enable_pause=True)``
 
-**Bug Fixes** :bug:
-- fixed the pkg_resources error for versions of Python greater than 3.11
-- fixed set_trim() and reset_trim() delays to work with CoDrone EDU (JROTC ed.)
-- fixed an issue that appeared when calibrating only 3 colors using the KNN model
-- corrected the index value for get_flow_velocity_y()
+#### Parameters
+***boolean* enable_color:** If ``True``, when using ``swarm.connect()``, the each drone will be assigned a different LED color to distinguish from each other. By default, this is set to ``True``.<br/>
+***boolean* enable_print:** If this value is ``True`` and enable_color is ``True``, when using ``swarm.connect()``, the console prints the assigned color and index of each drone. The index is important when using ``swarm.run_drone()`` for running drone commands for a given drone or using ``sequence.add()`` for scheduling commands for a given drone. By default, this is set to ``True``.<br/>
+***boolean* enable_pause:** If ``True``, when using ``swarm.connect()``, the console will wait for the user to press Enter in the console to continue running the program. This is useful when the user needs time to fix their set-up. By default, this is set to ``True``.
 
-<hr/>
+#### Returns
+***Swarm* swarm object:** This returns a swarm object that allows the user to connect to multiple drones and run drone commands.
 
-### Version 1.9
-#### October 8, 2023
+#### Example Code 1
+```python
+from codrone_edu.swarm import * # this line is required!
 
-**Bug Fixes** :bug:
-- Fixed a bug in returning controller button press data for the custom controller lesson      
+swarm = Swarm() # enable_print, enable_color, and enable_pause are set to True by default
 
-<hr/>
+swarm.connect()
+'''
+Console Output:
+Running codrone-edu library version 2.2
+Connected to CoDrone EDU.
+Battery = 100%
+Connected to CoDrone EDU.
+Battery = 90%
 
-### Version 1.8
-#### April 15, 2023
+Drone 0 at port COM16: red
+Drone 1 at port COM22: blue
+Press Enter to start swarm...
+'''
 
-**New Features** :sparkles:
-- added get_sensor_data()  
+swarm.disconnect()
+```
 
-**Improvements** :arrow_up:
-- Removed pynput dependency 
+#### Example Code 2
+```python
+from codrone_edu.swarm import *
 
-**Bug Fixes** :bug:     
-- Fixed bug where sensor requests would return 0 right after takeoff  
+swarm = Swarm(enable_print=False)
 
-<hr/>
+swarm.connect() # same result if enable_color=False (even if enable_print=True)
+'''
+Console Output:
+Running codrone-edu library version 2.2
+Connected to CoDrone EDU.
+Battery = 100%
+Connected to CoDrone EDU.
+Battery = 90%
 
-### Version 1.7
-#### February 16, 2023
+Press Enter to start swarm...
+'''
 
-**New Features** :sparkles:
-- added start_controller_buzzer()       
-- added stop_controller_buzzer()        
-- added get_error_data()
+swarm.disconnect()
+```
 
-**Improvements** :arrow_up:
-- renamed get_x_gyro() -> get_angular_speed_x()     
-- renamed get_y_gyro() -> get_angular_speed_y()     
-- renamed get_z_gyro() -> get_angular_speed_z()     
-- codrone-edu library version prints to console         
+#### Example Code 3
+```python
+from codrone_edu.swarm import *
 
-<hr/>
+swarm = Swarm(enable_pause=False)
 
-### Version 1.6
-#### December 28, 2022
+swarm.connect() # doesn't pause the program
+'''
+Console Output:
+Running codrone-edu library version 2.2
+Connected to CoDrone EDU.
+Battery = 100%
+Connected to CoDrone EDU.
+Battery = 90%
 
-**New Features** :sparkles:
-- added start_drone_buzzer()        
-- added stop_drone_buzzer()     
-- added get_temperature()       
-- added move_forward()      
-- added move_left()     
-- added move_right()        
-- added move_backward()
+Drone 0 at port COM16: red
+Drone 1 at port COM22: blue
+'''
 
-**Improvements** :arrow_up:
-- updated send_absolute_position()          
+swarm.disconnect()
+```
 
-<hr/>
+### Sequence
 
-### Version 1.5
-#### November 14, 2022
+#### Description
+This class is used to schedule a sequence of drone commands for a given drone. To learn more about its function, read this <a href="#sequenceadd">section</a>.
 
-**New Features** :sparkles:
-- added stop_motors()
-- added reset_sensor()
+#### Syntax
+``Sequence(index)``
 
-**Improvements** :arrow_up:
-- avoid wall default unit changed from mm to cm    
-- get_pressure() and get_drone_temp() have been modified
+#### Parameters
+***integer* index:** The index of the drone. To view drone indices, ``enable_print`` and ``enable_color`` must be set to ``True`` for the ``Swarm`` object.
 
+#### Returns
+***Sequence* sequence object:** A sequence object that can schedule drone commands for a given drone.
 
-<hr/>
+#### Example Code
+```python
+from codrone_edu.swarm import *
 
-### Version 1.4
-#### August 17, 2022
+swarm = Swarm() # enable_print, enable_color, and enable_pause are set to True by default
 
-**New Features** :sparkles:
-- added error checking to load_classifier() method      
-- added height_from_pressure()      
-- Virtual ceiling method integrated
+swarm.connect() # displays drone indices and LED color
 
-**Improvements** :arrow_up:
-- Changed yaw directional values (positive yaw now turns left)      
+sequence_0 = Sequence(0) # store Sequence object that will schedule drone commands for drone 0 in a variable
 
-<hr/>
+sequence_0.add('turn_left', 45)
+sequence_0.add('turn_right', degree=90)
 
-### Version 1.3
-#### June 27, 2022
+sequence_1 = Sequence(1) # store Sequence object that will schedule drone commands for drone 1 in a variable
 
-**New Features** :sparkles:
-- added go()        
-- added 'ESC' key kill switch       
-- waypoints now support multiple takeoffs       
-- Motor diagnostic integrated as motor_test()       
-- Added virtual ceiling to the background of the drone class        
-- added turn()
+sequence_1.add('turn_left')
 
-**Improvements** :arrow_up:
-- turn_degree() method improved     
+sync = Sync(sequence_0, sequence_1)
 
+swarm.takeoff()
 
-<hr/>
+swarm.run(sync)
 
-### Version 1.2
-#### June 10, 2022
+swarm.land()
 
-**New Features** :sparkles:
-- Added move() command with input parameters        
-- Added hyperlink to "drone may not be paired" message.     
-- Added floor test as a method test_floor()     
-- Added a motor test that uses all 4 motors individually to determine if one is faulty. motor_test()        
-- Added waypoint system     
-- Added joystick and button functions       
+swarm.disconnect()
+```
 
-<hr/>
+### Sync
 
-### Version 1.1
-#### May 17, 2022
+#### Description
+This class is used to store Sequence objects from each drone in order to synchronize the drones with ``swarm.run()``. To learn more about its function, read this <a href="#syncadd">section</a>.
 
-**Improvements** :arrow_up:
-- removed serial library
+#### Syntax
+``Sync(*args)``
 
-**Bug Fixes** :bug:
-- Fixed screen error on controller 
+#### Parameters
+**\*args:** Sequence object(s). If there are multiple Sequence objects to be added, each value must be separated by a comma. Can store however many the user needs.
 
-<hr/>
+#### Returns
+***Sync* sync object:** A sync object that stores multiple Sequence objects that are assigned to drones. Ready to be used with ``swarm.run()``.
 
-### Version 1.0
-#### May 17, 2022
+#### Example Code
+```python
+from codrone_edu.swarm import *
 
-**New Features** :sparkles:
-- Speed defaults to 2 when starting a program       
-- Added speed_change() and get_control_speed() functions        
-- Pillow library added as dependency        
-- Added error message if serial library is not detected     
-- Added error handling when calling load_classifier()       
+swarm = Swarm()
 
-<hr/>
+swarm.connect()
 
-### Version 0.9
-#### May 17, 2022
+sequence_0 = Sequence(0)
+sequence_0.add('turn_left', 45)
+sequence_0.add('turn_right', 90)
 
-**New Features** :sparkles:
-- Added Swarm class
+sequence_1 = Sequence(1)
+sequence_1.add('turn_left')
 
-<hr/>
+sync = Sync(sequence_0, sequence_1)
+# inputs however many sequences needed
+# stores sequences/schedules for drone 0 and drone 1
 
-### Version 0.8
-#### Mar 1, 2022
+swarm.takeoff() # all drones take off
 
-**New Features** :sparkles:
-- Added movement as a state in the state list       
-- Added temperature_convert()
+swarm.run(sync) # executes scheduled drone commands in sync object for drone 0 and 1 at the same time
 
-<hr/>
+swarm.land() # all drones land
 
-### Version 0.7
-#### Feb 18, 2022
+swarm.disconnect()
+```
 
-**New Features** :sparkles:
-- Added luminosity to knn.fit for a fourth data point
-- Added controller screen drawing functions
+<hr className="section_hr"/>
 
-**Bug Fixes** :bug:
-- Fixed turn_degree() to be absolute and smoother and turn 180 degrees      
-- Fixed turn_right()        
-- Fixed turn_left()
+## Connection
+
+### swarm.connect()
+
+#### Description
+This function connects all of the CoDroneEDU controllers with the program.
+
+#### Syntax
+``swarm.connect()``
+
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+```python
+from codrone_edu.swarm import * # this line is required!
+
+swarm = Swarm() # creates Swarm object, also required
+
+swarm.connect() # connects with controllers
+
+swarm.disconnect()
+```
 
 <hr/>
 
-### Version 0.6
-#### Feb 4, 2022
+### swarm.disconnect()
 
-**New Features** :sparkles:
-- Added and fixed sendMotor     
-- Added and fixed sendMotorSingle
-- Added buzzer flip warning when battery is less than 50%       
-- convert_meter can now return meter        
-- Added drone.append_color_data() - appends data to an existing text file       
-- Added error handling when load_classifier is empty 
+#### Description
+This function disconnects all of the CoDroneEDU controllers from the program.
 
-**Improvements** :arrow_up:
-- drone.get_flow_x, y converted from m to cm        
-- All distance sensors now return in centimeter by default  
-- drone.turn_degree() is now absolute and division by 0 is fixed        
-- drone.get_height() now uses time of flight instead of barometer
-- Updated set_trim() to only change roll and pitch      
-- Updated get_trim_data() to return only roll and pitch
-- Changed dir variable in add_color()
+#### Syntax
+``swarm.connect()``
 
-**Bug Fixes** :bug:
-- Fixed all functions effected by centimeter being returned by default      
-- Fixed buzzer functions  
-- Fixed drone.avoid_wall()      
-- Fixed issue when adding to a dataset that already exists      
+#### Parameters
+None
+
+#### Returns
+None
+
+#### Example Code
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+
+swarm.connect() 
+
+swarm.close() # disconnects controllers from the program
+```
+<hr className='section_hr'/>
+
+## Commands
+
+### swarm.run_drone()
+
+#### Description
+This function runs a Drone function for only one drone in the swarm. To view the available Drone functions, head to <a href='/docs/CoDroneEDU/Python/Function-Documentation-Drone'>this page</a> in our documentation site!
+
+#### Syntax
+``run_drone(index, method_name, *args, **kwargs)``
+
+#### Parameters
+***int* index:** index of desired Drone that will execute Drone function<br/>
+***string* method_name:** name of Drone function (command) that will be executed<br/>
+**\*args:** value(s) for the parameter of the given Drone function. If there are multiple parameters required for the Drone function, each value must be separated by a comma<br/>
+**\*\*kwargs:** value(s) for the parameter of the given Drone function, in form of ``parameter=value``.
+
+#### Returns
+Depending on what Drone function you are calling, it will return the value of that function. For example, if method_name is "get_position_data", ``run_drone()`` will return a list of the drone's position data since ``get_position_data()`` returns a list of a drone's position data. Also, if method_name is "get_battery", ``run_drone()`` will return an integer value of the drone's battery since ``get_battery()`` returns an integer value of a drone's battery.
+
+#### Example Code 1
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+
+swarm.run_drone(0, "set_drone_LED", 255, 255, 0, brightness=255)
+# index: 0
+# method_name: "set_drone_LED"
+# *args: 255, 255, 0
+# **kwargs: brightness=255
+
+# *args and **kwargs are not required unless the Drone function requires certain parameters to be inputted. In this case, set_drone_LED() does require all of the parameters. NOTE: The run_drone() commands in Example 1, 2, and 3 do the same thing.
+
+swarm.disconnect()
+```
+
+#### Example Code 2
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+
+swarm.run_drone(0,"set_drone_LED", 255, 255, 0, 255)
+# index: 0
+# method_name: "set_drone_LED"
+# *args: 255, 255, 0, 255
+# **kwargs:
+
+swarm.disconnect()
+```
+#### Example Code 3
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+
+swarm.run_drone(0,"set_drone_LED", r=255, g=255, b=0, brightness=255)
+# index: 0
+# method_name: "set_drone_LED"
+# *args:
+# **kwargs: r=255, g=255, b=0, brightness=255
+
+swarm.disconnect()
+```
+#### Example Code 4
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+
+print(swarm.run_drone(1, "get_position_data"))
+# index: 1
+# method_name: "get_position_data"
+# *args:
+# **kwargs:
+
+swarm.disconnect()
+```
+#### Example Code 5
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm(enable_pause=False)
+swarm.connect()
+
+swarm.takeoff()
+
+height0 = swarm.run_drone(0, "get_pressure")
+# index: 0
+# method_name: "get_pressure"
+# *args:
+# **kwargs:
+height1 = swarm.run_drone(1, "get_pressure")
+# index: 1
+# method_name: "get_pressure"
+# *args:
+# **kwargs:
+
+print(height0, height1)
+
+swarm.land()
+
+swarm.disconnect()
+```
+<hr/>
+
+### Drone Functions
+
+#### Description
+Any function that belongs in the Drone class can be used as a Swarm function with similar syntax. Using the ``swarm.drone_function()`` syntax will execute the given Drone function, in parallel (at the same time), for all drones in the swarm. To view the available Drone functions, head to <a href='/docs/CoDroneEDU/Python/Function-Documentation-Drone'>this page</a> in our documentation site!
+
+#### Syntax
+``drone_function()``<br/>
+``drone_function(*args, **kwargs)``
+
+#### Parameters
+**\*args:** value(s) for the parameter of the given Drone function. If there are multiple parameters required for the Drone function, each value must be separated by a comma<br/>
+**\*\*kwargs:** value(s) for the parameter of the given Drone function, in form of ``parameter=value``
+
+#### Returns
+***list* list of data:** A list of drone data from each drone. The drone data can be a list, integer, float, etc. depending on what Drone function you are calling. For example, ``swarm.get_position_data()`` will return a list of each of the drones' position data, which are also lists. ``swarm.get_battery()`` will return a list of each of the drones' battery, which are integers.
+
+#### Example Code 1
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+
+swarm.connect()
+
+swarm.takeoff() # drones will take off at the same time
+
+swarm.land() # drones will land at the same time
+
+swarm.disconnect()
+```
+
+#### Example Code 2
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+
+swarm.takeoff()
+
+swarm.set_pitch(20) # pitch variable for all drones will be set to 20
+swarm.set_roll(-20) # roll variable for all drones will be set to -20
+swarm.move(2) # all drones move at 20% pitch and -20% roll power for 2 seconds
+
+swarm.set_pitch(0) # pitch variable for all drones will be set to 0
+swarm.set_roll(0) # roll variable for all drones will be set to 0
+swarm.set_yaw(50) # yaw variable for all drones will be set to 50
+swarm.move(3) # all drones move at 50% yaw power for 3 seconds
+
+swarm.land()
+
+swarm.disconnect()
+
+```
+
+#### Example Code 3
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+swarm.takeoff()
+
+swarm.turn_left() # all drones will make a 90 degree left turn
+
+swarm.hover(3) # all drones will hover for 1 second in the air
+
+swarm.turn_right(30, timeout=3) # all drones will make a 30 degree right turn with a 3 second timeout
+
+swarm.land()
+
+swarm.disconnect()
+```
+
+#### Example Code 4
+If printing/storing a function call like ``swarm.get_angle_x()``, index 0 of the list will show drone 0's x-angle data, index 1 of the list will show drone 1's x-angle data, etc.
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+swarm.connect()
+
+for i in range(100):
+    x_angles = swarm.get_angle_x() # returns a list of x-angles for each drone
+    print(x_angles)
+    time.sleep(0.05)
+
+'''
+Console Output:
+Running codrone-edu library version 2.2
+Connected to CoDrone EDU.
+Battery = 43%
+Connected to CoDrone EDU.
+Battery = 91%
+
+Drone 0 at port COM16: red
+Drone 1 at port COM22: blue
+Press Enter to start swarm...
+[14, 0]
+[21, -3]
+[17, 10]
+[2, 26]
+[2, 31]
+[2, 27]
+[2, 27]
+[21, 24]
+[50, 23]
+'''
+
+swarm.disconnect()
+```
+
+<hr className="section_hr"/>
+
+## Synchronization
+
+### sequence.add()
+
+#### Description
+This function adds a drone command to be scheduled in the sequence.
+
+#### Syntax
+``add(method_name, *args, **kwargs)``
+
+#### Parameters
+***string* method_name:** name of Drone function (command) to be scheduled<br/>
+**\*args:** value(s) for the parameter of the given Drone function. If there are multiple parameters required for the Drone function, each value must be separated by a comma<br/>
+**\*\*kwargs:** value(s) for the parameter of the given Drone function, in form of ``parameter=value``.
+
+#### Returns
+None
+
+#### Example Code
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+
+swarm.connect()
+
+sequence_0 = Sequence(0)
+
+sequence_0.add('turn_left', 45) # drone 0 is scheduled to run turn_left(45)
+sequence_0.add('turn_right', degree=90) # drone 0 is scheduled to run turn_right(90) after turn_left(45)
+
+sequence_1 = Sequence(1)
+
+sequence_1.add('turn_left') # drone 1 is scheduled to run turn_left(90)
+
+sync = Sync(sequence_0, sequence_1)
+
+swarm.takeoff()
+
+swarm.run(sync)
+
+swarm.land()
+
+swarm.disconnect()
+```
 
 <hr/>
 
-### Version 0.5
-#### Jan 10, 2022
+### sync.add()
 
-**New Features** :sparkles:
-- Added drone.flip()        
-- Added convert_millimeter() and convert_meter() to return centimeter by default for all positional functions       
-- Added error handling in the color classifier      
-- Added docstrings  
+#### Description
+This function adds a sequence in the Sync object.
 
-<hr/>
+#### Syntax
+``add(sequence_obj)``
 
-### Version 0.4
-#### Dec 15, 2021
+#### Parameters
+***Sequence* sequence_obj:** The Sequence object to be added.
 
-**New Features** :sparkles:
-- Added drone.get_drone_temp()      
-- Added drone.get_pressure()        
-- Added drone.drone_buzzer()        
-- Added drone.controller_buzzer()       
-- Added drone.set_trim()        
-- Added drone.get_height()        
-- Added drone.get_pressure()        
-- Added the flight sequences square, triangle, spiral, and sway.
+#### Returns
+None
 
-**Improvements** :arrow_up:
-- Improved takeoff command      
-- Improved port connection
+#### Example Code
+```python
+from codrone_edu.swarm import *
 
-<hr/>
+swarm = Swarm()
 
-### Version 0.3
-#### Nov 23, 2021
+swarm.connect()
 
-**New Features** :sparkles:
-- Added drone.avoid_wall() - Obstacle avoidance command. is similar to zumi.forward_avoid_collision()       
-- Added drone.detect_wall() - Uses front range sensor to detect a wall      
-- Added drone.keep_distance() - Keep distance command makes the drone maintain a distance to an obstacle        
-- Added drone.turn_left() - Can be given a degree and the drone will turn to the left       
-- Added drone.turn_right() - Can be given a degree and the drone will turn to the right     
-- Added drone.turn_degrees() - Can take an absolute degree command and will turn to that degree.        
-- Added drone.hover() - Will make the drone hover.      
-- Added reset_YPRT() - Resets the yaw pitch roll and throttle and sends the command to the drone.       
-- Added drone.keep_height() - Keep height command. A single command that is looped.     
-- Added get_colors() - returns a list [1, 2]        
-- Added get_front_color() - gets first color in get_colors() list       
-- Added get_back_color() - gets second color in get_colors() list       
-- Added predict_color() - predicts a color if you have trained the model and there is an existing file      
-- Finished basic LEDs
+sequence_0 = Sequence(0)
+sequence_0.add('turn_left', 45)
+sequence_0.add('turn_right', degree=90)
+
+sequence_1 = Sequence(1)
+sequence_1.add('turn_left')
+
+sequence_2 = Sequence(2)
+sequence_2.add('set_drone_LED', 255,255,0,255)
+
+sync = Sync(sequence_0, sequence_1)
+
+sync.add(sequence_2) # adds sequence for drone 2
+
+swarm.takeoff()
+
+swarm.run(sync)
+
+swarm.land()
+
+swarm.disconnect()
+```
 
 <hr/>
 
-### Version 0.1 - 0.2
-#### Oct 10, 2021
+### swarm.run()
 
-**New Features** :sparkles:
-- Added Drone.acceleration_x, y, z
-- Added Drone.angle_roll, yaw, pitch
-- Added Drone.range_front()
-- Added Drone.range_bottom()
-- Added Drone.get_battery()
-- Added Drone.open()
-- Added Drone.takeoff()
-- Added Drone.land()
+#### Description
+Runs each of the drone's sequences independently, at the same time, or runs each of the drone's sequences one by one.
+
+#### Syntax
+``run(sync_obj)``<br/>
+``run(sync_obj, type="parallel", delay=None, order=None)``
+
+
+#### Parameters
+***Sync* sync_obj:** Sync object that will be executed.
+
+#### Returns
+***list* drone data:** 2D list of drone data from each drone for every command ran. This list is relevant if one of the commands for any drone returns drone data. ``swarm.run()`` doesn't need to be stored in a variable if necessary.
+
+This is the general structure of the 2D list:
+```
+[[drone_0_value, drone_1_value,...,drone_n_value], --> list of return values from each drone's 1st command
+[drone_0_value, drone_1_value,...,drone_n_value], --> list of return values from each drone's 2nd command
+,...,
+[drone_0_value, drone_1_value,...,drone_n_value]] --> list of return values from each drone's nth command
+```
+
+
+#### Example Code
+```python
+from codrone_edu.swarm import *
+
+# First, create Sequence instances for each drone (or drone index)
+sequence_0 = Sequence(0)
+sequence_0.add('get_battery')
+sequence_0.add('set_pitch', 20)
+sequence_0.add('set_throttle', power=20)
+sequence_0.add('move',2.5)
+sequence_0.add('get_position_data')
+
+sequence_1 = Sequence(1)
+sequence_1.add('get_battery')
+sequence_1.add('set_pitch', -20)
+sequence_1.add('set_throttle', power=35)
+sequence_1.add('move',4)
+sequence_1.add('get_position_data')
+sequence_1.add('set_pitch', 20)
+sequence_1.add('set_throttle', power=-20)
+sequence_1.add('move',2.5)
+sequence_1.add('get_battery')
+
+# store sequences in Sync object
+sync = Sync(sequence_0, sequence_1)
+
+# create Swarm instance and all drones are connected
+swarm = Swarm()
+swarm.connect()
+
+# all drones takeoff
+swarm.takeoff()
+
+# run synchronization, drones execute their tasks individually
+result = swarm.run(sync) # returns 2D list containing return values from each drone
+
+swarm.land()
+
+print(result) 
+'''
+Console Output:
+Running codrone-edu library version 2.2
+Connected to CoDrone EDU.
+Battery = 43%
+Connected to CoDrone EDU.
+Battery = 91%
+
+Drone 0 at port COM16: red
+Drone 1 at port COM22: blue
+Press Enter to start swarm...
+[[26, 80],
+[None, None],
+[None, None],
+[None, None],
+[[13.884961605072021, 0.4637690782546997, -0.234191432595253, 0.20280465483665466], [13.884961605072021, 0.03511320427060127, -0.03844326362013817, 0.5322286486625671]],
+[None, None],
+[None, None],
+[None, None],
+[None, 67]]
+'''
+
+swarm.close()
+```
 
 <hr/>
