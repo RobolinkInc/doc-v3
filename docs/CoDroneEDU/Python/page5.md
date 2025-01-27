@@ -574,7 +574,7 @@ Runs each of the drone's sequences independently, at the same time, or runs each
 
 
 #### Parameters
-***Sync* sync_obj:** Sync object that will be executed.
+***Sync* sync_obj:** Sync object that will be executed.<br/>
 ***string* type:** Type of synchronization: ``"sequential"`` and ``"parallel"``. If ``"sequential"``, drones execute commands one by one.<br/>
 ***float* delay:** Delay between drone commands, if ``type="sequential"``.<br/>
 ***list* order:** order of execution between drones, if ``type="sequential"``.
