@@ -8,6 +8,14 @@ customHeadElements:
 
 ## CoDrone EDU Blockly Changelog
 
+### Version 3.0.2
+#### January 24, 2025
+
+**Bug fixes** :bug:
+- Resolved infinite loading of Blockly affecting some users
+
+<hr/>
+
 ### Version 3.0.1
 #### January 23, 2025
 
