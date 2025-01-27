@@ -575,6 +575,17 @@ Runs each of the drone's sequences independently, at the same time, or runs each
 
 #### Parameters
 ***Sync* sync_obj:** Sync object that will be executed.
+***string* type:** Type of synchronization: ``"sequential"`` and ``"parallel"``. If ``"sequential"``, drones execute commands one by one.<br/>
+***float* delay:** Delay between drone commands, if ``type="sequential"``.<br/>
+***list* order:** order of execution between drones, if ``type="sequential"``.
+
+An example of the structure of order is:
+``[[0,1,3,4,2],[4,3,2,1,0],[0,1,2,3,4]]``
+- The ith-nested list represents the order of execution for the drones' ith task
+- The 1st nested list will run drone 0's 1st command, then drone 1's 1st command, then drone 3's 1st command, then drone 4's 1st command, and finally drone 2's 1st command
+- The 2nd nested list will run drone 4's 2nd command, then drone 3's 2nd command, then drone 2's 2nd command, then drone 1's 2nd command, and finally drone 0's 2nd command
+- The 3rd nested list will run drone 0's 3rd command, then drone 1's 3rd command, then drone 2's 3rd command, then drone 3's 2nd command, and finally drone 4's 2nd command
+- If a drone has less commands than others, the drone will hover instead.
 
 #### Returns
 ***list* drone data:** 2D list of drone data from each drone for every command ran. This list is relevant if one of the commands for any drone returns drone data. ``swarm.run()`` doesn't need to be stored in a variable if necessary.
