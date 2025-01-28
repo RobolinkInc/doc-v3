@@ -38,6 +38,7 @@ This class is used to connect to multiple drones and allow the connected drones 
 ***Swarm* swarm object:** This returns a swarm object that allows the user to connect to multiple drones and run drone commands.
 
 #### Example Code 1
+No set up is required. Place the drones on the table, and observe the console output for this example.
 ```python
 from codrone_edu.swarm import * # this line is required!
 
@@ -61,6 +62,7 @@ swarm.disconnect()
 ```
 
 #### Example Code 2
+No set up is required. Place the drones on the table, and observe the console output for this example.
 ```python
 from codrone_edu.swarm import *
 
@@ -82,6 +84,7 @@ swarm.disconnect()
 ```
 
 #### Example Code 3
+No set up is required. Place the drones on the table, and observe the console output for this example.
 ```python
 from codrone_edu.swarm import *
 
@@ -118,6 +121,9 @@ This class is used to schedule a sequence of drone commands for a given drone. T
 ***Sequence* sequence object:** A sequence object that can schedule drone commands for a given drone.
 
 #### Example Code
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -160,6 +166,9 @@ This class is used to store Sequence objects from each drone in order to synchro
 ***Sync* sync object:** A sync object that stores multiple Sequence objects that are assigned to drones. Ready to be used with ``swarm.run()``.
 
 #### Example Code
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -206,6 +215,7 @@ None
 None
 
 #### Example Code
+
 ```python
 from codrone_edu.swarm import * # this line is required!
 
@@ -264,6 +274,9 @@ This function runs a Drone function for only one drone in the swarm. To view the
 Depending on what Drone function you are calling, it will return the value of that function. For example, if method_name is "get_position_data", ``run_drone()`` will return a list of the drone's position data since ``get_position_data()`` returns a list of a drone's position data. Also, if method_name is "get_battery", ``run_drone()`` will return an integer value of the drone's battery since ``get_battery()`` returns an integer value of a drone's battery.
 
 #### Example Code 1
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Verify that drone 0 ran ``set_drone_LED()`` command. 
 ```python
 from codrone_edu.swarm import *
 
@@ -282,6 +295,9 @@ swarm.disconnect()
 ```
 
 #### Example Code 2
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Verify that drone 0 ran ``set_drone_LED()`` command.
 ```python
 from codrone_edu.swarm import *
 
@@ -297,6 +313,9 @@ swarm.run_drone(0,"set_drone_LED", 255, 255, 0, 255)
 swarm.disconnect()
 ```
 #### Example Code 3
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Verify that drone 0 ran ``set_drone_LED()`` command.
 ```python
 from codrone_edu.swarm import *
 
@@ -312,6 +331,9 @@ swarm.run_drone(0,"set_drone_LED", r=255, g=255, b=0, brightness=255)
 swarm.disconnect()
 ```
 #### Example Code 4
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Verify that drone 1 ran ``get_position_data()`` command. 
 ```python
 from codrone_edu.swarm import *
 
@@ -327,6 +349,9 @@ print(swarm.run_drone(1, "get_position_data"))
 swarm.disconnect()
 ```
 #### Example Code 5
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Verify that drone 0 and drone 1 ran ``get_pressure()`` command. 
 ```python
 from codrone_edu.swarm import *
 
@@ -371,6 +396,9 @@ Any function that belongs in the Drone class can be used as a Swarm function wit
 ***list* list of data:** A list of drone data from each drone. The drone data can be a list, integer, float, etc. depending on what Drone function you are calling. For example, ``swarm.get_position_data()`` will return a list of each of the drones' position data, which are also lists. ``swarm.get_battery()`` will return a list of each of the drones' battery, which are integers.
 
 #### Example Code 1
+Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+All drones will take off, land, and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -386,6 +414,9 @@ swarm.disconnect()
 ```
 
 #### Example Code 2
+Place however many drones 2 feet away from each other. Make sure drones have enough space to move forward and left. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+All drones will take off, move at 20% pitch and -20% roll power for 2 seconds, move at 50% yaw power for 3 seconds, and finally land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -410,6 +441,9 @@ swarm.disconnect()
 ```
 
 #### Example Code 3
+Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+All drones will take off, turn left 90 degrees, hover for 3 seconds, turn right 30 degrees, and finally land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -429,6 +463,10 @@ swarm.disconnect()
 ```
 
 #### Example Code 4
+No set up required. Use however many drones, and run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Rotate your drones with your hands to observe x-angle changes for each drone.
+
 If printing/storing a function call like ``swarm.get_angle_x()``, index 0 of the list will show drone 0's x-angle data, index 1 of the list will show drone 1's x-angle data, etc.
 ```python
 from codrone_edu.swarm import *
@@ -487,6 +525,9 @@ This function adds a drone command to be scheduled in the sequence.
 None
 
 #### Example Code
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -531,6 +572,9 @@ This function adds a sequence in the Sync object.
 None
 
 #### Example Code
+Place 3 drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+All drones take off. One drone (drone 0) turns left 45 degrees, another drone (drone 1) turns left 90 degrees, and the remaining drone (drone 2) sets drone LED to the color yellow. Since drone 1 and 2 finished running their commands, drone 1 and 2 hover while drone 0 turns right 90 degrees. Finally, all drones land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
@@ -599,7 +643,10 @@ This is the general structure of the 2D list:
 ```
 
 
-#### Example Code
+#### Example Code 1
+Place two drones 2 feet away from each other, facing the same direction. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+
+Both drones take off. Each drone will independently run their sequence of commands. Finally, both drones land and disconnect.
 ```python
 from codrone_edu.swarm import *
 
