@@ -8,6 +8,14 @@ customHeadElements:
 
 ## CoDrone EDU Blockly Changelog
 
+### Version 3.0.3
+#### January 30, 2025
+
+**Bug fixes** :bug:
+- Resolved issue where the coding workspace would clear when reloading the page.
+
+<hr/>
+
 ### Version 3.0.2
 #### January 24, 2025
 
