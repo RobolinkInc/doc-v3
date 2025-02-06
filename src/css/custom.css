@@ -1460,3 +1460,7 @@ hr {
 .firmware-row img {
   margin: 0;
 }
+
+.theme-doc-version-badge{
+  display: none;
+}

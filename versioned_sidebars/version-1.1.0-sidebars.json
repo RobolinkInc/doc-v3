@@ -1,0 +1,203 @@
+{
+  "CoDroneEDU": [
+    {
+      "type": "doc",
+      "id": "CoDroneEDU/CoDroneEDU"
+    },
+    {
+      "type": "doc",
+      "id": "CoDroneEDU/Blockly/Blockly"
+    },
+    {
+      "type": "category",
+      "label": "Blockly",
+      "link": {
+        "type": "doc",
+        "id": "CoDroneEDU/Blockly/Blockly"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDroneEDU/Blockly/page1",
+        "CoDroneEDU/Blockly/page3",
+        "CoDroneEDU/Blockly/page4",
+        "CoDroneEDU/Blockly/page5"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "CoDroneEDU/Python/Python"
+    },
+    {
+      "type": "category",
+      "label": "Python",
+      "link": {
+        "type": "doc",
+        "id": "CoDroneEDU/Python/Python"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDroneEDU/Python/page2",
+        "CoDroneEDU/Python/page3",
+        "CoDroneEDU/Python/page4",
+        "CoDroneEDU/Python/page5",
+        "CoDroneEDU/Python/page6"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "CoDroneEDU/Resources/Resources"
+    },
+    {
+      "type": "category",
+      "label": "Resources",
+      "link": {
+        "type": "doc",
+        "id": "CoDroneEDU/Resources/Resources"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDroneEDU/Resources/page1",
+        "CoDroneEDU/Resources/page2",
+        "CoDroneEDU/Resources/page3"
+      ]
+    }
+  ],
+  "CoDroneMini": [
+    {
+      "type": "doc",
+      "id": "CoDroneMini/CoDroneMini"
+    },
+    {
+      "type": "doc",
+      "id": "CoDroneMini/Blockly/Blockly"
+    },
+    {
+      "type": "category",
+      "label": "Blockly",
+      "link": {
+        "type": "doc",
+        "id": "CoDroneMini/Blockly/Blockly"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDroneMini/Blockly/page3",
+        "CoDroneMini/Blockly/page4",
+        "CoDroneMini/Blockly/page5",
+        "CoDroneMini/Blockly/page6"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "CoDroneMini/Python/Python"
+    },
+    {
+      "type": "category",
+      "label": "Python",
+      "link": {
+        "type": "doc",
+        "id": "CoDroneMini/Python/Python"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDroneMini/Python/page2",
+        "CoDroneMini/Python/page4",
+        "CoDroneMini/Python/page5"
+      ]
+    }
+  ],
+  "Zumi": [
+    {
+      "type": "doc",
+      "id": "Zumi/Zumi"
+    },
+    {
+      "type": "doc",
+      "id": "Zumi/Blockly/Blockly"
+    },
+    {
+      "type": "category",
+      "label": "Blockly",
+      "link": {
+        "type": "doc",
+        "id": "Zumi/Blockly/Blockly"
+      },
+      "collapsible": false,
+      "items": [
+        "Zumi/Blockly/page2",
+        "Zumi/Blockly/page3"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "Zumi/Python/Python"
+    },
+    {
+      "type": "category",
+      "label": "Python",
+      "link": {
+        "type": "doc",
+        "id": "Zumi/Python/Python"
+      },
+      "collapsible": false,
+      "items": [
+        "Zumi/Python/page2"
+      ]
+    }
+  ],
+  "CoDronePro_Lite": [
+    {
+      "type": "doc",
+      "id": "CoDronePro_Lite/CoDronePro_Lite"
+    },
+    {
+      "type": "doc",
+      "id": "CoDronePro_Lite/Blockly/Blockly"
+    },
+    {
+      "type": "category",
+      "label": "Blockly",
+      "link": {
+        "type": "doc",
+        "id": "CoDronePro_Lite/Blockly/Blockly"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDronePro_Lite/Blockly/page3",
+        "CoDronePro_Lite/Blockly/page4",
+        "CoDronePro_Lite/Blockly/page6"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "CoDronePro_Lite/Python/Python"
+    },
+    {
+      "type": "category",
+      "label": "Python",
+      "link": {
+        "type": "doc",
+        "id": "CoDronePro_Lite/Python/Python"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDronePro_Lite/Python/page4"
+      ]
+    },
+    {
+      "type": "doc",
+      "id": "CoDronePro_Lite/Arduino/Arduino"
+    },
+    {
+      "type": "category",
+      "label": "Arduino",
+      "link": {
+        "type": "doc",
+        "id": "CoDronePro_Lite/Arduino/Arduino"
+      },
+      "collapsible": false,
+      "items": [
+        "CoDronePro_Lite/Arduino/page4"
+      ]
+    }
+  ]
+}
