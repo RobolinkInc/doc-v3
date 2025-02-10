@@ -1010,6 +1010,12 @@ drone.close()
 
 ### flip()
 
+:::warning
+
+This function is temporarily not working in Blockly and *Python for Robolink*. Warning will be removed once resolved.
+
+:::
+
 #### Description
 This functions makes the drone flip backward, forward, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
 

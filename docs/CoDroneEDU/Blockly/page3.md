@@ -231,6 +231,12 @@ None
 
 ### flip [direction]
 
+:::warning
+
+This function is temporarily not working in Blockly and *Python for Robolink*. Warning will be removed once resolved.
+
+:::
+
 #### Block
 
 <img src="/img/CDE/blockly_docu/junior/flip.png" width="180px"/>  

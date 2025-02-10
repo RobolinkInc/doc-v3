@@ -200,6 +200,12 @@ In the example below, the drone will move for 3 seconds with the yaw and throttl
 
 ### flip()
 
+:::warning
+
+This function is temporarily not working in Blockly and *Python for Robolink*. Warning will be removed once resolved.
+
+:::
+
 #### Block
 
 <img src="/img/CDE/blockly_docu/senior/flip.png" width="180px"/>  
@@ -1802,6 +1808,11 @@ To make this example work, your color set must be loaded into your Blockly works
 
 :::warning
 
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
+:::warning
+
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -1840,6 +1851,11 @@ None
 
 :::warning
 
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
+:::warning
+
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -1876,6 +1892,11 @@ None
 
 ### controller_draw_line()
 
+:::warning
+
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
@@ -1929,6 +1950,11 @@ None
 
 :::warning
 
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
+:::warning
+
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -1970,6 +1996,11 @@ None
 
 ### controller_draw_rectangle()
 
+:::warning
+
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
@@ -2025,6 +2056,11 @@ None
 
 :::warning
 
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
+:::warning
+
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -2075,6 +2111,11 @@ None
 
 :::warning
 
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
+:::warning
+
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -2115,6 +2156,11 @@ None
 
 ### controller_clear_screen()
 
+:::warning
+
+This function is temporarily not working in Blockly. Warning will be removed once resolved.
+
+:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
