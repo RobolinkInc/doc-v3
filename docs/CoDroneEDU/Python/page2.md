@@ -104,60 +104,6 @@ If a main.py file was not generated, you can make a new one by right clicking on
 
 <hr className="section_hr"/>
 
-## Getting Started &mdash; Synchronized Flight
-
-### What is Synchronized Flight?
-Synchronized flight is a coordinated and programmed process where drones perform a sequence of drone movements, performing commands in parallel (at the same time) or sequentially (one after the other). Synchronized flight is also recognized as a "drone swarm". This feature is now possible using the codrone-edu v2.2 in PyCharm!
-
-### How to Use Synchronized Flight
-#### Installing ``codrone-edu``
-To use our swarm feature in PyCharm, you must install codrone-edu v2.2 using the following steps:
-1. Click on "File" on the top-left side of the window, and then click on "Settings". This will lead to a pop-up window with different settings for your PyCharm project.
-2. On the left side of the setting window, go down to and click on "Project: [yourProjectName]" and then click on "Python Interpreter".
-3. Click on the "+" button above the table with the list of Python packages to search for codrone-edu. Another pop-up window will appear with a list of the available Python packages to install.
-4. In the search bar, type "codrone-edu" and click on the Python package that says "codrone-edu". 
-5. Make sure that the latest version of codrone-edu is installed (v2.2) and click on the "Install Package" button.
-6. When a green notification appears saying that the installation is complete, close the two pop-up windows.
-
-#### Updating ``codrone-edu``
-If you already have the codrone-edu library installed but need to update it, follow these steps:
-1. Click on "File" on the top-left side of the window, and then click on "Settings". This will lead to a pop-up window with different settings for your PyCharm project.
-2. On the left side of the setting window, go down to and click on "Project: [yourProjectName]" and then click on "Python Interpreter". A list of Python packages will appear, and if you have already installed codrone-edu, it should be in that list.
-3. Click on "codrone-edu" from the list.
-4. Click on the "Upgrade" button (Arrow pointing upwards) to update codrone-edu to the latest version.
-
-#### Importing ``swarm`` Module
-Create a new Python file to start programming a synchronized flight:
-1. Create a new Python file by right-clicking on the project name (highlighted in blue in image below) that is on the left side of the PyCharm window. Click on "New" > "Python File". A mini pop-up window will appear.
-2. Type the name of your Python file and make sure the "Python file" option is selected on the mini pop-up window. Now, the new Python file will be created, so you can start coding.
-3. On the first line, type:
-```python
-from codrone_edu.swarm import *
-```
-
-#### Using ``swarm`` module
-Before we start running any synchronized flight code, you should have at least 2 USB ports to connect the CoDrone EDU controllers to program CoDrone EDU drones and must follow these steps:
-1. If you are using a USB hub for synchronized flight, connect your USB hub to your laptop.
-2. Connect your CoDrone EDU controllers to your laptop or USB hub if you are using one.
-3. Make sure your CoDrone EDU drones are on and paired with their respective controllers.
-4. Place the drones 2 feet from each other to avoid drones crashing into each other during takeoff. 
-5. Run the code below. When running this code, click on the console below and press Enter to continue running the program. This prompt gives you time to fix your setup before you start running the full program.
-
-```python
-from codrone_edu.swarm import *
-
-swarm = Swarm()
-
-swarm.connect()
-
-swarm.takeoff() # drones will take off at the same time
-
-swarm.land() # drones will land at the same time
-
-swarm.disconnect()
-```
-5. To learn more how to use the swarm module, read through our function documentation page.
-
 ## System Requirements
 
 ### Device Requirements
