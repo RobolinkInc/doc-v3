@@ -231,6 +231,12 @@ None
 
 ### flip [direction]
 
+:::warning
+
+This function is temporarily not working in Blockly and *Python for Robolink*. Warning will be removed once resolved.
+
+:::
+
 #### Block
 
 <img src="/img/CDE/blockly_docu/junior/flip.png" width="180px"/>  
@@ -250,13 +256,14 @@ None
 #### Example
 Add a hover or delay block after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command.
 
-<div className="loadXmlDiv">
-  <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example_junior')}>
-    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Blockly</span>
-  </button>
+<div className="unable_button">
+  <div className="loadXmlDiv">
+    <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example_junior')}>
+      <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Blockly</span>
+    </button>
+  </div>
 </div>
-
 <img src="/img/CDE/blockly_docu/junior/flip_example.png" width="500px"/>  
 
 <hr className="section_hr"/>
