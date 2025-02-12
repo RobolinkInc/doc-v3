@@ -1033,11 +1033,13 @@ None
 #### Example Code
 Add a hover or delay after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command.
 
-<div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('flip_example')}>
-    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-    <span className="button-text">Open in Python</span>
-  </button>
+<div className="unable_button">
+  <div className="loadPFRDiv">
+    <button className="loadPFRButton" onClick={() => loadPFRPython('flip_example')}>
+      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+      <span className="button-text">Open in Python</span>
+    </button>
+  </div>
 </div>
 
 ```python
