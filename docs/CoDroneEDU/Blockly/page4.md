@@ -1808,11 +1808,6 @@ To make this example work, your color set must be loaded into your Blockly works
 
 :::warning
 
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
-:::warning
-
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -1851,11 +1846,6 @@ None
 
 :::warning
 
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
-:::warning
-
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -1892,11 +1882,6 @@ None
 
 ### controller_draw_line()
 
-:::warning
-
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
@@ -1950,11 +1935,6 @@ None
 
 :::warning
 
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
-:::warning
-
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -1996,11 +1976,6 @@ None
 
 ### controller_draw_rectangle()
 
-:::warning
-
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
@@ -2056,11 +2031,6 @@ None
 
 :::warning
 
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
-:::warning
-
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -2111,11 +2081,6 @@ None
 
 :::warning
 
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
-:::warning
-
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
@@ -2156,11 +2121,6 @@ None
 
 ### controller_clear_screen()
 
-:::warning
-
-This function is temporarily not working in Blockly. Warning will be removed once resolved.
-
-:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
