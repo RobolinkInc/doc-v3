@@ -1982,6 +1982,11 @@ None
 
 :::warning
 
+This function is temporarily not working in version 3.0.3 of Blockly. Warning will be removed once resolved.
+
+:::
+:::warning
+
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
 
 :::
