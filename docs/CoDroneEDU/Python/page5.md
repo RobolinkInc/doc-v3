@@ -8,6 +8,19 @@ customHeadElements:
 
 ## CoDrone EDU Python Library Changelog
 
+### Version 2.2
+#### March 4, 2025
+<!-- **New Features** :sparkles:
+- Added beta version of synchronized flight feature. -->
+
+**Improvements** :arrow_up:
+- Improved error-handling for controller screen functions.
+
+**Bug Fixes** :bug:
+- Fixed unexpected movement of send_absolute_position() after turning the drone.
+
+<hr/>
+
 ### Version 2.1
 #### January 6, 2025
 **New Features** :sparkles:
