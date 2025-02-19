@@ -20,6 +20,8 @@ customHeadElements:
 **Improvements** :arrow_up:
 - The console now only opens automatically if the user uses a "print" or "input" block in the program.
 
+<hr/>
+
 ### Version 3.0.3
 #### January 30, 2025
 
