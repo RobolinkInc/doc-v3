@@ -8,6 +8,20 @@ customHeadElements:
 
 ## CoDrone EDU Blockly Changelog
 
+### Version 3.1.0
+#### February 19, 2025
+
+**Bug Fixes** :bug:
+- Fixed the bug when using "when key pressed" by changing its functionality to match Python for Robolink behavior. Any old code that was implemented with no longer supported keys (arrows, spacebar, and backspace) have been replaced with a '0' key press. Please see this <a target="_blank" href="https://learn.robolink.com/lesson/1-8-remote-control-junior-cde-blockly/">Basecamp lesson</a> to learn the new behavior of the block.
+- Resolved incorrect Python-generated code for `controller_draw_rectangle()` and `controller_draw_square()` blocks that caused an error.
+- Fixed the issue with the flip functions that was caused by a battery requesting issue.
+- Addressed an issue when loading color data after running once that would cause the rest of the program to fail on subsequent runs. Don't forget to load your color data folder whenever you are running color data code!
+
+**Improvements** :arrow_up:
+- The console now only opens automatically if the user uses a "print" or "input" block in the program.
+
+<hr/>
+
 ### Version 3.0.3
 #### January 30, 2025
 

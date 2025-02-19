@@ -13,7 +13,7 @@ customHeadElements:
 
 <div className='change_version'>
 
-version 3.0.3 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+version 3.1.0 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 </div>
 
@@ -200,12 +200,6 @@ In the example below, the drone will move for 3 seconds with the yaw and throttl
 
 ### flip()
 
-:::warning
-
-This function is temporarily not working in Blockly and *Python for Robolink*. Warning will be removed once resolved.
-
-:::
-
 #### Block
 
 <img src="/img/CDE/blockly_docu/senior/flip.png" width="180px"/>  
@@ -230,14 +224,13 @@ None
 
 Add a hover or delay block after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command. Not adding a delay after a flip can cause following blocks to not be performed.
 
-<div className="unable_button">
-  <div className="loadXmlDiv">
-    <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example_senior')}>
-      <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Blockly</span>
-    </button>
-  </div>
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example_senior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
 </div>
+
 
 <img src="/img/CDE/blockly_docu/senior/flip_example.png" width="500px"/>
 <br/>
@@ -245,13 +238,11 @@ Add a hover or delay block after the flip if you need to stabilize before your n
 
 In this example below, after take off, the drone should flip forward and backward **(flips might not be executed since a flip needs a wait/sleep block)**. 
 
-<div className="unable_button">
-  <div className="loadXmlDiv">
-    <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example2_senior')}>
-      <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Blockly</span>
-    </button>
-  </div>
+<div className="loadXmlDiv">
+  <button className="loadXmlButton" onClick={() => loadBlocklyXml('flip_example2_senior')}>
+    <img src="/img/Open_in_Blockly_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Blockly</span>
+  </button>
 </div>
 
 <img src="/img/CDE/blockly_docu/senior/flip_example2.png" width="180px"/>  
@@ -1980,11 +1971,6 @@ None
 
 ### controller_draw_rectangle()
 
-:::warning
-
-This function is temporarily not working in version 3.0.3 of Blockly. Warning will be removed once resolved.
-
-:::
 :::warning
 
 This function is currently unavailable for CoDrone EDU (JROTC ed.).
