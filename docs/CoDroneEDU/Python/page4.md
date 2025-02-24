@@ -2115,7 +2115,7 @@ drone.close()
 ### get_pos_x()
 
 #### Description
-Getter function that gets the x position of the drone. (x is forwards and backwards)
+Getter function that gets the x position of the drone. (x is forwards and backwards). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2159,7 +2159,7 @@ drone.close()
 ### get_pos_y()
 
 #### Description
-Getter function that gets the y position of the drone. (y is left and right)
+Getter function that gets the y position of the drone. (y is left and right). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2202,7 +2202,7 @@ drone.close()
 ### get_pos_z()
 
 #### Description
-Getter function that gets the z position of the drone. (z is up and down)
+Getter function that gets the z position of the drone. (z is up and down). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -2245,7 +2245,7 @@ drone.close()
 ### get_position_data()
 
 #### Description
-get_position_data is a getter function that retuns a list of position data for the drone.
+get_position_data is a getter function that retuns a list of position data for the drone. **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.<br/>
 The 'x' position of the drone is forwards and reverse.
 The 'y' position of the drone is left and right.
 The 'z' position of the drone is up and down.
@@ -2818,7 +2818,7 @@ drone.close()
 ### get_angle_x()
 
 #### Description
-Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_x()``    
@@ -2858,7 +2858,7 @@ drone.close()
 ### get_angle_y()
 
 #### Description
-Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_y()``    
@@ -2896,7 +2896,7 @@ drone.close()
 ### get_angle_z()
 
 #### Description
-Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_z()``    
@@ -3120,7 +3120,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_x_angle()``    
@@ -3215,7 +3215,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_y_angle()``    
@@ -3308,7 +3308,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_z_angle()``    
