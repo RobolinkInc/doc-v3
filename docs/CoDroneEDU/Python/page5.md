@@ -9,7 +9,7 @@ customHeadElements:
 ## CoDrone EDU Python Library Changelog
 
 ### Version 2.2
-#### February 25, 2025
+#### February 26, 2025
 **Improvements** :arrow_up:
 - Improved error-handling for controller screen functions.
 

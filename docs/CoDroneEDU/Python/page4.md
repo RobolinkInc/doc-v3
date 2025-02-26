@@ -732,9 +732,9 @@ The 'z' position of the drone is up and down.
 
 
 #### Parameters
-***float* positionX:** The X position of the drone (-10 ~ 10). Forward is positive. Backwards is negative.   
-***float* positionY:** The Y position of the drone (-10 ~ 10). Left is positive. Right is negative.    
-***float* positionZ:** The Z position of the drone (-10 ~ 10). Up is positive. Down is negative.   
+***float* positionX:** The X position of the drone (-10m ~ 10m). Forward is positive. Backwards is negative.   
+***float* positionY:** The Y position of the drone (-10m ~ 10m). Left is positive. Right is negative.    
+***float* positionZ:** The Z position of the drone (0m ~ 1.5m). Up is positive. Down is negative.   
 ***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.   
 ***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
 ***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
@@ -3376,22 +3376,22 @@ drone.pair()
 
 
 print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.takeoff()
 drone.set_yaw(50)
 drone.move(1)
 drone.land()
 print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.reset_gyro() 
 print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 
 
 drone.close()
@@ -3439,22 +3439,22 @@ drone.pair()
 
 
 print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.takeoff()
 drone.set_yaw(50)
 drone.move(1)
 drone.land()
 print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.reset_sensor() 
 print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 
 
 drone.close()

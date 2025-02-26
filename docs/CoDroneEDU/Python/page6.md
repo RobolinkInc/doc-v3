@@ -9,7 +9,7 @@ customHeadElements:
 ## *Python for Robolink*&nbsp; Changelog
 
 :::note
-*Python for Robolink* and the CoDrone EDU Python library have separate version numbers. *Python for Robolink* will always run the latest version of the CoDrone EDU Python library. For example, version 1.9.3 of *Python for Robolink* runs version 2.2 of the CoDrone EDU Python library (latest). Review the latest [documentation](page4.md) for the full list of functions supported.
+*Python for Robolink* and the CoDrone EDU Python library have separate version numbers. *Python for Robolink* will always run the latest version of the CoDrone EDU Python library. For example, version 1.9.4 of *Python for Robolink* runs version 2.2 of the CoDrone EDU Python library (latest). Review the latest [documentation](page4.md) for the full list of functions supported.
 :::
 
 ### Version 1.9.3
