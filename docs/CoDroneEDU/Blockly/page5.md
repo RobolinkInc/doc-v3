@@ -7,6 +7,12 @@ customHeadElements:
 
 
 ## CoDrone EDU Blockly Changelog
+### Version 3.1.1
+#### February 26, 2025
+- Updated functions to match Python library v2.2 (latest)
+- Fixed bug with color classifier
+
+<hr/>
 
 ### Version 3.1.0
 #### February 19, 2025
