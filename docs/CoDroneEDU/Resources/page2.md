@@ -6,7 +6,7 @@ customHeadElements:
 ---
 
 ## Updating CoDrone EDU Firmware
-CoDrone EDU is always improving, so it's important to update the firmware for both the drone and the controller. Click **<a href="https://codrone.robolink.com/edu/updater/">here</a>** to start updating your controller's firmware.
+CoDrone EDU is always improving, so it's important to update the firmware for both the drone and the controller. Click **<a target="_blank" href="https://codrone.robolink.com/edu/updater/">here</a>** to access our web updater and update your firmware directly from the browser.
 
 <div className="firmware-row">
   <div className="firmware_div">
