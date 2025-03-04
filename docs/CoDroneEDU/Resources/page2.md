@@ -37,7 +37,7 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 ## CoDrone EDU Drone Release Notes
 
 ### Version 25.2.1
-#### March 3, 2025
+#### March 4, 2025
 **Bug Fixes** :bug:
 - Resolved an issue with the range sensor that prevented takeoff after the drone had been on for an extended period. This issue was indicated by the LEDs flashing red, green, and blue underneath the drone.
 
@@ -61,7 +61,7 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 ## CoDrone EDU Controller Release Notes
 
 ### Version 25.2.1
-#### March 3, 2025
+#### March 4, 2025
 **New Features** :sparkles:
 - Added functionality to request a unique identifier for each controller.
 
