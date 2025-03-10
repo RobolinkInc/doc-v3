@@ -1474,6 +1474,10 @@ None
 
 ### controller_buzzer()
 
+:::note
+Controller may not make sounds if "Quiet Mode" is turned on via controller settings. To turn off "Quiet Mode", switch to "Remote Control" mode by pressing the power button, hold the "S" button to switch to the "Settings" display, scroll down to "Quiet Mode", move the left joystick to the right, and select "OFF" by pressing "R1".
+:::
+
 #### Block
 
 <img src="/img/CDE/blockly_docu/senior/controller_buzzer.PNG" width="500px"/>   
@@ -1558,6 +1562,10 @@ In the example below, a list variable ``test_list`` is created ``[450,500,650,80
 <hr/>
 
 ### controller_buzzer_hertz()
+
+:::note
+Controller may not make sounds if "Quiet Mode" is turned on via controller settings. To turn off "Quiet Mode", switch to "Remote Control" mode by pressing the power button, hold the "S" button to switch to the "Settings" display, scroll down to "Quiet Mode", move the left joystick to the right, and select "OFF" by pressing "R1".
+:::
 
 #### Block
 
@@ -1658,6 +1666,10 @@ None
 <hr/>
 
 ### start_controller_buzzer()
+
+:::note
+Controller may not make sounds if "Quiet Mode" is turned on via controller settings. To turn off "Quiet Mode", switch to "Remote Control" mode by pressing the power button, hold the "S" button to switch to the "Settings" display, scroll down to "Quiet Mode", move the left joystick to the right, and select "OFF" by pressing "R1".
+:::
 
 #### Block
 
