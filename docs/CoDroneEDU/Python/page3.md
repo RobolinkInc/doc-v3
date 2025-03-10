@@ -7,7 +7,7 @@ customHeadElements:
 
 ## Updating CoDrone EDU Python Library
 
-Occasionally, there will be updates to the CoDrone EDU Python library. The current library version is version 2.1. You can view the changelog [here](/docs/CoDroneEDU/Python/Python-Changelog).
+Occasionally, there will be updates to the CoDrone EDU Python library. The current library version is version 2.2. You can view the changelog [here](/docs/CoDroneEDU/Python/Python-Changelog).
 
 :::tip
 

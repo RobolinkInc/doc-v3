@@ -13,7 +13,7 @@ customHeadElements:
 
 <div className='change_version'>
 
-version 3.1.0 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
+version 3.1.1 ([Changelog](/docs/CoDroneEDU/Blockly/Blockly-Changelog))
 
 </div>
 
@@ -914,7 +914,7 @@ In this example below, run the program, manually point the drone to a wall, and 
 *z*: <span className="light_gray">drone.</span><span className="dark_gray">get_angle_z()</span>
 
 #### Description
-This function returns the current gyroscope angle measurement for either the x (roll),y (pitch), or z (yaw) axis.
+This function returns the current gyroscope angle measurement for either the x (roll),y (pitch), or z (yaw) axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Parameters
 
@@ -1032,7 +1032,7 @@ This function returns the current acceleration on either the x, y, or z axis in 
 *z*: <span className="light_gray">drone.</span><span className="dark_gray">get_pos_z()</span>
 
 #### Description
-Returns the current estimated position of the CoDrone EDU using the optical flow sensor.
+Returns the current estimated position of the CoDrone EDU using the optical flow sensor. **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Parameters
 
