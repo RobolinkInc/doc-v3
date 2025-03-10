@@ -8,7 +8,7 @@ customHeadElements:
 
 ## CoDrone EDU Blockly Changelog
 ### Version 3.1.1
-#### March 6, 2025
+#### March 10, 2025
 **Improvements** :arrow_up:
 - Updated functions to match Python library v2.2 (latest)
 
