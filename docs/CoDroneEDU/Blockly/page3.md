@@ -398,7 +398,7 @@ None
 
 <hr className="section_hr"/>
 
-## Sound
+## Sounds
 
 ### play this note [note] for [duration] seconds on drone
 

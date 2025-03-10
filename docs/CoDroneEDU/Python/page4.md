@@ -12,7 +12,7 @@ customHeadElements:
 </div>
 
 <div className='change_version'>
-version 2.1 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
+version 2.2 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
 </div>
 
 ## Connection
@@ -499,13 +499,6 @@ drone.close()
 
 ### move_forward()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
 Moves the drone forward for the given distance and unit for that distance.
 
@@ -551,13 +544,6 @@ drone.close()
 <hr/>
 
 ### move_backward()
-
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
 
 #### Description
 Moves the drone backward for the given distance and unit for that distance.
@@ -605,20 +591,12 @@ drone.close()
 
 ### move_left()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
 Moves the drone left for the given distance and unit for that distance.
 
 #### Syntax
 ``move_left(distance)``    
 ``move_left(distance, unit, speed)``  
-
 
 #### Parameters
 ***integer* distance:** the numerical value of the value to move    
@@ -657,13 +635,6 @@ drone.close()
 <hr/>
 
 ### move_right()
-
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
 
 #### Description
 Moves the drone right for the given distance and unit for that distance.
@@ -711,15 +682,8 @@ drone.close()
 
 ### send_absolute_position()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
-Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
+Sends a movement command to the drone based on its absolute position from its first takeoff location.<br/>**Note:** A sleep command for the length of the movement may be needed after using this movement command.   
 The 'x' position of the drone is forwards and reverse.    
 The 'y' position of the drone is left and right.    
 The 'z' position of the drone is up and down.   
@@ -732,11 +696,11 @@ The 'z' position of the drone is up and down.
 
 
 #### Parameters
-***float* positionX:** The X position of the drone (-10 ~ 10). Forward is positive. Backwards is negative.   
-***float* positionY:** The Y position of the drone (-10 ~ 10). Left is positive. Right is negative.    
-***float* positionZ:** The Z position of the drone (-10 ~ 10). Up is positive. Down is negative.   
-***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.   
-***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
+***float* positionX:** The X position of the drone (-10m ~ 10m). Forward is positive. Backwards is negative.<br/>
+***float* positionY:** The Y position of the drone (-10m ~ 10m). Left is positive. Right is negative.<br/>
+***float* positionZ:** The Z position of the drone (0m ~ 1.5m). Up is positive. Down is negative.<br/>
+***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.<br/>
+***integer* heading:** Heading value in degrees.<br/>
 ***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
 
 #### Returns
@@ -975,7 +939,7 @@ Flies the drone in the shape of a circle.
 
 #### Parameters
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 75.    
-***integer* direction:** optional parameter that determines the direction of the circle. 1 is right, -1 is left. default value is 1.
+***integer* direction:** optional parameter that determines the direction of the circle. 1 is left, -1 is right. default value is 1.
 
 #### Returns
 None
@@ -1010,12 +974,6 @@ drone.close()
 
 ### flip()
 
-:::warning
-
-This function is temporarily not working in Blockly and *Python for Robolink*. Warning will be removed once resolved.
-
-:::
-
 #### Description
 This functions makes the drone flip backward, forward, right, or left. Make sure your battery percentage is over 50% for the flip to execute.
 
@@ -1033,13 +991,11 @@ None
 #### Example Code
 Add a hover or delay after the flip if you need to stabilize before your next command. The drone takes 3-4 seconds after a flip before it can do another flight command.
 
-<div className="unable_button">
-  <div className="loadPFRDiv">
-    <button className="loadPFRButton" onClick={() => loadPFRPython('flip_example')}>
-      <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
-      <span className="button-text">Open in Python</span>
-    </button>
-  </div>
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('flip_example')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
 </div>
 
 ```python
@@ -1174,7 +1130,7 @@ Flies the drone in a swaying motion.
 #### Parameters
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 30.   
 ***integer* seconds:** optional parameter that is the duration in seconds the drone will fly in each "sway" motion. default value is 2.    
-***integer* direction:** optional parameter that determines the direction of the sway. 1 is right, -1 is left. default value is 1.    
+***integer* direction:** optional parameter that determines the direction of the sway. 1 is left, -1 is right. default value is 1.    
 
 #### Returns
 None
@@ -2115,7 +2071,7 @@ drone.close()
 ### get_pos_x()
 
 #### Description
-Getter function that gets the x position of the drone. (x is forwards and backwards)
+Getter function that gets the x position of the drone. (x is forwards and backwards). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2159,7 +2115,7 @@ drone.close()
 ### get_pos_y()
 
 #### Description
-Getter function that gets the y position of the drone. (y is left and right)
+Getter function that gets the y position of the drone. (y is left and right). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2202,7 +2158,7 @@ drone.close()
 ### get_pos_z()
 
 #### Description
-Getter function that gets the z position of the drone. (z is up and down)
+Getter function that gets the z position of the drone. (z is up and down). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -2245,7 +2201,7 @@ drone.close()
 ### get_position_data()
 
 #### Description
-get_position_data is a getter function that retuns a list of position data for the drone.
+get_position_data is a getter function that retuns a list of position data for the drone. **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.<br/>
 The 'x' position of the drone is forwards and reverse.
 The 'y' position of the drone is left and right.
 The 'z' position of the drone is up and down.
@@ -2818,7 +2774,7 @@ drone.close()
 ### get_angle_x()
 
 #### Description
-Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_x()``    
@@ -2858,7 +2814,7 @@ drone.close()
 ### get_angle_y()
 
 #### Description
-Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_y()``    
@@ -2896,7 +2852,7 @@ drone.close()
 ### get_angle_z()
 
 #### Description
-Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_z()``    
@@ -3120,7 +3076,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_x_angle()``    
@@ -3215,7 +3171,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_y_angle()``    
@@ -3308,7 +3264,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_z_angle()``    
@@ -3376,22 +3332,22 @@ drone.pair()
 
 
 print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.takeoff()
 drone.set_yaw(50)
 drone.move(1)
 drone.land()
 print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.reset_gyro() 
 print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 
 
 drone.close()
@@ -3439,22 +3395,22 @@ drone.pair()
 
 
 print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.takeoff()
 drone.set_yaw(50)
 drone.move(1)
 drone.land()
 print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.reset_sensor() 
 print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 
 
 drone.close()
