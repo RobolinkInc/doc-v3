@@ -9,10 +9,11 @@ customHeadElements:
 ## CoDrone EDU Python Library Changelog
 
 ### Version 2.2
-#### March 5, 2025
+#### March 10, 2025
 **Improvements** :arrow_up:
 - Improved error-handling for controller screen functions.
 - Improved performance of send_absolute_position(), move_forward(), move_backward(), move_left(), and move_right().
+- get_colors(), get_front_color(), and get_back_color() return values in all lowercase.
 
 **Bug Fixes** :bug:
 - Fixed unexpected movement of send_absolute_position() after turning the drone.
