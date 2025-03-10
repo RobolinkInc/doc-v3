@@ -13,12 +13,12 @@ customHeadElements:
 :::
 
 ### Version 1.9.4
-#### February 26, 2025
+#### March 10, 2025
 **Improvements** :arrow_up:
-- Updated functions to match Python lib v2.2 changes
+- Updated functions to match Python lib v2.2 changes.
 
 **Bug Fixes** :bug:
-- Include fix for flip()
+- Fixed the issue with the flip functions that was caused by a battery requesting issue.
 
 <hr/>
 
