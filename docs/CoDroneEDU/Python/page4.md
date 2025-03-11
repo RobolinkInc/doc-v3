@@ -1,6 +1,6 @@
 ---
-title: "Function Documentation (Drone)"
-slug: Function-Documentation-Drone
+title: "Drone Function Documentation"
+slug: Drone-Function-Documentation
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Function Documentation (Swarm)"
-slug: Function-Documentation-Swarm
+title: "Swarm Function Documentation"
+slug: Swarm-Function-Documentation
 customHeadElements:
   - <link rel="manifest" href="manifest.json" />
 ---
@@ -16,13 +16,21 @@ version 2.2 ([Changelog](/docs/CoDroneEDU/Python/Python-Changelog))
 </div>
 
 
-## Getting Started &mdash; Synchronized Flight
+## Getting Started &mdash; Swarm
 
-### What is Synchronized Flight?
-Synchronized flight is a coordinated and programmed process where drones perform a sequence of drone movements, performing commands in parallel (at the same time) or sequentially (one after the other). Synchronized flight is also recognized as a "drone swarm". This feature is now possible using the codrone-edu v2.2 in PyCharm!
+### What is Swarm?
+Swarm is a coordinated and programmed process where drones perform a sequence of drone movements, performing commands in parallel (at the same time) or sequentially (one after the other). This feature is now possible using the codrone-edu v2.2 in PyCharm!
 
-### How to Use Synchronized Flight
-#### Installing ``codrone-edu``
+### How to Use Swarm library
+#### Device Requirements
+- MacOS or Windows **(\*PyCharm is not supported on Chromebooks)**
+  - **NOTE:** Swarm feature is only available on MacOS and Windows due to swarm feature currently being available on PyCharm only.
+
+- To use swarm feature, you will need one USB port per controller, for each drone that will be programmed:
+  - It's **recommended** to use a USB hub with at least 2 USB-A ports for this.
+  - Otherwise, use the available USB-A ports in your computer.
+
+<!-- #### Installing ``codrone-edu``
 To use our swarm feature in PyCharm, you must install codrone-edu v2.2 using the following steps:
 1. Click on "File" on the top-left side of the window, and then click on "Settings". This will lead to a pop-up window with different settings for your PyCharm project.
 2. On the left side of the setting window, go down to and click on "Project: [yourProjectName]" and then click on "Python Interpreter".
@@ -36,20 +44,25 @@ If you already have the codrone-edu library installed but need to update it, fol
 1. Click on "File" on the top-left side of the window, and then click on "Settings". This will lead to a pop-up window with different settings for your PyCharm project.
 2. On the left side of the setting window, go down to and click on "Project: [yourProjectName]" and then click on "Python Interpreter". A list of Python packages will appear, and if you have already installed codrone-edu, it should be in that list.
 3. Click on "codrone-edu" from the list.
-4. Click on the "Upgrade" button (Arrow pointing upwards) to update codrone-edu to the latest version.
+4. Click on the "Upgrade" button (Arrow pointing upwards) to update codrone-edu to the latest version. -->
 
 #### Importing ``swarm`` Module
-Create a new Python file to start programming a synchronized flight:
+:::tip
+Before beginning, make sure you have installed the latest version of codrone-edu.
+:::
+Create a new Python file to start programming a swarm:
 1. Create a new Python file by right-clicking on the project name (highlighted in blue in image below) that is on the left side of the PyCharm window. Click on "New" > "Python File". A mini pop-up window will appear.
+<img src="/img/CDE/swarm_getting_started_1.png" width="600" alt="create a python file image"/>
 2. Type the name of your Python file and make sure the "Python file" option is selected on the mini pop-up window. Now, the new Python file will be created, so you can start coding.
+<img src="/img/CDE/swarm_getting_started_2.png" width="600" alt="name a python file image"/>
 3. On the first line, type:
 ```python
 from codrone_edu.swarm import *
 ```
 
 #### Using ``swarm`` module
-Before we start running any synchronized flight code, you should have at least 2 USB ports to connect the CoDrone EDU controllers to program CoDrone EDU drones and must follow these steps:
-1. If you are using a USB hub for synchronized flight, connect your USB hub to your laptop.
+Before we start running any swarm code, you should have at least 2 USB ports to connect the CoDrone EDU controllers to program CoDrone EDU drones and must follow these steps:
+1. If you are using a USB hub for swarm, connect your USB hub to your laptop.
 2. Connect your CoDrone EDU controllers to your laptop or USB hub if you are using one.
 3. Make sure your CoDrone EDU drones are on and paired with their respective controllers.
 4. Place the drones 2 feet from each other to avoid drones crashing into each other during takeoff. 
@@ -71,12 +84,12 @@ swarm.disconnect()
 
 <hr className='section_hr'/>
 
-## Classes
+## Swarm
 
-### Swarm
+### Swarm()
 
 #### Description
-This class is used to connect to multiple drones and allow the connected drones to perform commands at the same time or different times.
+This will instantiate an object, creating an instance of the ``Swarm`` class, which is used to connect to multiple drones and allow the connected drones to perform commands at the same time or different times.
 
 #### Syntax
 ``Swarm()``<br/>
@@ -161,100 +174,7 @@ Drone 1 at port COM22: blue
 
 swarm.disconnect()
 ```
-
-### Sequence
-
-#### Description
-This class is used to schedule a sequence of drone commands for a given drone. To learn more about its function, read this <a href="#sequenceadd">section</a>.
-
-#### Syntax
-``Sequence(index)``
-
-#### Parameters
-***integer* index:** The index of the drone. To view drone indices, ``enable_print`` and ``enable_color`` must be set to ``True`` for the ``Swarm`` object.
-
-#### Returns
-***Sequence* sequence object:** A sequence object that can schedule drone commands for a given drone.
-
-#### Example Code
-Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
-
-Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
-```python
-from codrone_edu.swarm import *
-
-swarm = Swarm() # enable_print, enable_color, and enable_pause are set to True by default
-
-swarm.connect() # displays drone indices and LED color
-
-sequence_0 = Sequence(0) # store Sequence object that will schedule drone commands for drone 0 in a variable
-
-sequence_0.add('turn_left', 45)
-sequence_0.add('turn_right', degree=90)
-
-sequence_1 = Sequence(1) # store Sequence object that will schedule drone commands for drone 1 in a variable
-
-sequence_1.add('turn_left')
-
-sync = Sync(sequence_0, sequence_1)
-
-swarm.takeoff()
-
-swarm.run(sync)
-
-swarm.land()
-
-swarm.disconnect()
-```
-
-### Sync
-
-#### Description
-This class is used to store Sequence objects from each drone in order to synchronize the drones with ``swarm.run()``. To learn more about its function, read this <a href="#syncadd">section</a>.
-
-#### Syntax
-``Sync(*args)``
-
-#### Parameters
-**\*args:** Sequence object(s). If there are multiple Sequence objects to be added, each value must be separated by a comma. Can store however many the user needs.
-
-#### Returns
-***Sync* sync object:** A sync object that stores multiple Sequence objects that are assigned to drones. Ready to be used with ``swarm.run()``.
-
-#### Example Code
-Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
-
-Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
-```python
-from codrone_edu.swarm import *
-
-swarm = Swarm()
-
-swarm.connect()
-
-sequence_0 = Sequence(0)
-sequence_0.add('turn_left', 45)
-sequence_0.add('turn_right', 90)
-
-sequence_1 = Sequence(1)
-sequence_1.add('turn_left')
-
-sync = Sync(sequence_0, sequence_1)
-# inputs however many sequences needed
-# stores sequences/schedules for drone 0 and drone 1
-
-swarm.takeoff() # all drones take off
-
-swarm.run(sync) # executes scheduled drone commands in sync object for drone 0 and 1 at the same time
-
-swarm.land() # all drones land
-
-swarm.disconnect()
-```
-
-<hr className="section_hr"/>
-
-## Connection
+<hr/>
 
 ### swarm.connect()
 
@@ -308,14 +228,13 @@ swarm.connect()
 
 swarm.close() # disconnects controllers from the program
 ```
-<hr className='section_hr'/>
 
-## Commands
+<hr/>
 
 ### swarm.run_drone()
 
 #### Description
-This function runs a Drone function for only one drone in the swarm. To view the available Drone functions, head to <a href='/docs/CoDroneEDU/Python/Function-Documentation-Drone'>this page</a> in our documentation site!
+This function runs a Drone function for only one drone in the swarm. To view the available Drone functions, head to <a href='/docs/CoDroneEDU/Python/Drone-Function-Documentation'>this page</a> in our documentation site!
 
 #### Syntax
 ``run_drone(index, method_name, *args, **kwargs)``
@@ -330,7 +249,7 @@ This function runs a Drone function for only one drone in the swarm. To view the
 Depending on what Drone function you are calling, it will return the value of that function. For example, if method_name is "get_position_data", ``run_drone()`` will return a list of the drone's position data since ``get_position_data()`` returns a list of a drone's position data. Also, if method_name is "get_battery", ``run_drone()`` will return an integer value of the drone's battery since ``get_battery()`` returns an integer value of a drone's battery.
 
 #### Example Code 1
-No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Verify that drone 0 ran ``set_drone_LED()`` command. 
 ```python
@@ -351,7 +270,7 @@ swarm.disconnect()
 ```
 
 #### Example Code 2
-No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Verify that drone 0 ran ``set_drone_LED()`` command.
 ```python
@@ -369,7 +288,7 @@ swarm.run_drone(0,"set_drone_LED", 255, 255, 0, 255)
 swarm.disconnect()
 ```
 #### Example Code 3
-No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Verify that drone 0 ran ``set_drone_LED()`` command.
 ```python
@@ -387,7 +306,7 @@ swarm.run_drone(0,"set_drone_LED", r=255, g=255, b=0, brightness=255)
 swarm.disconnect()
 ```
 #### Example Code 4
-No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+No set up needed for the drones. Place two drones on the table. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Verify that drone 1 ran ``get_position_data()`` command. 
 ```python
@@ -405,7 +324,7 @@ print(swarm.run_drone(1, "get_position_data"))
 swarm.disconnect()
 ```
 #### Example Code 5
-Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Verify that drone 0 and drone 1 ran ``get_pressure()`` command. 
 ```python
@@ -438,7 +357,7 @@ swarm.disconnect()
 ### Drone Functions
 
 #### Description
-Any function that belongs in the Drone class can be used as a Swarm function with similar syntax. Using the ``swarm.drone_function()`` syntax will execute the given Drone function, in parallel (at the same time), for all drones in the swarm. To view the available Drone functions, head to <a href='/docs/CoDroneEDU/Python/Function-Documentation-Drone'>this page</a> in our documentation site!
+Any function that belongs in the Drone class can be used as a Swarm function with similar syntax. Using the ``swarm.drone_function()`` syntax will execute the given Drone function, in parallel (at the same time), for all drones in the swarm. To view the available Drone functions, head to <a href='/docs/CoDroneEDU/Python/Drone-Function-Documentation'>this page</a> in our documentation site!
 
 #### Syntax
 ``drone_function()``<br/>
@@ -452,7 +371,7 @@ Any function that belongs in the Drone class can be used as a Swarm function wit
 ***list* list of data:** A list of drone data from each drone. The drone data can be a list, integer, float, etc. depending on what Drone function you are calling. For example, ``swarm.get_position_data()`` will return a list of each of the drones' position data, which are also lists. ``swarm.get_battery()`` will return a list of each of the drones' battery, which are integers.
 
 #### Example Code 1
-Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones will take off, land, and disconnect.
 ```python
@@ -470,7 +389,7 @@ swarm.disconnect()
 ```
 
 #### Example Code 2
-Place however many drones 2 feet away from each other. Make sure drones have enough space to move forward and left. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+Place however many drones 2 feet away from each other. Make sure drones have enough space to move forward and left. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones will take off, move at 20% pitch and -20% roll power for 2 seconds, move at 50% yaw power for 3 seconds, and finally land and disconnect.
 ```python
@@ -497,7 +416,7 @@ swarm.disconnect()
 ```
 
 #### Example Code 3
-Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones will take off, turn left 90 degrees, hover for 3 seconds, turn right 30 degrees, and finally land and disconnect.
 ```python
@@ -519,7 +438,7 @@ swarm.disconnect()
 ```
 
 #### Example Code 4
-No set up required. Use however many drones, and run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+No set up required. Use however many drones, and run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Rotate your drones with your hands to observe x-angle changes for each drone.
 
@@ -556,107 +475,6 @@ Press Enter to start swarm...
 [21, 24]
 [50, 23]
 '''
-
-swarm.disconnect()
-```
-
-<hr className="section_hr"/>
-
-## Synchronization
-
-### sequence.add()
-
-#### Description
-This function adds a drone command to be scheduled in the sequence.
-
-#### Syntax
-``add(method_name, *args, **kwargs)``
-
-#### Parameters
-***string* method_name:** name of Drone function (command) to be scheduled<br/>
-**\*args:** value(s) for the parameter of the given Drone function. If there are multiple parameters required for the Drone function, each value must be separated by a comma<br/>
-**\*\*kwargs:** value(s) for the parameter of the given Drone function, in form of ``parameter=value``.
-
-#### Returns
-None
-
-#### Example Code
-Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
-
-Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
-```python
-from codrone_edu.swarm import *
-
-swarm = Swarm()
-
-swarm.connect()
-
-sequence_0 = Sequence(0)
-
-sequence_0.add('turn_left', 45) # drone 0 is scheduled to run turn_left(45)
-sequence_0.add('turn_right', degree=90) # drone 0 is scheduled to run turn_right(90) after turn_left(45)
-
-sequence_1 = Sequence(1)
-
-sequence_1.add('turn_left') # drone 1 is scheduled to run turn_left(90)
-
-sync = Sync(sequence_0, sequence_1)
-
-swarm.takeoff()
-
-swarm.run(sync)
-
-swarm.land()
-
-swarm.disconnect()
-```
-
-<hr/>
-
-### sync.add()
-
-#### Description
-This function adds a sequence in the Sync object.
-
-#### Syntax
-``add(sequence_obj)``
-
-#### Parameters
-***Sequence* sequence_obj:** The Sequence object to be added.
-
-#### Returns
-None
-
-#### Example Code
-Place 3 drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
-
-All drones take off. One drone (drone 0) turns left 45 degrees, another drone (drone 1) turns left 90 degrees, and the remaining drone (drone 2) sets drone LED to the color yellow. Since drone 1 and 2 finished running their commands, drone 1 and 2 hover while drone 0 turns right 90 degrees. Finally, all drones land and disconnect.
-```python
-from codrone_edu.swarm import *
-
-swarm = Swarm()
-
-swarm.connect()
-
-sequence_0 = Sequence(0)
-sequence_0.add('turn_left', 45)
-sequence_0.add('turn_right', degree=90)
-
-sequence_1 = Sequence(1)
-sequence_1.add('turn_left')
-
-sequence_2 = Sequence(2)
-sequence_2.add('set_drone_LED', 255,255,0,255)
-
-sync = Sync(sequence_0, sequence_1)
-
-sync.add(sequence_2) # adds sequence for drone 2
-
-swarm.takeoff()
-
-swarm.run(sync)
-
-swarm.land()
 
 swarm.disconnect()
 ```
@@ -699,8 +517,8 @@ This is the general structure of the 2D list:
 ```
 
 
-#### Example Code 1
-Place two drones 2 feet away from each other, facing the same direction. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running synchronized flight.
+#### Example Code
+Place two drones 2 feet away from each other, facing the same direction. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Both drones take off. Each drone will independently run their sequence of commands. Finally, both drones land and disconnect.
 ```python
@@ -764,6 +582,203 @@ Press Enter to start swarm...
 '''
 
 swarm.close()
+```
+
+<hr className="section_hr"/>
+
+## Sequence
+
+### Sequence()
+
+#### Description
+This instantiates an object, creating an instance of the ``Sequence`` class, which is used to schedule a sequence of drone commands for a given drone. To learn more about its function, read this <a href="#sequenceadd">section</a>.
+
+#### Syntax
+``Sequence(index)``
+
+#### Parameters
+***integer* index:** The index of the drone. To view drone indices, ``enable_print`` and ``enable_color`` must be set to ``True`` for the ``Swarm`` object.
+
+#### Returns
+***Sequence* sequence object:** A sequence object that can schedule drone commands for a given drone.
+
+#### Example Code
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
+
+Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm() # enable_print, enable_color, and enable_pause are set to True by default
+
+swarm.connect() # displays drone indices and LED color
+
+sequence_0 = Sequence(0) # store Sequence object that will schedule drone commands for drone 0 in a variable
+
+sequence_0.add('turn_left', 45)
+sequence_0.add('turn_right', degree=90)
+
+sequence_1 = Sequence(1) # store Sequence object that will schedule drone commands for drone 1 in a variable
+
+sequence_1.add('turn_left')
+
+sync = Sync(sequence_0, sequence_1)
+
+swarm.takeoff()
+
+swarm.run(sync)
+
+swarm.land()
+
+swarm.disconnect()
+```
+
+<hr/>
+
+### sequence.add()
+
+#### Description
+This function adds a drone command to be scheduled in the sequence.
+
+#### Syntax
+``add(method_name, *args, **kwargs)``
+
+#### Parameters
+***string* method_name:** name of Drone function (command) to be scheduled<br/>
+**\*args:** value(s) for the parameter of the given Drone function. If there are multiple parameters required for the Drone function, each value must be separated by a comma<br/>
+**\*\*kwargs:** value(s) for the parameter of the given Drone function, in form of ``parameter=value``.
+
+#### Returns
+None
+
+#### Example Code
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
+
+Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+
+swarm.connect()
+
+sequence_0 = Sequence(0)
+
+sequence_0.add('turn_left', 45) # drone 0 is scheduled to run turn_left(45)
+sequence_0.add('turn_right', degree=90) # drone 0 is scheduled to run turn_right(90) after turn_left(45)
+
+sequence_1 = Sequence(1)
+
+sequence_1.add('turn_left') # drone 1 is scheduled to run turn_left(90)
+
+sync = Sync(sequence_0, sequence_1)
+
+swarm.takeoff()
+
+swarm.run(sync)
+
+swarm.land()
+
+swarm.disconnect()
+```
+
+<hr className="section_hr"/>
+
+## Sync
+
+### Sync()
+
+#### Description
+This instantiates an object, creating an instance of the ``Sync`` class, which is used to store Sequence objects from each drone in order to synchronize the drones with ``swarm.run()``. To learn more about its function, read this <a href="#syncadd">section</a>.
+
+#### Syntax
+``Sync(*args)``
+
+#### Parameters
+**\*args:** Sequence object(s). If there are multiple Sequence objects to be added, each value must be separated by a comma. Can store however many the user needs.
+
+#### Returns
+***Sync* sync object:** A sync object that stores multiple Sequence objects that are assigned to drones. Ready to be used with ``swarm.run()``.
+
+#### Example Code
+Place two drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
+
+Both drones take off. One drone (drone 0) turns left 45 degrees while the other (drone 1) turns left 90 degrees. Since drone 1 finished running its commands, drone 1 hovers while drone 0 turns right 90 degrees. Finally, both drones land and disconnect.
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+
+swarm.connect()
+
+sequence_0 = Sequence(0)
+sequence_0.add('turn_left', 45)
+sequence_0.add('turn_right', 90)
+
+sequence_1 = Sequence(1)
+sequence_1.add('turn_left')
+
+sync = Sync(sequence_0, sequence_1)
+# inputs however many sequences needed
+# stores sequences/schedules for drone 0 and drone 1
+
+swarm.takeoff() # all drones take off
+
+swarm.run(sync) # executes scheduled drone commands in sync object for drone 0 and 1 at the same time
+
+swarm.land() # all drones land
+
+swarm.disconnect()
+```
+
+<hr/>
+
+### sync.add()
+
+#### Description
+This function adds a sequence in the Sync object.
+
+#### Syntax
+``add(sequence_obj)``
+
+#### Parameters
+***Sequence* sequence_obj:** The Sequence object to be added.
+
+#### Returns
+None
+
+#### Example Code
+Place 3 drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
+
+All drones take off. One drone (drone 0) turns left 45 degrees, another drone (drone 1) turns left 90 degrees, and the remaining drone (drone 2) sets drone LED to the color yellow. Since drone 1 and 2 finished running their commands, drone 1 and 2 hover while drone 0 turns right 90 degrees. Finally, all drones land and disconnect.
+```python
+from codrone_edu.swarm import *
+
+swarm = Swarm()
+
+swarm.connect()
+
+sequence_0 = Sequence(0)
+sequence_0.add('turn_left', 45)
+sequence_0.add('turn_right', degree=90)
+
+sequence_1 = Sequence(1)
+sequence_1.add('turn_left')
+
+sequence_2 = Sequence(2)
+sequence_2.add('set_drone_LED', 255,255,0,255)
+
+sync = Sync(sequence_0, sequence_1)
+
+sync.add(sequence_2) # adds sequence for drone 2
+
+swarm.takeoff()
+
+swarm.run(sync)
+
+swarm.land()
+
+swarm.disconnect()
 ```
 
 <hr/>

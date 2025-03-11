@@ -109,15 +109,10 @@ If a main.py file was not generated, you can make a new one by right clicking on
 ### Device Requirements
 
 - MacOS, Windows, or ChromeOS* (*PyCharm is not supported on Chromebooks)
-  - **NOTE:** Synchronized flight feature is only available on MacOS and Windows due to synchronized flight feature currently being available on PyCharm only.
 
 - Mobile devices such as tables (iPads, Android, etc.) are not supported
 
 - A computer with a USB-A port
-
-- For synchronized flight feature, you will need one USB port per drone:
-  - It's **recommended** to use a USB hub with at least 2 USB-A ports for this.
-  - Otherwise, use the available USB-A ports in your computer.
 
 - Windows 10 or newer for PC users
 
