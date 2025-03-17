@@ -2,9 +2,9 @@ name: autopublish
 
 on:
   pull_request:
-    branches: [main]
+    branches: [deploy-staging]
   push:
-    branches: [main]
+    branches: [deploy-staging]
 
 jobs:
   checks:
