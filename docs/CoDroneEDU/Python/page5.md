@@ -374,6 +374,8 @@ Any function that belongs in the Drone class can be used as a Swarm function wit
 Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones will take off, land, and disconnect.
+<img src="/img/CDE/swarm_drone_example_1.png" width="400"/>
+
 ```python
 from codrone_edu.swarm import *
 
@@ -392,6 +394,9 @@ swarm.disconnect()
 Place however many drones 2 feet away from each other. Make sure drones have enough space to move forward and left. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones will take off, move at 20% pitch and -20% roll power for 2 seconds, move at 50% yaw power for 3 seconds, and finally land and disconnect.
+<img src="/img/CDE/swarm_drone_example_2.gif" width="400"/>
+
+
 ```python
 from codrone_edu.swarm import *
 
@@ -419,6 +424,9 @@ swarm.disconnect()
 Place however many drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones will take off, turn left 90 degrees, hover for 3 seconds, turn right 30 degrees, and finally land and disconnect.
+<img src="/img/CDE/swarm_drone_example_3.gif" width="400"/>
+
+
 ```python
 from codrone_edu.swarm import *
 
@@ -521,6 +529,8 @@ This is the general structure of the 2D list:
 Place two drones 2 feet away from each other, facing the same direction. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 Both drones take off. Each drone will independently run their sequence of commands. Finally, both drones land and disconnect.
+<img src="/img/CDE/swarm_run_example_1.gif" width="600"/>
+
 ```python
 from codrone_edu.swarm import *
 
@@ -751,6 +761,9 @@ None
 Place 3 drones 2 feet away from each other. Run the program. Observe the console output, verify which drone was assigned which color and index, and fix set up if needed. Press Enter in the console to continue running swarm program.
 
 All drones take off. One drone (drone 0) turns left 45 degrees, another drone (drone 1) turns left 90 degrees, and the remaining drone (drone 2) sets drone LED to the color yellow. Since drone 1 and 2 finished running their commands, drone 1 and 2 hover while drone 0 turns right 90 degrees. Finally, all drones land and disconnect.
+<img src="/img/CDE/swarm_sync_add_example_1.gif" width="400"/>
+
+
 ```python
 from codrone_edu.swarm import *
 
