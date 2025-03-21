@@ -500,7 +500,7 @@ drone.close()
 ### move_forward()
 
 #### Description
-Moves the drone forward for a given distance.
+Moves the drone forward for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface. 
 
 #### Syntax
 ``move_forward(distance)``    
@@ -510,7 +510,7 @@ Moves the drone forward for a given distance.
 #### Parameters
 ***float* distance:** the distance to travel.<br/>
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
-***float* speed:** The drone's speed, in meters per second. The default speed is 1 meter per second. Max is 2 meters per second.<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
@@ -547,7 +547,7 @@ drone.close()
 ### move_backward()
 
 #### Description
-Moves the drone backward for a given distance.
+Moves the drone backward for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
 
 #### Syntax
 ``move_backward(distance)``      
@@ -557,7 +557,7 @@ Moves the drone backward for a given distance.
 #### Parameters
 ***float* distance:** the distance to travel.<br/>
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
-***float* speed:** The drone's speed, in meters per second. The default speed is 1 meter per second. Max is 2 meters per second.<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
@@ -593,7 +593,7 @@ drone.close()
 ### move_left()
 
 #### Description
-Moves the drone left for a given distance.
+Moves the drone left for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
 
 #### Syntax
 ``move_left(distance)``    
@@ -602,7 +602,7 @@ Moves the drone left for a given distance.
 #### Parameters
 ***float* distance:** the distance to travel.<br/>
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
-***float* speed:** The drone's speed, in meters per second. The default speed is 1 meter per second. Max is 2 meters per second.<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
@@ -638,7 +638,7 @@ drone.close()
 ### move_right()
 
 #### Description
-Moves the drone right for a given distance.
+Moves the drone right for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
 
 #### Syntax
 ``move_right(distance)``     
@@ -648,7 +648,7 @@ Moves the drone right for a given distance.
 #### Parameters
 ***float* distance:** the distance to travel.<br/>
 ***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
-***float* speed:** The drone's speed, in meters per second. The default speed is 1 meter per second. Max is 2 meters per second.<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
@@ -684,7 +684,8 @@ drone.close()
 ### move_distance()
 
 #### Description
-Moves the drone for the given x, y, and z distance, relative to its current position and orientation.
+Moves the drone by the specified distances along the x, y, and z axes, relative to its current position and heading. If two or more distances have non-zero values, the function will move the drone by these distances simultaneously. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
+<img src="/img/CDE/python_docu/xyz.jpg"  width="400"/>
 
 #### Syntax
 ``move_distance(positionX, positionY, positionZ, velocity)``
@@ -694,15 +695,15 @@ Moves the drone for the given x, y, and z distance, relative to its current posi
 ***float* positionX:** The distance to travel in the x-direction, in meters. This corresponds to forward/backward movement.<br/>
 ***float* positionY:** The distance to travel in the y-direction, in meters. This corresponds to left/right movement.<br/>
 ***float* positionZ:** The distance to travel in the z-direction, in meters. This corresponds to vertical movement.<br/>
-***float* velocity:** The drone's velocity, in meters per second. The default velocity is 1 meter per second. Max is 2 meters per second.<br/>
+***float* velocity:** The drone's velocity, in meters per second. The default velocity is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
 
-#### Example Code
-The drone will take off, simultaneously move forward 0.5m, left 0.5m, and upward 0.25m at 1m/s (relative to its current position and orientation), move right 0.75cm at 0.75m/s (relative to its current position and orientation), and land.
+#### Example Code 1
+The drone will take off, simultaneously move forward 0.5m, left 0.5m, and upward 0.25m at 1m/s (relative to its current position and heading), move back 0.75cm at 0.75m/s (relative to its current position and heading), and land.
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('move_distance_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_distance_example_1')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -719,19 +720,50 @@ drone.pair()
 
 drone.takeoff()
 drone.move_distance(0.5, 0.5, 0.25, 1) # move forward 0.5m, left 0.5m, and upward 0.25m simultaneously at 1m/s
-drone.move_distance(-0.75, 0, 0, 0.75) # move right 0.75m at 0.75m/s
+drone.move_distance(-0.75, 0, 0, 0.75) # move back 0.75m at 0.75m/s
 drone.land()
 
 
 drone.close()
 ```
 
+#### Example Code 2
+The drone will take off, move upward 0.50m at 0.50m/s, move right 0.50m at 0.50m/s, move downward 0.50m at 0.50m/s, move left 0.50m at 0.50m/s, and land.
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_distance_example_2')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+drone.move_distance(0, 0, 0.5, 0.50) # move up 0.50m at 0.50m/s
+drone.move_distance(0, -0.5, 0, 0.50) # move right 0.50m at 0.50m/s
+drone.move_distance(0, 0, -0.5, 0.50) # move down 0.50m at 0.50m/s
+drone.move_distance(0, 0.5, 0, 0.50) # move left 0.50m at 0.50m/s
+
+drone.land()
+
+drone.close()
+```
 <hr/>
 
 ### send_absolute_position()
 
 #### Description
-Sends a movement command to the drone based on its absolute position from its first takeoff location.
+Sends a movement command to the drone based on its absolute position from its first takeoff location. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
+<img src="/img/CDE/python_docu/topdown_xy.png" width="400"/>
+<br/>
+<img src="/img/CDE/python_docu/xyz.jpg"  width="400"/>
 
 #### Syntax
 ``send_absolute_position(positionX, positionY, positionZ, velocity, heading, rotationalVelocity)``    
