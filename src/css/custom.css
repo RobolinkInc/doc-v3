@@ -1476,3 +1476,15 @@ hr {
 .firmware-row img {
   margin: 0;
 }
+
+strong > em {
+  font-family: monospace, monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #372EA5
+}
+
+strong > em::after {
+  content: " ";
+}
