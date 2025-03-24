@@ -6,7 +6,7 @@ customHeadElements:
 ---
 
 ## Updating CoDrone EDU Firmware
-CoDrone EDU is always improving, so it's important to update the firmware for both the drone and the controller. Click **<a href="https://codrone.robolink.com/edu/updater/">here</a>** to start updating your controller's firmware.
+CoDrone EDU is always improving, so it's important to update the firmware for both the drone and the controller. Click **<a target="_blank" href="https://codrone.robolink.com/edu/updater/">here</a>** to access our web updater and update your firmware directly from the browser.
 
 <div className="firmware-row">
   <div className="firmware_div">
@@ -15,9 +15,9 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
       <img src="/img/CDE/drone_remote-4.png" width="350px"/>
     </div>
     <h4>Drone Version</h4>
-    <p>Latest Version: 24.11.1</p>
+    <p>Latest Version: 25.2.1</p>
     <h4>Controller Version</h4>
-    <p>Latest Version: 24.9.1</p>
+    <p>Latest Version: 25.2.1</p>
 </div>
 
   <div className="firmware_div">
@@ -35,6 +35,11 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 <hr className="section_hr"/>
 
 ## CoDrone EDU Drone Release Notes
+
+### Version 25.2.1
+#### March 4, 2025
+**Bug Fixes** :bug:
+- Resolved an issue with the range sensor that prevented takeoff after the drone had been on for an extended period. This issue was indicated by the LEDs flashing red, green, and blue underneath the drone.
 
 ### Version 24.11.1
 #### January 7, 2025
@@ -54,6 +59,14 @@ CoDrone EDU is always improving, so it's important to update the firmware for bo
 <hr className="section_hr"/>
 
 ## CoDrone EDU Controller Release Notes
+
+### Version 25.2.1
+#### March 4, 2025
+**New Features** :sparkles:
+- Added functionality to request a unique identifier for each controller.
+
+**Improvements** :arrow_up:
+- Controller screen can now display bottom range sensor data values higher than 1.5 meters. Please note that accuracy decreases above this height due to the limitations of infrared sensors.
 
 ### Version 24.9.1
 #### October 23, 2024

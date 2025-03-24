@@ -499,15 +499,8 @@ drone.close()
 
 ### move_forward()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
-Moves the drone forward for the given distance and unit for that distance.
+Moves the drone forward for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface. 
 
 #### Syntax
 ``move_forward(distance)``    
@@ -515,14 +508,15 @@ Moves the drone forward for the given distance and unit for that distance.
 
 
 #### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).     
-***integer* speed:** default 1 meter per second. Max is 2 meters/second     
+***float* distance:** the distance to travel.<br/>
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
 
 #### Example Code
+The drone will take off, move forward 50cm at 1m/s, and land.
 <div className="loadPFRDiv">
   <button className="loadPFRButton" onClick={() => loadPFRPython('move_forward_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
@@ -541,7 +535,6 @@ drone.pair()
 
 drone.takeoff()
 drone.move_forward(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
 
 
@@ -550,17 +543,11 @@ drone.close()
 
 <hr/>
 
+
 ### move_backward()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
-Moves the drone backward for the given distance and unit for that distance.
+Moves the drone backward for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
 
 #### Syntax
 ``move_backward(distance)``      
@@ -568,14 +555,15 @@ Moves the drone backward for the given distance and unit for that distance.
 
 
 #### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
-***integer* speed:** default 1 meter per second. Max is 2 meters/second   
+***float* distance:** the distance to travel.<br/>
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
 
 #### Example Code
+The drone will take off, move backward 50cm at 1m/s, and land.
 <div className="loadPFRDiv">
   <button className="loadPFRButton" onClick={() => loadPFRPython('move_backward_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
@@ -594,7 +582,6 @@ drone.pair()
 
 drone.takeoff()
 drone.move_backward(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
 
 
@@ -605,30 +592,23 @@ drone.close()
 
 ### move_left()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
-Moves the drone left for the given distance and unit for that distance.
+Moves the drone left for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
 
 #### Syntax
 ``move_left(distance)``    
 ``move_left(distance, unit, speed)``  
 
-
 #### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
-***integer* speed:** default 1 meter per second. Max is 2 meters/second
+***float* distance:** the distance to travel.<br/>
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
 
 #### Example Code
+The drone will take off, move left 50cm at 1m/s, and land.
 <div className="loadPFRDiv">
   <button className="loadPFRButton" onClick={() => loadPFRPython('move_left_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
@@ -647,7 +627,6 @@ drone.pair()
 
 drone.takeoff()
 drone.move_left(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
 
 
@@ -658,15 +637,8 @@ drone.close()
 
 ### move_right()
 
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
-
 #### Description
-Moves the drone right for the given distance and unit for that distance.
+Moves the drone right for a given distance. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
 
 #### Syntax
 ``move_right(distance)``     
@@ -674,14 +646,15 @@ Moves the drone right for the given distance and unit for that distance.
 
 
 #### Parameters
-***integer* distance:** the numerical value of the value to move    
-***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).   
-***integer* speed:** default 1 meter per second. Max is 2 meters/second 
+***float* distance:** the distance to travel.<br/>
+***string* unit:** The unit of measurement for the distance flown. Available units are "cm" (centimeter), "ft" (feet), "in" (inches), "m" (meter).<br/>
+***float* speed:** The drone's speed, in meters per second. The default speed is 1.0 meter per second. Max is 2.0 meters per second.<br/>
 
 #### Returns
 None
 
 #### Example Code
+The drone will take off, move right 50cm at 1m/s, and land.
 <div className="loadPFRDiv">
   <button className="loadPFRButton" onClick={() => loadPFRPython('move_right_example')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
@@ -700,7 +673,6 @@ drone.pair()
 
 drone.takeoff()
 drone.move_right(distance=50, units="cm", speed=1)
-time.sleep(3) # make sure to add a delay so the drone has enough time to fly
 drone.land()
 
 
@@ -709,42 +681,109 @@ drone.close()
 
 <hr/>
 
-### send_absolute_position()
-
-:::note
-
-**Function Under Development**<br/>
-This function is currently in a development phase. We’re working to improve its stability and performance as we continue to develop more features for CoDrone EDU.
-
-:::
+### move_distance()
 
 #### Description
-Sends a movement command to the drone based on its absolute position from its takeoff location. **Note:** A sleep command for the length of the movement may be needed after using this movement command.   
-The 'x' position of the drone is forwards and reverse.    
-The 'y' position of the drone is left and right.    
-The 'z' position of the drone is up and down.   
-<img src="/img/CDE/python_docu/topdown_xy.png" width="70%"/>
+Moves the drone by the specified distances along the x, y, and z axes, relative to its current position and heading. If two or more distances have non-zero values, the function will move the drone by these distances simultaneously. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
+<img src="/img/CDE/python_docu/xyz.jpg"  width="400"/>
+
+#### Syntax
+``move_distance(positionX, positionY, positionZ, velocity)``
+
+
+#### Parameters
+***float* positionX:** The distance to travel in the x-direction, in meters. This corresponds to forward/backward movement.<br/>
+***float* positionY:** The distance to travel in the y-direction, in meters. This corresponds to left/right movement.<br/>
+***float* positionZ:** The distance to travel in the z-direction, in meters. This corresponds to vertical movement.<br/>
+***float* velocity:** The drone's velocity, in meters per second. The default velocity is 1.0 meter per second. Max is 2.0 meters per second.<br/>
+
+#### Returns
+None
+
+#### Example Code 1
+The drone will take off, simultaneously move forward 0.5m, left 0.5m, and upward 0.25m at 1m/s (relative to its current position and heading), move back 0.75cm at 0.75m/s (relative to its current position and heading), and land.
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_distance_example_1')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+
+drone.takeoff()
+drone.move_distance(0.5, 0.5, 0.25, 1) # move forward 0.5m, left 0.5m, and upward 0.25m simultaneously at 1m/s
+drone.move_distance(-0.75, 0, 0, 0.75) # move back 0.75m at 0.75m/s
+drone.land()
+
+
+drone.close()
+```
+
+#### Example Code 2
+The drone will take off, move upward 0.50m at 0.50m/s, move right 0.50m at 0.50m/s, move downward 0.50m at 0.50m/s, move left 0.50m at 0.50m/s, and land.
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('move_distance_example_2')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+import time
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+drone.move_distance(0, 0, 0.5, 0.50) # move up 0.50m at 0.50m/s
+drone.move_distance(0, -0.5, 0, 0.50) # move right 0.50m at 0.50m/s
+drone.move_distance(0, 0, -0.5, 0.50) # move down 0.50m at 0.50m/s
+drone.move_distance(0, 0.5, 0, 0.50) # move left 0.50m at 0.50m/s
+
+drone.land()
+
+drone.close()
+```
+<hr/>
+
+### send_absolute_position()
+
+#### Description
+Sends a movement command to the drone based on its absolute position from its first takeoff location. For the best performance, please make sure your drone is flying over a well-lit, patterned surface.
+<img src="/img/CDE/python_docu/topdown_xy.png" width="400"/>
 <br/>
-<img src="/img/CDE/python_docu/xyz.jpg"  width="70%"/>
+<img src="/img/CDE/python_docu/xyz.jpg"  width="400"/>
 
 #### Syntax
 ``send_absolute_position(positionX, positionY, positionZ, velocity, heading, rotationalVelocity)``    
 
 
 #### Parameters
-***float* positionX:** The X position of the drone (-10 ~ 10). Forward is positive. Backwards is negative.   
-***float* positionY:** The Y position of the drone (-10 ~ 10). Left is positive. Right is negative.    
-***float* positionZ:** The Z position of the drone (-10 ~ 10). Up is positive. Down is negative.   
-***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.   
-***integer* heading:** Heading value in degrees (-360 - 360). Positive turns the drone left. Negative turns the drone right.    
+***float* positionX:** The X position of the drone (-10m ~ 10m).<br/>
+***float* positionY:** The Y position of the drone (-10m ~ 10m).<br/>
+***float* positionZ:** The Z position of the drone (0m ~ 1.5m).<br/>
+***float* velocity:** The velocity of the drone in meters per second (0.5 ~ 2). The movement speed of the drone.<br/>
+***integer* heading:** Heading value in degrees. The heading is the z-angle of the drone.<br/>
 ***integer* rotationalVelocity:** The rotational velocity of the drone in degrees per second (0 - 360). Left and right rotation speed of the drone.    
 
 #### Returns
 None
 
-#### Example Code
+#### Example Code 1
+The drone takes off, moves to (0.5m, 0, 1m) at 0.5m/s, hovers at (0.5m, 0, 1m) since the drone is already in that position, and then lands.
 <div className="loadPFRDiv">
-  <button className="loadPFRButton" onClick={() => loadPFRPython('send_absolute_position_example')}>
+  <button className="loadPFRButton" onClick={() => loadPFRPython('send_absolute_position_example_1')}>
     <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
     <span className="button-text">Open in Python</span>
   </button>
@@ -761,16 +800,82 @@ drone.takeoff()
 
 # Sending the drone forward from its takeoff location 0.5 meters moving at 0.5 m/s
 drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
-time.sleep(1) # Sleep command needed in order for this movement to execute.
 
 # Sending the same command will cause the drone to hover around 
 # the same area since this command uses absolute positioning from the takeoff location
 drone.send_absolute_position(0.5, 0, 1, 0.5, 0, 0)
-time.sleep(1)
 
 drone.land()
+drone.close()
+```
 
+#### Example Code 2
+The drone takes off, moves to (0.5m, 0, 0.8m) at 0.5m/s, moves to (0.5m, 0.5m, 0.8m) at 0.5m/s, moves to (0, 0.5m, 0.8m) at 0.5m/s, moves to (0, 0, 0.8m) at 0.5m/s, and finally lands.
 
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('send_absolute_position_example_2')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+# Drone will move to (0.5m, 0, 0.8m) with 0 degree heading.
+drone.send_absolute_position(0.5, 0, 0.8, 0.5, 0, 0)
+
+# Drone will move to (0.5m, 0.5m, 0.8m) with 0 degree heading.
+drone.send_absolute_position(0.5, 0.5, 0.8, 0.5, 0, 0)
+
+# Drone will move to (0, 0.5m, 0.8m) with 0 degree heading.
+drone.send_absolute_position(0, 0.5, 0.8, 0.5, 0, 0)
+
+# Drone will move to (0, 0, 0.8m) with 0 degree heading.
+drone.send_absolute_position(0, 0, 0.8, 0.5, 0, 0)
+
+drone.land()
+drone.close()
+```
+
+#### Example Code 3
+The drone takes off, hovers at (0, 0, 0.8m) and rotates to 180 degree heading at 180 degrees/second, hovers at (0, 0, 0.8m) and rotates to 270 degree heading at 90 degrees/second, hovers at (0, 0, 0.8m) and rotates to 360 degree heading at 90 degrees/second, hovers at (0, 0, 0.8m) and rotates to 450 degree heading at 90 degrees/second, and finally lands.
+
+<div className="loadPFRDiv">
+  <button className="loadPFRButton" onClick={() => loadPFRPython('send_absolute_position_example_3')}>
+    <img src="/img/Open_in_Python_logo.png" alt="Logo" className="button-logo"/>
+    <span className="button-text">Open in Python</span>
+  </button>
+</div>
+
+```python
+#Python code
+from codrone_edu.drone import *
+
+drone = Drone()
+drone.pair()
+
+drone.takeoff()
+
+# Drone will move to (0, 0, 0.8m) with 180 degree heading.
+drone.send_absolute_position(0,0,0.8,0,180,180)
+
+# Drone will move to (0, 0, 0.8m) with 270 degree heading.
+drone.send_absolute_position(0,0,0.8,0,270,90)
+
+# Drone will move to (0, 0, 0.8m) with 360 degree heading.
+drone.send_absolute_position(0,0,0.8,0,360,90)
+
+# Drone will move to (0, 0, 0.8m) with 450 degree heading.
+drone.send_absolute_position(0,0,0.8,0,450,90)
+
+drone.land()
 drone.close()
 ```
 
@@ -787,7 +892,7 @@ This function turns the drone to the left or right, based on the given power val
 
 
 #### Parameters
-***int* power:** The number represents the direction and power of the turn. Negative power turns the drone to the right, and positive power turns the drone to the left.<br/>
+***integer* power:** The number represents the direction and power of the turn. Negative power turns the drone to the right, and positive power turns the drone to the left.<br/>
 ***float* seconds:** The duration of the turn
 
 #### Returns
@@ -975,7 +1080,7 @@ Flies the drone in the shape of a circle.
 
 #### Parameters
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 75.    
-***integer* direction:** optional parameter that determines the direction of the circle. 1 is right, -1 is left. default value is 1.
+***integer* direction:** optional parameter that determines the direction of the circle. 1 is left, -1 is right. default value is 1.
 
 #### Returns
 None
@@ -1166,7 +1271,7 @@ Flies the drone in a swaying motion.
 #### Parameters
 ***integer* speed:** optional parameter that is the speed the drone will move (0 - 100). default value is 30.   
 ***integer* seconds:** optional parameter that is the duration in seconds the drone will fly in each "sway" motion. default value is 2.    
-***integer* direction:** optional parameter that determines the direction of the sway. 1 is right, -1 is left. default value is 1.    
+***integer* direction:** optional parameter that determines the direction of the sway. 1 is left, -1 is right. default value is 1.    
 
 #### Returns
 None
@@ -2107,7 +2212,7 @@ drone.close()
 ### get_pos_x()
 
 #### Description
-Getter function that gets the x position of the drone. (x is forwards and backwards)
+Getter function that gets the x position of the drone. (x is forwards and backwards). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2151,7 +2256,7 @@ drone.close()
 ### get_pos_y()
 
 #### Description
-Getter function that gets the y position of the drone. (y is left and right)
+Getter function that gets the y position of the drone. (y is left and right). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/topdown_xy.png" height="249px"/>
 
 #### Syntax
@@ -2194,7 +2299,7 @@ drone.close()
 ### get_pos_z()
 
 #### Description
-Getter function that gets the z position of the drone. (z is up and down)
+Getter function that gets the z position of the drone. (z is up and down). **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -2237,7 +2342,7 @@ drone.close()
 ### get_position_data()
 
 #### Description
-get_position_data is a getter function that retuns a list of position data for the drone.
+get_position_data is a getter function that retuns a list of position data for the drone. **NOTE:** The drone's position values are reset to 0 when drone takes off or battery is re-inserted.<br/>
 The 'x' position of the drone is forwards and reverse.
 The 'y' position of the drone is left and right.
 The 'z' position of the drone is up and down.
@@ -2810,7 +2915,7 @@ drone.close()
 ### get_angle_x()
 
 #### Description
-Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+Previously named ``get_x_angle()``. This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_x()``    
@@ -2850,7 +2955,7 @@ drone.close()
 ### get_angle_y()
 
 #### Description
-Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+Previously named ``get_y_angle()``. This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_y()``    
@@ -2888,7 +2993,7 @@ drone.close()
 ### get_angle_z()
 
 #### Description
-Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+Previously named ``get_z_angle()``. This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_angle_z()``    
@@ -3112,7 +3217,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis.
+This is a getter function which returns the current X angle from the gyroscope in the drone. This angle is on the "roll" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_x_angle()``    
@@ -3207,7 +3312,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis.
+This is a getter function which returns the current Y angle from the gyroscope in the drone. This angle is on the "pitch" axis. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_y_angle()``    
@@ -3300,7 +3405,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction.
+This is a getter function which returns the current Z angle from the drone. This is angle is the "yaw" direction. **NOTE:** The drone's angle values are reset to 0 when drone takes off or battery is re-inserted.
 
 #### Syntax
 ``get_z_angle()``    
@@ -3368,22 +3473,22 @@ drone.pair()
 
 
 print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.takeoff()
 drone.set_yaw(50)
 drone.move(1)
 drone.land()
 print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.reset_gyro() 
 print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 
 
 drone.close()
@@ -3431,22 +3536,22 @@ drone.pair()
 
 
 print("Before")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.takeoff()
 drone.set_yaw(50)
 drone.move(1)
 drone.land()
 print("After")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 drone.reset_sensor() 
 print("Reset")
-print("X angle:", drone.get_x_angle())
-print("Y angle:", drone.get_y_angle())
-print("Z angle:", drone.get_z_angle())
+print("X angle:", drone.get_angle_x())
+print("Y angle:", drone.get_angle_y())
+print("Z angle:", drone.get_angle_z())
 
 
 drone.close()

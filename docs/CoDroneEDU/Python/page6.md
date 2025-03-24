@@ -9,13 +9,30 @@ customHeadElements:
 ## *Python for Robolink*&nbsp; Changelog
 
 :::note
-*Python for Robolink* and the CoDrone EDU Python library have separate version numbers. *Python for Robolink* will always run the latest version of the CoDrone EDU Python library. For example, version 1.9.2 of *Python for Robolink* runs version 2.1 of the CoDrone EDU Python library (latest). Review the latest [documentation](page4.md) for the full list of functions supported.
+*Python for Robolink* and the CoDrone EDU Python library have separate version numbers. *Python for Robolink* will always run the latest version of the CoDrone EDU Python library. For example, version 1.9.4 of *Python for Robolink* runs version 2.2 of the CoDrone EDU Python library (latest). Review the latest [documentation](page4.md) for the full list of functions supported.
 :::
+
+### Version 1.9.4
+#### March 10, 2025
+**Improvements** :arrow_up:
+- Updated functions to match Python lib v2.2 changes.
+
+**Bug Fixes** :bug:
+- Fixed the issue with the flip functions that was caused by a battery requesting issue.
+
+<hr/>
+
+### Version 1.9.3
+#### January 24, 2025
+**Bug Fixes** :bug:
+- Resolved infinite loading of *Python for Robolink* affecting some users
+
+<hr/>
 
 ### Version 1.9.2
 #### January 23, 2025
 **Bug Fixes** :bug:
-- Improved performance to reduce loading time when opening Python for Robolink
+- Improved performance to reduce loading time when opening *Python for Robolink*
 - Fixed an issue where the battery was returning 0%
 
 <hr/>
