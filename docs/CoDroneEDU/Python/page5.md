@@ -30,6 +30,8 @@ Swarm is a coordinated and programmed process where drones perform a sequence of
   - It's **recommended** to use a USB hub with at least 2 USB-A ports for this.
   - Otherwise, use the available USB-A ports in your computer.
 
+<img src="/img/CDE/swarm_usb_connect.png" width="600"/>
+
 <!-- #### Installing ``codrone-edu``
 To use our swarm feature in PyCharm, you must install codrone-edu v2.2 using the following steps:
 1. Click on "File" on the top-left side of the window, and then click on "Settings". This will lead to a pop-up window with different settings for your PyCharm project.
