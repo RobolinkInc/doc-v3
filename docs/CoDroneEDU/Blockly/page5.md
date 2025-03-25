@@ -7,8 +7,22 @@ customHeadElements:
 
 
 ## CoDrone EDU Blockly Changelog
+
+### Version 3.1.2
+#### March 25, 2025
+
+**Improvements** :arrow_up:
+- Eliminated the need for the page to reload when removing a “when start” block
+
+**Bug fixes** :bug:
+- Fixed an infinite loading issue caused by accessing Blockly from alternative links
+
+<hr/>
+
+
 ### Version 3.1.1
 #### March 10, 2025
+
 **Improvements** :arrow_up:
 - Updated functions to match Python library v2.2 (latest)
 
