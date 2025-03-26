@@ -1477,7 +1477,7 @@ hr {
   margin: 0;
 }
 
-strong > em {
+/* strong > em {
   font-family: monospace, monospace;
   font-style: normal;
   font-weight: 400;
@@ -1487,4 +1487,4 @@ strong > em {
 
 strong > em::after {
   content: " ";
-}
+} */
