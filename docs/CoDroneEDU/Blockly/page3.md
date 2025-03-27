@@ -447,6 +447,10 @@ In the example below, the G7 note is played for 3 seconds on the drone before ta
 
 ### play this note [note] for [duration] seconds on controller
 
+:::note
+Controller may not make sounds if "Quiet Mode" is turned on via controller settings. To turn off "Quiet Mode", switch to "Remote Control" mode by pressing the power button, hold the "S" button to switch to the "Settings" display, scroll down to "Quiet Mode", move the left joystick to the right, and select "OFF" by pressing "R1".
+:::
+
 #### Block
 
 <img src="/img/CDE/blockly_docu/junior/play_note_controller.png" width="450px"/>  
