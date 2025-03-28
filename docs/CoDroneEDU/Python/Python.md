@@ -15,7 +15,7 @@ customHeadElements:
 
 </div>
 
-<div className='column_2_images'>
+<div className='column_3_images'>
 
 <div className='level_image_column'>
 
@@ -28,17 +28,16 @@ customHeadElements:
   [![Updating Library](/img/CDE/python-update-icon.png)](/docs/CoDroneEDU/Python/Updating-Library)
   [Updating Library](/docs/CoDroneEDU/Python/Updating-Library)
 
+  [![Drone Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Drone-Function-Documentation)
+  [Drone Function<br />Documentation](/docs/CoDroneEDU/Python/Drone-Function-Documentation)
 
 </div>
 
 </div>
 
-<div className='column_3_images'>
+<div className='column_2_images'>
 
 <div className='level_image_column'>
-
-  [![Function Documentation](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Function-Documentation)
-  [Function<br />Documentation](/docs/CoDroneEDU/Python/Function-Documentation)
 
   [![Python Changelog](/img/CDE/doc-app.png)](/docs/CoDroneEDU/Python/Python-Changelog)
   [Python Changelog](/docs/CoDroneEDU/Python/Python-Changelog)

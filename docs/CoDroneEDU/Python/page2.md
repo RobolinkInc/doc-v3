@@ -82,7 +82,7 @@ from codrone_edu.drone import *
 ```
 <br/>
 :::note
-If a main.py file was not generated, you can make a new one by right clicking on the project name and selecting “New > Python File”. This is for both Windows and Mac.
+If a main.py file was not generated, you can make a new one by right clicking on the project name and selecting "New > Python File". This is for both Windows and Mac.
 <img src="/img/CDE/Python_setup_installation_1.png" width="650px"/>
 :::
 
@@ -127,7 +127,7 @@ For the best experience, it's recommended to keep your browser and devices up-to
 Try to use the cable that comes with CoDrone EDU whenever possible! This USB cable can transfer data, which is necessary for programming. Most USB cables now are data compatible. If your drone does not switch to LINK state when connecting, you may have the wrong cable or it may be broken.
 
 ### Google Chrome Requirements
-Your Google Chrome should be updated to the most recent version. If you are not sure how to check, click on the the menu on the top right, scroll down to “Help”, and select “About Google Chrome”. Google Chrome might automatically update. If not, please update Chrome.
+Your Google Chrome should be updated to the most recent version. If you are not sure how to check, click on the the menu on the top right, scroll down to "Help", and select "About Google Chrome". Google Chrome might automatically update. If not, please update Chrome.
 
 <img src="/img/CDE/chrome_requirements_1.png" width="512px"/>  
 <br/>
