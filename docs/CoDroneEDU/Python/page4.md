@@ -2872,7 +2872,7 @@ drone.close()
 ### get_accel_z()
 
 #### Description
-Previously named ``get_z_accel()``. Getter function that gets the z acceleration of the drone. (z is up and down)
+Previously named ``get_z_accel()``. Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest (e.g. sitting on a flat surface or hovering), the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
@@ -3356,7 +3356,7 @@ This function has been deprecated and will be removed in a future release. Pleas
 :::
 
 #### Description
-Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest on a flat surface, the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
+Getter function that gets the z acceleration of the drone (z is up and down). When the CoDrone EDU is at rest (e.g. sitting on a flat surface or hovering), the gyroscope sensor should be reading a value of 9.8 * 10 meters per second squared (m/s<sup>2</sup>) due to gravity.
 <img src="/img/CDE/python_docu/xyz.jpg" height="249px"/>
 
 #### Syntax
