@@ -71,6 +71,7 @@ const sidebars = {
         'CoDroneEDU/Resources/page3',
         //'CoDroneEDU/Resources/page4',
         //'CoDroneEDU/Resources/page5',
+        'CoDroneEDU/Resources/page6'
       ],
     },
   ],
